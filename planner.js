@@ -23,6 +23,13 @@ const WINDOWS = [
 const TOLERANCE = [0.1, 0.15, 0.2]; // allowed calories away from the meal's target
 const IDEAL = { p: 0.2, c: 0.5, f: 0.3 };
 const PROTEIN_RDA_G_PER_KG = 0.83; // ICMR-NIN 2020
+// Body weight (optional). The calorie levels above are for a 65 kg adult; with a weight entered, they scale in proportion.
+const WEIGHT_KEY = "meal-planner-weight";
+const BASE_KG = 65, MIN_KG = 40, MAX_KG = 100;
+let bodyKg = null; // null means "not entered": use the 65 kg levels
+try { const w = parseFloat(localStorage.getItem(WEIGHT_KEY)); if (w >= MIN_KG && w <= MAX_KG) bodyKg = w; } catch (e) { /* fine without saving */ }
+const setBodyKg = (w) => { bodyKg = w; try { if (w) localStorage.setItem(WEIGHT_KEY, String(w)); else localStorage.removeItem(WEIGHT_KEY); } catch (e) { /* fine */ } };
+const dailyKcal = (activity) => Math.round((ACTIVITY[activity].kcal * (bodyKg || BASE_KG)) / BASE_KG / 10) * 10;
 const PLANS_KEY = "indian-protein-recipes-plans-v4"; // one saved plan for each date range
 const V3_PLANS_KEY = "indian-protein-recipes-plans-v3"; // the earlier week-by-week plans, carried over once
 const OLD_PLAN_KEY = "indian-protein-recipes-plan-v2"; // the very first single-plan format, carried over once
@@ -125,7 +132,7 @@ function checkMeal(items, target) {
 }
 
 // ----- the week -----
-const mealTarget = (activity, meal) => ACTIVITY[activity].kcal * MEAL_SPLIT[meal];
+const mealTarget = (activity, meal) => dailyKcal(activity) * MEAL_SPLIT[meal];
 
 function idsOfDay(day, except) {
   const ids = new Set();
@@ -215,15 +222,15 @@ function flatLines(r) {
 }
 
 function targetsBox(activity) {
-  const kcal = ACTIVITY[activity].kcal;
+  const kcal = dailyKcal(activity);
   const g = (share, per) => Math.round((kcal * share) / per);
   const w = WINDOWS[0];
   return h("div", { class: "targets" },
     h("p", {},
       h("strong", { text: `Daily target: about ${kcal} kcal` }),
-      ` (${ACTIVITY[activity].label.toLowerCase()}). Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of those calories. These are general starting levels, so adjust them to your own needs.`),
+      ` (${ACTIVITY[activity].label.toLowerCase()}). Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of those calories. ${bodyKg ? `Scaled to your weight of ${bodyKg} kg, as a rough guide.` : `These are general levels for a 65 kg adult; enter your weight above to scale them.`}`),
     h("ul", {},
-      h("li", { text: `Protein: ${pct(w.p[0])} to ${pct(w.p[1])} of calories (${g(w.p[0], 4)} to ${g(w.p[1], 4)} g a day), ideally about ${pct(IDEAL.p)}. The Indian minimum allowance is about ${PROTEIN_RDA_G_PER_KG} g for every kg of body weight a day.` }),
+      h("li", { text: `Protein: ${pct(w.p[0])} to ${pct(w.p[1])} of calories (${g(w.p[0], 4)} to ${g(w.p[1], 4)} g a day), ideally about ${pct(IDEAL.p)}. The Indian minimum allowance is about ${PROTEIN_RDA_G_PER_KG} g for every kg of body weight a day${bodyKg ? `, which is about ${Math.round(PROTEIN_RDA_G_PER_KG * bodyKg)} g at ${bodyKg} kg` : ""}.` }),
       h("li", { text: `Carbs: ${pct(w.c[0])} to ${pct(w.c[1])} of calories (${g(w.c[0], 4)} to ${g(w.c[1], 4)} g a day), ideally about ${pct(IDEAL.c)}.` }),
       h("li", { text: `Fat: ${pct(w.f[0])} to ${pct(w.f[1])} of calories (${g(w.f[0], 9)} to ${g(w.f[1], 9)} g a day), ideally about ${pct(IDEAL.f)}.` }),
     ),
@@ -323,8 +330,22 @@ function plannerSectionEl() {
         activity = e.target.value;
         if (plan) update(newPlan(plan, activity)); else render();
       },
-    }, Object.entries(ACTIVITY).map(([key, a]) => h("option", { value: key, selected: key === activity, text: `${a.label}: ${a.kcal} kcal a day` })));
+    }, Object.entries(ACTIVITY).map(([key, a]) => h("option", { value: key, selected: key === activity, text: `${a.label}: ${dailyKcal(key)} kcal a day` })));
     return h("label", { class: "activity" }, "Activity level ", select);
+  }
+
+  function weightPicker() {
+    const input = h("input", { id: "body-weight", type: "number", min: String(MIN_KG), max: String(MAX_KG), step: "0.5", inputmode: "decimal", placeholder: "optional", value: bodyKg ? String(bodyKg) : "" });
+    const msg = h("span", { id: "weight-msg", class: "range-msg", role: "status" });
+    input.addEventListener("change", () => {
+      const raw = input.value.trim();
+      const w = parseFloat(raw);
+      if (raw && !(w >= MIN_KG && w <= MAX_KG)) { msg.textContent = `Enter a weight between ${MIN_KG} and ${MAX_KG} kg, or leave it blank.`; return; }
+      msg.textContent = "";
+      setBodyKg(raw ? w : null);
+      if (plan) update(newPlan(plan, activity)); else render();
+    });
+    return h("label", { class: "activity" }, "Your weight (kg) ", input, " ", msg);
   }
 
   function mealBlock(dayIdx, meal) {
@@ -432,6 +453,7 @@ function plannerSectionEl() {
       body.append(
         h("div", { class: "plan-empty" },
           h("p", { text: `No plan yet for ${rangeLabel(range)} (${n} day${n === 1 ? "" : "s"}).` }),
+          weightPicker(),
           activityPicker(),
           targetsBox(activity),
           h("button", { id: "plan-pick", class: "btn primary", type: "button", onclick: () => update(newPlan(null, activity, range.start, range.end)), text: "Pick my meals" }),
@@ -441,7 +463,7 @@ function plannerSectionEl() {
     }
 
     const first = parseIso(plan.start);
-    const dayKcal = ACTIVITY[plan.activity].kcal;
+    const dayKcal = dailyKcal(plan.activity);
     const total = { kcal: 0, p: 0, c: 0, f: 0 };
     let balanced = 0;
 
@@ -469,6 +491,7 @@ function plannerSectionEl() {
     body.append(
       h("p", { class: "plan-week", text: `Planning ${rangeLabel(plan)} (${days} day${days === 1 ? "" : "s"})` }),
       h("div", { class: "plan-toolbar" },
+        weightPicker(),
         activityPicker(),
         h("button", { id: "plan-again", class: "btn primary", type: "button", onclick: () => update(newPlan(plan, plan.activity)), text: "Pick again (keeps meals marked Keep)" }),
         h("button", { class: "btn", type: "button", onclick: () => { document.body.classList.add("print-plan"); window.print(); document.body.classList.remove("print-plan"); }, text: "Print plan" }),
