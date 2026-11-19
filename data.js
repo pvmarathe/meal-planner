@@ -1334,6 +1334,23 @@ const sections = [
       },
     ],
   },
+  // ============================ SNACKS & STREET FOOD ============================
+  {
+    id: "snacks",
+    title: "Snacks & street food",
+    note: "Street-food favorites made a little lighter at home.",
+    recipes: [
+      {
+        name: "Bhutte Ka Kees (Indore Grated Corn)", channel: "Your Food Lab", video: "https://www.youtube.com/watch?v=GPfzvnabS_s", meals: {"breakfast": "main"}, macros: {"servings": 3.5, "serving": "1 of the creator's 3 to 4 servings", "basis": "source", "why": "The creator says it serves 3 to 4; I used 3.5.", "kcal": 249.2, "p": 7.5, "c": 30.5, "f": 12.9},
+        makes: "Serves 3–4", from: DESC,
+        ingredients: [
+          "5 corn cobs (bhutta), grated, about 450 g of kernels", "2 tbsp oil (or ghee)", "½ tsp mustard seeds", "½ tsp cumin seeds", "1 inch ginger, chopped", "2–3 green chillies, chopped", "¼ tsp asafoetida", "¼ tsp turmeric powder", "Salt, to taste", "1½ cups milk", "1 tsp sugar (or as required)", "1 tsp lemon juice", "Fresh coriander, a small handful", {"title": "To serve", "items": ["Freshly grated coconut", "Jeeravan masala (the spice mix below), a sprinkle", "Lemon juice", "Chopped fresh coriander"]}, {"title": "Jeeravan masala (optional)", "items": ["1 tbsp cumin seeds", "1 tbsp coriander seeds", "½ inch cinnamon stick", "2 tsp fennel seeds", "¼ tsp black peppercorns", "7–8 cloves", "2–3 bay leaves", "½ nutmeg, grated", "¼ tsp ginger powder", "2 tsp dry mango powder (amchur)", "1 tsp black salt", "1 tsp spicy red chilli powder", "1 tsp Kashmiri red chilli powder", "½ tsp salt", "½ tsp turmeric powder", "A pinch of asafoetida", "1 tsp sugar"]},
+        ],
+        note: "The creator gives 5 corn cobs, not grams. I counted 450 g of kernels (about 90 g a cob, the USDA figure for a medium ear), so a big mature bhutta would add more. The coconut, jeeravan masala and garnishes are not counted. This is a corn-and-milk dish, so it is low in protein on its own and works best with a high-protein side.",
+      },
+    ],
+  },
+
   // ============================ DRESSINGS ============================
   // Not used by the meal planner: these have no `meals` tag, and the section is marked inPlanner: false.
   {
