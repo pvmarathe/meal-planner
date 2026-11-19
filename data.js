@@ -1334,6 +1334,48 @@ const sections = [
       },
     ],
   },
+  // ============================ SOYA CHUNKS ============================
+  {
+    id: "soya",
+    title: "Soya chunk recipes",
+    note: "High-protein dishes built on soya chunks (meal maker).",
+    recipes: [
+      {
+        name: "High-Protein Soya Chukauni (Soya Chunks & Greek Yogurt)", channel: "Dr Pal", video: "https://www.youtube.com/watch?v=VrX81oZb-Cg", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 2, "serving": "1 of the creator's 2 servings", "basis": "source", "why": "The creator says it serves 2.", "kcal": 540.9, "p": 39.2, "c": 28.7, "f": 30.7},
+        makes: "Serves 2", from: DESC,
+        ingredients: [
+          "100 g raw soya chunks", "1 tsp salt", "1 tbsp ghee", "¼ tsp turmeric", "1 tsp chilli powder", "1 tsp coriander powder", "1 tsp ginger-garlic paste", "1 onion, sliced", "1 green chilli, sliced", "Fresh coriander", {"title": "For the yogurt", "items": ["250 g high-protein Greek yogurt", "½ tsp salt", "3 garlic cloves, finely chopped"]}, {"title": "For the tadka", "items": ["3 tbsp mustard oil", "¼ tsp turmeric", "1 tsp red chilli powder", "1 tsp kasuri methi"]},
+        ],
+        note: "The creator's own figures per serving are 494 kcal, 40 g protein, 30 g carbs and 25 g fat. Mine come out a little higher in calories and fat (about 541 kcal and 31 g fat), mostly from the 3 tablespoons of mustard oil. The recipe is credited to the creator @aishwaryasonvane. It is rich, so you could use less oil in the tadka.",
+      },
+    ],
+  },
+
+  // ============================ HIGH-PROTEIN MEALS ============================
+  {
+    id: "meals",
+    title: "High-protein meals",
+    note: "Complete vegetarian meals built to carry about 25 g of protein or more. These come from the GunjanShouts \"Full Day of Eating\" video, where each meal has its own place in the video, so each link opens at that meal.",
+    recipes: [
+      {
+        name: "High-Protein Buddha Bowl (Quinoa, Chickpeas & Paneer)", channel: "GunjanShouts", video: "https://www.youtube.com/watch?v=XBvMt45d66Q&t=278s", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 1, "serving": "1 serving, as the creator shows it", "basis": "source", "why": "The creator lists the amounts for one serving.", "kcal": 542.6, "p": 26.8, "c": 65.2, "f": 20.8},
+        makes: "One serving", from: DESC,
+        ingredients: [
+          "30–40 g quinoa", "30 g chickpeas, soaked", "40 g paneer", "1 tsp garlic, minced", "50 g hung curd", "1 tsp olive oil", "150 g mixed vegetables", "½ tsp chaat masala", "2 tsp chole masala", "Salt, to taste", "Black pepper powder, to taste", "Fresh coriander leaves, for garnish",
+        ],
+        note: "This is one part of the creator's \"Full Day of Eating\" video; the link opens at this recipe. The creator lists about 450 g for the bowl. Quinoa is given as 30 to 40 g, so I used 35 g, and I counted the quinoa, chickpeas and rice as dry weights. Hung curd is counted as plain yogurt, so the real protein is a little higher. The vegetables are counted as mixed vegetables.",
+      },
+      {
+        name: "High-Protein Indian Comfort Meal (Dal, Rice & Soya Masala)", channel: "GunjanShouts", video: "https://www.youtube.com/watch?v=XBvMt45d66Q&t=632s", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 1, "serving": "1 serving, as the creator shows it", "basis": "source", "why": "The creator lists the amounts for one serving.", "kcal": 571.2, "p": 25.7, "c": 58.2, "f": 27.0},
+        makes: "One serving", from: DESC,
+        ingredients: [
+          {"title": "Dal tadka", "items": ["30 g yellow moong dal, soaked", "1 tbsp ghee", "1 tsp cumin seeds (jeera)", "2 dry red chillies", "1 tsp garlic, chopped", "1 tsp ginger, chopped", "2 tbsp onion, chopped", "1 tbsp tomato, chopped", "1 tsp green chilli, chopped", "1 tsp turmeric powder", "1 tsp coriander powder", "Salt, to taste"]}, {"title": "Steamed rice", "items": ["30 g white rice, soaked", "Water, as required"]}, {"title": "Soya masala", "items": ["30 g soya mini chunks", "1 tbsp onion, chopped", "1 tbsp ghee", "1 tsp cumin seeds (jeera)", "2 tbsp tomato, chopped", "1 tsp sabji masala", "Salt, to taste", "1 tsp turmeric powder", "½ tsp garam masala (optional)", "Fresh coriander sprig, for garnish"]},
+        ],
+        note: "This is one part of the creator's \"Full Day of Eating\" video; the link opens at this recipe. It is a whole meal: dal tadka, a little rice and soya masala. The moong dal, rice and soya chunks are counted at the dry weights given.",
+      },
+    ],
+  },
+
   // ============================ SNACKS & STREET FOOD ============================
   {
     id: "snacks",
