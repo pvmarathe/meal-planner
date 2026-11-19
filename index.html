@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meal Planner</title>
+  <meta name="description" content="Choose your dates and plan healthy Indian meals: a breakfast, lunch and dinner for each day, balanced for protein, carbs and fat.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Pure vegetarian</p>
+      <h1>Meal Planner</h1>
+      <p class="lead">
+        Choose your dates and plan healthy Indian meals: a breakfast, lunch and dinner for every day, balanced for protein, carbs and fat.
+        Then open the recipe database for ingredients, nutrition and a video for each dish.
+      </p>
+      <nav class="site-nav" aria-label="Main">
+        <a class="chip current" href="index.html" aria-current="page">Meal planner</a>
+        <a class="chip" href="recipes.html">All recipes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sections" class="wrap"></main>
+
+  <footer class="wrap footer">
+    <p>
+      Nutrition numbers are estimates worked out from each recipe's ingredient list with USDA data
+      (<a href="recipes.html#how">how they work</a>). Videos belong to their creators on YouTube.
+      This is a general guide, not medical or dietary advice.
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="reminders.js"></script>
+  <script src="planner.js"></script>
+</body>
+</html>

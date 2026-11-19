@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Recipes | Meal Planner</title>
+  <meta name="description" content="A database of vegetarian Indian recipes (idlis, dosas, salads, poha, oats, quinoa, millets, parathas and Instant Pot dals), each with ingredients, nutrition per serving and a recipe video.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Recipe database</p>
+      <h1>All recipes</h1>
+      <p class="lead">
+        <span class="recipe-total">122</span> vegetarian recipes, each with its ingredients, calories, protein, carbs and fat per serving,
+        and a recipe video on YouTube.
+      </p>
+      <nav class="site-nav" aria-label="Main">
+        <a class="chip" href="index.html">Meal planner</a>
+        <a class="chip current" href="recipes.html" aria-current="page">All recipes</a>
+      </nav>
+      <nav id="jump" class="jump" aria-label="Jump to a section"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="search-bar" role="search">
+      <label class="visually-hidden" for="search">Search recipes</label>
+      <input id="search" type="search" placeholder="Search by recipe, ingredient, channel or section (for example: paneer, millet, Hebbar)" autocomplete="off">
+      <button id="search-clear" class="btn small" type="button">Clear</button>
+      <p id="count" class="count" aria-live="polite"></p>
+    </div>
+    <p id="search-empty" class="search-empty" hidden>No recipes match that search. Try a different word, or clear the search.</p>
+    <div id="sections"></div>
+  </main>
+
+  <footer class="wrap footer">
+    <p>
+      Videos belong to their creators on YouTube. Ingredient lists are copied from each video's description or the
+      creator's own recipe page, so the quantities are theirs. Links last checked 19 November 2026.
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="recipes.js"></script>
+</body>
+</html>
