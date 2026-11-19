@@ -5,7 +5,7 @@
 // at portion sizes chosen so the meal hits its calorie target and its protein / carb / fat split.
 // The plan is saved in this browser only (localStorage).
 
-// Daily energy for a reference Indian man (65 kg), ICMR-NIN 2020, as reported in published summaries.
+// General daily energy levels for an adult, based on ICMR-NIN 2020 figures as reported in published summaries.
 const ACTIVITY = {
   sedentary: { label: "Sedentary (desk job)", kcal: 2110 },
   moderate: { label: "Moderately active", kcal: 2710 },
@@ -23,7 +23,6 @@ const WINDOWS = [
 const TOLERANCE = [0.1, 0.15, 0.2]; // allowed calories away from the meal's target
 const IDEAL = { p: 0.2, c: 0.5, f: 0.3 };
 const PROTEIN_RDA_G_PER_KG = 0.83; // ICMR-NIN 2020
-const REFERENCE_KG = 65;
 const PLANS_KEY = "indian-protein-recipes-plans-v4"; // one saved plan for each date range
 const V3_PLANS_KEY = "indian-protein-recipes-plans-v3"; // the earlier week-by-week plans, carried over once
 const OLD_PLAN_KEY = "indian-protein-recipes-plan-v2"; // the very first single-plan format, carried over once
@@ -222,9 +221,9 @@ function targetsBox(activity) {
   return h("div", { class: "targets" },
     h("p", {},
       h("strong", { text: `Daily target: about ${kcal} kcal` }),
-      ` (${ACTIVITY[activity].label.toLowerCase()}). Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of those calories.`),
+      ` (${ACTIVITY[activity].label.toLowerCase()}). Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of those calories. These are general starting levels, so adjust them to your own needs.`),
     h("ul", {},
-      h("li", { text: `Protein: ${pct(w.p[0])} to ${pct(w.p[1])} of calories (${g(w.p[0], 4)} to ${g(w.p[1], 4)} g a day), ideally about ${pct(IDEAL.p)}. The Indian minimum allowance is about ${Math.round(PROTEIN_RDA_G_PER_KG * REFERENCE_KG)} g a day for a 65 kg man.` }),
+      h("li", { text: `Protein: ${pct(w.p[0])} to ${pct(w.p[1])} of calories (${g(w.p[0], 4)} to ${g(w.p[1], 4)} g a day), ideally about ${pct(IDEAL.p)}. The Indian minimum allowance is about ${PROTEIN_RDA_G_PER_KG} g for every kg of body weight a day.` }),
       h("li", { text: `Carbs: ${pct(w.c[0])} to ${pct(w.c[1])} of calories (${g(w.c[0], 4)} to ${g(w.c[1], 4)} g a day), ideally about ${pct(IDEAL.c)}.` }),
       h("li", { text: `Fat: ${pct(w.f[0])} to ${pct(w.f[1])} of calories (${g(w.f[0], 9)} to ${g(w.f[1], 9)} g a day), ideally about ${pct(IDEAL.f)}.` }),
     ),
