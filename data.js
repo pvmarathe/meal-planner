@@ -1484,5 +1484,22 @@ const sections = [
       },
     ],
   },
+  // ============================ HOME RECIPES ============================
+  {
+    id: "home",
+    title: "Home recipes",
+    note: "Family recipes with no video. The Sattu Cucumber Yoghurt Drink is the daily lunch drink: the planner adds one glass to every lunch and balances the rest of the meal around it.",
+    recipes: [
+      {
+        name: "Sattu Cucumber Yoghurt Drink", channel: "Home recipe", id: "home-sattu-cucumber-drink", video: null, dailyWith: "lunch",
+        macros: {"servings": 2, "serving": "1 glass (half of the batch)", "basis": "source", "why": "The batch fills 2 full glasses.", "kcal": 303.8, "p": 25.4, "c": 34.3, "f": 8.8},
+        makes: "Makes 2 full glasses", from: "Your own family recipe",
+        ingredients: [
+          "1½ cups Greek yogurt", "4 tbsp sattu", "1 cup water", "3–4 cucumbers", "Half a chilli", "A few curry leaves", "Salt", "1 spoon sugar", "Jeera (cumin) powder", "2½ tbsp chia seeds, added after grinding the rest",
+        ],
+        note: "Blend everything except the chia seeds, then stir the chia in. The numbers are for one glass. Not counted: the chilli, curry leaves, salt and jeera, which have no amounts and add almost nothing. Assumptions: 3½ cucumbers at about 200 g each (700 g), plain low-fat Greek yogurt, 'spoon' of sugar taken as 1 teaspoon, and sattu counted like roasted chickpea flour. No video exists, so there is no link.",
+      },
+    ],
+  },
 ];
 

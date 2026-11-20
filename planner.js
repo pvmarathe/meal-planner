@@ -35,9 +35,14 @@ const V3_PLANS_KEY = "indian-protein-recipes-plans-v3"; // the earlier week-by-w
 const OLD_PLAN_KEY = "indian-protein-recipes-plan-v2"; // the very first single-plan format, carried over once
 const MAX_DAYS = 14; // the longest range a plan can cover
 
-const idOf = (r) => r.video.split("v=")[1];
+const idOf = (r) => r.id || r.video.split("v=")[1]; // home recipes have no video, so they carry their own id
 const byId = {};
 sections.forEach((s) => s.recipes.forEach((r) => { byId[idOf(r)] = { r, s }; }));
+
+// Recipes marked dailyWith (e.g. the lunch drink) are added to every one of that meal, and the rest of the meal is balanced around them.
+const DAILY = {};
+MEALS.forEach((m) => { DAILY[m] = []; });
+Object.keys(byId).forEach((id) => { const w = byId[id].r.dailyWith; if (w && DAILY[w] && byId[id].r.macros && !byId[id].r.macros.na) DAILY[w].push({ id, s: 1 }); });
 
 const POOLS = {};
 MEALS.forEach((m) => { POOLS[m] = { main: [], side: [] }; });
@@ -96,8 +101,9 @@ function solveMeal(meal, target, banned, level = 0) {
   const stepsMain = [1, 1.5, 2, 2.5, 3];
   const stepsSide = [0.5, 1, 1.5, 2, 2.5, 3];
   const found = [];
+  const fixed = DAILY[meal].map((d) => ({ ...d }));
   for (let n = 0; n < 6000; n++) {
-    const items = [{ id: randomFrom(mains), s: randomFrom(stepsMain) }];
+    const items = [...fixed, { id: randomFrom(mains), s: randomFrom(stepsMain) }];
     if (sides.length && Math.random() < 0.8) items.push({ id: randomFrom(sides), s: randomFrom(stepsSide) });
     if (sides.length > 1 && Math.random() < 0.4) {
       const extra = randomFrom(sides);
@@ -141,7 +147,7 @@ function idsOfDay(day, except) {
 }
 function mainsUsed(days, meal) {
   const used = new Set();
-  days.forEach((d) => { if (d[meal]) d[meal].items.forEach((i) => { if (byId[i.id].r.meals[meal] === "main") used.add(i.id); }); });
+  days.forEach((d) => { if (d[meal]) d[meal].items.forEach((i) => { if (byId[i.id].r.meals && byId[i.id].r.meals[meal] === "main") used.add(i.id); }); });
   return used;
 }
 
@@ -155,7 +161,7 @@ function buildDays(old, activity, n) {
     MEALS.forEach((meal) => {
       if (day[meal]) return;
       const banned = new Set([...mainsUsed(days, meal), ...idsOfDay(day, meal)]);
-      day[meal] = solveMeal(meal, mealTarget(activity, meal), banned) || { items: [{ id: POOLS[meal].main[0], s: 1 }], locked: false };
+      day[meal] = solveMeal(meal, mealTarget(activity, meal), banned) || { items: [...DAILY[meal].map((d) => ({ ...d })), { id: POOLS[meal].main[0], s: 1 }], locked: false };
     });
   });
   return days;
@@ -358,7 +364,7 @@ function plannerSectionEl() {
       return h("li", {},
         h("strong", { text: `${fmtServ(s)} × ` }),
         h("a", { href: `recipes.html#r-${id}`, text: r.name }),
-        " ", h("a", { class: "watch", href: r.video, target: "_blank", rel: "noopener noreferrer", "aria-label": `Watch ${r.name} on YouTube`, text: "▶" }),
+        ...(r.video ? [" ", h("a", { class: "watch", href: r.video, target: "_blank", rel: "noopener noreferrer", "aria-label": `Watch ${r.name} on YouTube`, text: "▶" })] : []),
         h("span", { class: "serving-note", text: `1 serving = ${r.macros.serving}` }),
       );
     });

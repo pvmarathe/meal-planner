@@ -164,7 +164,7 @@ function macrosCell(r) {
 
 function row(r, sectionTitle) {
   const tr = document.createElement("tr");
-  tr.id = `r-${r.video.split("v=")[1]}`;
+  tr.id = `r-${r.id || r.video.split("v=")[1]}`;
   tr.dataset.search = [r.name, r.channel, sectionTitle, ...r.ingredients.flatMap((p) => (typeof p === "string" ? [p] : p.items))].join(" ").toLowerCase();
 
   const nameCell = document.createElement("td");
@@ -179,14 +179,18 @@ function row(r, sectionTitle) {
   const linkCell = document.createElement("td");
   linkCell.dataset.label = "Video";
   linkCell.className = "video-cell";
-  const a = document.createElement("a");
-  a.className = "video-link";
-  a.href = r.video;
-  a.target = "_blank";
-  a.rel = "noopener noreferrer";
-  a.textContent = "Watch video ▶";
-  a.setAttribute("aria-label", `Watch the ${r.name} video on YouTube (opens in a new tab)`);
-  linkCell.appendChild(a);
+  if (r.video) {
+    const a = document.createElement("a");
+    a.className = "video-link";
+    a.href = r.video;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = "Watch video ▶";
+    a.setAttribute("aria-label", `Watch the ${r.name} video on YouTube (opens in a new tab)`);
+    linkCell.appendChild(a);
+  } else {
+    linkCell.textContent = "No video";
+  }
 
   tr.append(nameCell, ingredientsCell(r), macrosCell(r), linkCell);
   return tr;
@@ -216,12 +220,13 @@ function sectionEl(s) {
   s.recipes.forEach((r) => {
     // Safety net: skip any recipe whose name or video link was already added.
     const nameKey = r.name.toLowerCase();
-    if (seen.has(nameKey) || seen.has(r.video)) {
+    const linkKey = r.video || r.id;
+    if (seen.has(nameKey) || seen.has(linkKey)) {
       console.warn("Skipped duplicate recipe:", r.name);
       return;
     }
     seen.add(nameKey);
-    seen.add(r.video);
+    seen.add(linkKey);
     tbody.appendChild(row(r, s.title));
     count++;
   });
