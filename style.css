@@ -413,3 +413,55 @@ tr.flash { animation: flash 2.5s ease-out; }
 .range-hint { font-size: 0.88rem; color: var(--muted); }
 .range-msg { margin: 0; font-size: 0.92rem; color: var(--accent-strong); font-weight: 600; }
 .range-msg.problem { color: var(--warm); }
+
+/* Folded sections (the More recipes): the heading is the click target */
+details.fold > summary { cursor: pointer; list-style-position: inside; }
+details.fold > summary h2 { display: inline; }
+details.fold > summary:hover h2 { color: var(--accent-strong); }
+details.fold[open] > summary { margin-bottom: 8px; }
+
+/* Cleaner planner: folded boxes and a tidier control row */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+#body-weight { width: 6.5em; }
+.plan-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-bottom: 14px; }
+.plan-empty .plan-controls .activity { flex-basis: auto; }
+.plan-minor { display: flex; gap: 8px; margin: -4px 0 14px; }
+details.targets { background: var(--accent-soft); border-radius: 12px; padding: 10px 16px; margin: 14px 0; }
+details.targets > summary { cursor: pointer; font-weight: 600; color: var(--accent-strong); }
+details.targets[open] > summary { margin-bottom: 8px; }
+.plan-empty .targets { flex-basis: auto; }
+details.prep-box > summary { cursor: pointer; font-weight: 600; color: var(--accent-strong); }
+details.prep-box[open] > summary { margin-bottom: 10px; }
+
+/* How-it-works page */
+.guide { max-width: 860px; }
+.guide section { margin-top: 38px; }
+.guide h2 { margin: 0 0 10px; }
+.guide h3 { margin: 22px 0 6px; font-size: 1.05rem; }
+.guide p, .guide li, .guide dd { max-width: 70ch; line-height: 1.6; }
+.guide-toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; }
+.steps { padding-left: 22px; }
+.steps li { margin-bottom: 12px; }
+.callout { margin: 18px 0; padding: 12px 16px; background: var(--accent-soft); border-radius: var(--radius); }
+.example { margin: 14px 0; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.example p { margin: 0 0 6px; }
+.example ul { margin: 0; padding-left: 20px; }
+.fine { color: var(--muted); font-size: 0.86rem; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.guide-table th, .guide-table td { padding: 9px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+.guide-table th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.glossary dt { margin-top: 12px; font-weight: 700; }
+.glossary dd { margin: 2px 0 0; color: var(--muted); }
+
+/* Planning for two */
+.people { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 14px; }
+.person { padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+.person-title { grid-column: 1 / -1; margin: 0; font-weight: 700; color: var(--accent-strong); }
+.person label { display: flex; flex-direction: column; gap: 3px; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+.person input, .person select { font: inherit; font-size: 0.92rem; padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); min-width: 0; }
+.who { color: var(--accent-strong); }
+@media (max-width: 760px) { .people { grid-template-columns: 1fr; } }
+
+.meal-items .who { display: block; font-size: 0.8rem; margin-bottom: 1px; }
+.plan-day .day-total { margin: 2px 0; }
+.plan-day .day-total .badge { margin: 0 0 0 4px; }

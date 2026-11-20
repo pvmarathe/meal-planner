@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it works: Meal Planner</title>
+  <meta name="description" content="A plain-language tour of the Meal Planner: how to use it, and the science behind the calories, protein, carbs, fat and recipe numbers.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">A plain-language tour</p>
+      <h1>How it works</h1>
+      <p class="lead">
+        How to use the planner, and the science behind its numbers, explained without jargon.
+      </p>
+      <nav class="site-nav" aria-label="Main">
+        <a class="chip" href="index.html">Meal planner</a>
+        <a class="chip" href="recipes.html">All recipes</a>
+        <a class="chip current" href="how-it-works.html" aria-current="page">How it works</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap guide">
+
+    <nav class="guide-toc" aria-label="On this page">
+      <a class="chip" href="#tour">Using the planner</a>
+      <a class="chip" href="#calories">Your calories</a>
+      <a class="chip" href="#macros">Protein, carbs and fat</a>
+      <a class="chip" href="#meals">How a meal is built</a>
+      <a class="chip" href="#two">Planning for two</a>
+      <a class="chip" href="#recipes">Where the recipe numbers come from</a>
+      <a class="chip" href="#sources">Where the recipes come from</a>
+      <a class="chip" href="#reminders">Reminders</a>
+      <a class="chip" href="#limits">What it cannot do</a>
+      <a class="chip" href="#words">Word list</a>
+    </nav>
+
+    <section id="tour">
+      <h2>1. Using the planner, step by step</h2>
+      <ol class="steps">
+        <li>
+          <strong>Choose your dates.</strong>
+          Type a first and last day, from 1 day up to 14, or use a quick pick such as "Next 7 days".
+          Every date range keeps its own plan, so you can come back to an earlier week.
+        </li>
+        <li>
+          <strong>Tell it about you (optional).</strong>
+          Pick your gender, type your weight in kilograms and choose how active you are.
+          These three things set how many calories a day the plan aims for. If you skip them, it uses general levels.
+        </li>
+        <li>
+          <strong>Press "Pick my meals".</strong>
+          For every day you get a breakfast, a lunch and a dinner. Each meal is one to three dishes,
+          and the planner chooses how many servings of each (for example 1½ servings of a paratha) so the meal hits its target.
+        </li>
+        <li>
+          <strong>Read a meal card.</strong>
+          Each card shows the dishes, the serving size ("1 serving = 2 idlis"), and the meal's calories, protein, carbs and fat.
+          Tap a dish name to open its recipe, or the green ▶ to watch its video.
+          A small orange note appears only when a meal is a little off target.
+        </li>
+        <li>
+          <strong>Change what you don't like.</strong>
+          "Reroll" swaps one meal for a new one. Tick "Keep" on the meals you love, then press
+          "Pick again", and only the unticked meals change.
+        </li>
+        <li>
+          <strong>Use the shopping list.</strong>
+          Open "Shopping list" at the bottom for every recipe in your plan, with tick boxes for what you already have.
+        </li>
+        <li>
+          <strong>Get reminders on your phone.</strong>
+          Open "Reminders on my phone", choose how you cook and when you shop, then download one calendar file (see <a href="#reminders">section 7</a>).
+        </li>
+        <li>
+          <strong>Cooking for two?</strong>
+          Choose "Me and my partner (one pot)" instead of "Just me" and see <a href="#two">Planning for two</a>.
+        </li>
+        <li>
+          <strong>Print it.</strong> "Print plan" makes a clean paper copy without the buttons.
+        </li>
+      </ol>
+      <p class="callout"><strong>In plain words:</strong> your plan is saved in your own browser on your own device.
+        Nothing is sent anywhere, so there is no account and nobody else can see it.
+        It also means the plan will not appear on a different phone or computer.</p>
+    </section>
+
+    <section id="calories">
+      <h2>2. How many calories a day?</h2>
+      <p>
+        A <strong>calorie</strong> (properly, a kilocalorie or "kcal") is a unit of energy. Your body burns energy all day
+        just to stay alive (breathing, keeping warm, pumping blood) and more when you move.
+        The planner needs a daily number to aim for, and this is where it gets it.
+      </p>
+      <h3>The starting numbers</h3>
+      <p>
+        India's national nutrition institute (ICMR-NIN) publishes how much energy a typical adult needs, in its 2020 guidelines (the figures here are as reported in published summaries).
+        It describes a "reference man" who weighs 65 kg and a "reference woman" who weighs 55 kg, at three activity levels:
+      </p>
+      <div class="table-wrap">
+        <table class="guide-table">
+          <thead><tr><th>Activity</th><th>Reference man (65 kg)</th><th>Reference woman (55 kg)</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Activity">Sedentary (desk job)</td><td data-label="Reference man (65 kg)">2,110 kcal</td><td data-label="Reference woman (55 kg)">1,660 kcal</td></tr>
+            <tr><td data-label="Activity">Moderately active</td><td data-label="Reference man (65 kg)">2,710 kcal</td><td data-label="Reference woman (55 kg)">2,130 kcal</td></tr>
+            <tr><td data-label="Activity">Heavy physical work</td><td data-label="Reference man (65 kg)">3,470 kcal</td><td data-label="Reference woman (55 kg)">2,730 kcal*</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine">*I could not confirm a published 2020 heavy-work figure for women. This one is estimated from the men's number, using the same ratio (about 0.79) that the other two rows show. The planner says so whenever you pick it.</p>
+      <h3>Adjusting for your weight</h3>
+      <p>
+        A heavier person burns more energy. When you type your weight, the planner scales the number in proportion.
+        A 75 kg man with a desk job is 75 ÷ 65 of 2,110, which is about <strong>2,430 kcal</strong> a day.
+        A 50 kg woman with a desk job is 50 ÷ 55 of 1,660, about <strong>1,510 kcal</strong>.
+      </p>
+      <p class="callout"><strong>In plain words:</strong> these are good averages, not a measurement of you.
+        Age, height, muscle, health conditions and goals such as weight loss all change what you really need.
+        The planner does not know any of those, so treat the target as a sensible starting point, and ask a doctor or dietitian for anything personal.</p>
+      <h3>"Prefer not to say"</h3>
+      <p>
+        If you leave gender on "Prefer not to say", the planner uses the general (reference man) figures for a 65 kg adult.
+      </p>
+    </section>
+
+    <section id="macros">
+      <h2>3. Protein, carbs and fat</h2>
+      <p>
+        Food energy comes from three <strong>macronutrients</strong>. They are the big three; vitamins and minerals are separate.
+      </p>
+      <div class="table-wrap">
+        <table class="guide-table">
+          <thead><tr><th>Nutrient</th><th>What it does</th><th>Energy per gram</th><th>Planner aims for</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Nutrient">Protein</td><td data-label="What it does">Builds and repairs muscle and much else. In this planner it comes from dals, paneer, soya, tofu, sprouts and yogurt.</td><td data-label="Energy per gram">4 kcal</td><td data-label="Planner aims for">15–35% of calories, ideally about 20%</td></tr>
+            <tr><td data-label="Nutrient">Carbohydrate</td><td data-label="What it does">The body's main quick fuel: grains, millets, fruit, vegetables.</td><td data-label="Energy per gram">4 kcal</td><td data-label="Planner aims for">45–65%, ideally about 50%</td></tr>
+            <tr><td data-label="Nutrient">Fat</td><td data-label="What it does">Fuel, and it carries some vitamins: oil, ghee, nuts, seeds.</td><td data-label="Energy per gram">9 kcal</td><td data-label="Planner aims for">20–35%, ideally about 30%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Because fat has more than twice the energy per gram, a spoon of oil adds a lot of calories quickly.
+        That is why the planner looks at the <em>share of calories</em> from each nutrient, not just grams.
+      </p>
+      <h3>Where the percentages come from</h3>
+      <p>
+        The ranges follow the US and Canadian "acceptable macronutrient ranges", which are widely used worldwide.
+        I raised the protein floor to 15% because protein matters in a vegetarian diet.
+        I could not verify a set of percentage ranges published specifically for India, so these are borrowed.
+      </p>
+      <h3>How much protein is enough?</h3>
+      <p>
+        The Indian minimum allowance (ICMR-NIN 2020) is about <strong>0.83 g of protein for every kilogram of body weight</strong> a day.
+        At 65 kg that is about 54 g. The planner usually lands well above that because it aims for about 20% of calories.
+      </p>
+      <h3>A worked example</h3>
+      <div class="example">
+        <p><strong>A 75 kg man with a desk job</strong></p>
+        <ul>
+          <li>Daily target: 2,110 × 75 ÷ 65 = about <strong>2,430 kcal</strong>.</li>
+          <li>Protein, 15–35%: about 91 to 213 g a day (ideal about 122 g).</li>
+          <li>Carbs, 45–65%: about 273 to 395 g a day (ideal about 304 g).</li>
+          <li>Fat, 20–35%: about 54 to 95 g a day (ideal about 81 g).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="meals">
+      <h2>4. How a meal is built</h2>
+      <h3>Splitting the day</h3>
+      <p>
+        The day's calories are split <strong>30% breakfast, 35% lunch and 35% dinner</strong>. No snacks are planned.
+        For the 75 kg man above, that is about 730 kcal for breakfast and 850 kcal each for lunch and dinner.
+      </p>
+      <h3>Finding a good combination</h3>
+      <p>
+        Think of it as a game of trying thousands of combinations. For each meal the planner picks a main dish,
+        often adds one or two side dishes, and chooses portions in half-serving steps (½, 1, 1½ and so on).
+        It throws away any combination whose calories are more than 10% away from the meal's target,
+        or whose protein, carb or fat share falls outside the ranges above.
+        From the combinations that pass, it picks one of the best, so the result is balanced but still varied.
+      </p>
+      <ul>
+        <li>The same main dish is not used twice in the same slot during a plan (no identical dinner two nights running).</li>
+        <li>If nothing passes, the planner loosens the rules a little. The card then shows an orange "Close" note that says what is off, so it never pretends.</li>
+        <li>Dressings and the "More recipes" sections are for browsing only. The planner never picks them.</li>
+      </ul>
+      <h3>The daily lunch drink</h3>
+      <p>
+        The <strong>Sattu Cucumber Yoghurt Drink</strong> is added to every lunch, one glass a day.
+        The planner counts its calories and nutrients first, then balances the rest of the lunch around it.
+        That is why the rest of lunch is a little lighter than dinner.
+      </p>
+      <p class="callout"><strong>In plain words:</strong> the planner does the sums you would do on paper: add up the calories
+        and the protein, carbs and fat of a few dishes, and nudge the portions until the total matches your target.</p>
+    </section>
+
+    <section id="two">
+      <h2>Planning for two (one pot)</h2>
+      <p>
+        If two people eat from the same pot, they should eat the <em>same dishes</em> but not necessarily the <em>same amounts</em>,
+        because their calorie needs differ. Choose "Me and my partner (one pot)" in the "Planning for" box and fill in each person's name,
+        gender, weight and activity level.
+      </p>
+      <ul>
+        <li><strong>Same dishes, separate portions.</strong> Each meal card shows, for every dish, how many servings each person eats, for example "Prasad 2½ · Wife 1½".</li>
+        <li><strong>Both are checked.</strong> The planner tries many dish combinations and keeps only those where each person can reach their own calorie target and a healthy protein, carb and fat split. Each person's totals appear on the card and for the day.</li>
+        <li><strong>The lunch drink</strong> is one glass each, so one batch of the sattu drink covers both of you.</li>
+        <li><strong>One shopping list.</strong> It adds up the servings for both people, so you buy and cook once. The reminders show the combined portions too, such as "2 + 1½ x Paneer Paratha".</li>
+        <li><strong>Sharing.</strong> "Copy link to share this plan" puts the whole plan inside a web link. Send it by message and the other person sees exactly the same plan on their own phone, with no account. It is a copy, not a live connection, so if you change the plan afterwards, send a new link.</li>
+      </ul>
+      <p class="callout"><strong>In plain words:</strong> think of it as cooking one pot and serving two plates, with each plate sized for the person eating it.</p>
+      <p class="fine">If two people's needs are very far apart (for example a heavy-labour 100 kg man and a 40 kg woman at a desk), one pot cannot suit both exactly, and some meals will show an orange "Close" note that says what is off.</p>
+    </section>
+
+    <section id="recipes">
+      <h2>5. Where the recipe numbers come from</h2>
+      <p>
+        Most recipe videos do not list calories. So every recipe's nutrition is <strong>worked out from its ingredient list</strong>, in four steps:
+      </p>
+      <ol class="steps">
+        <li><strong>Turn each ingredient into grams.</strong> "1 cup of moong dal" becomes about 207 g, "1 tbsp of oil" about 14 g. Different foods weigh different amounts per cup.</li>
+        <li><strong>Look it up.</strong> The USDA FoodData Central database (the US government's food-composition table, the "SR Legacy 2018" edition) says how many calories, protein, carbs and fat are in 100 g of that food.</li>
+        <li><strong>Add everything up.</strong> That gives the whole pot.</li>
+        <li><strong>Divide by the number of servings.</strong> That gives the figure on each card.</li>
+      </ol>
+      <h3>A worked example: the sattu drink</h3>
+      <div class="table-wrap">
+        <table class="guide-table">
+          <thead><tr><th>Ingredient (whole batch)</th><th>About how many grams</th><th>About how many kcal</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Ingredient (whole batch)">1½ cups Greek yogurt</td><td data-label="About how many grams">368 g</td><td data-label="About how many kcal">268</td></tr>
+            <tr><td data-label="Ingredient (whole batch)">4 tbsp sattu (roasted chana flour)</td><td data-label="About how many grams">23 g</td><td data-label="About how many kcal">89</td></tr>
+            <tr><td data-label="Ingredient (whole batch)">3½ cucumbers</td><td data-label="About how many grams">700 g</td><td data-label="About how many kcal">105</td></tr>
+            <tr><td data-label="Ingredient (whole batch)">2½ tbsp chia seeds</td><td data-label="About how many grams">27 g</td><td data-label="About how many kcal">129</td></tr>
+            <tr><td data-label="Ingredient (whole batch)">1 teaspoon sugar</td><td data-label="About how many grams">4 g</td><td data-label="About how many kcal">16</td></tr>
+            <tr><td data-label="Ingredient (whole batch)"><strong>Whole batch</strong></td><td data-label="About how many grams"></td><td data-label="About how many kcal"><strong>about 607</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The batch fills 2 glasses, so one glass is about <strong>304 kcal</strong> (about 25 g protein, 34 g carbs and 9 g fat).</p>
+      <h3>What counts, and what does not</h3>
+      <ul>
+        <li><strong>Counted:</strong> grains, flours, dals, dairy, oils, sugars, nuts and vegetables.</li>
+        <li><strong>Counted as zero:</strong> salt, water, spices, fresh herbs, lemon and lime juice, vinegar, and anything with no amount given (such as "oil for roasting"). They add very few calories, but this does mean a recipe can read a little low.</li>
+        <li><strong>Not available:</strong> when a key amount is missing and cannot be turned into grams without guessing (for example the dough in some parathas, or idli batter), the card says so and shows no numbers rather than inventing them.</li>
+      </ul>
+      <h3>What a "serving" is</h3>
+      <p>
+        If the creator says what the recipe makes ("makes 20 idlis" or "serves 4"), the card says <em>From the source</em>.
+        If not, the site assumes a typical serving (for example 2 idlis, 1 plate of poha, a 200 g bowl of salad)
+        and marks it <em>Assumed</em>. The full list is in a fold-out box on the <a href="recipes.html">recipes page</a>.
+      </p>
+      <p class="callout"><strong>In plain words:</strong> the numbers are careful estimates, not lab results.
+        Real values change with the brand, how much oil or ghee you really use, and how big your portion is.
+        As a rough guide, they could be off by 10% to 30%.</p>
+    </section>
+
+    <section id="sources">
+      <h2>6. Where the recipes come from</h2>
+      <ul>
+        <li><strong>Creator videos.</strong> Most recipes link to a YouTube video, and the ingredient amounts are copied from the creator's own description or recipe page. Each recipe has its own video, and none is repeated.</li>
+        <li><strong>Home recipes.</strong> A family recipe with no video, such as the sattu drink, is labelled "Home recipe".</li>
+        <li><strong>More recipes.</strong> The 485 further vegetarian recipes are folded away on the recipes page. Their amounts are for one serving, as each recipe is written, and I worked out the nutrition ingredient by ingredient. Where there is a video, it is a close match found by searching YouTube, not this exact recipe, so its amounts may differ.</li>
+        <li><strong>Everything is vegetarian and egg-free.</strong></li>
+      </ul>
+    </section>
+
+    <section id="reminders">
+      <h2>7. Reminders on your phone</h2>
+      <p>
+        This site is a set of plain files with no server, so it cannot send notifications by itself.
+        Instead it makes a <strong>calendar file</strong> (an ".ics" file), which every calendar app understands.
+        You import it once into a "Meal prep" calendar in Google Calendar. Your phone and your email alerts then work as usual.
+      </p>
+      <p>
+        The file holds a nudge to plan the week (Wednesday or Thursday), to shop (Saturday or Sunday), to batch cook if you choose that,
+        and an evening reminder with the next day's menu, including anything to soak or sprout in advance.
+        The reminder text carries the menu itself, because a link to a file on your computer will not open on your phone.
+      </p>
+      <p class="fine">I could not test how Google Calendar applies alert settings to imported events, so check one imported reminder after your first import.</p>
+    </section>
+
+    <section id="limits">
+      <h2>8. What this cannot do</h2>
+      <ul>
+        <li>It is a general guide. It is <strong>not medical or dietary advice</strong>, and it does not know about diabetes, kidney problems, pregnancy, allergies or medicines.</li>
+        <li>It does not know your age or height, or whether you want to lose or gain weight.</li>
+        <li>The macronutrient ranges are borrowed from US and Canadian guidance because I could not verify India-specific ones.</li>
+        <li>Nutrition figures are estimates from ingredient lists. Some ingredients have no exact USDA match, and a few use a close stand-in (for example sev, papdi, and the tamarind-date chutney). Spices and herbs count as zero.</li>
+        <li>Recipe videos belong to their creators and can be removed at any time.</li>
+      </ul>
+    </section>
+
+    <section id="words">
+      <h2>9. Word list</h2>
+      <dl class="glossary">
+        <dt>kcal (calorie)</dt><dd>A unit of food energy. The "calories" on a packet are kcal.</dd>
+        <dt>Macronutrient</dt><dd>Protein, carbohydrate or fat: the three nutrients that supply energy.</dd>
+        <dt>ICMR-NIN</dt><dd>India's Indian Council of Medical Research and the National Institute of Nutrition. They publish the recommended intakes for Indians.</dd>
+        <dt>RDA</dt><dd>Recommended Dietary Allowance: the amount of a nutrient that meets the needs of almost everyone in a group.</dd>
+        <dt>Reference man / woman</dt><dd>A typical adult used to write the guidelines: 65 kg and 55 kg in the Indian tables.</dd>
+        <dt>USDA FoodData Central</dt><dd>The US Department of Agriculture's public table of what is in thousands of foods.</dd>
+        <dt>Sedentary</dt><dd>Mostly sitting during the day, such as a desk job.</dd>
+        <dt>.ics file</dt><dd>A standard calendar file that Google Calendar, Apple Calendar and Outlook can all import.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>
+      Nutrition numbers are estimates worked out from each recipe's ingredient list with USDA data.
+      Videos belong to their creators on YouTube. This is a general guide, not medical or dietary advice.
+    </p>
+  </footer>
+</body>
+</html>

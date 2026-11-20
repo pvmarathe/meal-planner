@@ -9,7 +9,7 @@ function h(tag, props = {}, ...kids) {
     else if (v === true) e.setAttribute(k, "");
     else if (v !== false && v != null) e.setAttribute(k, v);
   });
-  kids.flat().forEach((k) => e.append(k));
+  kids.flat().filter((k) => k != null && k !== false).forEach((k) => e.append(k));
   return e;
 }
 

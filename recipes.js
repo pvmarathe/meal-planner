@@ -48,6 +48,7 @@ function methodSectionEl() {
     "Dal, sambar and rajma: 1 bowl, at about 40 g of dry dal (50 g for rajma).",
     "Salads: 1 bowl, at about 200 g.",
     "Dressings: 2 tablespoons, at about 30 g (or the creator's own serving when the recipe gives one).",
+    "More recipes (the collapsed sections): 1 serving, as each recipe is written. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Their nutrition is worked out ingredient by ingredient from USDA data, and spices, fresh herbs, lemon and lime, salt, vinegars and curry pastes count as zero. Idli and dosa batter, appam batter, bhajani flour and ready-made kachori have no reliable weight, so those 12 recipes show no numbers.",
     "Kheer, sweet pongal and porridge: 1 bowl, at about 250 g of the finished dish.",
   ].forEach((text) => {
     const li = document.createElement("li");
@@ -234,6 +235,17 @@ function sectionEl(s) {
 
   table.appendChild(tbody);
   wrap.appendChild(table);
+  if (s.id.startsWith("more-")) {
+    // The long "More recipes" sections stay folded until clicked.
+    h2.textContent = `${s.title} (${count})`;
+    const fold = document.createElement("details");
+    fold.className = "fold";
+    const summary = document.createElement("summary");
+    summary.appendChild(h2);
+    fold.append(summary, note, wrap);
+    section.appendChild(fold);
+    return section;
+  }
   section.append(h2, note, wrap);
   return section;
 }
@@ -275,6 +287,8 @@ function applySearch() {
       if (match) visible++;
     });
     sectionEl_.hidden = visible === 0;
+    const fold = sectionEl_.querySelector("details.fold");
+    if (fold) fold.open = words.length > 0 && visible > 0; // folded sections open while a search is showing their matches
     shown += visible;
   });
   const howEl = document.getElementById("how");
@@ -287,10 +301,15 @@ document.getElementById("search-clear").addEventListener("click", () => { search
 applySearch();
 
 // Opening a link like recipes.html#r-abc123 scrolls to that recipe and highlights it.
-if (location.hash.length > 1) {
+// A folded section is opened first, so the target is visible.
+function goToHash() {
+  if (location.hash.length <= 1) return;
   const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-  if (target) {
-    target.scrollIntoView({ block: target.tagName === "TR" ? "center" : "start", behavior: "instant" });
-    if (target.tagName === "TR") target.classList.add("flash");
-  }
+  if (!target) return;
+  const fold = target.querySelector("details.fold") || target.closest("details.fold");
+  if (fold) fold.open = true;
+  target.scrollIntoView({ block: target.tagName === "TR" ? "center" : "start", behavior: "instant" });
+  if (target.tagName === "TR") target.classList.add("flash");
 }
+goToHash();
+window.addEventListener("hashchange", goToHash);

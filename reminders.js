@@ -29,7 +29,9 @@ function saveReminderSettings(s) {
 
 // ----- what to say about the dishes -----
 const dayItems = (day) => MEALS.flatMap((m) => day[m].items);
-const mealLine = (day, m) => `${MEAL_LABEL[m]}: ${day[m].items.map(({ id, s }) => `${fmtServ(s)} x ${byId[id].r.name}`).join(" + ")}`;
+// Servings for one person ("2"), or for two people ("2 + 1½": the first person's portion, then the partner's)
+const servText = (it) => (typeof it.s2 === "number" ? `${fmtServ(it.s)} + ${fmtServ(it.s2)}` : fmtServ(it.s));
+const mealLine = (day, m) => `${MEAL_LABEL[m]}: ${day[m].items.map((it) => `${servText(it)} x ${byId[it.id].r.name}`).join(" + ")}`;
 const uniqueDishes = (day) => [...new Map(dayItems(day).map((i) => [i.id, byId[i.id]])).values()];
 
 // Things to start ahead of time. These go by the dish name and section, so they are reminders, not exact timings.
@@ -55,8 +57,8 @@ function batchLines(plan) {
   const groups = { ahead: [], batter: [], fresh: [] };
   const last = Math.min(2, plan.days.length - 1);
   for (let i = 0; i <= last; i++) {
-    MEALS.forEach((m) => plan.days[i][m].items.forEach(({ id, s }) => {
-      groups[dishKind(id)].push(`${dayName(plan, i).slice(0, 3)} ${m}: ${fmtServ(s)} x ${byId[id].r.name}`);
+    MEALS.forEach((m) => plan.days[i][m].items.forEach((it) => {
+      groups[dishKind(it.id)].push(`${dayName(plan, i).slice(0, 3)} ${m}: ${servText(it)} x ${byId[it.id].r.name}`);
     }));
   }
   const lines = [`Batch cook for ${dayName(plan, 0)}${last ? ` to ${dayName(plan, last)}` : ""}.`, ""];
@@ -92,7 +94,7 @@ function buildReminders(plan, settings, now = new Date()) {
   const menu = [];
   plan.days.forEach((day, i) => { menu.push(`${dayOf(i)}:`); MEALS.forEach((m) => menu.push("  " + mealLine(day, m))); });
   const eatenServings = {};
-  plan.days.forEach((day) => dayItems(day).forEach(({ id, s }) => { eatenServings[id] = (eatenServings[id] || 0) + s; }));
+  plan.days.forEach((day) => dayItems(day).forEach(({ id, s, s2 }) => { eatenServings[id] = (eatenServings[id] || 0) + s + (typeof s2 === "number" ? s2 : 0); }));
 
   // 2. The evening before shopping
   events.push({

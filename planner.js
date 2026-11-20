@@ -6,10 +6,12 @@
 // The plan is saved in this browser only (localStorage).
 
 // General daily energy levels for an adult, based on ICMR-NIN 2020 figures as reported in published summaries.
+// kcal is for the reference man (65 kg); kcalF is for the reference woman (55 kg). The women's sedentary and moderate
+// figures are the published ones; the heavy-work figure is estimated from the men's value at the same ratio (about 0.79).
 const ACTIVITY = {
-  sedentary: { label: "Sedentary (desk job)", kcal: 2110 },
-  moderate: { label: "Moderately active", kcal: 2710 },
-  heavy: { label: "Heavy physical work", kcal: 3470 },
+  sedentary: { label: "Sedentary (desk job)", kcal: 2110, kcalF: 1660 },
+  moderate: { label: "Moderately active", kcal: 2710, kcalF: 2130 },
+  heavy: { label: "Heavy physical work", kcal: 3470, kcalF: 2730 },
 };
 const MEALS = ["breakfast", "lunch", "dinner"];
 const MEAL_LABEL = { breakfast: "Breakfast", lunch: "Lunch", dinner: "Dinner" };
@@ -23,13 +25,36 @@ const WINDOWS = [
 const TOLERANCE = [0.1, 0.15, 0.2]; // allowed calories away from the meal's target
 const IDEAL = { p: 0.2, c: 0.5, f: 0.3 };
 const PROTEIN_RDA_G_PER_KG = 0.83; // ICMR-NIN 2020
-// Body weight (optional). The calorie levels above are for a 65 kg adult; with a weight entered, they scale in proportion.
+// Gender (optional) picks which reference body the calorie levels start from. Without a choice, the general (reference man) levels are used.
+const GENDER_KEY = "meal-planner-gender";
+const REFERENCE = {
+  general: { label: "Prefer not to say", kg: 65, field: "kcal", about: "a 65 kg adult" },
+  female: { label: "Female", kg: 55, field: "kcalF", about: "a 55 kg woman" },
+  male: { label: "Male", kg: 65, field: "kcal", about: "a 65 kg man" },
+};
+let gender = "general";
+try { const g = localStorage.getItem(GENDER_KEY); if (REFERENCE[g]) gender = g; } catch (e) { /* fine without saving */ }
+const setGender = (g) => { gender = g; try { if (g !== "general") localStorage.setItem(GENDER_KEY, g); else localStorage.removeItem(GENDER_KEY); } catch (e) { /* fine */ } };
+// Body weight (optional). The calorie levels are for the reference body above; with a weight entered, they scale in proportion.
 const WEIGHT_KEY = "meal-planner-weight";
-const BASE_KG = 65, MIN_KG = 40, MAX_KG = 100;
-let bodyKg = null; // null means "not entered": use the 65 kg levels
+const MIN_KG = 40, MAX_KG = 100;
+let bodyKg = null; // null means "not entered": use the reference weight
 try { const w = parseFloat(localStorage.getItem(WEIGHT_KEY)); if (w >= MIN_KG && w <= MAX_KG) bodyKg = w; } catch (e) { /* fine without saving */ }
 const setBodyKg = (w) => { bodyKg = w; try { if (w) localStorage.setItem(WEIGHT_KEY, String(w)); else localStorage.removeItem(WEIGHT_KEY); } catch (e) { /* fine */ } };
-const dailyKcal = (activity) => Math.round((ACTIVITY[activity].kcal * (bodyKg || BASE_KG)) / BASE_KG / 10) * 10;
+const kcalFor = (activity, g, kg) => { const ref = REFERENCE[g]; return Math.round((ACTIVITY[activity][ref.field] * (kg || ref.kg)) / ref.kg / 10) * 10; };
+const dailyKcal = (activity) => kcalFor(activity, gender, bodyKg);
+// Planning for two: each person has a name (optional), gender, weight and activity level. A one-person plan uses the settings above.
+const TWO_KEY = "meal-planner-two";
+const PERSON_NAMES = ["You", "Partner"];
+const cleanPerson = (p) => ({
+  name: String((p && p.name) || "").trim().slice(0, 20),
+  gender: p && REFERENCE[p.gender] ? p.gender : "general",
+  kg: p && p.kg >= MIN_KG && p.kg <= MAX_KG ? p.kg : null,
+  activity: p && ACTIVITY[p.activity] ? p.activity : "sedentary",
+});
+const nameOf = (p, k) => p.name || PERSON_NAMES[k];
+const personKcal = (p) => kcalFor(p.activity, p.gender, p.kg);
+const peopleOf = (plan) => plan.people || [{ name: "", gender, kg: bodyKg, activity: plan.activity }];
 const PLANS_KEY = "indian-protein-recipes-plans-v4"; // one saved plan for each date range
 const V3_PLANS_KEY = "indian-protein-recipes-plans-v3"; // the earlier week-by-week plans, carried over once
 const OLD_PLAN_KEY = "indian-protein-recipes-plan-v2"; // the very first single-plan format, carried over once
@@ -78,11 +103,13 @@ function fmtServ(n) {
 }
 const randomFrom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-function totalsOf(items) {
+// k is which person's portions to add up: 0 for the first person (s), 1 for the second (s2).
+function totalsOf(items, k = 0) {
   const t = { kcal: 0, p: 0, c: 0, f: 0 };
-  items.forEach(({ id, s }) => {
-    const m = byId[id].r.macros;
-    t.kcal += m.kcal * s; t.p += m.p * s; t.c += m.c * s; t.f += m.f * s;
+  items.forEach((it) => {
+    const x = k ? it.s2 : it.s;
+    const m = byId[it.id].r.macros;
+    t.kcal += m.kcal * x; t.p += m.p * x; t.c += m.c * x; t.f += m.f * x;
   });
   return t;
 }
@@ -94,7 +121,56 @@ const inWindow = (sh, w) => ["p", "c", "f"].every((k) => sh[k] >= w[k][0] && sh[
 const pct = (x) => `${Math.round(x * 100)}%`;
 
 // ----- solving one meal -----
-function solveMeal(meal, target, banned, level = 0) {
+const STEPS_MAIN = [1, 1.5, 2, 2.5, 3];
+const STEPS_SIDE = [0.5, 1, 1.5, 2, 2.5, 3];
+const scoreOf = (t, target, level) => {
+  const off = Math.abs(t.kcal / target - 1);
+  if (off > TOLERANCE[level]) return null;
+  const sh = sharesOf(t);
+  if (!inWindow(sh, WINDOWS[level])) return null;
+  return off * 3 + Math.abs(sh.p - IDEAL.p) + Math.abs(sh.c - IDEAL.c) + Math.abs(sh.f - IDEAL.f);
+};
+// For two people: the same dishes, but each person gets their own portions. Tries many dish sets and keeps the ones
+// where both people can reach their own target.
+function bestServings(ids, target, level, fixed) {
+  let best = null;
+  const cur = [];
+  const walk = (i) => {
+    if (i === ids.length) {
+      const sc = scoreOf(totalsOf([...fixed, ...ids.map((id, j) => ({ id, s: cur[j] }))]), target, level);
+      if (sc !== null && (!best || sc < best.score)) best = { servs: cur.slice(), score: sc };
+      return;
+    }
+    for (const v of (i === 0 ? STEPS_MAIN : STEPS_SIDE)) { cur[i] = v; walk(i + 1); }
+  };
+  walk(0);
+  return best;
+}
+function solvePair(meal, targets, banned, level = 0) {
+  let mains = POOLS[meal].main.filter((id) => !banned.has(id));
+  if (!mains.length) mains = POOLS[meal].main;
+  const sides = POOLS[meal].side.filter((id) => !banned.has(id));
+  const fixed = DAILY[meal].map((d) => ({ ...d }));
+  const found = [];
+  for (let n = 0; n < 1500; n++) {
+    const ids = [randomFrom(mains)];
+    if (sides.length && Math.random() < 0.8) ids.push(randomFrom(sides));
+    if (sides.length > 1 && Math.random() < 0.4) { const extra = randomFrom(sides); if (!ids.includes(extra)) ids.push(extra); }
+    const a = bestServings(ids, targets[0], level, fixed);
+    if (!a) continue;
+    const b = bestServings(ids, targets[1], level, fixed);
+    if (!b) continue;
+    found.push({ ids, a, b, score: a.score + b.score });
+  }
+  if (!found.length) return level < WINDOWS.length - 1 ? solvePair(meal, targets, banned, level + 1) : null;
+  found.sort((x, y) => x.score - y.score);
+  const pick = randomFrom(found.slice(0, Math.max(5, Math.ceil(found.length * 0.15))));
+  return { items: [...fixed.map((d) => ({ ...d, s2: d.s })), ...pick.ids.map((id, j) => ({ id, s: pick.a.servs[j], s2: pick.b.servs[j] }))], locked: false };
+}
+// One slot for one or two people (targets is a list of calorie targets, one for each person).
+const solveMeal = (meal, targets, banned) => (targets.length === 2 ? solvePair(meal, targets, banned) : solveOne(meal, targets[0], banned));
+
+function solveOne(meal, target, banned, level = 0) {
   let mains = POOLS[meal].main.filter((id) => !banned.has(id));
   if (!mains.length) mains = POOLS[meal].main;
   const sides = POOLS[meal].side.filter((id) => !banned.has(id));
@@ -116,15 +192,15 @@ function solveMeal(meal, target, banned, level = 0) {
     if (!inWindow(sh, WINDOWS[level])) continue;
     found.push({ items, score: off * 3 + Math.abs(sh.p - IDEAL.p) + Math.abs(sh.c - IDEAL.c) + Math.abs(sh.f - IDEAL.f) });
   }
-  if (!found.length) return level < WINDOWS.length - 1 ? solveMeal(meal, target, banned, level + 1) : null;
+  if (!found.length) return level < WINDOWS.length - 1 ? solveOne(meal, target, banned, level + 1) : null;
   found.sort((a, b) => a.score - b.score);
   const best = found.slice(0, Math.max(5, Math.ceil(found.length * 0.15)));
   return { items: randomFrom(best).items, locked: false };
 }
 
 // How a finished meal compares with the target: balanced, or which part is off.
-function checkMeal(items, target) {
-  const t = totalsOf(items);
+function checkMeal(items, target, k = 0) {
+  const t = totalsOf(items, k);
   const sh = sharesOf(t);
   const issues = [];
   if (Math.abs(t.kcal / target - 1) > TOLERANCE[0]) issues.push(`calories ${t.kcal > target ? "above" : "below"} target`);
@@ -139,6 +215,7 @@ function checkMeal(items, target) {
 
 // ----- the week -----
 const mealTarget = (activity, meal) => dailyKcal(activity) * MEAL_SPLIT[meal];
+const targetsFor = (people, meal) => people.map((p) => personKcal(p) * MEAL_SPLIT[meal]);
 
 function idsOfDay(day, except) {
   const ids = new Set();
@@ -151,17 +228,21 @@ function mainsUsed(days, meal) {
   return used;
 }
 
-function buildDays(old, activity, n) {
+function buildDays(old, people, n) {
   const days = Array.from({ length: n }, (_, i) => {
     const day = {};
-    MEALS.forEach((m) => { if (old && old.days.length === n && old.days[i][m].locked) day[m] = old.days[i][m]; });
+    MEALS.forEach((m) => {
+      const o = old && old.days.length === n ? old.days[i][m] : null;
+      // a meal marked Keep stays, as long as it has portions for everyone in this plan
+      if (o && o.locked && (people.length === 1 || o.items.every((it) => typeof it.s2 === "number"))) day[m] = o;
+    });
     return day;
   });
   days.forEach((day) => {
     MEALS.forEach((meal) => {
       if (day[meal]) return;
       const banned = new Set([...mainsUsed(days, meal), ...idsOfDay(day, meal)]);
-      day[meal] = solveMeal(meal, mealTarget(activity, meal), banned) || { items: [...DAILY[meal].map((d) => ({ ...d })), { id: POOLS[meal].main[0], s: 1 }], locked: false };
+      day[meal] = solveMeal(meal, targetsFor(people, meal), banned) || { items: [...DAILY[meal].map((d) => ({ ...d, s2: d.s })), { id: POOLS[meal].main[0], s: 1, s2: 1 }], locked: false };
     });
   });
   return days;
@@ -177,19 +258,24 @@ const rangeSummary = (s, e) => {
 };
 const dayName = (p, i) => WEEKDAY_NAMES[addDays(parseIso(p.start), i).getDay()];
 
-function newPlan(old, activity, start, end) {
+// peopleArg: undefined keeps the old plan's people, null makes a one-person plan, a list of two makes a plan for two.
+function newPlan(old, activity, start, end, peopleArg) {
   const s = start || old.start;
   const e = end || old.end;
-  const act = activity || (old && old.activity) || "sedentary";
-  const days = buildDays(old, act, daysBetween(s, e));
+  const pp = peopleArg === undefined ? (old && old.people) || null : peopleArg;
+  const act = pp ? pp[0].activity : (activity || (old && old.activity) || "sedentary");
+  const people = pp || [{ name: "", gender, kg: bodyKg, activity: act }];
+  const days = buildDays(old, people, daysBetween(s, e));
   const used = new Set(days.flatMap((d) => MEALS.flatMap((m) => d[m].items.map((i) => i.id))));
   const done = old ? Object.fromEntries(Object.entries(old.done || {}).filter(([id]) => used.has(id))) : {};
-  return { start: s, end: e, activity: act, mode: (old && old.mode) || "fresh", days, done };
+  return { start: s, end: e, activity: act, mode: (old && old.mode) || "fresh", days, done, ...(pp ? { people: pp } : {}) };
 }
 
 const validPlan = (p) => !!p && typeof p.start === "string" && typeof p.end === "string" && !!ACTIVITY[p.activity] && Array.isArray(p.days)
   && p.days.length >= 1 && p.days.length <= MAX_DAYS && p.days.length === daysBetween(p.start, p.end)
-  && p.days.every((d) => MEALS.every((m) => d[m] && Array.isArray(d[m].items) && d[m].items.length && d[m].items.every((i) => byId[i.id])));
+  && (!p.people || (Array.isArray(p.people) && p.people.length === 2 && p.people.every((q) => q && REFERENCE[q.gender] && ACTIVITY[q.activity])))
+  && p.days.every((d) => MEALS.every((m) => d[m] && Array.isArray(d[m].items) && d[m].items.length
+    && d[m].items.every((i) => byId[i.id] && typeof i.s === "number" && (!p.people || typeof i.s2 === "number"))));
 
 // Every saved plan, keyed by its dates, plus which one was open last. Plans that ended more than two weeks ago are dropped.
 function loadStore() {
@@ -227,20 +313,56 @@ function flatLines(r) {
   return lines;
 }
 
-function targetsBox(activity) {
-  const kcal = dailyKcal(activity);
-  const g = (share, per) => Math.round((kcal * share) / per);
+function targetsBox(people) {
   const w = WINDOWS[0];
-  return h("div", { class: "targets" },
+  const grams = (kcal, share, per) => Math.round((kcal * share) / per);
+  if (people.length === 2) {
+    const lines = people.map((p, k) => {
+      const kcal = personKcal(p);
+      return h("li", { text: `${nameOf(p, k)}: about ${kcal} kcal a day (${ACTIVITY[p.activity].label.toLowerCase()}). Protein ${grams(kcal, w.p[0], 4)} to ${grams(kcal, w.p[1], 4)} g, carbs ${grams(kcal, w.c[0], 4)} to ${grams(kcal, w.c[1], 4)} g, fat ${grams(kcal, w.f[0], 9)} to ${grams(kcal, w.f[1], 9)} g. ${p.kg ? `Scaled to ${p.kg} kg.` : `General levels for ${REFERENCE[p.gender].about}.`}` });
+    });
+    return h("details", { class: "targets" },
+      h("summary", { text: `Daily targets: ${people.map((p, k) => `${nameOf(p, k)} ${personKcal(p)} kcal`).join(" · ")}` }),
+      h("p", { text: `Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of each person's calories. You cook one pot; each person's portions are worked out for their own target.` }),
+      h("ul", {}, lines),
+      h("p", { text: `Protein should be ${pct(w.p[0])} to ${pct(w.p[1])} of calories (ideally about ${pct(IDEAL.p)}), carbs ${pct(w.c[0])} to ${pct(w.c[1])} (about ${pct(IDEAL.c)}) and fat ${pct(w.f[0])} to ${pct(w.f[1])} (about ${pct(IDEAL.f)}). The Indian minimum protein allowance is about ${PROTEIN_RDA_G_PER_KG} g for every kg of body weight a day.` }),
+    );
+  }
+  const p = people[0];
+  const kcal = personKcal(p);
+  const g = (share, per) => grams(kcal, share, per);
+  const label = ACTIVITY[p.activity].label.toLowerCase();
+  return h("details", { class: "targets" },
+    h("summary", { text: `My daily targets: about ${kcal} kcal (${label})` }),
     h("p", {},
       h("strong", { text: `Daily target: about ${kcal} kcal` }),
-      ` (${ACTIVITY[activity].label.toLowerCase()}). Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of those calories. ${bodyKg ? `Scaled to your weight of ${bodyKg} kg, as a rough guide.` : `These are general levels for a 65 kg adult; enter your weight above to scale them.`}`),
+      ` (${label}). Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of those calories. ${p.kg ? `Scaled to your weight of ${p.kg} kg, as a rough guide.` : `These are general levels for ${REFERENCE[p.gender].about}; enter your weight above to scale them.`}${p.gender === "female" && p.activity === "heavy" ? " The heavy-work level for women is my estimate, using the same ratio to the men's level that the other two levels show." : ""}`),
     h("ul", {},
-      h("li", { text: `Protein: ${pct(w.p[0])} to ${pct(w.p[1])} of calories (${g(w.p[0], 4)} to ${g(w.p[1], 4)} g a day), ideally about ${pct(IDEAL.p)}. The Indian minimum allowance is about ${PROTEIN_RDA_G_PER_KG} g for every kg of body weight a day${bodyKg ? `, which is about ${Math.round(PROTEIN_RDA_G_PER_KG * bodyKg)} g at ${bodyKg} kg` : ""}.` }),
+      h("li", { text: `Protein: ${pct(w.p[0])} to ${pct(w.p[1])} of calories (${g(w.p[0], 4)} to ${g(w.p[1], 4)} g a day), ideally about ${pct(IDEAL.p)}. The Indian minimum allowance is about ${PROTEIN_RDA_G_PER_KG} g for every kg of body weight a day${p.kg ? `, which is about ${Math.round(PROTEIN_RDA_G_PER_KG * p.kg)} g at ${p.kg} kg` : ""}.` }),
       h("li", { text: `Carbs: ${pct(w.c[0])} to ${pct(w.c[1])} of calories (${g(w.c[0], 4)} to ${g(w.c[1], 4)} g a day), ideally about ${pct(IDEAL.c)}.` }),
       h("li", { text: `Fat: ${pct(w.f[0])} to ${pct(w.f[1])} of calories (${g(w.f[0], 9)} to ${g(w.f[1], 9)} g a day), ideally about ${pct(IDEAL.f)}.` }),
     ),
   );
+}
+
+// A plan can be shared as a link: the whole plan (dishes and portions) is packed into the part after the #.
+function encodePlan(plan) {
+  const lite = { v: 1, a: plan.start, e: plan.end, c: plan.activity, m: plan.mode, p: plan.people || null,
+    d: plan.days.map((d) => MEALS.map((m) => d[m].items.map((i) => (plan.people ? [i.id, i.s, i.s2] : [i.id, i.s])))) };
+  return btoa(unescape(encodeURIComponent(JSON.stringify(lite)))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function decodePlan(code) {
+  try {
+    const b64 = code.replace(/-/g, "+").replace(/_/g, "/");
+    const lite = JSON.parse(decodeURIComponent(escape(atob(b64 + "=".repeat((4 - (b64.length % 4)) % 4)))));
+    if (!lite || lite.v !== 1) return null;
+    const plan = {
+      start: lite.a, end: lite.e, activity: lite.c, mode: lite.m === "batch" ? "batch" : "fresh", done: {},
+      days: lite.d.map((day) => Object.fromEntries(MEALS.map((m, j) => [m, { locked: false, items: day[j].map(([id, sv, s2]) => (lite.p ? { id, s: sv, s2 } : { id, s: sv })) }]))),
+    };
+    if (lite.p) plan.people = lite.p.map(cleanPerson);
+    return validPlan(plan) ? plan : null;
+  } catch (e) { return null; }
 }
 
 function plannerSectionEl() {
@@ -249,11 +371,30 @@ function plannerSectionEl() {
 
   const store = loadStore();
   const plans = store.plans;
+  let importedMsg = "";
+  if (location.hash.startsWith("#share=")) { // someone sent a plan link
+    const shared = decodePlan(location.hash.slice(7));
+    if (shared) {
+      plans[rangeKey(shared.start, shared.end)] = shared;
+      store.last = rangeKey(shared.start, shared.end);
+      saveStore(plans, store.last);
+      importedMsg = `Opened a shared plan for ${rangeLabel(shared)}.`;
+    } else importedMsg = "That plan link could not be read.";
+    history.replaceState(null, "", location.pathname + location.search);
+  }
   const firstRange = store.last ? { start: plans[store.last].start, end: plans[store.last].end } : { start: isoDate(defaultWeek()), end: isoDate(addDays(defaultWeek(), 6)) };
   let range = firstRange;
   let plan = plans[rangeKey(range.start, range.end)] || null;
   let activity = plan ? plan.activity : "sedentary";
   const planKey = () => rangeKey(range.start, range.end);
+  // Settings for planning for two (kept in this browser, so the next plan starts with them)
+  let two = { on: false, people: [cleanPerson({ gender, kg: bodyKg, activity }), cleanPerson({})] };
+  try {
+    const saved = JSON.parse(localStorage.getItem(TWO_KEY) || "null");
+    if (saved && Array.isArray(saved.people) && saved.people.length === 2) two = { on: !!saved.on, people: saved.people.map(cleanPerson) };
+  } catch (e) { /* fine without saving */ }
+  const saveTwo = () => { try { localStorage.setItem(TWO_KEY, JSON.stringify(two)); } catch (e) { /* fine */ } };
+  const copyPeople = () => two.people.map((q) => ({ ...q }));
 
   // ----- the dates the user chooses -----
   const startInput = h("input", { type: "date", id: "range-start", value: range.start, "aria-label": "First day" });
@@ -299,7 +440,7 @@ function plannerSectionEl() {
   const preset = (label, id, s, e) => h("button", { type: "button", id, class: "btn small", text: label, onclick: () => setDates(isoDate(s), isoDate(e)) });
   const tomorrow = addDays(new Date(), 1);
   const picker = h("div", { class: "range-picker" },
-    h("p", { class: "week-question", id: "range-question", text: "Which dates are you planning for?" }),
+    h("p", { class: "week-question", id: "range-question", text: `Which dates are you planning for? (1 to ${MAX_DAYS} days)` }),
     h("div", { class: "range-row" },
       h("label", { class: "activity" }, "From ", startInput),
       h("label", { class: "activity" }, "To ", endInput),
@@ -312,11 +453,7 @@ function plannerSectionEl() {
     rangeMsg);
 
   section.append(
-    h("h2", { id: "plan-heading", text: "Plan my meals" }),
-    h("p", {
-      class: "section-note",
-      text: `Choose any dates, from one day up to ${MAX_DAYS} days. It builds a breakfast, lunch and dinner for each day. Each meal combines 1 to 3 dishes and scales the portions so the meal reaches its calorie target and a healthy split of protein, carbs and fat. Each plan is saved in this browser.`,
-    }),
+    h("h2", { id: "plan-heading", class: "visually-hidden", text: "Plan my meals" }),
     picker,
     body,
   );
@@ -340,6 +477,14 @@ function plannerSectionEl() {
     return h("label", { class: "activity" }, "Activity level ", select);
   }
 
+  function genderPicker() {
+    const select = h("select", {
+      id: "gender", "aria-label": "Gender",
+      onchange: (e) => { setGender(e.target.value); if (plan) update(newPlan(plan, activity)); else render(); },
+    }, Object.entries(REFERENCE).map(([key, g]) => h("option", { value: key, selected: key === gender, text: g.label })));
+    return h("label", { class: "activity" }, "Gender ", select);
+  }
+
   function weightPicker() {
     const input = h("input", { id: "body-weight", type: "number", min: String(MIN_KG), max: String(MAX_KG), step: "0.5", inputmode: "decimal", placeholder: "optional", value: bodyKg ? String(bodyKg) : "" });
     const msg = h("span", { id: "weight-msg", class: "range-msg", role: "status" });
@@ -354,37 +499,84 @@ function plannerSectionEl() {
     return h("label", { class: "activity" }, "Your weight (kg) ", input, " ", msg);
   }
 
+  function modePicker() {
+    const select = h("select", {
+      id: "plan-for", "aria-label": "Who is this plan for",
+      onchange: (e) => {
+        two.on = e.target.value === "two";
+        if (two.on) two.people[0] = cleanPerson({ ...two.people[0], gender, kg: bodyKg, activity: plan ? plan.activity : activity });
+        saveTwo();
+        if (plan) update(newPlan(plan, activity, null, null, two.on ? copyPeople() : null)); else render();
+      },
+    }, h("option", { value: "one", selected: !two.on, text: "Just me" }), h("option", { value: "two", selected: two.on, text: "Me and my partner (one pot)" }));
+    return h("label", { class: "activity" }, "Planning for ", select);
+  }
+
+  // The two people's own settings: name, gender, weight and activity level.
+  function peoplePanel() {
+    const change = () => { saveTwo(); if (plan) update(newPlan(plan, null, null, null, copyPeople())); else render(); };
+    const card = (k) => {
+      const q = two.people[k];
+      const name = h("input", { id: `person-${k}-name`, type: "text", maxlength: "20", placeholder: PERSON_NAMES[k], value: q.name });
+      name.addEventListener("change", () => { q.name = name.value.trim().slice(0, 20); change(); });
+      const gsel = h("select", { id: `person-${k}-gender`, onchange: (e) => { q.gender = e.target.value; change(); } },
+        Object.entries(REFERENCE).map(([key, g]) => h("option", { value: key, selected: key === q.gender, text: g.label })));
+      const wt = h("input", { id: `person-${k}-weight`, type: "number", min: String(MIN_KG), max: String(MAX_KG), step: "0.5", inputmode: "decimal", placeholder: "optional", value: q.kg ? String(q.kg) : "" });
+      wt.addEventListener("change", () => {
+        const raw = wt.value.trim(); const v = parseFloat(raw);
+        if (raw && !(v >= MIN_KG && v <= MAX_KG)) { wt.value = q.kg ? String(q.kg) : ""; return; }
+        q.kg = raw ? v : null; change();
+      });
+      const asel = h("select", { id: `person-${k}-activity`, onchange: (e) => { q.activity = e.target.value; change(); } },
+        Object.entries(ACTIVITY).map(([key, a]) => h("option", { value: key, selected: key === q.activity, text: `${a.label}: ${personKcal({ ...q, activity: key })} kcal` })));
+      return h("div", { class: "person" },
+        h("p", { class: "person-title", text: nameOf(q, k) }),
+        h("label", {}, "Name", name), h("label", {}, "Gender", gsel), h("label", {}, "Weight (kg)", wt), h("label", {}, "Activity", asel));
+    };
+    return h("div", { class: "people" }, card(0), card(1));
+  }
+
   function mealBlock(dayIdx, meal) {
     const slot = plan.days[dayIdx][meal];
-    const target = mealTarget(plan.activity, meal);
-    const { t, sh, issues } = checkMeal(slot.items, target);
+    const people = peopleOf(plan);
+    const targets = targetsFor(people, meal);
+    const checks = people.map((_, k) => checkMeal(slot.items, targets[k], k));
+    const two_ = people.length === 2;
 
-    const lines = slot.items.map(({ id, s }) => {
-      const { r } = byId[id];
+    const lines = slot.items.map((it) => {
+      const { r } = byId[it.id];
+      const amount = two_
+        ? h("strong", { class: "who", text: people.map((q, k) => `${nameOf(q, k)} ${fmtServ(k ? it.s2 : it.s)}`).join(" · ") })
+        : h("strong", { text: `${fmtServ(it.s)} × ` });
       return h("li", {},
-        h("strong", { text: `${fmtServ(s)} × ` }),
-        h("a", { href: `recipes.html#r-${id}`, text: r.name }),
+        amount,
+        h("a", { href: `recipes.html#r-${it.id}`, text: r.name }),
         ...(r.video ? [" ", h("a", { class: "watch", href: r.video, target: "_blank", rel: "noopener noreferrer", "aria-label": `Watch ${r.name} on YouTube`, text: "▶" })] : []),
         h("span", { class: "serving-note", text: `1 serving = ${r.macros.serving}` }),
       );
     });
 
-    return h("div", { class: "meal" },
-      h("p", { class: "meal-label" }, MEAL_LABEL[meal], h("span", { text: ` · target ${Math.round(target / 5) * 5} kcal` })),
-      h("ul", { class: "meal-items" }, lines),
-      h("p", { class: "meal-macros" },
+    const macroLines = people.map((q, k) => {
+      const { t, sh } = checks[k];
+      return h("p", { class: "meal-macros" },
+        two_ ? h("span", { class: "who", text: `${nameOf(q, k)}: ` }) : null,
         h("strong", { text: `${Math.round(t.kcal / 5) * 5} kcal` }),
-        ` · protein ${fmt(t.p)} g (${pct(sh.p)}) · carbs ${fmt(t.c)} g (${pct(sh.c)}) · fat ${fmt(t.f)} g (${pct(sh.f)})`),
-      issues.length
-        ? h("p", { class: "badge close", text: `Close: ${issues.join(", ")}` })
-        : h("p", { class: "badge ok", text: "✓ Balanced for this meal" }),
+        ` · protein ${fmt(t.p)} g (${pct(sh.p)}) · carbs ${fmt(t.c)} g (${pct(sh.c)}) · fat ${fmt(t.f)} g (${pct(sh.f)})`);
+    });
+    const badges = checks.map((c, k) => (c.issues.length ? h("p", { class: "badge close", text: `${two_ ? `${nameOf(people[k], k)}: ` : ""}Close: ${c.issues.join(", ")}` }) : null));
+
+    return h("div", { class: "meal" },
+      h("p", { class: "meal-label" }, MEAL_LABEL[meal], h("span", { text: ` · target ${targets.map((x) => Math.round(x / 5) * 5).join(" / ")} kcal` })),
+      h("ul", { class: "meal-items" }, lines),
+      ...macroLines,
+      ...badges,
       h("div", { class: "meal-actions" },
         h("button", {
           class: "btn small", type: "button", "aria-label": `Replace ${MEAL_LABEL[meal]} on ${dayName(plan, dayIdx)}`, text: "Reroll",
           onclick: () => {
             const day = plan.days[dayIdx];
             const banned = new Set([...mainsUsed(plan.days, meal), ...idsOfDay(day, meal)]);
-            const fresh = solveMeal(meal, target, banned);
+            const fresh = solveMeal(meal, targets, banned);
             if (!fresh) return;
             const days = plan.days.map((d, k) => (k === dayIdx ? { ...d, [meal]: fresh } : d));
             update({ ...plan, days });
@@ -424,8 +616,9 @@ function plannerSectionEl() {
       pick("prep-time", "Evening reminders at", PREP_TIMES.map((x) => [x, timeLabel(x)]), settings.time, set("time")),
     ];
     refresh();
-    return h("div", { class: "prep-box" },
-      h("p", {}, h("strong", { text: "Reminders on your phone. " }),
+    return h("details", { class: "prep-box" },
+      h("summary", { text: "Reminders on my phone (Google Calendar)" }),
+      h("p", {},
         "One calendar file holds every nudge for the dates you are planning: plan, shopping list, batch cooking (if you chose it) and each evening's prep, including sprouts and soaking that must start early."),
       h("div", { class: "prep-controls" }, controls),
       h("div", { class: "prep-controls" },
@@ -454,64 +647,85 @@ function plannerSectionEl() {
   function render() {
     body.replaceChildren();
     const n = daysBetween(range.start, range.end);
+    if (plan) { two.on = !!plan.people; if (plan.people) two.people = plan.people.map(cleanPerson); } // show what this plan was made for
 
     if (!plan) {
+      const people = two.on ? two.people : [cleanPerson({ gender, kg: bodyKg, activity })];
       body.append(
         h("div", { class: "plan-empty" },
-          h("p", { text: `No plan yet for ${rangeLabel(range)} (${n} day${n === 1 ? "" : "s"}).` }),
-          weightPicker(),
-          activityPicker(),
-          targetsBox(activity),
-          h("button", { id: "plan-pick", class: "btn primary", type: "button", onclick: () => update(newPlan(null, activity, range.start, range.end)), text: "Pick my meals" }),
+          h("div", { class: "plan-controls" }, modePicker(), ...(two.on ? [] : [genderPicker(), weightPicker(), activityPicker()])),
+          two.on ? peoplePanel() : null,
+          h("button", { id: "plan-pick", class: "btn primary", type: "button", onclick: () => update(newPlan(null, activity, range.start, range.end, two.on ? copyPeople() : null)), text: "Pick my meals" }),
+          targetsBox(people),
         ),
       );
       return;
     }
 
     const first = parseIso(plan.start);
-    const dayKcal = dailyKcal(plan.activity);
-    const total = { kcal: 0, p: 0, c: 0, f: 0 };
+    const people = peopleOf(plan);
+    const two_ = people.length === 2;
+    const dayKcals = people.map(personKcal);
+    const total = people.map(() => ({ kcal: 0, p: 0, c: 0, f: 0 }));
     let balanced = 0;
 
     const dayCards = plan.days.map((_, i) => {
       const date = addDays(first, i);
       const all = MEALS.flatMap((m) => plan.days[i][m].items);
-      const t = totalsOf(all);
-      const sh = sharesOf(t);
-      Object.keys(total).forEach((k) => { total[k] += t[k]; });
-      MEALS.forEach((m) => { if (!checkMeal(plan.days[i][m].items, mealTarget(plan.activity, m)).issues.length) balanced++; });
-      const dayOk = Math.abs(t.kcal / dayKcal - 1) <= 0.08 && inWindow(sh, WINDOWS[0]);
+      const dayLines = people.map((q, k) => {
+        const t = totalsOf(all, k);
+        const sh = sharesOf(t);
+        Object.keys(total[k]).forEach((key) => { total[k][key] += t[key]; });
+        const ok = Math.abs(t.kcal / dayKcals[k] - 1) <= 0.08 && inWindow(sh, WINDOWS[0]);
+        return h("p", { class: "day-total" },
+          two_ ? h("span", { class: "who", text: `${nameOf(q, k)}: ` }) : null,
+          h("strong", { text: `${Math.round(t.kcal / 10) * 10} kcal` }),
+          ` · protein ${Math.round(t.p)} g (${pct(sh.p)}) · carbs ${Math.round(t.c)} g (${pct(sh.c)}) · fat ${Math.round(t.f)} g (${pct(sh.f)}) `,
+          h("span", { class: ok ? "badge ok" : "badge close", text: ok ? "✓ Day on target" : "Day close to target" }));
+      });
+      MEALS.forEach((m) => {
+        const tg = targetsFor(people, m);
+        if (people.every((_q, k) => !checkMeal(plan.days[i][m].items, tg[k], k).issues.length)) balanced++;
+      });
       return h("article", { class: "plan-day" },
-        h("header", {},
-          h("h3", {}, dayName(plan, i), h("span", { text: ` · ${dateLabel(date)}` })),
-          h("p", { class: "day-total" },
-            h("strong", { text: `${Math.round(t.kcal / 10) * 10} kcal` }),
-            ` · protein ${Math.round(t.p)} g (${pct(sh.p)}) · carbs ${Math.round(t.c)} g (${pct(sh.c)}) · fat ${Math.round(t.f)} g (${pct(sh.f)}) `,
-            h("span", { class: dayOk ? "badge ok" : "badge close", text: dayOk ? "✓ Day on target" : "Day close to target" })),
-        ),
+        h("header", {}, h("h3", {}, dayName(plan, i), h("span", { text: ` · ${dateLabel(date)}` })), ...dayLines),
         h("div", { class: "meals" }, MEALS.map((m) => mealBlock(i, m))),
       );
     });
     const days = plan.days.length;
+    const avg = (t) => `${Math.round(t.kcal / days / 10) * 10} kcal, ${Math.round(t.p / days)} g protein, ${Math.round(t.c / days)} g carbs and ${Math.round(t.f / days)} g fat`;
+    const shareStatus = h("span", { id: "share-status", class: "range-msg", role: "status" });
 
     body.append(
       h("p", { class: "plan-week", text: `Planning ${rangeLabel(plan)} (${days} day${days === 1 ? "" : "s"})` }),
       h("div", { class: "plan-toolbar" },
-        weightPicker(),
-        activityPicker(),
+        modePicker(),
+        ...(two_ ? [] : [genderPicker(), weightPicker(), activityPicker()]),
         h("button", { id: "plan-again", class: "btn primary", type: "button", onclick: () => update(newPlan(plan, plan.activity)), text: "Pick again (keeps meals marked Keep)" }),
-        h("button", { class: "btn", type: "button", onclick: () => { document.body.classList.add("print-plan"); window.print(); document.body.classList.remove("print-plan"); }, text: "Print plan" }),
-        h("button", { class: "btn", type: "button", onclick: () => { delete plans[planKey()]; saveStore(plans, null); plan = null; render(); refreshSaved(); }, text: "Clear this plan" }),
+      ),
+      two_ ? peoplePanel() : null,
+      h("div", { class: "plan-minor" },
+        h("button", { id: "share-plan", class: "btn small", type: "button", text: "Copy link to share this plan", onclick: () => {
+          const url = location.origin === "null" || location.protocol === "file:" ? `${location.href.split("#")[0]}#share=${encodePlan(plan)}` : `${location.origin}${location.pathname}#share=${encodePlan(plan)}`;
+          const done = () => { shareStatus.textContent = "Link copied. Anyone who opens it gets this exact plan."; };
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, () => window.prompt("Copy this link:", url));
+          else window.prompt("Copy this link:", url);
+        } }),
+        h("button", { class: "btn small", type: "button", onclick: () => { document.body.classList.add("print-plan"); window.print(); document.body.classList.remove("print-plan"); }, text: "Print plan" }),
+        h("button", { class: "btn small", type: "button", onclick: () => { delete plans[planKey()]; saveStore(plans, null); plan = null; render(); refreshSaved(); }, text: "Clear this plan" }),
+        shareStatus,
       ),
       reminderBox(),
-      targetsBox(plan.activity),
-      h("p", { class: "plan-total", text: `${balanced} of ${days * 3} meals are balanced. ${days > 1 ? "Daily average" : "Total"}: ${Math.round(total.kcal / days / 10) * 10} kcal, ${Math.round(total.p / days)} g protein, ${Math.round(total.c / days)} g carbs and ${Math.round(total.f / days)} g fat.` }),
+      targetsBox(people),
+      h("p", { class: "plan-total", text: two_
+        ? `${balanced} of ${days * 3} meals are balanced for both of you. ${days > 1 ? "Daily average" : "Total"}: ${people.map((q, k) => `${nameOf(q, k)} ${avg(total[k])}`).join("; ")}.`
+        : `${balanced} of ${days * 3} meals are balanced. ${days > 1 ? "Daily average" : "Total"}: ${avg(total[0])}.` }),
       h("div", { class: "plan-days" }, dayCards),
     );
 
     // shopping list: every recipe used in this plan, with the servings you will eat
     const planned = {};
-    plan.days.forEach((d) => MEALS.forEach((m) => d[m].items.forEach(({ id, s }) => { planned[id] = (planned[id] || 0) + s; })));
+    plan.days.forEach((d) => MEALS.forEach((m) => d[m].items.forEach(({ id, s, s2 }) => { planned[id] = (planned[id] || 0) + s + (plan.people ? s2 : 0); })));
     const shopping = h("details", { class: "shopping" }, h("summary", { text: "Shopping list (tick what you already have)" }),
       h("p", { class: "shopping-note", text: "Each list is the full recipe. The line under each name says how many servings this plan uses, so you can scale the amounts down or cook the full recipe and keep the rest." }));
     Object.keys(planned).forEach((id) => {
@@ -534,7 +748,7 @@ function plannerSectionEl() {
       });
       shopping.append(
         h("h3", { text: r.name }),
-        h("p", { class: "shopping-servings", text: `The recipe makes ${r.macros.servings} servings. This plan uses ${fmtServ(planned[id])}.` }),
+        h("p", { class: "shopping-servings", text: `The recipe makes ${r.macros.servings} servings. This plan uses ${fmtServ(planned[id])}${plan.people ? " for both of you" : ""}.` }),
         list,
       );
     });
@@ -543,7 +757,7 @@ function plannerSectionEl() {
 
   render();
   refreshSaved();
-  rangeMsg.textContent = rangeSummary(range.start, range.end);
+  rangeMsg.textContent = importedMsg || rangeSummary(range.start, range.end);
   return section;
 }
 
