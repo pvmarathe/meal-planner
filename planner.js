@@ -432,7 +432,6 @@ function plannerSectionEl() {
         h("button", { class: "btn small", type: "button", onclick: () => { delete plans[planKey()]; saveStore(plans, null); plan = null; render(); refreshSaved(); }, text: "Clear this plan" }),
         shareStatus,
       ),
-      reminderBox(),
       targetsBox(people),
       h("p", { class: "plan-total", text: two_
         ? `${balanced} of ${days * 3} meals are balanced for both of you. ${days > 1 ? "Daily average" : "Total"}: ${people.map((q, k) => `${nameOf(q, k)} ${avg(total[k])}`).join("; ")}.`

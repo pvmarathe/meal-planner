@@ -69,11 +69,11 @@
         </li>
         <li>
           <strong>Use the shopping list.</strong>
-          Open "Shopping list" at the bottom for every recipe in your plan, with tick boxes for what you already have.
+          Open the "Shopping list" box at the bottom: every ingredient in your plan listed once, grouped by type, with tick boxes for what you already have. Amounts are in the recipe-by-recipe lists inside it.
         </li>
         <li>
-          <strong>Get reminders on your phone.</strong>
-          Open the "Phone reminders" box, choose how you cook and when you shop, then download one calendar file (see <a href="#reminders">section 7</a>).
+          <strong>Get reminders.</strong>
+          This site cannot send notifications itself. See <a href="#reminders">section 7</a> for how reminders can reach you by email.
         </li>
         <li>
           <strong>Cooking for two?</strong>
@@ -270,18 +270,13 @@
     </section>
 
     <section id="reminders">
-      <h2>7. Reminders on your phone</h2>
+      <h2>7. Reminders</h2>
       <p>
         This site is a set of plain files with no server, so it cannot send notifications by itself.
-        Instead it makes a <strong>calendar file</strong> (an ".ics" file), which every calendar app understands.
-        You import it once into a "Meal prep" calendar in Google Calendar. Your phone and your email alerts then work as usual.
+        If you want nudges, an email assistant can run on a schedule, build the week's plan with the same planning code as this page,
+        and email you the plan, a shopping day list and an evening reminder with the next day's menu, including anything to soak or sprout in advance.
       </p>
-      <p>
-        The file holds a nudge to plan the week (Wednesday or Thursday), to shop (Saturday or Sunday), to batch cook if you choose that,
-        and an evening reminder with the next day's menu, including anything to soak or sprout in advance.
-        The reminder text carries the menu itself, because a link to a file on your computer will not open on your phone.
-      </p>
-      <p class="fine">I could not test how Google Calendar applies alert settings to imported events, so check one imported reminder after your first import.</p>
+      <p class="fine">The planning code and the emails are in the <code>agent</code> folder of the project, for anyone who wants to set up their own.</p>
     </section>
 
     <section id="limits">
