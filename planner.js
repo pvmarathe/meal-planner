@@ -322,6 +322,15 @@ function plannerSectionEl() {
     );
   }
 
+  // The big boxes are always open and colour-coded (no expand arrow); only the small inner folds still open on click.
+  function lockOpen(root) {
+    root.querySelectorAll("details.settings-fold, details.prep-box, details.targets, details.shopping").forEach((d) => {
+      d.open = true; d.classList.add("panel");
+      const s = d.querySelector(":scope > summary");
+      if (s) s.addEventListener("click", (e) => e.preventDefault());
+    });
+  }
+
   // The step-by-step form shown before a plan exists: one question per card.
   function wizard() {
     const STEPS = ["Who", "About you", "Dates", "Ready"];
@@ -367,7 +376,7 @@ function plannerSectionEl() {
     const n = daysBetween(range.start, range.end);
     if (plan) { two.on = !!plan.people; if (plan.people) two.people = plan.people.map(cleanPerson); } // show what this plan was made for
 
-    if (!plan) { body.append(wizard()); return; }
+    if (!plan) { body.append(wizard()); lockOpen(body); return; }
     section.insertBefore(picker, body); // with a plan on screen the date picker sits on top
 
     const first = parseIso(plan.start);
@@ -488,6 +497,7 @@ function plannerSectionEl() {
     });
     shopping.append(full);
     body.append(shopping);
+    lockOpen(body);
   }
 
   render();

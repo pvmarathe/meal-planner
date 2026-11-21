@@ -627,3 +627,33 @@ details.fold > summary h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
 .wiz-fields .activity { align-items: stretch; text-align: left; }
 .wiz-fields select, .wiz-fields input { width: 100%; box-sizing: border-box; padding: 11px 12px; font: inherit; border: 1px solid var(--border, #d9d2c0); border-radius: 10px; background: var(--card, #fff); color: inherit; }
 .wiz-card .people { margin: 0; }
+
+
+/* ----- colour-coded, always-open panels (no expand arrow) ----- */
+:root {
+  --pn-set-bg: #efe9f7; --pn-set-bd: #c9b9e3; --pn-set-fg: #4a2f7a;
+  --pn-rem-bg: #fde9e4; --pn-rem-bd: #eebbad; --pn-rem-fg: #8a2f17;
+  --pn-tar-bg: #e1eef9; --pn-tar-bd: #a9c8e6; --pn-tar-fg: #1d4b78;
+  --pn-shp-bg: #eaf3e2; --pn-shp-bd: #b9d4a4; --pn-shp-fg: #2f5a1a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pn-set-bg: #2c2440; --pn-set-bd: #5a4a82; --pn-set-fg: #d8c8f5;
+    --pn-rem-bg: #3d2520; --pn-rem-bd: #7a4437; --pn-rem-fg: #f7c9bd;
+    --pn-tar-bg: #1f3144; --pn-tar-bd: #3f6489; --pn-tar-fg: #bcdaf5;
+    --pn-shp-bg: #263422; --pn-shp-bd: #4d6e3f; --pn-shp-fg: #cfe7bd;
+  }
+}
+details.panel { border-radius: 14px; border-width: 1px; border-style: solid; padding: 16px 20px; margin: 0 0 16px; }
+details.panel > summary { list-style: none; cursor: default; font-size: 1.2rem; font-weight: 700; pointer-events: none; }
+details.panel > summary::-webkit-details-marker { display: none; }
+details.panel > summary::marker { content: ""; }
+details.panel[open] > summary { margin-bottom: 12px; }
+details.settings-fold.panel { background: var(--pn-set-bg); border-color: var(--pn-set-bd); }
+details.settings-fold.panel > summary { color: var(--pn-set-fg); }
+details.prep-box.panel { background: var(--pn-rem-bg); border-color: var(--pn-rem-bd); }
+details.prep-box.panel > summary { color: var(--pn-rem-fg); }
+details.targets.panel { background: var(--pn-tar-bg); border: 1px solid var(--pn-tar-bd); }
+details.targets.panel > summary { color: var(--pn-tar-fg); }
+details.shopping.panel { background: var(--pn-shp-bg); border-color: var(--pn-shp-bd); }
+details.shopping.panel > summary { color: var(--pn-shp-fg); }
