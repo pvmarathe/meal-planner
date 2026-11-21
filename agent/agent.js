@@ -164,11 +164,17 @@ function inlineStyles(html) {
   });
 }
 const emailHtml = (subject, html) => `SUBJECT: ${subject}\nFORMAT: html\n\n${inlineStyles(html)}\n`;
+const nameLink = (id) => {
+  const r = byId[id].r;
+  const href = r.video || `${SITE}recipes.html#r-${id}`;
+  return `<a href="${esc(href)}" style="color:#2a2620;text-decoration:underline">${r.video ? `<span style="color:#2f7d4f">▶</span> ` : ""}${esc(r.name)}</a>`;
+};
+const idByName = Object.fromEntries(Object.keys(byId).map((id) => [byId[id].r.name, id]));
 const itemHtml = (plan, it, m) => {
   const r = byId[it.id].r;
   const text = plan.people ? people(plan).map((q, k) => `${nameOf(q, k)} ${fmtServ(k ? it.s2 : it.s)}`).join(" · ") : `${fmtServ(it.s)} serving${it.s === 1 ? "" : "s"}`;
   const who = m ? mealPill(text, m) : pill(text);
-  return `<div class="i"><div class="n">${esc(r.name)}</div>${who}</div>`;
+  return `<div class="i"><div class="n">${nameLink(it.id)}</div>${who}</div>`;
 };
 // Each meal is a table (bgcolor plus an inline background and a full border) so phone mail apps colour the whole rectangle
 const MEAL_STYLE = {
@@ -235,7 +241,7 @@ function genericHtml(plan, e) {
   // "Mon lunch: 1 + 1 x Methi Dal" becomes "Mon lunch: Methi Dal" with a pill showing each person's portion
   const dish = (t) => {
     const m = t.match(/^(\w{3} \w+): ([\d½¼¾⅓⅔⅛]+) \+ ([\d½¼¾⅓⅔⅛]+) x (.+)$/);
-    return m && names.length === 2 ? `<div class="r"><b>${esc(m[1])}</b>: ${esc(m[4])} ${pill(`${names[0]} ${m[2]} · ${names[1]} ${m[3]}`)}</div>` : `<div class="r">• ${esc(t)}</div>`;
+    return m && names.length === 2 ? `<div class="r"><b>${esc(m[1])}</b>: ${idByName[m[4]] ? nameLink(idByName[m[4]]) : esc(m[4])} ${pill(`${names[0]} ${m[2]} · ${names[1]} ${m[3]}`)}</div>` : `<div class="r">• ${esc(t)}</div>`;
   };
   const paras = e.lines.map((l) => (l === "" ? "" : l.startsWith("- ") ? dish(l.slice(2)) : `<div class="h" style="margin:10px 0 4px">${esc(l)}</div>`)).join("");
   return emailHtml(e.summary, shell(e.summary, rangeLabel(plan), card(paras) + `<div>${button(planLink(plan), "Open the plan")}</div>`));
