@@ -3,7 +3,7 @@
 // It reuses the web page's own planning code (data.js, common.js, reminders.js, core.js), so the plan matches the website exactly.
 //
 //   node agent/agent.js plan   --today 2026-11-18 --people '<json>' [--start auto|YYYY-MM-DD] [--days 7] [--mode fresh|batch] [--seed text] [--edits "reroll:2026-11-26:dinner:2;away:2026-11-24;back:2026-11-24;mode:batch"] [--out plan.json]
-//   node agent/agent.js nudge  --plan-file plan.json --date YYYY-MM-DD [--kind morning|evening|all] [--time 20:30] [--shop-day 6] [--plan-day 3]
+//   node agent/agent.js nudge  --plan-file plan.json --date YYYY-MM-DD [--kind morning|evening|all] [--format html] [--time 20:30] [--shop-day 6] [--plan-day 3]
 //   node agent/agent.js reroll --plan-file plan.json --date YYYY-MM-DD --meal breakfast|lunch|dinner [--seed text] --out plan.json   (swap one meal)
 //   node agent/agent.js mode   --plan-file plan.json --mode fresh|batch --out plan.json
 //   node agent/agent.js away   --plan-file plan.json --date YYYY-MM-DD [--undo] --out plan.json   (no meals or nudges for that day)
@@ -40,6 +40,86 @@ const email = (subject, body) => `SUBJECT: ${subject}\n\n${body.trim()}\n`;
 const isAway = (plan, i) => (plan.away || []).includes(isoDate(addDays(parseIso(plan.start), i)));
 const dateStr = (plan, i) => `${dayName(plan, i)} ${dateLabel(addDays(parseIso(plan.start), i))}`;
 
+// ----- one combined shopping list: every recipe's ingredient lines, scaled to the servings this week uses, then added up -----
+const FRAC = { "¼": 0.25, "½": 0.5, "¾": 0.75, "⅓": 1 / 3, "⅔": 2 / 3, "⅛": 0.125, "⅜": 0.375, "⅝": 0.625, "⅞": 0.875 };
+const UNITS = { cup: "cup", cups: "cup", tbsp: "tbsp", tablespoon: "tbsp", tablespoons: "tbsp", tsp: "tsp", teaspoon: "tsp", teaspoons: "tsp", g: "g", gm: "g", gram: "g", grams: "g", kg: "kg", ml: "ml", l: "l", litre: "l", liter: "l", oz: "oz", lb: "lb", inch: "inch", inches: "inch", clove: "clove", cloves: "clove", pinch: "pinch", sprig: "sprig", sprigs: "sprig", slice: "slice", slices: "slice", can: "can", glass: "glass", bunch: "bunch" };
+const TSP = { tsp: 1, tbsp: 3, cup: 48 };
+function parseQty(str) {
+  let m = str.match(/^\s*((?:\d+\s*)?(?:\d+\/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])|\d+(?:\.\d+)?)(?:\s*[-–to]+\s*((?:\d+\s*)?(?:\d+\/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])|\d+(?:\.\d+)?))?\s*(.*)$/i);
+  if (!m) return null;
+  const val = (t) => {
+    t = t.trim(); let tot = 0;
+    t.split(/\s+/).forEach((part) => { if (/^\d+\/\d+$/.test(part)) { const [a, b] = part.split("/"); tot += a / b; } else if (/^\d+(\.\d+)?$/.test(part)) tot += Number(part); else { for (const ch of part) { if (FRAC[ch]) tot += FRAC[ch]; else if (/\d/.test(ch)) tot += Number(ch); } } });
+    return tot;
+  };
+  let q = val(m[2] || m[1]); // a range like 3-4 takes the larger number
+  if (m[1] && /^\d+[¼½¾⅓⅔⅛⅜⅝⅞]$/.test(m[1].replace(/\s/g, ""))) q = val(m[2] || m[1]);
+  return { qty: q, rest: m[3] };
+}
+function parseIngredient(text) {
+  const raw = String(text).replace(/\(.*?\)/g, " ").replace(/\s+/g, " ").trim();
+  const pq = parseQty(raw);
+  if (!pq || !(pq.qty > 0)) return { name: raw.toLowerCase().replace(/,.*$/, "").replace(/\b(to taste|for [a-z ]+)\b/g, "").trim(), qty: 0, unit: "" };
+  let rest = pq.rest, unit = "";
+  const w = rest.split(" ")[0].toLowerCase().replace(/\.$/, "");
+  if (UNITS[w]) { unit = UNITS[w]; rest = rest.slice(w.length).trim(); }
+  rest = rest.replace(/^of\s+/i, "");
+  const name = rest.toLowerCase().replace(/,.*$/, "").replace(/\b(finely|roughly|freshly|thinly|chopped|sliced|grated|crushed|ground|boiled|cooked|soaked|fresh|dry|dried|raw|optional|to taste|for [a-z ]+)\b/g, "").replace(/\s+/g, " ").trim();
+  return { name: tidyName(name || rest.toLowerCase()), qty: pq.qty, unit };
+}
+function tidyName(n) {
+  n = n.replace(/\s+/g, " ").trim();
+  const SYN = { "cilantro leaves": "cilantro", "coriander leaves": "cilantro", "curry leaves": "curry leaves", "gram flour": "besan", "bajra atta": "bajra flour", "jowar atta": "jowar flour", "ragi atta": "ragi flour", "wheat flour": "whole wheat flour", "atta": "whole wheat flour", "curd": "yogurt", "dahi": "yogurt", "green chilies": "green chilli", "green chillies": "green chilli", "green chili": "green chilli", "chillies": "chilli", "chilies": "chilli", "red onion": "onion", "onions": "onion", "tomatoes": "tomato", "potatoes": "potato", "cucumbers": "cucumber", "carrots": "carrot", "lemons": "lemon", "limes": "lime", "apples": "apple", "avocados": "avocado", "beetroots": "beetroot", "peas": "green peas", "frozen green peas": "green peas", "moong sprouts": "sprouted moong", "sprouts": "sprouted moong", "palak": "spinach (palak)", "spinach": "spinach (palak)" };
+  n = SYN[n] || n;
+  return n.replace(/^(small|medium|large)\s+/, "");
+}
+const CATS = [
+  ["Oils, sauces and other", /\boil\b|vinegar|sauce|sugar|jaggery|honey|syrup|baking|yeast|chutney|paste|ketchup|essence|coconut milk|nutritional/i],
+  ["Spices and seasonings", /salt|pepper|turmeric|powder|masala|cumin|jeera|mustard|hing|asafoetida|cardamom|cinnamon|\bclove\b|ajwain|carom|kasuri|fennel|saunf|garam|paprika|chaat|oregano|thyme|bay leaf|seeds?$|chilli flakes|amchur/i],
+  ["Dals, grains and flours", /dal\b|lentil|moong|chana|rajma|chickpea|rice|poha|oats|quinoa|millet|ragi|jowar|bajra|flour|besan|sattu|rava|sooji|semolina|bread|barley|bulgur|couscous|pasta|noodles|tortilla|pita|urad|toor|masoor|kala|sabudana|sago|dalia|beans/i],
+  ["Dairy and protein", /paneer|yogurt|milk|cheese|tofu|soya|soy chunks|ghee|butter|cream|hummus|tempeh/i],
+  ["Fresh produce", /onion|tomato|potato|carrot|cabbage|spinach|cucumber|ginger|garlic|chilli|cilantro|mint|curry leaves|lemon|lime|capsicum|bell pepper|peas|corn|beet|cauliflower|broccoli|mushroom|apple|banana|avocado|mango|orange|pomegranate|methi|fenugreek|radish|gourd|brinjal|eggplant|zucchini|celery|lettuce|scallion|pumpkin|okra|bhindi|drumstick|plantain|berries|dates|grapes|pineapple|papaya|green/i],
+];
+const catOf = (name) => { for (const [t, re] of CATS) if (re.test(name)) return t; return "Oils, sauces and other"; };
+function niceQty(q, unit) {
+  const step = unit === "" || unit === "clove" || unit === "can" || unit === "slice" || unit === "glass" ? 1 : unit === "g" || unit === "ml" ? 10 : unit === "cup" || unit === "tbsp" || unit === "tsp" ? 0.25 : 0.5;
+  const v = Math.ceil(q / step - 1e-9) * step;
+  const whole = Math.floor(v + 1e-9), frac = v - whole;
+  const FR = [[0.25, "¼"], [0.5, "½"], [0.75, "¾"]];
+  const f = (FR.find(([x]) => Math.abs(x - frac) < 1e-6) || [0, ""])[1];
+  return `${whole || ""}${f}` || "¼";
+}
+function shoppingList(plan) {
+  const planned = {};
+  plan.days.forEach((d, i) => { if (isAway(plan, i)) return; MEALS.forEach((m) => d[m].items.forEach(({ id, s, s2 }) => { planned[id] = (planned[id] || 0) + s + (plan.people ? s2 : 0); })); });
+  const bucket = {}; const noAmount = new Set();
+  Object.keys(planned).forEach((id) => {
+    const { r } = byId[id];
+    const factor = planned[id] / r.macros.servings;
+    flatLines(r).forEach((l) => {
+      const ing = parseIngredient(l.text);
+      if (!ing.name || ing.name.length < 2) return;
+      if (!ing.qty) { noAmount.add(ing.name); return; }
+      let unit = ing.unit, qty = ing.qty * factor;
+      if (TSP[unit]) { qty *= TSP[unit]; unit = "tsp"; } // add cups, tablespoons and teaspoons together
+      const key = `${ing.name}|${unit}`;
+      bucket[key] = bucket[key] || { name: ing.name, unit, qty: 0 };
+      bucket[key].qty += qty;
+    });
+  });
+  const showTsp = (q) => (q >= 24 ? `${niceQty(q / 48, "cup")} cup` : q >= 6 ? `${niceQty(q / 3, "tbsp")} tbsp` : `${niceQty(q, "tsp")} tsp`);
+  const groups = {};
+  Object.values(bucket).forEach((b) => {
+    const amount = b.unit === "tsp" ? showTsp(b.qty) : `${niceQty(b.qty, b.unit)}${b.unit ? " " + b.unit : ""}`;
+    const cat = catOf(b.name);
+    (groups[cat] = groups[cat] || []).push({ name: b.name, text: `${amount} ${b.name}` });
+  });
+  const order = ["Fresh produce", "Dals, grains and flours", "Dairy and protein", "Spices and seasonings", "Oils, sauces and other"];
+  const out = order.filter((c) => groups[c]).map((c) => ({ title: c, items: groups[c].sort((a, b) => a.name.localeCompare(b.name)).map((x) => x.text) }));
+  const extras = [...noAmount].filter((n) => !Object.values(bucket).some((b) => b.name === n)).sort();
+  return { groups: out, extras, dishes: Object.keys(planned).length };
+}
+
 function menuLines(plan) {
   const out = [];
   plan.days.forEach((day, i) => {
@@ -51,6 +131,68 @@ function menuLines(plan) {
     out.push("");
   });
   return out;
+}
+
+
+// ----- HTML emails: a small style block plus class names, so the message stays short and looks like the web app -----
+const HTML = args.format === "html";
+const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const CSS = "body{margin:0;background:#fbf8f2}.w{max-width:600px;margin:0 auto;padding:14px 10px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2a2620;font-size:14px;line-height:1.5}.hd{background:#e3f1e8;border:1px solid #e6dfd0;border-radius:14px;padding:18px 20px;margin-bottom:12px}.ey{font-size:11px;letter-spacing:.12em;font-weight:700;color:#226239}.t{font-size:24px;font-weight:800;margin:2px 0}.g{color:#6c655a;font-size:13px}.c{background:#fff;border:1px solid #e6dfd0;border-radius:14px;padding:14px 16px;margin:0 0 12px}.cs{background:#e3f1e8}.cw{background:#fbead7;border-color:#f1d3b0}.d{font-size:16px;font-weight:700}.m{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;color:#226239}.i{margin:4px 0}.n{font-weight:600}.p{display:inline-block;background:#e3f1e8;color:#226239;border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700;margin:0 4px 2px 0}.pw{background:#fbead7;color:#b4570f}.b{display:inline-block;background:#2f7d4f;color:#fff!important;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:999px}.h{font-weight:700;color:#226239;margin-bottom:4px}.hw{color:#b4570f}.r{margin:2px 0}.id{font-family:Menlo,Consolas,monospace;font-size:11px;color:#6c655a;word-break:break-all;margin-top:6px}";
+const pill = (t, warm) => `<span class="p${warm ? " pw" : ""}">${esc(t)}</span>`;
+const card = (inner, cls) => `<div class="c${cls ? " " + cls : ""}">${inner}</div>`;
+const button = (href, text) => `<a class="b" href="${esc(href)}">${esc(text)}</a>`;
+const planIdBlock = (plan) => `<div class="id">${esc(planIdLine(plan))}</div>`;
+const shell = (title, sub, bodyHtml) => `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${CSS}</style></head><body style="margin:0;background:#fbf8f2"><div class="w"><div class="hd"><div class="ey">MEAL PLANNER</div><div class="t">${esc(title)}</div><div class="g">${esc(sub)}</div></div>${bodyHtml}</div></body></html>`;
+const emailHtml = (subject, html) => `SUBJECT: ${subject}\nFORMAT: html\n\n${html}\n`;
+const itemHtml = (plan, it) => {
+  const r = byId[it.id].r;
+  const who = plan.people ? people(plan).map((q, k) => pill(`${nameOf(q, k)} ${fmtServ(k ? it.s2 : it.s)}`)).join("") : pill(`${fmtServ(it.s)} serving${it.s === 1 ? "" : "s"}`);
+  return `<div class="i"><div class="n">${esc(r.name)}</div>${who}</div>`;
+};
+const mealHtml = (plan, day, m) => `<div class="m">${MEAL_LABEL[m].toUpperCase()}</div>${day[m].items.map((it) => itemHtml(plan, it)).join("")}`;
+const dayCardHtml = (plan, day, i, label) => {
+  const title = esc(label || dateStr(plan, i));
+  if (isAway(plan, i)) return card(`<div class="d">${title}</div><div class="hw">Away: no meals planned</div>`);
+  const all = MEALS.flatMap((m) => day[m].items);
+  const tot = people(plan).map((q, k) => { const t = totalsOf(all, k); return `${nameOf(q, k)} ${Math.round(t.kcal / 10) * 10} kcal, ${Math.round(t.p)} g protein`; }).join(" · ");
+  return card(`<div class="d">${title}</div><div class="g">${esc(tot)}</div>${MEALS.map((m) => mealHtml(plan, day, m)).join("")}`);
+};
+const daysHtml = (plan) => plan.days.map((d, i) => dayCardHtml(plan, d, i)).join("");
+const listHtml = (items) => items.map((t) => `<div class="r">• ${esc(t)}</div>`).join("");
+
+function weeklyHtml(plan, opts) {
+  const targets = people(plan).map((p, k) => pill(`${nameOf(p, k)} ${personKcal(p)} kcal a day`)).join("");
+  const body = card(`<div style="margin-bottom:10px">${button(planLink(plan), "Open in the planner")}</div><div class="g">One pot, with a portion for each of you. ${plan.mode === "batch" ? "Batch cooking on the weekend." : "Cooking fresh each day."}</div><div style="margin-top:8px">${targets}</div>`, "cs") +
+    daysHtml(plan) +
+    card(`<div class="h hw">What I will nudge you about</div>${listHtml([`${opts.shopDayName} morning: shopping day, with the combined list`, `Every evening around ${opts.timeLabel}: tomorrow's meals and anything to soak, sprout or prepare`, ...(plan.mode === "batch" ? ["The weekend before: batch cooking, in the best order"] : [])])}<div class="g" style="margin-top:8px">Reply to this email to change anything: a swap, a trip, a skipped day, or batch cooking instead of fresh. I will adjust the plan.</div>`, "cw") +
+    `<div class="g">Leave the line below in place when you reply; it lets me rebuild this exact plan.</div>` + planIdBlock(plan);
+  return emailHtml(`Meal plan for ${rangeLabel(plan)}`, shell("Your week", `${rangeLabel(plan)} · ${who(plan).join(" and ")}`, body));
+}
+function shoppingHtml(plan) {
+  const sl = shoppingList(plan);
+  const groups = sl.groups.map((g) => card(`<div class="h">${esc(g.title)}</div>${g.items.map((t) => `<div class="r">☐ ${esc(t)}</div>`).join("")}`)).join("");
+  const extra = sl.extras.length ? card(`<div class="h">Also (no amount in the recipes)</div><div class="g">${esc(sl.extras.join(", "))}</div>`) : "";
+  const body = card(`<div>One combined list for the ${sl.dishes} dishes in the plan. Amounts are scaled to the servings you will eat and rounded up. Check your pantry first.</div><div style="margin-top:10px">${button(planLink(plan), "Open the full recipe lists")}</div>`, "cs") + groups + extra;
+  return emailHtml(`Shopping day: ingredients for ${rangeLabel(plan)}`, shell("Shopping day", rangeLabel(plan), body));
+}
+// A nudge built from the website's reminder lines: sprouts line, "Tomorrow" menu, prep tips
+function nudgeHtml(plan, e, dateIso) {
+  const L = e.lines;
+  const sprout = L.find((l) => l.startsWith("Start sprouting tonight"));
+  const tomorrowIdx = Math.round((addDays(parseIso(dateIso), 1) - parseIso(plan.start)) / 86400000);
+  const prep = L.findIndex((l) => l === "Prep tonight:");
+  const tips = prep >= 0 ? L.slice(prep + 1).filter((l) => l.startsWith("- ")).map((l) => l.slice(2)) : [];
+  const inPlan = tomorrowIdx >= 0 && tomorrowIdx < plan.days.length;
+  let body = "";
+  if (sprout) body += card(`<div class="h hw">🌱 Start sprouting tonight</div><div>${esc(sprout.replace(/^Start sprouting tonight for /, "For "))}</div>`, "cw");
+  if (tips.length && !(inPlan && isAway(plan, tomorrowIdx))) body += card(`<div class="h hw">Prep tonight</div>${listHtml(tips)}`, "cw");
+  if (inPlan) body += dayCardHtml(plan, plan.days[tomorrowIdx], tomorrowIdx, `Tomorrow · ${dateStr(plan, tomorrowIdx)}`);
+  body += `<div>${button(planLink(plan), "Open the plan")}</div>`;
+  return emailHtml(e.summary, shell("Tonight's nudge", e.summary, body));
+}
+function genericHtml(plan, e) {
+  const paras = e.lines.map((l) => (l === "" ? "" : l.startsWith("- ") ? `<div class="r">• ${esc(l.slice(2))}</div>` : `<div style="margin:6px 0">${esc(l)}</div>`)).join("");
+  return emailHtml(e.summary, shell(e.summary, rangeLabel(plan), card(paras) + `<div>${button(planLink(plan), "Open the plan")}</div>`));
 }
 
 function weeklyEmail(plan, opts) {
@@ -78,17 +220,11 @@ function weeklyEmail(plan, opts) {
 }
 
 function shoppingEmail(plan) {
-  const planned = {};
-  plan.days.forEach((d) => MEALS.forEach((m) => d[m].items.forEach(({ id, s, s2 }) => { planned[id] = (planned[id] || 0) + s + (plan.people ? s2 : 0); })));
-  const out = [`Shopping day for ${rangeLabel(plan)}. Check your pantry first. Each list is the full recipe, and the line under the name says how many servings this week uses (scale the amounts, or cook the full recipe and keep the rest).`, ""];
-  Object.keys(planned).forEach((id) => {
-    const { r } = byId[id];
-    const factor = planned[id] / r.macros.servings;
-    out.push(`${r.name}: this week uses ${fmtServ(planned[id])} of the ${r.macros.servings} servings the recipe makes${factor >= 1.25 || factor < 0.75 ? ` (about ${factor >= 10 ? Math.round(factor) : factor.toFixed(1)}x the amounts below)` : ""}`);
-    flatLines(r).forEach((l) => { if (l.group) out.push(`  [${l.group}]`); out.push(`  - ${l.text}`); });
-    out.push("");
-  });
-  out.push(`Planner and the same shopping list with tick boxes: ${planLink(plan)}`);
+  const sl = shoppingList(plan);
+  const out = [`Shopping day for ${rangeLabel(plan)}. This is one combined list for the ${sl.dishes} dishes in the plan, with amounts scaled to the servings you will eat and rounded up. Check your pantry first.`, ""];
+  sl.groups.forEach((g) => { out.push(g.title.toUpperCase()); g.items.forEach((t) => out.push(`  [ ] ${t}`)); out.push(""); });
+  if (sl.extras.length) out.push("ALSO (no amount in the recipes, use to taste or as needed)", `  ${sl.extras.join(", ")}`, "");
+  out.push(`The full recipe-by-recipe lists, with tick boxes: ${planLink(plan)}`);
   return email(`Shopping day: ingredients for ${rangeLabel(plan)}`, out.join("\n"));
 }
 
@@ -102,6 +238,13 @@ function nudges(plan, dateIso) {
     .filter((e) => kind === "all" || (kind === "morning") === (e.start.getHours() < 12));
   const emails = [];
   events.forEach((e) => {
+    if (HTML) {
+      if (e.uid.startsWith("shop-day-")) emails.push(shoppingHtml(plan));
+      else if (e.uid.startsWith("shop-eve-")) emails.push(emailHtml(e.summary, shell("Shopping tomorrow", rangeLabel(plan), card(`<div>You shop tomorrow. Check what you already have at home. This is the week's menu:</div>`, "cs") + daysHtml(plan) + `<div>${button(planLink(plan), "Open the plan")}</div>`)));
+      else if (e.uid.startsWith("evening-")) emails.push(nudgeHtml(plan, e, dateIso));
+      else emails.push(genericHtml(plan, e));
+      return;
+    }
     if (e.uid.startsWith("shop-day-")) emails.push(shoppingEmail(plan));
     else if (e.uid.startsWith("shop-eve-")) emails.push(email(e.summary, [`You shop tomorrow. Check what you already have at home. This is the week's menu:`, "", ...menuLines(plan), `Planner: ${planLink(plan)}`].join("\n")));
     else if (e.uid.startsWith("evening-")) {
@@ -131,19 +274,21 @@ if (cmd === "plan") {
   if (start === "auto") { let d = addDays(today, 1); while (d.getDay() !== 1) d = addDays(d, 1); start = isoDate(d); }
   const ppl = JSON.parse(args.people || "[]").map(cleanPerson);
   if (ppl.length !== 1 && ppl.length !== 2) { console.error("--people needs a JSON list of one or two people"); process.exit(1); }
-  const plan = buildPlan({ start, days: Number(args.days || 7), mode: args.mode, seed: args.seed, edits: args.edits, ppl });
+  const plan = buildPlan({ start, days: Number(args.days || 7), mode: args.mode, seed: args.seed || "auto2", edits: args.edits, ppl });
   if (args.out) fs.writeFileSync(args.out, JSON.stringify(plan));
-  console.log(weeklyEmail(plan, { shopDayName: WEEKDAY_NAMES[Number(args["shop-day"] || 6)], timeLabel: timeLabel(args.time || "20:30") }));
+  const wopts = { shopDayName: WEEKDAY_NAMES[Number(args["shop-day"] || 6)], timeLabel: timeLabel(args.time || "20:30") };
+  console.log(HTML ? weeklyHtml(plan, wopts) : weeklyEmail(plan, wopts));
 } else if (cmd === "rebuild") {
   const id = parseIdLine(args.id || "");
   const ppl = JSON.parse(args.people || "[]").map(cleanPerson);
   if (!id.start || !id.days || (ppl.length !== 1 && ppl.length !== 2)) { console.error("need --id (a Plan ID line) and --people"); process.exit(1); }
-  const plan = buildPlan({ start: id.start, days: Number(id.days), mode: id.mode, seed: id.seed === "auto" ? undefined : id.seed, edits: id.edits === "none" ? "" : id.edits, ppl });
+  const plan = buildPlan({ start: id.start, days: Number(id.days), mode: id.mode, seed: id.seed === "auto" ? undefined : id.seed, edits: id.edits === "none" ? "" : id.edits, ppl, legacyNames: id.seed === "auto" ? ["Prasad", "Wife"] : undefined });
   if (args.out) fs.writeFileSync(args.out, JSON.stringify(plan));
   console.log(plan.id.data === id.data ? `OK: rebuilt the plan for ${rangeLabel(plan)}.` : `WARNING: the recipe data changed since this plan was made (was ${id.data}, now ${plan.id.data}), so the rebuilt plan may differ from the one that was emailed. Tell the user.`);
   if (args.email) { // also print the plan email, for sending after a change was made (--id may carry new edits)
     console.log("=====EMAIL=====\n");
-    console.log(weeklyEmail(plan, { shopDayName: WEEKDAY_NAMES[Number(args["shop-day"] || 6)], timeLabel: timeLabel(args.time || "20:30") }).replace("SUBJECT: Meal plan for", "SUBJECT: Updated meal plan for"));
+    const wopts = { shopDayName: WEEKDAY_NAMES[Number(args["shop-day"] || 6)], timeLabel: timeLabel(args.time || "20:30") };
+    console.log((HTML ? weeklyHtml(plan, wopts) : weeklyEmail(plan, wopts)).replace("SUBJECT: Meal plan for", "SUBJECT: Updated meal plan for"));
   }
 } else if (cmd === "nudge") {
   const list = nudges(readPlan(), args.date);

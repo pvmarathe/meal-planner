@@ -373,9 +373,14 @@ function applyEdits(plan, edits) {
   return plan;
 }
 // Everything that defines a plan: start, length, cooking mode, seed, edits and the recipe data. Same inputs always give the same plan.
-function buildPlan({ start, days, mode, seed, edits, ppl }) {
+// seed: "auto2" (new plans) depends only on the dates and the people's gender, weight and activity, so renaming someone never changes a plan.
+// "auto" (the first plans sent) also mixed in the names; legacyNames lets a rebuild use the names that were in use then.
+function buildPlan({ start, days, mode, seed, edits, ppl, legacyNames }) {
   const end = isoDate(addDays(parseIso(start), days - 1));
-  setRng(seeded(seed || `${start}-${ppl.map((p) => p.name + p.gender + p.kg + p.activity).join("|")}`));
+  const seedText = seed && seed !== "auto" && seed !== "auto2" ? seed
+    : seed === "auto2" ? `${start}-${ppl.map((p) => p.gender + p.kg + p.activity).join("|")}`
+    : `${start}-${ppl.map((p, i) => ((legacyNames && legacyNames[i]) || p.name) + p.gender + p.kg + p.activity).join("|")}`;
+  setRng(seeded(seedText));
   let plan;
   const savedGender = gender, savedKg = bodyKg;
   try {
