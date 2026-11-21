@@ -137,7 +137,7 @@ function menuLines(plan) {
 // ----- HTML emails: a small style block plus class names, so the message stays short and looks like the web app -----
 const HTML = args.format === "html";
 const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-const CSS = "body{margin:0;background:#fbf8f2}.w{max-width:600px;margin:0 auto;padding:14px 10px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2a2620;font-size:14px;line-height:1.5}.hd{background:#e3f1e8;border:1px solid #e6dfd0;border-radius:14px;padding:18px 20px;margin-bottom:12px}.ey{font-size:11px;letter-spacing:.12em;font-weight:700;color:#226239}.t{font-size:24px;font-weight:800;margin:2px 0}.g{color:#6c655a;font-size:13px}.c{background:#fff;border:1px solid #e6dfd0;border-radius:14px;padding:14px 16px;margin:0 0 12px}.cs{background:#e3f1e8}.cw{background:#fbead7;border-color:#f1d3b0}.d{font-size:16px;font-weight:700}.m{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;color:#226239}.mb{background:#fdf2e2;border-left:4px solid #e0a040;border-radius:10px;padding:8px 12px;margin-top:10px}.ml{background:#e9f4ed;border-left:4px solid #4a9b6a;border-radius:10px;padding:8px 12px;margin-top:10px}.md{background:#eceffa;border-left:4px solid #6a79c9;border-radius:10px;padding:8px 12px;margin-top:10px}.lb{font-size:11px;font-weight:800;letter-spacing:.1em;color:#a5600a}.ll{font-size:11px;font-weight:800;letter-spacing:.1em;color:#226239}.ld{font-size:11px;font-weight:800;letter-spacing:.1em;color:#3b4a8f}.pb{background:#fbe2bd;color:#8a4a06}.pl{background:#cfe8d8;color:#1d5a34}.pd{background:#d7ddf5;color:#2f3d82}.i{margin:4px 0}.n{font-weight:600}.p{display:inline-block;background:#e3f1e8;color:#226239;border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700;margin:0 4px 2px 0}.pw{background:#fbead7;color:#b4570f}.b{display:inline-block;background:#2f7d4f;color:#fff!important;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:999px}.h{font-weight:700;color:#226239;margin-bottom:4px}.hw{color:#b4570f}.r{margin:2px 0}.id{font-family:Menlo,Consolas,monospace;font-size:11px;color:#6c655a;word-break:break-all;margin-top:6px}";
+const CSS = "body{margin:0;background:#fbf8f2}.w{max-width:600px;margin:0 auto;padding:14px 10px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2a2620;font-size:14px;line-height:1.5}.hd{background:#e3f1e8;border:1px solid #e6dfd0;border-radius:14px;padding:18px 20px;margin-bottom:12px}.ey{font-size:11px;letter-spacing:.12em;font-weight:700;color:#226239}.t{font-size:24px;font-weight:800;margin:2px 0}.g{color:#6c655a;font-size:13px}.c{background:#fff;border:1px solid #e6dfd0;border-radius:14px;padding:14px 16px;margin:0 0 12px}.cs{background:#e3f1e8}.cw{background:#fbead7;border-color:#f1d3b0}.d{font-size:16px;font-weight:700}.m{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;color:#226239}.i{margin:4px 0}.n{font-weight:600}.p{display:inline-block;background:#e3f1e8;color:#226239;border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700;margin:0 4px 2px 0}.pw{background:#fbead7;color:#b4570f}.b{display:inline-block;background:#2f7d4f;color:#fff!important;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:999px}.h{font-weight:700;color:#226239;margin-bottom:4px}.hw{color:#b4570f}.r{margin:2px 0}.id{font-family:Menlo,Consolas,monospace;font-size:11px;color:#6c655a;word-break:break-all;margin-top:6px}";
 const pill = (t, warm) => `<span class="p${warm === true ? " pw" : warm ? " " + warm : ""}">${esc(t)}</span>`;
 const card = (inner, cls) => `<div class="c${cls ? " " + cls : ""}">${inner}</div>`;
 const button = (href, text) => `<a class="b" href="${esc(href)}">${esc(text)}</a>`;
@@ -157,12 +157,18 @@ function inlineStyles(html) {
 const emailHtml = (subject, html) => `SUBJECT: ${subject}\nFORMAT: html\n\n${inlineStyles(html)}\n`;
 const itemHtml = (plan, it, m) => {
   const r = byId[it.id].r;
-  const pc = m ? MEAL_STYLE[m].pill : "";
-  const who = plan.people ? pill(people(plan).map((q, k) => `${nameOf(q, k)} ${fmtServ(k ? it.s2 : it.s)}`).join(" · "), pc) : pill(`${fmtServ(it.s)} serving${it.s === 1 ? "" : "s"}`, pc);
+  const text = plan.people ? people(plan).map((q, k) => `${nameOf(q, k)} ${fmtServ(k ? it.s2 : it.s)}`).join(" · ") : `${fmtServ(it.s)} serving${it.s === 1 ? "" : "s"}`;
+  const who = m ? mealPill(text, m) : pill(text);
   return `<div class="i"><div class="n">${esc(r.name)}</div>${who}</div>`;
 };
-const MEAL_STYLE = { breakfast: { box: "mb", label: "lb", pill: "pb", icon: "🌅" }, lunch: { box: "ml", label: "ll", pill: "pl", icon: "☀️" }, dinner: { box: "md", label: "ld", pill: "pd", icon: "🌙" } };
-const mealHtml = (plan, day, m) => `<div class="${MEAL_STYLE[m].box}"><div class="${MEAL_STYLE[m].label}">${MEAL_STYLE[m].icon} ${MEAL_LABEL[m].toUpperCase()}</div>${day[m].items.map((it) => itemHtml(plan, it, m)).join("")}</div>`;
+// Each meal is a table (bgcolor plus an inline background and a full border) so phone mail apps colour the whole rectangle
+const MEAL_STYLE = {
+  breakfast: { bg: "#fde8c6", bd: "#e3a949", label: "#8a4a06", pill: "#f8d28f", icon: "🌅" },
+  lunch: { bg: "#d9eee1", bd: "#6fb08c", label: "#1d5a34", pill: "#b9dcc8", icon: "☀️" },
+  dinner: { bg: "#dfe4f8", bd: "#8593d6", label: "#2f3d82", pill: "#c3ccf0", icon: "🌙" },
+};
+const mealPill = (t, m) => `<span style="background:${MEAL_STYLE[m].pill};color:${MEAL_STYLE[m].label};border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700">${esc(t)}</span>`;
+const mealHtml = (plan, day, m) => { const c = MEAL_STYLE[m]; return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="${c.bg}" style="background:${c.bg};border:1px solid ${c.bd};border-radius:10px;margin-top:10px"><tr><td bgcolor="${c.bg}" style="background:${c.bg};padding:8px 12px;border-radius:10px"><div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:${c.label}">${c.icon} ${MEAL_LABEL[m].toUpperCase()}</div>${day[m].items.map((it) => itemHtml(plan, it, m)).join("")}</td></tr></table>`; };
 const dayCardHtml = (plan, day, i, label) => {
   const title = esc(label || dateStr(plan, i));
   if (isAway(plan, i)) return card(`<div class="d">${title}</div><div class="hw">Away: no meals planned</div>`);
