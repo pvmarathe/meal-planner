@@ -657,3 +657,9 @@ details.targets.panel { background: var(--pn-tar-bg); border: 1px solid var(--pn
 details.targets.panel > summary { color: var(--pn-tar-fg); }
 details.shopping.panel { background: var(--pn-shp-bg); border-color: var(--pn-shp-bd); }
 details.shopping.panel > summary { color: var(--pn-shp-fg); }
+
+/* dates box (on the plan view; inside the step card it stays plain) */
+:root { --pn-dat-bg: #fdf3d9; --pn-dat-bd: #e8cf8c; --pn-dat-fg: #7a5a0c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --pn-dat-bg: #3b3220; --pn-dat-bd: #7a6532; --pn-dat-fg: #f3dd9b; } }
+#plan > .range-picker { background: var(--pn-dat-bg); border: 1px solid var(--pn-dat-bd); border-radius: 14px; padding: 16px 20px; margin: 0 0 16px; }
+#plan > .range-picker .week-question { color: var(--pn-dat-fg); font-size: 1.2rem; margin-bottom: 12px; }

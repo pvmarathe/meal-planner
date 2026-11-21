@@ -118,7 +118,7 @@ function plannerSectionEl() {
   const preset = (label, id, s, e) => h("button", { type: "button", id, class: "btn small", text: label, onclick: () => setDates(isoDate(s), isoDate(e)) });
   const tomorrow = addDays(new Date(), 1);
   const picker = h("div", { class: "range-picker" },
-    h("p", { class: "week-question", id: "range-question", text: `Which dates are you planning for? (1 to ${MAX_DAYS} days)` }),
+    h("p", { class: "week-question", id: "range-question", text: `📆 Plan dates: which days are you planning for? (1 to ${MAX_DAYS} days)` }),
     h("div", { class: "range-row" },
       h("label", { class: "activity" }, "From ", startInput),
       h("label", { class: "activity" }, "To ", endInput),
