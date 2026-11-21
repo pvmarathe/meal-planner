@@ -9,7 +9,7 @@ A pure-vegetarian meal planner for two people who cook one pot, plus an email "a
 - **Website** (static files on GitHub Pages, no server, no build step): `index.html` (planner), `recipes.html` (recipe database), `how-it-works.html`.
 - **Planning brain:** `core.js`, shared by the website and the agent. It has no page code, so it also runs in Node.
 - **Data:** `data.js` holds every recipe and its nutrition. Section order matters little; recipe `id`s and sections with `inPlanner: false` matter (see below).
-- **Page code:** `planner.js` (plan view), `recipes.js` (database page), `reminders.js` (prep tips and the calendar-file download), `common.js`, `style.css`.
+- **Page code:** `planner.js` (plan view), `recipes.js` (database page), `reminders.js` (prep tips used by the agent; the page's calendar-download box was removed because emails replace it), `common.js`, `style.css`.
 - **Email agent tool:** `agent/agent.js`. It loads `data.js`, `common.js`, `reminders.js` and `core.js` in Node and prints emails.
 
 Live site: https://pvmarathe.github.io/meal-planner/ (GitHub repo `pvmarathe/meal-planner`, branch `main`).
