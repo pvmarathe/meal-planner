@@ -465,3 +465,90 @@ details.prep-box[open] > summary { margin-bottom: 10px; }
 .meal-items .who { display: block; font-size: 0.8rem; margin-bottom: 1px; }
 .plan-day .day-total { margin: 2px 0; }
 .plan-day .day-total .badge { margin: 0 0 0 4px; }
+
+
+/* ---------- A cleaner, larger look: Verdana everywhere, bigger headings, colour-coded meals ---------- */
+:root {
+  --font: Verdana, Geneva, "DejaVu Sans", sans-serif;
+  --radius: 16px;
+  --breakfast-bg: #fde8c6; --breakfast-bd: #e3a949; --breakfast-fg: #8a4a06; --breakfast-pill: #f8d28f;
+  --lunch-bg: #d9eee1;     --lunch-bd: #6fb08c;     --lunch-fg: #1d5a34;     --lunch-pill: #b9dcc8;
+  --dinner-bg: #dfe4f8;    --dinner-bd: #8593d6;    --dinner-fg: #2f3d82;    --dinner-pill: #c3ccf0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --breakfast-bg: #3a2a14; --breakfast-bd: #a9792f; --breakfast-fg: #f2c27b; --breakfast-pill: #5a3f18;
+    --lunch-bg: #17301f;     --lunch-bd: #3f7f58;     --lunch-fg: #8fe0ae;     --lunch-pill: #24492f;
+    --dinner-bg: #1e2342;    --dinner-bd: #5360a8;    --dinner-fg: #aeb8f0;    --dinner-pill: #2c3463;
+  }
+}
+body { font-family: var(--font); line-height: 1.65; }
+button, input, select, textarea { font-family: inherit; }
+.wrap { width: min(1180px, 100% - 32px); }
+
+/* Headings: bigger and clearer */
+h1 { font-size: clamp(2.5rem, 6.5vw, 4.2rem); line-height: 1.08; letter-spacing: -0.03em; }
+h2 { margin-bottom: 8px; font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.2; letter-spacing: -0.015em; }
+.lead { font-size: 1.2rem; max-width: 62ch; }
+.eyebrow { font-size: 0.9rem; }
+.section-note { font-size: 1.02rem; }
+.hero { padding: 52px 0 42px; }
+.chip { padding: 9px 18px; font-size: 1rem; }
+main section { margin-top: 40px; }
+
+/* Buttons and form controls */
+.btn { padding: 11px 20px; font-size: 1rem; border-radius: 12px; }
+.btn.small { padding: 7px 14px; font-size: 0.9rem; }
+.activity, .week-question { font-size: 1rem; }
+.activity select, .person input, .person select { padding: 9px 12px; font-size: 1rem; }
+.range-msg { font-size: 1.02rem; }
+
+/* The plan: roomy cards, big day headings, one colour for each meal */
+.plan-days { gap: 20px; margin-top: 14px; }
+.plan-day { padding: 20px 22px; box-shadow: var(--shadow); }
+.plan-day h3 { font-size: clamp(1.45rem, 3vw, 1.9rem); letter-spacing: -0.01em; }
+.day-total { margin: 6px 0 16px; font-size: 0.98rem; }
+.meals { gap: 14px; }
+.meal { padding: 14px 16px; border: 1px solid var(--meal-bd, var(--border)); border-radius: 14px; background: var(--meal-bg, var(--surface-alt)); }
+.meal-breakfast { --meal-bg: var(--breakfast-bg); --meal-bd: var(--breakfast-bd); --meal-fg: var(--breakfast-fg); --meal-pill: var(--breakfast-pill); }
+.meal-lunch { --meal-bg: var(--lunch-bg); --meal-bd: var(--lunch-bd); --meal-fg: var(--lunch-fg); --meal-pill: var(--lunch-pill); }
+.meal-dinner { --meal-bg: var(--dinner-bg); --meal-bd: var(--dinner-bd); --meal-fg: var(--dinner-fg); --meal-pill: var(--dinner-pill); }
+.meal-label { margin-bottom: 10px; font-size: 1.15rem; font-weight: 800; letter-spacing: 0.05em; color: var(--meal-fg, var(--accent-strong)); }
+.meal-breakfast .meal-label::before { content: "🌅 "; }
+.meal-lunch .meal-label::before { content: "☀️ "; }
+.meal-dinner .meal-label::before { content: "🌙 "; }
+.meal-label span { font-size: 0.85rem; color: var(--muted); }
+.meal-items li { margin-bottom: 10px; }
+.meal-items a { font-size: 1.08rem; }
+.meal-items .who { display: block; width: fit-content; max-width: 100%; margin-bottom: 4px; padding: 2px 10px; font-size: 0.85rem; font-weight: 700; color: var(--meal-fg); background: var(--meal-pill, var(--accent-soft)); border-radius: 10px; }
+.serving-note { font-size: 0.85rem; }
+.meal-macros { font-size: 0.9rem; }
+.badge { font-size: 0.85rem; }
+.plan-total { font-size: 1rem; }
+.targets, .prep-box { font-size: 1rem; }
+.plan-toolbar { gap: 12px; }
+
+/* Recipe database */
+.name { font-size: 1.15rem; }
+.channel { font-size: 0.9rem; }
+thead th { font-size: 0.85rem; }
+.ingredients-cell, .macros-cell { font-size: 1rem; }
+.macro-kcal { font-size: 1.35rem; }
+.macros, .serving-text { font-size: 0.95rem; }
+details.fold > summary h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+
+/* How it works */
+.guide h2 { font-size: clamp(1.7rem, 3.6vw, 2.3rem); }
+.guide h3 { margin-top: 26px; font-size: 1.3rem; }
+.guide p, .guide li, .guide dd { font-size: 1.02rem; line-height: 1.7; }
+.callout { font-size: 1.02rem; }
+.guide-table { font-size: 1rem; }
+.footer { font-size: 0.95rem; }
+
+/* Two-person settings: never wider than the screen */
+.people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.person { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.person input, .person select { width: 100%; }
+@media (max-width: 760px) { .people { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) { .person { grid-template-columns: minmax(0, 1fr); } }
+.person { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }

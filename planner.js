@@ -243,7 +243,7 @@ function plannerSectionEl() {
     });
     const badges = checks.map((c, k) => (c.issues.length ? h("p", { class: "badge close", text: `${two_ ? `${nameOf(people[k], k)}: ` : ""}Close: ${c.issues.join(", ")}` }) : null));
 
-    return h("div", { class: "meal" },
+    return h("div", { class: `meal meal-${meal}` },
       h("p", { class: "meal-label" }, MEAL_LABEL[meal], h("span", { text: ` · target ${targets.map((x) => Math.round(x / 5) * 5).join(" / ")} kcal` })),
       h("ul", { class: "meal-items" }, lines),
       ...macroLines,
