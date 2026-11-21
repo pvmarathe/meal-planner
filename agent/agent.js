@@ -9,6 +9,7 @@
 //   node agent/agent.js away   --plan-file plan.json --date YYYY-MM-DD [--undo] --out plan.json   (no meals or nudges for that day)
 //   node agent/agent.js rebuild --id "<the Plan ID line from a plan email>" --people '<json>' --out plan.json   (rebuilds the exact same plan)
 //   node agent/agent.js decode --code <text after #share=> --out plan.json
+//   node agent/agent.js pdf    --plan-file plan.json [--out shopping-list.pdf] [--base64]   (a plain one-page-ish shopping list PDF)
 //   node agent/agent.js link   --plan-file plan.json
 //
 // Output is plain text. Each email starts with a SUBJECT: line, and emails are separated by a line of =====EMAIL=====.
@@ -237,6 +238,56 @@ function nudges(plan, dateIso) {
 
 
 
+
+// A small, plain shopping-list PDF (standard Helvetica, no libraries). Names only, grouped, with tick boxes.
+function shoppingPdf(plan) {
+  const sl = shoppingList(plan);
+  const W = 612, H = 792, M = 48, COLW = (W - 2 * M) / 2, LH = 17;
+  const esc2 = (s) => String(s).replace(/[^\x20-\x7e]/g, "?").replace(/([\\()])/g, "\\$1");
+  const pages = [];
+  let ops = [], y = 0;
+  const newPage = () => { if (ops.length) pages.push(ops.join("\n")); ops = []; y = H - M; };
+  const text = (x, yy, size, s, bold) => ops.push(`BT /${bold ? "F2" : "F1"} ${size} Tf ${x} ${yy} Td (${esc2(s)}) Tj ET`);
+  newPage();
+  text(M, y - 18, 22, "PlanMate shopping list", true); y -= 40;
+  text(M, y, 11, `${rangeLabel(plan)}. ${sl.dishes} dishes. Each ingredient is listed once; amounts are in the recipes.`, false); y -= 28;
+  sl.groups.forEach((g) => {
+    const rows = Math.ceil(g.items.length / 2);
+    if (y - 30 - LH < M) newPage();
+    ops.push("0.14 0.38 0.22 rg"); text(M, y, 13, g.title, true); ops.push("0 g"); y -= 8;
+    ops.push(`0.7 0.7 0.7 RG ${M} ${y} m ${W - M} ${y} l S 0 G`); y -= 18;
+    for (let r = 0; r < rows; r++) {
+      if (y - LH < M) { newPage(); }
+      [0, 1].forEach((c) => {
+        const item = g.items[r + c * rows];
+        if (!item) return;
+        const x = M + c * COLW;
+        ops.push(`${x} ${y - 2} 9 9 re S`);
+        text(x + 15, y, 11, item, false);
+      });
+      y -= LH;
+    }
+    y -= 12;
+  });
+  pages.push(ops.join("\n"));
+  const objs = [];
+  const add = (s) => { objs.push(s); return objs.length; };
+  add("<< /Type /Catalog /Pages 2 0 R >>");
+  add("PAGES");
+  const f1 = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>");
+  const f2 = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>");
+  const kids = pages.map((c) => {
+    const cs = add(`<< /Length ${Buffer.byteLength(c)} >>\nstream\n${c}\nendstream`);
+    return add(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /Font << /F1 ${f1} 0 R /F2 ${f2} 0 R >> >> /Contents ${cs} 0 R >>`);
+  });
+  objs[1] = `<< /Type /Pages /Kids [${kids.map((k) => `${k} 0 R`).join(" ")}] /Count ${kids.length} >>`;
+  let out = "%PDF-1.4\n"; const offs = [];
+  objs.forEach((o, i) => { offs.push(Buffer.byteLength(out)); out += `${i + 1} 0 obj\n${o}\nendobj\n`; });
+  const xref = Buffer.byteLength(out);
+  out += `xref\n0 ${objs.length + 1}\n0000000000 65535 f \n` + offs.map((o) => `${String(o).padStart(10, "0")} 00000 n \n`).join("") + `trailer\n<< /Size ${objs.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
+  return Buffer.from(out, "latin1");
+}
+
 if (cmd === "plan") {
   const today = parseIso(args.today || isoDate(new Date()));
   let start = args.start || "auto";
@@ -291,6 +342,11 @@ if (cmd === "plan") {
   if (!plan) { console.error("could not read that plan code"); process.exit(1); }
   if (args.out) fs.writeFileSync(args.out, JSON.stringify(plan));
   console.log(`Plan for ${rangeLabel(plan)}, ${plan.days.length} days${plan.people ? ", for " + who(plan).join(" and ") : ""}.`);
+} else if (cmd === "pdf") {
+  const buf = shoppingPdf(readPlan());
+  fs.writeFileSync(args.out || "shopping-list.pdf", buf);
+  console.log(`PDF written: ${args.out || "shopping-list.pdf"} (${buf.length} bytes, base64 ${Math.ceil(buf.length / 3) * 4} characters)`);
+  if (args.base64) console.log(buf.toString("base64"));
 } else if (cmd === "link") {
   console.log(planLink(readPlan()));
 } else {
