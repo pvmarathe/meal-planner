@@ -420,7 +420,7 @@ function decodeRecipe(code) {
 // ("2 tbsp onion, finely chopped" and "onions" both become "onion"), then listed under a category.
 const isAway = (plan, i) => (plan.away || []).includes(isoDate(addDays(parseIso(plan.start), i)));
 const SHOP_UNITS = new Set(["cup", "cups", "tbsp", "tablespoon", "tablespoons", "tsp", "teaspoon", "teaspoons", "g", "gm", "gram", "grams", "kg", "ml", "l", "litre", "liter", "oz", "lb", "inch", "inches", "clove", "cloves", "pinch", "sprig", "sprigs", "slice", "slices", "can", "glass", "bunch", "bowl", "piece", "pieces", "handful", "stalk", "stalks", "stick", "sticks", "pod", "pods", "pack", "packet", "cob", "cobs", "small", "medium", "large", "big", "few", "some", "heaped", "level", "scant", "rounded", "generous"]);
-const SHOP_DROP = /\b(finely|roughly|freshly|thinly|coarsely|chopped|sliced|grated|crushed|ground|boiled|cooked|soaked|fresh|dry|dried|raw|optional|ripe|frozen|canned|whole|peeled|diced|minced|roasted|toasted|packed|powdered|shredded|cubed|halved|uncooked|washed|rinsed|drained|soft|hot|warm|cold|extra|good|quality|homemade|ready-made|pitted|deseeded|seedless)\b/g;
+const SHOP_DROP = /\b(finely|roughly|freshly|thinly|coarsely|chopped|sliced|grated|crushed|ground|boiled|cooked|soaked|fresh|dry|dried|raw|optional|ripe|frozen|canned|whole|peeled|diced|minced|roasted|toasted|packed|powdered|shredded|cubed|halved|uncooked|washed|rinsed|drained|soft|hot|warm|cold|extra|good|quality|homemade|ready-made|pitted|deseeded|seedless|skinless|julienne|julienned|florets?|stalks?|sprigs?|leaves of)\b/g;
 const SHOP_SYN = {
   "cilantro leaf": "cilantro", "coriander leaf": "cilantro", "coriander": "cilantro", "green coriander": "cilantro", "coriander stem": "cilantro", "cilantro stem": "cilantro", "fresh coriander": "cilantro",
   "coriander powder": "coriander seeds or powder", "coriander seed": "coriander seeds or powder", "dhania powder": "coriander seeds or powder", "dhania": "coriander seeds or powder",
@@ -441,11 +441,11 @@ const SHOP_SYN = {
   "lime juice": "lime", "lemon juice": "lemon", "lemon zest": "lemon", "lime zest": "lime", "garlic clove": "garlic", "clove garlic": "garlic",
   "green apple": "apple", "purple cabbage": "red cabbage", "lettuce leaf": "lettuce", "bay leaf": "bay leaf", "mixed herb": "mixed herbs", "medjool date": "dates", "date": "dates", "peanut": "peanuts", "sesame": "sesame seeds",
   "tamarind juice": "tamarind", "tamarind pulp": "tamarind", "tamarind paste": "tamarind", "spoon sugar": "sugar", "cube processed cheese": "processed cheese", "cubes processed cheese": "processed cheese", "crumbled paneer": "paneer", "paneer cube": "paneer",
-  "cinnamon stick": "cinnamon", "bay leaves": "bay leaf", "cilantro leaves": "cilantro", "coriander leaves": "cilantro", "green coriander leaves": "cilantro", "cumin seeds": "cumin", "jeera seeds": "cumin", "pounded cumin seeds": "cumin", "coriander seeds": "coriander seeds or powder", "fennel seeds": "fennel", "saunf": "fennel", "carom seeds": "ajwain", "moong sprouts": "sprouted moong", "red pepper": "chilli flakes", "red pepper flakes": "chilli flakes", "kidney beans": "kidney beans (rajma)", "rajma": "kidney beans (rajma)", "white quinoa": "quinoa", "mustard seeds": "mustard seeds", "turmeric": "turmeric", "cinnamon powder": "cinnamon", "clove": "cloves", "flax": "flax seeds", "mix of flax": "flax seeds", "ginger paste": "ginger", "garlic paste": "garlic", "ginger-chilli paste": "ginger and green chilli", "ginger chilli paste": "ginger and green chilli",
+  "cinnamon stick": "cinnamon", "eno": "eno fruit salt", "fruit salt": "eno fruit salt", "eno fruit salt": "eno fruit salt", "jaggery powder": "jaggery", "oats": "rolled oats", "oat": "rolled oats", "french beans": "green beans", "french bean": "green beans", "coriander": "cilantro", "cumin-coriander powder": "cumin and coriander seeds or powder", "peanuts": "peanuts", "bay leaves": "bay leaf", "cilantro leaves": "cilantro", "coriander leaves": "cilantro", "green coriander leaves": "cilantro", "cumin seeds": "cumin", "jeera seeds": "cumin", "pounded cumin seeds": "cumin", "coriander seeds": "coriander seeds or powder", "fennel seeds": "fennel", "saunf": "fennel", "carom seeds": "ajwain", "moong sprouts": "sprouted moong", "red pepper": "chilli flakes", "red pepper flakes": "chilli flakes", "kidney beans": "kidney beans (rajma)", "rajma": "kidney beans (rajma)", "white quinoa": "quinoa", "mustard seeds": "mustard seeds", "turmeric": "turmeric", "cinnamon powder": "cinnamon", "clove": "cloves", "flax": "flax seeds", "mix of flax": "flax seeds", "ginger paste": "ginger", "garlic paste": "garlic", "ginger-chilli paste": "ginger and green chilli", "ginger chilli paste": "ginger and green chilli",
 };
 const SHOP_KEEP_PLURAL = new Set(["peas", "beans", "lentils", "oats", "chickpeas", "noodles", "greens", "leaves", "seeds", "flakes", "crumbs", "kernels", "sprouts", "nuts", "cashews", "grapes", "berries", "molasses", "hummus", "couscous", "asparagus", "swiss", "citrus", "bhindi"]);
-const SHOP_SPLIT = { "ginger and green chilli": ["ginger", "green chilli"] };
-const SHOP_SKIP = /^(water|ice|ice cubes?|salt and pepper|a pinch|as needed|to taste|oil for [a-z ]+)$/;
+const SHOP_SPLIT = { "ginger and green chilli": ["ginger", "green chilli"], "cumin and coriander seeds or powder": ["cumin", "coriander seeds or powder"] };
+const SHOP_SKIP = /^(vegetables? of your choice|water|ice|ice cubes?|salt and pepper|a pinch|as needed|to taste|oil for [a-z ]+)$/;
 function shopSingular(word) {
   if (SHOP_KEEP_PLURAL.has(word) || word.length < 4) return word;
   if (/(chill|chil)ies$/.test(word)) return word.replace(/ies$/, "i");
@@ -481,7 +481,7 @@ function shopName(text) {
     const w = t.split(" ");
     if (w.length > 1 && SHOP_UNITS.has(w[0])) t = w.slice(1).join(" ");
   }
-  t = t.replace(/\s+\d+$/, "").replace(/\s+or\s+.*$/, ""); // a trailing number, and "oil or ghee": the first one
+  t = t.replace(/\s+\d+$/, "").replace(/\s+or\s+.*$/, "").replace(/\s*\/\s*.*$/, ""); // a trailing number, and "oil or ghee": the first one
   const names = t.split(/\s+and\s+/).map((part) => shopOne(part.trim())).filter(Boolean);
   return names.flatMap((n) => (SHOP_SPLIT[n] ? SHOP_SPLIT[n] : [n]));
 }
