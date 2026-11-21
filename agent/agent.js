@@ -142,11 +142,22 @@ const pill = (t, warm) => `<span class="p${warm ? " pw" : ""}">${esc(t)}</span>`
 const card = (inner, cls) => `<div class="c${cls ? " " + cls : ""}">${inner}</div>`;
 const button = (href, text) => `<a class="b" href="${esc(href)}">${esc(text)}</a>`;
 const planIdBlock = (plan) => `<div class="id">${esc(planIdLine(plan))}</div>`;
-const shell = (title, sub, bodyHtml) => `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${CSS}</style></head><body style="margin:0;background:#fbf8f2"><div class="w"><div class="hd"><div class="ey">MEAL PLANNER</div><div class="t">${esc(title)}</div><div class="g">${esc(sub)}</div></div>${bodyHtml}</div></body></html>`;
-const emailHtml = (subject, html) => `SUBJECT: ${subject}\nFORMAT: html\n\n${html}\n`;
+const shell = (title, sub, bodyHtml) => `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#fbf8f2"><div class="w"><div class="hd"><div class="ey">MEAL PLANNER</div><div class="t">${esc(title)}</div><div class="g">${esc(sub)}</div></div>${bodyHtml}</div></body></html>`;
+// Some mail apps (the Gmail phone app among them) ignore a style block, so every class is turned into inline styles
+const CLASS_STYLES = Object.fromEntries([...CSS.matchAll(/\.([a-z]+)\{([^}]*)\}/g)].map((m) => [m[1], m[2].replace(/!important/g, "")]));
+function inlineStyles(html) {
+  return html.replace(/<([a-z0-9]+)((?:\s[^>]*?)?)\sclass="([^"]*)"([^>]*)>/g, (all, tag, before, classes, after) => {
+    const decl = classes.split(/\s+/).map((c) => CLASS_STYLES[c] || "").filter(Boolean).join(";");
+    const rest = (before + after);
+    const m = rest.match(/\sstyle="([^"]*)"/);
+    const style = m ? `${decl};${m[1]}` : decl;
+    return `<${tag}${rest.replace(/\sstyle="[^"]*"/, "")} style="${style}">`;
+  });
+}
+const emailHtml = (subject, html) => `SUBJECT: ${subject}\nFORMAT: html\n\n${inlineStyles(html)}\n`;
 const itemHtml = (plan, it) => {
   const r = byId[it.id].r;
-  const who = plan.people ? people(plan).map((q, k) => pill(`${nameOf(q, k)} ${fmtServ(k ? it.s2 : it.s)}`)).join("") : pill(`${fmtServ(it.s)} serving${it.s === 1 ? "" : "s"}`);
+  const who = plan.people ? pill(people(plan).map((q, k) => `${nameOf(q, k)} ${fmtServ(k ? it.s2 : it.s)}`).join(" · ")) : pill(`${fmtServ(it.s)} serving${it.s === 1 ? "" : "s"}`);
   return `<div class="i"><div class="n">${esc(r.name)}</div>${who}</div>`;
 };
 const mealHtml = (plan, day, m) => `<div class="m">${MEAL_LABEL[m].toUpperCase()}</div>${day[m].items.map((it) => itemHtml(plan, it)).join("")}`;
