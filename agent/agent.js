@@ -137,21 +137,25 @@ function menuLines(plan) {
 // ----- HTML emails: a small style block plus class names, so the message stays short and looks like the web app -----
 const HTML = args.format === "html";
 const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-const CSS = "body{margin:0;background:#fbf8f2}.w{max-width:940px;margin:0 auto;padding:14px 10px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2a2620;font-size:14px;line-height:1.5}.hd{background:#e3f1e8;border:1px solid #e6dfd0;border-radius:14px;padding:18px 20px;margin-bottom:12px}.ey{font-size:11px;letter-spacing:.12em;font-weight:700;color:#226239}.t{font-size:24px;font-weight:800;margin:2px 0}.g{color:#6c655a;font-size:13px}.c{background:#fff;border:1px solid #e6dfd0;border-radius:14px;padding:14px 16px;margin:0 0 12px}.cs{background:#e3f1e8}.cw{background:#fbead7;border-color:#f1d3b0}.d{font-size:16px;font-weight:700}.m{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;color:#226239}.i{margin:4px 0}.n{font-weight:600}.p{display:inline-block;background:#e3f1e8;color:#226239;border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700;margin:0 4px 2px 0}.pw{background:#fbead7;color:#b4570f}.b{display:inline-block;background:#2f7d4f;color:#fff!important;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:999px}.h{font-weight:700;color:#226239;margin-bottom:4px}.hw{color:#b4570f}.r{margin:2px 0}.id{font-family:Menlo,Consolas,monospace;font-size:11px;color:#6c655a;word-break:break-all;margin-top:6px}";
+const CSS = "body{margin:0;background:#fbf8f2}.w{max-width:940px;margin:0 auto;padding:14px 10px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2a2620;font-size:14px;line-height:1.5}.hd{background:#e3f1e8;border:1px solid #e6dfd0;border-radius:14px;padding:18px 20px;margin-bottom:12px}.ey{font-size:11px;letter-spacing:.12em;font-weight:700;color:#226239}.t{font-size:24px;font-weight:800;margin:2px 0}.g{color:#6c655a;font-size:13px}.c{background:#fff;border:1px solid #e6dfd0;border-radius:14px;padding:14px 16px;margin:0 0 12px}.cs{background:#e3f1e8}.cw{background:#fbead7;border-color:#f1d3b0}.d{font-size:16px;font-weight:700}.m{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;color:#226239}.i{margin:4px 0}.n{font-weight:600}.p{display:inline-block;background:#e3f1e8;color:#226239;border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700;margin:0 4px 2px 0}.pw{background:#fbead7;color:#b4570f}.b{display:inline-block;background:#2f7d4f;color:#fff!important;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:999px}.h{font-weight:700;color:#226239;margin-bottom:4px}.hw{color:#b4570f}.r{margin:2px 0}.id{font-family:Menlo,Consolas,monospace;font-size:11px;color:#6c655a;word-break:break-all;margin-top:6px}.ml{font-size:11px;font-weight:800;letter-spacing:.1em}.mp{border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700}";
+const MEDIA = "@media (min-width:900px){.w{max-width:1100px!important;font-size:16px!important}.t{font-size:34px!important}.ey{font-size:13px!important}.d{font-size:22px!important}.g{font-size:15px!important}.n{font-size:18px!important}.mp,.p{font-size:14px!important;padding:2px 10px!important}.ml{font-size:13px!important}.r{font-size:17px!important}.h{font-size:18px!important}.b{font-size:17px!important}.c{font-size:16px!important}.mc{display:table-cell!important;width:33.33%!important;margin:0!important}}";
+const KEEP = new Set(["w", "t", "ey", "d", "g", "n", "p", "mp", "ml", "r", "h", "b", "c", "mc"]); // classes the wide-screen rules need, kept next to the inline styles
 const pill = (t, warm) => `<span class="p${warm === true ? " pw" : warm ? " " + warm : ""}">${esc(t)}</span>`;
 const card = (inner, cls) => `<div class="c${cls ? " " + cls : ""}">${inner}</div>`;
 const button = (href, text) => `<a class="b" href="${esc(href)}">${esc(text)}</a>`;
 const planIdBlock = (plan) => `<div class="id">${esc(planIdLine(plan))}</div>`;
-const shell = (title, sub, bodyHtml) => `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#fbf8f2"><div class="w"><div class="hd"><div class="ey">MEAL PLANNER</div><div class="t">${esc(title)}</div><div class="g">${esc(sub)}</div></div>${bodyHtml}</div></body></html>`;
+const shell = (title, sub, bodyHtml) => `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${MEDIA}</style></head><body style="margin:0;background:#fbf8f2"><div class="w"><div class="hd"><div class="ey">MEAL PLANNER</div><div class="t">${esc(title)}</div><div class="g">${esc(sub)}</div></div>${bodyHtml}</div></body></html>`;
 // Some mail apps (the Gmail phone app among them) ignore a style block, so every class is turned into inline styles
 const CLASS_STYLES = Object.fromEntries([...CSS.matchAll(/\.([a-z]+)\{([^}]*)\}/g)].map((m) => [m[1], m[2].replace(/!important/g, "")]));
 function inlineStyles(html) {
   return html.replace(/<([a-z0-9]+)((?:\s[^>]*?)?)\sclass="([^"]*)"([^>]*)>/g, (all, tag, before, classes, after) => {
-    const decl = classes.split(/\s+/).map((c) => CLASS_STYLES[c] || "").filter(Boolean).join(";");
-    const rest = (before + after);
+    const list = classes.split(/\s+/);
+    const decl = list.map((c) => CLASS_STYLES[c] || "").filter(Boolean).join(";");
+    const keep = list.filter((c) => KEEP.has(c)).join(" ");
+    const rest = before + after;
     const m = rest.match(/\sstyle="([^"]*)"/);
     const style = m ? `${decl};${m[1]}` : decl;
-    return `<${tag}${rest.replace(/\sstyle="[^"]*"/, "")} style="${style}">`;
+    return `<${tag}${rest.replace(/\sstyle="[^"]*"/, "")}${keep ? ` class="${keep}"` : ""} style="${style}">`;
   });
 }
 const emailHtml = (subject, html) => `SUBJECT: ${subject}\nFORMAT: html\n\n${inlineStyles(html)}\n`;
@@ -167,14 +171,14 @@ const MEAL_STYLE = {
   lunch: { bg: "#d9eee1", bd: "#6fb08c", label: "#1d5a34", pill: "#b9dcc8", icon: "☀️" },
   dinner: { bg: "#dfe4f8", bd: "#8593d6", label: "#2f3d82", pill: "#c3ccf0", icon: "🌙" },
 };
-const mealPill = (t, m) => `<span style="background:${MEAL_STYLE[m].pill};color:${MEAL_STYLE[m].label};border-radius:10px;padding:1px 8px;font-size:12px;font-weight:700">${esc(t)}</span>`;
-const mealHtml = (plan, day, m) => { const c = MEAL_STYLE[m]; return `<div style="display:inline-block;vertical-align:top;width:100%;max-width:292px;margin:10px 8px 0 0;font-size:14px;line-height:1.5"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="${c.bg}" style="background:${c.bg};border:1px solid ${c.bd};border-radius:10px"><tr><td bgcolor="${c.bg}" style="background:${c.bg};padding:8px 12px;border-radius:10px"><div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:${c.label}">${c.icon} ${MEAL_LABEL[m].toUpperCase()}</div>${day[m].items.map((it) => itemHtml(plan, it, m)).join("")}</td></tr></table></div>`; };
+const mealPill = (t, m) => `<span class="mp" style="background:${MEAL_STYLE[m].pill};color:${MEAL_STYLE[m].label}">${esc(t)}</span>`;
+const mealHtml = (plan, day, m) => { const c = MEAL_STYLE[m]; return `<td class="mc" bgcolor="${c.bg}" style="display:block;width:100%;box-sizing:border-box;background:${c.bg};border:1px solid ${c.bd};border-radius:10px;padding:8px 12px;margin:0 0 10px 0;vertical-align:top"><div class="ml" style="color:${c.label}">${c.icon} ${MEAL_LABEL[m].toUpperCase()}</div>${day[m].items.map((it) => itemHtml(plan, it, m)).join("")}</td>`; };
 const dayCardHtml = (plan, day, i, label) => {
   const title = esc(label || dateStr(plan, i));
   if (isAway(plan, i)) return card(`<div class="d">${title}</div><div class="hw">Away: no meals planned</div>`);
   const all = MEALS.flatMap((m) => day[m].items);
   const tot = people(plan).map((q, k) => { const t = totalsOf(all, k); return `${nameOf(q, k)} ${Math.round(t.kcal / 10) * 10} kcal, ${Math.round(t.p)} g protein`; }).join(" · ");
-  return card(`<div class="d">${title}</div><div class="g">${esc(tot)}</div><div style="font-size:0;line-height:0">${MEALS.map((m) => mealHtml(plan, day, m)).join("")}</div>`);
+  return card(`<div class="d">${title}</div><div class="g">${esc(tot)}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:6px 0 0"><tr>${MEALS.map((m) => mealHtml(plan, day, m)).join("")}</tr></table>`);
 };
 const daysHtml = (plan) => plan.days.map((d, i) => dayCardHtml(plan, d, i)).join("");
 const listHtml = (items) => items.map((t) => `<div class="r">• ${esc(t)}</div>`).join("");
