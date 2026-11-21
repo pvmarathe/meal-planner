@@ -336,3 +336,74 @@ function decodePlan(code) {
   } catch (e) { return null; }
 }
 
+
+// ----- rebuilding a plan from a short recipe (used by the agent and by the planner page when you open an emailed link) -----
+// A small seeded random generator, so the same seed always gives the same plan
+function seeded(text) {
+  let h = 1779033703 ^ text.length;
+  for (let i = 0; i < text.length; i++) { h = Math.imul(h ^ text.charCodeAt(i), 3432918353); h = (h << 13) | (h >>> 19); }
+  let a = (h ^= h >>> 16) >>> 0;
+  return () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+}
+// A short fingerprint of the recipe data (names and numbers), so a rebuilt plan can say if the recipes changed since it was made
+const dataHash = () => {
+  let h = 2166136261;
+  const text = sections.map((s) => s.recipes.map((r) => `${r.name}${r.macros && r.macros.kcal}${r.macros && r.macros.p}`).join("|")).join("#");
+  for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0).toString(16).padStart(8, "0");
+};
+function applyEdits(plan, edits) {
+  (edits || "").split(";").map((x) => x.trim()).filter(Boolean).forEach((spec) => {
+    const [kind, a, b, c] = spec.split(":");
+    if (kind === "mode") plan.mode = a === "batch" ? "batch" : "fresh";
+    else if (kind === "away") plan.away = [...new Set([...(plan.away || []), a])];
+    else if (kind === "back") plan.away = (plan.away || []).filter((d) => d !== a);
+    else if (kind === "reroll") {
+      const i = Math.round((parseIso(a) - parseIso(plan.start)) / 86400000);
+      if (!(i >= 0 && i < plan.days.length) || !MEALS.includes(b)) throw new Error(`bad edit: ${spec}`);
+      setRng(seeded(`${a}-${b}-${c || "1"}`));
+      const day = plan.days[i];
+      const banned = new Set([...mainsUsed(plan.days, b), ...idsOfDay(day, b)]);
+      const fresh = solveMeal(b, targetsFor(peopleOf(plan), b), banned);
+      if (fresh) plan.days[i] = { ...day, [b]: fresh };
+    } else throw new Error(`unknown edit: ${spec}`);
+  });
+  return plan;
+}
+// Everything that defines a plan: start, length, cooking mode, seed, edits and the recipe data. Same inputs always give the same plan.
+function buildPlan({ start, days, mode, seed, edits, ppl }) {
+  const end = isoDate(addDays(parseIso(start), days - 1));
+  setRng(seeded(seed || `${start}-${ppl.map((p) => p.name + p.gender + p.kg + p.activity).join("|")}`));
+  let plan;
+  const savedGender = gender, savedKg = bodyKg;
+  try {
+    if (ppl.length === 1) { gender = ppl[0].gender; bodyKg = ppl[0].kg; } // a one-person plan uses the page's own settings, so set them to this person's
+    plan = newPlan(null, ppl[0].activity, start, end, ppl.length === 2 ? ppl : null);
+  } finally { gender = savedGender; bodyKg = savedKg; }
+  if (ppl.length === 1) plan.people = undefined;
+  plan.pplCfg = ppl;
+  plan.mode = mode === "batch" ? "batch" : "fresh";
+  if (!validPlan(plan)) throw new Error("plan did not validate");
+  applyEdits(plan, edits);
+  plan.id = { start, days, mode: plan.mode, seed: seed || "auto", edits: edits || "none", data: dataHash() };
+  setRng(Math.random); // go back to ordinary random choices for anything done afterwards (rerolls on the page)
+  return plan;
+}
+const planIdLine = (plan) => `Plan ID: start=${plan.id.start} days=${plan.id.days} mode=${plan.id.mode} seed=${plan.id.seed} data=${plan.id.data} edits=${plan.id.edits}`;
+const parseIdLine = (line) => Object.fromEntries([...line.matchAll(/(\w+)=(\S+)/g)].map((m) => [m[1], m[2]]));
+
+// The short link in an email: a small code holding the plan's recipe (dates, mode, changes) and the people it is for.
+function encodeRecipe(plan, people) {
+  const j = JSON.stringify({ v: 2, i: plan.id, p: people });
+  return btoa(unescape(encodeURIComponent(j))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function decodeRecipe(code) {
+  try {
+    const b64 = code.replace(/-/g, "+").replace(/_/g, "/");
+    const o = JSON.parse(decodeURIComponent(escape(atob(b64 + "=".repeat((4 - (b64.length % 4)) % 4)))));
+    if (!o || o.v !== 2 || !o.i || !Array.isArray(o.p) || ![1, 2].includes(o.p.length)) return null;
+    const ppl = o.p.map(cleanPerson);
+    const plan = buildPlan({ start: o.i.start, days: Number(o.i.days), mode: o.i.mode, seed: o.i.seed === "auto" ? undefined : o.i.seed, edits: o.i.edits === "none" ? "" : o.i.edits, ppl });
+    return { plan, changed: plan.id.data !== o.i.data };
+  } catch (e) { return null; }
+}

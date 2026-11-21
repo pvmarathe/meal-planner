@@ -26,15 +26,8 @@ const args = {};
 process.argv.slice(3).forEach((a, i, all) => { if (a.startsWith("--")) args[a.slice(2)] = all[i + 1] && !all[i + 1].startsWith("--") ? all[i + 1] : "true"; });
 const cmd = process.argv[2];
 
-// A small seeded random generator, so the same seed always gives the same plan
-function seeded(text) {
-  let h = 1779033703 ^ text.length;
-  for (let i = 0; i < text.length; i++) { h = Math.imul(h ^ text.charCodeAt(i), 3432918353); h = (h << 13) | (h >>> 19); }
-  let a = (h ^= h >>> 16) >>> 0;
-  return () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
-}
 const readPlan = () => JSON.parse(fs.readFileSync(args["plan-file"], "utf8"));
-const planLink = (plan) => `${SITE}#share=${encodePlan(plan)}`;
+const planLink = (plan) => `${SITE}#plan=${encodeRecipe(plan, plan.pplCfg)}`; // short: dates, mode, changes and the people, not the whole plan
 const people = (plan) => peopleOf(plan);
 const who = (plan) => people(plan).map((p, k) => nameOf(p, k));
 const dishLine = (plan, it) => {
@@ -131,39 +124,6 @@ function nudges(plan, dateIso) {
 }
 
 
-const dataHash = () => require("crypto").createHash("sha1").update(fs.readFileSync(path.join(root, "data.js"))).digest("hex").slice(0, 8);
-function applyEdits(plan, edits) {
-  (edits || "").split(";").map((x) => x.trim()).filter(Boolean).forEach((spec) => {
-    const [kind, a, b, c] = spec.split(":");
-    if (kind === "mode") plan.mode = a === "batch" ? "batch" : "fresh";
-    else if (kind === "away") plan.away = [...new Set([...(plan.away || []), a])];
-    else if (kind === "back") plan.away = (plan.away || []).filter((d) => d !== a);
-    else if (kind === "reroll") {
-      const i = Math.round((parseIso(a) - parseIso(plan.start)) / 86400000);
-      if (!(i >= 0 && i < plan.days.length) || !MEALS.includes(b)) throw new Error(`bad edit: ${spec}`);
-      setRng(seeded(`${a}-${b}-${c || "1"}`));
-      const day = plan.days[i];
-      const banned = new Set([...mainsUsed(plan.days, b), ...idsOfDay(day, b)]);
-      const fresh = solveMeal(b, targetsFor(peopleOf(plan), b), banned);
-      if (fresh) plan.days[i] = { ...day, [b]: fresh };
-    } else throw new Error(`unknown edit: ${spec}`);
-  });
-  return plan;
-}
-// Everything that defines a plan: start, length, cooking mode, seed, edits and the recipe data. Same inputs always give the same plan.
-function buildPlan({ start, days, mode, seed, edits, ppl }) {
-  const end = isoDate(addDays(parseIso(start), days - 1));
-  setRng(seeded(seed || `${start}-${ppl.map((p) => p.name + p.gender + p.kg + p.activity).join("|")}`));
-  const plan = newPlan(null, ppl[0].activity, start, end, ppl.length === 2 ? ppl : null);
-  if (ppl.length === 1) plan.people = undefined;
-  plan.mode = mode === "batch" ? "batch" : "fresh";
-  if (!validPlan(plan)) throw new Error("plan did not validate");
-  applyEdits(plan, edits);
-  plan.id = { start, days, mode: plan.mode, seed: seed || "auto", edits: edits || "none", data: dataHash() };
-  return plan;
-}
-const planIdLine = (plan) => `Plan ID: start=${plan.id.start} days=${plan.id.days} mode=${plan.id.mode} seed=${plan.id.seed} data=${plan.id.data} edits=${plan.id.edits}`;
-const parseIdLine = (line) => Object.fromEntries([...line.matchAll(/(\w+)=(\S+)/g)].map((m) => [m[1], m[2]]));
 
 if (cmd === "plan") {
   const today = parseIso(args.today || isoDate(new Date()));

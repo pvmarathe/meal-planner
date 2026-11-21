@@ -39,7 +39,18 @@ function plannerSectionEl() {
   const store = loadStore();
   const plans = store.plans;
   let importedMsg = "";
-  if (location.hash.startsWith("#share=")) { // someone sent a plan link
+  if (location.hash.startsWith("#plan=")) { // an emailed link: rebuild the plan from its short recipe
+    const rebuilt = decodeRecipe(location.hash.slice(6));
+    if (rebuilt) {
+      const shared = rebuilt.plan;
+      delete shared.pplCfg; delete shared.id; // not needed once it is saved here
+      plans[rangeKey(shared.start, shared.end)] = shared;
+      store.last = rangeKey(shared.start, shared.end);
+      saveStore(plans, store.last);
+      importedMsg = `Opened the emailed plan for ${rangeLabel(shared)}.${rebuilt.changed ? " The recipes have changed since it was made, so some dishes may differ from the email." : ""}`;
+    } else importedMsg = "That plan link could not be read.";
+    history.replaceState(null, "", location.pathname + location.search);
+  } else if (location.hash.startsWith("#share=")) { // someone sent a plan link
     const shared = decodePlan(location.hash.slice(7));
     if (shared) {
       plans[rangeKey(shared.start, shared.end)] = shared;
