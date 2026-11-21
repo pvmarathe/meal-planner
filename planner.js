@@ -101,7 +101,7 @@ function plannerSectionEl() {
     const msg = problem(s, e);
     rangeMsg.textContent = msg || rangeSummary(s, e);
     rangeMsg.className = msg ? "range-msg problem" : "range-msg";
-    if (msg) { plan = null; body.replaceChildren(); return; }
+    if (msg) { const had = !!plan; plan = null; if (had) render(); return; }
     range = { start: s, end: e };
     plan = plans[planKey()] || null;
     if (plan) { activity = plan.activity; saveStore(plans, planKey()); }
@@ -132,9 +132,9 @@ function plannerSectionEl() {
 
   section.append(
     h("h2", { id: "plan-heading", class: "visually-hidden", text: "Plan my meals" }),
-    picker,
     body,
   );
+  let step = 0; // which card of the step-by-step form is showing
 
   function update(next) {
     plan = next;
@@ -322,23 +322,53 @@ function plannerSectionEl() {
     );
   }
 
+  // The step-by-step form shown before a plan exists: one question per card.
+  function wizard() {
+    const STEPS = ["Who", "About you", "Dates", "Ready"];
+    const last = STEPS.length - 1;
+    const people = two.on ? two.people : [cleanPerson({ gender, kg: bodyKg, activity })];
+    const setMode = (on) => {
+      two.on = on;
+      if (on) two.people[0] = cleanPerson({ ...two.people[0], gender, kg: bodyKg, activity });
+      saveTwo(); render();
+    };
+    const choice = (id, icon, title, text, on) => h("button", { id, type: "button", class: `wiz-choice${two.on === on ? " picked" : ""}`, "aria-pressed": String(two.on === on), onclick: () => setMode(on) },
+      h("span", { class: "wiz-icon", text: icon }), h("strong", { text: title }), h("span", { text }));
+    let card;
+    if (step === 0) {
+      card = [h("h3", { text: "Who is this plan for?" }), h("p", { class: "wiz-hint", text: "Two people can eat the same dishes in one pot, each with their own portion size." }),
+        h("div", { class: "wiz-choices" }, choice("plan-for-one", "🙂", "Just me", "One person's targets", false), choice("plan-for-two", "👫", "Me and my partner", "One pot, two portions", true))];
+    } else if (step === 1) {
+      card = two.on
+        ? [h("h3", { text: "About the two of you" }), h("p", { class: "wiz-hint", text: "Weight and activity set how much each of you eats. Leave weight blank for a standard adult." }), peoplePanel()]
+        : [h("h3", { text: "About you" }), h("p", { class: "wiz-hint", text: "Weight and activity set your daily calories. Leave weight blank for a standard adult." }), h("div", { class: "wiz-fields" }, genderPicker(), weightPicker(), activityPicker())];
+    } else if (step === 2) {
+      card = [h("h3", { text: "Which days?" }), h("p", { class: "wiz-hint", text: "Pick the days you want meals for, or use a quick pick." }), picker];
+    } else {
+      card = [h("h3", { text: "Ready to plan" }),
+        h("ul", { class: "wiz-summary" },
+          h("li", {}, h("strong", { text: "For: " }), two.on ? people.map((q, k) => nameOf(q, k)).join(" and ") + " (one pot)" : "Just me"),
+          h("li", {}, h("strong", { text: "Days: " }), `${rangeLabel(range)} (${dayCount(range.start, range.end)} day${dayCount(range.start, range.end) === 1 ? "" : "s"})`)),
+        targetsBox(people),
+        h("button", { id: "plan-pick", class: "btn primary big", type: "button", onclick: () => update(newPlan(null, activity, range.start, range.end, two.on ? copyPeople() : null)), text: "Pick my meals" })];
+    }
+    const back = step > 0 ? h("button", { id: "wiz-back", class: "btn", type: "button", text: "Back", onclick: () => { step--; render(); } }) : h("span");
+    const next = step < last ? h("button", { id: "wiz-next", class: "btn primary", type: "button", text: "Next", onclick: () => {
+      if (step === 2 && problem(startInput.value, endInput.value)) { rangeMsg.focus(); return; }
+      step++; render();
+    } }) : h("span");
+    return h("div", { class: "wizard" },
+      h("ol", { class: "wiz-steps", "aria-label": "Steps" }, STEPS.map((t, i) => h("li", { class: i === step ? "current" : i < step ? "done" : "", "aria-current": i === step ? "step" : null }, h("span", { class: "wiz-dot", text: i < step ? "✓" : String(i + 1) }), h("span", { class: "wiz-name", text: t })))),
+      h("div", { class: "wiz-card" }, ...card, h("div", { class: "wiz-nav" }, back, next)));
+  }
+
   function render() {
     body.replaceChildren();
     const n = daysBetween(range.start, range.end);
     if (plan) { two.on = !!plan.people; if (plan.people) two.people = plan.people.map(cleanPerson); } // show what this plan was made for
 
-    if (!plan) {
-      const people = two.on ? two.people : [cleanPerson({ gender, kg: bodyKg, activity })];
-      body.append(
-        h("div", { class: "plan-empty" },
-          h("div", { class: "plan-controls" }, modePicker(), ...(two.on ? [] : [genderPicker(), weightPicker(), activityPicker()])),
-          two.on ? peoplePanel() : null,
-          h("button", { id: "plan-pick", class: "btn primary", type: "button", onclick: () => update(newPlan(null, activity, range.start, range.end, two.on ? copyPeople() : null)), text: "Pick my meals" }),
-          targetsBox(people),
-        ),
-      );
-      return;
-    }
+    if (!plan) { body.append(wizard()); return; }
+    section.insertBefore(picker, body); // with a plan on screen the date picker sits on top
 
     const first = parseIso(plan.start);
     const people = peopleOf(plan);
@@ -377,11 +407,11 @@ function plannerSectionEl() {
     body.append(
       h("p", { class: "plan-week", text: `Planning ${rangeLabel(plan)} (${days} day${days === 1 ? "" : "s"})` }),
       h("div", { class: "plan-toolbar" },
-        modePicker(),
-        ...(two_ ? [] : [genderPicker(), weightPicker(), activityPicker()]),
         h("button", { id: "plan-again", class: "btn primary", type: "button", onclick: () => update(newPlan(plan, plan.activity)), text: "Pick again (keeps meals marked Keep)" }),
       ),
-      two_ ? peoplePanel() : null,
+      h("details", { class: "settings-fold" }, h("summary", { text: "Change settings (who it is for, weight, activity)" }),
+        h("div", { class: "plan-toolbar" }, modePicker(), ...(two_ ? [] : [genderPicker(), weightPicker(), activityPicker()])),
+        two_ ? peoplePanel() : null),
       h("div", { class: "plan-minor" },
         h("button", { id: "share-plan", class: "btn small", type: "button", text: "Copy link to share this plan", onclick: () => {
           const url = location.origin === "null" || location.protocol === "file:" ? `${location.href.split("#")[0]}#share=${encodePlan(plan)}` : `${location.origin}${location.pathname}#share=${encodePlan(plan)}`;
