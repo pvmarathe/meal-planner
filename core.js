@@ -419,7 +419,7 @@ function decodeRecipe(code) {
 // Names only, each ingredient once: every recipe's ingredient lines are reduced to the plain ingredient name
 // ("2 tbsp onion, finely chopped" and "onions" both become "onion"), then listed under a category.
 const isAway = (plan, i) => (plan.away || []).includes(isoDate(addDays(parseIso(plan.start), i)));
-const SHOP_UNITS = new Set(["cup", "cups", "tbsp", "tablespoon", "tablespoons", "tsp", "teaspoon", "teaspoons", "g", "gm", "gram", "grams", "kg", "ml", "l", "litre", "liter", "oz", "lb", "inch", "inches", "clove", "cloves", "pinch", "sprig", "sprigs", "slice", "slices", "can", "glass", "bunch", "bowl", "piece", "pieces", "handful", "stalk", "stalks", "stick", "sticks", "pod", "pods", "pack", "packet", "cob", "cobs", "small", "medium", "large", "big", "few", "some"]);
+const SHOP_UNITS = new Set(["cup", "cups", "tbsp", "tablespoon", "tablespoons", "tsp", "teaspoon", "teaspoons", "g", "gm", "gram", "grams", "kg", "ml", "l", "litre", "liter", "oz", "lb", "inch", "inches", "clove", "cloves", "pinch", "sprig", "sprigs", "slice", "slices", "can", "glass", "bunch", "bowl", "piece", "pieces", "handful", "stalk", "stalks", "stick", "sticks", "pod", "pods", "pack", "packet", "cob", "cobs", "small", "medium", "large", "big", "few", "some", "heaped", "level", "scant", "rounded", "generous"]);
 const SHOP_DROP = /\b(finely|roughly|freshly|thinly|coarsely|chopped|sliced|grated|crushed|ground|boiled|cooked|soaked|fresh|dry|dried|raw|optional|ripe|frozen|canned|whole|peeled|diced|minced|roasted|toasted|packed|powdered|shredded|cubed|halved|uncooked|washed|rinsed|drained|soft|hot|warm|cold|extra|good|quality|homemade|ready-made|pitted|deseeded|seedless)\b/g;
 const SHOP_SYN = {
   "cilantro leaf": "cilantro", "coriander leaf": "cilantro", "coriander": "cilantro", "green coriander": "cilantro", "coriander stem": "cilantro", "cilantro stem": "cilantro", "fresh coriander": "cilantro",
@@ -474,8 +474,14 @@ function shopName(text) {
   let t = String(text).toLowerCase().replace(/\(.*?\)/g, " ").replace(/[’']/g, "'");
   t = t.replace(/,.*$/, "").replace(/\b(to taste|to garnish|for [a-z ]+|as needed|as required|optional)\b.*$/, "").replace(/\s+/g, " ").trim();
   for (let n = 0; n < 4; n++) t = t.replace(/^(a few|a pinch of|a handful of|a little|a bit of|a mix of|half an?|juice of|zest of|few|some|pinch of|and|pounded|mixed|a|an)\s+/, "");
-  t = t.replace(/^[\d¼½¾⅓⅔⅛⅜⅝⅞.\/\s–-]+/, "").replace(/^(to|or)\s+/, "");
-  t = t.replace(/\s+or\s+.*$/, ""); // "oil or ghee": the first one
+  // drop amounts and unit words from the front, however they are chained ("½ cup + 2 tbsp", "½ to 1 tsp", "1 heaped tbsp")
+  for (let prev = ""; prev !== t;) {
+    prev = t;
+    t = t.replace(/^[\d¼½¾⅓⅔⅛⅜⅝⅞.\/\s–+-]+/, "").replace(/^(to|or|and)\s+/, "");
+    const w = t.split(" ");
+    if (w.length > 1 && SHOP_UNITS.has(w[0])) t = w.slice(1).join(" ");
+  }
+  t = t.replace(/\s+\d+$/, "").replace(/\s+or\s+.*$/, ""); // a trailing number, and "oil or ghee": the first one
   const names = t.split(/\s+and\s+/).map((part) => shopOne(part.trim())).filter(Boolean);
   return names.flatMap((n) => (SHOP_SPLIT[n] ? SHOP_SPLIT[n] : [n]));
 }
