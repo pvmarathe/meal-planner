@@ -87,7 +87,7 @@ function buildReminders(plan, settings, now = new Date()) {
   while (d.getDay() !== settings.planDay || evening(d) <= now) d = addDays(d, 1);
   events.push({
     uid: "plan-next-week", start: evening(d), rrule: `FREQ=WEEKLY;BYDAY=${RRULE_DAYS[settings.planDay]}`, summary: "Plan next week's meals",
-    lines: ["Open the meal planner on your laptop, choose your dates and pick your meals.", `You shop on ${WEEKDAY_NAMES[settings.shopDay]}, so plan before then.`,
+    lines: ["Open PlanMate on your laptop, choose your dates and pick your meals.", `You shop on ${WEEKDAY_NAMES[settings.shopDay]}, so plan before then.`,
       "Choose batch cook or cook fresh, then download the new reminders and import them into Google Calendar."],
   });
 

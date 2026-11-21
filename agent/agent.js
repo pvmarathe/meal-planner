@@ -68,7 +68,7 @@ const pill = (t, warm) => `<span class="p${warm === true ? " pw" : warm ? " " + 
 const card = (inner, cls) => `<div class="c${cls ? " " + cls : ""}">${inner}</div>`;
 const button = (href, text) => `<a class="b" href="${esc(href)}">${esc(text)}</a>`;
 const planIdBlock = (plan) => `<div class="id">${esc(planIdLine(plan))}</div>`;
-const shell = (title, sub, bodyHtml) => `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${MEDIA}</style></head><body style="margin:0;background:#fbf8f2"><div class="w"><div class="hd"><div class="ey">MEAL PLANNER</div><div class="t">${esc(title)}</div><div class="g">${esc(sub)}${args.font ? esc(" · Font style: " + FONT_NAME) : ""}</div></div>${bodyHtml}</div></body></html>`;
+const shell = (title, sub, bodyHtml) => `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${MEDIA}</style></head><body style="margin:0;background:#fbf8f2"><div class="w"><div class="hd"><div class="ey">PLANMATE</div><div class="t">${esc(title)}</div><div class="g">${esc(sub)}${args.font ? esc(" · Font style: " + FONT_NAME) : ""}</div></div>${bodyHtml}</div></body></html>`;
 // Some mail apps (the Gmail phone app among them) ignore a style block, so every class is turned into inline styles
 const CLASS_STYLES = Object.fromEntries([...CSS.matchAll(/\.([a-z]+)\{([^}]*)\}/g)].map((m) => [m[1], m[2].replace(/!important/g, "")]));
 function inlineStyles(html) {
