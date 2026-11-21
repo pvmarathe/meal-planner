@@ -136,8 +136,7 @@ function shoppingBox(title, items, c) {
 function shoppingHtml(plan) {
   const sl = shoppingList(plan);
   const groups = sl.groups.map((g) => shoppingBox(g.title, g.items, SHOP_STYLE[g.title] || SHOP_STYLE["Oils, sauces and other"])).join("");
-  const extra = sl.extras.length ? shoppingBox("Also (no amount in the recipes)", [sl.extras.join(", ")], { bg: "#f1ece0", bd: "#cfc5ae", fg: "#6c5f3d", icon: "📝" }) : "";
-  const body = card(`<div>One combined list for the ${sl.dishes} dishes in the plan. Amounts are scaled to the servings you will eat and rounded up. Check your pantry first.</div><div style="margin-top:10px">${button(planLink(plan), "Open the full recipe lists")}</div>`, "cs") + groups + extra;
+  const body = card(`<div>One list for the ${sl.dishes} dishes in the plan, with every ingredient listed once. Check your pantry first.</div><div style="margin-top:10px">${button(planLink(plan), "Open the recipe lists with amounts")}</div>`, "cs") + groups;
   return emailHtml(`Shopping day: ingredients for ${rangeLabel(plan)}`, shell("Shopping day", rangeLabel(plan), body));
 }
 // A nudge built from the website's reminder lines: sprouts line, "Tomorrow" menu, prep tips
@@ -192,10 +191,9 @@ function weeklyEmail(plan, opts) {
 
 function shoppingEmail(plan) {
   const sl = shoppingList(plan);
-  const out = [`Shopping day for ${rangeLabel(plan)}. This is one combined list for the ${sl.dishes} dishes in the plan, with amounts scaled to the servings you will eat and rounded up. Check your pantry first.`, ""];
+  const out = [`Shopping day for ${rangeLabel(plan)}. One list for the ${sl.dishes} dishes in the plan, with every ingredient listed once. Check your pantry first.`, ""];
   sl.groups.forEach((g) => { out.push(g.title.toUpperCase()); g.items.forEach((t) => out.push(`  [ ] ${t}`)); out.push(""); });
-  if (sl.extras.length) out.push("ALSO (no amount in the recipes, use to taste or as needed)", `  ${sl.extras.join(", ")}`, "");
-  out.push(`The full recipe-by-recipe lists, with tick boxes: ${planLink(plan)}`);
+  out.push(`The full recipe-by-recipe lists with amounts: ${planLink(plan)}`);
   return email(`Shopping day: ingredients for ${rangeLabel(plan)}`, out.join("\n"));
 }
 

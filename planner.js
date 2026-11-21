@@ -422,13 +422,12 @@ function plannerSectionEl() {
           saveStore(plans, planKey());
         },
       }), ` ${text}`));
-    shopping.append(h("p", { class: "shopping-note", text: `One combined list for the ${sl.dishes} dishes in this plan. Amounts are scaled to the servings you will eat and rounded up, so check your pantry first.` }));
+    shopping.append(h("p", { class: "shopping-note", text: `One list for the ${sl.dishes} dishes in this plan, with every ingredient listed once. Amounts are in the full recipe lists below. Check your pantry first.` }));
     const cats = h("div", { class: "shop-cats" });
     sl.groups.forEach((g) => {
       const c = CAT[g.title] || CAT["Oils, sauces and other"];
       cats.append(h("section", { class: `shop-cat ${c.cls}` }, h("h3", { text: `${c.icon} ${g.title}` }), h("ul", { class: "shop-items" }, g.items.map(itemRow))));
     });
-    if (sl.extras.length) cats.append(h("section", { class: "shop-cat cat-extra" }, h("h3", { text: "📝 Also (no amount in the recipes)" }), h("p", { class: "shop-extra", text: sl.extras.join(", ") })));
     shopping.append(cats);
 
     const full = h("details", { class: "shopping-full" }, h("summary", { text: "Full recipe-by-recipe lists" }),

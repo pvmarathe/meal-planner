@@ -416,84 +416,85 @@ function decodeRecipe(code) {
 }
 
 // ----- the combined shopping list (shared by the website and the email agent) -----
+// Names only, each ingredient once: every recipe's ingredient lines are reduced to the plain ingredient name
+// ("2 tbsp onion, finely chopped" and "onions" both become "onion"), then listed under a category.
 const isAway = (plan, i) => (plan.away || []).includes(isoDate(addDays(parseIso(plan.start), i)));
-// ----- one combined shopping list: every recipe's ingredient lines, scaled to the servings this week uses, then added up -----
-const FRAC = { "¼": 0.25, "½": 0.5, "¾": 0.75, "⅓": 1 / 3, "⅔": 2 / 3, "⅛": 0.125, "⅜": 0.375, "⅝": 0.625, "⅞": 0.875 };
-const UNITS = { cup: "cup", cups: "cup", tbsp: "tbsp", tablespoon: "tbsp", tablespoons: "tbsp", tsp: "tsp", teaspoon: "tsp", teaspoons: "tsp", g: "g", gm: "g", gram: "g", grams: "g", kg: "kg", ml: "ml", l: "l", litre: "l", liter: "l", oz: "oz", lb: "lb", inch: "inch", inches: "inch", clove: "clove", cloves: "clove", pinch: "pinch", sprig: "sprig", sprigs: "sprig", slice: "slice", slices: "slice", can: "can", glass: "glass", bunch: "bunch" };
-const TSP = { tsp: 1, tbsp: 3, cup: 48 };
-function parseQty(str) {
-  let m = str.match(/^\s*((?:\d+\s*)?(?:\d+\/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])|\d+(?:\.\d+)?)(?:\s*[-–to]+\s*((?:\d+\s*)?(?:\d+\/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])|\d+(?:\.\d+)?))?\s*(.*)$/i);
-  if (!m) return null;
-  const val = (t) => {
-    t = t.trim(); let tot = 0;
-    t.split(/\s+/).forEach((part) => { if (/^\d+\/\d+$/.test(part)) { const [a, b] = part.split("/"); tot += a / b; } else if (/^\d+(\.\d+)?$/.test(part)) tot += Number(part); else { for (const ch of part) { if (FRAC[ch]) tot += FRAC[ch]; else if (/\d/.test(ch)) tot += Number(ch); } } });
-    return tot;
-  };
-  let q = val(m[2] || m[1]); // a range like 3-4 takes the larger number
-  if (m[1] && /^\d+[¼½¾⅓⅔⅛⅜⅝⅞]$/.test(m[1].replace(/\s/g, ""))) q = val(m[2] || m[1]);
-  return { qty: q, rest: m[3] };
+const SHOP_UNITS = new Set(["cup", "cups", "tbsp", "tablespoon", "tablespoons", "tsp", "teaspoon", "teaspoons", "g", "gm", "gram", "grams", "kg", "ml", "l", "litre", "liter", "oz", "lb", "inch", "inches", "clove", "cloves", "pinch", "sprig", "sprigs", "slice", "slices", "can", "glass", "bunch", "bowl", "piece", "pieces", "handful", "stalk", "stalks", "stick", "sticks", "pod", "pods", "pack", "packet", "cob", "cobs", "small", "medium", "large", "big", "few", "some"]);
+const SHOP_DROP = /\b(finely|roughly|freshly|thinly|coarsely|chopped|sliced|grated|crushed|ground|boiled|cooked|soaked|fresh|dry|dried|raw|optional|ripe|frozen|canned|whole|peeled|diced|minced|roasted|toasted|packed|powdered|shredded|cubed|halved|uncooked|washed|rinsed|drained|soft|hot|warm|cold|extra|good|quality|homemade|ready-made|pitted|deseeded|seedless)\b/g;
+const SHOP_SYN = {
+  "cilantro leaf": "cilantro", "coriander leaf": "cilantro", "coriander": "cilantro", "green coriander": "cilantro", "coriander stem": "cilantro", "cilantro stem": "cilantro", "fresh coriander": "cilantro",
+  "coriander powder": "coriander seeds or powder", "coriander seed": "coriander seeds or powder", "dhania powder": "coriander seeds or powder", "dhania": "coriander seeds or powder",
+  "cumin seed": "cumin", "cumin powder": "cumin", "jeera": "cumin", "jeera powder": "cumin", "jeera seed": "cumin", "ground cumin": "cumin",
+  "turmeric powder": "turmeric", "haldi": "turmeric", "pepper": "black pepper", "pepper powder": "black pepper", "black pepper powder": "black pepper", "pepper mix": "black pepper",
+  "red chilli powder": "red chilli powder", "kashmiri red chilli powder": "red chilli powder", "chilli powder": "red chilli powder", "kashmiri chilli powder": "red chilli powder", "kashmiri red chilli": "red chilli powder",
+  "chilli": "green chilli", "chili": "green chilli", "green chili": "green chilli", "chilli pepper": "green chilli", "dried red chilli": "red chilli",
+  "garam masala powder": "garam masala", "hing": "hing (asafoetida)", "asafoetida": "hing (asafoetida)", "pinch of hing": "hing (asafoetida)",
+  "pea": "green peas", "peas": "green peas", "green pea": "green peas", "frozen pea": "green peas", "frozen green peas": "green peas",
+  "oil": "cooking oil", "refined oil": "cooking oil", "vegetable oil": "cooking oil", "neutral oil": "cooking oil", "sunflower oil": "cooking oil", "canola oil": "cooking oil", "virgin olive oil": "olive oil", "extra virgin olive oil": "olive oil",
+  "sweet corn": "corn", "corn kernel": "corn", "corn kernels": "corn", "baby corn": "corn",
+  "gram flour": "besan", "bajra atta": "bajra flour", "jowar atta": "jowar flour", "ragi atta": "ragi flour", "wheat flour": "whole wheat flour", "atta": "whole wheat flour",
+  "curd": "yogurt", "dahi": "yogurt", "yoghurt": "yogurt", "greek yogurt": "yogurt", "plain yogurt": "yogurt",
+  "palak": "spinach", "spinach palak": "spinach", "baby spinach": "spinach", "moong sprout": "sprouted moong", "sprout": "sprouted moong", "kasoori methi": "kasuri methi",
+  "red onion": "onion", "scallion": "spring onion", "green onion": "spring onion",
+  "capsicum": "bell pepper", "red capsicum": "bell pepper", "green capsicum": "bell pepper", "yellow capsicum": "bell pepper", "red bell pepper": "bell pepper", "yellow bell pepper": "bell pepper", "green bell pepper": "bell pepper",
+  "chickpea": "chickpeas", "salt": "salt", "kosher salt": "salt", "sea salt": "salt", "rock salt": "salt", "black salt": "kala namak",
+  "lime juice": "lime", "lemon juice": "lemon", "lemon zest": "lemon", "lime zest": "lime", "garlic clove": "garlic", "clove garlic": "garlic",
+  "green apple": "apple", "purple cabbage": "red cabbage", "lettuce leaf": "lettuce", "bay leaf": "bay leaf", "mixed herb": "mixed herbs", "medjool date": "dates", "date": "dates", "peanut": "peanuts", "sesame": "sesame seeds",
+  "tamarind juice": "tamarind", "tamarind pulp": "tamarind", "tamarind paste": "tamarind", "spoon sugar": "sugar", "cube processed cheese": "processed cheese", "cubes processed cheese": "processed cheese", "crumbled paneer": "paneer", "paneer cube": "paneer",
+  "cinnamon stick": "cinnamon", "bay leaves": "bay leaf", "cilantro leaves": "cilantro", "coriander leaves": "cilantro", "green coriander leaves": "cilantro", "cumin seeds": "cumin", "jeera seeds": "cumin", "pounded cumin seeds": "cumin", "coriander seeds": "coriander seeds or powder", "fennel seeds": "fennel", "saunf": "fennel", "carom seeds": "ajwain", "moong sprouts": "sprouted moong", "red pepper": "chilli flakes", "red pepper flakes": "chilli flakes", "kidney beans": "kidney beans (rajma)", "rajma": "kidney beans (rajma)", "white quinoa": "quinoa", "mustard seeds": "mustard seeds", "turmeric": "turmeric", "cinnamon powder": "cinnamon", "clove": "cloves", "flax": "flax seeds", "mix of flax": "flax seeds", "ginger paste": "ginger", "garlic paste": "garlic", "ginger-chilli paste": "ginger and green chilli", "ginger chilli paste": "ginger and green chilli",
+};
+const SHOP_KEEP_PLURAL = new Set(["peas", "beans", "lentils", "oats", "chickpeas", "noodles", "greens", "leaves", "seeds", "flakes", "crumbs", "kernels", "sprouts", "nuts", "cashews", "grapes", "berries", "molasses", "hummus", "couscous", "asparagus", "swiss", "citrus", "bhindi"]);
+const SHOP_SPLIT = { "ginger and green chilli": ["ginger", "green chilli"] };
+const SHOP_SKIP = /^(water|ice|ice cubes?|salt and pepper|a pinch|as needed|to taste|oil for [a-z ]+)$/;
+function shopSingular(word) {
+  if (SHOP_KEEP_PLURAL.has(word) || word.length < 4) return word;
+  if (/(chill|chil)ies$/.test(word)) return word.replace(/ies$/, "i");
+  if (/ies$/.test(word)) return word.replace(/ies$/, "y");
+  if (/(tomato|potato|mango|avocado)es$/.test(word)) return word.slice(0, -2);
+  if (/(ss|us|is)$/.test(word)) return word;
+  if (/s$/.test(word)) return word.slice(0, -1);
+  return word;
 }
-function parseIngredient(text) {
-  const raw = String(text).replace(/\(.*?\)/g, " ").replace(/\s+/g, " ").trim();
-  const pq = parseQty(raw);
-  if (!pq || !(pq.qty > 0)) return { name: raw.toLowerCase().replace(/,.*$/, "").replace(/\b(to taste|for [a-z ]+)\b/g, "").trim(), qty: 0, unit: "" };
-  let rest = pq.rest, unit = "";
-  const w = rest.split(" ")[0].toLowerCase().replace(/\.$/, "");
-  if (UNITS[w]) { unit = UNITS[w]; rest = rest.slice(w.length).trim(); }
-  rest = rest.replace(/^of\s+/i, "");
-  const name = rest.toLowerCase().replace(/,.*$/, "").replace(/\b(finely|roughly|freshly|thinly|chopped|sliced|grated|crushed|ground|boiled|cooked|soaked|fresh|dry|dried|raw|optional|to taste|for [a-z ]+)\b/g, "").replace(/\s+/g, " ").trim();
-  return { name: tidyName(name || rest.toLowerCase()), qty: pq.qty, unit };
+function shopOne(t) {
+  let words = t.split(" ").filter(Boolean);
+  while (words.length > 1 && SHOP_UNITS.has(words[0].replace(/\.$/, ""))) words.shift();
+  if (words[0] === "of") words.shift();
+  t = words.join(" ").replace(SHOP_DROP, " ").replace(/\s+/g, " ").trim();
+  t = t.replace(/\b(garlic) (cloves?)\b/, "$1").replace(/\b(cloves?) (garlic)\b/, "$2").replace(/\b(corn) (cobs?)\b/, "$1").replace(/\b(lettuce) (leaves|leaf)\b/, "$1");
+  words = t.split(" ").filter(Boolean);
+  if (!words.length) return "";
+  words[words.length - 1] = shopSingular(words[words.length - 1]);
+  t = words.join(" ");
+  t = SHOP_SYN[t] || t;
+  t = SHOP_SYN[t] || t;
+  return SHOP_SKIP.test(t) ? "" : t;
 }
-function tidyName(n) {
-  n = n.replace(/\s+/g, " ").trim();
-  const SYN = { "cilantro leaves": "cilantro", "coriander leaves": "cilantro", "curry leaves": "curry leaves", "gram flour": "besan", "bajra atta": "bajra flour", "jowar atta": "jowar flour", "ragi atta": "ragi flour", "wheat flour": "whole wheat flour", "atta": "whole wheat flour", "curd": "yogurt", "dahi": "yogurt", "green chilies": "green chilli", "green chillies": "green chilli", "green chili": "green chilli", "chillies": "chilli", "chilies": "chilli", "red onion": "onion", "onions": "onion", "tomatoes": "tomato", "potatoes": "potato", "cucumbers": "cucumber", "carrots": "carrot", "lemons": "lemon", "limes": "lime", "apples": "apple", "avocados": "avocado", "beetroots": "beetroot", "peas": "green peas", "frozen green peas": "green peas", "moong sprouts": "sprouted moong", "sprouts": "sprouted moong", "palak": "spinach (palak)", "spinach": "spinach (palak)" };
-  n = SYN[n] || n;
-  return n.replace(/^(small|medium|large)\s+/, "");
+// One ingredient line can give zero, one or two names ("coriander and green chilli" gives two).
+function shopName(text) {
+  let t = String(text).toLowerCase().replace(/\(.*?\)/g, " ").replace(/[’']/g, "'");
+  t = t.replace(/,.*$/, "").replace(/\b(to taste|to garnish|for [a-z ]+|as needed|as required|optional)\b.*$/, "").replace(/\s+/g, " ").trim();
+  for (let n = 0; n < 4; n++) t = t.replace(/^(a few|a pinch of|a handful of|a little|a bit of|a mix of|half an?|juice of|zest of|few|some|pinch of|and|pounded|mixed|a|an)\s+/, "");
+  t = t.replace(/^[\d¼½¾⅓⅔⅛⅜⅝⅞.\/\s–-]+/, "").replace(/^(to|or)\s+/, "");
+  t = t.replace(/\s+or\s+.*$/, ""); // "oil or ghee": the first one
+  const names = t.split(/\s+and\s+/).map((part) => shopOne(part.trim())).filter(Boolean);
+  return names.flatMap((n) => (SHOP_SPLIT[n] ? SHOP_SPLIT[n] : [n]));
 }
-const CATS = [
-  ["Oils, sauces and other", /\boil\b|vinegar|sauce|sugar|jaggery|honey|syrup|baking|yeast|chutney|paste|ketchup|essence|coconut milk|nutritional/i],
-  ["Spices and seasonings", /salt|pepper|turmeric|powder|masala|cumin|jeera|mustard|hing|asafoetida|cardamom|cinnamon|\bclove\b|ajwain|carom|kasuri|fennel|saunf|garam|paprika|chaat|oregano|thyme|bay leaf|seeds?$|chilli flakes|amchur/i],
-  ["Dals, grains and flours", /dal\b|lentil|moong|chana|rajma|chickpea|rice|poha|oats|quinoa|millet|ragi|jowar|bajra|flour|besan|sattu|rava|sooji|semolina|bread|barley|bulgur|couscous|pasta|noodles|tortilla|pita|urad|toor|masoor|kala|sabudana|sago|dalia|beans/i],
-  ["Dairy and protein", /paneer|yogurt|milk|cheese|tofu|soya|soy chunks|ghee|butter|cream|hummus|tempeh/i],
-  ["Fresh produce", /onion|tomato|potato|carrot|cabbage|spinach|cucumber|ginger|garlic|chilli|cilantro|mint|curry leaves|lemon|lime|capsicum|bell pepper|peas|corn|beet|cauliflower|broccoli|mushroom|apple|banana|avocado|mango|orange|pomegranate|methi|fenugreek|radish|gourd|brinjal|eggplant|zucchini|celery|lettuce|scallion|pumpkin|okra|bhindi|drumstick|plantain|berries|dates|grapes|pineapple|papaya|green/i],
+const SHOP_CATS = [
+  ["Oils, sauces and other", /\boil\b|vinegar|sauce|sugar|jaggery|honey|syrup|baking|yeast|chutney|paste|ketchup|essence|coconut milk|nutritional|vanilla|cocoa|coffee|tea\b/],
+  ["Spices and seasonings", /salt|namak|(?<!bell )pepper$|turmeric|powder|masala|cumin|jeera|mustard|hing|asafoetida|cardamom|cinnamon|\bcloves?\b|ajwain|carom|kasuri|methi dana|fennel|saunf|garam|paprika|chaat|oregano|thyme|bay leaf|seeds?$|chilli flakes|amchur|saffron|nutmeg/],
+  ["Dals, grains and flours", /dal\b|lentil|moong|chana|rajma|chickpea|rice|poha|oats|quinoa|millet|ragi|jowar|bajra|flour|besan|sattu|rava|sooji|semolina|bread|barley|bulgur|couscous|pasta|noodles|tortilla|pita|urad|toor|masoor|kala|sabudana|sago|dalia|beans/],
+  ["Dairy and protein", /paneer|yogurt|milk|cheese|tofu|soya|soy chunks|ghee|butter|cream|hummus|tempeh|buttermilk/],
+  ["Fresh produce", /onion|dill|parsley|coconut|tomato|potato|carrot|cabbage|spinach|cucumber|ginger|garlic|chilli|cilantro|mint|curry leaf|curry leaves|lemon|lime|bell pepper|peas|corn|beet|cauliflower|broccoli|mushroom|apple|banana|avocado|mango|orange|pomegranate|methi|fenugreek|radish|gourd|brinjal|eggplant|zucchini|celery|lettuce|pumpkin|okra|bhindi|drumstick|plantain|berry|berries|dates|grape|pineapple|papaya|green|leaf|leaves|sprouted/],
 ];
-const catOf = (name) => { for (const [t, re] of CATS) if (re.test(name)) return t; return "Oils, sauces and other"; };
-function niceQty(q, unit) {
-  const step = unit === "" || unit === "clove" || unit === "can" || unit === "slice" || unit === "glass" ? 1 : unit === "g" || unit === "ml" ? 10 : unit === "cup" || unit === "tbsp" || unit === "tsp" ? 0.25 : 0.5;
-  const v = Math.ceil(q / step - 1e-9) * step;
-  const whole = Math.floor(v + 1e-9), frac = v - whole;
-  const FR = [[0.25, "¼"], [0.5, "½"], [0.75, "¾"]];
-  const f = (FR.find(([x]) => Math.abs(x - frac) < 1e-6) || [0, ""])[1];
-  return `${whole || ""}${f}` || "¼";
-}
+const shopCat = (name) => { for (const [t, re] of SHOP_CATS) if (re.test(name)) return t; return "Oils, sauces and other"; };
+const SHOP_ORDER = ["Fresh produce", "Dals, grains and flours", "Dairy and protein", "Spices and seasonings", "Oils, sauces and other"];
 function shoppingList(plan) {
   const planned = {};
-  plan.days.forEach((d, i) => { if (isAway(plan, i)) return; MEALS.forEach((m) => d[m].items.forEach(({ id, s, s2 }) => { planned[id] = (planned[id] || 0) + s + (plan.people ? s2 : 0); })); });
-  const bucket = {}; const noAmount = new Set();
-  Object.keys(planned).forEach((id) => {
-    const { r } = byId[id];
-    const factor = planned[id] / r.macros.servings;
-    flatLines(r).forEach((l) => {
-      const ing = parseIngredient(l.text);
-      if (!ing.name || ing.name.length < 2) return;
-      if (!ing.qty) { noAmount.add(ing.name); return; }
-      let unit = ing.unit, qty = ing.qty * factor;
-      if (TSP[unit]) { qty *= TSP[unit]; unit = "tsp"; } // add cups, tablespoons and teaspoons together
-      const key = `${ing.name}|${unit}`;
-      bucket[key] = bucket[key] || { name: ing.name, unit, qty: 0 };
-      bucket[key].qty += qty;
-    });
-  });
-  const showTsp = (q) => (q >= 24 ? `${niceQty(q / 48, "cup")} cup` : q >= 6 ? `${niceQty(q / 3, "tbsp")} tbsp` : `${niceQty(q, "tsp")} tsp`);
+  plan.days.forEach((d, i) => { if (isAway(plan, i)) return; MEALS.forEach((m) => d[m].items.forEach(({ id, s }) => { planned[id] = (planned[id] || 0) + s; })); });
+  const names = new Set();
+  Object.keys(planned).forEach((id) => flatLines(byId[id].r).forEach((l) => { shopName(l.text).forEach((n) => { if (n && n.length > 1) names.add(n); }); }));
   const groups = {};
-  Object.values(bucket).forEach((b) => {
-    const amount = b.unit === "tsp" ? showTsp(b.qty) : `${niceQty(b.qty, b.unit)}${b.unit ? " " + b.unit : ""}`;
-    const cat = catOf(b.name);
-    (groups[cat] = groups[cat] || []).push({ name: b.name, text: `${amount} ${b.name}` });
-  });
-  const order = ["Fresh produce", "Dals, grains and flours", "Dairy and protein", "Spices and seasonings", "Oils, sauces and other"];
-  const out = order.filter((c) => groups[c]).map((c) => ({ title: c, items: groups[c].sort((a, b) => a.name.localeCompare(b.name)).map((x) => x.text) }));
-  const extras = [...noAmount].filter((n) => !Object.values(bucket).some((b) => b.name === n)).sort();
-  return { groups: out, extras, dishes: Object.keys(planned).length };
+  [...names].forEach((n) => { (groups[shopCat(n)] = groups[shopCat(n)] || []).push(n); });
+  const cap = (n) => n.charAt(0).toUpperCase() + n.slice(1);
+  return { groups: SHOP_ORDER.filter((c) => groups[c]).map((c) => ({ title: c, items: groups[c].sort((a, b) => a.localeCompare(b)).map(cap) })), extras: [], dishes: Object.keys(planned).length };
 }
-
