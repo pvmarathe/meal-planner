@@ -4,7 +4,7 @@ Read this first. It tells a fresh session what this project is, how it is built,
 
 ## What this is
 
-A pure-vegetarian meal planner for two people who cook one pot, plus an email "accountability agent" that runs on a schedule. The owner is **not a developer**: explain things in plain words, and say what you changed and why. See `README.md` for the plain-language tour and a system diagram, and `how-it-works.html` for the science.
+PlanMate (tagline: plan, shop, cook together) is a pure-vegetarian meal planner for two people who cook one pot, plus an email "accountability agent" that runs on a schedule. The owner is **not a developer**: explain things in plain words, and say what you changed and why. See `README.md` for the plain-language tour and a system diagram, and `how-it-works.html` for the science.
 
 - **Website** (static files on GitHub Pages, no server, no build step): `index.html` (planner), `recipes.html` (recipe database), `how-it-works.html`.
 - **Planning brain:** `core.js`, shared by the website and the agent. It has no page code, so it also runs in Node.
