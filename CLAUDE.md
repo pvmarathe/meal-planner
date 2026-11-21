@@ -61,6 +61,7 @@ Traps already hit (do not repeat):
 - **The cloud agent copies the HTML by hand.** Keep emails compact (weekly plan about 30 KB, nothing above roughly 40 KB) and never ask it to retype long base64 links.
 - **The Gmail phone app ignores `<style>` blocks.** All styling is also written inline (`inlineStyles` in `agent.js`); the `<style>` block only holds a wide-screen `@media` rule for desktop sizes and equal-height meal columns. Meals are table cells (`bgcolor` plus inline background) so they colour as full rectangles.
 - Fonts: the owner chose **Verdana everywhere** (`--font readable`, the default). Gmail cannot load web fonts.
+- The Saturday shopping email also carries a PDF of the list. The tool marks it with an `ATTACH: pdf` header line (line 3); the sender then runs `agent.js pdf` and attaches the base64 as `content` (file references to the sandbox are rejected; tested). If the attachment fails it sends the email without it.
 - Dish names in emails link to the recipe video (or the recipe card on the site when there is no video). Gmail cannot play video inside an email.
 - Routines cannot be deleted through the API; the owner deletes them at the routines page. Cron times are UTC, so they shift an hour at daylight saving.
 

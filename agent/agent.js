@@ -83,7 +83,8 @@ function inlineStyles(html) {
     return `<${tag}${rest.replace(/\sstyle="[^"]*"/, "")}${keep ? ` class="${keep}"` : ""} style="${style}">`;
   });
 }
-const emailHtml = (subject, html) => `SUBJECT: ${subject}\nFORMAT: html\n\n${inlineStyles(html)}\n`;
+// attach = true adds a header line telling the sender to attach the shopping-list PDF (made with the pdf command).
+const emailHtml = (subject, html, attach) => `SUBJECT: ${subject}\nFORMAT: html\n${attach ? "ATTACH: pdf\n" : ""}\n${inlineStyles(html)}\n`;
 const nameLink = (id) => {
   const r = byId[id].r;
   const href = r.video || `${SITE}recipes.html#r-${id}`;
@@ -138,7 +139,7 @@ function shoppingHtml(plan) {
   const sl = shoppingList(plan);
   const groups = sl.groups.map((g) => shoppingBox(g.title, g.items, SHOP_STYLE[g.title] || SHOP_STYLE["Oils, sauces and other"])).join("");
   const body = card(`<div>One list for the ${sl.dishes} dishes in the plan, with every ingredient listed once. Check your pantry first.</div><div style="margin-top:10px">${button(planLink(plan), "Open the recipe lists with amounts")}</div>`, "cs") + groups;
-  return emailHtml(`Shopping day: ingredients for ${rangeLabel(plan)}`, shell("Shopping day", rangeLabel(plan), body));
+  return emailHtml(`Shopping day: ingredients for ${rangeLabel(plan)}`, shell("Shopping day", rangeLabel(plan), body), true);
 }
 // A nudge built from the website's reminder lines: sprouts line, "Tomorrow" menu, prep tips
 function nudgeHtml(plan, e, dateIso) {
