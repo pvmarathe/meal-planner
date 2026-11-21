@@ -9,7 +9,7 @@ function targetsBox(people) {
       return h("li", { text: `${nameOf(p, k)}: about ${kcal} kcal a day (${ACTIVITY[p.activity].label.toLowerCase()}). Protein ${grams(kcal, w.p[0], 4)} to ${grams(kcal, w.p[1], 4)} g, carbs ${grams(kcal, w.c[0], 4)} to ${grams(kcal, w.c[1], 4)} g, fat ${grams(kcal, w.f[0], 9)} to ${grams(kcal, w.f[1], 9)} g. ${p.kg ? `Scaled to ${p.kg} kg.` : `General levels for ${REFERENCE[p.gender].about}.`}` });
     });
     return h("details", { class: "targets" },
-      h("summary", { text: `Daily targets: ${people.map((p, k) => `${nameOf(p, k)} ${personKcal(p)} kcal`).join(" · ")}` }),
+      h("summary", { text: `🎯 Daily calorie and nutrition targets: ${people.map((p, k) => `${nameOf(p, k)} ${personKcal(p)} kcal`).join(" · ")}` }),
       h("p", { text: `Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of each person's calories. You cook one pot; each person's portions are worked out for their own target.` }),
       h("ul", {}, lines),
       h("p", { text: `Protein should be ${pct(w.p[0])} to ${pct(w.p[1])} of calories (ideally about ${pct(IDEAL.p)}), carbs ${pct(w.c[0])} to ${pct(w.c[1])} (about ${pct(IDEAL.c)}) and fat ${pct(w.f[0])} to ${pct(w.f[1])} (about ${pct(IDEAL.f)}). The Indian minimum protein allowance is about ${PROTEIN_RDA_G_PER_KG} g for every kg of body weight a day.` }),
@@ -20,7 +20,7 @@ function targetsBox(people) {
   const g = (share, per) => grams(kcal, share, per);
   const label = ACTIVITY[p.activity].label.toLowerCase();
   return h("details", { class: "targets" },
-    h("summary", { text: `My daily targets: about ${kcal} kcal (${label})` }),
+    h("summary", { text: `🎯 Daily calorie and nutrition targets: about ${kcal} kcal (${label})` }),
     h("p", {},
       h("strong", { text: `Daily target: about ${kcal} kcal` }),
       ` (${label}). Each day is split into breakfast ${pct(MEAL_SPLIT.breakfast)}, lunch ${pct(MEAL_SPLIT.lunch)} and dinner ${pct(MEAL_SPLIT.dinner)} of those calories. ${p.kg ? `Scaled to your weight of ${p.kg} kg, as a rough guide.` : `These are general levels for ${REFERENCE[p.gender].about}; enter your weight above to scale them.`}${p.gender === "female" && p.activity === "heavy" ? " The heavy-work level for women is my estimate, using the same ratio to the men's level that the other two levels show." : ""}`),
@@ -295,7 +295,7 @@ function plannerSectionEl() {
     ];
     refresh();
     return h("details", { class: "prep-box" },
-      h("summary", { text: "Reminders on my phone (Google Calendar)" }),
+      h("summary", { text: "📅 Phone reminders: download a Google Calendar file" }),
       h("p", {},
         "One calendar file holds every nudge for the dates you are planning: plan, shopping list, batch cooking (if you chose it) and each evening's prep, including sprouts and soaking that must start early."),
       h("div", { class: "prep-controls" }, controls),
@@ -418,7 +418,7 @@ function plannerSectionEl() {
       h("div", { class: "plan-toolbar" },
         h("button", { id: "plan-again", class: "btn primary", type: "button", onclick: () => update(newPlan(plan, plan.activity)), text: "Pick again (keeps meals marked Keep)" }),
       ),
-      h("details", { class: "settings-fold" }, h("summary", { text: "Change settings (who it is for, weight, activity)" }),
+      h("details", { class: "settings-fold" }, h("summary", { text: "⚙️ Plan settings: who it is for, weight and activity" }),
         h("div", { class: "plan-toolbar" }, modePicker(), ...(two_ ? [] : [genderPicker(), weightPicker(), activityPicker()])),
         two_ ? peoplePanel() : null),
       h("div", { class: "plan-minor" },
@@ -443,7 +443,7 @@ function plannerSectionEl() {
     // shopping list: one combined, colour-coded list, then the full recipe-by-recipe lists
     const planned = {};
     plan.days.forEach((d) => MEALS.forEach((m) => d[m].items.forEach(({ id, s, s2 }) => { planned[id] = (planned[id] || 0) + s + (plan.people ? s2 : 0); })));
-    const shopping = h("details", { class: "shopping" }, h("summary", { text: "Shopping list (tick what you already have)" }));
+    const shopping = h("details", { class: "shopping" }, h("summary", { text: "🛒 Shopping list: tick what you already have" }));
     const sl = shoppingList(plan);
     const ticked = new Set((plan.done && plan.done._list) || []);
     const CAT = {
