@@ -552,3 +552,39 @@ details.fold > summary h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
 @media (max-width: 760px) { .people { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 520px) { .person { grid-template-columns: minmax(0, 1fr); } }
 .person { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+
+/* ---------- The shopping list: colour-coded boxes ---------- */
+:root {
+  --rose-bg: #fbdfe6; --rose-bd: #dd8ea3; --rose-fg: #962d49;
+  --teal-bg: #d9eef1; --teal-bd: #6fb3bd; --teal-fg: #1f6370;
+  --sand-bg: #f1ece0; --sand-bd: #cfc5ae; --sand-fg: #6c5f3d;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rose-bg: #3a1f28; --rose-bd: #a8566d; --rose-fg: #f3a9bc;
+    --teal-bg: #16323a; --teal-bd: #3f8a96; --teal-fg: #8fd6e2;
+    --sand-bg: #2c271c; --sand-bd: #6b5f43; --sand-fg: #d8c99c;
+  }
+}
+.shopping { padding: 18px 22px; border-radius: var(--radius); }
+.shopping > summary { font-size: 1.2rem; }
+.shop-cats { display: grid; gap: 16px; margin-top: 14px; }
+.shop-cat { padding: 14px 18px; background: var(--cat-bg); border: 1px solid var(--cat-bd); border-radius: 14px; }
+.shop-cat h3 { margin: 0 0 10px; font-size: 1.2rem; letter-spacing: 0.02em; color: var(--cat-fg); }
+.shop-items { list-style: none; margin: 0; padding: 0; columns: 2 260px; column-gap: 32px; }
+.shop-items li { break-inside: avoid; margin: 0 0 8px; font-size: 1.05rem; line-height: 1.4; }
+.shop-items label { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+.shop-items input { margin-top: 5px; width: 1.05rem; height: 1.05rem; flex: none; }
+.shop-items input:checked + * , .shop-items label:has(input:checked) { text-decoration: line-through; opacity: 0.55; }
+.shop-extra { margin: 0; color: var(--cat-fg); }
+.cat-produce { --cat-bg: var(--lunch-bg); --cat-bd: var(--lunch-bd); --cat-fg: var(--lunch-fg); }
+.cat-grains { --cat-bg: var(--breakfast-bg); --cat-bd: var(--breakfast-bd); --cat-fg: var(--breakfast-fg); }
+.cat-dairy { --cat-bg: var(--dinner-bg); --cat-bd: var(--dinner-bd); --cat-fg: var(--dinner-fg); }
+.cat-spices { --cat-bg: var(--rose-bg); --cat-bd: var(--rose-bd); --cat-fg: var(--rose-fg); }
+.cat-other { --cat-bg: var(--teal-bg); --cat-bd: var(--teal-bd); --cat-fg: var(--teal-fg); }
+.cat-extra { --cat-bg: var(--sand-bg); --cat-bd: var(--sand-bd); --cat-fg: var(--sand-fg); }
+.shopping-full { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--border); }
+.shopping-full > summary { cursor: pointer; font-size: 1.05rem; font-weight: 700; color: var(--accent-strong); }
+.shopping-full h3 { margin: 18px 0 4px; font-size: 1.1rem; }
+.shopping-list { font-size: 1rem; }
+@media print { body.print-plan .shopping-full { display: none; } }

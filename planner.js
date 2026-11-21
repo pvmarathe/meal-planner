@@ -401,10 +401,37 @@ function plannerSectionEl() {
       h("div", { class: "plan-days" }, dayCards),
     );
 
-    // shopping list: every recipe used in this plan, with the servings you will eat
+    // shopping list: one combined, colour-coded list, then the full recipe-by-recipe lists
     const planned = {};
     plan.days.forEach((d) => MEALS.forEach((m) => d[m].items.forEach(({ id, s, s2 }) => { planned[id] = (planned[id] || 0) + s + (plan.people ? s2 : 0); })));
-    const shopping = h("details", { class: "shopping" }, h("summary", { text: "Shopping list (tick what you already have)" }),
+    const shopping = h("details", { class: "shopping" }, h("summary", { text: "Shopping list (tick what you already have)" }));
+    const sl = shoppingList(plan);
+    const ticked = new Set((plan.done && plan.done._list) || []);
+    const CAT = {
+      "Fresh produce": { cls: "cat-produce", icon: "🥬" }, "Dals, grains and flours": { cls: "cat-grains", icon: "🌾" },
+      "Dairy and protein": { cls: "cat-dairy", icon: "🥛" }, "Spices and seasonings": { cls: "cat-spices", icon: "🌶️" },
+      "Oils, sauces and other": { cls: "cat-other", icon: "🫙" },
+    };
+    const itemRow = (text) => h("li", {}, h("label", {},
+      h("input", {
+        type: "checkbox", checked: ticked.has(text),
+        onchange: (e) => {
+          const now = new Set((plan.done && plan.done._list) || []);
+          if (e.target.checked) now.add(text); else now.delete(text);
+          plan.done = { ...plan.done, _list: [...now] };
+          saveStore(plans, planKey());
+        },
+      }), ` ${text}`));
+    shopping.append(h("p", { class: "shopping-note", text: `One combined list for the ${sl.dishes} dishes in this plan. Amounts are scaled to the servings you will eat and rounded up, so check your pantry first.` }));
+    const cats = h("div", { class: "shop-cats" });
+    sl.groups.forEach((g) => {
+      const c = CAT[g.title] || CAT["Oils, sauces and other"];
+      cats.append(h("section", { class: `shop-cat ${c.cls}` }, h("h3", { text: `${c.icon} ${g.title}` }), h("ul", { class: "shop-items" }, g.items.map(itemRow))));
+    });
+    if (sl.extras.length) cats.append(h("section", { class: "shop-cat cat-extra" }, h("h3", { text: "📝 Also (no amount in the recipes)" }), h("p", { class: "shop-extra", text: sl.extras.join(", ") })));
+    shopping.append(cats);
+
+    const full = h("details", { class: "shopping-full" }, h("summary", { text: "Full recipe-by-recipe lists" }),
       h("p", { class: "shopping-note", text: "Each list is the full recipe. The line under each name says how many servings this plan uses, so you can scale the amounts down or cook the full recipe and keep the rest." }));
     Object.keys(planned).forEach((id) => {
       const { r } = byId[id];
@@ -424,12 +451,13 @@ function plannerSectionEl() {
           }),
           ` ${line.text}`)));
       });
-      shopping.append(
+      full.append(
         h("h3", { text: r.name }),
         h("p", { class: "shopping-servings", text: `The recipe makes ${r.macros.servings} servings. This plan uses ${fmtServ(planned[id])}${plan.people ? " for both of you" : ""}.` }),
         list,
       );
     });
+    shopping.append(full);
     body.append(shopping);
   }
 
