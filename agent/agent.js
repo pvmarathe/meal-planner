@@ -140,7 +140,7 @@ const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const SYS = "-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 const SERIF = "Georgia,'Times New Roman',serif";
 const FONTS = { clean: { body: SYS, head: SYS }, editorial: { body: SYS, head: SERIF }, friendly: { body: "'Trebuchet MS',Verdana,sans-serif", head: "'Trebuchet MS',Verdana,sans-serif" }, readable: { body: "Verdana,Geneva,sans-serif", head: "Verdana,Geneva,sans-serif" }, classic: { body: SERIF, head: SERIF } };
-const FONT_NAME = args.font && FONTS[args.font] ? args.font : "clean";
+const FONT_NAME = args.font && FONTS[args.font] ? args.font : "readable"; // the chosen style: Verdana
 const FONT = FONTS[FONT_NAME];
 const CSS = `body{margin:0;background:#fbf8f2}.w{max-width:940px;margin:0 auto;padding:14px 10px;font-family:${FONT.body};color:#2a2620;font-size:16px;line-height:1.5}.hd{background:#e3f1e8;border:1px solid #e6dfd0;border-radius:14px;padding:18px 20px;margin-bottom:12px}.ey{font-family:${FONT.head};font-size:13px;letter-spacing:.12em;font-weight:700;color:#226239}.t{font-family:${FONT.head};font-size:34px;font-weight:800;margin:2px 0;line-height:1.2}.g{color:#6c655a;font-size:14px}.c{background:#fff;border:1px solid #e6dfd0;border-radius:14px;padding:14px 16px;margin:0 0 12px}.cs{background:#e3f1e8}.cw{background:#fbead7;border-color:#f1d3b0}.d{font-family:${FONT.head};font-size:25px;font-weight:800;line-height:1.3}.m{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:.08em;color:#226239}.i{margin:4px 0}.n{font-weight:600;font-size:16px}.p{display:inline-block;background:#e3f1e8;color:#226239;border-radius:10px;padding:2px 9px;font-size:13px;font-weight:700;margin:0 4px 2px 0}.pw{background:#fbead7;color:#b4570f}.b{display:inline-block;background:#2f7d4f;color:#fff!important;text-decoration:none;font-weight:700;font-size:16px;padding:12px 24px;border-radius:999px}.h{font-family:${FONT.head};font-weight:800;color:#226239;margin-bottom:6px;font-size:21px}.hw{color:#b4570f}.r{margin:3px 0;font-size:15px}.id{font-family:Menlo,Consolas,monospace;font-size:11px;color:#6c655a;word-break:break-all;margin-top:6px}.ml{font-family:${FONT.head};font-size:17px;font-weight:800;letter-spacing:.08em;margin-bottom:2px}.mp{border-radius:10px;padding:2px 9px;font-size:13px;font-weight:700}.si{font-size:17px;margin:5px 0;line-height:1.35}.sh{font-family:${FONT.head};font-size:18px;font-weight:800;letter-spacing:.06em;margin-bottom:8px}`;
 const MEDIA = "@media (min-width:900px){.w{max-width:1200px!important;font-size:21px!important}.t{font-size:62px!important}.ey{font-size:17px!important}.d{font-size:40px!important}.g{font-size:19px!important}.n{font-size:26px!important}.mp,.p{font-size:18px!important;padding:3px 12px!important}.ml{font-size:25px!important}.r{font-size:22px!important}.h{font-size:32px!important}.b{font-size:21px!important}.c{font-size:21px!important}.si{font-size:24px!important}.sh{font-size:26px!important}.mc{display:table-cell!important;width:33.33%!important;margin:0!important}.mc2{display:table-cell!important;width:50%!important;margin:0!important}}";
@@ -231,7 +231,13 @@ function nudgeHtml(plan, e, dateIso) {
   return emailHtml(e.summary, shell("Tonight's nudge", e.summary, body));
 }
 function genericHtml(plan, e) {
-  const paras = e.lines.map((l) => (l === "" ? "" : l.startsWith("- ") ? `<div class="r">• ${esc(l.slice(2))}</div>` : `<div style="margin:6px 0">${esc(l)}</div>`)).join("");
+  const names = who(plan);
+  // "Mon lunch: 1 + 1 x Methi Dal" becomes "Mon lunch: Methi Dal" with a pill showing each person's portion
+  const dish = (t) => {
+    const m = t.match(/^(\w{3} \w+): ([\d½¼¾⅓⅔⅛]+) \+ ([\d½¼¾⅓⅔⅛]+) x (.+)$/);
+    return m && names.length === 2 ? `<div class="r"><b>${esc(m[1])}</b>: ${esc(m[4])} ${pill(`${names[0]} ${m[2]} · ${names[1]} ${m[3]}`)}</div>` : `<div class="r">• ${esc(t)}</div>`;
+  };
+  const paras = e.lines.map((l) => (l === "" ? "" : l.startsWith("- ") ? dish(l.slice(2)) : `<div class="h" style="margin:10px 0 4px">${esc(l)}</div>`)).join("");
   return emailHtml(e.summary, shell(e.summary, rangeLabel(plan), card(paras) + `<div>${button(planLink(plan), "Open the plan")}</div>`));
 }
 
