@@ -141,7 +141,7 @@ The `data=` part is a fingerprint of the recipes the planner can pick from. If t
 - **The email tool** (needs Node.js):
 
   ```
-  node agent/agent.js plan --today 2026-11-21 --people '[{"name":"A","gender":"male","kg":75,"activity":"sedentary"},{"name":"B","gender":"female","kg":65,"activity":"sedentary"}]' --format html
+  node agent/agent.js plan --today 2026-11-21 --people '[{"name":"A","gender":"male","kg":70,"activity":"sedentary"},{"name":"B","gender":"female","kg":60,"activity":"sedentary"}]' --format html
   ```
 
   This prints one email: a `SUBJECT:` line, a `FORMAT: html` line, then the page. The other commands (`nudge`, `rebuild`, `decode`, `link`) are described at the top of `agent/agent.js`.
