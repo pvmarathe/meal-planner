@@ -345,10 +345,12 @@ function seeded(text) {
   let a = (h ^= h >>> 16) >>> 0;
   return () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 }
-// A short fingerprint of the recipe data (names and numbers), so a rebuilt plan can say if the recipes changed since it was made
+// A short fingerprint of the recipes the planner can pick from (names, numbers and meal tags), so a rebuilt plan can say if
+// those recipes changed since it was made. Recipes that are only on the recipes page never change a plan, so they are left out.
 const dataHash = () => {
   let h = 2166136261;
-  const text = sections.map((s) => s.recipes.map((r) => `${r.name}${r.macros && r.macros.kcal}${r.macros && r.macros.p}`).join("|")).join("#");
+  const text = Object.keys(byId).filter((id) => { const { r, s } = byId[id]; return s.inPlanner !== false && r.meals && r.macros && !r.macros.na; })
+    .map((id) => { const { r } = byId[id]; return `${id}${JSON.stringify(r.meals)}${r.macros.kcal}${r.macros.p}${r.macros.c}${r.macros.f}`; }).join("|");
   for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
   return (h >>> 0).toString(16).padStart(8, "0");
 };
