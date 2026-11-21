@@ -2,11 +2,12 @@
 // Accountability agent helper: plans a week for one or two people and writes the emails.
 // It reuses the web page's own planning code (data.js, common.js, reminders.js, core.js), so the plan matches the website exactly.
 //
-//   node agent/agent.js plan   --today 2026-11-18 --people '<json>' [--start auto|YYYY-MM-DD] [--days 7] [--mode fresh|batch] [--seed text] [--out plan.json]
+//   node agent/agent.js plan   --today 2026-11-18 --people '<json>' [--start auto|YYYY-MM-DD] [--days 7] [--mode fresh|batch] [--seed text] [--edits "reroll:2026-11-26:dinner:2;away:2026-11-24;back:2026-11-24;mode:batch"] [--out plan.json]
 //   node agent/agent.js nudge  --plan-file plan.json --date YYYY-MM-DD [--kind morning|evening|all] [--time 20:30] [--shop-day 6] [--plan-day 3]
 //   node agent/agent.js reroll --plan-file plan.json --date YYYY-MM-DD --meal breakfast|lunch|dinner [--seed text] --out plan.json   (swap one meal)
 //   node agent/agent.js mode   --plan-file plan.json --mode fresh|batch --out plan.json
 //   node agent/agent.js away   --plan-file plan.json --date YYYY-MM-DD [--undo] --out plan.json   (no meals or nudges for that day)
+//   node agent/agent.js rebuild --id "<the Plan ID line from a plan email>" --people '<json>' --out plan.json   (rebuilds the exact same plan)
 //   node agent/agent.js decode --code <text after #share=> --out plan.json
 //   node agent/agent.js link   --plan-file plan.json
 //
@@ -76,6 +77,9 @@ function weeklyEmail(plan, opts) {
     ...(plan.mode === "batch" ? ["- The weekend before: batch cooking, in the best order."] : []),
     "",
     "Reply to this email if you want a change (a swap, a trip, a skipped day, or batch cooking instead of fresh) and I will adjust the plan.",
+    "",
+    `${planIdLine(plan)}`,
+    "(The line above lets the assistant rebuild this exact plan each day. Please leave it in place when you reply.)",
   ].join("\n");
   return email(`Meal plan for ${rangeLabel(plan)}`, body);
 }
@@ -126,22 +130,61 @@ function nudges(plan, dateIso) {
   return emails;
 }
 
+
+const dataHash = () => require("crypto").createHash("sha1").update(fs.readFileSync(path.join(root, "data.js"))).digest("hex").slice(0, 8);
+function applyEdits(plan, edits) {
+  (edits || "").split(";").map((x) => x.trim()).filter(Boolean).forEach((spec) => {
+    const [kind, a, b, c] = spec.split(":");
+    if (kind === "mode") plan.mode = a === "batch" ? "batch" : "fresh";
+    else if (kind === "away") plan.away = [...new Set([...(plan.away || []), a])];
+    else if (kind === "back") plan.away = (plan.away || []).filter((d) => d !== a);
+    else if (kind === "reroll") {
+      const i = Math.round((parseIso(a) - parseIso(plan.start)) / 86400000);
+      if (!(i >= 0 && i < plan.days.length) || !MEALS.includes(b)) throw new Error(`bad edit: ${spec}`);
+      setRng(seeded(`${a}-${b}-${c || "1"}`));
+      const day = plan.days[i];
+      const banned = new Set([...mainsUsed(plan.days, b), ...idsOfDay(day, b)]);
+      const fresh = solveMeal(b, targetsFor(peopleOf(plan), b), banned);
+      if (fresh) plan.days[i] = { ...day, [b]: fresh };
+    } else throw new Error(`unknown edit: ${spec}`);
+  });
+  return plan;
+}
+// Everything that defines a plan: start, length, cooking mode, seed, edits and the recipe data. Same inputs always give the same plan.
+function buildPlan({ start, days, mode, seed, edits, ppl }) {
+  const end = isoDate(addDays(parseIso(start), days - 1));
+  setRng(seeded(seed || `${start}-${ppl.map((p) => p.name + p.gender + p.kg + p.activity).join("|")}`));
+  const plan = newPlan(null, ppl[0].activity, start, end, ppl.length === 2 ? ppl : null);
+  if (ppl.length === 1) plan.people = undefined;
+  plan.mode = mode === "batch" ? "batch" : "fresh";
+  if (!validPlan(plan)) throw new Error("plan did not validate");
+  applyEdits(plan, edits);
+  plan.id = { start, days, mode: plan.mode, seed: seed || "auto", edits: edits || "none", data: dataHash() };
+  return plan;
+}
+const planIdLine = (plan) => `Plan ID: start=${plan.id.start} days=${plan.id.days} mode=${plan.id.mode} seed=${plan.id.seed} data=${plan.id.data} edits=${plan.id.edits}`;
+const parseIdLine = (line) => Object.fromEntries([...line.matchAll(/(\w+)=(\S+)/g)].map((m) => [m[1], m[2]]));
+
 if (cmd === "plan") {
   const today = parseIso(args.today || isoDate(new Date()));
   let start = args.start || "auto";
   if (start === "auto") { let d = addDays(today, 1); while (d.getDay() !== 1) d = addDays(d, 1); start = isoDate(d); }
-  const n = Number(args.days || 7);
-  const end = isoDate(addDays(parseIso(start), n - 1));
   const ppl = JSON.parse(args.people || "[]").map(cleanPerson);
   if (ppl.length !== 1 && ppl.length !== 2) { console.error("--people needs a JSON list of one or two people"); process.exit(1); }
-  setRng(seeded(args.seed || `${start}-${ppl.map((p) => p.name + p.gender + p.kg + p.activity).join("|")}`));
-  const plan = newPlan(null, ppl[0].activity, start, end, ppl.length === 2 ? ppl : null);
-  if (ppl.length === 1) { plan.people = undefined; }
-  plan.mode = args.mode === "batch" ? "batch" : "fresh";
-  if (!validPlan(plan)) { console.error("plan did not validate"); process.exit(1); }
+  const plan = buildPlan({ start, days: Number(args.days || 7), mode: args.mode, seed: args.seed, edits: args.edits, ppl });
   if (args.out) fs.writeFileSync(args.out, JSON.stringify(plan));
-  const names = ppl.map((p, k) => nameOf(p, k));
   console.log(weeklyEmail(plan, { shopDayName: WEEKDAY_NAMES[Number(args["shop-day"] || 6)], timeLabel: timeLabel(args.time || "20:30") }));
+} else if (cmd === "rebuild") {
+  const id = parseIdLine(args.id || "");
+  const ppl = JSON.parse(args.people || "[]").map(cleanPerson);
+  if (!id.start || !id.days || (ppl.length !== 1 && ppl.length !== 2)) { console.error("need --id (a Plan ID line) and --people"); process.exit(1); }
+  const plan = buildPlan({ start: id.start, days: Number(id.days), mode: id.mode, seed: id.seed === "auto" ? undefined : id.seed, edits: id.edits === "none" ? "" : id.edits, ppl });
+  if (args.out) fs.writeFileSync(args.out, JSON.stringify(plan));
+  console.log(plan.id.data === id.data ? `OK: rebuilt the plan for ${rangeLabel(plan)}.` : `WARNING: the recipe data changed since this plan was made (was ${id.data}, now ${plan.id.data}), so the rebuilt plan may differ from the one that was emailed. Tell the user.`);
+  if (args.email) { // also print the plan email, for sending after a change was made (--id may carry new edits)
+    console.log("=====EMAIL=====\n");
+    console.log(weeklyEmail(plan, { shopDayName: WEEKDAY_NAMES[Number(args["shop-day"] || 6)], timeLabel: timeLabel(args.time || "20:30") }).replace("SUBJECT: Meal plan for", "SUBJECT: Updated meal plan for"));
+  }
 } else if (cmd === "nudge") {
   const list = nudges(readPlan(), args.date);
   console.log(list.length ? list.join("\n=====EMAIL=====\n\n") : "NO NUDGES TODAY");
