@@ -1484,6 +1484,32 @@ const sections = [
       },
     ],
   },
+  // ============================ EGGS ============================
+  {
+    id: "eggs",
+    title: "Eggs",
+    note: "Egg breakfasts. The planner can pick these for breakfast like any other dish. The site is vegetarian with eggs; there is no meat or fish.",
+    recipes: [
+      {
+        name: "Boiled Eggs", channel: "RecipeTin Eats", video: "https://www.youtube.com/watch?v=o9jrst9xDC4", meals: {"breakfast": "side"}, group: "eggs", weight: 0.2,
+        macros: {"servings": 4, "serving": "2 large boiled eggs", "basis": "assumed", "why": "Assumed: the page gives no servings. The planner uses 2 eggs as one serving; you and your partner eat about 8 eggs together, which is 2 servings each.", "kcal": 155.0, "p": 12.6, "c": 1.1, "f": 10.6},
+        makes: "Makes 8 boiled eggs", from: "RecipeTin Eats (How to Boil Eggs page and video)",
+        ingredients: [
+          "8 large eggs (fridge-cold, about 55 g each in the shell)", "Water, enough to cover the eggs by 3 cm (1 inch)", "Cold water, for cooling",
+        ],
+        note: "Bring the water to a rapid boil, lower the eggs in with a slotted spoon, turn the heat down slightly so it still bubbles, and time them: 6 minutes runny yolk, 8 minutes soft, 10 minutes hard boiled. Cool the eggs 10 minutes in cold water, then peel from the base under water. The numbers are for 2 hard-boiled large eggs (about 50 g each without the shell), from USDA data for hard-boiled whole egg. Salt and pepper to taste are not counted.",
+      },
+      {
+        name: "Masala Omelette", channel: "Yummy Tummy Aarthi", video: "https://www.youtube.com/watch?v=_DqM3oc04GM", meals: {"breakfast": "side"}, group: "eggs", weight: 0.2,
+        macros: {"servings": 1, "serving": "1 omelette (2 eggs)", "basis": "source", "why": "The page says it makes 1 serving from 2 eggs.", "kcal": 282.4, "p": 13.3, "c": 5.3, "f": 23.1},
+        makes: "Makes 1 omelette (2 eggs)", from: "Yummy Tummy Aarthi (Masala Omelette page and video)",
+        ingredients: [
+          "2 large eggs", "3 tbsp onion, finely chopped", "3 tbsp tomato, deseeded and finely chopped", "1 green chilli, finely chopped", "2 tbsp coriander leaves, finely chopped", "½ tsp black pepper powder", "½ tsp salt, to taste", "1 tbsp olive oil",
+        ],
+        note: "Beat the eggs with the salt and pepper. Soften the onion, tomato and chilli in the hot oil for 30 seconds, pour the eggs over, cook on low heat until the top is set, sprinkle the coriander, and fold. The numbers count the eggs, onion (about 30 g), tomato (about 45 g) and all of the oil (13.5 g); the chilli, coriander, pepper and salt add almost nothing and are not counted. The page also lists an optional side of seared mushrooms and tomato in butter, which is not included. The video is the same channel's masala omelette video, so its amounts may differ slightly from this list.",
+      },
+    ],
+  },
   // ============================ HOME RECIPES ============================
   {
     id: "home",

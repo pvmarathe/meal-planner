@@ -2,7 +2,7 @@
 
 *Plan, shop, cook together.*
 
-A pure-vegetarian meal planner for two people who cook one pot. It picks a breakfast, lunch and dinner for every day, sizes each person's portions so their calories, protein, carbs and fat are about right, and then **an email assistant does the nagging for you**: it sends the week's plan, the shopping list, and each evening's "soak the chickpeas" reminders.
+A vegetarian meal planner (with a couple of egg dishes) for two people who cook one pot. It picks a breakfast, lunch and dinner for every day, sizes each person's portions so their calories, protein, carbs and fat are about right, and then **an email assistant does the nagging for you**: it sends the week's plan, the shopping list, and each evening's "soak the chickpeas" reminders.
 
 You do not need to know how to code to understand this page.
 

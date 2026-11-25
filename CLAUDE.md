@@ -4,7 +4,7 @@ Read this first. It tells a fresh session what this project is, how it is built,
 
 ## What this is
 
-PlanMate (tagline: plan, shop, cook together) is a pure-vegetarian meal planner for two people who cook one pot, plus an email "accountability agent" that runs on a schedule. The owner is **not a developer**: explain things in plain words, and say what you changed and why. See `README.md` for the plain-language tour and a system diagram, and `how-it-works.html` for the science.
+PlanMate (tagline: plan, shop, cook together) is a vegetarian meal planner (with eggs) for two people who cook one pot, plus an email "accountability agent" that runs on a schedule. The owner is **not a developer**: explain things in plain words, and say what you changed and why. See `README.md` for the plain-language tour and a system diagram, and `how-it-works.html` for the science.
 
 - **Website** (static files on GitHub Pages, no server, no build step): `index.html` (planner), `recipes.html` (recipe database), `how-it-works.html`.
 - **Planning brain:** `core.js`, shared by the website and the agent. It has no page code, so it also runs in Node.
@@ -19,7 +19,7 @@ Live site: https://pvmarathe.github.io/meal-planner/ (GitHub repo `pvmarathe/mea
 1. **Ask before every push to `main`.** Pushing `main` updates the live website **and** changes what the scheduled agents run (they clone `main` on every run). Commit locally, then ask: "Want me to update the live site?" Risky changes go on a branch first (see "Changing the emails safely").
 2. **No attribution lines in commits or PRs:** no `Co-Authored-By: Claude` and no "Generated with Claude Code".
 3. **Ask before destructive or outward-facing actions** (force-push, deleting files, sending email to anyone, rewriting history). The owner once approved a history rewrite for privacy reasons; that does not carry over to new ones.
-4. **Pure vegetarian, no eggs, ever.**
+4. **Vegetarian, with eggs (the owner changed this on 2026-11-25; the earlier rule was no eggs).** No meat or fish. Egg dishes live only in the `Eggs` section of `data.js` (Boiled Eggs, Masala Omelette), tagged as breakfast sides with `group: "eggs"` (never two in one meal) and `weight: 0.2` (picked less often; about two egg breakfasts a week for two people). Do not add eggs to other recipes without asking.
 5. **Never guess missing recipe amounts.** If a recipe leaves out a key amount, its `macros` is `{na: "reason"}` and the card says why.
 6. **Every recipe in the planner collection has its own verified ingredient list with quantities and its own video link**, with no duplicate names or video IDs. Nutrition is per serving, and the card says what a serving is and whether it came from the source or was assumed.
 7. **Do not bypass blocks** (Cloudflare challenge pages, YouTube's internal APIs, anything that says no). Report it and use another source.

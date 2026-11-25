@@ -148,6 +148,15 @@ function bestServings(ids, target, level, fixed) {
   walk(0);
   return best;
 }
+// A recipe can carry group: "eggs"; two dishes of one group never share a meal.
+// A recipe can carry weight (default 1): below 1 it is picked as a side less often.
+const pickSide = (sides) => {
+  const w = sides.map((id) => (byId[id].r.weight == null ? 1 : byId[id].r.weight));
+  let x = rng() * w.reduce((a, b) => a + b, 0);
+  for (let i = 0; i < sides.length; i++) { x -= w[i]; if (x < 0) return sides[i]; }
+  return sides[sides.length - 1];
+};
+const clashes = (ids, id) => ids.includes(id) || (!!byId[id].r.group && ids.some((x) => byId[x].r.group === byId[id].r.group));
 function solvePair(meal, targets, banned, level = 0) {
   let mains = POOLS[meal].main.filter((id) => !banned.has(id));
   if (!mains.length) mains = POOLS[meal].main;
@@ -156,8 +165,8 @@ function solvePair(meal, targets, banned, level = 0) {
   const found = [];
   for (let n = 0; n < 1500; n++) {
     const ids = [randomFrom(mains)];
-    if (sides.length && rng() < 0.8) ids.push(randomFrom(sides));
-    if (sides.length > 1 && rng() < 0.4) { const extra = randomFrom(sides); if (!ids.includes(extra)) ids.push(extra); }
+    if (sides.length && rng() < 0.8) ids.push(pickSide(sides));
+    if (sides.length > 1 && rng() < 0.4) { const extra = pickSide(sides); if (!clashes(ids, extra)) ids.push(extra); }
     const a = bestServings(ids, targets[0], level, fixed);
     if (!a) continue;
     const b = bestServings(ids, targets[1], level, fixed);
@@ -182,10 +191,10 @@ function solveOne(meal, target, banned, level = 0) {
   const fixed = DAILY[meal].map((d) => ({ ...d }));
   for (let n = 0; n < 6000; n++) {
     const items = [...fixed, { id: randomFrom(mains), s: randomFrom(stepsMain) }];
-    if (sides.length && rng() < 0.8) items.push({ id: randomFrom(sides), s: randomFrom(stepsSide) });
+    if (sides.length && rng() < 0.8) items.push({ id: pickSide(sides), s: randomFrom(stepsSide) });
     if (sides.length > 1 && rng() < 0.4) {
-      const extra = randomFrom(sides);
-      if (!items.some((i) => i.id === extra)) items.push({ id: extra, s: randomFrom(stepsSide) });
+      const extra = pickSide(sides);
+      if (!clashes(items.map((i) => i.id), extra)) items.push({ id: extra, s: randomFrom(stepsSide) });
     }
     const t = totalsOf(items);
     const off = Math.abs(t.kcal / target - 1);
@@ -489,7 +498,7 @@ const SHOP_CATS = [
   ["Oils, sauces and other", /\boil\b|vinegar|sauce|sugar|jaggery|honey|syrup|baking|yeast|chutney|paste|ketchup|essence|coconut milk|nutritional|vanilla|cocoa|coffee|tea\b/],
   ["Spices and seasonings", /salt|namak|(?<!bell )pepper$|turmeric|powder|masala|cumin|jeera|mustard|hing|asafoetida|cardamom|cinnamon|\bcloves?\b|ajwain|carom|kasuri|methi dana|fennel|saunf|garam|paprika|chaat|oregano|thyme|bay leaf|seeds?$|chilli flakes|amchur|saffron|nutmeg/],
   ["Dals, grains and flours", /dal\b|lentil|moong|chana|rajma|chickpea|rice|poha|oats|quinoa|millet|ragi|jowar|bajra|flour|besan|sattu|rava|sooji|semolina|bread|barley|bulgur|couscous|pasta|noodles|tortilla|pita|urad|toor|masoor|kala|sabudana|sago|dalia|beans/],
-  ["Dairy and protein", /paneer|yogurt|milk|cheese|tofu|soya|soy chunks|ghee|butter|cream|hummus|tempeh|buttermilk/],
+  ["Dairy and protein", /\begg\b|paneer|yogurt|milk|cheese|tofu|soya|soy chunks|ghee|butter|cream|hummus|tempeh|buttermilk/],
   ["Fresh produce", /onion|dill|parsley|coconut|tomato|potato|carrot|cabbage|spinach|cucumber|ginger|garlic|chilli|cilantro|mint|curry leaf|curry leaves|lemon|lime|bell pepper|peas|corn|beet|cauliflower|broccoli|mushroom|apple|banana|avocado|mango|orange|pomegranate|methi|fenugreek|radish|gourd|brinjal|eggplant|zucchini|celery|lettuce|pumpkin|okra|bhindi|drumstick|plantain|berry|berries|dates|grape|pineapple|papaya|green|leaf|leaves|sprouted/],
 ];
 const shopCat = (name) => { for (const [t, re] of SHOP_CATS) if (re.test(name)) return t; return "Oils, sauces and other"; };
