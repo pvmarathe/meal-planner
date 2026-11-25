@@ -138,7 +138,9 @@ function shoppingBox(title, items, c) {
 function shoppingHtml(plan) {
   const sl = shoppingList(plan);
   const groups = sl.groups.map((g) => shoppingBox(g.title, g.items, SHOP_STYLE[g.title] || SHOP_STYLE["Oils, sauces and other"])).join("");
-  const body = card(`<div>One list for the ${sl.dishes} dishes in the plan, with every ingredient listed once. Check your pantry first.</div><div style="margin-top:10px">${button(planLink(plan), "Open the recipe lists with amounts")}</div>`, "cs") + groups;
+  const po = prepOnce(plan);
+  const prepCard = po.length ? card(`<div class="h hw">🧊 Prep once, use all week</div><div class="g" style="margin-bottom:6px">Optional. These save time later in the week.</div>${po.map((t) => `<div class="r" style="margin:8px 0"><b>${t.icon} ${esc(t.title)}.</b> ${esc(t.text)}</div>`).join("")}`, "cw") : "";
+  const body = card(`<div>One list for the ${sl.dishes} dishes in the plan, with every ingredient listed once. Check your pantry first.</div><div style="margin-top:10px">${button(planLink(plan), "Open the recipe lists with amounts")}</div>`, "cs") + groups + prepCard;
   return emailHtml(`Shopping day: ingredients for ${rangeLabel(plan)}`, shell("Shopping day", rangeLabel(plan), body), true);
 }
 // A nudge built from the website's reminder lines: sprouts line, "Tomorrow" menu, prep tips
@@ -195,6 +197,8 @@ function shoppingEmail(plan) {
   const sl = shoppingList(plan);
   const out = [`Shopping day for ${rangeLabel(plan)}. One list for the ${sl.dishes} dishes in the plan, with every ingredient listed once. Check your pantry first.`, ""];
   sl.groups.forEach((g) => { out.push(g.title.toUpperCase()); g.items.forEach((t) => out.push(`  [ ] ${t}`)); out.push(""); });
+  const po = prepOnce(plan);
+  if (po.length) { out.push("PREP ONCE, USE ALL WEEK (optional)"); po.forEach((t) => out.push(`  ${t.title}. ${t.text}`)); out.push(""); }
   out.push(`The full recipe-by-recipe lists with amounts: ${planLink(plan)}`);
   return email(`Shopping day: ingredients for ${rangeLabel(plan)}`, out.join("\n"));
 }

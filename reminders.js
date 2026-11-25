@@ -35,16 +35,49 @@ const mealLine = (day, m) => `${MEAL_LABEL[m]}: ${day[m].items.map((it) => `${se
 const uniqueDishes = (day) => [...new Map(dayItems(day).map((i) => [i.id, byId[i.id]])).values()];
 
 // Things to start ahead of time. These go by the dish name and section, so they are reminders, not exact timings.
-function prepTips(day) {
+function prepTips(day, mode) {
   const dishes = uniqueDishes(day);
   const tips = [];
   const batter = dishes.filter((d) => d.s.id === "idlis" || d.s.id === "dosas").map((d) => d.r.name);
   if (batter.length) tips.push(`${batter.join(", ")}: the batter may need soaking, grinding or fermenting. Check the video for the timing.`);
   const soak = dishes.filter((d) => /rajma|kala chana|chole|chickpea/i.test(d.r.name)).map((d) => d.r.name);
   if (soak.length) tips.push(`${soak.join(", ")}: rajma and chickpeas usually need an overnight soak.`);
+  const ahead = dishes.filter((d) => dishKind(d.r.id || idOf(d.r)) === "ahead");
+  if (mode === "batch" && ahead.length) tips.push(`${ahead.map((d) => d.r.name).join(", ")}: if you froze it, move it to the fridge tonight to thaw. Reheat until steaming hot.`);
+  const eggs = dishes.filter((d) => /boiled eggs/i.test(d.r.name)).map((d) => d.r.name);
+  if (eggs.length) tips.push("Boiled Eggs: boil them tonight in one batch and keep them in the fridge, so breakfast is ready.");
   return tips;
 }
 const sproutDishes = (day) => uniqueDishes(day).filter((d) => /sprout/i.test(d.r.name)).map((d) => d.r.name);
+
+// "Prep once, use all week" suggestions for the shopping-day email. Each one only appears when enough of the week's dishes use that ingredient.
+// The storage times come from the Masala Lab meal prep video (fridge 3 to 4 days and freezer 2 to 3 months for dal; frozen cubes up to 6 months).
+function prepOnce(plan) {
+  const seen = new Map();
+  plan.days.forEach((day) => dayItems(day).forEach((it) => seen.set(it.id, byId[it.id])));
+  const dishes = [...seen.values()].filter((d) => d && d.r && d.r.ingredients);
+  const text = (d) => flatLines(d.r).map((l) => l.text).join(" | ").toLowerCase();
+  const withWord = (re) => dishes.filter((d) => re.test(text(d)));
+  const names = (list) => list.slice(0, 4).map((d) => d.r.name).join(", ") + (list.length > 4 ? ` and ${list.length - 4} more` : "");
+  const tips = [];
+  const dal = dishes.filter((d) => /\b(dal|dhal|lentil|moong|masoor|toor|tur|rajma|chana|chole|chickpea)\b/i.test(d.r.name) && !/sprout|salad|chaat|idli|dosa|dhokla|chilla|paratha|soup|patties|roti/i.test(d.r.name));
+  if (dal.length >= 2) tips.push({ icon: "🫘", title: "Cook the dal in bulk", text: `${dal.length} dishes this week are dal or beans (${names(dal)}). Pressure-cook them together and portion into containers. They keep 3 to 4 days in the fridge or 2 to 3 months in the freezer. Thick dal loosens with a splash of water when reheated.` });
+  const gravy = withWord(/onion/).filter((d) => /tomato/.test(text(d)) && /masala|curry|gravy|sabzi|korma|kofta|makhani|chole|rajma|palak paneer|paneer/i.test(d.r.name) && !/salad|raita|chaat|paratha|dal\b/i.test(d.r.name));
+  if (gravy.length >= 3) tips.push({ icon: "🍅", title: "Make one onion-tomato base gravy", text: `${gravy.length} dishes start from onion and tomato (${names(gravy)}). Cook a big batch once, cool it and freeze it in portions. Then every gravy is about 10 minutes away.` });
+  const onions = withWord(/onion/).filter((d) => !/salad|raita|chaat|omelette/i.test(d.r.name));
+  if (onions.length >= 4) tips.push({ icon: "🧅", title: "Chop and freeze the onions", text: `${onions.length} dishes use onion. Chop it all at once, spread it on a tray, freeze until solid, then bag it. It turns softer when cooked, which is fine for curries and gravies. Not for salads.` });
+  const gg = withWord(/\b(ginger|garlic)\b/);
+  if (gg.length >= 3) tips.push({ icon: "🧄", title: "Ginger-garlic cubes", text: `${gg.length} dishes use ginger or garlic. Blend them, pour into an ice cube tray and freeze. They last up to 6 months, and one cube goes straight into hot oil (watch the splatter).` });
+  const coco = withWord(/coconut/);
+  if (coco.length >= 2) tips.push({ icon: "🥥", title: "Freeze coconut in cubes", text: `${coco.length} dishes use coconut (${names(coco)}). Freeze the milk or paste in an ice cube tray and drop a cube into the curry at the end.` });
+  const rice = dishes.filter((d) => /\b(rice|khichdi|pulao|biryani|pongal)\b/i.test(d.r.name) || /\bcooked rice\b/.test(text(d)));
+  if (rice.length >= 2) tips.push({ icon: "🍚", title: "Cook the rice once and chill it", text: `${rice.length} dishes use rice. Cook a large batch, cool it, press it flat in bags and freeze or refrigerate. According to the video, chilled and reheated rice raises blood sugar less than fresh rice.` });
+  const roti = dishes.filter((d) => /\b(roti|paratha|chapati|phulka|thepla)\b/i.test(d.r.name));
+  if (roti.length >= 1) tips.push({ icon: "🫓", title: "Freeze rolled dough or cooked rotis", text: `${names(roti)}: freeze dough balls and thaw them 30 minutes before rolling, or stack cooked rotis with paper between them and reheat from frozen on a hot tawa for about 90 seconds.` });
+  const eggs = dishes.filter((d) => /boiled eggs/i.test(d.r.name));
+  if (eggs.length) tips.push({ icon: "🥚", title: "Boil the eggs in one batch", text: "Boiled eggs are in the plan. Boil them all at once, keep them in the fridge, and have two with a meal for about 12 g of protein." });
+  return tips.slice(0, 5);
+}
 
 // Which dishes can be cooked ahead on a weekend: one-pot dishes and dals keep a few days, batters can be made ahead, the rest is best fresh.
 function dishKind(id) {
@@ -62,7 +95,7 @@ function batchLines(plan) {
     }));
   }
   const lines = [`Batch cook for ${dayName(plan, 0)}${last ? ` to ${dayName(plan, last)}` : ""}.`, ""];
-  if (groups.ahead.length) lines.push("Cook now (usually keeps 2 to 3 days in the fridge):", ...groups.ahead.map((x) => "- " + x), "");
+  if (groups.ahead.length) lines.push("Cook now (usually keeps 2 to 3 days in the fridge; dals and beans also freeze for 2 to 3 months):", ...groups.ahead.map((x) => "- " + x), "");
   if (groups.batter.length) lines.push("Make the batter now (check each video for soaking and fermenting time):", ...groups.batter.map((x) => "- " + x), "");
   if (groups.fresh.length) lines.push("Best cooked fresh on the day:", ...groups.fresh.map((x) => "- " + x));
   return lines;
@@ -125,7 +158,7 @@ function buildReminders(plan, settings, now = new Date()) {
     if (sprouts.length) lines.push(`Start sprouting tonight for ${dayOf(sproutFor)}: ${sprouts.join(", ")}. Sprouts take 1 to 2 days, or buy them ready-made.`, "");
     if (tomorrow >= 0 && tomorrow < count) {
       lines.push(`Tomorrow, ${dayOf(tomorrow)}:`, ...MEALS.map((m) => mealLine(plan.days[tomorrow], m)));
-      const tips = prepTips(plan.days[tomorrow]);
+      const tips = prepTips(plan.days[tomorrow], plan.mode);
       if (tips.length) lines.push("", "Prep tonight:", ...tips.map((x) => "- " + x));
       summary = `Prep for tomorrow's meals (${dayName(plan, tomorrow)})`;
     }
