@@ -1535,13 +1535,13 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 medium banana (about 118 g), from USDA data for raw banana. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Orange", channel: "Fresh fruit", id: "fruit-orange", video: null, dailyPick: "breakfast",
-        macros: {"servings": 1, "serving": "1 medium orange (about 131 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 61.6, "p": 1.2, "c": 15.4, "f": 0.2},
+        name: "Mandarin", channel: "Fresh fruit", id: "fruit-mandarin", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "2 medium mandarins (about 176 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 93.3, "p": 1.4, "c": 23.5, "f": 0.5},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
-          "1 medium orange (about 131 g)",
+          "2 medium mandarins, peeled (about 176 g)",
         ],
-        note: "Wash and eat it fresh. The numbers are for 1 medium orange (about 131 g), from USDA data for raw orange. There is no video, because there is nothing to cook.",
+        note: "Wash and eat it fresh. The numbers are for 2 medium mandarins (about 176 g), from USDA data for raw mandarin. There is no video, because there is nothing to cook.",
       },
       {
         name: "Mango", channel: "Fresh fruit", id: "fruit-mango", video: null, dailyPick: "breakfast",
@@ -1596,6 +1596,15 @@ const sections = [
           "1 cup grapes (about 151 g)",
         ],
         note: "Wash and eat it fresh. The numbers are for 1 cup grapes (about 151 g), from USDA data for raw grapes. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Blueberries", channel: "Fresh fruit", id: "fruit-blueberries", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 cup blueberries (about 148 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 84.4, "p": 1.1, "c": 21.4, "f": 0.5},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup blueberries (about 148 g), washed",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup blueberries (about 148 g), from USDA data for raw blueberries. There is no video, because there is nothing to cook.",
       },
       {
         name: "Pear", channel: "Fresh fruit", id: "fruit-pear", video: null, dailyPick: "breakfast",
