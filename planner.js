@@ -254,7 +254,7 @@ function plannerSectionEl() {
           onclick: () => {
             const day = plan.days[dayIdx];
             const banned = new Set([...mainsUsed(plan.days, meal), ...idsOfDay(day, meal)]);
-            const fresh = solveMeal(meal, targets, banned);
+            const fresh = solveMeal(meal, targets, banned, isoDate(addDays(parseIso(plan.start), dayIdx)));
             if (!fresh) return;
             const days = plan.days.map((d, k) => (k === dayIdx ? { ...d, [meal]: fresh } : d));
             update({ ...plan, days });

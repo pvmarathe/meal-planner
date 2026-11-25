@@ -321,7 +321,7 @@ if (cmd === "plan") {
   setRng(seeded(args.seed || `${args.date}-${args.meal}-${Date.now()}`));
   const day = plan.days[i];
   const banned = new Set([...mainsUsed(plan.days, args.meal), ...idsOfDay(day, args.meal)]);
-  const fresh = solveMeal(args.meal, targetsFor(peopleOf(plan), args.meal), banned);
+  const fresh = solveMeal(args.meal, targetsFor(peopleOf(plan), args.meal), banned, args.date);
   if (!fresh) { console.error("could not find a new meal"); process.exit(1); }
   plan.days[i] = { ...day, [args.meal]: fresh };
   fs.writeFileSync(args.out || args["plan-file"], JSON.stringify(plan));

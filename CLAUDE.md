@@ -34,7 +34,7 @@ Live site: https://pvmarathe.github.io/meal-planner/ (GitHub repo `pvmarathe/mea
 - `solveOne` (one person) and `solvePair` (two people, same dishes, separate portions) search thousands of combinations. A recipe is only picked if it has a `meals` tag, valid macros and a section not marked `inPlanner: false`.
 - Recipes with `dailyWith: "lunch"` (the sattu cucumber drink) are added to every lunch and the rest of the meal is balanced around them.
 - A plan item is `{id, s, s2}`: `s` is the first person's servings, `s2` the second's. A two-person plan has `people: [...]`.
-- Fresh fruits (`Fresh fruits` section, recipes with `dailyPick: "breakfast"` and no `meals` tag) work like the daily drink: `fruitFor` in `core.js` adds one random fruit (not the same as the previous days) to every breakfast and the rest of the meal is balanced around it. They have no videos (nothing to cook), so each has an explicit `id`.
+- Fresh fruits (`Fresh fruits` section, recipes with `dailyPick: "breakfast"` and no `meals` tag) work like the daily drink: `fruitFor` in `core.js` adds one random fruit to every breakfast, only from fruits in season (US East Coast, the `months` list on each fruit; no `months` means all year) for that day's date, never the same as yesterday's and the rest of the meal is balanced around it. They have no videos (nothing to cook), so each has an explicit `id`.
 - Recipes with no video use `video: null` and an explicit `id` (video IDs normally double as the recipe `id`). The "More recipes" sections (ids start with `more-`) are `inPlanner: false` and are folded on the recipes page.
 
 ## The email agent (the part that is easy to break)

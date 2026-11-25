@@ -1514,10 +1514,10 @@ const sections = [
   {
     id: "fruits",
     title: "Fresh fruits",
-    note: "One fresh fruit a day. The planner adds one of these to every breakfast (a different one each day, picked at random) and balances the rest of the meal around it. There are no videos, because there is nothing to cook.",
+    note: "One fresh fruit a day. The planner adds one of these to every breakfast (a different one each day, picked at random from the fruits in season on that date, by US East Coast seasons) and balances the rest of the meal around it. A fruit with no season listed (banana, papaya) is available all year. There are no videos, because there is nothing to cook.",
     recipes: [
       {
-        name: "Apple", channel: "Fresh fruit", id: "fruit-apple", video: null, dailyPick: "breakfast",
+        name: "Apple", channel: "Fresh fruit", id: "fruit-apple", video: null, dailyPick: "breakfast", months: [9, 10, 11, 12, 1, 2],
         macros: {"servings": 1, "serving": "1 medium apple (about 182 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 94.6, "p": 0.5, "c": 25.1, "f": 0.3},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1535,7 +1535,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 medium banana (about 118 g), from USDA data for raw banana. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Mandarin", channel: "Fresh fruit", id: "fruit-mandarin", video: null, dailyPick: "breakfast",
+        name: "Mandarin", channel: "Fresh fruit", id: "fruit-mandarin", video: null, dailyPick: "breakfast", months: [11, 12, 1, 2, 3],
         macros: {"servings": 1, "serving": "2 medium mandarins (about 176 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 93.3, "p": 1.4, "c": 23.5, "f": 0.5},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1544,7 +1544,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 2 medium mandarins (about 176 g), from USDA data for raw mandarin. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Mango", channel: "Fresh fruit", id: "fruit-mango", video: null, dailyPick: "breakfast",
+        name: "Mango", channel: "Fresh fruit", id: "fruit-mango", video: null, dailyPick: "breakfast", months: [4, 5, 6, 7, 8],
         macros: {"servings": 1, "serving": "1 cup mango pieces (about 165 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 99.0, "p": 1.4, "c": 24.7, "f": 0.6},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1562,7 +1562,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 cup papaya pieces (about 145 g), from USDA data for raw papaya. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Guava", channel: "Fresh fruit", id: "fruit-guava", video: null, dailyPick: "breakfast",
+        name: "Guava", channel: "Fresh fruit", id: "fruit-guava", video: null, dailyPick: "breakfast", months: [6, 7, 8, 9, 10, 11],
         macros: {"servings": 1, "serving": "1 cup guava pieces (about 165 g, roughly 3 small guavas)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 112.2, "p": 4.2, "c": 23.6, "f": 1.6},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1571,7 +1571,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 cup guava pieces (about 165 g, roughly 3 small guavas), from USDA data for raw guava. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Pomegranate", channel: "Fresh fruit", id: "fruit-pomegranate", video: null, dailyPick: "breakfast",
+        name: "Pomegranate", channel: "Fresh fruit", id: "fruit-pomegranate", video: null, dailyPick: "breakfast", months: [10, 11, 12, 1],
         macros: {"servings": 1, "serving": "½ cup pomegranate seeds (about 87 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 72.2, "p": 1.5, "c": 16.3, "f": 1.0},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1580,7 +1580,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for ½ cup pomegranate seeds (about 87 g), from USDA data for raw pomegranate. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Watermelon", channel: "Fresh fruit", id: "fruit-watermelon", video: null, dailyPick: "breakfast",
+        name: "Watermelon", channel: "Fresh fruit", id: "fruit-watermelon", video: null, dailyPick: "breakfast", months: [6, 7, 8, 9],
         macros: {"servings": 1, "serving": "2 cups diced watermelon (about 304 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 91.2, "p": 1.9, "c": 23.0, "f": 0.5},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1589,7 +1589,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 2 cups diced watermelon (about 304 g), from USDA data for raw watermelon. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Grapes", channel: "Fresh fruit", id: "fruit-grapes", video: null, dailyPick: "breakfast",
+        name: "Grapes", channel: "Fresh fruit", id: "fruit-grapes", video: null, dailyPick: "breakfast", months: [8, 9, 10, 11],
         macros: {"servings": 1, "serving": "1 cup grapes (about 151 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 104.2, "p": 1.1, "c": 27.3, "f": 0.2},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1598,7 +1598,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 cup grapes (about 151 g), from USDA data for raw grapes. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Blueberries", channel: "Fresh fruit", id: "fruit-blueberries", video: null, dailyPick: "breakfast",
+        name: "Blueberries", channel: "Fresh fruit", id: "fruit-blueberries", video: null, dailyPick: "breakfast", months: [6, 7, 8, 9],
         macros: {"servings": 1, "serving": "1 cup blueberries (about 148 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 84.4, "p": 1.1, "c": 21.4, "f": 0.5},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1607,7 +1607,16 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 cup blueberries (about 148 g), from USDA data for raw blueberries. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Pear", channel: "Fresh fruit", id: "fruit-pear", video: null, dailyPick: "breakfast",
+        name: "Blackberries", channel: "Fresh fruit", id: "fruit-blackberries", video: null, dailyPick: "breakfast", months: [6, 7, 8],
+        macros: {"servings": 1, "serving": "1 cup blackberries (about 144 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 61.9, "p": 2.0, "c": 13.8, "f": 0.7},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup blackberries (about 144 g), washed",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup blackberries (about 144 g), from USDA data for raw blackberries. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Pear", channel: "Fresh fruit", id: "fruit-pear", video: null, dailyPick: "breakfast", months: [8, 9, 10, 11, 12, 1, 2],
         macros: {"servings": 1, "serving": "1 medium pear (about 178 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 101.5, "p": 0.6, "c": 27.1, "f": 0.2},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1616,7 +1625,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 medium pear (about 178 g), from USDA data for raw pear. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Pineapple", channel: "Fresh fruit", id: "fruit-pineapple", video: null, dailyPick: "breakfast",
+        name: "Pineapple", channel: "Fresh fruit", id: "fruit-pineapple", video: null, dailyPick: "breakfast", months: [3, 4, 5, 6, 7],
         macros: {"servings": 1, "serving": "1 cup pineapple chunks (about 165 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 82.5, "p": 0.9, "c": 21.6, "f": 0.2},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1625,7 +1634,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 cup pineapple chunks (about 165 g), from USDA data for raw pineapple. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Muskmelon", channel: "Fresh fruit", id: "fruit-muskmelon", video: null, dailyPick: "breakfast",
+        name: "Muskmelon", channel: "Fresh fruit", id: "fruit-muskmelon", video: null, dailyPick: "breakfast", months: [6, 7, 8, 9],
         macros: {"servings": 1, "serving": "1 cup diced muskmelon (about 156 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 53.0, "p": 1.3, "c": 12.7, "f": 0.3},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1634,7 +1643,7 @@ const sections = [
         note: "Wash and eat it fresh. The numbers are for 1 cup diced muskmelon (about 156 g), from USDA data for raw muskmelon. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Kiwi", channel: "Fresh fruit", id: "fruit-kiwi", video: null, dailyPick: "breakfast",
+        name: "Kiwi", channel: "Fresh fruit", id: "fruit-kiwi", video: null, dailyPick: "breakfast", months: [10, 11, 12, 1, 2, 3, 4, 5],
         macros: {"servings": 1, "serving": "2 kiwis (about 138 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 84.2, "p": 1.6, "c": 20.2, "f": 0.7},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
