@@ -663,3 +663,21 @@ details.shopping.panel > summary { color: var(--pn-shp-fg); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --pn-dat-bg: #3b3220; --pn-dat-bd: #7a6532; --pn-dat-fg: #f3dd9b; } }
 #plan > .range-picker { background: var(--pn-dat-bg); border: 1px solid var(--pn-dat-bd); border-radius: 14px; padding: 16px 20px; margin: 0 0 16px; }
 #plan > .range-picker .week-question { color: var(--pn-dat-fg); font-size: 1.2rem; margin-bottom: 12px; }
+
+/* Meal prep chart (how-it-works): stays a real table on phones, with a coloured header like the video's chart */
+.guide-table.prep-table { table-layout: auto; }
+.guide-table.prep-table th, .guide-table.prep-table td { text-align: center; vertical-align: middle; white-space: nowrap; }
+.prep-table thead th { background: var(--surface); color: var(--text); font-weight: 800; border-bottom: 2px solid var(--accent-strong); }
+.guide-table.prep-table th:first-child, .guide-table.prep-table td:first-child { text-align: left; }
+.prep-table tbody td:first-child { font-weight: 700; }
+.prep-table tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--accent-strong) 7%, transparent); }
+@media (max-width: 760px) {
+  .table-wrap:has(.prep-table) { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow-x: auto; }
+  .prep-table { display: table; table-layout: auto; font-size: 0.85rem; }
+  .prep-table thead { position: static; width: auto; height: auto; overflow: visible; clip: auto; display: table-header-group; }
+  .prep-table tbody { display: table-row-group; }
+  .prep-table tr { display: table-row; margin: 0; padding: 0; background: none; border: 0; }
+  .guide-table.prep-table th, .guide-table.prep-table td { display: table-cell; padding: 8px 5px; white-space: normal; }
+  .guide-table.prep-table { font-size: 0.8rem; }
+  .guide-table.prep-table thead th { font-size: 0.68rem; }
+}
