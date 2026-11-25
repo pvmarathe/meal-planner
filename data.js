@@ -108,12 +108,11 @@ const sections = [
         ],
       },
       {
-        name: "Foxtail Millet Idli", channel: "Sanjeev Kapoor Khazana", id: "NMG8_wwlcRE", video: "https://www.youtube.com/watch?v=w4LQI78Ctp8", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 10, "serving": "2 idlis", "basis": "assumed", "why": "Assumed: about 16 g of dry ingredients per idli (the average of Hebbar's idli recipes).", "kcal": 115.3, "p": 4.7, "c": 21.7, "f": 1.0}, from: DESC,
+        name: "Foxtail Millet Idli", channel: "WahRecipes", video: "https://www.youtube.com/watch?v=NMG8_wwlcRE", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 10, "serving": "2 idlis", "basis": "assumed", "why": "Assumed: about 16 g of dry ingredients per idli (the average of Hebbar's idli recipes).", "kcal": 115.3, "p": 4.7, "c": 21.7, "f": 1.0}, from: DESC,
         ingredients: [
           "1 cup foxtail millet (korralu), washed and soaked", "½ cup urad dal", "¼ cup flattened rice (poha)",
           "2 tsp fenugreek (methi) seeds", "Salt, as required",
         ],
-        note: "The video was chosen for popularity: Sanjeev Kapoor Khazana, 2:33 long, 156,025 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Quinoa Idli", channel: "Chitra's Food Book", video: "https://www.youtube.com/watch?v=UdYZpQnIeAc", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 21, "serving": "2 idlis", "basis": "assumed", "why": "Assumed: about 16 g of dry ingredients per idli (the average of Hebbar's idli recipes).", "kcal": 116.5, "p": 4.6, "c": 21.7, "f": 1.1},
@@ -148,7 +147,8 @@ const sections = [
         ],
       },
       {
-        name: "Moong Dal Dosa (Yellow Moong)", channel: "Rajshri Food", id: "4U2lFDChRP4", video: "https://www.youtube.com/watch?v=bLi5nLUWGF8", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 3, "serving": "2 dosas (about 65 g of dry grain, flour and dal)", "basis": "assumed", "why": "Assumed: 2 dosas use about 65 g of dry ingredients (the average of the dosa recipes here that state how many they make).", "kcal": 305.5, "p": 12.6, "c": 38.3, "f": 12.1},
+        name: "Moong Dal Dosa (Yellow Moong)", channel: "Khatri's Kitchen",
+        video: "https://www.youtube.com/watch?v=4U2lFDChRP4", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 3, "serving": "2 dosas (about 65 g of dry grain, flour and dal)", "basis": "assumed", "why": "Assumed: 2 dosas use about 65 g of dry ingredients (the average of the dosa recipes here that state how many they make).", "kcal": 305.5, "p": 12.6, "c": 38.3, "f": 12.1},
         from: DESC,
         ingredients: [
           "150 g moong dal (1 cup)",
@@ -161,7 +161,7 @@ const sections = [
           "2 tbsp fresh coriander",
           "Paneer, optional",
         ],
-        note: "The description gives the moong dal as 1 cup (150 g). No amount is given for the optional paneer. The video was chosen for popularity: Rajshri Food, 4:51 long, 3,035,473 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "The description gives the moong dal as 1 cup (150 g). No amount is given for the optional paneer.",
       },
       {
         name: "Adai Dosa (Classic, with Rice)", channel: "HomeCookingShow",
@@ -269,7 +269,8 @@ const sections = [
         ],
       },
       {
-        name: "Mixed Sprouts Dosa", channel: "Hebbars Kitchen", id: "OWZYjuO8XvU", video: "https://www.youtube.com/watch?v=ySnmQeOQCcM", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 4, "serving": "2 dosas (about 65 g of dry grain, flour and dal)", "basis": "assumed", "why": "Assumed: 2 dosas use about 65 g of dry ingredients (the average of the dosa recipes here that state how many they make).", "kcal": 204.7, "p": 11.1, "c": 38.1, "f": 1.0},
+        name: "Mixed Sprouts Dosa", channel: "Mahalaxmi Real Kitchen",
+        video: "https://www.youtube.com/watch?v=OWZYjuO8XvU", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 4, "serving": "2 dosas (about 65 g of dry grain, flour and dal)", "basis": "assumed", "why": "Assumed: 2 dosas use about 65 g of dry ingredients (the average of the dosa recipes here that state how many they make).", "kcal": 204.7, "p": 11.1, "c": 38.1, "f": 1.0},
         from: DESC,
         ingredients: [
           "2 cups mixed sprouts",
@@ -282,7 +283,7 @@ const sections = [
           { title: "To serve", items: ["Schezwan chutney", "Cheese", "Butter"] },
           { title: "Chutney", items: ["Grated fresh coconut", "Coriander leaves", "Green chilli", "Garlic", "Salt"] },
         ],
-        note: "The creator lists the toppings and chutney without amounts, so the nutrition counts the dosa only. The video was chosen for popularity: Hebbars Kitchen, 5:44 long, 1,396,473 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "The creator lists the toppings and chutney without amounts, so the nutrition counts the dosa only.",
       },
       {
         name: "Instant Bajra Dosa (Pearl Millet, No Rice)", channel: "Healthy and Tasty Channel",
@@ -352,7 +353,8 @@ const sections = [
         note: "The creator says to grind with 1 cup of water, then add another cup to thin the batter.",
       },
       {
-        name: "Multigrain Dosa (Ragi, Moong & Black Chana)", channel: "Kunal Kapur", id: "_kztpIt_kK4", video: "https://www.youtube.com/watch?v=tqqbBl7OVg4", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "2 dosas (about 65 g of dry grain, flour and dal)", "basis": "assumed", "why": "Assumed: 2 dosas use about 65 g of dry ingredients (the average of the dosa recipes here that state how many they make).", "kcal": 223.7, "p": 9.5, "c": 43.1, "f": 1.4},
+        name: "Multigrain Dosa (Ragi, Moong & Black Chana)", channel: "Yum Recipes Hut",
+        video: "https://www.youtube.com/watch?v=_kztpIt_kK4", meals: {"breakfast": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "2 dosas (about 65 g of dry grain, flour and dal)", "basis": "assumed", "why": "Assumed: 2 dosas use about 65 g of dry ingredients (the average of the dosa recipes here that state how many they make).", "kcal": 223.7, "p": 9.5, "c": 43.1, "f": 1.4},
         from: DESC,
         ingredients: [
           "½ cup rice",
@@ -366,7 +368,7 @@ const sections = [
           "Salt, to taste",
           { title: "Chutney", items: ["½ cup coconut", "2 tbsp roasted chana dal (putani)", "A handful of coriander leaves", "2 tbsp mint", "1 green chilli", "Small piece of tamarind (optional)", "Salt, to taste", "3 tbsp water, or as required", "For the tempering: 1 tsp coconut oil, ½ tsp mustard seeds, ½ tsp cumin seeds, 1 dry red chilli, curry leaves"] },
         ],
-        note: "The nutrition counts the dosa only, not the chutney. The video was chosen for popularity: Kunal Kapur, 10:23 long, 470,012 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "The nutrition counts the dosa only, not the chutney.",
       },
       {
         name: "Navadhanya Dosa (9-Grain & Dal)", channel: "Parmis Kitchen",
@@ -446,7 +448,8 @@ const sections = [
         ],
       },
       {
-        name: "Kosambari (Moong Dal & Cucumber Salad)", channel: "Rajshri Food", id: "A2ULKh7gg3c", video: "https://www.youtube.com/watch?v=7DC4WJsa4ZU", meals: {"lunch": "side", "dinner": "side"}, macros: {"servings": 2, "serving": "1 bowl (about 200 g of salad)", "basis": "assumed", "why": "Assumed: a bowl of salad is about 200 g.", "kcal": 220.1, "p": 7.7, "c": 25.9, "f": 10.7}, from: DESC,
+        name: "Kosambari (Moong Dal & Cucumber Salad)", channel: "Healthy Rasoi by Ritu Khemka",
+        video: "https://www.youtube.com/watch?v=A2ULKh7gg3c", meals: {"lunch": "side", "dinner": "side"}, macros: {"servings": 2, "serving": "1 bowl (about 200 g of salad)", "basis": "assumed", "why": "Assumed: a bowl of salad is about 200 g.", "kcal": 220.1, "p": 7.7, "c": 25.9, "f": 10.7}, from: DESC,
         ingredients: [
           {
             title: "Salad",
@@ -459,16 +462,14 @@ const sections = [
           },
           { title: "Tadka", items: ["1 tbsp oil", "1 pinch hing", "½ tsp mustard seeds", "8–10 curry leaves"] },
         ],
-        note: "The video was chosen for popularity: Rajshri Food, 4:22 long, 109,142 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
-        name: "Kala Chana Chaat", channel: "Kunal Kapur", id: "bQJd4m6POck", video: "https://www.youtube.com/watch?v=xww37_YIxe4", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 4, "serving": "1 bowl (about 50 g of dry kala chana)", "basis": "assumed", "why": "Assumed: about 50 g of dry chickpeas per bowl, since they swell when cooked.", "kcal": 227.7, "p": 10.5, "c": 32.4, "f": 6.9}, from: DESC,
+        name: "Kala Chana Chaat", channel: "She Cooks", video: "https://www.youtube.com/watch?v=bQJd4m6POck", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 4, "serving": "1 bowl (about 50 g of dry kala chana)", "basis": "assumed", "why": "Assumed: about 50 g of dry chickpeas per bowl, since they swell when cooked.", "kcal": 227.7, "p": 10.5, "c": 32.4, "f": 6.9}, from: DESC,
         ingredients: [
           "1 cup kala chana (black chickpeas)", "1 tbsp oil", "½ tsp chana dal", "½ tsp urad dal", "½ tsp mustard seeds",
           "¼ tsp cumin seeds", "1 tsp chopped ginger", "¼ tsp asafoetida (hing)", "3 green chillies", "1 red chilli",
           "1 sprig curry leaf", "¼ tsp turmeric powder", "1 tbsp grated coconut", "Salt",
         ],
-        note: "The video was chosen for popularity: Kunal Kapur, 7:45 long, 2,353,931 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Rajma Paneer Salad", channel: "Vaishalee Jolly", video: "https://www.youtube.com/watch?v=qGoAgbUwPCE", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 3, "serving": "1 bowl (about 200 g of salad)", "basis": "assumed", "why": "Assumed: a bowl of salad is about 200 g.", "kcal": 252.0, "p": 12.9, "c": 24.3, "f": 12.8}, from: DESC,
@@ -486,12 +487,11 @@ const sections = [
         ],
       },
       {
-        name: "Sweet Corn Salad", channel: "Kunal Kapur", id: "y4jb7Gyf6fA", video: "https://www.youtube.com/watch?v=oO56X3bWx6A", meals: {"lunch": "side", "dinner": "side"}, macros: {"servings": 5, "serving": "1 bowl (about 200 g of salad)", "basis": "assumed", "why": "Assumed: a bowl of salad is about 200 g.", "kcal": 104.5, "p": 3.9, "c": 23.2, "f": 1.4}, from: DESC,
+        name: "Sweet Corn Salad", channel: "Dindigul Food Court", video: "https://www.youtube.com/watch?v=y4jb7Gyf6fA", meals: {"lunch": "side", "dinner": "side"}, macros: {"servings": 5, "serving": "1 bowl (about 200 g of salad)", "basis": "assumed", "why": "Assumed: a bowl of salad is about 200 g.", "kcal": 104.5, "p": 3.9, "c": 23.2, "f": 1.4}, from: DESC,
         ingredients: [
           "3 cups sweet corn", "1 cucumber", "1 tomato", "½ capsicum", "1 onion", "1 carrot, grated", "Coriander leaves (amount not given)",
           "½ tsp chilli powder", "½ tsp pepper", "½ tsp chaat masala", "Juice of ½ lemon", "Salt",
         ],
-        note: "The video was chosen for popularity: Kunal Kapur, 7:12 long, 876,958 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Kachumber Salad", channel: "Bhavna's Kitchen & Living", video: "https://www.youtube.com/watch?v=bmAggasY6ls", meals: {"lunch": "side", "dinner": "side"}, macros: {"servings": 4, "serving": "1 bowl (about 200 g of salad)", "basis": "assumed", "why": "Assumed: a bowl of salad is about 200 g.", "kcal": 46.2, "p": 1.7, "c": 10.6, "f": 0.3}, from: DESC,
@@ -621,7 +621,8 @@ const sections = [
         ],
       },
       {
-        name: "Dadpe Pohe (No-Cook Poha)", channel: "Hebbars Kitchen", id: "9hZZ8JtirWM", video: "https://www.youtube.com/watch?v=fc_WFLyuya4", meals: {"breakfast": "main"}, macros: {"servings": 2, "serving": "1 plate (about 40 g of dry poha)", "basis": "assumed", "why": "Assumed: a plate of poha uses about 40 g dry.", "kcal": 444.5, "p": 9.0, "c": 47.7, "f": 25.9}, from: DESC,
+        name: "Dadpe Pohe (No-Cook Poha)", channel: "Healthy Rasoi by Ritu Khemka",
+        video: "https://www.youtube.com/watch?v=9hZZ8JtirWM", meals: {"breakfast": "main"}, macros: {"servings": 2, "serving": "1 plate (about 40 g of dry poha)", "basis": "assumed", "why": "Assumed: a plate of poha uses about 40 g dry.", "kcal": 444.5, "p": 9.0, "c": 47.7, "f": 25.9}, from: DESC,
         ingredients: [
           {
             title: "Poha",
@@ -635,7 +636,6 @@ const sections = [
             items: ["1–2 tbsp oil", "1 pinch hing (asafoetida)", "½ tsp mustard seeds", "½ tsp cumin seeds", "¼ cup peanuts", "2–3 green chillies, sliced", "A few curry leaves"],
           },
         ],
-        note: "The video was chosen for popularity: Hebbars Kitchen, 2:21 long, 299,441 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Vegetable Poha", channel: "Your Food Lab", video: "https://www.youtube.com/watch?v=yWkF-2aBDZE", meals: {"breakfast": "main"}, macros: {"servings": 5, "serving": "1 plate (about 40 g of dry poha)", "basis": "assumed", "why": "Assumed: a plate of poha uses about 40 g dry.", "kcal": 275.3, "p": 6.4, "c": 43.5, "f": 9.3}, from: DESC,
@@ -860,12 +860,11 @@ const sections = [
         ],
       },
       {
-        name: "Quinoa Poha", channel: "Sanjeev Kapoor Khazana", id: "CsHU1jSKtjQ", video: "https://www.youtube.com/watch?v=YPWKMDRFRB4", meals: {"breakfast": "main"}, macros: {"servings": 3, "serving": "1 plate (about 50 g of dry grain)", "basis": "assumed", "why": "Assumed: about 50 g of dry grain per plate.", "kcal": 301.9, "p": 9.7, "c": 38.6, "f": 12.5}, from: DESC,
+        name: "Quinoa Poha", channel: "Healthy Indian Recipes", video: "https://www.youtube.com/watch?v=CsHU1jSKtjQ", meals: {"breakfast": "main"}, macros: {"servings": 3, "serving": "1 plate (about 50 g of dry grain)", "basis": "assumed", "why": "Assumed: about 50 g of dry grain per plate.", "kcal": 301.9, "p": 9.7, "c": 38.6, "f": 12.5}, from: DESC,
         ingredients: [
           "1 cup quinoa", "1 tsp oil (for cooking the quinoa)", "1 tbsp oil (for the poha)", "1 tsp cumin seeds", "2 tbsp raw peanuts",
           "1–2 green chillies (to taste)", "1 tsp turmeric powder", "¼ cup onions", "½ tsp salt",
         ],
-        note: "The video was chosen for popularity: Sanjeev Kapoor Khazana, 7:07 long, 1,040,127 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Curd Quinoa", channel: "Cooking With Priti Puja", video: "https://www.youtube.com/watch?v=Gq4nEPkTsVU", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 2, "serving": "1 plate (about 50 g of dry grain)", "basis": "assumed", "why": "Assumed: about 50 g of dry grain per plate.", "kcal": 377.8, "p": 15.9, "c": 38.5, "f": 18.9}, from: DESC,
@@ -1111,7 +1110,7 @@ const sections = [
         note: "The creator doesn't give amounts for several items. Watch the video for those.",
       },
       {
-        name: "Palak Paneer Paratha", channel: "Kunal Kapur", id: "USniwLerbrw", video: "https://www.youtube.com/watch?v=YK0ogDddfdo", meals: {"breakfast": "main", "lunch": "main", "dinner": "main"}, macros: {"servings": 6, "serving": "1 paratha (about 40 g of flour)", "basis": "assumed", "why": "Assumed: about 40 g of flour per paratha, as in Hebbar's recipes.", "kcal": 275.2, "p": 15.3, "c": 30.4, "f": 12.3}, from: DESC,
+        name: "Palak Paneer Paratha", channel: "INDIANCOOKINEVERYDAY", video: "https://www.youtube.com/watch?v=USniwLerbrw", meals: {"breakfast": "main", "lunch": "main", "dinner": "main"}, macros: {"servings": 6, "serving": "1 paratha (about 40 g of flour)", "basis": "assumed", "why": "Assumed: about 40 g of flour per paratha, as in Hebbar's recipes.", "kcal": 275.2, "p": 15.3, "c": 30.4, "f": 12.3}, from: DESC,
         ingredients: [
           {
             title: "Dough",
@@ -1128,7 +1127,6 @@ const sections = [
             ],
           },
         ],
-        note: "The video was chosen for popularity: Kunal Kapur, 10:16 long, 1,105,738 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Besan Stuffed Paratha", channel: "Cookd", video: "https://www.youtube.com/watch?v=h_90MVyvrlM", meals: {"breakfast": "main", "lunch": "main", "dinner": "main"}, macros: {"servings": 8, "serving": "1 paratha (about 40 g of flour)", "basis": "assumed", "why": "Assumed: about 40 g of flour per paratha, as in Hebbar's recipes.", "kcal": 151.3, "p": 5.9, "c": 27.0, "f": 2.9}, from: DESC,
@@ -1180,16 +1178,16 @@ const sections = [
     note: "Indian lentil dishes that cook quickly in an Instant Pot. Rajma is a bean, not a lentil, but it is cooked the same way, so it's included.",
     recipes: [
       {
-        name: "Restaurant-Style Dal Tadka (Mixed Dals)", channel: "CookingShooking", id: "wKWm5qvaCDk", video: "https://www.youtube.com/watch?v=XzVxjs3PTm4", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 202.0, "p": 10.0, "c": 28.9, "f": 5.8}, from: DESC,
+        name: "Restaurant-Style Dal Tadka (Mixed Dals)", channel: "Busy Bees Recipes", video: "https://www.youtube.com/watch?v=wKWm5qvaCDk", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 202.0, "p": 10.0, "c": 28.9, "f": 5.8}, from: DESC,
         ingredients: [
           "½ cup masoor dal", "¼ cup moong dal", "¼ cup toor dal", "1 onion, chopped small", "1 tomato, chopped small", "4 garlic cloves, chopped small",
           "Curry leaves (amount not given)", "2 green chillies, slit", "2 dried red chillies", "1 tsp cumin seeds", "1 tsp chilli powder", "¼ tsp turmeric powder",
           "1 tsp cumin powder", "1 pinch asafoetida", "1 tsp kasuri methi", "1 tbsp ghee", "1 tbsp oil", "Salt", "2 cups water",
         ],
-        note: "The description says \"1 tap\" for the cumin seeds. I read that as 1 tsp. The video was chosen for popularity: CookingShooking, 7:30 long, 5,123,747 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "The description says \"1 tap\" for the cumin seeds. I read that as 1 tsp.",
       },
       {
-        name: "Moong Dal Tadka", channel: "Hebbars Kitchen", id: "tr1yYbZcVuw", video: "https://www.youtube.com/watch?v=K58aXvkJmYg", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 212.4, "p": 10.7, "c": 30.9, "f": 5.9}, from: DESC,
+        name: "Moong Dal Tadka", channel: "Busy Bees Recipes", video: "https://www.youtube.com/watch?v=tr1yYbZcVuw", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 212.4, "p": 10.7, "c": 30.9, "f": 5.9}, from: DESC,
         ingredients: [
           {
             title: "Dal",
@@ -1203,7 +1201,6 @@ const sections = [
             items: ["1 tbsp ghee", "1 tbsp oil", "1 tsp cumin seeds", "1 dried red chilli", "A pinch of hing (asafoetida)", "Curry leaves", "Salt"],
           },
         ],
-        note: "The video was chosen for popularity: Hebbars Kitchen, 1:51 long, 2,469,329 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Urad Dal Tadka (Dhaba Style)", channel: "Chili In a Pod", video: "https://www.youtube.com/watch?v=UPOEREBP7kk", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 3, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 357.1, "p": 9.7, "c": 30.3, "f": 22.9}, from: DESC,
@@ -1223,14 +1220,13 @@ const sections = [
         ],
       },
       {
-        name: "Chana Dal Tadka", channel: "Kunal Kapur", id: "nXWiQkcZrX4", video: "https://www.youtube.com/watch?v=VoV7b7XtS2E", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 208.6, "p": 8.8, "c": 28.7, "f": 7.2}, from: DESC,
+        name: "Chana Dal Tadka", channel: "Sushma's Healthy Kitchen", video: "https://www.youtube.com/watch?v=nXWiQkcZrX4", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 5, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 208.6, "p": 8.8, "c": 28.7, "f": 7.2}, from: DESC,
         ingredients: [
           "1 cup chana dal", "1½ tbsp oil", "1 tsp cumin seeds (jeera)", "1 pinch asafoetida (hing)", "1 small onion, sliced", "2 green chillies, chopped",
           "A few curry leaves", "1 tbsp ginger-garlic paste", "⅓ tsp turmeric", "1 tsp coriander (dhaniya) powder", "½ tsp cumin (jeera) powder",
           "1 tsp red chilli powder", "½ tsp chilli flakes", "1 cup tomatoes, chopped", "Salt, to taste", "½ tsp garam masala", "½ tsp kasoori methi (dried fenugreek leaves)",
           "1–2 green chillies, chopped", "A few ginger julienne", "2 tbsp cilantro (coriander leaves)", "½ to 1 tsp ghee",
         ],
-        note: "The video was chosen for popularity: Kunal Kapur, 4:35 long, 1,992,422 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
       },
       {
         name: "Toor Dal (Plain Indian Dal)", channel: "The Shooting Nomads", video: "https://www.youtube.com/watch?v=REZRzsyFazw", meals: {"lunch": "main", "dinner": "main"}, macros: {"servings": 13, "serving": "1 bowl (about 40 g of dry dal)", "basis": "assumed", "why": "Assumed: about 40 g of dry dal per bowl.", "kcal": 142.7, "p": 8.8, "c": 26.4, "f": 0.6}, from: DESC,
@@ -2195,7 +2191,7 @@ const sections = [
         note: "Chole in soup form: tangy tomato and chickpea shorba with chole masala, topped with paneer croutons, roasted chana and yogurt.",
       },
       {
-        name: "Sambar Soup", channel: "Hebbars Kitchen", id: "more-sambar_soup_bowl", video: "https://www.youtube.com/watch?v=7zn6ajq3dTw",
+        name: "Sambar Soup", channel: "Dr. Libin Lucas", id: "more-sambar_soup_bowl", video: "https://www.youtube.com/watch?v=5HFPtE5Fcdc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 795.7, "p": 44.2, "c": 135.9, "f": 11.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Sambar soup (about 2½ cups)"]},
@@ -2204,7 +2200,7 @@ const sections = [
           {"title": "Swirl & garnish", "items": []},
           {"title": "Sambar soup: about 2½ cups", "items": ["0.6 cup toor dal", "0.2 cup masoor dal (split red lentils)", "½ cup carrots, shredded", "¼ red onion", "¼ cup crushed tomatoes (canned)", "1½ tsp sambar powder", "1 tsp tamarind paste (concentrate)", "0.06 tsp ground turmeric (haldi)", "¼ tsp black mustard seeds (rai)", "1 sprig fresh curry leaves", "0.03 tsp hing (asafoetida)", "½ tbsp neutral oil (canola or avocado)", "¼ tsp salt"]},
         ],
-        note: "A thick, tangy toor-and-masoor sambar loaded with vegetables, tempered with mustard seeds and curry leaves, with crunchy pottukadalai on top. The video was chosen for popularity: Hebbars Kitchen, 2:44 long, 266,231 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "A thick, tangy toor-and-masoor sambar loaded with vegetables, tempered with mustard seeds and curry leaves, with crunchy pottukadalai on top. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Veg Haleem", channel: "Vismai Food", id: "more-haleem_soup", video: "https://www.youtube.com/watch?v=Y-vANeXRh9s",
@@ -2417,7 +2413,7 @@ const sections = [
         note: "The soya keema paratha on an oats dough: dry, spiced soya and peas inside a soft oat-atta crust. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Oats Moong Dal Paratha", channel: "Hebbars Kitchen", id: "more-oats_moong_paratha", video: "https://www.youtube.com/watch?v=HJ_FcMxifVE",
+        name: "Oats Moong Dal Paratha", channel: "Ask Nestlé", id: "more-oats_moong_paratha", video: "https://www.youtube.com/watch?v=sq49irlL_T4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 768.4, "p": 43.8, "c": 86.2, "f": 30.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Oats protein dough (2 parathas)"]},
@@ -2428,7 +2424,7 @@ const sections = [
           {"title": "Moong dal filling: for 2 parathas", "items": ["¼ cup split yellow moong dal", "1 oz paneer", "½ tsp fresh ginger, grated", "¼ Indian green chili", "⅛ tsp cumin seeds (jeera)", "⅛ tsp garam masala", "½ tbsp cilantro, chopped", "¼ tbsp ghee", "⅛ tsp salt"]},
           {"title": "Mint raita: 1¼ × about ⅓ cup", "items": ["7½ tbsp plain Greek yogurt", "⅝ tbsp mint, chopped", "0.16 cucumber", "0.16 tsp cumin seeds (jeera)", "0.04 tsp salt"]},
         ],
-        note: "Gingery yellow moong dal and paneer stuffed into an oats dough — light enough for breakfast. Serving: 2 parathas. The video was chosen for popularity: Hebbars Kitchen, 3:40 long, 114,600 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Gingery yellow moong dal and paneer stuffed into an oats dough — light enough for breakfast. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Oats Tofu Masala Paratha", channel: "Recipe collection", id: "more-oats_tofu_paratha", video: null,
@@ -2801,7 +2797,7 @@ const sections = [
         note: "Toor dal with a big handful of spinach and a garlicky tadka — two healthy dishes in one pot. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tomato Pappu", channel: "Hebbars Kitchen", id: "more-tomato_pappu", video: "https://www.youtube.com/watch?v=CRsw7Yq5ADU",
+        name: "Tomato Pappu", channel: "Food on Farm", id: "more-tomato_pappu", video: "https://www.youtube.com/watch?v=B8GTErgTpbM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 330.3, "p": 16.7, "c": 52.2, "f": 7.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tomato pappu (about 1 cup)"]},
@@ -2811,7 +2807,7 @@ const sections = [
           {"title": "Tomato pappu: about 1 cup", "items": ["⅓ cup toor dal", "½ cup crushed tomatoes (canned)", "½ Indian green chili", "0.06 tsp ground turmeric (haldi)", "¼ tsp tamarind paste (concentrate)", "¼ tsp salt"]},
           {"title": "Vaghar (tempering): 1 tbsp", "items": ["½ tbsp ghee", "¼ tsp black mustard seeds (rai)", "⅛ tsp cumin seeds (jeera)", "½ sprig fresh curry leaves", "1 dried red chili", "0.03 tsp hing (asafoetida)"]},
         ],
-        note: "Andhra's tangy, spicy everyday dal: toor and tomatoes cooked together and finished with a mustard-seed tadka. Eaten with rice and a spoon of ghee. The video was chosen for popularity: Hebbars Kitchen, 2:27 long, 1,335,573 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Andhra's tangy, spicy everyday dal: toor and tomatoes cooked together and finished with a mustard-seed tadka. Eaten with rice and a spoon of ghee. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Kerala Parippu", channel: "Shaan Geo", id: "more-parippu", video: "https://www.youtube.com/watch?v=eHUKcraNLJQ",
@@ -2876,7 +2872,7 @@ const sections = [
         note: "South India's everyday dal: toor dal, drumstick, carrot and shallots in a tangy tamarind and sambar-powder gravy, finished with a curry-leaf tempering. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tomato Rasam", channel: "Kabita's Kitchen", id: "more-tomato_rasam", video: "https://www.youtube.com/watch?v=iJYSW6451Pg",
+        name: "Tomato Rasam", channel: "Vismai Food", id: "more-tomato_rasam", video: "https://www.youtube.com/watch?v=vYqzxxiGoms",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 180.6, "p": 6.7, "c": 24.4, "f": 7.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tomato rasam (about 1¼ cups)"]},
@@ -2886,7 +2882,7 @@ const sections = [
           {"title": "Tomato rasam: about 1¼ cups", "items": ["0.1 cup toor dal", "½ cup crushed tomatoes (canned)", "1 tsp rasam powder", "½ tsp tamarind paste (concentrate)", "1 clove garlic", "¼ tsp black pepper", "¼ tsp cumin seeds (jeera)", "0.03 tsp ground turmeric (haldi)", "1 tbsp cilantro, chopped", "¼ tsp salt"]},
           {"title": "Thalippu (tempering): 1 tbsp", "items": ["½ tbsp coconut oil", "¼ tsp black mustard seeds (rai)", "½ sprig fresh curry leaves", "1 dried red chili", "0.03 tsp hing (asafoetida)"]},
         ],
-        note: "Thin, peppery, sour and comforting — tomato and tamarind broth with garlic, cumin and a little toor dal. Light rather than high-protein, but hard to beat when you're under the weather. The video was chosen for popularity: Kabita's Kitchen, 7:12 long, 4,942,948 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Thin, peppery, sour and comforting — tomato and tamarind broth with garlic, cumin and a little toor dal. Light rather than high-protein, but hard to beat when you're under the weather. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Mor Kuzhambu", channel: "Madras Samayal", id: "more-mor_kuzhambu", video: "https://www.youtube.com/watch?v=0o5JA3jqymA",
@@ -3070,7 +3066,7 @@ const sections = [
         note: "Bengal's best-loved potato dish: soft potatoes coated in a creamy white poppy-seed paste with green chili and a sharp drizzle of mustard oil.",
       },
       {
-        name: "Aviyal", channel: "Hebbars Kitchen", id: "more-aviyal", video: "https://www.youtube.com/watch?v=_C9SZg3adxI",
+        name: "Aviyal", channel: "Shaan Geo", id: "more-aviyal", video: "https://www.youtube.com/watch?v=4IiBJEvdOa4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 410.9, "p": 11.8, "c": 49.3, "f": 20.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Aviyal (about 1¼ cups)"]},
@@ -3079,7 +3075,7 @@ const sections = [
           {"title": "Tadka", "items": []},
           {"title": "Aviyal: about 1¼ cups", "items": ["¼ cup carrots, shredded", "½ cup green beans, cut", "½ potato", "½ cup drumsticks (moringa), frozen pieces", "¼ green plantain (raw banana)", "¼ cucumber", "3 tbsp grated coconut (frozen)", "½ Indian green chili", "¼ tsp cumin seeds (jeera)", "4 tbsp plain Greek yogurt", "0.06 tsp ground turmeric (haldi)", "1 sprig fresh curry leaves", "1 tbsp coconut oil", "¼ tsp salt"]},
         ],
-        note: "Kerala's sadya favorite: vegetable batons in a thick, coarse coconut-and-curd sauce, finished with raw coconut oil and curry leaves. Made with thick yogurt for extra protein. The video was chosen for popularity: Hebbars Kitchen, 1:34 long, 951,429 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Kerala's sadya favorite: vegetable batons in a thick, coarse coconut-and-curd sauce, finished with raw coconut oil and curry leaves. Made with thick yogurt for extra protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Kerala Vegetable Stew", channel: "Hebbars Kitchen", id: "more-kerala_stew", video: "https://www.youtube.com/watch?v=sosT0JyAhiw",
@@ -3286,7 +3282,7 @@ const sections = [
         note: "Karnataka's coconut-and-roasted-chana vegetable curry — the classic partner for chapati, poori and set dosa. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Beetroot Poriyal", channel: "Sanjeev Kapoor Khazana", id: "more-beet_poriyal", video: "https://www.youtube.com/watch?v=JtcgdezlGp0",
+        name: "Beetroot Poriyal", channel: "Chef Deena’s Kitchen", id: "more-beet_poriyal", video: "https://www.youtube.com/watch?v=h_x0Idzfaw8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 221.6, "p": 5.7, "c": 27.3, "f": 11.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Beetroot poriyal (about 1 cup)"]},
@@ -3295,7 +3291,7 @@ const sections = [
           {"title": "Tadka", "items": []},
           {"title": "Beetroot poriyal: about 1 cup", "items": ["1½ cup beetroot, grated", "2 tbsp grated coconut (frozen)", "0.05 cup chana dal", "¼ tsp black mustard seeds (rai)", "½ sprig fresh curry leaves", "¼ Indian green chili", "½ tbsp coconut oil", "⅛ tsp salt"]},
         ],
-        note: "Sweet, earthy beetroot stir-fried with mustard seeds, curry leaves and fresh coconut. Ready in 15 minutes. The video was chosen for popularity: Sanjeev Kapoor Khazana, 2:31 long, 229,742 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Sweet, earthy beetroot stir-fried with mustard seeds, curry leaves and fresh coconut. Ready in 15 minutes. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Kadai Paneer", channel: "bharatzkitchen HINDI", id: "more-kadai_paneer", video: "https://www.youtube.com/watch?v=ryCdr0le7xw",
@@ -3407,7 +3403,7 @@ const sections = [
         note: "Temple-style tamarind rice — Puliyodarai in Tamil Nadu, Puliogare in Karnataka: tangy, slightly sweet and spicy, with peanuts and sesame. Travels well.",
       },
       {
-        name: "Masale Bhaat", channel: "Hebbars Kitchen", id: "more-masale_bhaat", video: "https://www.youtube.com/watch?v=SiRTI8Kg6xE",
+        name: "Masale Bhaat", channel: "Your Food Lab", id: "more-masale_bhaat", video: "https://www.youtube.com/watch?v=pLApqJIP9ao",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 505.5, "p": 20.1, "c": 65.6, "f": 19.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Masale bhaat (about 1¼ cups)"]},
@@ -3417,10 +3413,10 @@ const sections = [
           {"title": "Masale bhaat: about 1¼ cups", "items": ["⅓ cup brown basmati rice (dry)", "1 small Indian eggplant", "¼ cup frozen green peas", "1½ tbsp roasted peanuts", "1 tsp goda masala", "¼ tsp Kashmiri red chili powder", "0.06 tsp ground turmeric (haldi)", "1 tbsp grated coconut (frozen)", "¼ tsp black mustard seeds (rai)", "½ sprig fresh curry leaves", "0.03 tsp hing (asafoetida)", "¼ tsp jaggery (gud)", "½ tbsp neutral oil (canola or avocado)", "⅛ tsp salt"]},
           {"title": "Bowl of dahi: 6 tbsp", "items": ["6 tbsp plain Greek yogurt", "0.02 tsp salt"]},
         ],
-        note: "The Maharashtrian wedding rice: goda masala, small eggplants, peas and peanuts, topped with fresh coconut. The video was chosen for popularity: Hebbars Kitchen, 2:15 long, 916,378 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "The Maharashtrian wedding rice: goda masala, small eggplants, peas and peanuts, topped with fresh coconut. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tomato Rice", channel: "Hebbars Kitchen", id: "more-tomato_rice", video: "https://www.youtube.com/watch?v=3QVAqlIriMI",
+        name: "Tomato Rice", channel: "Shaan Geo", id: "more-tomato_rice", video: "https://www.youtube.com/watch?v=2KRFk4nYAWE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 519.8, "p": 22.0, "c": 81.6, "f": 12.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Tomato rice (about 1¼ cups)"]},
@@ -3430,7 +3426,7 @@ const sections = [
           {"title": "Tomato rice: about 1¼ cups", "items": ["⅓ cup brown basmati rice (dry)", "½ cup crushed tomatoes (canned)", "½ cup chickpeas (canned, rinsed)", "¼ red onion", "½ tsp fresh ginger, grated", "1 clove garlic", "¼ Indian green chili", "⅛ tsp fennel seeds (saunf)", "¼ tsp Kashmiri red chili powder", "⅛ tsp garam masala", "½ sprig fresh curry leaves", "½ tbsp neutral oil (canola or avocado)", "⅛ tsp salt"]},
           {"title": "Bowl of dahi: 6 tbsp", "items": ["6 tbsp plain Greek yogurt", "0.02 tsp salt"]},
         ],
-        note: "Thakkali sadam made heartier with chickpeas: tomatoes, ginger, garlic and fennel cooked into brown rice. The video was chosen for popularity: Hebbars Kitchen, 3:01 long, 6,571,576 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Thakkali sadam made heartier with chickpeas: tomatoes, ginger, garlic and fennel cooked into brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Coconut Rice", channel: "Vismai Food", id: "more-coconut_rice", video: "https://www.youtube.com/watch?v=ot-e3CP08dU",
@@ -3459,7 +3455,7 @@ const sections = [
         note: "Magenta-red South Indian rice with grated beetroot, peas, peanuts, coconut and a squeeze of lemon, served with dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ven Pongal", channel: "Hebbars Kitchen", id: "more-ven_pongal", video: "https://www.youtube.com/watch?v=rjdpb2UsFJM",
+        name: "Ven Pongal", channel: "Vismai Food", id: "more-ven_pongal", video: "https://www.youtube.com/watch?v=dCaAPYvCp2A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 538.8, "p": 21.6, "c": 81.8, "f": 15.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Ven pongal (about 1¼ cups)"]},
@@ -3469,10 +3465,10 @@ const sections = [
           {"title": "Ven pongal: about 1¼ cups", "items": ["0.2 cup brown basmati rice (dry)", "0.2 cup split yellow moong dal", "½ tsp black pepper", "½ tsp cumin seeds (jeera)", "½ tsp fresh ginger, grated", "1 tbsp cashews", "½ sprig fresh curry leaves", "0.03 tsp hing (asafoetida)", "¾ tbsp ghee", "¼ tsp salt"]},
           {"title": "Sambar: ½ × about 1¼ cups", "items": ["0.15 cup toor dal", "⅛ cup drumsticks (moringa), frozen pieces", "⅛ cup carrots, shredded", "0.06 red onion", "0.06 cup crushed tomatoes (canned)", "¾ tsp sambar powder", "⅜ tsp tamarind paste (concentrate)", "0.03 tsp ground turmeric (haldi)", "⅛ tsp jaggery (gud)", "⅛ tsp salt"]},
         ],
-        note: "Soft, comforting rice and moong dal with black pepper, cumin, ginger and ghee-fried cashews — served with sambar. The video was chosen for popularity: Hebbars Kitchen, 1:33 long, 1,829,398 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Soft, comforting rice and moong dal with black pepper, cumin, ginger and ghee-fried cashews — served with sambar. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kala Chana Pulao", channel: "Sanjeev Kapoor Khazana", id: "more-kala_chana_pulao", video: "https://www.youtube.com/watch?v=5vt__emvC-M",
+        name: "Kala Chana Pulao", channel: "Vismai Food", id: "more-kala_chana_pulao", video: "https://www.youtube.com/watch?v=Jyo80RbitGo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 557.2, "p": 24.6, "c": 86.6, "f": 13.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Kala chana pulao (about 1¼ cups)"]},
@@ -3482,10 +3478,10 @@ const sections = [
           {"title": "Kala chana pulao: about 1¼ cups", "items": ["⅓ cup brown basmati rice (dry)", "¼ cup kala chana (black chickpeas), dried", "¼ red onion", "¼ tsp cumin seeds (jeera)", "1 bay leaf (tej patta)", "¼ cinnamon stick", "2 cloves", "½ tsp fresh ginger, grated", "¼ tsp garam masala", "½ tbsp ghee", "⅛ tsp salt"]},
           {"title": "Mint raita: about ⅓ cup", "items": ["6 tbsp plain Greek yogurt", "½ tbsp mint, chopped", "⅛ cucumber", "⅛ tsp cumin seeds (jeera)", "0.03 tsp salt"]},
         ],
-        note: "Nutty black chana cooked into whole-spice brown rice — a high-fiber, high-protein one-pot meal. The video was chosen for popularity: Sanjeev Kapoor Khazana, 3:21 long, 337,401 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Nutty black chana cooked into whole-spice brown rice — a high-fiber, high-protein one-pot meal. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Vaghareli Khichdi", channel: "Rajshri Food", id: "more-vaghareli_khichdi", video: "https://www.youtube.com/watch?v=KyIz0CNNDAU",
+        name: "Vaghareli Khichdi", channel: "Sheetal's Kitchen - Gujarati", id: "more-vaghareli_khichdi", video: "https://www.youtube.com/watch?v=pQeTZHdEf3g",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 596.2, "p": 26.3, "c": 94.5, "f": 13.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Vaghareli khichdi (about 1½ cups)"]},
@@ -3495,7 +3491,7 @@ const sections = [
           {"title": "Vaghareli khichdi: about 1½ cups", "items": ["¼ cup brown basmati rice (dry)", "0.15 cup toor dal", "0.1 cup split yellow moong dal", "¼ potato", "¼ cup frozen green peas", "¼ red onion", "⅛ cup crushed tomatoes (canned)", "½ tsp fresh ginger, grated", "¼ Indian green chili", "¼ tsp black mustard seeds (rai)", "¼ tsp cumin seeds (jeera)", "½ sprig fresh curry leaves", "⅛ tsp ground turmeric (haldi)", "⅛ tsp garam masala", "¾ tbsp ghee", "¼ tsp salt"]},
           {"title": "Gujarati kadhi: ½ × about 1¼ cups", "items": ["4 tbsp plain Greek yogurt", "0.06 cup besan (chickpea flour)", "½ tsp jaggery (gud)", "¼ tsp fresh ginger, grated", "⅛ Indian green chili", "⅛ tsp salt"]},
         ],
-        note: "Gujarat's masala khichdi: rice, toor and moong dal with potato, peas and a mustard-seed vaghar, served the classic way — with kadhi. The video was chosen for popularity: Rajshri Food, 5:46 long, 159,127 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Gujarat's masala khichdi: rice, toor and moong dal with potato, peas and a mustard-seed vaghar, served the classic way — with kadhi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
     ],
   },
@@ -3519,7 +3515,7 @@ const sections = [
         note: "The Karnataka farmer's meal: soft balls of ragi, broken by hand and dipped into bassaru — a garlicky toor-dal and greens saaru. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Jowar Bhakri & Pithla", channel: "Hebbars Kitchen", id: "more-jowar_bhakri", video: "https://www.youtube.com/watch?v=GvfQHrm64dM",
+        name: "Jowar Bhakri & Pithla", channel: "Foodxp", id: "more-jowar_bhakri", video: "https://www.youtube.com/watch?v=UP7f8S2nkdU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 477.3, "p": 21.5, "c": 71.1, "f": 12.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Jowar bhakri (2 bhakris)"]},
@@ -3530,7 +3526,7 @@ const sections = [
           {"title": "Pithla: about 1 cup", "items": ["⅓ cup besan (chickpea flour)", "¼ red onion", "½ Indian green chili", "1 clove garlic", "0.06 tsp ground turmeric (haldi)", "¼ tsp black mustard seeds (rai)", "⅛ tsp cumin seeds (jeera)", "½ sprig fresh curry leaves", "0.03 tsp hing (asafoetida)", "½ tbsp neutral oil (canola or avocado)", "¼ tsp salt"]},
           {"title": "Bowl of dahi: 6 tbsp", "items": ["6 tbsp plain Greek yogurt", "0.02 tsp salt"]},
         ],
-        note: "Maharashtra's soul food: soft jowar bhakri with garlicky pithla, a raw onion and a bowl of dahi. The video was chosen for popularity: Hebbars Kitchen, 1:35 long, 2,890,669 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Maharashtra's soul food: soft jowar bhakri with garlicky pithla, a raw onion and a bowl of dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Bajra Rotla & Bharta", channel: "Village Rasoi", id: "more-bajra_rotla", video: "https://www.youtube.com/watch?v=UrpsHs7yjhA",
@@ -3560,7 +3556,7 @@ const sections = [
         note: "Kezhvaragu dosai: lacy, crisp instant ragi dosa — no fermenting — with onion, curry leaves and a bowl of sambar.",
       },
       {
-        name: "Ragi Rotti", channel: "Hebbars Kitchen", id: "more-ragi_rotti", video: "https://www.youtube.com/watch?v=DZmt0OZPVyU",
+        name: "Ragi Rotti", channel: "Rekha Aduge", id: "more-ragi_rotti", video: "https://www.youtube.com/watch?v=xtJnDgZyI6w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 464.2, "p": 19.6, "c": 60.6, "f": 16.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Ragi rotti (2 rottis)"]},
@@ -3571,7 +3567,7 @@ const sections = [
           {"title": "Shengdana chutney: 1½ tbsp", "items": ["1½ tbsp roasted peanuts", "½ clove garlic", "¼ tsp Kashmiri red chili powder", "0.03 tsp salt"]},
           {"title": "Bowl of dahi: 6 tbsp", "items": ["6 tbsp plain Greek yogurt", "0.02 tsp salt"]},
         ],
-        note: "Crisp ragi flatbread patted out with onion, carrot and dill, served with peanut chutney and dahi. The video was chosen for popularity: Hebbars Kitchen, 3:31 long, 1,782,922 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Crisp ragi flatbread patted out with onion, carrot and dill, served with peanut chutney and dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Foxtail Millet Upma (Millets)", channel: "Skinny Recipes", id: "more-millet_upma", video: "https://www.youtube.com/watch?v=d9yeMnT2WJg",
@@ -3766,7 +3762,7 @@ const sections = [
         note: "Broken-wheat upma with moong dal and vegetables — a fiber-rich swap for rava upma. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Idli & Sambar", channel: "Kabita's Kitchen", id: "more-b_idli", video: "https://www.youtube.com/watch?v=LQPm20CSLSg",
+        name: "Idli & Sambar", channel: "Your Food Lab", id: "more-b_idli", video: "https://www.youtube.com/watch?v=_QLLo1b5Zcw",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Idli (4 idlis)"]},
@@ -3777,10 +3773,10 @@ const sections = [
           {"title": "Coconut chutney: 3 tbsp", "items": ["3 tbsp grated coconut (frozen)", "⅛ cup roasted chana (dalia / pottukadalai)", "¼ Indian green chili", "¼ tsp fresh ginger, grated", "⅛ tsp black mustard seeds (rai)", "¼ sprig fresh curry leaves", "¼ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
           {"title": "Sambar: about 1¼ cups", "items": ["0.3 cup toor dal", "¼ cup drumsticks (moringa), frozen pieces", "¼ cup carrots, shredded", "⅛ red onion", "⅛ cup crushed tomatoes (canned)", "1½ tsp sambar powder", "¾ tsp tamarind paste (concentrate)", "0.06 tsp ground turmeric (haldi)", "¼ tsp jaggery (gud)", "¼ tsp salt"]},
         ],
-        note: "Steamed, fluffy idlis with a bowl of sambar and coconut chutney — South India's light, protein-rich breakfast. The video was chosen for popularity: Kabita's Kitchen, 10:31 long, 9,537,503 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Steamed, fluffy idlis with a bowl of sambar and coconut chutney — South India's light, protein-rich breakfast. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Pesarattu", channel: "CookingShooking", id: "more-b_pesarattu", video: "https://www.youtube.com/watch?v=c0PQz7TF7RQ",
+        name: "Pesarattu", channel: "The Traditional Life", id: "more-b_pesarattu", video: "https://www.youtube.com/watch?v=dmw5ru5f78E",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 457.9, "p": 20.8, "c": 58.4, "f": 17.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Pesarattu (2 pesarattu)"]},
@@ -3790,10 +3786,10 @@ const sections = [
           {"title": "Pesarattu: 2 pesarattu", "items": ["⅓ cup whole green moong, dried", "½ tsp fresh ginger, grated", "½ Indian green chili", "⅛ tsp cumin seeds (jeera)", "⅛ red onion", "1 tbsp cilantro, chopped", "½ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
           {"title": "Coconut chutney: 3 tbsp", "items": ["3 tbsp grated coconut (frozen)", "⅛ cup roasted chana (dalia / pottukadalai)", "¼ Indian green chili", "¼ tsp fresh ginger, grated", "⅛ tsp black mustard seeds (rai)", "¼ sprig fresh curry leaves", "¼ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
         ],
-        note: "Andhra's crisp green-moong dosa with ginger and onion — no rice, no fermenting — with coconut chutney. The video was chosen for popularity: CookingShooking, 7:37 long, 3,523,625 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Andhra's crisp green-moong dosa with ginger and onion — no rice, no fermenting — with coconut chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Adai", channel: "Hebbars Kitchen", id: "more-b_adai", video: "https://www.youtube.com/watch?v=hnW5J3kX-nk",
+        name: "Adai", channel: "The Traditional Life", id: "more-b_adai", video: "https://www.youtube.com/watch?v=6W0aOUWKL3w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 474.9, "p": 17.0, "c": 62.5, "f": 18.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Adai (2 adai)"]},
@@ -3803,7 +3799,7 @@ const sections = [
           {"title": "Adai: 2 adai", "items": ["0.1 cup brown basmati rice (dry)", "0.1 cup toor dal", "0.1 cup chana dal", "0.05 cup whole black urad (sabut urad)", "2 dried red chili", "½ tsp fresh ginger, grated", "½ sprig fresh curry leaves", "¼ red onion", "0.03 tsp hing (asafoetida)", "½ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
           {"title": "Coconut chutney: 3 tbsp", "items": ["3 tbsp grated coconut (frozen)", "⅛ cup roasted chana (dalia / pottukadalai)", "¼ Indian green chili", "¼ tsp fresh ginger, grated", "⅛ tsp black mustard seeds (rai)", "¼ sprig fresh curry leaves", "¼ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
         ],
-        note: "Thick, crisp multi-dal dosa with dried chili, ginger and curry leaves, with coconut chutney. The video was chosen for popularity: Hebbars Kitchen, 2:48 long, 595,897 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Thick, crisp multi-dal dosa with dried chili, ginger and curry leaves, with coconut chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Paneer Veg Uttapam", channel: "Recipe collection", id: "more-b_uttapam", video: null,
@@ -3831,7 +3827,7 @@ const sections = [
         note: "A warm, filling glass of finger millet cooked in milk with jaggery and cardamom — rich in calcium and iron.",
       },
       {
-        name: "Methi Muthia", channel: "Tarla Dalal", id: "more-b_muthia", video: "https://www.youtube.com/watch?v=QK7kiD2uBrY",
+        name: "Methi Muthia", channel: "Sheetal's Kitchen - Gujarati", id: "more-b_muthia", video: "https://www.youtube.com/watch?v=n1KSvn_DIg8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 349.3, "p": 16.3, "c": 44.6, "f": 12.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Methi muthia (about 12 pieces)"]},
@@ -3841,7 +3837,7 @@ const sections = [
           {"title": "Methi muthia: about 12 pieces", "items": ["¼ cup whole wheat atta", "¼ cup besan (chickpea flour)", "3 tbsp plain Greek yogurt", "2 tsp kasuri methi (dried fenugreek leaves)", "½ tsp fresh ginger, grated", "¼ Indian green chili", "¼ tsp sugar", "⅛ lemon", "0.03 tsp ground turmeric (haldi)", "½ tbsp neutral oil (canola or avocado)", "½ tbsp sesame seeds", "¼ tsp black mustard seeds (rai)", "0.03 tsp hing (asafoetida)", "⅛ tsp salt"]},
           {"title": "Green chutney: 2 tbsp", "items": ["2 tbsp cilantro, chopped", "1 tbsp mint, chopped", "¼ Indian green chili", "⅛ lemon", "0.06 cup roasted chana (dalia / pottukadalai)", "0.03 tsp salt"]},
         ],
-        note: "Steamed Gujarati dumplings of whole wheat, besan, yogurt and methi, tossed in a mustard-sesame tempering. The video was chosen for popularity: Tarla Dalal, 3:47 long, 102,409 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Steamed Gujarati dumplings of whole wheat, besan, yogurt and methi, tossed in a mustard-sesame tempering. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Khaman Dhokla", channel: "Food Basket with Farhat", id: "more-b_dhokla", video: "https://www.youtube.com/watch?v=-Qy4fuNy8kI",
@@ -6249,7 +6245,7 @@ const sections = [
         note: "Goa's tonak: beans simmered in a roasted coconut-spice masala with a little tamarind. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Punjabi Sabut Masoor Dal", channel: "Sanjeev Kapoor Khazana", id: "more-bzi_sabut_masoor", video: "https://www.youtube.com/watch?v=2ms58t4fygM",
+        name: "Punjabi Sabut Masoor Dal", channel: "Punjabi Cooking", id: "more-bzi_sabut_masoor", video: "https://www.youtube.com/watch?v=Z9LOUG2L_MQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 504.7, "p": 22.2, "c": 76.4, "f": 14.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Punjabi Sabut Masoor Dal (about 1½ cups)"]},
@@ -6259,7 +6255,7 @@ const sections = [
           {"title": "Punjabi Sabut Masoor Dal: about 1½ cups", "items": ["⅓ cup whole masoor (brown lentils)", "¼ red onion", "½ cup cherry tomatoes, halved", "1 tsp fresh ginger, grated", "2 clove garlic", "½ Indian green chili", "¼ tsp cumin seeds (jeera)", "⅛ tsp ground turmeric (haldi)", "½ tsp Kashmiri red chili powder", "¼ tsp garam masala", "¾ tbsp ghee", "¼ lemon", "2 tbsp cilantro, chopped", "½ tsp salt"]},
           {"title": "Phulkas: 2 phulkas", "items": ["⅓ cup whole wheat atta", "0.02 tsp salt", "¼ tbsp ghee"]},
         ],
-        note: "Whole brown lentils, Punjabi dhaba-style, with a tomato-onion tadka and a squeeze of lemon. The video was chosen for popularity: Sanjeev Kapoor Khazana, 3:09 long, 1,182,830 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Whole brown lentils, Punjabi dhaba-style, with a tomato-onion tadka and a squeeze of lemon. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Kadala Rasam", channel: "Recipe collection", id: "more-bzi_chana_rasam", video: null,
@@ -7343,7 +7339,7 @@ const sections = [
         note: "Bright green kababs of spinach, peas and potato with paneer — pan-seared with a spoon of oil instead of deep-fried.",
       },
       {
-        name: "Paneer Dum Biryani", channel: "Hebbars Kitchen", id: "more-r_paneer_dum_biryani", video: "https://www.youtube.com/watch?v=ncqmk7RhIr4",
+        name: "Paneer Dum Biryani", channel: "Bhargain ka Chef", id: "more-r_paneer_dum_biryani", video: "https://www.youtube.com/watch?v=kbhxxZGUqKw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 791.0, "p": 42.3, "c": 71.3, "f": 40.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Dum Biryani (about 2 cups)"]},
@@ -7353,10 +7349,10 @@ const sections = [
           {"title": "Paneer Dum Biryani: about 2 cups", "items": ["⅓ cup brown basmati rice (dry)", "3 oz paneer", "¼ cup carrots, shredded", "⅓ cup green beans, cut", "¼ cup frozen green peas", "½ red onion", "3 tbsp plain Greek yogurt", "1 tsp fresh ginger, grated", "1 clove garlic", "½ Indian green chili", "½ tsp Kashmiri red chili powder", "½ tsp garam masala", "1 bay leaf (tej patta)", "2 green cardamom pod", "2 cloves", "¼ cinnamon stick", "1 pinch saffron threads", "2 tbsp mint, chopped", "2 tbsp cilantro, chopped", "1 tbsp ghee", "½ tsp salt"]},
           {"title": "Mint raita: about ⅓ cup", "items": ["6 tbsp plain Greek yogurt", "½ tbsp mint, chopped", "⅛ cucumber", "⅛ tsp cumin seeds (jeera)", "0.03 tsp salt"]},
         ],
-        note: "Layered biryani of saffron brown basmati and a yogurt-marinated paneer and vegetable masala, sealed and cooked on dum, with birista and mint. The video was chosen for popularity: Hebbars Kitchen, 3:55 long, 1,699,475 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Layered biryani of saffron brown basmati and a yogurt-marinated paneer and vegetable masala, sealed and cooked on dum, with birista and mint. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sarson da Saag & Makki di Roti", channel: "Sanjeev Kapoor Khazana", id: "more-r_sarson_saag", video: "https://www.youtube.com/watch?v=h9RS7fFXNA0",
+        name: "Sarson da Saag & Makki di Roti", channel: "chefharpalsingh", id: "more-r_sarson_saag", video: "https://www.youtube.com/watch?v=JD6nX_uPWg0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 518.8, "p": 21.4, "c": 69.4, "f": 20.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sarson da Saag & Makki di Roti (about 1½ cups + 2 rotis)"]},
@@ -7366,10 +7362,10 @@ const sections = [
           {"title": "Sarson da Saag & Makki di Roti: about 1½ cups + 2 rotis", "items": ["3 cup mustard greens (sarson), chopped", "2 cup baby spinach", "¼ red onion", "1½ tsp fresh ginger, grated", "2 clove garlic", "1 Indian green chili", "½ cup makki atta (fine yellow cornmeal)", "¾ tbsp ghee", "½ tbsp butter (unsalted)", "1 tsp jaggery (gud)", "½ tsp salt"]},
           {"title": "Bowl of dahi: 6 tbsp", "items": ["6 tbsp plain Greek yogurt", "0.02 tsp salt"]},
         ],
-        note: "Punjab's winter meal: mustard greens and spinach slow-cooked and churned with ginger and garlic, with makki rotis, a little white butter and jaggery on the side. The video was chosen for popularity: Sanjeev Kapoor Khazana, 8:06 long, 1,844,386 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Punjab's winter meal: mustard greens and spinach slow-cooked and churned with ginger and garlic, with makki rotis, a little white butter and jaggery on the side. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masala Dosa", channel: "Hebbars Kitchen", id: "more-r_masala_dosa", video: "https://www.youtube.com/watch?v=J75VQSxOtdo",
+        name: "Masala Dosa", channel: "Your Food Lab", id: "more-r_masala_dosa", video: "https://www.youtube.com/watch?v=PFG1aeYgi7c",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Masala Dosa (2 dosas)"]},
@@ -7380,7 +7376,7 @@ const sections = [
           {"title": "Hotel sambar: about 1 cup", "items": ["0.15 cup toor dal", "¼ cup cherry tomatoes, halved", "⅛ red onion", "¼ cup drumsticks (moringa), frozen pieces", "⅓ tsp tamarind paste (concentrate)", "1 tsp sambar powder", "½ tsp jaggery (gud)", "0.06 tsp ground turmeric (haldi)", "⅓ tbsp neutral oil (canola or avocado)", "⅛ tsp black mustard seeds (rai)", "0.02 tsp hing (asafoetida)", "¼ sprig fresh curry leaves", "1 tbsp cilantro, chopped", "¼ tsp salt"]},
           {"title": "Coconut chutney: 3 tbsp", "items": ["3 tbsp grated coconut (frozen)", "⅛ cup roasted chana (dalia / pottukadalai)", "¼ Indian green chili", "¼ tsp fresh ginger, grated", "⅛ tsp black mustard seeds (rai)", "¼ sprig fresh curry leaves", "¼ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
         ],
-        note: "Crisp, golden dosas filled with turmeric potato masala, with hotel-style sambar and coconut chutney. The video was chosen for popularity: Hebbars Kitchen, 5:08 long, 6,623,067 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Crisp, golden dosas filled with turmeric potato masala, with hotel-style sambar and coconut chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Mysore Masala Dosa", channel: "Your Food Lab", id: "more-r_mysore_dosa", video: "https://www.youtube.com/watch?v=mClDa-jZ7YU",
@@ -7411,7 +7407,7 @@ const sections = [
         note: "The lacy, crisp instant dosa: a thin rava-rice flour batter with onion, cumin, pepper and curry leaves — no fermenting needed. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Medu Vada Sambar", channel: "Hebbars Kitchen", id: "more-r_medu_vada", video: "https://www.youtube.com/watch?v=ygW0SxmDrMQ",
+        name: "Medu Vada Sambar", channel: "Your Food Lab", id: "more-r_medu_vada", video: "https://www.youtube.com/watch?v=kbA6oksGIXo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 589.5, "p": 24.3, "c": 76.5, "f": 22.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Medu Vada Sambar (4 small vadas)"]},
@@ -7422,10 +7418,10 @@ const sections = [
           {"title": "Hotel sambar: about 1 cup", "items": ["0.15 cup toor dal", "¼ cup cherry tomatoes, halved", "⅛ red onion", "¼ cup drumsticks (moringa), frozen pieces", "⅓ tsp tamarind paste (concentrate)", "1 tsp sambar powder", "½ tsp jaggery (gud)", "0.06 tsp ground turmeric (haldi)", "⅓ tbsp neutral oil (canola or avocado)", "⅛ tsp black mustard seeds (rai)", "0.02 tsp hing (asafoetida)", "¼ sprig fresh curry leaves", "1 tbsp cilantro, chopped", "¼ tsp salt"]},
           {"title": "Coconut chutney: 3 tbsp", "items": ["3 tbsp grated coconut (frozen)", "⅛ cup roasted chana (dalia / pottukadalai)", "¼ Indian green chili", "¼ tsp fresh ginger, grated", "⅛ tsp black mustard seeds (rai)", "¼ sprig fresh curry leaves", "¼ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
         ],
-        note: "Fluffy urad dal vadas with pepper and curry leaves, made in an appe pan with a teaspoon of oil, dunked in sambar. The video was chosen for popularity: Hebbars Kitchen, 1:32 long, 4,772,655 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Fluffy urad dal vadas with pepper and curry leaves, made in an appe pan with a teaspoon of oil, dunked in sambar. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kuzhi Paniyaram", channel: "Hebbars Kitchen", id: "more-r_paniyaram", video: "https://www.youtube.com/watch?v=zJ4KcIM2Ey8",
+        name: "Kuzhi Paniyaram", channel: "The Traditional Life", id: "more-r_paniyaram", video: "https://www.youtube.com/watch?v=FluqZX7MLrc",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kuzhi Paniyaram (10–12 paniyarams)"]},
@@ -7436,7 +7432,7 @@ const sections = [
           {"title": "Coconut chutney: 3 tbsp", "items": ["3 tbsp grated coconut (frozen)", "⅛ cup roasted chana (dalia / pottukadalai)", "¼ Indian green chili", "¼ tsp fresh ginger, grated", "⅛ tsp black mustard seeds (rai)", "¼ sprig fresh curry leaves", "¼ tbsp neutral oil (canola or avocado)", "0.06 tsp salt"]},
           {"title": "Hotel sambar: about 1 cup", "items": ["0.15 cup toor dal", "¼ cup cherry tomatoes, halved", "⅛ red onion", "¼ cup drumsticks (moringa), frozen pieces", "⅓ tsp tamarind paste (concentrate)", "1 tsp sambar powder", "½ tsp jaggery (gud)", "0.06 tsp ground turmeric (haldi)", "⅓ tbsp neutral oil (canola or avocado)", "⅛ tsp black mustard seeds (rai)", "0.02 tsp hing (asafoetida)", "¼ sprig fresh curry leaves", "1 tbsp cilantro, chopped", "¼ tsp salt"]},
         ],
-        note: "Crisp-outside, soft-inside dumplings from dosa batter with onion, carrot and curry leaves, made in an appe pan. The video was chosen for popularity: Hebbars Kitchen, 2:38 long, 1,455,768 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Crisp-outside, soft-inside dumplings from dosa batter with onion, carrot and curry leaves, made in an appe pan. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Hotel-Style Veg Kurma", channel: "Dindigul Food Court", id: "more-r_veg_kurma", video: "https://www.youtube.com/watch?v=PIBNjXiYJJY",
@@ -7543,7 +7539,7 @@ const sections = [
         note: "Small eggplants stuffed with a roasted peanut-sesame-coconut masala, simmered in a tangy tamarind gravy — the Chettinad wedding classic, made with less oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Misal Pav", channel: "Hebbars Kitchen", id: "more-r_misal_pav", video: "https://www.youtube.com/watch?v=kaJzwCD8uvY",
+        name: "Misal Pav", channel: "Your Food Lab", id: "more-r_misal_pav", video: "https://www.youtube.com/watch?v=ozyN7b3jP-A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 712.1, "p": 26.0, "c": 84.0, "f": 31.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Misal Pav (1 bowl + 2 pav)"]},
@@ -7553,7 +7549,7 @@ const sections = [
           {"title": "Misal Pav: 1 bowl + 2 pav", "items": ["¼ cup matki (moth beans), dried", "½ red onion", "⅓ cup cherry tomatoes, halved", "2 tbsp grated coconut (frozen)", "2 clove garlic", "1 tsp fresh ginger, grated", "1 tsp goda masala", "1 tsp Kashmiri red chili powder", "⅛ tsp ground turmeric (haldi)", "¼ tsp black mustard seeds (rai)", "½ sprig fresh curry leaves", "1 tbsp neutral oil (canola or avocado)", "⅛ cup sev or aloo bhujia", "¼ lemon", "2 tbsp cilantro, chopped", "½ tsp salt"]},
           {"title": "Toasted pav: 2 pav", "items": ["2 whole wheat pav (dinner rolls)", "½ tbsp butter (unsalted)"]},
         ],
-        note: "Pune-Kolhapur misal: sprouted matki in a fiery, oily-red kat (rassa), topped with farsan, onion and lemon, with pav. Here with less oil and a gentler kat you can turn up. The video was chosen for popularity: Hebbars Kitchen, 2:38 long, 5,427,543 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Pune-Kolhapur misal: sprouted matki in a fiery, oily-red kat (rassa), topped with farsan, onion and lemon, with pav. Here with less oil and a gentler kat you can turn up. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Vada Pav", channel: "Recipe collection", id: "more-r_vada_pav", video: null,
@@ -7569,7 +7565,7 @@ const sections = [
         note: "Mumbai's burger: a garlicky potato vada in a besan coat, tucked into pav with dry garlic chutney and green chutney. The vada is made in an appe pan instead of a kadhai of oil.",
       },
       {
-        name: "Pav Bhaji", channel: "Hebbars Kitchen", id: "more-r_pav_bhaji", video: "https://www.youtube.com/watch?v=qMAYG-soxhw",
+        name: "Pav Bhaji", channel: "Your Food Lab", id: "more-r_pav_bhaji", video: "https://www.youtube.com/watch?v=Gbuse4WX01I",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 560.3, "p": 21.2, "c": 88.4, "f": 15.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pav Bhaji (about 1½ cups + 2 pav)"]},
@@ -7578,7 +7574,7 @@ const sections = [
           {"title": "Served with", "items": []},
           {"title": "Pav Bhaji: about 1½ cups + 2 pav", "items": ["½ potato", "1 cup cauliflower florets", "⅓ cup frozen green peas", "¼ cup carrots, shredded", "½ bell pepper", "½ red onion", "1 cup cherry tomatoes, halved", "1 tsp fresh ginger, grated", "2 clove garlic", "1½ tsp pav bhaji masala", "½ tsp Kashmiri red chili powder", "1 tbsp butter (unsalted)", "¼ lemon", "2 tbsp cilantro, chopped", "½ tsp salt", "2 whole wheat pav (dinner rolls)"]},
         ],
-        note: "Mumbai's buttery mashed vegetable curry with pav — loaded with cauliflower, peas, carrot and pepper and made with a fraction of the street-stall butter. The video was chosen for popularity: Hebbars Kitchen, 2:16 long, 32,424,170 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Mumbai's buttery mashed vegetable curry with pav — loaded with cauliflower, peas, carrot and pepper and made with a fraction of the street-stall butter. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Sabudana Khichdi", channel: "Your Food Lab", id: "more-r_sabudana_khichdi", video: "https://www.youtube.com/watch?v=9zSoII4rYS0",
@@ -7621,7 +7617,7 @@ const sections = [
         note: "A steamed, then crisped cake of cilantro and besan with sesame — a Maharashtrian thali favorite. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Zunka Bhakri", channel: "Kabita's Kitchen", id: "more-r_zunka_bhakri", video: "https://www.youtube.com/watch?v=lwg5GWg-M8o",
+        name: "Zunka Bhakri", channel: "गावरान- एक खरी चव ! - Gavran", id: "more-r_zunka_bhakri", video: "https://www.youtube.com/watch?v=4NUV0dKWX6I",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 568.3, "p": 22.5, "c": 78.2, "f": 19.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Zunka Bhakri (1 plate)"]},
@@ -7632,7 +7628,7 @@ const sections = [
           {"title": "Jowar bhakri: 2 bhakris", "items": ["½ cup jowar (sorghum) flour", "0.03 tsp salt"]},
           {"title": "Bowl of dahi: 6 tbsp", "items": ["6 tbsp plain Greek yogurt", "0.02 tsp salt"]},
         ],
-        note: "Dry, crumbly zunka — besan cooked with lots of onion, garlic and green chili — with jowar bhakri, thecha-style green chili and raw onion. The video was chosen for popularity: Kabita's Kitchen, 8:20 long, 524,991 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Dry, crumbly zunka — besan cooked with lots of onion, garlic and green chili — with jowar bhakri, thecha-style green chili and raw onion. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Varan Bhaat", channel: "Tasty Safar", id: "more-r_varan_bhaat", video: "https://www.youtube.com/watch?v=-t_25XGZ-XU",
@@ -7687,7 +7683,7 @@ const sections = [
         note: "Khandesh's spicy dhaba curry: a roasted onion-coconut kala masala rassa with thick besan shev added just before serving. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Puran Poli", channel: "Hebbars Kitchen", id: "more-r_puran_poli", video: "https://www.youtube.com/watch?v=l7Efb-HjDPU",
+        name: "Puran Poli", channel: "Your Food Lab", id: "more-r_puran_poli", video: "https://www.youtube.com/watch?v=4z4vXDqjZtw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 670.0, "p": 19.6, "c": 110.6, "f": 19.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Puran Poli (2 polis)"]},
@@ -7696,10 +7692,10 @@ const sections = [
           {"title": "Served with", "items": []},
           {"title": "Puran Poli: 2 polis", "items": ["¼ cup chana dal", "12 tsp jaggery (gud)", "2 green cardamom pod", "⅓ cup whole wheat atta", "0.03 tsp ground turmeric (haldi)", "1 tbsp ghee", "½ cup milk (2% or whole)", "0.02 tsp salt"]},
         ],
-        note: "The festival sweet: whole wheat flatbreads stuffed with cardamom-scented chana dal and jaggery, with a spoon of ghee. A treat — served with katachi amti in Maharashtrian homes. The video was chosen for popularity: Hebbars Kitchen, 5:58 long, 2,926,412 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "The festival sweet: whole wheat flatbreads stuffed with cardamom-scented chana dal and jaggery, with a spoon of ghee. A treat — served with katachi amti in Maharashtrian homes. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Pani Puri", channel: "Hebbars Kitchen", id: "more-r_pani_puri", video: "https://www.youtube.com/watch?v=Lno88iU9J4w",
+        name: "Pani Puri", channel: "Your Food Lab", id: "more-r_pani_puri", video: "https://www.youtube.com/watch?v=zkbDNyV9G3w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 541.5, "p": 13.1, "c": 92.5, "f": 15.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pani Puri (12 puris)"]},
@@ -7709,10 +7705,10 @@ const sections = [
           {"title": "Pani Puri: 12 puris", "items": ["12 pani puri shells (ready-made)", "½ potato", "½ cup chickpeas (canned, rinsed)", "¼ cup sprouted moong", "4 tbsp mint, chopped", "4 tbsp cilantro, chopped", "1 Indian green chili", "½ tsp fresh ginger, grated", "½ tsp tamarind paste (concentrate)", "¼ lemon", "1 tsp chaat masala", "½ tsp ground cumin", "½ tsp jaggery (gud)", "¼ tsp salt"]},
           {"title": "Sweet imli chutney: 2 tbsp", "items": ["1 tsp tamarind paste (concentrate)", "1 Medjool dates", "2 tsp jaggery (gud)", "⅛ tsp ground cumin", "0.02 tsp salt"]},
         ],
-        note: "Crisp puris filled with spiced potato and chickpeas and dunked in a tangy mint-cilantro pani, with sweet imli chutney. Store-bought shells, homemade everything else. The video was chosen for popularity: Hebbars Kitchen, 4:17 long, 14,440,373 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Crisp puris filled with spiced potato and chickpeas and dunked in a tangy mint-cilantro pani, with sweet imli chutney. Store-bought shells, homemade everything else. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sev Puri", channel: "Hebbars Kitchen", id: "more-r_sev_puri", video: "https://www.youtube.com/watch?v=iJKiUvTS_mQ",
+        name: "Sev Puri", channel: "Your Food Lab", id: "more-r_sev_puri", video: "https://www.youtube.com/watch?v=Jm59igYS5iY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 622.6, "p": 14.6, "c": 96.1, "f": 22.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sev Puri (8 sev puris)"]},
@@ -7723,7 +7719,7 @@ const sections = [
           {"title": "Green chutney: 2 tbsp", "items": ["2 tbsp cilantro, chopped", "1 tbsp mint, chopped", "¼ Indian green chili", "⅛ lemon", "0.06 cup roasted chana (dalia / pottukadalai)", "0.03 tsp salt"]},
           {"title": "Sweet imli chutney: 2 tbsp", "items": ["1 tsp tamarind paste (concentrate)", "1 Medjool dates", "2 tsp jaggery (gud)", "⅛ tsp ground cumin", "0.02 tsp salt"]},
         ],
-        note: "Flat papdi topped with potato, onion, tomato, three chutneys, chaat masala and a blanket of sev. The video was chosen for popularity: Hebbars Kitchen, 3:03 long, 984,465 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Flat papdi topped with potato, onion, tomato, three chutneys, chaat masala and a blanket of sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Mumbai Bhel Puri", channel: "Recipe collection", id: "more-r_bhel_puri", video: null,
@@ -7770,7 +7766,7 @@ const sections = [
         note: "Delhi's layered chaat: crisp papdi, potato and chickpeas under sweet dahi, chutneys, chaat masala and pomegranate. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ragda Pattice", channel: "Chef Ranveer Brar", id: "more-r_ragda_pattice", video: "https://www.youtube.com/watch?v=F9Zvon4tHBY",
+        name: "Ragda Pattice", channel: "Your Food Lab", id: "more-r_ragda_pattice", video: "https://www.youtube.com/watch?v=sGHpPi0zYvc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 700.5, "p": 20.2, "c": 112.6, "f": 21.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Ragda Pattice (2 pattice + ragda)"]},
@@ -7781,10 +7777,10 @@ const sections = [
           {"title": "Green chutney: 2 tbsp", "items": ["2 tbsp cilantro, chopped", "1 tbsp mint, chopped", "¼ Indian green chili", "⅛ lemon", "0.06 cup roasted chana (dalia / pottukadalai)", "0.03 tsp salt"]},
           {"title": "Sweet imli chutney: 2 tbsp", "items": ["1 tsp tamarind paste (concentrate)", "1 Medjool dates", "2 tsp jaggery (gud)", "⅛ tsp ground cumin", "0.02 tsp salt"]},
         ],
-        note: "Pan-crisped potato patties smothered in ragda — a soft white-pea curry — with chutneys, onion and sev. The video was chosen for popularity: Chef Ranveer Brar, 7:27 long, 3,189,381 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Pan-crisped potato patties smothered in ragda — a soft white-pea curry — with chutneys, onion and sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Aloo Tikki Chaat", channel: "Kabita's Kitchen", id: "more-r_aloo_tikki_chaat", video: "https://www.youtube.com/watch?v=ry1raxNxRxU",
+        name: "Aloo Tikki Chaat", channel: "Your Food Lab", id: "more-r_aloo_tikki_chaat", video: "https://www.youtube.com/watch?v=2qq5fmo54SE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 707.6, "p": 24.0, "c": 115.6, "f": 19.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Aloo Tikki Chaat (2 tikkis)"]},
@@ -7796,7 +7792,7 @@ const sections = [
           {"title": "Green chutney: 2 tbsp", "items": ["2 tbsp cilantro, chopped", "1 tbsp mint, chopped", "¼ Indian green chili", "⅛ lemon", "0.06 cup roasted chana (dalia / pottukadalai)", "0.03 tsp salt"]},
           {"title": "Sweet imli chutney: 2 tbsp", "items": ["1 tsp tamarind paste (concentrate)", "1 Medjool dates", "2 tsp jaggery (gud)", "⅛ tsp ground cumin", "0.02 tsp salt"]},
         ],
-        note: "Crisp potato tikkis stuffed with spiced chana dal, topped with chole, dahi, chutneys and onion. The video was chosen for popularity: Kabita's Kitchen, 8:59 long, 2,787,625 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Crisp potato tikkis stuffed with spiced chana dal, topped with chole, dahi, chutneys and onion. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Baked Samosa Chaat", channel: "Recipe collection", id: "more-r_samosa_chaat", video: null,
@@ -7828,7 +7824,7 @@ const sections = [
         note: "Soft urad dal bhallas, made in an appe pan, soaked and drenched in cool sweetened dahi with chutneys and roasted cumin.",
       },
       {
-        name: "Kutchi Dabeli", channel: "Your Food Lab", id: "more-r_dabeli", video: "https://www.youtube.com/watch?v=CIceMnBUjfg",
+        name: "Kutchi Dabeli", channel: "CookingShooking Hindi", id: "more-r_dabeli", video: "https://www.youtube.com/watch?v=vAc1uUaFAhw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 808.9, "p": 22.9, "c": 123.4, "f": 28.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kutchi Dabeli (2 dabeli)"]},
@@ -7838,10 +7834,10 @@ const sections = [
           {"title": "Kutchi Dabeli: 2 dabeli", "items": ["2 whole wheat pav (dinner rolls)", "1 potato", "2 tbsp roasted peanuts", "⅛ cup pomegranate seeds", "⅛ red onion", "⅛ cup sev or aloo bhujia", "1 tsp coriander seeds (sabut dhania)", "¼ tsp cumin seeds (jeera)", "¼ tsp fennel seeds (saunf)", "1 dried red chili", "1 cloves", "¼ cinnamon stick", "½ tsp Kashmiri red chili powder", "½ tsp tamarind paste (concentrate)", "1 tsp jaggery (gud)", "¾ tbsp butter (unsalted)", "2 tbsp cilantro, chopped", "1 tbsp grated coconut (frozen)", "¼ tsp salt"]},
           {"title": "Sweet imli chutney: 2 tbsp", "items": ["1 tsp tamarind paste (concentrate)", "1 Medjool dates", "2 tsp jaggery (gud)", "⅛ tsp ground cumin", "0.02 tsp salt"]},
         ],
-        note: "The sweet-spicy-tangy Kutchi street burger: dabeli-spiced potato in pav with masala peanuts, pomegranate, onion and sev. The video was chosen for popularity: Your Food Lab, 9:40 long, 1,890,493 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "The sweet-spicy-tangy Kutchi street burger: dabeli-spiced potato in pav with masala peanuts, pomegranate, onion and sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Khasta Kachori Chaat", channel: "Hebbars Kitchen", id: "more-r_kachori_chaat", video: "https://www.youtube.com/watch?v=-cTLbaRI4RU",
+        name: "Khasta Kachori Chaat", channel: "Chef Ranveer Brar", id: "more-r_kachori_chaat", video: "https://www.youtube.com/watch?v=nuFTQgR5K3Y",
         macros: {"na": "This recipe needs ready-made kachori, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Khasta Kachori Chaat (2 kachoris)"]},
@@ -7853,7 +7849,7 @@ const sections = [
           {"title": "Green chutney: 2 tbsp", "items": ["2 tbsp cilantro, chopped", "1 tbsp mint, chopped", "¼ Indian green chili", "⅛ lemon", "0.06 cup roasted chana (dalia / pottukadalai)", "0.03 tsp salt"]},
           {"title": "Sweet imli chutney: 2 tbsp", "items": ["1 tsp tamarind paste (concentrate)", "1 Medjool dates", "2 tsp jaggery (gud)", "⅛ tsp ground cumin", "0.02 tsp salt"]},
         ],
-        note: "A store-bought khasta kachori, warmed crisp and cracked open, filled with chole, potato, dahi, chutneys and sev — Banaras and Delhi style. The video was chosen for popularity: Hebbars Kitchen, 5:50 long, 4,068,909 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "A store-bought khasta kachori, warmed crisp and cracked open, filled with chole, potato, dahi, chutneys and sev — Banaras and Delhi style. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
     ],
   },
@@ -7903,7 +7899,7 @@ const sections = [
         note: "Indian-style tomato pasta with paneer, peas and a little cheddar — mildly spiced, never spicy — with pomegranate and cucumber on the side.",
       },
       {
-        name: "Paneer Corn Sandwich", channel: "Your Food Lab", id: "more-kid_sandwich", video: "https://www.youtube.com/watch?v=w_u3L-7rJX8",
+        name: "Paneer Corn Sandwich", channel: "INDIANCOOKINEVERYDAY", id: "more-kid_sandwich", video: "https://www.youtube.com/watch?v=71EIOvN5tuM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 550.5, "p": 29.7, "c": 60.7, "f": 23.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer corn sandwich (1 sandwich, cut in 4)"]},
@@ -7913,7 +7909,7 @@ const sections = [
           {"title": "Paneer corn sandwich: 1 sandwich, cut in 4", "items": ["2 whole wheat bread", "1½ oz paneer", "¼ cup frozen sweet corn", "½ oz cheddar cheese", "0.1 cucumber", "¼ tbsp ghee", "0.03 tsp chaat masala"]},
           {"title": "Cucumber yogurt dip: 3 tbsp", "items": ["3 tbsp plain Greek yogurt", "0.06 cucumber", "¼ tbsp mint, chopped", "0.02 tsp salt"]},
         ],
-        note: "A mild Bombay-style toasted sandwich with paneer, sweet corn and cheddar, cut into triangles, with apple and carrot sticks. The video was chosen for popularity: Your Food Lab, 3:15 long, 740,619 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "A mild Bombay-style toasted sandwich with paneer, sweet corn and cheddar, cut into triangles, with apple and carrot sticks. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Rajma Cheese Quesadilla", channel: "Recipe collection", id: "more-kid_quesadilla", video: null,
@@ -8007,7 +8003,7 @@ const sections = [
         note: "Little uttapams topped with paneer, carrot, tomato and corn, with pomegranate and a yogurt dip.",
       },
       {
-        name: "Paneer Matar Pulao (Kids' lunch boxes)", channel: "Your Food Lab", id: "more-kid_pulao", video: "https://www.youtube.com/watch?v=ZAtDZ3CMy4I",
+        name: "Paneer Matar Pulao (Kids' lunch boxes)", channel: "Vismai Food", id: "more-kid_pulao", video: "https://www.youtube.com/watch?v=9Mqa7BaJyao",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 453.2, "p": 21.3, "c": 49.5, "f": 20.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer matar pulao (mild) (about 1 cup)"]},
@@ -8017,7 +8013,7 @@ const sections = [
           {"title": "Paneer matar pulao (mild): about 1 cup", "items": ["¼ cup brown basmati rice (dry)", "1½ oz paneer", "⅓ cup frozen green peas", "¼ cup carrots, shredded", "⅛ tsp cumin seeds (jeera)", "1 bay leaf (tej patta)", "½ tbsp ghee", "0.06 tsp salt"]},
           {"title": "Cucumber yogurt dip: 3 tbsp", "items": ["3 tbsp plain Greek yogurt", "0.06 cucumber", "¼ tbsp mint, chopped", "0.02 tsp salt"]},
         ],
-        note: "Gently spiced brown rice pulao with peas, carrot and golden paneer, with cucumber and a yogurt dip. The video was chosen for popularity: Your Food Lab, 8:17 long, 976,134 views. It is a close match found by searching YouTube, so its amounts may differ from this list.",
+        note: "Gently spiced brown rice pulao with peas, carrot and golden paneer, with cucumber and a yogurt dip. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
         name: "Paneer Paratha Bites", channel: "Garima ki Rasoi", id: "more-kid_paratha_bites", video: "https://www.youtube.com/watch?v=hLw9pKt2d6I",
