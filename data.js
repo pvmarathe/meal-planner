@@ -1491,7 +1491,7 @@ const sections = [
     note: "Egg breakfasts. The planner can pick these for breakfast like any other dish. The site is vegetarian with eggs; there is no meat or fish.",
     recipes: [
       {
-        name: "Boiled Eggs", channel: "Tasty", video: "https://www.youtube.com/watch?v=X5oD_thIk3c", meals: {"breakfast": "side"}, group: "eggs", weight: 0.2,
+        name: "Boiled Eggs", channel: "Tasty", video: "https://www.youtube.com/watch?v=X5oD_thIk3c", meals: {"breakfast": "side"}, group: "eggs", weight: 0.04,
         macros: {"servings": 4, "serving": "2 large boiled eggs", "basis": "assumed", "why": "Assumed: the page gives no servings. The planner uses 2 eggs as one serving; you and your partner eat about 8 eggs together, which is 2 servings each.", "kcal": 155.0, "p": 12.6, "c": 1.1, "f": 10.6},
         makes: "Makes 8 boiled eggs", from: "Amounts and method from RecipeTin Eats (How to Boil Eggs page)",
         ingredients: [
@@ -1500,13 +1500,138 @@ const sections = [
         note: "Bring the water to a rapid boil, lower the eggs in with a slotted spoon, turn the heat down slightly so it still bubbles, and time them: 6 minutes runny yolk, 8 minutes soft, 10 minutes hard boiled. Cool the eggs 10 minutes in cold water, then peel from the base under water. The numbers are for 2 hard-boiled large eggs (about 50 g each without the shell), from USDA data for hard-boiled whole egg. Salt and pepper to taste are not counted. The video is Tasty's popular video on cooking eggs several ways, a close match for the boiled-egg part, so its timings may differ slightly from this list.",
       },
       {
-        name: "Masala Omelette", channel: "Sanjeev Kapoor Khazana", video: "https://www.youtube.com/watch?v=uhjH7tlM1Jw", meals: {"breakfast": "side"}, group: "eggs", weight: 0.2,
+        name: "Masala Omelette", channel: "Sanjeev Kapoor Khazana", video: "https://www.youtube.com/watch?v=uhjH7tlM1Jw", meals: {"breakfast": "side"}, group: "eggs", weight: 0.04,
         macros: {"servings": 2, "serving": "half the omelette (1½ eggs)", "basis": "assumed", "why": "Assumed: the page says it serves 4, but it is one pan-sized omelette from 3 eggs, so the planner counts half of it (1½ eggs) as one serving.", "kcal": 303.8, "p": 12.5, "c": 12.5, "f": 23.2},
         makes: "Makes 1 omelette from 3 eggs", from: "Sanjeev Kapoor (Indian Masala Omelette page and video)",
         ingredients: [
           "3 eggs", "2 tbsp oil", "2–3 green chillies, chopped", "2 medium tomatoes, finely chopped", "1 tsp red chilli powder", "¼ tsp turmeric powder", "½ tsp cumin powder", "1 tsp coriander powder", "Salt, to taste", "½ tsp sugar", "¼ capsicum, chopped", "2 tbsp coriander leaves, chopped", "2 tbsp processed cheese, grated", "1 medium onion, chopped",
         ],
         note: "Soften the chillies and onion in 1 tbsp oil until golden, add the tomatoes, then the spice powders, salt and a sprinkle of water. Add the sugar and capsicum, switch off and let it cool. Beat the eggs with a little salt, stir in the cooled mixture, the coriander and the cheese, and cook in the remaining oil, covered on low heat, for 2 to 3 minutes. The numbers are for half the omelette and count the eggs (150 g), all the oil (27 g), tomatoes (about 246 g), onion (110 g), capsicum (about 30 g), cheese (about 14 g) and sugar. The chillies, coriander leaves, spice powders and salt add almost nothing and are not counted. Serve hot with toasted bread, which is not included.",
+      },
+    ],
+  },
+  // ============================ FRESH FRUITS ============================
+  {
+    id: "fruits",
+    title: "Fresh fruits",
+    note: "One fresh fruit a day. The planner adds one of these to every breakfast (a different one each day, picked at random) and balances the rest of the meal around it. There are no videos, because there is nothing to cook.",
+    recipes: [
+      {
+        name: "Apple", channel: "Fresh fruit", id: "fruit-apple", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 medium apple (about 182 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 94.6, "p": 0.5, "c": 25.1, "f": 0.3},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 medium apple (about 182 g), washed",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 medium apple (about 182 g), from USDA data for raw apple. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Banana", channel: "Fresh fruit", id: "fruit-banana", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 medium banana (about 118 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 105.0, "p": 1.3, "c": 27.0, "f": 0.4},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 medium banana (about 118 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 medium banana (about 118 g), from USDA data for raw banana. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Orange", channel: "Fresh fruit", id: "fruit-orange", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 medium orange (about 131 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 61.6, "p": 1.2, "c": 15.4, "f": 0.2},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 medium orange (about 131 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 medium orange (about 131 g), from USDA data for raw orange. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Mango", channel: "Fresh fruit", id: "fruit-mango", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 cup mango pieces (about 165 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 99.0, "p": 1.4, "c": 24.7, "f": 0.6},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup mango, cut into pieces (about 165 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup mango pieces (about 165 g), from USDA data for raw mango. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Papaya", channel: "Fresh fruit", id: "fruit-papaya", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 cup papaya pieces (about 145 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 62.4, "p": 0.7, "c": 15.7, "f": 0.4},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup papaya, cut into pieces (about 145 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup papaya pieces (about 145 g), from USDA data for raw papaya. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Guava", channel: "Fresh fruit", id: "fruit-guava", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 cup guava pieces (about 165 g, roughly 3 small guavas)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 112.2, "p": 4.2, "c": 23.6, "f": 1.6},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup guava, cut into pieces (about 165 g, roughly 3 small guavas)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup guava pieces (about 165 g, roughly 3 small guavas), from USDA data for raw guava. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Pomegranate", channel: "Fresh fruit", id: "fruit-pomegranate", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "½ cup pomegranate seeds (about 87 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 72.2, "p": 1.5, "c": 16.3, "f": 1.0},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "½ cup pomegranate, seeds taken out (about 87 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for ½ cup pomegranate seeds (about 87 g), from USDA data for raw pomegranate. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Watermelon", channel: "Fresh fruit", id: "fruit-watermelon", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "2 cups diced watermelon (about 304 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 91.2, "p": 1.9, "c": 23.0, "f": 0.5},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "2 cups watermelon, diced (about 304 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 2 cups diced watermelon (about 304 g), from USDA data for raw watermelon. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Grapes", channel: "Fresh fruit", id: "fruit-grapes", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 cup grapes (about 151 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 104.2, "p": 1.1, "c": 27.3, "f": 0.2},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup grapes (about 151 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup grapes (about 151 g), from USDA data for raw grapes. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Pear", channel: "Fresh fruit", id: "fruit-pear", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 medium pear (about 178 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 101.5, "p": 0.6, "c": 27.1, "f": 0.2},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 medium pear (about 178 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 medium pear (about 178 g), from USDA data for raw pear. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Pineapple", channel: "Fresh fruit", id: "fruit-pineapple", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 cup pineapple chunks (about 165 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 82.5, "p": 0.9, "c": 21.6, "f": 0.2},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup pineapple, cut into chunks (about 165 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup pineapple chunks (about 165 g), from USDA data for raw pineapple. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Muskmelon", channel: "Fresh fruit", id: "fruit-muskmelon", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "1 cup diced muskmelon (about 156 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 53.0, "p": 1.3, "c": 12.7, "f": 0.3},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 cup muskmelon, diced (about 156 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 1 cup diced muskmelon (about 156 g), from USDA data for raw muskmelon. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Kiwi", channel: "Fresh fruit", id: "fruit-kiwi", video: null, dailyPick: "breakfast",
+        macros: {"servings": 1, "serving": "2 kiwis (about 138 g)", "basis": "assumed", "why": "Assumed: a typical single portion of this fruit (USDA portion size). Everything is for the edible part.", "kcal": 84.2, "p": 1.6, "c": 20.2, "f": 0.7},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "2 kiwi fruits, peeled (about 138 g)",
+        ],
+        note: "Wash and eat it fresh. The numbers are for 2 kiwis (about 138 g), from USDA data for raw kiwi. There is no video, because there is nothing to cook.",
       },
     ],
   },

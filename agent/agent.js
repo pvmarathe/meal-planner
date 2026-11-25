@@ -88,7 +88,7 @@ const emailHtml = (subject, html, attach) => `SUBJECT: ${subject}\nFORMAT: html\
 const nameLink = (id) => {
   const r = byId[id].r;
   const href = r.video || `${SITE}recipes.html#r-${id}`;
-  return `<a href="${esc(href)}" style="color:#2a2620;text-decoration:underline">${r.video ? `<span style="color:#2f7d4f">▶</span> ` : ""}${esc(r.name)}</a>`;
+  return `<a href="${esc(href)}" style="color:#2a2620">${r.video ? "▶ " : ""}${esc(r.name)}</a>`;
 };
 const idByName = Object.fromEntries(Object.keys(byId).map((id) => [byId[id].r.name, id]));
 const itemHtml = (plan, it, m) => {

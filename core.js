@@ -69,6 +69,18 @@ const DAILY = {};
 MEALS.forEach((m) => { DAILY[m] = []; });
 Object.keys(byId).forEach((id) => { const w = byId[id].r.dailyWith; if (w && DAILY[w] && byId[id].r.macros && !byId[id].r.macros.na) DAILY[w].push({ id, s: 1 }); });
 
+// Recipes marked dailyPick (the fresh fruits) work like the daily drink, but a different one is picked at random for each
+// of that meal: one is added to every such meal, and the rest of the meal is balanced around it.
+const FRUITS = {};
+MEALS.forEach((m) => { FRUITS[m] = []; });
+Object.keys(byId).forEach((id) => { const { r, s } = byId[id]; if (s.inPlanner !== false && r.dailyPick && FRUITS[r.dailyPick] && r.macros && !r.macros.na) FRUITS[r.dailyPick].push(id); });
+const fruitFor = (meal, banned) => {
+  const all = FRUITS[meal];
+  if (!all.length) return [];
+  const fresh = all.filter((id) => !banned.has(id));
+  return [{ id: randomFrom(fresh.length ? fresh : all), s: 1 }];
+};
+
 const POOLS = {};
 MEALS.forEach((m) => { POOLS[m] = { main: [], side: [] }; });
 Object.keys(byId).forEach((id) => {
@@ -161,7 +173,7 @@ function solvePair(meal, targets, banned, level = 0) {
   let mains = POOLS[meal].main.filter((id) => !banned.has(id));
   if (!mains.length) mains = POOLS[meal].main;
   const sides = POOLS[meal].side.filter((id) => !banned.has(id));
-  const fixed = DAILY[meal].map((d) => ({ ...d }));
+  const fixed = [...DAILY[meal].map((d) => ({ ...d })), ...fruitFor(meal, banned)];
   const found = [];
   for (let n = 0; n < 1500; n++) {
     const ids = [randomFrom(mains)];
@@ -188,7 +200,7 @@ function solveOne(meal, target, banned, level = 0) {
   const stepsMain = [1, 1.5, 2, 2.5, 3];
   const stepsSide = [0.5, 1, 1.5, 2, 2.5, 3];
   const found = [];
-  const fixed = DAILY[meal].map((d) => ({ ...d }));
+  const fixed = [...DAILY[meal].map((d) => ({ ...d })), ...fruitFor(meal, banned)];
   for (let n = 0; n < 6000; n++) {
     const items = [...fixed, { id: randomFrom(mains), s: randomFrom(stepsMain) }];
     if (sides.length && rng() < 0.8) items.push({ id: pickSide(sides), s: randomFrom(stepsSide) });
@@ -235,7 +247,7 @@ function idsOfDay(day, except) {
 }
 function mainsUsed(days, meal) {
   const used = new Set();
-  days.forEach((d) => { if (d[meal]) d[meal].items.forEach((i) => { if (byId[i.id].r.meals && byId[i.id].r.meals[meal] === "main") used.add(i.id); }); });
+  days.forEach((d) => { if (d[meal]) d[meal].items.forEach((i) => { if (((byId[i.id].r.meals && byId[i.id].r.meals[meal] === "main") || byId[i.id].r.dailyPick === meal)) used.add(i.id); }); });
   return used;
 }
 
@@ -358,8 +370,8 @@ function seeded(text) {
 // those recipes changed since it was made. Recipes that are only on the recipes page never change a plan, so they are left out.
 const dataHash = () => {
   let h = 2166136261;
-  const text = Object.keys(byId).filter((id) => { const { r, s } = byId[id]; return s.inPlanner !== false && r.meals && r.macros && !r.macros.na; })
-    .map((id) => { const { r } = byId[id]; return `${id}${JSON.stringify(r.meals)}${r.macros.kcal}${r.macros.p}${r.macros.c}${r.macros.f}`; }).join("|");
+  const text = Object.keys(byId).filter((id) => { const { r, s } = byId[id]; return s.inPlanner !== false && (r.meals || r.dailyPick) && r.macros && !r.macros.na; })
+    .map((id) => { const { r } = byId[id]; return `${id}${JSON.stringify(r.meals)}${r.dailyPick || ""}${r.macros.kcal}${r.macros.p}${r.macros.c}${r.macros.f}`; }).join("|");
   for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
   return (h >>> 0).toString(16).padStart(8, "0");
 };
@@ -450,7 +462,7 @@ const SHOP_SYN = {
   "lime juice": "lime", "lemon juice": "lemon", "lemon zest": "lemon", "lime zest": "lime", "garlic clove": "garlic", "clove garlic": "garlic",
   "green apple": "apple", "purple cabbage": "red cabbage", "lettuce leaf": "lettuce", "bay leaf": "bay leaf", "mixed herb": "mixed herbs", "medjool date": "dates", "date": "dates", "peanut": "peanuts", "sesame": "sesame seeds",
   "tamarind juice": "tamarind", "tamarind pulp": "tamarind", "tamarind paste": "tamarind", "spoon sugar": "sugar", "cube processed cheese": "processed cheese", "cubes processed cheese": "processed cheese", "crumbled paneer": "paneer", "paneer cube": "paneer",
-  "cinnamon stick": "cinnamon", "eno": "eno fruit salt", "fruit salt": "eno fruit salt", "eno fruit salt": "eno fruit salt", "jaggery powder": "jaggery", "oats": "rolled oats", "oat": "rolled oats", "french beans": "green beans", "french bean": "green beans", "coriander": "cilantro", "cumin-coriander powder": "cumin and coriander seeds or powder", "peanuts": "peanuts", "bay leaves": "bay leaf", "cilantro leaves": "cilantro", "coriander leaves": "cilantro", "green coriander leaves": "cilantro", "cumin seeds": "cumin", "jeera seeds": "cumin", "pounded cumin seeds": "cumin", "coriander seeds": "coriander seeds or powder", "fennel seeds": "fennel", "saunf": "fennel", "carom seeds": "ajwain", "moong sprouts": "sprouted moong", "red pepper": "chilli flakes", "red pepper flakes": "chilli flakes", "kidney beans": "kidney beans (rajma)", "rajma": "kidney beans (rajma)", "white quinoa": "quinoa", "mustard seeds": "mustard seeds", "turmeric": "turmeric", "cinnamon powder": "cinnamon", "clove": "cloves", "flax": "flax seeds", "mix of flax": "flax seeds", "ginger paste": "ginger", "garlic paste": "garlic", "ginger-chilli paste": "ginger and green chilli", "ginger chilli paste": "ginger and green chilli",
+  "cinnamon stick": "cinnamon", "eno": "eno fruit salt", "fruit salt": "eno fruit salt", "eno fruit salt": "eno fruit salt", "jaggery powder": "jaggery", "oats": "rolled oats", "oat": "rolled oats", "french beans": "green beans", "french bean": "green beans", "coriander": "cilantro", "cumin-coriander powder": "cumin and coriander seeds or powder", "peanuts": "peanuts", "bay leaves": "bay leaf", "cilantro leaves": "cilantro", "kiwi fruit": "kiwi", "pomegranate seeds": "pomegranate", "pomegranate seed": "pomegranate", "kiwis": "kiwi", "grapes": "grape", "coriander leaves": "cilantro", "green coriander leaves": "cilantro", "cumin seeds": "cumin", "jeera seeds": "cumin", "pounded cumin seeds": "cumin", "coriander seeds": "coriander seeds or powder", "fennel seeds": "fennel", "saunf": "fennel", "carom seeds": "ajwain", "moong sprouts": "sprouted moong", "red pepper": "chilli flakes", "red pepper flakes": "chilli flakes", "kidney beans": "kidney beans (rajma)", "rajma": "kidney beans (rajma)", "white quinoa": "quinoa", "mustard seeds": "mustard seeds", "turmeric": "turmeric", "cinnamon powder": "cinnamon", "clove": "cloves", "flax": "flax seeds", "mix of flax": "flax seeds", "ginger paste": "ginger", "garlic paste": "garlic", "ginger-chilli paste": "ginger and green chilli", "ginger chilli paste": "ginger and green chilli",
 };
 const SHOP_KEEP_PLURAL = new Set(["peas", "beans", "lentils", "oats", "chickpeas", "noodles", "greens", "leaves", "seeds", "flakes", "crumbs", "kernels", "sprouts", "nuts", "cashews", "grapes", "berries", "molasses", "hummus", "couscous", "asparagus", "swiss", "citrus", "bhindi"]);
 const SHOP_SPLIT = { "ginger and green chilli": ["ginger", "green chilli"], "cumin and coriander seeds or powder": ["cumin", "coriander seeds or powder"] };
@@ -499,7 +511,7 @@ const SHOP_CATS = [
   ["Spices and seasonings", /salt|namak|(?<!bell )pepper$|turmeric|powder|masala|cumin|jeera|mustard|hing|asafoetida|cardamom|cinnamon|\bcloves?\b|ajwain|carom|kasuri|methi dana|fennel|saunf|garam|paprika|chaat|oregano|thyme|bay leaf|seeds?$|chilli flakes|amchur|saffron|nutmeg/],
   ["Dals, grains and flours", /dal\b|lentil|moong|chana|rajma|chickpea|rice|poha|oats|quinoa|millet|ragi|jowar|bajra|flour|besan|sattu|rava|sooji|semolina|bread|barley|bulgur|couscous|pasta|noodles|tortilla|pita|urad|toor|masoor|kala|sabudana|sago|dalia|beans/],
   ["Dairy and protein", /\begg\b|paneer|yogurt|milk|cheese|tofu|soya|soy chunks|ghee|butter|cream|hummus|tempeh|buttermilk/],
-  ["Fresh produce", /onion|dill|parsley|coconut|tomato|potato|carrot|cabbage|spinach|cucumber|ginger|garlic|chilli|cilantro|mint|curry leaf|curry leaves|lemon|lime|bell pepper|peas|corn|beet|cauliflower|broccoli|mushroom|apple|banana|avocado|mango|orange|pomegranate|methi|fenugreek|radish|gourd|brinjal|eggplant|zucchini|celery|lettuce|pumpkin|okra|bhindi|drumstick|plantain|berry|berries|dates|grape|pineapple|papaya|green|leaf|leaves|sprouted/],
+  ["Fresh produce", /apple|banana|orange|mango|papaya|guava|pomegranate|watermelon|grape|pear|pineapple|muskmelon|melon|kiwi|onion|dill|parsley|coconut|tomato|potato|carrot|cabbage|spinach|cucumber|ginger|garlic|chilli|cilantro|mint|curry leaf|curry leaves|lemon|lime|bell pepper|peas|corn|beet|cauliflower|broccoli|mushroom|apple|banana|avocado|mango|orange|pomegranate|methi|fenugreek|radish|gourd|brinjal|eggplant|zucchini|celery|lettuce|pumpkin|okra|bhindi|drumstick|plantain|berry|berries|dates|grape|pineapple|papaya|green|leaf|leaves|sprouted/],
 ];
 const shopCat = (name) => { for (const [t, re] of SHOP_CATS) if (re.test(name)) return t; return "Oils, sauces and other"; };
 const SHOP_ORDER = ["Fresh produce", "Dals, grains and flours", "Dairy and protein", "Spices and seasonings", "Oils, sauces and other"];

@@ -19,7 +19,7 @@ Live site: https://pvmarathe.github.io/meal-planner/ (GitHub repo `pvmarathe/mea
 1. **Ask before every push to `main`.** Pushing `main` updates the live website **and** changes what the scheduled agents run (they clone `main` on every run). Commit locally, then ask: "Want me to update the live site?" Risky changes go on a branch first (see "Changing the emails safely").
 2. **No attribution lines in commits or PRs:** no `Co-Authored-By: Claude` and no "Generated with Claude Code".
 3. **Ask before destructive or outward-facing actions** (force-push, deleting files, sending email to anyone, rewriting history). The owner once approved a history rewrite for privacy reasons; that does not carry over to new ones.
-4. **Vegetarian, with eggs (the owner changed this on 2026-11-25; the earlier rule was no eggs).** No meat or fish. Egg dishes live only in the `Eggs` section of `data.js` (Boiled Eggs, Masala Omelette), tagged as breakfast sides with `group: "eggs"` (never two in one meal) and `weight: 0.2` (picked less often; about two egg breakfasts a week for two people). Do not add eggs to other recipes without asking.
+4. **Vegetarian, with eggs (the owner changed this on 2026-11-25; the earlier rule was no eggs).** No meat or fish. Egg dishes live only in the `Eggs` section of `data.js` (Boiled Eggs, Masala Omelette), tagged as breakfast sides with `group: "eggs"` (never two in one meal) and `weight: 0.04` (picked less often; about two egg breakfasts a week for two people). Do not add eggs to other recipes without asking.
 5. **Never guess missing recipe amounts.** If a recipe leaves out a key amount, its `macros` is `{na: "reason"}` and the card says why.
 6. **Every recipe in the planner collection has its own verified ingredient list with quantities and its own video link**, with no duplicate names or video IDs. Nutrition is per serving, and the card says what a serving is and whether it came from the source or was assumed.
 7. **Do not bypass blocks** (Cloudflare challenge pages, YouTube's internal APIs, anything that says no). Report it and use another source.
@@ -34,6 +34,7 @@ Live site: https://pvmarathe.github.io/meal-planner/ (GitHub repo `pvmarathe/mea
 - `solveOne` (one person) and `solvePair` (two people, same dishes, separate portions) search thousands of combinations. A recipe is only picked if it has a `meals` tag, valid macros and a section not marked `inPlanner: false`.
 - Recipes with `dailyWith: "lunch"` (the sattu cucumber drink) are added to every lunch and the rest of the meal is balanced around them.
 - A plan item is `{id, s, s2}`: `s` is the first person's servings, `s2` the second's. A two-person plan has `people: [...]`.
+- Fresh fruits (`Fresh fruits` section, recipes with `dailyPick: "breakfast"` and no `meals` tag) work like the daily drink: `fruitFor` in `core.js` adds one random fruit (not the same as the previous days) to every breakfast and the rest of the meal is balanced around it. They have no videos (nothing to cook), so each has an explicit `id`.
 - Recipes with no video use `video: null` and an explicit `id` (video IDs normally double as the recipe `id`). The "More recipes" sections (ids start with `more-`) are `inPlanner: false` and are folded on the recipes page.
 
 ## The email agent (the part that is easy to break)
