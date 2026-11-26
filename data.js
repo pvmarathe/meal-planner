@@ -1397,8 +1397,9 @@ const sections = [
   // Not used by the meal planner: these have no `meals` tag, and the section is marked inPlanner: false.
   {
     id: "dressings",
-    title: "Dressings",
+    title: "Recipe shelf: Dressings",
     inPlanner: false,
+    style: "Dressings",
     note: "Healthy dressings to pour over any salad, bowl or roasted vegetables. Yogurt, tahini and herb dressings add protein and flavor; the vinaigrettes are mostly olive oil, so a spoonful goes a long way. These are not part of the meal planner, so they never show up in your random picks. Each card shows the nutrition for one 2-tablespoon serving, or the creator's own serving where the recipe gives one.",
     recipes: [
       {
@@ -1696,11 +1697,12 @@ const sections = [
       },
     ],
   },
-  // ============================ MORE RECIPES (vegetarian, recipes page only) ============================
+  // ============================ RECIPE SHELF (vegetarian, recipes page only) ============================
   {
     id: "more-sweetgreen",
-    title: "More recipes: Sweetgreen salads",
+    title: "Recipe shelf: Sweetgreen salads",
     inPlanner: false,
+    style: "Restaurant",
     note: "More vegetarian recipes (Sweetgreen salads). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -1769,8 +1771,9 @@ const sections = [
   },
   {
     id: "more-indian",
-    title: "More recipes: Indian salads",
+    title: "Recipe shelf: Indian salads",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Indian salads). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -1946,8 +1949,9 @@ const sections = [
   },
   {
     id: "more-bowls",
-    title: "More recipes: Indian grain bowls",
+    title: "Recipe shelf: Indian grain bowls",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Indian grain bowls). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -2143,8 +2147,9 @@ const sections = [
   },
   {
     id: "more-soups",
-    title: "More recipes: Indian soups",
+    title: "Recipe shelf: Indian soups",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Indian soups). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -2308,8 +2313,9 @@ const sections = [
   },
   {
     id: "more-parathas",
-    title: "More recipes: Protein parathas",
+    title: "Recipe shelf: Protein parathas",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Protein parathas). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -2692,8 +2698,9 @@ const sections = [
   },
   {
     id: "more-dals",
-    title: "More recipes: Dals",
+    title: "Recipe shelf: Dals",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Dals). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -2967,8 +2974,9 @@ const sections = [
   },
   {
     id: "more-sabzis",
-    title: "More recipes: Sabzis",
+    title: "Recipe shelf: Sabzis",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Sabzis). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -3335,8 +3343,9 @@ const sections = [
   },
   {
     id: "more-rice",
-    title: "More recipes: Rice",
+    title: "Recipe shelf: Rice",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Rice). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -3523,8 +3532,9 @@ const sections = [
   },
   {
     id: "more-millets",
-    title: "More recipes: Millets",
+    title: "Recipe shelf: Millets",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Millets). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -3730,8 +3740,9 @@ const sections = [
   },
   {
     id: "more-breakfast",
-    title: "More recipes: Breakfast",
+    title: "Recipe shelf: Breakfast",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Breakfast). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -4121,8 +4132,9 @@ const sections = [
   },
   {
     id: "more-smoothies",
-    title: "More recipes: Smoothies",
+    title: "Recipe shelf: Smoothies",
     inPlanner: false,
+    style: "Indian",
     note: "More vegetarian recipes (Smoothies). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -4309,8 +4321,9 @@ const sections = [
   },
   {
     id: "more-mediterranean",
-    title: "More recipes: Mediterranean",
+    title: "Recipe shelf: Mediterranean",
     inPlanner: false,
+    style: "Mediterranean",
     note: "More vegetarian recipes (Mediterranean). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -4476,8 +4489,9 @@ const sections = [
   },
   {
     id: "more-bluezones",
-    title: "More recipes: Blue Zones",
+    title: "Recipe shelf: Blue Zones",
     inPlanner: false,
+    style: "Blue Zones",
     note: "More vegetarian recipes (Blue Zones). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -7030,8 +7044,9 @@ const sections = [
   },
   {
     id: "more-thai",
-    title: "More recipes: Thai × Indian",
+    title: "Recipe shelf: Thai × Indian",
     inPlanner: false,
+    style: "Thai × Indian",
     note: "More vegetarian recipes (Thai × Indian). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -7189,8 +7204,9 @@ const sections = [
   },
   {
     id: "more-restaurant",
-    title: "More recipes: Restaurant",
+    title: "Recipe shelf: Restaurant",
     inPlanner: false,
+    style: "Restaurant",
     note: "More vegetarian recipes (Restaurant). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -7881,8 +7897,9 @@ const sections = [
   },
   {
     id: "more-kids",
-    title: "More recipes: Kids' lunch boxes",
+    title: "Recipe shelf: Kids' lunch boxes",
     inPlanner: false,
+    style: "Kids' lunch boxes",
     note: "More vegetarian recipes (Kids' lunch boxes). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
@@ -8108,8 +8125,9 @@ const sections = [
   },
   {
     id: "more-ivd-main",
-    title: "More recipes: Recipe library, main courses",
+    title: "Recipe shelf: Library, main courses",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -9276,8 +9294,9 @@ const sections = [
   },
   {
     id: "more-ivd-sides",
-    title: "More recipes: Recipe library, side dishes",
+    title: "Recipe shelf: Library, side dishes",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -10052,8 +10071,9 @@ const sections = [
   },
   {
     id: "more-ivd-snacks",
-    title: "More recipes: Recipe library, appetizers and snacks",
+    title: "Recipe shelf: Library, appetizers and snacks",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -10732,8 +10752,9 @@ const sections = [
   },
   {
     id: "more-ivd-breakfast",
-    title: "More recipes: Recipe library, breakfast",
+    title: "Recipe shelf: Library, breakfast",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -11268,8 +11289,9 @@ const sections = [
   },
   {
     id: "more-ivd-desserts",
-    title: "More recipes: Recipe library, desserts",
+    title: "Recipe shelf: Library, desserts",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -11500,8 +11522,9 @@ const sections = [
   },
   {
     id: "more-ivd-salads",
-    title: "More recipes: Recipe library, salads",
+    title: "Recipe shelf: Library, salads",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -11732,8 +11755,9 @@ const sections = [
   },
   {
     id: "more-ivd-drinks",
-    title: "More recipes: Recipe library, drinks",
+    title: "Recipe shelf: Library, drinks",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -11940,8 +11964,9 @@ const sections = [
   },
   {
     id: "more-ivd-soups",
-    title: "More recipes: Recipe library, soups",
+    title: "Recipe shelf: Library, soups",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {
@@ -12052,8 +12077,9 @@ const sections = [
   },
   {
     id: "more-ivd-pantry",
-    title: "More recipes: Recipe library, spice blends and pantry",
+    title: "Recipe shelf: Library, spice blends and pantry",
     inPlanner: false,
+    style: "Indian",
     note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
     recipes: [
       {

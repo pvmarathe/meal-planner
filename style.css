@@ -414,7 +414,7 @@ tr.flash { animation: flash 2.5s ease-out; }
 .range-msg { margin: 0; font-size: 0.92rem; color: var(--accent-strong); font-weight: 600; }
 .range-msg.problem { color: var(--warm); }
 
-/* Folded sections (the More recipes): the heading is the click target */
+/* Folded sections (the Recipe shelf): the heading is the click target */
 details.fold > summary { cursor: pointer; list-style-position: inside; }
 details.fold > summary h2 { display: inline; }
 details.fold > summary:hover h2 { color: var(--accent-strong); }
@@ -686,5 +686,6 @@ details.shopping.panel > summary { color: var(--pn-shp-fg); }
 .tag-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0 4px; }
 .tag-filter-label { font-weight: 700; font-size: 0.85rem; color: var(--muted); margin-right: 2px; }
 .tag-btn { cursor: pointer; font: inherit; }
+.style-pill { background: transparent; border: 1px solid currentColor; }
 .tag-btn[aria-pressed="true"] { background: var(--accent-strong); color: #fff; border-color: var(--accent-strong); }
 .tag-pill { display: inline-block; margin: 4px 4px 0 0; padding: 1px 9px; font-size: 0.72rem; font-weight: 700; border-radius: 999px; background: color-mix(in srgb, var(--accent-strong) 12%, transparent); color: var(--accent-strong); }

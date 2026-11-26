@@ -48,7 +48,7 @@ function methodSectionEl() {
     "Dal, sambar and rajma: 1 bowl, at about 40 g of dry dal (50 g for rajma).",
     "Salads: 1 bowl, at about 200 g.",
     "Dressings: 2 tablespoons, at about 30 g (or the creator's own serving when the recipe gives one).",
-    "More recipes (the collapsed sections): 1 serving, as each recipe is written. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Their nutrition is worked out ingredient by ingredient from USDA data, and spices, fresh herbs, lemon and lime, salt, vinegars and curry pastes count as zero. Idli and dosa batter, appam batter, bhajani flour and ready-made kachori have no reliable weight, so those 12 recipes show no numbers.",
+    "Recipe shelf (the collapsed sections): 1 serving, as each recipe is written. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Their nutrition is worked out ingredient by ingredient from USDA data, and spices, fresh herbs, lemon and lime, salt, vinegars and curry pastes count as zero. Idli and dosa batter, appam batter, bhajani flour and ready-made kachori have no reliable weight, so those 12 recipes show no numbers.",
     "Kheer, sweet pongal and porridge: 1 bowl, at about 250 g of the finished dish.",
   ].forEach((text) => {
     const li = document.createElement("li");
@@ -168,11 +168,12 @@ function macrosCell(r) {
   return td;
 }
 
-function row(r, sectionTitle) {
+function row(r, sectionTitle, style) {
   const tr = document.createElement("tr");
   tr.id = `r-${r.id || r.video.split("v=")[1]}`;
   tr.dataset.tags = (r.tags || []).join("|");
-  tr.dataset.search = [r.name, r.channel, sectionTitle, ...(r.tags || []), ...r.ingredients.flatMap((p) => (typeof p === "string" ? [p] : p.items))].join(" ").toLowerCase();
+  tr.dataset.style = style || "";
+  tr.dataset.search = [r.name, r.channel, sectionTitle, style || "", ...(r.tags || []), ...r.ingredients.flatMap((p) => (typeof p === "string" ? [p] : p.items))].join(" ").toLowerCase();
 
   const nameCell = document.createElement("td");
   nameCell.className = "name";
@@ -182,6 +183,7 @@ function row(r, sectionTitle) {
   channel.className = "channel";
   channel.textContent = r.channel;
   nameCell.append(nameText, channel);
+  if (style) { const pill = document.createElement("span"); pill.className = "tag-pill style-pill"; pill.textContent = style; nameCell.appendChild(pill); }
   (r.tags || []).forEach((t) => { const pill = document.createElement("span"); pill.className = "tag-pill"; pill.textContent = t; nameCell.appendChild(pill); });
 
   const linkCell = document.createElement("td");
@@ -240,7 +242,7 @@ function sectionEl(s) {
     }
     seen.add(nameKey);
     seen.add(linkKey);
-    tbody.appendChild(row(r, s.title));
+    tbody.appendChild(row(r, s.title, s.style));
     count++;
   });
   s.count = count;
@@ -248,7 +250,7 @@ function sectionEl(s) {
   table.appendChild(tbody);
   wrap.appendChild(table);
   if (s.id.startsWith("more-")) {
-    // The long "More recipes" sections stay folded until clicked.
+    // The long "Recipe shelf" sections stay folded until clicked.
     h2.textContent = `${s.title} (${count})`;
     const fold = document.createElement("details");
     fold.className = "fold";
@@ -287,42 +289,53 @@ chip("#how", "How the numbers work");
 const ivd = sections.filter((s) => s.id.startsWith("more-ivd-")); // nine course sections share one jump button
 sections.forEach((s) => {
   if (!s.id.startsWith("more-ivd-")) chip(`#${s.id}`, `${s.title} (${s.count})`);
-  else if (s === ivd[0]) chip(`#${s.id}`, `More recipes: Recipe library (${ivd.reduce((n, x) => n + x.count, 0)})`);
+  else if (s === ivd[0]) chip(`#${s.id}`, `Recipe shelf: Library (${ivd.reduce((n, x) => n + x.count, 0)})`);
 });
 
-// Main-ingredient filter: one button per tag, with a count. Only the recipes on this page that are not picked by the planner carry a tag.
-let activeTag = "";
+// Two filters that combine: Style (Indian, Blue Zones, Mediterranean...) and Main ingredient. Only the recipes on this page that the planner
+// never picks (the "Recipe shelf") carry a style and a main-ingredient tag. A button shows how many recipes it holds.
+const filters = { style: "", tag: "" };
+const styleCounts = {};
+sections.forEach((s) => { if (s.style) styleCounts[s.style] = (styleCounts[s.style] || 0) + s.count; });
 const tagCounts = {};
 sections.forEach((s) => s.recipes.forEach((r) => (r.tags || []).forEach((t) => { tagCounts[t] = (tagCounts[t] || 0) + 1; })));
+const STYLE_ORDER = ["Indian", "Blue Zones", "Mediterranean", "Thai × Indian", "Restaurant", "Kids' lunch boxes", "Dressings"];
 const TAG_ORDER = ["Paneer", "Lentil & Beans", "Rice & Grains", "Millet", "Quinoa", "Makhana", "Pasta & Noodles", "Vegetables", "Other"];
-const tagBar = document.createElement("div");
-tagBar.className = "tag-filter";
-tagBar.setAttribute("role", "group");
-tagBar.setAttribute("aria-label", "Filter by main ingredient");
-const tagLabel = document.createElement("span");
-tagLabel.className = "tag-filter-label";
-tagLabel.textContent = "Main ingredient:";
-tagBar.appendChild(tagLabel);
-const tagButtons = [];
-[["", "All"], ...TAG_ORDER.filter((t) => tagCounts[t]).map((t) => [t, `${t} (${tagCounts[t]})`])].forEach(([value, text]) => {
-  const b = document.createElement("button");
-  b.type = "button"; b.className = "chip tag-btn"; b.textContent = text; b.setAttribute("aria-pressed", value === "" ? "true" : "false");
-  b.addEventListener("click", () => { activeTag = value; tagButtons.forEach((x) => x.el.setAttribute("aria-pressed", String(x.value === value))); applySearch(); });
-  tagButtons.push({ el: b, value });
-  tagBar.appendChild(b);
-});
-document.querySelector(".search-bar").after(tagBar);
 
-// Search: shows only the recipes that match every word typed (name, ingredient, channel or section) and the chosen main ingredient.
+function filterBar(labelText, ariaLabel, key, order, counts) {
+  const bar = document.createElement("div");
+  bar.className = "tag-filter";
+  bar.setAttribute("role", "group");
+  bar.setAttribute("aria-label", ariaLabel);
+  const label = document.createElement("span");
+  label.className = "tag-filter-label";
+  label.textContent = labelText;
+  bar.appendChild(label);
+  const buttons = [];
+  [["", "All"], ...order.filter((v) => counts[v]).map((v) => [v, `${v} (${counts[v]})`])].forEach(([value, text]) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip tag-btn"; b.textContent = text; b.setAttribute("aria-pressed", value === "" ? "true" : "false");
+    b.addEventListener("click", () => { filters[key] = value; buttons.forEach((x) => x.el.setAttribute("aria-pressed", String(x.value === value))); applySearch(); });
+    buttons.push({ el: b, value });
+    bar.appendChild(b);
+  });
+  return bar;
+}
+const styleBar = filterBar("Style:", "Filter by style", "style", STYLE_ORDER, styleCounts);
+const tagBar = filterBar("Main ingredient:", "Filter by main ingredient", "tag", TAG_ORDER, tagCounts);
+document.querySelector(".search-bar").after(styleBar);
+styleBar.after(tagBar);
+
+// Search: shows only the recipes that match every word typed (name, ingredient, channel, style or section) and the chosen style and main ingredient.
 function applySearch() {
   const words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
-  const filtering = words.length > 0 || activeTag !== "";
+  const filtering = words.length > 0 || filters.style !== "" || filters.tag !== "";
   let shown = 0;
   sections.forEach((s) => {
     const sectionEl_ = document.getElementById(s.id);
     let visible = 0;
     sectionEl_.querySelectorAll("tbody tr").forEach((tr) => {
-      const match = words.every((w) => tr.dataset.search.includes(w)) && (!activeTag || (tr.dataset.tags || "").split("|").includes(activeTag));
+      const match = words.every((w) => tr.dataset.search.includes(w)) && (!filters.style || tr.dataset.style === filters.style) && (!filters.tag || (tr.dataset.tags || "").split("|").includes(filters.tag));
       tr.hidden = !match;
       if (match) visible++;
     });
