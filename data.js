@@ -1402,7 +1402,7 @@ const sections = [
     note: "Healthy dressings to pour over any salad, bowl or roasted vegetables. Yogurt, tahini and herb dressings add protein and flavor; the vinaigrettes are mostly olive oil, so a spoonful goes a long way. These are not part of the meal planner, so they never show up in your random picks. Each card shows the nutrition for one 2-tablespoon serving, or the creator's own serving where the recipe gives one.",
     recipes: [
       {
-        name: "Avocado Green Goddess Dressing", channel: "Mallory the Dietitian", video: "https://www.youtube.com/watch?v=npJKehVy1sY",
+        name: "Avocado Green Goddess Dressing", tags: ["Vegetables"], channel: "Mallory the Dietitian", video: "https://www.youtube.com/watch?v=npJKehVy1sY",
         macros: {"servings": 12, "serving": "2 tablespoons", "basis": "source", "why": "The recipe card says it makes 12 servings of 2 tablespoons.", "kcal": 39.6, "p": 2.4, "c": 2.1, "f": 2.6},
         makes: "Makes 12 servings", from: CPAGE,
         ingredients: [
@@ -1411,7 +1411,7 @@ const sections = [
         note: "Not Panera's recipe. It is a dietitian's avocado version of green goddess, with Greek yogurt and avocado instead of mayo. The creator lists 30 kcal, 3 g protein, 2 g carbs and 2 g fat per serving; mine come out close. I counted 3½ tbsp of lemon juice and 3 tbsp of water. Herbs, lemon juice, salt and water count as zero. Keeps 4 to 5 days in the fridge.",
       },
       {
-        name: "Lemon Tahini Dressing", channel: "LVL Holistics", video: "https://www.youtube.com/watch?v=DXwSIVgZLCI",
+        name: "Lemon Tahini Dressing", tags: ["Other"], channel: "LVL Holistics", video: "https://www.youtube.com/watch?v=DXwSIVgZLCI",
         macros: {"servings": 6, "serving": "1 of the creator's 6 servings", "basis": "source", "why": "The source says it makes 6 servings.", "kcal": 121.2, "p": 3.5, "c": 4.7, "f": 10.8},
         makes: "Makes 6 servings", from: DESC,
         ingredients: [
@@ -1420,7 +1420,7 @@ const sections = [
         note: "The creator's own figures, per serving, are 4 g protein, 5 g carbs and 11 g fat. Mine come out close to that.",
       },
       {
-        name: "Cilantro Lime Greek Yogurt Dressing", channel: "Lindsay Pleskot", video: "https://www.youtube.com/watch?v=ItwnD3-bDVE",
+        name: "Cilantro Lime Greek Yogurt Dressing", tags: ["Other"], channel: "Lindsay Pleskot", video: "https://www.youtube.com/watch?v=ItwnD3-bDVE",
         macros: {"servings": 8, "serving": "2 tablespoons (about 30 g)", "basis": "assumed", "why": "Assumed: a dressing serving is 2 tablespoons (about 30 g).", "kcal": 40.5, "p": 3.1, "c": 2.1, "f": 2.3},
         makes: "Makes 1 cup", from: CPAGE,
         ingredients: [
@@ -1429,7 +1429,7 @@ const sections = [
         note: "The page says it makes 1 cup, which is 16 tablespoons, so I used 8 servings of 2 tablespoons. I counted low-fat Greek yogurt. This is the highest-protein dressing here.",
       },
       {
-        name: "Spicy Cilantro Yogurt Dressing", channel: "Beyond One Way", video: "https://www.youtube.com/watch?v=aruH5WQrf_k",
+        name: "Spicy Cilantro Yogurt Dressing", tags: ["Other"], channel: "Beyond One Way", video: "https://www.youtube.com/watch?v=aruH5WQrf_k",
         macros: {"servings": 3, "serving": "1 of the creator's 3 servings", "basis": "source", "why": "The source says it makes 3 servings.", "kcal": 190.7, "p": 1.1, "c": 5.1, "f": 18.9},
         makes: "Serves 3", from: DESC,
         ingredients: [
@@ -1438,7 +1438,7 @@ const sections = [
         note: "The creator lists 3 servings, which is generous for a dressing (about 4 tablespoons each). Use a smaller spoonful to cut the calories.",
       },
       {
-        name: "Cilantro Lime Vinaigrette", channel: "Jerry James Stone", video: "https://www.youtube.com/watch?v=CQYQKehqjgI",
+        name: "Cilantro Lime Vinaigrette", tags: ["Other"], channel: "Jerry James Stone", video: "https://www.youtube.com/watch?v=CQYQKehqjgI",
         macros: {"servings": 4, "serving": "2 tablespoons (about 30 g)", "basis": "assumed", "why": "Assumed: a dressing serving is 2 tablespoons (about 30 g).", "kcal": 121.3, "p": 0.0, "c": 0.5, "f": 13.5},
         from: DESC,
         ingredients: [
@@ -1447,7 +1447,7 @@ const sections = [
         note: "The creator gives no yield. The juice of 2 limes plus 4 tablespoons of oil is about 8 to 9 tablespoons, so I used 4 servings of 2 tablespoons. Lime juice is counted as zero.",
       },
       {
-        name: "Lemon Dijon Vinaigrette", channel: "Foolproof Living", video: "https://www.youtube.com/watch?v=zcNJYfJKFBM",
+        name: "Lemon Dijon Vinaigrette", tags: ["Other"], channel: "Foolproof Living", video: "https://www.youtube.com/watch?v=zcNJYfJKFBM",
         macros: {"servings": 4, "serving": "1 of the creator's 4 servings", "basis": "source", "why": "The source says it makes 4 servings.", "kcal": 126.2, "p": 0.4, "c": 0.9, "f": 13.8},
         makes: "Serves 4", from: CPAGE,
         ingredients: [
@@ -1456,7 +1456,7 @@ const sections = [
         note: "The recipe page says it serves 4. Lemon juice and vinegar are counted as zero.",
       },
       {
-        name: "Peanut Dressing", channel: "Green Healthy Cooking", video: "https://www.youtube.com/watch?v=RkLKLWw7KBY",
+        name: "Peanut Dressing", tags: ["Other"], channel: "Green Healthy Cooking", video: "https://www.youtube.com/watch?v=RkLKLWw7KBY",
         macros: {"servings": 3, "serving": "2 tablespoons (about 30 g)", "basis": "assumed", "why": "Assumed: a dressing serving is 2 tablespoons (about 30 g).", "kcal": 81.3, "p": 2.9, "c": 3.3, "f": 6.9},
         from: DESC,
         ingredients: [
@@ -1465,7 +1465,7 @@ const sections = [
         note: "The creator gives no yield. This is about 6 to 7 tablespoons in all, so I used 3 servings of 2 tablespoons. Soy sauce is salty; go easy if you watch your sodium.",
       },
       {
-        name: "Sesame Ginger Dressing", channel: "Whisk Affair", video: "https://www.youtube.com/watch?v=EgedUHIPtOI",
+        name: "Sesame Ginger Dressing", tags: ["Other"], channel: "Whisk Affair", video: "https://www.youtube.com/watch?v=EgedUHIPtOI",
         macros: {"servings": 9, "serving": "2 tablespoons (about 30 g)", "basis": "assumed", "why": "Assumed: a dressing serving is 2 tablespoons (about 30 g).", "kcal": 142.2, "p": 0.4, "c": 4.9, "f": 13.8},
         from: DESC,
         ingredients: [
@@ -1474,7 +1474,7 @@ const sections = [
         note: "The creator gives no yield. This is about 18 tablespoons in all, so I used 9 servings of 2 tablespoons. It is the richest dressing here, mostly sesame oil; use a light drizzle.",
       },
       {
-        name: "Spicy Cashew Dressing (Sweetgreen Style)", channel: "Orianamayo", video: "https://www.youtube.com/watch?v=uy6N-DDo5-4",
+        name: "Spicy Cashew Dressing (Sweetgreen Style)", tags: ["Other"], channel: "Orianamayo", video: "https://www.youtube.com/watch?v=uy6N-DDo5-4",
         macros: {"servings": 12, "serving": "2 tablespoons (about 30 g)", "basis": "assumed", "why": "Assumed: a dressing serving is 2 tablespoons (about 30 g).", "kcal": 120.2, "p": 1.4, "c": 3.9, "f": 11.5},
         from: DESC,
         ingredients: [
@@ -1704,7 +1704,7 @@ const sections = [
     note: "More vegetarian recipes (Sweetgreen salads). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Super Green Goddess", channel: "Restaurant Recipe Recreations", id: "more-super_goddess", video: "https://www.youtube.com/watch?v=trF3QudyhOw",
+        name: "Super Green Goddess", tags: ["Paneer"], channel: "Restaurant Recipe Recreations", id: "more-super_goddess", video: "https://www.youtube.com/watch?v=trF3QudyhOw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 820.5, "p": 45.4, "c": 84.5, "f": 36.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["2 cup baby spinach", "1 cup green cabbage, finely shredded"]},
@@ -1719,7 +1719,7 @@ const sections = [
         note: "A vegetarian powerhouse: crispy tofu, edamame, roasted sweet potato, spicy broccoli and chickpeas on spinach and shredded cabbage with a herby green goddess ranch. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Hummus Crunch", channel: "Tyler & Gabriel", id: "more-hummus_crunch", video: "https://www.youtube.com/watch?v=KLBqn_nJMtA",
+        name: "Hummus Crunch", tags: ["Lentil & Beans"], channel: "Tyler & Gabriel", id: "more-hummus_crunch", video: "https://www.youtube.com/watch?v=KLBqn_nJMtA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 925.7, "p": 41.5, "c": 86.2, "f": 50.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["1½ cup baby spinach", "1½ cup green cabbage, finely shredded"]},
@@ -1733,7 +1733,7 @@ const sections = [
         note: "Mediterranean and vegetarian: a swoosh of hummus, feta, chickpeas, lentils, pumpkin seeds, cucumber and basil with a pesto vinaigrette and garlic breadcrumbs. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Hara Bhara Goddess", channel: "Recipe collection", id: "more-hara_goddess", video: null,
+        name: "Hara Bhara Goddess", tags: ["Paneer"], channel: "Recipe collection", id: "more-hara_goddess", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 950.2, "p": 45.0, "c": 69.8, "f": 60.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["2 cup baby spinach", "1 cup green cabbage, finely shredded"]},
@@ -1750,7 +1750,7 @@ const sections = [
         note: "A vegetarian bowl with Indian street-food flavours: paneer tikka, masala roasted chickpeas, chaat-spiced sweet potato, mustard-seed tadka broccoli and a cooling mint raita ranch.",
       },
       {
-        name: "Paneer Kachumber Crunch", channel: "Recipe collection", id: "more-paneer_crunch", video: null,
+        name: "Paneer Kachumber Crunch", tags: ["Paneer"], channel: "Recipe collection", id: "more-paneer_crunch", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 1140.5, "p": 52.9, "c": 56.7, "f": 84.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["1½ cup baby spinach", "1½ cup green cabbage, finely shredded"]},
@@ -1774,7 +1774,7 @@ const sections = [
     note: "More vegetarian recipes (Indian salads). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Kala Chana Chaat (Indian salads)", channel: "bharatzkitchen HINDI", id: "more-kala_chana_chaat", video: "https://www.youtube.com/watch?v=TtK0UinxTE8",
+        name: "Kala Chana Chaat (Indian salads)", tags: ["Lentil & Beans"], channel: "bharatzkitchen HINDI", id: "more-kala_chana_chaat", video: "https://www.youtube.com/watch?v=TtK0UinxTE8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 965.8, "p": 48.7, "c": 108.1, "f": 42.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["¼ red onion", "½ cup cherry tomatoes, halved", "⅓ cucumber"]},
@@ -1787,7 +1787,7 @@ const sections = [
         note: "Earthy black chickpeas tossed with onion, tomato and cucumber, sweet-sour imli, chaat masala, cubes of paneer, a spoon of dahi, pomegranate and a crunch of peanuts and sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Tikka Salad", channel: "Your Food Lab", id: "more-paneer_tikka_salad", video: "https://www.youtube.com/watch?v=3oA8HijO3jE",
+        name: "Paneer Tikka Salad", tags: ["Paneer"], channel: "Your Food Lab", id: "more-paneer_tikka_salad", video: "https://www.youtube.com/watch?v=3oA8HijO3jE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 842.8, "p": 48.4, "c": 53.5, "f": 54.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["2 cup green cabbage, finely shredded", "Kachumber (½ cup)"]},
@@ -1803,7 +1803,7 @@ const sections = [
         note: "Charred tandoori-spiced paneer, peppers and onion over crisp shredded cabbage, kachumber and masala chickpeas, with laccha onions and a cooling mint raita dressing. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Moong Dal Kosambari", channel: "Bhusanur.cooking", id: "more-kosambari", video: "https://www.youtube.com/watch?v=UuOLxuz7Rv4",
+        name: "Moong Dal Kosambari", tags: ["Lentil & Beans"], channel: "Bhusanur.cooking", id: "more-kosambari", video: "https://www.youtube.com/watch?v=UuOLxuz7Rv4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 845.6, "p": 45.9, "c": 77.7, "f": 44.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["½ cucumber", "⅓ cup carrots, shredded"]},
@@ -1816,7 +1816,7 @@ const sections = [
         note: "The South Indian temple-festival salad: crunchy soaked moong dal with cucumber, carrot, fresh coconut and paneer cubes, finished with a sizzling mustard-seed and curry-leaf tadka. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajma Masala Salad", channel: "Recipe collection", id: "more-rajma_salad", video: null,
+        name: "Rajma Masala Salad", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-rajma_salad", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 796.5, "p": 46.7, "c": 86.6, "f": 33.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["¼ red onion", "½ bell pepper", "½ cup cherry tomatoes, halved"]},
@@ -1828,7 +1828,7 @@ const sections = [
         note: "Rajma-chawal's lighter cousin: kidney beans and chickpeas, charred corn, peppers and onion with paneer crumbles and a roasted-cumin lemon dressing.",
       },
       {
-        name: "Moong Sprout Dahi Koshimbir", channel: "Recipe collection", id: "more-sprout_koshimbir", video: null,
+        name: "Moong Sprout Dahi Koshimbir", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-sprout_koshimbir", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 647.5, "p": 44.4, "c": 34.8, "f": 41.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["½ cucumber"]},
@@ -1841,7 +1841,7 @@ const sections = [
         note: "A Maharashtrian koshimbir: moong sprouts, cucumber and roasted peanut powder with paneer in thick dahi, with a phodni of mustard seeds, curry leaves and green chili poured over.",
       },
       {
-        name: "Masala Soya Chunk Salad", channel: "Recipe collection", id: "more-soya_chaat", video: null,
+        name: "Masala Soya Chunk Salad", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-soya_chaat", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 757.6, "p": 55.4, "c": 68.6, "f": 31.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["¼ red onion", "⅓ cucumber", "⅓ bell pepper", "⅓ cup cherry tomatoes, halved"]},
@@ -1854,7 +1854,7 @@ const sections = [
         note: "Golden, masala-fried soya chunks — the highest-protein thing in an Indian pantry — tossed with chickpeas, crunchy vegetables, lemon and chaat masala.",
       },
       {
-        name: "Protein Bhel", channel: "CookingShooking Hindi", id: "more-protein_bhel", video: "https://www.youtube.com/watch?v=7Y2PTwfCdvk",
+        name: "Protein Bhel", tags: ["Lentil & Beans"], channel: "CookingShooking Hindi", id: "more-protein_bhel", video: "https://www.youtube.com/watch?v=7Y2PTwfCdvk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 1183.8, "p": 51.5, "c": 113.5, "f": 64.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["1 cup puffed rice (murmura)", "¼ red onion", "⅓ cup cherry tomatoes, halved"]},
@@ -1866,7 +1866,7 @@ const sections = [
         note: "Chowpatty bhel built for protein: puffed rice with roasted chana, moong sprouts, paneer and peanuts, tossed with tangy imli and green chutney and buried in sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ghugni Chaat", channel: "Food and Street", id: "more-ghugni_chaat", video: "https://www.youtube.com/watch?v=5MRseIWFAmA",
+        name: "Ghugni Chaat", tags: ["Lentil & Beans"], channel: "Food and Street", id: "more-ghugni_chaat", video: "https://www.youtube.com/watch?v=5MRseIWFAmA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 829.3, "p": 41.9, "c": 107.6, "f": 29.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["¼ red onion", "⅓ cucumber", "⅓ cup cherry tomatoes, halved"]},
@@ -1879,7 +1879,7 @@ const sections = [
         note: "Kolkata's favorite street snack as a salad: spiced white peas with onion, cucumber and coconut, sour tamarind, a spoon of dahi, and a chanachur crunch of sev and peanuts. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Achari Paneer & Chana Salad", channel: "Recipe collection", id: "more-achari_paneer_salad", video: null,
+        name: "Achari Paneer & Chana Salad", tags: ["Paneer"], channel: "Recipe collection", id: "more-achari_paneer_salad", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 744.1, "p": 47.4, "c": 53.7, "f": 42.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["1 cup green cabbage, finely shredded", "⅓ cucumber"]},
@@ -1893,7 +1893,7 @@ const sections = [
         note: "Paneer seared in mustard oil with mango-pickle spices, chickpeas, crunchy cabbage and laccha onions, with a tangy achari dahi dressing.",
       },
       {
-        name: "Mixed Sundal Salad", channel: "Swarna Sri.K", id: "more-sundal_salad", video: "https://www.youtube.com/watch?v=kpZySvcYu1U",
+        name: "Mixed Sundal Salad", tags: ["Lentil & Beans"], channel: "Swarna Sri.K", id: "more-sundal_salad", video: "https://www.youtube.com/watch?v=kpZySvcYu1U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 908.9, "p": 41.3, "c": 125.1, "f": 30.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["½ cup carrots, shredded", "⅓ cucumber"]},
@@ -1906,7 +1906,7 @@ const sections = [
         note: "The Navratri temple sundal turned into a meal: chickpeas and black chana with coconut, carrot, peanuts and crunchy pottukadalai, finished with a mustard-seed and curry-leaf tadka. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chilli Paneer Salad", channel: "Recipe collection", id: "more-chilli_paneer_salad", video: null,
+        name: "Chilli Paneer Salad", tags: ["Paneer"], channel: "Recipe collection", id: "more-chilli_paneer_salad", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 952.7, "p": 50.9, "c": 47.4, "f": 68.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["1½ cup napa cabbage, shredded", "1 cup green cabbage, finely shredded"]},
@@ -1919,7 +1919,7 @@ const sections = [
         note: "The Indo-Chinese favorite as a crunchy salad: crispy chilli paneer with peppers over napa and cabbage, edamame, crispy noodles and a Schezwan sesame dressing.",
       },
       {
-        name: "Indori Corn & Paneer Chaat", channel: "Recipe collection", id: "more-indori_corn_chaat", video: null,
+        name: "Indori Corn & Paneer Chaat", tags: ["Paneer"], channel: "Recipe collection", id: "more-indori_corn_chaat", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 968.7, "p": 51.2, "c": 79.1, "f": 55.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["1 cup frozen sweet corn", "¼ red onion", "⅓ cup cherry tomatoes, halved"]},
@@ -1931,7 +1931,7 @@ const sections = [
         note: "Inspired by Indore's Sarafa night market: charred corn and jeera paneer with onion, tomato and pomegranate, roasted chana for crunch, a spoon of dahi and plenty of sev.",
       },
       {
-        name: "Lobia Dahi Chaat", channel: "Hamari Sehat", id: "more-lobia_chaat", video: "https://www.youtube.com/watch?v=dKOZM1ctLbk",
+        name: "Lobia Dahi Chaat", tags: ["Lentil & Beans"], channel: "Hamari Sehat", id: "more-lobia_chaat", video: "https://www.youtube.com/watch?v=dKOZM1ctLbk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 769.5, "p": 49.1, "c": 90.6, "f": 27.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Chopped vegetables", "items": ["¼ red onion", "⅓ cup cherry tomatoes, halved", "⅓ cucumber"]},
@@ -1951,7 +1951,7 @@ const sections = [
     note: "More vegetarian recipes (Indian grain bowls). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Rajma Chawal Bowl (Indian grain bowls)", channel: "Your Food Lab", id: "more-rajma_chawal_bowl", video: "https://www.youtube.com/watch?v=asY7cq6j0xE",
+        name: "Rajma Chawal Bowl (Indian grain bowls)", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-rajma_chawal_bowl", video: "https://www.youtube.com/watch?v=asY7cq6j0xE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 854.4, "p": 48.1, "c": 106.0, "f": 29.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Jeera brown rice (about ¾ cup cooked)"]},
@@ -1967,7 +1967,7 @@ const sections = [
         note: "Sunday lunch in a bowl: slow-simmered rajma over jeera brown rice with paneer, kachumber, laccha onions and mint raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chole Quinoa Bowl", channel: "Recipe collection", id: "more-chole_quinoa_bowl", video: null,
+        name: "Chole Quinoa Bowl", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-chole_quinoa_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 989.6, "p": 52.5, "c": 111.5, "f": 41.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Quinoa (about 1 cup cooked)"]},
@@ -1984,7 +1984,7 @@ const sections = [
         note: "Dhaba-style chole and paneer tikka over fluffy quinoa with laccha onions, kachumber, pomegranate and mint raita.",
       },
       {
-        name: "Palak Paneer Millet Bowl", channel: "Millet Recipes with Vishala", id: "more-palak_paneer_bowl", video: "https://www.youtube.com/watch?v=td0GS5Wk53o",
+        name: "Palak Paneer Millet Bowl", tags: ["Paneer"], channel: "Millet Recipes with Vishala", id: "more-palak_paneer_bowl", video: "https://www.youtube.com/watch?v=td0GS5Wk53o",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 772.3, "p": 48.8, "c": 56.3, "f": 42.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Foxtail millet (about ¾ cup cooked)"]},
@@ -2000,7 +2000,7 @@ const sections = [
         note: "Silky palak paneer over nutty foxtail millet with kachumber, laccha onions and mint raita — restaurant flavor, everyday-healthy. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Moong Dal Khichdi Bowl", channel: "MadhurasRecipe Marathi", id: "more-khichdi_bowl", video: "https://www.youtube.com/watch?v=0bW-5JwHHNU",
+        name: "Moong Dal Khichdi Bowl", tags: ["Lentil & Beans"], channel: "MadhurasRecipe Marathi", id: "more-khichdi_bowl", video: "https://www.youtube.com/watch?v=0bW-5JwHHNU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 667.9, "p": 40.8, "c": 103.3, "f": 11.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Moong dal khichdi (about 1½ cups)"]},
@@ -2014,7 +2014,7 @@ const sections = [
         note: "Comfort food with a protein boost: ghee-tempered moong dal khichdi with peas, a thick mint raita, kachumber and a crisp roasted papad. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Dal Tadka Bowl", channel: "Your Food Lab", id: "more-dal_tadka_bowl", video: "https://www.youtube.com/watch?v=8c_scYUN5uc",
+        name: "Dal Tadka Bowl", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-dal_tadka_bowl", video: "https://www.youtube.com/watch?v=8c_scYUN5uc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 860.5, "p": 46.3, "c": 93.5, "f": 36.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Jeera brown rice (about ¾ cup cooked)"]},
@@ -2031,7 +2031,7 @@ const sections = [
         note: "Garlicky masoor dal tadka over jeera brown rice, with paneer tikka, kachumber, laccha onions, papad and raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kerala Kadala Curry Bowl", channel: "Shaan Geo", id: "more-kerala_bowl", video: "https://www.youtube.com/watch?v=56_PdZiLpVk",
+        name: "Kerala Kadala Curry Bowl", tags: ["Rice & Grains"], channel: "Shaan Geo", id: "more-kerala_bowl", video: "https://www.youtube.com/watch?v=56_PdZiLpVk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 845.0, "p": 40.7, "c": 115.5, "f": 26.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Kerala matta rice (about ¾ cup cooked)"]},
@@ -2046,7 +2046,7 @@ const sections = [
         note: "Kerala's breakfast-of-champions as a bowl: black chana in roasted-coconut kadala curry over red matta rice, with cabbage thoran, pappadam and a cooling raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Bhurji Dalia Bowl", channel: "Recipe collection", id: "more-bhurji_dalia_bowl", video: null,
+        name: "Paneer Bhurji Dalia Bowl", tags: ["Paneer"], channel: "Recipe collection", id: "more-bhurji_dalia_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 764.6, "p": 47.2, "c": 60.1, "f": 42.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Masala dalia (about ¾ cup cooked)"]},
@@ -2061,7 +2061,7 @@ const sections = [
         note: "Mumbai-café paneer bhurji with peas over masala dalia, with moong sprouts, kachumber and mint raita.",
       },
       {
-        name: "Soya Keema Matar Bowl", channel: "Sanjeev Kapoor Khazana ", id: "more-soya_keema_bowl", video: "https://www.youtube.com/watch?v=3PsNJ-nAE2Y",
+        name: "Soya Keema Matar Bowl", tags: ["Lentil & Beans"], channel: "Sanjeev Kapoor Khazana ", id: "more-soya_keema_bowl", video: "https://www.youtube.com/watch?v=3PsNJ-nAE2Y",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 661.2, "p": 47.3, "c": 84.8, "f": 16.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Jeera brown rice (about ¾ cup cooked)"]},
@@ -2077,7 +2077,7 @@ const sections = [
         note: "Minced soya chunks cooked like keema with green peas, over jeera brown rice with kachumber, laccha onions and mint raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bisi Bele Bath Bowl", channel: "Village Cooking Channel", id: "more-bisi_bele_bowl", video: "https://www.youtube.com/watch?v=bHswGRvMulc",
+        name: "Bisi Bele Bath Bowl", tags: ["Lentil & Beans"], channel: "Village Cooking Channel", id: "more-bisi_bele_bowl", video: "https://www.youtube.com/watch?v=bHswGRvMulc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 707.2, "p": 40.0, "c": 94.0, "f": 20.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Bisi bele bath (about 1½ cups)"]},
@@ -2090,7 +2090,7 @@ const sections = [
         note: "Bengaluru's spicy-tangy toor dal and rice one-pot, loaded with vegetables and topped with roasted peanuts, papad and a cooling raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Tikka Bowl", channel: "Chef Ranveer Brar", id: "more-paneer_tikka_bowl", video: "https://www.youtube.com/watch?v=c-oVDb-O2Q8",
+        name: "Paneer Tikka Bowl", tags: ["Paneer"], channel: "Chef Ranveer Brar", id: "more-paneer_tikka_bowl", video: "https://www.youtube.com/watch?v=c-oVDb-O2Q8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 968.2, "p": 51.3, "c": 66.0, "f": 60.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Jeera brown rice (about ¾ cup cooked)"]},
@@ -2107,7 +2107,7 @@ const sections = [
         note: "Charred paneer tikka with peppers and onion over jeera brown rice, with kachumber, laccha onions, pomegranate and both mint raita and hari chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kadhi Chawal Bowl", channel: "Kabita's Kitchen", id: "more-kadhi_chawal_bowl", video: "https://www.youtube.com/watch?v=EeUgHolUC4E",
+        name: "Kadhi Chawal Bowl", tags: ["Lentil & Beans"], channel: "Kabita's Kitchen", id: "more-kadhi_chawal_bowl", video: "https://www.youtube.com/watch?v=EeUgHolUC4E",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 844.4, "p": 43.1, "c": 73.9, "f": 44.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Jeera brown rice (about ¾ cup cooked)"]},
@@ -2123,7 +2123,7 @@ const sections = [
         note: "Punjab's comfort meal made lighter: tangy yogurt kadhi over jeera brown rice, with paneer tikka and masala-roasted chickpeas in place of fried pakoras, and kachumber. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ghugni Bowl", channel: "Atanur Rannaghar", id: "more-ghugni_bowl", video: "https://www.youtube.com/watch?v=02wSHyN4Nkk",
+        name: "Ghugni Bowl", tags: ["Lentil & Beans"], channel: "Atanur Rannaghar", id: "more-ghugni_bowl", video: "https://www.youtube.com/watch?v=02wSHyN4Nkk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 796.7, "p": 41.8, "c": 126.5, "f": 15.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Grain", "items": ["Jeera brown rice (about ¾ cup cooked)"]},
@@ -2148,7 +2148,7 @@ const sections = [
     note: "More vegetarian recipes (Indian soups). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Masoor Dal Shorba", channel: "Swaad Anusaar", id: "more-masoor_soup", video: "https://www.youtube.com/watch?v=aXNzyQ5wQOA",
+        name: "Masoor Dal Shorba", tags: ["Lentil & Beans"], channel: "Swaad Anusaar", id: "more-masoor_soup", video: "https://www.youtube.com/watch?v=aXNzyQ5wQOA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 684.7, "p": 43.5, "c": 74.8, "f": 26.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Masoor dal shorba (about 2 cups)"]},
@@ -2162,7 +2162,7 @@ const sections = [
         note: "A silky, golden red-lentil shorba with ginger and cumin, topped with chaat-dusted paneer croutons and a swirl of yogurt. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Moong Dal Palak Soup", channel: "Simply How To ", id: "more-moong_palak_soup", video: "https://www.youtube.com/watch?v=HML3kDNkyeg",
+        name: "Moong Dal Palak Soup", tags: ["Lentil & Beans"], channel: "Simply How To ", id: "more-moong_palak_soup", video: "https://www.youtube.com/watch?v=HML3kDNkyeg",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 688.8, "p": 45.0, "c": 73.9, "f": 26.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Moong dal palak soup (about 2 cups)"]},
@@ -2176,7 +2176,7 @@ const sections = [
         note: "Bright green yellow-moong and spinach soup with garlic and lemon, finished with paneer croutons and yogurt. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mulligatawny", channel: "Vahchef - VahRehVah", id: "more-mulligatawny_soup", video: "https://www.youtube.com/watch?v=sF1ZytJQivw",
+        name: "Mulligatawny", tags: ["Lentil & Beans"], channel: "Vahchef - VahRehVah", id: "more-mulligatawny_soup", video: "https://www.youtube.com/watch?v=sF1ZytJQivw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 802.4, "p": 41.4, "c": 115.5, "f": 22.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Mulligatawny (about 2 cups)"]},
@@ -2189,7 +2189,7 @@ const sections = [
         note: "The Madras classic: curried red lentils with apple, carrot and coconut milk, plus whole chickpeas, with roasted chana for crunch. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Dal Makhani Shorba", channel: "UV Kitchen", id: "more-dal_makhani_soup", video: "https://www.youtube.com/watch?v=6oDU0pbK8BY",
+        name: "Dal Makhani Shorba", tags: ["Lentil & Beans"], channel: "UV Kitchen", id: "more-dal_makhani_soup", video: "https://www.youtube.com/watch?v=6oDU0pbK8BY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 759.8, "p": 46.5, "c": 80.9, "f": 30.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Dal makhani shorba (about 2 cups)"]},
@@ -2203,7 +2203,7 @@ const sections = [
         note: "All the smoky, buttery depth of dal makhani — whole urad and rajma — as a lighter soup, with yogurt standing in for the cream and paneer croutons on top. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chana Tomato Shorba", channel: "Recipe collection", id: "more-chana_soup", video: null,
+        name: "Chana Tomato Shorba", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-chana_soup", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 807.4, "p": 43.2, "c": 99.8, "f": 30.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Chana tomato shorba (about 2 cups)"]},
@@ -2217,7 +2217,7 @@ const sections = [
         note: "Chole in soup form: tangy tomato and chickpea shorba with chole masala, topped with paneer croutons, roasted chana and yogurt.",
       },
       {
-        name: "Sambar Soup", channel: "Dr. Libin Lucas", id: "more-sambar_soup_bowl", video: "https://www.youtube.com/watch?v=5HFPtE5Fcdc",
+        name: "Sambar Soup", tags: ["Lentil & Beans"], channel: "Dr. Libin Lucas", id: "more-sambar_soup_bowl", video: "https://www.youtube.com/watch?v=5HFPtE5Fcdc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 795.7, "p": 44.2, "c": 135.9, "f": 11.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Sambar soup (about 2½ cups)"]},
@@ -2229,7 +2229,7 @@ const sections = [
         note: "A thick, tangy toor-and-masoor sambar loaded with vegetables, tempered with mustard seeds and curry leaves, with crunchy pottukadalai on top. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Veg Haleem", channel: "Vismai Food", id: "more-haleem_soup", video: "https://www.youtube.com/watch?v=Y-vANeXRh9s",
+        name: "Veg Haleem", tags: ["Vegetables"], channel: "Vismai Food", id: "more-haleem_soup", video: "https://www.youtube.com/watch?v=Y-vANeXRh9s",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 743.6, "p": 48.6, "c": 99.1, "f": 19.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Veg haleem (about 2 cups)"]},
@@ -2242,7 +2242,7 @@ const sections = [
         note: "Hyderabad's slow-cooked Ramzan favorite made vegetarian: broken wheat, dals and soya mashed into a thick, spiced porridge, crowned with crisp fried onions, mint and cashews. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Hot & Sour Tofu Soup", channel: "The Meatmen Channel", id: "more-hot_sour_soup", video: "https://www.youtube.com/watch?v=YcMXF3RQ8I4",
+        name: "Hot & Sour Tofu Soup", tags: ["Paneer"], channel: "The Meatmen Channel", id: "more-hot_sour_soup", video: "https://www.youtube.com/watch?v=YcMXF3RQ8I4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 436.3, "p": 39.1, "c": 28.7, "f": 20.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Hot and sour broth (about 2 cups)"]},
@@ -2254,7 +2254,7 @@ const sections = [
         note: "The Tangra-style Indo-Chinese soup: peppery, vinegary broth with mushrooms and cabbage, loaded with silky tofu and edamame. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sweet Corn Tofu Soup", channel: "Jenny's Kitchen", id: "more-sweet_corn_soup", video: "https://www.youtube.com/watch?v=ZM6AaZbBIuY",
+        name: "Sweet Corn Tofu Soup", tags: ["Paneer"], channel: "Jenny's Kitchen", id: "more-sweet_corn_soup", video: "https://www.youtube.com/watch?v=ZM6AaZbBIuY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 527.2, "p": 38.5, "c": 63.3, "f": 17.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Sweet corn soup (about 2 cups)"]},
@@ -2266,7 +2266,7 @@ const sections = [
         note: "The Indian-restaurant sweet corn soup, made a meal with silky tofu and edamame. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Matar Paneer Shorba", channel: "Recipe collection", id: "more-matar_soup", video: null,
+        name: "Matar Paneer Shorba", tags: ["Paneer"], channel: "Recipe collection", id: "more-matar_soup", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 747.0, "p": 47.1, "c": 47.3, "f": 44.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Matar shorba (about 2 cups)"]},
@@ -2280,7 +2280,7 @@ const sections = [
         note: "Sweet green-pea and mint shorba, blended silky, with a generous pile of seared paneer and a yogurt swirl.",
       },
       {
-        name: "Lemon Coriander Tofu Soup", channel: "Tarla Dalal", id: "more-lemon_coriander_soup", video: "https://www.youtube.com/watch?v=OPjoDB0y99Y",
+        name: "Lemon Coriander Tofu Soup", tags: ["Paneer"], channel: "Tarla Dalal", id: "more-lemon_coriander_soup", video: "https://www.youtube.com/watch?v=OPjoDB0y99Y",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 423.2, "p": 37.8, "c": 27.3, "f": 19.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Lemon coriander broth (about 2 cups)"]},
@@ -2292,7 +2292,7 @@ const sections = [
         note: "The restaurant favorite: a clear, zesty broth full of cilantro, ginger and lemon, made a meal with silky tofu and edamame. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kulith Saar", channel: "Felcy's Kitchen", id: "more-kulith_saar", video: "https://www.youtube.com/watch?v=Z-cZouurROU",
+        name: "Kulith Saar", tags: ["Paneer"], channel: "Felcy's Kitchen", id: "more-kulith_saar", video: "https://www.youtube.com/watch?v=Z-cZouurROU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 798.0, "p": 46.1, "c": 91.9, "f": 30.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Soup", "items": ["Kulith saar (about 2 cups)"]},
@@ -2313,7 +2313,7 @@ const sections = [
     note: "More vegetarian recipes (Protein parathas). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Paneer Paratha (Protein parathas)", channel: "NishaMadhulika", id: "more-paneer_paratha", video: "https://www.youtube.com/watch?v=W9XX5c-dfaY",
+        name: "Paneer Paratha (Protein parathas)", tags: ["Rice & Grains"], channel: "NishaMadhulika", id: "more-paneer_paratha", video: "https://www.youtube.com/watch?v=W9XX5c-dfaY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 769.0, "p": 45.9, "c": 51.1, "f": 46.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2327,7 +2327,7 @@ const sections = [
         note: "Soft whole wheat and besan parathas stuffed with spiced grated paneer, served with mint raita. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Soya Keema Paratha", channel: "Kabita's Kitchen", id: "more-soya_paratha", video: "https://www.youtube.com/watch?v=KiUxRT01sBo",
+        name: "Soya Keema Paratha", tags: ["Rice & Grains"], channel: "Kabita's Kitchen", id: "more-soya_paratha", video: "https://www.youtube.com/watch?v=KiUxRT01sBo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 697.0, "p": 51.8, "c": 72.0, "f": 24.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2341,7 +2341,7 @@ const sections = [
         note: "Parathas packed with a dry, spiced soya-and-pea keema — the meatiest-tasting vegetarian paratha. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Moong Dal Paratha (Protein parathas)", channel: "Kunal Kapur", id: "more-moong_paratha", video: "https://www.youtube.com/watch?v=JTHxboQ2rLs",
+        name: "Moong Dal Paratha (Protein parathas)", tags: ["Lentil & Beans"], channel: "Kunal Kapur", id: "more-moong_paratha", video: "https://www.youtube.com/watch?v=JTHxboQ2rLs",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 734.3, "p": 42.5, "c": 82.6, "f": 28.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2355,7 +2355,7 @@ const sections = [
         note: "A Marwari-style paratha stuffed with gingery yellow moong dal and paneer. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sattu Paratha", channel: "Kabita's Kitchen", id: "more-sattu_paratha", video: "https://www.youtube.com/watch?v=4gr3OhF07N0",
+        name: "Sattu Paratha", tags: ["Rice & Grains"], channel: "Kabita's Kitchen", id: "more-sattu_paratha", video: "https://www.youtube.com/watch?v=4gr3OhF07N0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 731.7, "p": 39.5, "c": 82.1, "f": 28.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2369,7 +2369,7 @@ const sections = [
         note: "Bihar's famous paratha: a tangy, mustard-oil-and-lemon sattu filling with onion and ajwain, with a big bowl of raita. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gobi Paneer Paratha", channel: "Recipe collection", id: "more-gobi_paneer_paratha", video: null,
+        name: "Gobi Paneer Paratha", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-gobi_paneer_paratha", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 722.1, "p": 44.7, "c": 54.2, "f": 40.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2383,7 +2383,7 @@ const sections = [
         note: "The Punjabi winter favorite, upgraded: grated cauliflower and paneer in a whole wheat and besan dough. Serving: 2 parathas.",
       },
       {
-        name: "Palak Tofu Paratha", channel: "MadhurasRecipe Hindi", id: "more-palak_tofu_paratha", video: "https://www.youtube.com/watch?v=q4wLAtuPafM",
+        name: "Palak Tofu Paratha", tags: ["Paneer"], channel: "MadhurasRecipe Hindi", id: "more-palak_tofu_paratha", video: "https://www.youtube.com/watch?v=q4wLAtuPafM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 611.9, "p": 39.6, "c": 51.4, "f": 29.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Palak protein dough (2 parathas)"]},
@@ -2397,7 +2397,7 @@ const sections = [
         note: "Green spinach dough stuffed with masala tofu bhurji — a dairy-light paratha that's still packed with protein. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Oats Paneer Paratha", channel: "Recipe collection", id: "more-oats_paneer_paratha", video: null,
+        name: "Oats Paneer Paratha", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-oats_paneer_paratha", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 820.8, "p": 49.5, "c": 55.8, "f": 48.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Oats protein dough (2 parathas)"]},
@@ -2411,7 +2411,7 @@ const sections = [
         note: "A softer, nuttier paratha: oat flour, atta and besan dough with yogurt, stuffed with spiced paneer. Serving: 2 parathas.",
       },
       {
-        name: "Oats Methi Paneer Paratha", channel: "recipesyoulike", id: "more-oats_methi_paneer_paratha", video: "https://www.youtube.com/watch?v=YcIJEW4q0UE",
+        name: "Oats Methi Paneer Paratha", tags: ["Rice & Grains"], channel: "recipesyoulike", id: "more-oats_methi_paneer_paratha", video: "https://www.youtube.com/watch?v=YcIJEW4q0UE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 776.1, "p": 46.1, "c": 55.6, "f": 44.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Oats protein dough (2 parathas)"]},
@@ -2425,7 +2425,7 @@ const sections = [
         note: "Oats dough filled with paneer and lots of kasuri methi — fragrant, a little bitter, very satisfying. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Oats Soya Keema Paratha", channel: "Rajesh das", id: "more-oats_soya_paratha", video: "https://www.youtube.com/watch?v=jfq2x0hB0qE",
+        name: "Oats Soya Keema Paratha", tags: ["Rice & Grains"], channel: "Rajesh das", id: "more-oats_soya_paratha", video: "https://www.youtube.com/watch?v=jfq2x0hB0qE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 713.4, "p": 50.7, "c": 74.5, "f": 25.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Oats protein dough (2 parathas)"]},
@@ -2439,7 +2439,7 @@ const sections = [
         note: "The soya keema paratha on an oats dough: dry, spiced soya and peas inside a soft oat-atta crust. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Oats Moong Dal Paratha", channel: "Ask Nestlé", id: "more-oats_moong_paratha", video: "https://www.youtube.com/watch?v=sq49irlL_T4",
+        name: "Oats Moong Dal Paratha", tags: ["Rice & Grains"], channel: "Ask Nestlé", id: "more-oats_moong_paratha", video: "https://www.youtube.com/watch?v=sq49irlL_T4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 768.4, "p": 43.8, "c": 86.2, "f": 30.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Oats protein dough (2 parathas)"]},
@@ -2453,7 +2453,7 @@ const sections = [
         note: "Gingery yellow moong dal and paneer stuffed into an oats dough — light enough for breakfast. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Oats Tofu Masala Paratha", channel: "Recipe collection", id: "more-oats_tofu_paratha", video: null,
+        name: "Oats Tofu Masala Paratha", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-oats_tofu_paratha", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 656.8, "p": 42.3, "c": 55.0, "f": 30.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Oats protein dough (2 parathas)"]},
@@ -2467,7 +2467,7 @@ const sections = [
         note: "Oats dough with a dry masala tofu bhurji filling — the highest-protein oats paratha, and dairy-light. Serving: 2 parathas.",
       },
       {
-        name: "Oats Gajar Paneer Paratha", channel: "Ask Nestlé", id: "more-oats_gajar_paneer_paratha", video: "https://www.youtube.com/watch?v=cep7bcllveU",
+        name: "Oats Gajar Paneer Paratha", tags: ["Rice & Grains"], channel: "Ask Nestlé", id: "more-oats_gajar_paneer_paratha", video: "https://www.youtube.com/watch?v=cep7bcllveU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 785.5, "p": 46.3, "c": 57.8, "f": 44.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Oats protein dough (2 parathas)"]},
@@ -2481,7 +2481,7 @@ const sections = [
         note: "Sweet grated carrot and paneer with roasted cumin in an oats dough — mild enough for kids too. Serving: 2 parathas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chana Dal Paratha", channel: "Madhavi's Kitchen", id: "more-chana_dal_paratha", video: "https://www.youtube.com/watch?v=YV0mVIjnlH8",
+        name: "Chana Dal Paratha", tags: ["Lentil & Beans"], channel: "Madhavi's Kitchen", id: "more-chana_dal_paratha", video: "https://www.youtube.com/watch?v=YV0mVIjnlH8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 697.9, "p": 40.4, "c": 89.5, "f": 22.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2495,7 +2495,7 @@ const sections = [
         note: "Soft parathas stuffed with a tangy, spiced chana dal filling. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajma Paratha (Protein parathas)", channel: "Cooking Recipe with Meena", id: "more-rajma_paratha", video: "https://www.youtube.com/watch?v=Z4BY4-k-VvY",
+        name: "Rajma Paratha (Protein parathas)", tags: ["Lentil & Beans"], channel: "Cooking Recipe with Meena", id: "more-rajma_paratha", video: "https://www.youtube.com/watch?v=Z4BY4-k-VvY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 701.4, "p": 43.6, "c": 93.4, "f": 19.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2509,7 +2509,7 @@ const sections = [
         note: "Rajma chawal in paratha form: mashed, spiced kidney beans inside a whole wheat and besan dough. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chole Paratha", channel: "Tasty Food with sangeeta", id: "more-chole_paratha", video: "https://www.youtube.com/watch?v=SjoAxiWr8O4",
+        name: "Chole Paratha", tags: ["Lentil & Beans"], channel: "Tasty Food with sangeeta", id: "more-chole_paratha", video: "https://www.youtube.com/watch?v=SjoAxiWr8O4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 702.1, "p": 39.8, "c": 90.4, "f": 22.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2523,7 +2523,7 @@ const sections = [
         note: "Chickpeas mashed with chole masala and lemon, stuffed into a protein dough. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Missi Paneer Paratha", channel: "Recipe collection", id: "more-missi_paneer_paratha", video: null,
+        name: "Missi Paneer Paratha", tags: ["Paneer"], channel: "Recipe collection", id: "more-missi_paneer_paratha", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 733.3, "p": 46.9, "c": 45.3, "f": 43.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Missi dough (2 parathas)"]},
@@ -2537,7 +2537,7 @@ const sections = [
         note: "A besan-and-methi missi dough — Rajasthan's protein roti — stuffed with paneer and onion. Serving: 2 parathas with raita.",
       },
       {
-        name: "Mooli Paneer Paratha", channel: "Indian Household Kitchen", id: "more-mooli_paneer_paratha", video: "https://www.youtube.com/watch?v=HAaHMRw5GLA",
+        name: "Mooli Paneer Paratha", tags: ["Rice & Grains"], channel: "Indian Household Kitchen", id: "more-mooli_paneer_paratha", video: "https://www.youtube.com/watch?v=HAaHMRw5GLA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 724.1, "p": 44.9, "c": 54.4, "f": 39.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2551,7 +2551,7 @@ const sections = [
         note: "The Punjabi winter favorite with paneer added: grated mooli, paneer and ajwain. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Matar Paneer Paratha", channel: "Cooking With Chef Ashok", id: "more-matar_paneer_paratha", video: "https://www.youtube.com/watch?v=tjEFH2cddWc",
+        name: "Matar Paneer Paratha", tags: ["Rice & Grains"], channel: "Cooking With Chef Ashok", id: "more-matar_paneer_paratha", video: "https://www.youtube.com/watch?v=tjEFH2cddWc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 777.0, "p": 46.0, "c": 66.0, "f": 40.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2565,7 +2565,7 @@ const sections = [
         note: "Sweet green peas and paneer with ginger and cumin — a lunch-box favorite too. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mushroom Paneer Paratha", channel: "Anuradha Tambolkar", id: "more-mushroom_paneer_paratha", video: "https://www.youtube.com/watch?v=rFSL2bcjTuA",
+        name: "Mushroom Paneer Paratha", tags: ["Rice & Grains"], channel: "Anuradha Tambolkar", id: "more-mushroom_paneer_paratha", video: "https://www.youtube.com/watch?v=rFSL2bcjTuA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 757.8, "p": 46.0, "c": 54.6, "f": 43.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2579,7 +2579,7 @@ const sections = [
         note: "Garlicky cooked-down mushrooms and paneer — deep, savory and filling. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masoor Dal Paratha", channel: "sandhya's Food Magic", id: "more-masoor_paratha", video: "https://www.youtube.com/watch?v=xgN1lZ1vhOc",
+        name: "Masoor Dal Paratha", tags: ["Lentil & Beans"], channel: "sandhya's Food Magic", id: "more-masoor_paratha", video: "https://www.youtube.com/watch?v=xgN1lZ1vhOc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 664.0, "p": 40.1, "c": 87.2, "f": 19.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Masoor dal dough (2 large parathas)"]},
@@ -2592,7 +2592,7 @@ const sections = [
         note: "No stuffing needed: cooked masoor dal kneaded right into the dough with cumin and green chili. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Moong Sprouts Paratha", channel: "Recipe collection", id: "more-sprouts_paratha", video: null,
+        name: "Moong Sprouts Paratha", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-sprouts_paratha", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 689.0, "p": 44.9, "c": 60.4, "f": 33.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2606,7 +2606,7 @@ const sections = [
         note: "Moong sprouts and paneer with goda masala and lemon in a protein dough. Serving: 2 parathas with raita.",
       },
       {
-        name: "Methi Paneer Thepla", channel: "Recipe collection", id: "more-methi_thepla", video: null,
+        name: "Methi Paneer Thepla", tags: ["Paneer"], channel: "Recipe collection", id: "more-methi_thepla", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 645.2, "p": 41.9, "c": 49.2, "f": 33.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Methi paneer thepla dough (3 theplas)"]},
@@ -2619,7 +2619,7 @@ const sections = [
         note: "Gujarat's travel flatbread made protein-rich with besan, yogurt and grated paneer in the dough. Keeps for days. Serving: 3 theplas with raita.",
       },
       {
-        name: "Beetroot Paneer Paratha", channel: "Kabita's Kitchen", id: "more-beet_paneer_paratha", video: "https://www.youtube.com/watch?v=o41QKR2C_g8",
+        name: "Beetroot Paneer Paratha", tags: ["Paneer"], channel: "Kabita's Kitchen", id: "more-beet_paneer_paratha", video: "https://www.youtube.com/watch?v=o41QKR2C_g8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 788.1, "p": 48.3, "c": 59.5, "f": 43.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Beetroot protein dough (2 parathas)"]},
@@ -2633,7 +2633,7 @@ const sections = [
         note: "Bright pink parathas with beetroot kneaded into the dough, stuffed with paneer and onion. Kids love the color. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kala Chana Paratha", channel: "Tasty Food with sangeeta", id: "more-kala_chana_paratha", video: "https://www.youtube.com/watch?v=DjiHp_oLuXE",
+        name: "Kala Chana Paratha", tags: ["Lentil & Beans"], channel: "Tasty Food with sangeeta", id: "more-kala_chana_paratha", video: "https://www.youtube.com/watch?v=DjiHp_oLuXE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 756.1, "p": 41.7, "c": 94.6, "f": 25.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2647,7 +2647,7 @@ const sections = [
         note: "Mashed black chana with raw mustard oil, ajwain and lemon — Bihar's sattu paratha flavors with whole chana. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Thalipeeth", channel: "chaitanya food vlog", id: "more-thalipeeth", video: "https://www.youtube.com/watch?v=GXgBD-9mj7s",
+        name: "Paneer Thalipeeth", tags: ["Paneer"], channel: "chaitanya food vlog", id: "more-thalipeeth", video: "https://www.youtube.com/watch?v=GXgBD-9mj7s",
         macros: {"na": "This recipe needs thalipeeth bhajani flour, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Paneer thalipeeth dough (2 thalipeeth)"]},
@@ -2661,7 +2661,7 @@ const sections = [
         note: "Maharashtra's multigrain flatbread made with bhajani flour, sesame, onion and paneer, patted out by hand and served with shengdana chutney and raita. Serving: 2 thalipeeth. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Corn Paneer Paratha", channel: "NishaMadhulika", id: "more-corn_paneer_paratha", video: "https://www.youtube.com/watch?v=CyPw9riczTY",
+        name: "Corn Paneer Paratha", tags: ["Rice & Grains"], channel: "NishaMadhulika", id: "more-corn_paneer_paratha", video: "https://www.youtube.com/watch?v=CyPw9riczTY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 767.4, "p": 45.5, "c": 65.5, "f": 40.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2675,7 +2675,7 @@ const sections = [
         note: "Sweet corn and paneer with ginger and green chili, inspired by Indore's corn snacks. Serving: 2 parathas with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Aloo Paneer Paratha", channel: "Hebbars Kitchen", id: "more-aloo_paneer_paratha", video: "https://www.youtube.com/watch?v=CG7r4Ps_uaA",
+        name: "Aloo Paneer Paratha", tags: ["Rice & Grains"], channel: "Hebbars Kitchen", id: "more-aloo_paneer_paratha", video: "https://www.youtube.com/watch?v=CG7r4Ps_uaA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 827.2, "p": 44.7, "c": 88.4, "f": 36.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dough", "items": ["Protein paratha dough (2 parathas)"]},
@@ -2697,7 +2697,7 @@ const sections = [
     note: "More vegetarian recipes (Dals). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Amti", channel: "MadhurasRecipe Marathi", id: "more-amti", video: "https://www.youtube.com/watch?v=SOxp38zoCNg",
+        name: "Amti", tags: ["Lentil & Beans"], channel: "MadhurasRecipe Marathi", id: "more-amti", video: "https://www.youtube.com/watch?v=SOxp38zoCNg",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 330.3, "p": 14.9, "c": 48.5, "f": 9.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Amti (about 1 cup)"]},
@@ -2710,7 +2710,7 @@ const sections = [
         note: "The everyday Maharashtrian dal: toor dal with goda masala, tamarind and jaggery, finished with a phodni. Sweet, sour and spicy. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Dal Panchmel", channel: "NishaMadhulika", id: "more-panchmel", video: "https://www.youtube.com/watch?v=VYBJXf8wgTI",
+        name: "Dal Panchmel", tags: ["Lentil & Beans"], channel: "NishaMadhulika", id: "more-panchmel", video: "https://www.youtube.com/watch?v=VYBJXf8wgTI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 425.9, "p": 23.7, "c": 66.0, "f": 8.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dal panchmel (about 1 cup)"]},
@@ -2723,7 +2723,7 @@ const sections = [
         note: "Five dals cooked together into one thick, earthy dal with a garlicky ghee tadka. The traditional partner for baati — and the most protein-rich dal here. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajasthani Kadhi", channel: "Shyam Rasoi", id: "more-rajasthani_kadhi", video: "https://www.youtube.com/watch?v=8kjRH6eYvY0",
+        name: "Rajasthani Kadhi", tags: ["Lentil & Beans"], channel: "Shyam Rasoi", id: "more-rajasthani_kadhi", video: "https://www.youtube.com/watch?v=8kjRH6eYvY0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 190.7, "p": 14.8, "c": 11.6, "f": 9.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajasthani kadhi (about 1¼ cups)"]},
@@ -2735,7 +2735,7 @@ const sections = [
         note: "A thin, tangy, spicy kadhi tempered with fennel, dried chili and kasuri methi — made with thick yogurt for extra protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gujarati Dal", channel: "Nehas Cook Book - Gujarati", id: "more-gujarati_dal", video: "https://www.youtube.com/watch?v=-NYbBGTQ53g",
+        name: "Gujarati Dal", tags: ["Lentil & Beans"], channel: "Nehas Cook Book - Gujarati", id: "more-gujarati_dal", video: "https://www.youtube.com/watch?v=-NYbBGTQ53g",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 373.8, "p": 17.4, "c": 52.4, "f": 12.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Gujarati dal (about 1¼ cups)"]},
@@ -2748,7 +2748,7 @@ const sections = [
         note: "Thin, silky toor dal that's sweet, sour and gently spiced, with jaggery, kokum and peanuts. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gujarati Kadhi", channel: "Sheetal's Kitchen - Hindi", id: "more-gujarati_kadhi", video: "https://www.youtube.com/watch?v=nKZaQ1cJhE0",
+        name: "Gujarati Kadhi", tags: ["Lentil & Beans"], channel: "Sheetal's Kitchen - Hindi", id: "more-gujarati_kadhi", video: "https://www.youtube.com/watch?v=nKZaQ1cJhE0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 205.2, "p": 14.8, "c": 15.4, "f": 9.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Gujarati kadhi (about 1¼ cups)"]},
@@ -2761,7 +2761,7 @@ const sections = [
         note: "Light, sweet and tangy yogurt kadhi with ginger and a mustard-seed vaghar — made with thick yogurt for more protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Cholar Dal", channel: "Atanur Rannaghar", id: "more-cholar_dal", video: "https://www.youtube.com/watch?v=oxaIxn-0bH4",
+        name: "Cholar Dal", tags: ["Lentil & Beans"], channel: "Atanur Rannaghar", id: "more-cholar_dal", video: "https://www.youtube.com/watch?v=oxaIxn-0bH4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 347.6, "p": 13.9, "c": 48.7, "f": 12.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Cholar dal (about 1 cup)"]},
@@ -2773,7 +2773,7 @@ const sections = [
         note: "Bengal's festive chana dal: slightly sweet, with fried coconut, raisins, bay leaf and a touch of ghee. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mosur Dal", channel: "Bong Eats", id: "more-mosur_dal", video: "https://www.youtube.com/watch?v=WuY7lQhN5Kg",
+        name: "Mosur Dal", tags: ["Lentil & Beans"], channel: "Bong Eats", id: "more-mosur_dal", video: "https://www.youtube.com/watch?v=WuY7lQhN5Kg",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 283.1, "p": 15.6, "c": 40.1, "f": 7.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mosur dal (about 1 cup)"]},
@@ -2785,7 +2785,7 @@ const sections = [
         note: "The daily Bengali red-lentil dal, tempered in mustard oil with panch phoron and green chili. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Dal Fry", channel: "Recipe collection", id: "more-dal_fry", video: null,
+        name: "Dal Fry", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-dal_fry", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 304.4, "p": 15.4, "c": 46.9, "f": 7.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dal fry (about 1 cup)"]},
@@ -2797,7 +2797,7 @@ const sections = [
         note: "The dhaba favorite: toor and moong dal cooked down with onion, tomato, garlic and kasuri methi. Made with a spoon of ghee, not a ladle.",
       },
       {
-        name: "Moong Dal Tadka (Dals)", channel: "Shaluzlovebook Kitchen. ", id: "more-moong_tadka", video: "https://www.youtube.com/watch?v=YjLjHgibDOA",
+        name: "Moong Dal Tadka (Dals)", tags: ["Lentil & Beans"], channel: "Shaluzlovebook Kitchen. ", id: "more-moong_tadka", video: "https://www.youtube.com/watch?v=YjLjHgibDOA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 298.4, "p": 16.5, "c": 43.9, "f": 7.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Moong dal (about 1 cup)"]},
@@ -2810,7 +2810,7 @@ const sections = [
         note: "The lightest, most digestible dal: creamy yellow moong with a garlic-and-cumin ghee tadka. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Palak Dal", channel: "Rajshri Food", id: "more-palak_dal", video: "https://www.youtube.com/watch?v=9kvkhxa3K_w",
+        name: "Palak Dal", tags: ["Lentil & Beans"], channel: "Rajshri Food", id: "more-palak_dal", video: "https://www.youtube.com/watch?v=9kvkhxa3K_w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 320.6, "p": 17.3, "c": 48.9, "f": 7.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Palak dal (about 1¼ cups)"]},
@@ -2823,7 +2823,7 @@ const sections = [
         note: "Toor dal with a big handful of spinach and a garlicky tadka — two healthy dishes in one pot. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tomato Pappu", channel: "Food on Farm", id: "more-tomato_pappu", video: "https://www.youtube.com/watch?v=B8GTErgTpbM",
+        name: "Tomato Pappu", tags: ["Lentil & Beans"], channel: "Food on Farm", id: "more-tomato_pappu", video: "https://www.youtube.com/watch?v=B8GTErgTpbM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 330.3, "p": 16.7, "c": 52.2, "f": 7.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tomato pappu (about 1 cup)"]},
@@ -2836,7 +2836,7 @@ const sections = [
         note: "Andhra's tangy, spicy everyday dal: toor and tomatoes cooked together and finished with a mustard-seed tadka. Eaten with rice and a spoon of ghee. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kerala Parippu", channel: "Shaan Geo", id: "more-parippu", video: "https://www.youtube.com/watch?v=eHUKcraNLJQ",
+        name: "Kerala Parippu", tags: ["Vegetables"], channel: "Shaan Geo", id: "more-parippu", video: "https://www.youtube.com/watch?v=eHUKcraNLJQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 335.7, "p": 16.7, "c": 44.9, "f": 10.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kerala parippu (about 1 cup)"]},
@@ -2849,7 +2849,7 @@ const sections = [
         note: "The first dish of a Kerala sadya: moong dal with a coconut-cumin paste and a coconut-oil tadka. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajma", channel: "Recipe collection", id: "more-rajma", video: null,
+        name: "Rajma", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-rajma", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 382.5, "p": 20.8, "c": 59.9, "f": 8.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma masala (about 1½ cups)"]},
@@ -2861,7 +2861,7 @@ const sections = [
         note: "Punjab's Sunday classic: kidney beans slow-simmered in a ginger-garlic-tomato masala.",
       },
       {
-        name: "Chole", channel: "Your Food Lab", id: "more-chole", video: "https://www.youtube.com/watch?v=RXZsDHKlVGw",
+        name: "Chole", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-chole", video: "https://www.youtube.com/watch?v=RXZsDHKlVGw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 382.1, "p": 16.0, "c": 55.9, "f": 12.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chole (about 1½ cups)"]},
@@ -2873,7 +2873,7 @@ const sections = [
         note: "Dark, tangy chickpea curry with chole masala — the healthy half of chole bhature. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sabut Masoor Dal", channel: "Recipe collection", id: "more-sabut_masoor", video: null,
+        name: "Sabut Masoor Dal", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-sabut_masoor", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 315.0, "p": 17.1, "c": 48.3, "f": 7.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sabut masoor dal (about 1 cup)"]},
@@ -2885,7 +2885,7 @@ const sections = [
         note: "Earthy whole brown lentils in a simple onion-tomato masala — one of the most protein-rich dals.",
       },
       {
-        name: "Sambar", channel: "Kabita's Kitchen", id: "more-sambar_dal", video: "https://www.youtube.com/watch?v=QF4CICYuEOw",
+        name: "Sambar", tags: ["Lentil & Beans"], channel: "Kabita's Kitchen", id: "more-sambar_dal", video: "https://www.youtube.com/watch?v=QF4CICYuEOw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 320.0, "p": 14.9, "c": 50.2, "f": 7.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sambar (about 1¼ cups)"]},
@@ -2898,7 +2898,7 @@ const sections = [
         note: "South India's everyday dal: toor dal, drumstick, carrot and shallots in a tangy tamarind and sambar-powder gravy, finished with a curry-leaf tempering. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tomato Rasam", channel: "Vismai Food", id: "more-tomato_rasam", video: "https://www.youtube.com/watch?v=vYqzxxiGoms",
+        name: "Tomato Rasam", tags: ["Lentil & Beans"], channel: "Vismai Food", id: "more-tomato_rasam", video: "https://www.youtube.com/watch?v=vYqzxxiGoms",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 180.6, "p": 6.7, "c": 24.4, "f": 7.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tomato rasam (about 1¼ cups)"]},
@@ -2911,7 +2911,7 @@ const sections = [
         note: "Thin, peppery, sour and comforting — tomato and tamarind broth with garlic, cumin and a little toor dal. Light rather than high-protein, but hard to beat when you're under the weather. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mor Kuzhambu", channel: "Madras Samayal", id: "more-mor_kuzhambu", video: "https://www.youtube.com/watch?v=0o5JA3jqymA",
+        name: "Mor Kuzhambu", tags: ["Lentil & Beans"], channel: "Madras Samayal", id: "more-mor_kuzhambu", video: "https://www.youtube.com/watch?v=0o5JA3jqymA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 233.2, "p": 15.0, "c": 15.1, "f": 13.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mor kuzhambu (about 1¼ cups)"]},
@@ -2924,7 +2924,7 @@ const sections = [
         note: "The South Indian kadhi: thick yogurt with a coconut, ginger and green-chili paste and tender ash gourd, tempered in coconut oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chayote Kootu", channel: "Dindigul Food Court", id: "more-kootu", video: "https://www.youtube.com/watch?v=g0f26tFSblk",
+        name: "Chayote Kootu", tags: ["Lentil & Beans"], channel: "Dindigul Food Court", id: "more-kootu", video: "https://www.youtube.com/watch?v=g0f26tFSblk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 332.7, "p": 15.6, "c": 44.8, "f": 11.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chayote kootu (about 1¼ cups)"]},
@@ -2937,7 +2937,7 @@ const sections = [
         note: "A mild, creamy moong-dal-and-vegetable stew with coconut, cumin and pepper — Tamil comfort food. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Khatti Dal", channel: "Hyderabad Wala Recipes", id: "more-khatti_dal", video: "https://www.youtube.com/watch?v=8sM3u6VjS5U",
+        name: "Khatti Dal", tags: ["Lentil & Beans"], channel: "Hyderabad Wala Recipes", id: "more-khatti_dal", video: "https://www.youtube.com/watch?v=8sM3u6VjS5U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 314.3, "p": 15.5, "c": 48.8, "f": 7.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Khatti dal (about 1 cup)"]},
@@ -2950,7 +2950,7 @@ const sections = [
         note: "Hyderabad's sour dal: toor dal sharpened with tamarind and green chili, with a garlic ghee tadka. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Dal Dhokli", channel: "NishaMadhulika", id: "more-dal_dhokli", video: "https://www.youtube.com/watch?v=Pmqwti9kWj4",
+        name: "Dal Dhokli", tags: ["Lentil & Beans"], channel: "NishaMadhulika", id: "more-dal_dhokli", video: "https://www.youtube.com/watch?v=Pmqwti9kWj4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 531.6, "p": 23.0, "c": 77.1, "f": 16.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dal for dhokli (about 1½ cups)", "Dhokli (about 12 pieces)"]},
@@ -2972,7 +2972,7 @@ const sections = [
     note: "More vegetarian recipes (Sabzis). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Matki Usal", channel: "MadhurasRecipe Marathi", id: "more-matki_usal", video: "https://www.youtube.com/watch?v=tb1qRHvmWU4",
+        name: "Matki Usal", tags: ["Lentil & Beans"], channel: "MadhurasRecipe Marathi", id: "more-matki_usal", video: "https://www.youtube.com/watch?v=tb1qRHvmWU4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 398.1, "p": 17.6, "c": 51.9, "f": 14.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Matki usal (about 1 cup)"]},
@@ -2984,7 +2984,7 @@ const sections = [
         note: "Sprouted moth beans in a goda-masala and coconut gravy — the heart of misal. Top with lemon and a little sev for the full Pune experience. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Pithla", channel: "Kabita's Kitchen", id: "more-pithla", video: "https://www.youtube.com/watch?v=d6xJqaVv-2I",
+        name: "Pithla", tags: ["Other"], channel: "Kabita's Kitchen", id: "more-pithla", video: "https://www.youtube.com/watch?v=d6xJqaVv-2I",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 193.1, "p": 7.3, "c": 21.1, "f": 8.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pithla (about 1 cup)"]},
@@ -2996,7 +2996,7 @@ const sections = [
         note: "Comfort in ten minutes: besan simmered with garlic, green chili and onion until thick and creamy. The classic partner for jowar bhakri. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bharli Vangi", channel: "MadhurasRecipe Marathi", id: "more-bharli_vangi", video: "https://www.youtube.com/watch?v=6k54m0raz7Q",
+        name: "Bharli Vangi", tags: ["Vegetables"], channel: "MadhurasRecipe Marathi", id: "more-bharli_vangi", video: "https://www.youtube.com/watch?v=6k54m0raz7Q",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 377.7, "p": 9.5, "c": 29.9, "f": 27.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bharli vangi (3 stuffed eggplants)"]},
@@ -3008,7 +3008,7 @@ const sections = [
         note: "Small eggplants stuffed with a roasted peanut, sesame and coconut masala and cooked slowly until silky. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gatte ki Sabzi", channel: "Papa Mummy Kitchen - Marwadi", id: "more-gatte", video: "https://www.youtube.com/watch?v=orN-iPAgOMM",
+        name: "Gatte ki Sabzi", tags: ["Lentil & Beans"], channel: "Papa Mummy Kitchen - Marwadi", id: "more-gatte", video: "https://www.youtube.com/watch?v=orN-iPAgOMM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 361.2, "p": 19.5, "c": 30.2, "f": 18.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Gatte ki sabzi (about 1 cup)"]},
@@ -3020,7 +3020,7 @@ const sections = [
         note: "Spiced besan dumplings simmered in a tangy yogurt gravy — the desert kitchen's answer to having no fresh vegetables, and naturally rich in protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mangodi Aloo", channel: "Recipe collection", id: "more-mangodi_aloo", video: null,
+        name: "Mangodi Aloo", tags: ["Vegetables"], channel: "Recipe collection", id: "more-mangodi_aloo", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 328.6, "p": 14.1, "c": 45.0, "f": 11.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mangodi aloo (about 1 cup)"]},
@@ -3032,7 +3032,7 @@ const sections = [
         note: "Sun-dried moong dal mangodi and potatoes in a tomato-yogurt gravy — a Marwari pantry classic.",
       },
       {
-        name: "Mag nu Shaak", channel: "Recipe collection", id: "more-mag_nu_shaak", video: null,
+        name: "Mag nu Shaak", tags: ["Other"], channel: "Recipe collection", id: "more-mag_nu_shaak", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 315.0, "p": 16.8, "c": 47.0, "f": 7.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mag nu shaak (about 1 cup)"]},
@@ -3044,7 +3044,7 @@ const sections = [
         note: "Whole green moong cooked until just tender with ginger, chili and a squeeze of lemon — high protein and everyday-simple.",
       },
       {
-        name: "Dudhi Chana nu Shaak", channel: "Gujarati Rasoi", id: "more-dudhi_chana", video: "https://www.youtube.com/watch?v=jXQgyRq96Dk",
+        name: "Dudhi Chana nu Shaak", tags: ["Lentil & Beans"], channel: "Gujarati Rasoi", id: "more-dudhi_chana", video: "https://www.youtube.com/watch?v=jXQgyRq96Dk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 238.2, "p": 9.4, "c": 31.5, "f": 9.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dudhi chana nu shaak (about 1 cup)"]},
@@ -3056,7 +3056,7 @@ const sections = [
         note: "Bottle gourd and chana dal cooked together until soft — light, comforting and more filling than it looks. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chhanar Dalna", channel: "Bong Eats", id: "more-chhanar_dalna", video: "https://www.youtube.com/watch?v=4LrPkp66Ly0",
+        name: "Chhanar Dalna", tags: ["Other"], channel: "Bong Eats", id: "more-chhanar_dalna", video: "https://www.youtube.com/watch?v=4LrPkp66Ly0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 464.8, "p": 26.4, "c": 29.7, "f": 29.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chhanar dalna (about 1 cup)"]},
@@ -3068,7 +3068,7 @@ const sections = [
         note: "A light Bengali curry of chhena (paneer), potatoes and peas with ginger and cumin — the vegetarian Sunday special. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Dhokar Dalna", channel: "Atanur Rannaghar", id: "more-dhokar_dalna", video: "https://www.youtube.com/watch?v=Bu6vKxKLENk",
+        name: "Dhokar Dalna", tags: ["Other"], channel: "Atanur Rannaghar", id: "more-dhokar_dalna", video: "https://www.youtube.com/watch?v=Bu6vKxKLENk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 474.6, "p": 18.0, "c": 63.2, "f": 18.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dhokar dalna (about 1 cup)"]},
@@ -3080,7 +3080,7 @@ const sections = [
         note: "Spiced chana-dal cakes, fried and simmered in a ginger-cumin gravy with potatoes — the pride of Bengali niramish (vegetarian) cooking. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Aloo Posto", channel: "Recipe collection", id: "more-aloo_posto", video: null,
+        name: "Aloo Posto", tags: ["Vegetables"], channel: "Recipe collection", id: "more-aloo_posto", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 457.5, "p": 9.6, "c": 61.2, "f": 21.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Aloo posto (about 1 cup)"]},
@@ -3092,7 +3092,7 @@ const sections = [
         note: "Bengal's best-loved potato dish: soft potatoes coated in a creamy white poppy-seed paste with green chili and a sharp drizzle of mustard oil.",
       },
       {
-        name: "Aviyal", channel: "Shaan Geo", id: "more-aviyal", video: "https://www.youtube.com/watch?v=4IiBJEvdOa4",
+        name: "Aviyal", tags: ["Vegetables"], channel: "Shaan Geo", id: "more-aviyal", video: "https://www.youtube.com/watch?v=4IiBJEvdOa4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 410.9, "p": 11.8, "c": 49.3, "f": 20.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Aviyal (about 1¼ cups)"]},
@@ -3104,7 +3104,7 @@ const sections = [
         note: "Kerala's sadya favorite: vegetable batons in a thick, coarse coconut-and-curd sauce, finished with raw coconut oil and curry leaves. Made with thick yogurt for extra protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kerala Vegetable Stew", channel: "Hebbars Kitchen", id: "more-kerala_stew", video: "https://www.youtube.com/watch?v=sosT0JyAhiw",
+        name: "Kerala Vegetable Stew", tags: ["Vegetables"], channel: "Hebbars Kitchen", id: "more-kerala_stew", video: "https://www.youtube.com/watch?v=sosT0JyAhiw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 417.6, "p": 7.4, "c": 35.1, "f": 29.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kerala vegetable stew (about 1½ cups)"]},
@@ -3116,7 +3116,7 @@ const sections = [
         note: "The gentle, fragrant Kerala ishtu: vegetables simmered in coconut milk with ginger, green chili, curry leaves and whole spices. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Palak Paneer", channel: "Kunal Kapur", id: "more-palak_paneer_sabzi", video: "https://www.youtube.com/watch?v=vCDy7vjbz_M",
+        name: "Palak Paneer", tags: ["Paneer"], channel: "Kunal Kapur", id: "more-palak_paneer_sabzi", video: "https://www.youtube.com/watch?v=vCDy7vjbz_M",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 471.7, "p": 32.9, "c": 9.2, "f": 37.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Palak paneer (about 1½ cups)"]},
@@ -3128,7 +3128,7 @@ const sections = [
         note: "Silky spinach purée with soft paneer cubes, made with yogurt instead of cream. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Matar Paneer", channel: "MadhurasRecipe Marathi", id: "more-matar_paneer", video: "https://www.youtube.com/watch?v=1rj1CKHskdY",
+        name: "Matar Paneer", tags: ["Paneer"], channel: "MadhurasRecipe Marathi", id: "more-matar_paneer", video: "https://www.youtube.com/watch?v=1rj1CKHskdY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 442.3, "p": 27.4, "c": 22.2, "f": 29.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Matar paneer (about 1¼ cups)"]},
@@ -3140,7 +3140,7 @@ const sections = [
         note: "Paneer and green peas in a tomato-onion gravy, finished with yogurt and kasuri methi — no cream. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Bhurji", channel: "Your Food Lab", id: "more-paneer_bhurji_sabzi", video: "https://www.youtube.com/watch?v=KgW--wj5iBM",
+        name: "Paneer Bhurji", tags: ["Paneer"], channel: "Your Food Lab", id: "more-paneer_bhurji_sabzi", video: "https://www.youtube.com/watch?v=KgW--wj5iBM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 468.8, "p": 29.7, "c": 12.5, "f": 36.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer bhurji (about 1¼ cups)"]},
@@ -3152,7 +3152,7 @@ const sections = [
         note: "Scrambled paneer with onion, peas and green chili — ready in 15 minutes and packed with protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bhindi Masala", channel: "Shyam Rasoi", id: "more-bhindi_masala", video: "https://www.youtube.com/watch?v=9zobmIb9x-4",
+        name: "Bhindi Masala", tags: ["Vegetables"], channel: "Shyam Rasoi", id: "more-bhindi_masala", video: "https://www.youtube.com/watch?v=9zobmIb9x-4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 171.5, "p": 4.0, "c": 18.5, "f": 10.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bhindi masala (about 1 cup)"]},
@@ -3164,7 +3164,7 @@ const sections = [
         note: "Crisp-edged okra with onions, cumin and a tangy finish of chaat masala. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Aloo Gobi", channel: "Cookd", id: "more-aloo_gobi", video: "https://www.youtube.com/watch?v=JihdOvkxQC8",
+        name: "Aloo Gobi", tags: ["Vegetables"], channel: "Cookd", id: "more-aloo_gobi", video: "https://www.youtube.com/watch?v=JihdOvkxQC8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 222.9, "p": 5.8, "c": 29.0, "f": 10.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Aloo gobi (about 1¼ cups)"]},
@@ -3176,7 +3176,7 @@ const sections = [
         note: "Cauliflower and a little potato cooked dry in their own steam with ginger and turmeric — more gobi, less aloo. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Baingan Bharta", channel: "Cooking With Chef Ashok", id: "more-baingan_bharta", video: "https://www.youtube.com/watch?v=C1YMdL0JjOU",
+        name: "Baingan Bharta", tags: ["Vegetables"], channel: "Cooking With Chef Ashok", id: "more-baingan_bharta", video: "https://www.youtube.com/watch?v=C1YMdL0JjOU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 181.1, "p": 5.7, "c": 26.6, "f": 7.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baingan bharta (about 1 cup)"]},
@@ -3188,7 +3188,7 @@ const sections = [
         note: "Fire-roasted, smoky eggplant mashed with onion, tomato, garlic and peas, cooked in mustard oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Beans Poriyal", channel: "RasaTaste", id: "more-beans_poriyal", video: "https://www.youtube.com/watch?v=kXZVM--_ebY",
+        name: "Beans Poriyal", tags: ["Lentil & Beans"], channel: "RasaTaste", id: "more-beans_poriyal", video: "https://www.youtube.com/watch?v=kXZVM--_ebY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 142.6, "p": 3.1, "c": 12.0, "f": 10.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Beans poriyal (about 1 cup)"]},
@@ -3200,7 +3200,7 @@ const sections = [
         note: "Finely chopped green beans tossed with mustard seeds, curry leaves and fresh coconut. Light and quick. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Cabbage Thoran", channel: "Veena's Curryworld", id: "more-cabbage_thoran_sabzi", video: "https://www.youtube.com/watch?v=scPw3gtVI9U",
+        name: "Cabbage Thoran", tags: ["Vegetables"], channel: "Veena's Curryworld", id: "more-cabbage_thoran_sabzi", video: "https://www.youtube.com/watch?v=scPw3gtVI9U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 112.3, "p": 1.6, "c": 7.2, "f": 9.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["1½ × Cabbage thoran (about ¾ cup)"]},
@@ -3212,7 +3212,7 @@ const sections = [
         note: "Finely shredded cabbage stir-fried with mustard seeds, curry leaves and coconut. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mushroom Matar", channel: "bharatzkitchen HINDI", id: "more-mushroom_matar", video: "https://www.youtube.com/watch?v=D2hrDgK_5b8",
+        name: "Mushroom Matar", tags: ["Vegetables"], channel: "bharatzkitchen HINDI", id: "more-mushroom_matar", video: "https://www.youtube.com/watch?v=D2hrDgK_5b8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 186.1, "p": 10.1, "c": 22.1, "f": 8.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mushroom matar (about 1¼ cups)"]},
@@ -3224,7 +3224,7 @@ const sections = [
         note: "Mushrooms and peas in a light tomato-onion gravy with a spoon of yogurt. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kerala Kadala Curry", channel: "Recipe collection", id: "more-kadala_curry_sabzi", video: null,
+        name: "Kerala Kadala Curry", tags: ["Vegetables"], channel: "Recipe collection", id: "more-kadala_curry_sabzi", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 449.7, "p": 19.2, "c": 61.4, "f": 15.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kadala curry (about 1¼ cups)"]},
@@ -3236,7 +3236,7 @@ const sections = [
         note: "Black chana in a roasted-coconut gravy with curry leaves — Kerala's famous partner for puttu and appam, and one of the most protein-rich sabzis here.",
       },
       {
-        name: "Erissery", channel: "Village Cooking - Kerala", id: "more-erissery", video: "https://www.youtube.com/watch?v=didRqrV8iH0",
+        name: "Erissery", tags: ["Vegetables"], channel: "Village Cooking - Kerala", id: "more-erissery", video: "https://www.youtube.com/watch?v=didRqrV8iH0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 308.9, "p": 11.4, "c": 41.0, "f": 12.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Erissery (about 1 cup)"]},
@@ -3248,7 +3248,7 @@ const sections = [
         note: "A sadya favorite: soft pumpkin and beans in a coconut-cumin paste, topped with coconut fried golden in coconut oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Olan", channel: "Shaan Geo", id: "more-olan", video: "https://www.youtube.com/watch?v=Oz8L4IMd03U",
+        name: "Olan", tags: ["Vegetables"], channel: "Shaan Geo", id: "more-olan", video: "https://www.youtube.com/watch?v=Oz8L4IMd03U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 295.9, "p": 8.6, "c": 23.8, "f": 20.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Olan (about 1 cup)"]},
@@ -3260,7 +3260,7 @@ const sections = [
         note: "The gentlest dish of the Kerala sadya: ash gourd and beans in thin coconut milk with green chili and raw coconut oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Vazhakkai Poriyal", channel: "Madras Samayal", id: "more-vazhakkai", video: "https://www.youtube.com/watch?v=ZW7TKMos818",
+        name: "Vazhakkai Poriyal", tags: ["Vegetables"], channel: "Madras Samayal", id: "more-vazhakkai", video: "https://www.youtube.com/watch?v=ZW7TKMos818",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 279.7, "p": 1.6, "c": 42.0, "f": 11.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Vazhakkai poriyal (about 1 cup)"]},
@@ -3272,7 +3272,7 @@ const sections = [
         note: "Raw banana cubes crisped in coconut oil with mustard seeds, curry leaves, pepper and coconut. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chettinad Mushroom", channel: "Sanjeev Kapoor Khazana ", id: "more-chettinad_mushroom", video: "https://www.youtube.com/watch?v=X-Bpd5W8DFI",
+        name: "Chettinad Mushroom", tags: ["Vegetables"], channel: "Sanjeev Kapoor Khazana ", id: "more-chettinad_mushroom", video: "https://www.youtube.com/watch?v=X-Bpd5W8DFI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 222.7, "p": 8.7, "c": 22.3, "f": 12.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chettinad mushroom masala (about 1¼ cups)"]},
@@ -3284,7 +3284,7 @@ const sections = [
         note: "Mushrooms and peas in Chettinad's peppery, fennel-scented roasted-coconut masala. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bagara Baingan", channel: "Vahchef - VahRehVah", id: "more-bagara_baingan", video: "https://www.youtube.com/watch?v=qzvH4vxRK3s",
+        name: "Bagara Baingan", tags: ["Vegetables"], channel: "Vahchef - VahRehVah", id: "more-bagara_baingan", video: "https://www.youtube.com/watch?v=qzvH4vxRK3s",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 367.1, "p": 9.7, "c": 30.6, "f": 26.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bagara baingan (3 small eggplants in gravy)"]},
@@ -3296,7 +3296,7 @@ const sections = [
         note: "Hyderabad's celebration curry: small eggplants in a roasted peanut, sesame and coconut gravy with tamarind. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mixed Veg Sagu", channel: "Hebbars Kitchen", id: "more-veg_sagu", video: "https://www.youtube.com/watch?v=JM9qq6ViBiQ",
+        name: "Mixed Veg Sagu", tags: ["Vegetables"], channel: "Hebbars Kitchen", id: "more-veg_sagu", video: "https://www.youtube.com/watch?v=JM9qq6ViBiQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 314.9, "p": 9.7, "c": 45.8, "f": 11.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mixed veg sagu (about 1¼ cups)"]},
@@ -3308,7 +3308,7 @@ const sections = [
         note: "Karnataka's coconut-and-roasted-chana vegetable curry — the classic partner for chapati, poori and set dosa. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Beetroot Poriyal", channel: "Chef Deena’s Kitchen", id: "more-beet_poriyal", video: "https://www.youtube.com/watch?v=h_x0Idzfaw8",
+        name: "Beetroot Poriyal", tags: ["Vegetables"], channel: "Chef Deena’s Kitchen", id: "more-beet_poriyal", video: "https://www.youtube.com/watch?v=h_x0Idzfaw8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 221.6, "p": 5.7, "c": 27.3, "f": 11.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Beetroot poriyal (about 1 cup)"]},
@@ -3320,7 +3320,7 @@ const sections = [
         note: "Sweet, earthy beetroot stir-fried with mustard seeds, curry leaves and fresh coconut. Ready in 15 minutes. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kadai Paneer", channel: "bharatzkitchen HINDI", id: "more-kadai_paneer", video: "https://www.youtube.com/watch?v=ryCdr0le7xw",
+        name: "Kadai Paneer", tags: ["Paneer"], channel: "bharatzkitchen HINDI", id: "more-kadai_paneer", video: "https://www.youtube.com/watch?v=ryCdr0le7xw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 485.0, "p": 26.6, "c": 20.0, "f": 36.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kadai paneer (about 1¼ cups)"]},
@@ -3340,7 +3340,7 @@ const sections = [
     note: "More vegetarian recipes (Rice). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Jeera Rice", channel: "MadhurasRecipe Marathi", id: "more-jeera_rice_r", video: "https://www.youtube.com/watch?v=1mcbzEWCPpM",
+        name: "Jeera Rice", tags: ["Rice & Grains"], channel: "MadhurasRecipe Marathi", id: "more-jeera_rice_r", video: "https://www.youtube.com/watch?v=1mcbzEWCPpM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 252.1, "p": 4.6, "c": 46.6, "f": 5.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Jeera rice (about 1 cup cooked)"]},
@@ -3352,7 +3352,7 @@ const sections = [
         note: "The everyday partner for any dal: brown basmati with cumin and a bay leaf, cooked in a spoon of ghee. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Lemon Rice", channel: "Veggie Recipe House", id: "more-lemon_rice", video: "https://www.youtube.com/watch?v=S582ox6c4l4",
+        name: "Lemon Rice", tags: ["Rice & Grains"], channel: "Veggie Recipe House", id: "more-lemon_rice", video: "https://www.youtube.com/watch?v=S582ox6c4l4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 496.2, "p": 20.2, "c": 60.4, "f": 20.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Lemon rice (about 1 cup)"]},
@@ -3365,7 +3365,7 @@ const sections = [
         note: "Chitranna: tangy turmeric-yellow rice with peanuts, chana dal and curry leaves, served with a bowl of dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Curd Rice", channel: "Kunal Kapur", id: "more-curd_rice", video: "https://www.youtube.com/watch?v=8EhJtAD2mqM",
+        name: "Curd Rice", tags: ["Rice & Grains"], channel: "Kunal Kapur", id: "more-curd_rice", video: "https://www.youtube.com/watch?v=8EhJtAD2mqM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 333.2, "p": 16.7, "c": 50.1, "f": 7.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Curd rice (about 1¼ cups)"]},
@@ -3377,7 +3377,7 @@ const sections = [
         note: "Thayir sadam: cooling rice mashed into thick yogurt with ginger, cucumber and a mustard-seed tempering. Mostly yogurt, so it's high in protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Matar Pulao (Rice)", channel: "Shyam Rasoi", id: "more-paneer_pulao", video: "https://www.youtube.com/watch?v=WTN8vtArbLA",
+        name: "Paneer Matar Pulao (Rice)", tags: ["Paneer"], channel: "Shyam Rasoi", id: "more-paneer_pulao", video: "https://www.youtube.com/watch?v=WTN8vtArbLA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 600.5, "p": 31.5, "c": 65.1, "f": 25.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Paneer matar pulao (about 1¼ cups)"]},
@@ -3390,7 +3390,7 @@ const sections = [
         note: "Fragrant whole-spice brown rice pulao with green peas and golden paneer cubes, served with mint raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chana Pulao", channel: "Cooking With Chef Ashok", id: "more-chana_pulao", video: "https://www.youtube.com/watch?v=dj-v_FAELnM",
+        name: "Chana Pulao", tags: ["Lentil & Beans"], channel: "Cooking With Chef Ashok", id: "more-chana_pulao", video: "https://www.youtube.com/watch?v=dj-v_FAELnM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 537.9, "p": 23.0, "c": 83.2, "f": 13.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Chana pulao (about 1¼ cups)"]},
@@ -3403,7 +3403,7 @@ const sections = [
         note: "Kabuli chana cooked right into brown rice with chole masala and whole spices — a one-pot meal. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Soya Veg Biryani", channel: "bharatzkitchen HINDI", id: "more-soya_biryani", video: "https://www.youtube.com/watch?v=Cc6qx4HBw9c",
+        name: "Soya Veg Biryani", tags: ["Rice & Grains"], channel: "bharatzkitchen HINDI", id: "more-soya_biryani", video: "https://www.youtube.com/watch?v=Cc6qx4HBw9c",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 570.7, "p": 33.8, "c": 76.2, "f": 15.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Soya veg biryani (about 1½ cups)"]},
@@ -3416,7 +3416,7 @@ const sections = [
         note: "A lighter Hyderabadi dum biryani: soya chunks and vegetables in a yogurt marinade, layered with brown rice, mint and fried onions. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Puliyodarai (Puliogare)", channel: "Recipe collection", id: "more-puliyodarai", video: null,
+        name: "Puliyodarai (Puliogare)", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-puliyodarai", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 576.8, "p": 21.2, "c": 67.9, "f": 25.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Puliyodarai (about 1 cup)"]},
@@ -3429,7 +3429,7 @@ const sections = [
         note: "Temple-style tamarind rice — Puliyodarai in Tamil Nadu, Puliogare in Karnataka: tangy, slightly sweet and spicy, with peanuts and sesame. Travels well.",
       },
       {
-        name: "Masale Bhaat", channel: "Your Food Lab", id: "more-masale_bhaat", video: "https://www.youtube.com/watch?v=pLApqJIP9ao",
+        name: "Masale Bhaat", tags: ["Vegetables"], channel: "Your Food Lab", id: "more-masale_bhaat", video: "https://www.youtube.com/watch?v=pLApqJIP9ao",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 505.5, "p": 20.1, "c": 65.6, "f": 19.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Masale bhaat (about 1¼ cups)"]},
@@ -3442,7 +3442,7 @@ const sections = [
         note: "The Maharashtrian wedding rice: goda masala, small eggplants, peas and peanuts, topped with fresh coconut. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tomato Rice", channel: "Shaan Geo", id: "more-tomato_rice", video: "https://www.youtube.com/watch?v=2KRFk4nYAWE",
+        name: "Tomato Rice", tags: ["Rice & Grains"], channel: "Shaan Geo", id: "more-tomato_rice", video: "https://www.youtube.com/watch?v=2KRFk4nYAWE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 519.8, "p": 22.0, "c": 81.6, "f": 12.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Tomato rice (about 1¼ cups)"]},
@@ -3455,7 +3455,7 @@ const sections = [
         note: "Thakkali sadam made heartier with chickpeas: tomatoes, ginger, garlic and fennel cooked into brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Coconut Rice", channel: "Vismai Food", id: "more-coconut_rice", video: "https://www.youtube.com/watch?v=ot-e3CP08dU",
+        name: "Coconut Rice", tags: ["Rice & Grains"], channel: "Vismai Food", id: "more-coconut_rice", video: "https://www.youtube.com/watch?v=ot-e3CP08dU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 523.1, "p": 19.6, "c": 61.7, "f": 22.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Coconut rice (about 1 cup)"]},
@@ -3468,7 +3468,7 @@ const sections = [
         note: "Thenga choru: rice tossed with toasted coconut, peanuts, chana dal and curry leaves in coconut oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Beetroot Rice", channel: "Hebbars Kitchen", id: "more-beet_rice", video: "https://www.youtube.com/watch?v=g27Un1Biwuw",
+        name: "Beetroot Rice", tags: ["Rice & Grains"], channel: "Hebbars Kitchen", id: "more-beet_rice", video: "https://www.youtube.com/watch?v=g27Un1Biwuw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 573.6, "p": 23.4, "c": 78.2, "f": 20.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Beetroot rice (about 1¼ cups)"]},
@@ -3481,7 +3481,7 @@ const sections = [
         note: "Magenta-red South Indian rice with grated beetroot, peas, peanuts, coconut and a squeeze of lemon, served with dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ven Pongal", channel: "Vismai Food", id: "more-ven_pongal", video: "https://www.youtube.com/watch?v=dCaAPYvCp2A",
+        name: "Ven Pongal", tags: ["Lentil & Beans"], channel: "Vismai Food", id: "more-ven_pongal", video: "https://www.youtube.com/watch?v=dCaAPYvCp2A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 538.8, "p": 21.6, "c": 81.8, "f": 15.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Ven pongal (about 1¼ cups)"]},
@@ -3494,7 +3494,7 @@ const sections = [
         note: "Soft, comforting rice and moong dal with black pepper, cumin, ginger and ghee-fried cashews — served with sambar. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kala Chana Pulao", channel: "Vismai Food", id: "more-kala_chana_pulao", video: "https://www.youtube.com/watch?v=Jyo80RbitGo",
+        name: "Kala Chana Pulao", tags: ["Lentil & Beans"], channel: "Vismai Food", id: "more-kala_chana_pulao", video: "https://www.youtube.com/watch?v=Jyo80RbitGo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 557.2, "p": 24.6, "c": 86.6, "f": 13.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Kala chana pulao (about 1¼ cups)"]},
@@ -3507,7 +3507,7 @@ const sections = [
         note: "Nutty black chana cooked into whole-spice brown rice — a high-fiber, high-protein one-pot meal. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Vaghareli Khichdi", channel: "Sheetal's Kitchen - Gujarati", id: "more-vaghareli_khichdi", video: "https://www.youtube.com/watch?v=pQeTZHdEf3g",
+        name: "Vaghareli Khichdi", tags: ["Rice & Grains"], channel: "Sheetal's Kitchen - Gujarati", id: "more-vaghareli_khichdi", video: "https://www.youtube.com/watch?v=pQeTZHdEf3g",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 596.2, "p": 26.3, "c": 94.5, "f": 13.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Rice", "items": ["Vaghareli khichdi (about 1½ cups)"]},
@@ -3528,7 +3528,7 @@ const sections = [
     note: "More vegetarian recipes (Millets). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Ragi Mudde & Bassaru", channel: "Kiladi Cooking", id: "more-ragi_mudde", video: "https://www.youtube.com/watch?v=8j-zZ3T_u0A",
+        name: "Ragi Mudde & Bassaru", tags: ["Millet"], channel: "Kiladi Cooking", id: "more-ragi_mudde", video: "https://www.youtube.com/watch?v=8j-zZ3T_u0A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 437.8, "p": 16.9, "c": 72.6, "f": 10.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Ragi mudde (2 balls)"]},
@@ -3541,7 +3541,7 @@ const sections = [
         note: "The Karnataka farmer's meal: soft balls of ragi, broken by hand and dipped into bassaru — a garlicky toor-dal and greens saaru. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Jowar Bhakri & Pithla", channel: "Foodxp", id: "more-jowar_bhakri", video: "https://www.youtube.com/watch?v=UP7f8S2nkdU",
+        name: "Jowar Bhakri & Pithla", tags: ["Millet"], channel: "Foodxp", id: "more-jowar_bhakri", video: "https://www.youtube.com/watch?v=UP7f8S2nkdU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 477.3, "p": 21.5, "c": 71.1, "f": 12.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Jowar bhakri (2 bhakris)"]},
@@ -3555,7 +3555,7 @@ const sections = [
         note: "Maharashtra's soul food: soft jowar bhakri with garlicky pithla, a raw onion and a bowl of dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bajra Rotla & Bharta", channel: "Village Rasoi", id: "more-bajra_rotla", video: "https://www.youtube.com/watch?v=UrpsHs7yjhA",
+        name: "Bajra Rotla & Bharta", tags: ["Millet"], channel: "Village Rasoi", id: "more-bajra_rotla", video: "https://www.youtube.com/watch?v=UrpsHs7yjhA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 501.1, "p": 21.4, "c": 73.6, "f": 15.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Bajra rotla (2 rotlas)"]},
@@ -3569,7 +3569,7 @@ const sections = [
         note: "Kathiyawadi winter dinner: thick, ghee-brushed bajra rotla with smoky baingan bharta and dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ragi Dosa & Sambar", channel: "Recipe collection", id: "more-ragi_dosa", video: null,
+        name: "Ragi Dosa & Sambar", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-ragi_dosa", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 518.7, "p": 23.2, "c": 87.8, "f": 9.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Instant ragi dosa (3 dosas)"]},
@@ -3582,7 +3582,7 @@ const sections = [
         note: "Kezhvaragu dosai: lacy, crisp instant ragi dosa — no fermenting — with onion, curry leaves and a bowl of sambar.",
       },
       {
-        name: "Ragi Rotti", channel: "Rekha Aduge", id: "more-ragi_rotti", video: "https://www.youtube.com/watch?v=xtJnDgZyI6w",
+        name: "Ragi Rotti", tags: ["Millet"], channel: "Rekha Aduge", id: "more-ragi_rotti", video: "https://www.youtube.com/watch?v=xtJnDgZyI6w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 464.2, "p": 19.6, "c": 60.6, "f": 16.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Ragi rotti (2 rottis)"]},
@@ -3596,7 +3596,7 @@ const sections = [
         note: "Crisp ragi flatbread patted out with onion, carrot and dill, served with peanut chutney and dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Foxtail Millet Upma (Millets)", channel: "Skinny Recipes", id: "more-millet_upma", video: "https://www.youtube.com/watch?v=d9yeMnT2WJg",
+        name: "Foxtail Millet Upma (Millets)", tags: ["Millet"], channel: "Skinny Recipes", id: "more-millet_upma", video: "https://www.youtube.com/watch?v=d9yeMnT2WJg",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 575.5, "p": 25.8, "c": 73.8, "f": 20.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Foxtail millet upma (about 1¼ cups)"]},
@@ -3609,7 +3609,7 @@ const sections = [
         note: "A wholesome swap for rava upma: foxtail millet with vegetables, peanuts and lemon, served with dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Little Millet Pongal", channel: "Bharadwaj Kitchen", id: "more-millet_pongal", video: "https://www.youtube.com/watch?v=VAqVNAzXXSM",
+        name: "Little Millet Pongal", tags: ["Millet"], channel: "Bharadwaj Kitchen", id: "more-millet_pongal", video: "https://www.youtube.com/watch?v=VAqVNAzXXSM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 573.0, "p": 22.5, "c": 89.1, "f": 15.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Little millet pongal (about 1¼ cups)"]},
@@ -3622,7 +3622,7 @@ const sections = [
         note: "Samai pongal: creamy little millet and moong dal with pepper, cumin and ghee-fried cashews, with sambar. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bajra Khichdi (Millets)", channel: "NishaMadhulika", id: "more-bajra_khichdi", video: "https://www.youtube.com/watch?v=zS-gKmilBDY",
+        name: "Bajra Khichdi (Millets)", tags: ["Millet"], channel: "NishaMadhulika", id: "more-bajra_khichdi", video: "https://www.youtube.com/watch?v=zS-gKmilBDY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 548.8, "p": 25.3, "c": 74.8, "f": 17.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Bajra khichdi (about 1¼ cups)"]},
@@ -3635,7 +3635,7 @@ const sections = [
         note: "Rajasthan's winter comfort food: cracked pearl millet and moong dal cooked soft, with a ghee tadka and kadhi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bhagar & Shengdana Amti", channel: "Vishnu Manohar's Master Recipes", id: "more-bhagar_amti", video: "https://www.youtube.com/watch?v=EcTPT3KUGxA",
+        name: "Bhagar & Shengdana Amti", tags: ["Lentil & Beans"], channel: "Vishnu Manohar's Master Recipes", id: "more-bhagar_amti", video: "https://www.youtube.com/watch?v=EcTPT3KUGxA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 663.0, "p": 20.9, "c": 63.8, "f": 38.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Bhagar (about 1 cup)"]},
@@ -3649,7 +3649,7 @@ const sections = [
         note: "The Maharashtrian upvas (fasting) plate: barnyard millet bhagar with a tangy-sweet peanut amti and dahi. No onion or garlic. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Foxtail Millet Paneer Pulao", channel: "Bhusanur.cooking", id: "more-navane_pulao", video: "https://www.youtube.com/watch?v=FvoGJsN9tAM",
+        name: "Foxtail Millet Paneer Pulao", tags: ["Paneer"], channel: "Bhusanur.cooking", id: "more-navane_pulao", video: "https://www.youtube.com/watch?v=FvoGJsN9tAM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 645.0, "p": 34.9, "c": 71.0, "f": 26.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Foxtail millet paneer pulao (about 1¼ cups)"]},
@@ -3662,7 +3662,7 @@ const sections = [
         note: "Navane pulao: foxtail millet cooked like a whole-spice pulao with vegetables and golden paneer, with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ragi Idli & Sambar", channel: "Traditional Life Style", id: "more-ragi_idli", video: "https://www.youtube.com/watch?v=6mDbfehjjvE",
+        name: "Ragi Idli & Sambar", tags: ["Lentil & Beans"], channel: "Traditional Life Style", id: "more-ragi_idli", video: "https://www.youtube.com/watch?v=6mDbfehjjvE",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Ragi idli (4 idlis)"]},
@@ -3676,7 +3676,7 @@ const sections = [
         note: "Soft, earthy finger-millet idlis — idli batter with ragi stirred in — with sambar and coconut chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bajra Methi Dhebra", channel: "CookwithParul", id: "more-dhebra", video: "https://www.youtube.com/watch?v=87Jba4bsvhU",
+        name: "Bajra Methi Dhebra", tags: ["Millet"], channel: "CookwithParul", id: "more-dhebra", video: "https://www.youtube.com/watch?v=87Jba4bsvhU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 426.7, "p": 21.8, "c": 50.7, "f": 15.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Bajra methi dhebra (4 dhebras)"]},
@@ -3689,7 +3689,7 @@ const sections = [
         note: "Gujarat's winter favorite: small, crisp pearl-millet flatbreads with methi, sesame and yogurt in the dough, served with dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kodo Millet Bisi Bele Bath", channel: "Surari Kitchen", id: "more-kodo_bisibele", video: "https://www.youtube.com/watch?v=VfgOZaDAV4U",
+        name: "Kodo Millet Bisi Bele Bath", tags: ["Millet"], channel: "Surari Kitchen", id: "more-kodo_bisibele", video: "https://www.youtube.com/watch?v=VfgOZaDAV4U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 614.7, "p": 29.8, "c": 86.3, "f": 18.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Kodo millet bisi bele bath (about 1½ cups)"]},
@@ -3702,7 +3702,7 @@ const sections = [
         note: "Bengaluru's spicy-tangy one-pot made with kodo millet instead of rice: toor dal, vegetables and bisi bele masala, finished with ghee-fried peanuts. Served with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Little Millet Curd Rice", channel: "Conscious spoons", id: "more-millet_curd_rice", video: "https://www.youtube.com/watch?v=LohcQkSJccM",
+        name: "Little Millet Curd Rice", tags: ["Millet"], channel: "Conscious spoons", id: "more-millet_curd_rice", video: "https://www.youtube.com/watch?v=LohcQkSJccM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 363.9, "p": 18.9, "c": 53.3, "f": 9.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Little millet curd rice (about 1¼ cups)"]},
@@ -3714,7 +3714,7 @@ const sections = [
         note: "Samai thayir sadam: soft little millet mashed into thick yogurt with ginger, cucumber and a mustard-seed tempering. Cooling, and high in protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Jhangora Khichdi", channel: "Recipe collection", id: "more-jhangora_khichdi", video: null,
+        name: "Jhangora Khichdi", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-jhangora_khichdi", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 580.2, "p": 27.8, "c": 89.0, "f": 13.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Millet", "items": ["Jhangora khichdi (about 1½ cups)"]},
@@ -3735,7 +3735,7 @@ const sections = [
     note: "More vegetarian recipes (Breakfast). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Moong Dal Chilla", channel: "Hebbars Kitchen", id: "more-b_moong_chilla", video: "https://www.youtube.com/watch?v=6JXC5N9hF6k",
+        name: "Moong Dal Chilla", tags: ["Lentil & Beans"], channel: "Hebbars Kitchen", id: "more-b_moong_chilla", video: "https://www.youtube.com/watch?v=6JXC5N9hF6k",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 514.0, "p": 31.7, "c": 50.0, "f": 23.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Moong dal chilla (3 chillas)"]},
@@ -3749,7 +3749,7 @@ const sections = [
         note: "Thin, crisp yellow-moong crêpes folded around chaat-spiced paneer, with green chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Vegetable Besan Chilla", channel: "Your Food Lab", id: "more-b_besan_chilla", video: "https://www.youtube.com/watch?v=RU85KcUOklA",
+        name: "Vegetable Besan Chilla", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-b_besan_chilla", video: "https://www.youtube.com/watch?v=RU85KcUOklA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 334.1, "p": 20.3, "c": 36.9, "f": 11.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Vegetable besan chilla (3 chillas)"]},
@@ -3762,7 +3762,7 @@ const sections = [
         note: "Savory chickpea-flour pancakes packed with onion, tomato and carrot, with a bowl of dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kanda Poha with Sprouts", channel: "Recipe collection", id: "more-b_poha", video: null,
+        name: "Kanda Poha with Sprouts", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-b_poha", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 421.5, "p": 19.2, "c": 52.8, "f": 16.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Kanda poha with sprouts (about 1¼ cups)"]},
@@ -3775,7 +3775,7 @@ const sections = [
         note: "The Maharashtrian morning staple with a protein boost: soft poha with onion, peas, moong sprouts and peanuts, finished with lemon. Served with dahi.",
       },
       {
-        name: "Dalia Upma", channel: "NishaMadhulika", id: "more-b_dalia_upma", video: "https://www.youtube.com/watch?v=rUWgTPPHJBw",
+        name: "Dalia Upma", tags: ["Rice & Grains"], channel: "NishaMadhulika", id: "more-b_dalia_upma", video: "https://www.youtube.com/watch?v=rUWgTPPHJBw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 411.2, "p": 22.7, "c": 63.6, "f": 9.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Dalia upma (about 1¼ cups)"]},
@@ -3788,7 +3788,7 @@ const sections = [
         note: "Broken-wheat upma with moong dal and vegetables — a fiber-rich swap for rava upma. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Idli & Sambar", channel: "Your Food Lab", id: "more-b_idli", video: "https://www.youtube.com/watch?v=_QLLo1b5Zcw",
+        name: "Idli & Sambar", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-b_idli", video: "https://www.youtube.com/watch?v=_QLLo1b5Zcw",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Idli (4 idlis)"]},
@@ -3802,7 +3802,7 @@ const sections = [
         note: "Steamed, fluffy idlis with a bowl of sambar and coconut chutney — South India's light, protein-rich breakfast. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Pesarattu", channel: "The Traditional Life", id: "more-b_pesarattu", video: "https://www.youtube.com/watch?v=dmw5ru5f78E",
+        name: "Pesarattu", tags: ["Lentil & Beans"], channel: "The Traditional Life", id: "more-b_pesarattu", video: "https://www.youtube.com/watch?v=dmw5ru5f78E",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 457.9, "p": 20.8, "c": 58.4, "f": 17.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Pesarattu (2 pesarattu)"]},
@@ -3815,7 +3815,7 @@ const sections = [
         note: "Andhra's crisp green-moong dosa with ginger and onion — no rice, no fermenting — with coconut chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Adai", channel: "The Traditional Life", id: "more-b_adai", video: "https://www.youtube.com/watch?v=6W0aOUWKL3w",
+        name: "Adai", tags: ["Lentil & Beans"], channel: "The Traditional Life", id: "more-b_adai", video: "https://www.youtube.com/watch?v=6W0aOUWKL3w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 474.9, "p": 17.0, "c": 62.5, "f": 18.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Adai (2 adai)"]},
@@ -3828,7 +3828,7 @@ const sections = [
         note: "Thick, crisp multi-dal dosa with dried chili, ginger and curry leaves, with coconut chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Veg Uttapam", channel: "Recipe collection", id: "more-b_uttapam", video: null,
+        name: "Paneer Veg Uttapam", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-b_uttapam", video: null,
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer veg uttapam (2 uttapam)"]},
@@ -3841,7 +3841,7 @@ const sections = [
         note: "Thick, soft Udupi-style uttapam topped with onion, tomato, peppers, carrot and grated paneer.",
       },
       {
-        name: "Ragi Malt", channel: "Recipe collection", id: "more-b_ragi_malt", video: null,
+        name: "Ragi Malt", tags: ["Millet"], channel: "Recipe collection", id: "more-b_ragi_malt", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 237.1, "p": 11.0, "c": 28.0, "f": 9.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Ragi malt (1 glass)"]},
@@ -3853,7 +3853,7 @@ const sections = [
         note: "A warm, filling glass of finger millet cooked in milk with jaggery and cardamom — rich in calcium and iron.",
       },
       {
-        name: "Methi Muthia", channel: "Sheetal's Kitchen - Gujarati", id: "more-b_muthia", video: "https://www.youtube.com/watch?v=n1KSvn_DIg8",
+        name: "Methi Muthia", tags: ["Vegetables"], channel: "Sheetal's Kitchen - Gujarati", id: "more-b_muthia", video: "https://www.youtube.com/watch?v=n1KSvn_DIg8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 349.3, "p": 16.3, "c": 44.6, "f": 12.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Methi muthia (about 12 pieces)"]},
@@ -3866,7 +3866,7 @@ const sections = [
         note: "Steamed Gujarati dumplings of whole wheat, besan, yogurt and methi, tossed in a mustard-sesame tempering. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Khaman Dhokla", channel: "Food Basket with Farhat", id: "more-b_dhokla", video: "https://www.youtube.com/watch?v=-Qy4fuNy8kI",
+        name: "Khaman Dhokla", tags: ["Lentil & Beans"], channel: "Food Basket with Farhat", id: "more-b_dhokla", video: "https://www.youtube.com/watch?v=-Qy4fuNy8kI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 358.1, "p": 17.7, "c": 38.2, "f": 15.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Khaman dhokla (about 6 pieces)"]},
@@ -3879,7 +3879,7 @@ const sections = [
         note: "Soft, spongy steamed besan cake with a tangy mustard-seed tempering, coconut and cilantro. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Handvo", channel: "Dharmis Kitchen", id: "more-b_handvo", video: "https://www.youtube.com/watch?v=4Z8pSRxJyu0",
+        name: "Handvo", tags: ["Lentil & Beans"], channel: "Dharmis Kitchen", id: "more-b_handvo", video: "https://www.youtube.com/watch?v=4Z8pSRxJyu0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 478.0, "p": 20.9, "c": 59.9, "f": 18.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Handvo (2 thick slices)"]},
@@ -3892,7 +3892,7 @@ const sections = [
         note: "A savory rice-and-dal cake with bottle gourd and carrot, crusted with sesame — fermented, so it's easy to digest. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Puttu & Kadala Curry", channel: "Hebbars Kitchen", id: "more-b_puttu", video: "https://www.youtube.com/watch?v=4J27-Ri49h0",
+        name: "Puttu & Kadala Curry", tags: ["Vegetables"], channel: "Hebbars Kitchen", id: "more-b_puttu", video: "https://www.youtube.com/watch?v=4J27-Ri49h0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 918.9, "p": 26.6, "c": 157.9, "f": 20.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Puttu (about 1½ logs)"]},
@@ -3905,7 +3905,7 @@ const sections = [
         note: "Kerala's iconic breakfast: steamed rice-and-coconut puttu with black chana curry. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Appam & Vegetable Stew", channel: "Swaad Of Kerala", id: "more-b_appam", video: "https://www.youtube.com/watch?v=n2-QP4E0Sjc",
+        name: "Appam & Vegetable Stew", tags: ["Vegetables"], channel: "Swaad Of Kerala", id: "more-b_appam", video: "https://www.youtube.com/watch?v=n2-QP4E0Sjc",
         macros: {"na": "This recipe needs appam batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Appam (3 appams)"]},
@@ -3918,7 +3918,7 @@ const sections = [
         note: "Lacy, soft-centred appams with the gentle coconut-milk vegetable stew. A lighter, lower-protein pick. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Namkeen Sattu", channel: "NishaMadhulika", id: "more-b_sattu", video: "https://www.youtube.com/watch?v=5dnHF8_XajE",
+        name: "Namkeen Sattu", tags: ["Lentil & Beans"], channel: "NishaMadhulika", id: "more-b_sattu", video: "https://www.youtube.com/watch?v=5dnHF8_XajE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 117.5, "p": 6.8, "c": 17.6, "f": 2.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Namkeen sattu (1 large glass)"]},
@@ -3930,7 +3930,7 @@ const sections = [
         note: "Bihar's protein drink: roasted chana flour whisked into cold water with lemon, cumin and mint. Ready in two minutes. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Bhurji Toast (Breakfast)", channel: "Your Food Lab", id: "more-b_bhurji_toast", video: "https://www.youtube.com/watch?v=3bA_-OuB-tg",
+        name: "Paneer Bhurji Toast (Breakfast)", tags: ["Paneer"], channel: "Your Food Lab", id: "more-b_bhurji_toast", video: "https://www.youtube.com/watch?v=3bA_-OuB-tg",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 698.4, "p": 39.7, "c": 46.6, "f": 42.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Toasted whole wheat bread (2 slices)"]},
@@ -3943,7 +3943,7 @@ const sections = [
         note: "Spiced paneer scramble with onion and peas on toasted whole wheat bread. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Bombay Sandwich", channel: "CookingShooking Hindi", id: "more-b_bombay_sandwich", video: "https://www.youtube.com/watch?v=fvxlDNMR-t4",
+        name: "Paneer Bombay Sandwich", tags: ["Paneer"], channel: "CookingShooking Hindi", id: "more-b_bombay_sandwich", video: "https://www.youtube.com/watch?v=fvxlDNMR-t4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 500.9, "p": 27.1, "c": 53.8, "f": 21.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer Bombay sandwich (1 sandwich)"]},
@@ -3956,7 +3956,7 @@ const sections = [
         note: "Mumbai's street sandwich made with paneer: green chutney, cucumber, tomato and a little potato, grilled crisp. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masala Oats (Breakfast)", channel: "Sanjeev Kapoor Khazana ", id: "more-b_masala_oats", video: "https://www.youtube.com/watch?v=MnhA2dd8DtQ",
+        name: "Masala Oats (Breakfast)", tags: ["Rice & Grains"], channel: "Sanjeev Kapoor Khazana ", id: "more-b_masala_oats", video: "https://www.youtube.com/watch?v=MnhA2dd8DtQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 464.9, "p": 23.5, "c": 57.1, "f": 17.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Masala oats (about 1¼ cups)"]},
@@ -3969,7 +3969,7 @@ const sections = [
         note: "Savory oats cooked like upma with vegetables, peanuts and a crunchy roasted-chana topping, with dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Quinoa Upma (Breakfast)", channel: "MyWay YourKitchen", id: "more-b_quinoa_upma", video: "https://www.youtube.com/watch?v=-3yiwgdROMc",
+        name: "Quinoa Upma (Breakfast)", tags: ["Quinoa"], channel: "MyWay YourKitchen", id: "more-b_quinoa_upma", video: "https://www.youtube.com/watch?v=-3yiwgdROMc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 498.0, "p": 24.9, "c": 59.0, "f": 19.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Quinoa upma (about 1¼ cups)"]},
@@ -3982,7 +3982,7 @@ const sections = [
         note: "South Indian upma made with quinoa, vegetables and peanuts — high protein and gluten-free. With dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Jhal Muri", channel: "Food and Street", id: "more-b_jhal_muri", video: "https://www.youtube.com/watch?v=EW4AWxn7sqM",
+        name: "Jhal Muri", tags: ["Lentil & Beans"], channel: "Food and Street", id: "more-b_jhal_muri", video: "https://www.youtube.com/watch?v=EW4AWxn7sqM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 420.7, "p": 16.0, "c": 51.9, "f": 18.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Jhal muri (about 2 cups)"]},
@@ -3994,7 +3994,7 @@ const sections = [
         note: "Kolkata's street snack as a light, crunchy breakfast: puffed rice with sprouts, chana, peanuts and raw mustard oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Overnight Oats", channel: "Hands Touch", id: "more-b_overnight_oats", video: "https://www.youtube.com/watch?v=2nG5eNKYDa8",
+        name: "Overnight Oats", tags: ["Rice & Grains"], channel: "Hands Touch", id: "more-b_overnight_oats", video: "https://www.youtube.com/watch?v=2nG5eNKYDa8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 437.0, "p": 22.6, "c": 55.9, "f": 15.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Overnight oats (1 jar)"]},
@@ -4006,7 +4006,7 @@ const sections = [
         note: "Make-ahead jars of oats, Greek yogurt, milk and chia with berries and almonds. Grab and go. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Greek Yogurt Parfait", channel: "Recipe collection", id: "more-b_parfait", video: null,
+        name: "Greek Yogurt Parfait", tags: ["Other"], channel: "Recipe collection", id: "more-b_parfait", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 343.2, "p": 22.6, "c": 37.8, "f": 12.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Greek yogurt parfait (1 tall glass)"]},
@@ -4018,7 +4018,7 @@ const sections = [
         note: "Thick yogurt layered with berries and a homemade honey-toasted oat, almond and pumpkin-seed crunch.",
       },
       {
-        name: "Cardamom Chia Pudding", channel: "holistichabits", id: "more-b_chia", video: "https://www.youtube.com/watch?v=4Jts_ZZaGZQ",
+        name: "Cardamom Chia Pudding", tags: ["Other"], channel: "holistichabits", id: "more-b_chia", video: "https://www.youtube.com/watch?v=4Jts_ZZaGZQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 376.2, "p": 18.9, "c": 40.8, "f": 16.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Chia pudding (1 jar)"]},
@@ -4030,7 +4030,7 @@ const sections = [
         note: "Chia seeds set overnight in cardamom milk, topped with Greek yogurt and berries. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masala Tofu Toast", channel: "Laxmi's Kitchen", id: "more-b_tofu_toast", video: "https://www.youtube.com/watch?v=9nie-AQs4rA",
+        name: "Masala Tofu Toast", tags: ["Paneer"], channel: "Laxmi's Kitchen", id: "more-b_tofu_toast", video: "https://www.youtube.com/watch?v=9nie-AQs4rA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 435.1, "p": 30.0, "c": 37.4, "f": 18.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Toasted whole wheat bread (2 slices)"]},
@@ -4043,7 +4043,7 @@ const sections = [
         note: "Indian-spiced tofu bhurji with ginger and green chili on toasted whole wheat bread — dairy-free. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chickpea Avocado Toast", channel: "Manjula's Kitchen", id: "more-b_chickpea_toast", video: "https://www.youtube.com/watch?v=BEhcShg9TdU",
+        name: "Chickpea Avocado Toast", tags: ["Lentil & Beans"], channel: "Manjula's Kitchen", id: "more-b_chickpea_toast", video: "https://www.youtube.com/watch?v=BEhcShg9TdU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 508.1, "p": 19.7, "c": 60.2, "f": 23.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Toasted whole wheat bread (2 slices)"]},
@@ -4056,7 +4056,7 @@ const sections = [
         note: "Smashed chickpeas and avocado with lemon and chaat masala on toast, topped with pumpkin seeds. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Peanut Butter Banana Smoothie", channel: "Recipe collection", id: "more-b_pb_smoothie", video: null,
+        name: "Peanut Butter Banana Smoothie", tags: ["Vegetables"], channel: "Recipe collection", id: "more-b_pb_smoothie", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 511.9, "p": 26.4, "c": 61.7, "f": 20.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Peanut butter banana smoothie (1 large glass)"]},
@@ -4068,7 +4068,7 @@ const sections = [
         note: "Banana, peanut butter, Greek yogurt, milk and oats blended thick — a full breakfast in a glass.",
       },
       {
-        name: "Mango Protein Lassi", channel: "Skinny Recipes", id: "more-b_mango_lassi", video: "https://www.youtube.com/watch?v=JnxQDGt6GVw",
+        name: "Mango Protein Lassi", tags: ["Other"], channel: "Skinny Recipes", id: "more-b_mango_lassi", video: "https://www.youtube.com/watch?v=JnxQDGt6GVw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 253.2, "p": 17.2, "c": 31.5, "f": 7.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Mango protein lassi (1 large glass)"]},
@@ -4080,7 +4080,7 @@ const sections = [
         note: "Kesar mango pulp blended with thick yogurt and cardamom, with chia seeds for staying power. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Banana Oat Pancakes", channel: "Recipe collection", id: "more-b_pancakes", video: null,
+        name: "Banana Oat Pancakes", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-b_pancakes", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 443.0, "p": 19.6, "c": 73.7, "f": 9.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Banana oat pancakes (4 small pancakes)"]},
@@ -4093,7 +4093,7 @@ const sections = [
         note: "Eggless, flourless pancakes of blended oats, banana and yogurt, topped with more yogurt and berries.",
       },
       {
-        name: "Paneer Breakfast Wrap", channel: "Dr Pal", id: "more-b_paneer_wrap", video: "https://www.youtube.com/watch?v=M3w7MLXze8U",
+        name: "Paneer Breakfast Wrap", tags: ["Rice & Grains"], channel: "Dr Pal", id: "more-b_paneer_wrap", video: "https://www.youtube.com/watch?v=M3w7MLXze8U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 581.5, "p": 31.7, "c": 47.7, "f": 31.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer breakfast wrap (1 wrap)"]},
@@ -4106,7 +4106,7 @@ const sections = [
         note: "A breakfast burrito, desi style: spiced paneer scramble with peppers, beans, tomato and cheddar in a whole wheat wrap. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bircher Muesli", channel: "Gordon Ramsay", id: "more-b_bircher", video: "https://www.youtube.com/watch?v=mMIwWFi1LJg",
+        name: "Bircher Muesli", tags: ["Rice & Grains"], channel: "Gordon Ramsay", id: "more-b_bircher", video: "https://www.youtube.com/watch?v=mMIwWFi1LJg",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 394.6, "p": 17.7, "c": 59.9, "f": 10.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Bircher muesli (1 bowl)"]},
@@ -4126,7 +4126,7 @@ const sections = [
     note: "More vegetarian recipes (Smoothies). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Berry Blast Smoothie", channel: "9Round Kickboxing Fitness", id: "more-sm_berry", video: "https://www.youtube.com/watch?v=lW1B39WgBN0",
+        name: "Berry Blast Smoothie", tags: ["Other"], channel: "9Round Kickboxing Fitness", id: "more-sm_berry", video: "https://www.youtube.com/watch?v=lW1B39WgBN0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 339.6, "p": 18.4, "c": 49.5, "f": 9.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Berry blast smoothie (1 large glass (about 16 oz))"]},
@@ -4138,7 +4138,7 @@ const sections = [
         note: "Mixed berries, banana and Greek yogurt with chia — the everyday smoothie, packed with antioxidants. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Green Pineapple Smoothie", channel: "GoheRove2", id: "more-sm_green", video: "https://www.youtube.com/watch?v=7QT7XSGRfHo",
+        name: "Green Pineapple Smoothie", tags: ["Other"], channel: "GoheRove2", id: "more-sm_green", video: "https://www.youtube.com/watch?v=7QT7XSGRfHo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 271.2, "p": 17.3, "c": 40.9, "f": 5.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Green pineapple smoothie (1 large glass (about 16 oz))"]},
@@ -4150,7 +4150,7 @@ const sections = [
         note: "Spinach you can't taste, sweet pineapple, banana, ginger and lime. The easiest way to eat your greens. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mango Haldi Smoothie", channel: "Recipe collection", id: "more-sm_mango_haldi", video: null,
+        name: "Mango Haldi Smoothie", tags: ["Other"], channel: "Recipe collection", id: "more-sm_mango_haldi", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 258.3, "p": 16.5, "c": 37.3, "f": 6.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Mango haldi smoothie (1 large glass (about 16 oz))"]},
@@ -4162,7 +4162,7 @@ const sections = [
         note: "Mango with turmeric, ginger and cardamom — a golden, anti-inflammatory smoothie that tastes like a mango lassi.",
       },
       {
-        name: "Date Almond Shake", channel: "c4cooking", id: "more-sm_date", video: "https://www.youtube.com/watch?v=r3xKBOg-ZB0",
+        name: "Date Almond Shake", tags: ["Other"], channel: "c4cooking", id: "more-sm_date", video: "https://www.youtube.com/watch?v=r3xKBOg-ZB0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 469.0, "p": 19.0, "c": 71.7, "f": 15.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Date almond shake (1 large glass (about 16 oz))"]},
@@ -4174,7 +4174,7 @@ const sections = [
         note: "Naturally sweetened with Medjool dates, thick with soaked almonds, warm with cinnamon and cardamom. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chocolate Peanut Butter Smoothie", channel: "Danny Macs Kitchen", id: "more-sm_choc_pb", video: "https://www.youtube.com/watch?v=GPqGIf6Zx3Y",
+        name: "Chocolate Peanut Butter Smoothie", tags: ["Other"], channel: "Danny Macs Kitchen", id: "more-sm_choc_pb", video: "https://www.youtube.com/watch?v=GPqGIf6Zx3Y",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 513.9, "p": 25.2, "c": 69.2, "f": 19.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Chocolate peanut butter smoothie (1 large glass (about 16 oz))"]},
@@ -4186,7 +4186,7 @@ const sections = [
         note: "Tastes like a milkshake, built like a meal: banana, peanut butter, cocoa and Greek yogurt. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Strawberry Oat Smoothie", channel: "Recipe collection", id: "more-sm_strawberry_oat", video: null,
+        name: "Strawberry Oat Smoothie", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-sm_strawberry_oat", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 368.1, "p": 20.5, "c": 50.8, "f": 10.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Strawberry oat smoothie (1 large glass (about 16 oz))"]},
@@ -4198,7 +4198,7 @@ const sections = [
         note: "Strawberries blended with oats and chia for a breakfast smoothie that keeps you full till lunch.",
       },
       {
-        name: "Cold Coffee Protein Shake", channel: "Recipe collection", id: "more-sm_coffee", video: null,
+        name: "Cold Coffee Protein Shake", tags: ["Other"], channel: "Recipe collection", id: "more-sm_coffee", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 314.2, "p": 18.8, "c": 48.4, "f": 7.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Cold coffee protein shake (1 large glass (about 16 oz))"]},
@@ -4210,7 +4210,7 @@ const sections = [
         note: "The café cold coffee, made healthy: coffee, milk and yogurt sweetened with banana and a date.",
       },
       {
-        name: "Avocado Spinach Lime Smoothie", channel: "Salwa Ali", id: "more-sm_avocado", video: "https://www.youtube.com/watch?v=DiZWNqlwqrU",
+        name: "Avocado Spinach Lime Smoothie", tags: ["Vegetables"], channel: "Salwa Ali", id: "more-sm_avocado", video: "https://www.youtube.com/watch?v=DiZWNqlwqrU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 359.2, "p": 18.2, "c": 39.1, "f": 16.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Avocado spinach lime smoothie (1 large glass (about 16 oz))"]},
@@ -4222,7 +4222,7 @@ const sections = [
         note: "Silky avocado and spinach with lime and banana — creamy, green and full of healthy fats. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Papaya Ginger Smoothie", channel: "Rainbow Lifestyle", id: "more-sm_papaya", video: "https://www.youtube.com/watch?v=SBoY42hzwS0",
+        name: "Papaya Ginger Smoothie", tags: ["Other"], channel: "Rainbow Lifestyle", id: "more-sm_papaya", video: "https://www.youtube.com/watch?v=SBoY42hzwS0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 247.3, "p": 15.8, "c": 29.9, "f": 8.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Papaya ginger smoothie (1 large glass (about 16 oz))"]},
@@ -4234,7 +4234,7 @@ const sections = [
         note: "Ripe papaya with ginger and lime — light, tropical and good for digestion. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Beet Berry Smoothie", channel: "Vitamix", id: "more-sm_beet", video: "https://www.youtube.com/watch?v=bO2ZV4cWwfA",
+        name: "Beet Berry Smoothie", tags: ["Vegetables"], channel: "Vitamix", id: "more-sm_beet", video: "https://www.youtube.com/watch?v=bO2ZV4cWwfA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 258.0, "p": 16.4, "c": 38.0, "f": 5.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Beet berry smoothie (1 large glass (about 16 oz))"]},
@@ -4246,7 +4246,7 @@ const sections = [
         note: "A spoon of raw beetroot turns berries and apple a deep magenta and adds an earthy sweetness. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Carrot Orange Sunrise Smoothie", channel: "Food Book Originals", id: "more-sm_sunrise", video: "https://www.youtube.com/watch?v=CEaqpvnSwW8",
+        name: "Carrot Orange Sunrise Smoothie", tags: ["Vegetables"], channel: "Food Book Originals", id: "more-sm_sunrise", video: "https://www.youtube.com/watch?v=CEaqpvnSwW8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 262.4, "p": 15.6, "c": 42.7, "f": 4.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Carrot orange sunrise (1 large glass (about 16 oz))"]},
@@ -4258,7 +4258,7 @@ const sections = [
         note: "Carrot, whole orange, mango, ginger and turmeric — a vitamin-C and beta-carotene glass. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Apple Pie Smoothie", channel: "Rebecca Brand", id: "more-sm_apple_pie", video: "https://www.youtube.com/watch?v=f13lAeJPy0c",
+        name: "Apple Pie Smoothie", tags: ["Other"], channel: "Rebecca Brand", id: "more-sm_apple_pie", video: "https://www.youtube.com/watch?v=f13lAeJPy0c",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 447.8, "p": 20.5, "c": 71.0, "f": 11.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Apple pie smoothie (1 large glass (about 16 oz))"]},
@@ -4270,7 +4270,7 @@ const sections = [
         note: "Apple, oats, almonds and cinnamon blended with yogurt — dessert flavors, breakfast nutrition. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sattu Banana Smoothie", channel: "Recipe collection", id: "more-sm_sattu", video: null,
+        name: "Sattu Banana Smoothie", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-sm_sattu", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 427.2, "p": 21.0, "c": 72.4, "f": 8.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Sattu banana smoothie (1 large glass (about 16 oz))"]},
@@ -4282,7 +4282,7 @@ const sections = [
         note: "Bihar's protein flour blended with banana, milk and cardamom — a filling, earthy shake.",
       },
       {
-        name: "Kesar Badam Pista Shake", channel: "VEG EXPRESS", id: "more-sm_kesar", video: "https://www.youtube.com/watch?v=RiN3lvO5VJI",
+        name: "Kesar Badam Pista Shake", tags: ["Other"], channel: "VEG EXPRESS", id: "more-sm_kesar", video: "https://www.youtube.com/watch?v=RiN3lvO5VJI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 445.6, "p": 20.2, "c": 55.8, "f": 18.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Kesar badam pista shake (1 large glass (about 16 oz))"]},
@@ -4294,7 +4294,7 @@ const sections = [
         note: "The festival thandai-style shake: saffron, almonds, pistachios and cardamom, sweetened only with dates. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Vegan Tofu Berry Smoothie", channel: "Broccoli Mum", id: "more-sm_tofu_berry", video: "https://www.youtube.com/watch?v=5UFM1cN22i0",
+        name: "Vegan Tofu Berry Smoothie", tags: ["Paneer"], channel: "Broccoli Mum", id: "more-sm_tofu_berry", video: "https://www.youtube.com/watch?v=5UFM1cN22i0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 374.9, "p": 21.7, "c": 40.9, "f": 15.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Smoothie", "items": ["Vegan tofu berry smoothie (1 large glass (about 16 oz))"]},
@@ -4314,7 +4314,7 @@ const sections = [
     note: "More vegetarian recipes (Mediterranean). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Baked Falafel Bowl", channel: "Downshiftology", id: "more-falafel_bowl", video: "https://www.youtube.com/watch?v=aQD0ndQGpG0",
+        name: "Baked Falafel Bowl", tags: ["Lentil & Beans"], channel: "Downshiftology", id: "more-falafel_bowl", video: "https://www.youtube.com/watch?v=aQD0ndQGpG0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 778.8, "p": 28.7, "c": 97.5, "f": 33.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Quinoa (about 1 cup cooked)"]},
@@ -4329,7 +4329,7 @@ const sections = [
         note: "Crisp oven-baked falafel over quinoa with a cucumber-tomato salad, hummus and lemony tahini sauce. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Greek Chickpea Lentil Salad", channel: "Yum & Yummer Cookbook", id: "more-greek_salad", video: "https://www.youtube.com/watch?v=ipn7WwPCGAI",
+        name: "Greek Chickpea Lentil Salad", tags: ["Lentil & Beans"], channel: "Yum & Yummer Cookbook", id: "more-greek_salad", video: "https://www.youtube.com/watch?v=ipn7WwPCGAI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 829.2, "p": 39.7, "c": 85.5, "f": 39.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Greek chickpea lentil salad (about 2½ cups)"]},
@@ -4341,7 +4341,7 @@ const sections = [
         note: "A horiatiki-style salad — no lettuce — with tomato, cucumber, pepper and olives, made a full meal with chickpeas, lentils and a slab of feta. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Protein Tabbouleh", channel: "Recipe collection", id: "more-protein_tabbouleh", video: null,
+        name: "Protein Tabbouleh", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-protein_tabbouleh", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 821.1, "p": 38.9, "c": 103.8, "f": 31.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Protein tabbouleh (about 2½ cups)"]},
@@ -4353,7 +4353,7 @@ const sections = [
         note: "The bright parsley-and-mint herb salad with bulgur, lemon and olive oil, plus chickpeas, lentils and feta for a 40 g meal.",
       },
       {
-        name: "Spinach Feta Stuffed Peppers", channel: "Elena Bogdanova", id: "more-stuffed_peppers", video: "https://www.youtube.com/watch?v=THLllt1qw3o",
+        name: "Spinach Feta Stuffed Peppers", tags: ["Vegetables"], channel: "Elena Bogdanova", id: "more-stuffed_peppers", video: "https://www.youtube.com/watch?v=THLllt1qw3o",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 595.9, "p": 32.5, "c": 70.2, "f": 22.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Spinach feta stuffed peppers (2 pepper halves)"]},
@@ -4366,7 +4366,7 @@ const sections = [
         note: "Sweet peppers baked with a filling of quinoa, lentils, spinach, tomato and feta, with tzatziki. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mujadara", channel: "Food Impromptu", id: "more-mujadara", video: "https://www.youtube.com/watch?v=1dWqQirbsK4",
+        name: "Mujadara", tags: ["Vegetables"], channel: "Food Impromptu", id: "more-mujadara", video: "https://www.youtube.com/watch?v=1dWqQirbsK4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 631.7, "p": 29.8, "c": 91.4, "f": 17.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Mujadara (about 1½ cups)"]},
@@ -4379,7 +4379,7 @@ const sections = [
         note: "Lebanon's lentils and rice under a heap of deeply caramelized onions, with a cool cucumber-yogurt salad. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gigantes Plaki", channel: "The Mediterranean Dish", id: "more-gigantes", video: "https://www.youtube.com/watch?v=8h_YWVC3pjM",
+        name: "Gigantes Plaki", tags: ["Rice & Grains"], channel: "The Mediterranean Dish", id: "more-gigantes", video: "https://www.youtube.com/watch?v=8h_YWVC3pjM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 630.3, "p": 28.0, "c": 80.7, "f": 23.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Gigantes plaki (about 1½ cups)"]},
@@ -4392,7 +4392,7 @@ const sections = [
         note: "Greek oven-baked white beans in a rich tomato, dill and olive-oil sauce, topped with feta and served with bread. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chickpea Squash Tagine", channel: "Divertimenti Cookshop & Cookery School", id: "more-tagine", video: "https://www.youtube.com/watch?v=28iW-ft9HNY",
+        name: "Chickpea Squash Tagine", tags: ["Lentil & Beans"], channel: "Divertimenti Cookshop & Cookery School", id: "more-tagine", video: "https://www.youtube.com/watch?v=28iW-ft9HNY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 724.4, "p": 27.8, "c": 108.4, "f": 22.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Whole wheat couscous (about 1 cup)"]},
@@ -4407,7 +4407,7 @@ const sections = [
         note: "A warmly spiced Moroccan stew of chickpeas, squash and raisins over whole wheat couscous, with yogurt and toasted almonds. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Turkish Red Lentil Soup", channel: "Recipe collection", id: "more-mercimek", video: null,
+        name: "Turkish Red Lentil Soup", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-mercimek", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 544.5, "p": 29.7, "c": 85.3, "f": 10.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Mercimek çorbası (about 2 cups)"]},
@@ -4420,7 +4420,7 @@ const sections = [
         note: "Mercimek çorbası: silky red lentil soup with cumin, finished with paprika oil, lemon and mint.",
       },
       {
-        name: "Halloumi Couscous Bowl", channel: "Lena's Kitchen", id: "more-halloumi_bowl", video: "https://www.youtube.com/watch?v=DqdOE7etK-U",
+        name: "Halloumi Couscous Bowl", tags: ["Rice & Grains"], channel: "Lena's Kitchen", id: "more-halloumi_bowl", video: "https://www.youtube.com/watch?v=DqdOE7etK-U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 825.2, "p": 41.5, "c": 79.3, "f": 38.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Whole wheat couscous (about 1 cup)"]},
@@ -4434,7 +4434,7 @@ const sections = [
         note: "Golden seared halloumi over whole wheat couscous with roasted zucchini, peppers and chickpeas, and tzatziki. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mezze Plate", channel: "Recipe collection", id: "more-mezze_plate", video: null,
+        name: "Mezze Plate", tags: ["Vegetables"], channel: "Recipe collection", id: "more-mezze_plate", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 804.5, "p": 30.6, "c": 90.5, "f": 41.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["1½ × Pita triangles (1 pita, cut in 6)"]},
@@ -4448,7 +4448,7 @@ const sections = [
         note: "A full mezze spread for one: hummus, smoky baba ganoush, herbed labneh, feta, olives, crunchy vegetables and warm pita.",
       },
       {
-        name: "Chickpea Gyro Wrap", channel: "Recipe collection", id: "more-gyro_wrap", video: null,
+        name: "Chickpea Gyro Wrap", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-gyro_wrap", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 622.5, "p": 30.4, "c": 82.7, "f": 21.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["1 whole wheat pita"]},
@@ -4461,7 +4461,7 @@ const sections = [
         note: "Crispy spiced chickpeas in a warm pita with tzatziki, tomato, red onion and feta — a vegetarian gyro.",
       },
       {
-        name: "Pasta e Fagioli", channel: "Bon Appétit", id: "more-pasta_fagioli", video: "https://www.youtube.com/watch?v=7q-VS6pyUiM",
+        name: "Pasta e Fagioli", tags: ["Pasta & Noodles"], channel: "Bon Appétit", id: "more-pasta_fagioli", video: "https://www.youtube.com/watch?v=7q-VS6pyUiM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 571.7, "p": 27.6, "c": 85.8, "f": 16.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Base", "items": ["Pasta e fagioli (about 2 cups)"]},
@@ -4481,7 +4481,7 @@ const sections = [
     note: "More vegetarian recipes (Blue Zones). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Goya Champuru", channel: "Just One Cookbook", id: "more-bz_goya", video: "https://www.youtube.com/watch?v=PLULg4M8iqI",
+        name: "Goya Champuru", tags: ["Rice & Grains"], channel: "Just One Cookbook", id: "more-bz_goya", video: "https://www.youtube.com/watch?v=PLULg4M8iqI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 475.9, "p": 22.1, "c": 49.3, "f": 22.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Goya Champuru (about 1½ cups)"]},
@@ -4494,7 +4494,7 @@ const sections = [
         note: "Okinawa's signature dish: bitter melon stir-fried with tofu, cabbage and carrot — bitter, savory and very good for you. Served with brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sweet Potato Miso Soup", channel: "JapaneseCooking101", id: "more-bz_imo_miso", video: "https://www.youtube.com/watch?v=FWeO45uSzqw",
+        name: "Sweet Potato Miso Soup", tags: ["Vegetables"], channel: "JapaneseCooking101", id: "more-bz_imo_miso", video: "https://www.youtube.com/watch?v=FWeO45uSzqw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 391.8, "p": 18.1, "c": 65.0, "f": 7.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sweet Potato Miso Soup (about 2 cups)"]},
@@ -4507,7 +4507,7 @@ const sections = [
         note: "Imo-jiru: Okinawa's everyday soup of sweet potato, tofu, mushrooms and wakame in a gentle miso broth, with brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tofu Miso Soup & Rice", channel: "JapaneseCooking101", id: "more-bz_miso_tofu", video: "https://www.youtube.com/watch?v=TwCZXv-4J54",
+        name: "Tofu Miso Soup & Rice", tags: ["Rice & Grains"], channel: "JapaneseCooking101", id: "more-bz_miso_tofu", video: "https://www.youtube.com/watch?v=TwCZXv-4J54",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 337.0, "p": 20.2, "c": 46.3, "f": 8.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Miso Soup & Rice (about 2 cups)"]},
@@ -4520,7 +4520,7 @@ const sections = [
         note: "The Japanese breakfast and supper staple: tofu, spinach, mushrooms and wakame in miso broth, with brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tofu Champuru", channel: "TabiEats", id: "more-bz_tofu_champuru", video: "https://www.youtube.com/watch?v=JCh1CDO8nos",
+        name: "Tofu Champuru", tags: ["Paneer"], channel: "TabiEats", id: "more-bz_tofu_champuru", video: "https://www.youtube.com/watch?v=JCh1CDO8nos",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 478.8, "p": 22.1, "c": 50.5, "f": 22.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Champuru (about 1½ cups)"]},
@@ -4533,7 +4533,7 @@ const sections = [
         note: "Okinawa's everyday 'mixed-up' stir-fry of tofu with cabbage, carrot and green beans — no bitter melon needed. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sweet Potato Edamame Bowl", channel: "Recipe collection", id: "more-bz_sweet_potato_bowl", video: null,
+        name: "Sweet Potato Edamame Bowl", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_sweet_potato_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 541.8, "p": 22.3, "c": 81.6, "f": 16.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sweet Potato Edamame Bowl (1 bowl)"]},
@@ -4545,7 +4545,7 @@ const sections = [
         note: "Okinawan purple (or orange) sweet potato with edamame and brown rice under a miso-ginger dressing and sesame.",
       },
       {
-        name: "Shiitake Tofu Rice Bowl", channel: "Recipe collection", id: "more-bz_shiitake_bowl", video: null,
+        name: "Shiitake Tofu Rice Bowl", tags: ["Paneer"], channel: "Recipe collection", id: "more-bz_shiitake_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 453.0, "p": 24.7, "c": 51.8, "f": 17.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shiitake Tofu Rice Bowl (1 bowl)"]},
@@ -4557,7 +4557,7 @@ const sections = [
         note: "Seared tofu and mushrooms glazed in soy and ginger over brown rice with wilted spinach.",
       },
       {
-        name: "Daikon & Tofu Nimono", channel: "Recipe collection", id: "more-bz_nimono", video: null,
+        name: "Daikon & Tofu Nimono", tags: ["Paneer"], channel: "Recipe collection", id: "more-bz_nimono", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 370.0, "p": 22.3, "c": 52.6, "f": 8.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Daikon & Tofu Nimono (about 1½ cups)"]},
@@ -4570,7 +4570,7 @@ const sections = [
         note: "Gently simmered daikon, carrot, mushrooms and tofu in a light soy broth — Japanese home cooking at its simplest.",
       },
       {
-        name: "Edamame Onigiri & Miso Soup", channel: "JAPANESE COOKING CHANNEL", id: "more-bz_onigiri", video: "https://www.youtube.com/watch?v=kzhB-Lxa0vU",
+        name: "Edamame Onigiri & Miso Soup", tags: ["Lentil & Beans"], channel: "JAPANESE COOKING CHANNEL", id: "more-bz_onigiri", video: "https://www.youtube.com/watch?v=kzhB-Lxa0vU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 454.2, "p": 23.4, "c": 61.0, "f": 14.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Edamame Onigiri & Miso Soup (3 rice balls)"]},
@@ -4583,7 +4583,7 @@ const sections = [
         note: "Brown rice balls with edamame and sesame, wrapped up with a small cup of tofu miso soup — Japan's lunch box. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Soba Noodle Tofu Bowl", channel: "Everyday Food", id: "more-bz_soba", video: "https://www.youtube.com/watch?v=Yft8LfRdkno",
+        name: "Soba Noodle Tofu Bowl", tags: ["Paneer"], channel: "Everyday Food", id: "more-bz_soba", video: "https://www.youtube.com/watch?v=Yft8LfRdkno",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 430.5, "p": 27.4, "c": 53.0, "f": 14.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Soba Noodle Tofu Bowl (1 bowl)"]},
@@ -4595,7 +4595,7 @@ const sections = [
         note: "Buckwheat soba with tofu, edamame, spinach and carrot in a sesame-soy dressing. Good warm or cold. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Turmeric Tofu & Chard", channel: "Recipe collection", id: "more-bz_turmeric_tofu", video: null,
+        name: "Turmeric Tofu & Chard", tags: ["Paneer"], channel: "Recipe collection", id: "more-bz_turmeric_tofu", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 386.2, "p": 21.3, "c": 42.5, "f": 15.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Turmeric Tofu & Chard (about 1½ cups)"]},
@@ -4608,7 +4608,7 @@ const sections = [
         note: "Okinawans drink turmeric tea daily. Here it colors a garlicky tofu, chard and mushroom stir-fry over brown rice.",
       },
       {
-        name: "Kenchin-jiru Root Vegetable Soup", channel: "Cooking with Dog", id: "more-bz_kenchin", video: "https://www.youtube.com/watch?v=qkK9NuIYF8w",
+        name: "Kenchin-jiru Root Vegetable Soup", tags: ["Vegetables"], channel: "Cooking with Dog", id: "more-bz_kenchin", video: "https://www.youtube.com/watch?v=qkK9NuIYF8w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 428.9, "p": 20.0, "c": 57.5, "f": 13.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kenchin-jiru Root Vegetable Soup (about 2 cups)"]},
@@ -4621,7 +4621,7 @@ const sections = [
         note: "A hearty Japanese temple soup of daikon, carrot, sweet potato, mushrooms and tofu, sautéed in sesame oil first. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mushroom Mabo Tofu", channel: "Recipe collection", id: "more-bz_mabo", video: null,
+        name: "Mushroom Mabo Tofu", tags: ["Paneer"], channel: "Recipe collection", id: "more-bz_mabo", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 460.8, "p": 25.6, "c": 49.6, "f": 18.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mushroom Mabo Tofu (about 1½ cups)"]},
@@ -4634,7 +4634,7 @@ const sections = [
         note: "A milder, vegetarian take on mabo tofu: tofu and minced mushrooms in a garlicky, gently spicy sauce.",
       },
       {
-        name: "Baked Agedashi Tofu", channel: "Recipe collection", id: "more-bz_agedashi", video: null,
+        name: "Baked Agedashi Tofu", tags: ["Paneer"], channel: "Recipe collection", id: "more-bz_agedashi", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 490.6, "p": 25.0, "c": 56.9, "f": 18.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baked Agedashi Tofu (1 plate)"]},
@@ -4647,7 +4647,7 @@ const sections = [
         note: "Crisp oven-baked tofu in a light soy broth with grated daikon and ginger, plus sesame spinach.",
       },
       {
-        name: "Steamed Sweet Potato & Soy Milk", channel: "Whisk n Fold", id: "more-bz_purple_sp", video: "https://www.youtube.com/watch?v=ot5HpByrJWI",
+        name: "Steamed Sweet Potato & Soy Milk", tags: ["Vegetables"], channel: "Whisk n Fold", id: "more-bz_purple_sp", video: "https://www.youtube.com/watch?v=ot5HpByrJWI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 246.1, "p": 10.6, "c": 33.1, "f": 8.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Steamed Sweet Potato & Soy Milk (1 plate)"]},
@@ -4659,7 +4659,7 @@ const sections = [
         note: "The Okinawan breakfast: steamed purple (or orange) sweet potato with black sesame and a glass of warm soy milk. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Brown Rice Congee with Tofu", channel: "Diana Tsai", id: "more-bz_okayu", video: "https://www.youtube.com/watch?v=i0Cd6VDtA78",
+        name: "Brown Rice Congee with Tofu", tags: ["Paneer"], channel: "Diana Tsai", id: "more-bz_okayu", video: "https://www.youtube.com/watch?v=i0Cd6VDtA78",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 254.8, "p": 13.0, "c": 31.7, "f": 8.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Brown Rice Congee with Tofu (about 2 cups)"]},
@@ -4671,7 +4671,7 @@ const sections = [
         note: "Okayu: soft, soothing brown rice porridge topped with tofu, spinach, ginger and scallion. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ginger Napa & Tofu", channel: "Recipe collection", id: "more-bz_napa_tofu", video: null,
+        name: "Ginger Napa & Tofu", tags: ["Paneer"], channel: "Recipe collection", id: "more-bz_napa_tofu", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 473.7, "p": 21.2, "c": 50.1, "f": 21.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Ginger Napa & Tofu (about 1½ cups)"]},
@@ -4684,7 +4684,7 @@ const sections = [
         note: "Silky napa cabbage and golden tofu stir-fried with lots of ginger and garlic.",
       },
       {
-        name: "Okinawa Soba Soup", channel: "Recipe collection", id: "more-bz_okinawa_soba", video: null,
+        name: "Okinawa Soba Soup", tags: ["Other"], channel: "Recipe collection", id: "more-bz_okinawa_soba", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 314.5, "p": 21.4, "c": 50.8, "f": 5.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Okinawa Soba Soup (about 2½ cups)"]},
@@ -4696,7 +4696,7 @@ const sections = [
         note: "Noodles in a gingery mushroom-miso broth with tofu, cabbage and scallion — a lighter Okinawan noodle soup.",
       },
       {
-        name: "Miso-Glazed Tofu Bowl", channel: "Damn Tasty Vegan", id: "more-bz_miso_tofu_bowl", video: "https://www.youtube.com/watch?v=FObbUcwMF0o",
+        name: "Miso-Glazed Tofu Bowl", tags: ["Paneer"], channel: "Damn Tasty Vegan", id: "more-bz_miso_tofu_bowl", video: "https://www.youtube.com/watch?v=FObbUcwMF0o",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 482.1, "p": 30.3, "c": 58.5, "f": 15.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Miso-Glazed Tofu Bowl (1 bowl)"]},
@@ -4708,7 +4708,7 @@ const sections = [
         note: "Broiled miso-glazed tofu over brown rice with edamame, cucumber and wakame dressed in rice vinegar. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Okinawan Tofu Curry", channel: "Recipe collection", id: "more-bz_okinawa_curry", video: null,
+        name: "Okinawan Tofu Curry", tags: ["Paneer"], channel: "Recipe collection", id: "more-bz_okinawa_curry", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 433.6, "p": 17.8, "c": 60.2, "f": 13.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Okinawan Tofu Curry (about 1½ cups)"]},
@@ -4721,7 +4721,7 @@ const sections = [
         note: "A mild, Japanese-style curry of tofu, sweet potato, carrot and onion over brown rice.",
       },
       {
-        name: "Miso Eggplant & Tofu", channel: "Chef JA Cooks", id: "more-bz_miso_eggplant", video: "https://www.youtube.com/watch?v=Wizfa097xe8",
+        name: "Miso Eggplant & Tofu", tags: ["Paneer"], channel: "Chef JA Cooks", id: "more-bz_miso_eggplant", video: "https://www.youtube.com/watch?v=Wizfa097xe8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 466.0, "p": 19.8, "c": 61.1, "f": 17.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Miso Eggplant & Tofu (1 plate)"]},
@@ -4734,7 +4734,7 @@ const sections = [
         note: "Nasu dengaku: small eggplants broiled with a sweet miso glaze, with seared tofu and brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sardinian Longevity Minestrone", channel: "Dr. Melinda Steele", id: "more-bz_minestrone", video: "https://www.youtube.com/watch?v=I24dZ09DMns",
+        name: "Sardinian Longevity Minestrone", tags: ["Lentil & Beans"], channel: "Dr. Melinda Steele", id: "more-bz_minestrone", video: "https://www.youtube.com/watch?v=I24dZ09DMns",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 591.5, "p": 22.9, "c": 86.7, "f": 19.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sardinian Longevity Minestrone (about 2 cups)"]},
@@ -4747,7 +4747,7 @@ const sections = [
         note: "The famous Ogliastra minestrone eaten daily by Sardinian centenarians: three kinds of beans, barley, fennel and vegetables in olive oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Fregola with Chickpeas & Tomato", channel: "Recipe collection", id: "more-bz_fregola", video: null,
+        name: "Fregola with Chickpeas & Tomato", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_fregola", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 473.3, "p": 18.1, "c": 70.5, "f": 16.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Fregola with Chickpeas & Tomato (about 1½ cups)"]},
@@ -4759,7 +4759,7 @@ const sections = [
         note: "Sardinia's toasted pasta pearls (or small whole wheat pasta) simmered with chickpeas, tomato and parsley.",
       },
       {
-        name: "Fava & Mint on Sourdough", channel: "Recipe collection", id: "more-bz_fava_toast", video: null,
+        name: "Fava & Mint on Sourdough", tags: ["Other"], channel: "Recipe collection", id: "more-bz_fava_toast", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 484.0, "p": 23.1, "c": 63.8, "f": 15.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Fava & Mint on Sourdough (2 toasts)"]},
@@ -4771,7 +4771,7 @@ const sections = [
         note: "Spring in Sardinia: smashed fava beans with mint, lemon and pecorino on toasted sourdough.",
       },
       {
-        name: "Pasta e Ceci", channel: "Vincenzo's Plate", id: "more-bz_pasta_ceci", video: "https://www.youtube.com/watch?v=R3HQr5Dhmfc",
+        name: "Pasta e Ceci", tags: ["Pasta & Noodles"], channel: "Vincenzo's Plate", id: "more-bz_pasta_ceci", video: "https://www.youtube.com/watch?v=R3HQr5Dhmfc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 460.4, "p": 18.0, "c": 65.0, "f": 16.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pasta e Ceci (about 1½ cups)"]},
@@ -4783,7 +4783,7 @@ const sections = [
         note: "Italy's chickpea and pasta stew with rosemary and garlic — thick, cheap and deeply satisfying. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Malloreddus with Saffron Tomato", channel: "Recipe collection", id: "more-bz_malloreddus", video: null,
+        name: "Malloreddus with Saffron Tomato", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bz_malloreddus", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 407.2, "p": 15.6, "c": 56.5, "f": 16.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Malloreddus with Saffron Tomato (about 1½ cups)"]},
@@ -4795,7 +4795,7 @@ const sections = [
         note: "Sardinian gnocchetti (or small whole wheat shells) in a saffron-scented tomato sauce with basil and pecorino.",
       },
       {
-        name: "White Bean & Rosemary Soup", channel: "Budget Bytes", id: "more-bz_white_bean_soup", video: "https://www.youtube.com/watch?v=pjHY9CPZ-u0",
+        name: "White Bean & Rosemary Soup", tags: ["Lentil & Beans"], channel: "Budget Bytes", id: "more-bz_white_bean_soup", video: "https://www.youtube.com/watch?v=pjHY9CPZ-u0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 550.0, "p": 22.9, "c": 74.0, "f": 19.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["White Bean & Rosemary Soup (about 2 cups)"]},
@@ -4808,7 +4808,7 @@ const sections = [
         note: "Creamy cannellini soup with garlic, rosemary, celery and a thread of good olive oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Barley & Bean Soup", channel: "Miss Chinese Food", id: "more-bz_barley_bean", video: "https://www.youtube.com/watch?v=DH262FSvMu8",
+        name: "Barley & Bean Soup", tags: ["Lentil & Beans"], channel: "Miss Chinese Food", id: "more-bz_barley_bean", video: "https://www.youtube.com/watch?v=DH262FSvMu8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 579.6, "p": 20.8, "c": 89.5, "f": 17.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Barley & Bean Soup (about 2 cups)"]},
@@ -4821,7 +4821,7 @@ const sections = [
         note: "Orzo e fagioli: chewy barley and white beans with vegetables and tomato — a Sardinian shepherd's supper. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Baked Eggplant with Pecorino", channel: "Recipe collection", id: "more-bz_melanzane", video: null,
+        name: "Baked Eggplant with Pecorino", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bz_melanzane", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 485.7, "p": 21.8, "c": 53.2, "f": 22.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baked Eggplant with Pecorino (1 generous portion)"]},
@@ -4833,7 +4833,7 @@ const sections = [
         note: "Eggplant baked — not fried — in layers with tomato, basil, crumbs and pecorino, with a side of white beans.",
       },
       {
-        name: "Sardinian Lentil Stew", channel: "Recipe collection", id: "more-bz_lentil_stew", video: null,
+        name: "Sardinian Lentil Stew", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_lentil_stew", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 507.7, "p": 23.2, "c": 71.2, "f": 16.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sardinian Lentil Stew (about 1½ cups)"]},
@@ -4846,7 +4846,7 @@ const sections = [
         note: "Brown lentils stewed with carrot, celery, tomato and herbs in olive oil.",
       },
       {
-        name: "Minestra di Fave", channel: "Cucinare con prezzemolino", id: "more-bz_fave_soup", video: "https://www.youtube.com/watch?v=J99FKKEA7zY",
+        name: "Minestra di Fave", tags: ["Other"], channel: "Cucinare con prezzemolino", id: "more-bz_fave_soup", video: "https://www.youtube.com/watch?v=J99FKKEA7zY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 499.2, "p": 22.2, "c": 64.8, "f": 17.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Minestra di Fave (about 2 cups)"]},
@@ -4859,7 +4859,7 @@ const sections = [
         note: "A simple Sardinian fava bean soup with potato, onion and mint, finished with pecorino. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Stuffed Zucchini with White Beans", channel: "Safy Food Vegan", id: "more-bz_stuffed_zucchini", video: "https://www.youtube.com/watch?v=dyM5k8RiINY",
+        name: "Stuffed Zucchini with White Beans", tags: ["Lentil & Beans"], channel: "Safy Food Vegan", id: "more-bz_stuffed_zucchini", video: "https://www.youtube.com/watch?v=dyM5k8RiINY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 357.5, "p": 16.4, "c": 40.8, "f": 15.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Stuffed Zucchini with White Beans (2 zucchini halves)"]},
@@ -4871,7 +4871,7 @@ const sections = [
         note: "Zucchini boats filled with white beans, garlic, parsley, crumbs and pecorino, baked in a little tomato. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "White Bean & Goat Cheese Bruschetta", channel: "Recipe collection", id: "more-bz_bruschetta", video: null,
+        name: "White Bean & Goat Cheese Bruschetta", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_bruschetta", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 508.8, "p": 23.7, "c": 60.8, "f": 19.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["White Bean & Goat Cheese Bruschetta (2 toasts)"]},
@@ -4883,7 +4883,7 @@ const sections = [
         note: "Sourdough toasts piled with garlicky white beans, tomatoes, basil and soft goat cheese.",
       },
       {
-        name: "White Beans & Chard", channel: "PBS Food", id: "more-bz_beans_chard", video: "https://www.youtube.com/watch?v=EbcNJ7SjGH4",
+        name: "White Beans & Chard", tags: ["Lentil & Beans"], channel: "PBS Food", id: "more-bz_beans_chard", video: "https://www.youtube.com/watch?v=EbcNJ7SjGH4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 455.0, "p": 20.1, "c": 60.9, "f": 15.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["White Beans & Chard (about 1½ cups)"]},
@@ -4896,7 +4896,7 @@ const sections = [
         note: "Fagioli e bietole: tender chard and creamy white beans with garlic, chili and lemon. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Soft Polenta with Beans", channel: "Recipe collection", id: "more-bz_polenta_beans", video: null,
+        name: "Soft Polenta with Beans", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_polenta_beans", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 483.2, "p": 19.6, "c": 69.1, "f": 16.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Soft Polenta with Beans (1 bowl)"]},
@@ -4908,7 +4908,7 @@ const sections = [
         note: "Creamy polenta topped with white beans in a tomato-herb sauce and pecorino.",
       },
       {
-        name: "Mushroom Barley Orzotto", channel: "Krumpli - Eating in should be special too!", id: "more-bz_orzotto", video: "https://www.youtube.com/watch?v=sAWFXt0MvCw",
+        name: "Mushroom Barley Orzotto", tags: ["Rice & Grains"], channel: "Krumpli - Eating in should be special too!", id: "more-bz_orzotto", video: "https://www.youtube.com/watch?v=sAWFXt0MvCw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 442.7, "p": 17.0, "c": 59.1, "f": 17.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mushroom Barley Orzotto (about 1½ cups)"]},
@@ -4920,7 +4920,7 @@ const sections = [
         note: "Risotto made with barley instead of rice — nutty, chewy and creamy with mushrooms and pecorino. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chickpea & Fennel Stew", channel: "Good Days", id: "more-bz_chickpea_fennel", video: "https://www.youtube.com/watch?v=qat2oYy7ges",
+        name: "Chickpea & Fennel Stew", tags: ["Lentil & Beans"], channel: "Good Days", id: "more-bz_chickpea_fennel", video: "https://www.youtube.com/watch?v=qat2oYy7ges",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 550.0, "p": 21.1, "c": 77.8, "f": 19.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chickpea & Fennel Stew (about 1½ cups)"]},
@@ -4933,7 +4933,7 @@ const sections = [
         note: "Chickpeas slowly stewed with sweet fennel, tomato, garlic and a pinch of saffron. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Zucchini, Mint & Pecorino Pasta", channel: "UNFORKETABLE International", id: "more-bz_zucchini_pasta", video: "https://www.youtube.com/watch?v=YbMTBtoMDwM",
+        name: "Zucchini, Mint & Pecorino Pasta", tags: ["Pasta & Noodles"], channel: "UNFORKETABLE International", id: "more-bz_zucchini_pasta", video: "https://www.youtube.com/watch?v=YbMTBtoMDwM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 511.2, "p": 23.7, "c": 68.4, "f": 18.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Zucchini, Mint & Pecorino Pasta (1 plate)"]},
@@ -4945,7 +4945,7 @@ const sections = [
         note: "Whole wheat spaghetti with soft-cooked zucchini, mint, white beans and plenty of pecorino. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sourdough, Goat Cheese & Honey", channel: "Aiko - Country Life", id: "more-bz_goat_toast", video: "https://www.youtube.com/watch?v=luWVxn35tMI",
+        name: "Sourdough, Goat Cheese & Honey", tags: ["Other"], channel: "Aiko - Country Life", id: "more-bz_goat_toast", video: "https://www.youtube.com/watch?v=luWVxn35tMI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 450.2, "p": 19.4, "c": 68.3, "f": 12.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sourdough, Goat Cheese & Honey (2 toasts)"]},
@@ -4957,7 +4957,7 @@ const sections = [
         note: "A Sardinian shepherd's breakfast: sourdough with soft goat cheese, a drizzle of honey and fresh fruit. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chickpea Farinata", channel: "Tastemade", id: "more-bz_farinata", video: "https://www.youtube.com/watch?v=sqMqJ05hh4U",
+        name: "Chickpea Farinata", tags: ["Lentil & Beans"], channel: "Tastemade", id: "more-bz_farinata", video: "https://www.youtube.com/watch?v=sqMqJ05hh4U",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 313.4, "p": 11.0, "c": 30.1, "f": 16.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chickpea Farinata (1 small pan)"]},
@@ -4969,7 +4969,7 @@ const sections = [
         note: "A thin, crisp chickpea-flour flatbread with rosemary and olive oil, with a tomato salad. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chickpea & Chard Soup", channel: "Recipe collection", id: "more-bz_ceci_chard", video: null,
+        name: "Chickpea & Chard Soup", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_ceci_chard", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 544.2, "p": 22.2, "c": 69.9, "f": 21.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chickpea & Chard Soup (about 2 cups)"]},
@@ -4982,7 +4982,7 @@ const sections = [
         note: "Minestra di ceci e bietole: chickpeas and chard in a tomato-tinged broth with pecorino.",
       },
       {
-        name: "Ikarian Longevity Stew", channel: "The Vegan Test Kitchen", id: "more-bz_ikaria_stew", video: "https://www.youtube.com/watch?v=uwmT6byqeW8",
+        name: "Ikarian Longevity Stew", tags: ["Other"], channel: "The Vegan Test Kitchen", id: "more-bz_ikaria_stew", video: "https://www.youtube.com/watch?v=uwmT6byqeW8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 550.7, "p": 22.7, "c": 75.5, "f": 20.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Ikarian Longevity Stew (about 1½ cups)"]},
@@ -4995,7 +4995,7 @@ const sections = [
         note: "Dan Buettner's famous Ikarian stew: black-eyed peas with fennel, tomato, onion, garlic and lots of olive oil and dill. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Fasolada", channel: "Einfach leckere Rezepte", id: "more-bz_fasolada", video: "https://www.youtube.com/watch?v=IAXNhD6pHqI",
+        name: "Fasolada", tags: ["Vegetables"], channel: "Einfach leckere Rezepte", id: "more-bz_fasolada", video: "https://www.youtube.com/watch?v=IAXNhD6pHqI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 525.4, "p": 20.7, "c": 70.7, "f": 19.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Fasolada (about 2 cups)"]},
@@ -5008,7 +5008,7 @@ const sections = [
         note: "Greece's national dish: white bean soup with carrot, celery and tomato, finished with olive oil and lemon. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Fakes (Greek Lentil Soup)", channel: "Dimitra's Dishes", id: "more-bz_fakes", video: "https://www.youtube.com/watch?v=1LLcHOL8QOc",
+        name: "Fakes (Greek Lentil Soup)", tags: ["Lentil & Beans"], channel: "Dimitra's Dishes", id: "more-bz_fakes", video: "https://www.youtube.com/watch?v=1LLcHOL8QOc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 502.1, "p": 23.0, "c": 70.0, "f": 16.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Fakes (Greek Lentil Soup) (about 2 cups)"]},
@@ -5021,7 +5021,7 @@ const sections = [
         note: "Brown lentils simmered with garlic, bay and tomato, sharpened with a splash of red wine vinegar at the end. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Revithia (Lemony Chickpea Soup)", channel: "Mamazilla - mood for food", id: "more-bz_revithia", video: "https://www.youtube.com/watch?v=VNFSNXAkMjI",
+        name: "Revithia (Lemony Chickpea Soup)", tags: ["Lentil & Beans"], channel: "Mamazilla - mood for food", id: "more-bz_revithia", video: "https://www.youtube.com/watch?v=VNFSNXAkMjI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 567.5, "p": 20.6, "c": 71.2, "f": 23.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Revithia (Lemony Chickpea Soup) (about 1½ cups)"]},
@@ -5034,7 +5034,7 @@ const sections = [
         note: "Sifnos-style chickpeas cooked until creamy with onion, olive oil, lemon and rosemary. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Briam with Chickpeas", channel: "Recipe collection", id: "more-bz_briam", video: null,
+        name: "Briam with Chickpeas", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_briam", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 622.5, "p": 21.6, "c": 77.5, "f": 27.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Briam with Chickpeas (1 generous portion)"]},
@@ -5047,7 +5047,7 @@ const sections = [
         note: "Greek roasted vegetables — zucchini, potato, eggplant, pepper and tomato in olive oil — with chickpeas and feta.",
       },
       {
-        name: "Horta with Black-Eyed Peas", channel: "Chef D Wainaina", id: "more-bz_horta", video: "https://www.youtube.com/watch?v=8F78RvC5Mc8",
+        name: "Horta with Black-Eyed Peas", tags: ["Lentil & Beans"], channel: "Chef D Wainaina", id: "more-bz_horta", video: "https://www.youtube.com/watch?v=8F78RvC5Mc8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 483.2, "p": 22.5, "c": 51.7, "f": 22.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Horta with Black-Eyed Peas (1 plate)"]},
@@ -5060,7 +5060,7 @@ const sections = [
         note: "Ikarians eat wild greens daily. Here: chard and spinach, boiled and dressed with olive oil and lemon, with black-eyed peas and feta. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Spanakorizo", channel: "Food Wishes", id: "more-bz_spanakorizo", video: "https://www.youtube.com/watch?v=8C8ilBxx8Ok",
+        name: "Spanakorizo", tags: ["Other"], channel: "Food Wishes", id: "more-bz_spanakorizo", video: "https://www.youtube.com/watch?v=8C8ilBxx8Ok",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 459.5, "p": 16.7, "c": 59.2, "f": 18.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Spanakorizo (about 1½ cups)"]},
@@ -5072,7 +5072,7 @@ const sections = [
         note: "Greek spinach rice with dill, lemon and feta — here on brown rice with white beans stirred through. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Santorini Fava", channel: "Yoleni's", id: "more-bz_fava_santorini", video: "https://www.youtube.com/watch?v=Nmmndj2xx9c",
+        name: "Santorini Fava", tags: ["Other"], channel: "Yoleni's", id: "more-bz_fava_santorini", video: "https://www.youtube.com/watch?v=Nmmndj2xx9c",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 523.4, "p": 21.0, "c": 62.5, "f": 22.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Santorini Fava (about 1 cup)"]},
@@ -5085,7 +5085,7 @@ const sections = [
         note: "Silky yellow split pea purée topped with red onion, capers-style olives and olive oil — eaten warm with bread. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gemista", channel: "Akis Petretzikis", id: "more-bz_gemista", video: "https://www.youtube.com/watch?v=RrsIyxi8Htc",
+        name: "Gemista", tags: ["Vegetables"], channel: "Akis Petretzikis", id: "more-bz_gemista", video: "https://www.youtube.com/watch?v=RrsIyxi8Htc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 531.4, "p": 14.2, "c": 84.3, "f": 17.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Gemista (2 stuffed vegetables)"]},
@@ -5097,7 +5097,7 @@ const sections = [
         note: "Peppers and tomatoes stuffed with herby rice and chickpeas, baked in olive oil until soft. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Lentil & Bulgur Pilaf", channel: "Heghineh Cooking Show", id: "more-bz_bulgur_lentil", video: "https://www.youtube.com/watch?v=TLtI5oDxqTo",
+        name: "Lentil & Bulgur Pilaf", tags: ["Lentil & Beans"], channel: "Heghineh Cooking Show", id: "more-bz_bulgur_lentil", video: "https://www.youtube.com/watch?v=TLtI5oDxqTo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 474.7, "p": 22.8, "c": 64.5, "f": 15.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Lentil & Bulgur Pilaf (about 1½ cups)"]},
@@ -5109,7 +5109,7 @@ const sections = [
         note: "Lentils and bulgur with sweet caramelized onions and a dollop of yogurt — a village staple across the eastern Mediterranean. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chickpea & Spinach Stew", channel: "J. Kenji López-Alt", id: "more-bz_chickpea_spinach", video: "https://www.youtube.com/watch?v=1DWB1EOLw_s",
+        name: "Chickpea & Spinach Stew", tags: ["Lentil & Beans"], channel: "J. Kenji López-Alt", id: "more-bz_chickpea_spinach", video: "https://www.youtube.com/watch?v=1DWB1EOLw_s",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 514.8, "p": 21.2, "c": 68.0, "f": 19.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chickpea & Spinach Stew (about 1½ cups)"]},
@@ -5122,7 +5122,7 @@ const sections = [
         note: "Revithia me spanaki: chickpeas and spinach in a light tomato-dill sauce. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Imam Bayildi with White Beans", channel: "Recipe collection", id: "more-bz_imam", video: null,
+        name: "Imam Bayildi with White Beans", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_imam", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 377.8, "p": 16.1, "c": 49.3, "f": 15.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Imam Bayildi with White Beans (1 eggplant half)"]},
@@ -5134,7 +5134,7 @@ const sections = [
         note: "Eggplant halves baked soft with a sweet onion-tomato filling, with white beans and a spoon of yogurt.",
       },
       {
-        name: "Yogurt with Thyme Honey & Walnuts", channel: "Sophie's HomeMade", id: "more-bz_yogurt_honey", video: "https://www.youtube.com/watch?v=NRoZxPyeGEQ",
+        name: "Yogurt with Thyme Honey & Walnuts", tags: ["Other"], channel: "Sophie's HomeMade", id: "more-bz_yogurt_honey", video: "https://www.youtube.com/watch?v=NRoZxPyeGEQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 296.6, "p": 20.8, "c": 27.2, "f": 13.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Yogurt with Thyme Honey & Walnuts (1 bowl)"]},
@@ -5146,7 +5146,7 @@ const sections = [
         note: "The Ikarian breakfast: thick yogurt, a spoon of honey, walnuts and fruit, with herbal tea. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Fasolakia with Chickpeas", channel: "Recipe collection", id: "more-bz_fasolakia", video: null,
+        name: "Fasolakia with Chickpeas", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_fasolakia", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 634.0, "p": 22.8, "c": 80.6, "f": 27.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Fasolakia with Chickpeas (about 1½ cups)"]},
@@ -5159,7 +5159,7 @@ const sections = [
         note: "Green beans braised soft in olive oil and tomato with potato and chickpeas — a ladera, or 'oily' dish.",
       },
       {
-        name: "Black-Eyed Pea Salad", channel: "Manjula's Kitchen", id: "more-bz_mavromatika", video: "https://www.youtube.com/watch?v=LaX1p99FfS0",
+        name: "Black-Eyed Pea Salad", tags: ["Lentil & Beans"], channel: "Manjula's Kitchen", id: "more-bz_mavromatika", video: "https://www.youtube.com/watch?v=LaX1p99FfS0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 707.7, "p": 44.4, "c": 67.9, "f": 31.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Black-Eyed Pea Salad (1 big bowl)"]},
@@ -5171,7 +5171,7 @@ const sections = [
         note: "Mavromatika salata: black-eyed peas, edamame, tomato, cucumber and onion in lemon and olive oil with feta. At least 40 g of protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Lemon Potatoes & Chickpeas", channel: "Recipe collection", id: "more-bz_lemon_potatoes", video: null,
+        name: "Lemon Potatoes & Chickpeas", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_lemon_potatoes", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 536.9, "p": 21.2, "c": 71.5, "f": 20.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Lemon Potatoes & Chickpeas (1 plate)"]},
@@ -5184,7 +5184,7 @@ const sections = [
         note: "Greek lemon-oregano roast potatoes with chickpeas roasted in the same pan, and tzatziki.",
       },
       {
-        name: "Bamies (Okra in Tomato)", channel: "Greek Cooking Made Easy", id: "more-bz_bamies", video: "https://www.youtube.com/watch?v=P-VqeQ-omy8",
+        name: "Bamies (Okra in Tomato)", tags: ["Vegetables"], channel: "Greek Cooking Made Easy", id: "more-bz_bamies", video: "https://www.youtube.com/watch?v=P-VqeQ-omy8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 519.8, "p": 20.7, "c": 71.3, "f": 19.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bamies (Okra in Tomato) (about 1½ cups)"]},
@@ -5197,7 +5197,7 @@ const sections = [
         note: "Greek okra stewed in tomato and olive oil with white beans — the vinegar trick keeps it from going slimy. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Baked Chickpea Patties", channel: "Food Impromptu", id: "more-bz_revithokeftedes", video: "https://www.youtube.com/watch?v=pBrkLPd8mdo",
+        name: "Baked Chickpea Patties", tags: ["Lentil & Beans"], channel: "Food Impromptu", id: "more-bz_revithokeftedes", video: "https://www.youtube.com/watch?v=pBrkLPd8mdo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 478.5, "p": 23.7, "c": 58.1, "f": 18.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baked Chickpea Patties (4 patties)"]},
@@ -5210,7 +5210,7 @@ const sections = [
         note: "Revithokeftedes: herby chickpea patties, baked instead of fried, with tzatziki and a tomato-cucumber salad. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Lemon Chickpea Orzo Soup", channel: "Milly Gonzalez", id: "more-bz_orzo_soup", video: "https://www.youtube.com/watch?v=DIrMDM9K7IA",
+        name: "Lemon Chickpea Orzo Soup", tags: ["Lentil & Beans"], channel: "Milly Gonzalez", id: "more-bz_orzo_soup", video: "https://www.youtube.com/watch?v=DIrMDM9K7IA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 409.6, "p": 16.9, "c": 63.2, "f": 11.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Lemon Chickpea Orzo Soup (about 2 cups)"]},
@@ -5222,7 +5222,7 @@ const sections = [
         note: "An egg-free avgolemono-style soup: orzo, chickpeas and spinach in a bright lemon broth thickened with a little blended chickpea. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tahini, Honey & Walnut Toast", channel: "Bondi Harvest", id: "more-bz_tahini_toast", video: "https://www.youtube.com/watch?v=i0YZ4D0adEU",
+        name: "Tahini, Honey & Walnut Toast", tags: ["Other"], channel: "Bondi Harvest", id: "more-bz_tahini_toast", video: "https://www.youtube.com/watch?v=i0YZ4D0adEU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 539.3, "p": 25.3, "c": 65.1, "f": 21.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tahini, Honey & Walnut Toast (2 toasts)"]},
@@ -5234,7 +5234,7 @@ const sections = [
         note: "Sourdough spread with tahini, drizzled with honey and scattered with walnuts, with a bowl of yogurt. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gallo Pinto", channel: "Canal Nicaraguense", id: "more-bz_gallo_pinto", video: "https://www.youtube.com/watch?v=8nX9dbIZJEc",
+        name: "Gallo Pinto", tags: ["Lentil & Beans"], channel: "Canal Nicaraguense", id: "more-bz_gallo_pinto", video: "https://www.youtube.com/watch?v=8nX9dbIZJEc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 584.7, "p": 22.3, "c": 102.8, "f": 10.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Gallo Pinto (about 1½ cups)"]},
@@ -5247,7 +5247,7 @@ const sections = [
         note: "Costa Rica's national breakfast: brown rice fried with black beans, onion, pepper and cilantro. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Casado Plate", channel: "Gerry P", id: "more-bz_casado", video: "https://www.youtube.com/watch?v=IKFtlTunne0",
+        name: "Casado Plate", tags: ["Vegetables"], channel: "Gerry P", id: "more-bz_casado", video: "https://www.youtube.com/watch?v=IKFtlTunne0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 674.7, "p": 25.1, "c": 111.1, "f": 15.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Casado Plate (1 plate)"]},
@@ -5259,7 +5259,7 @@ const sections = [
         note: "The Costa Rican 'married' lunch plate: black beans, brown rice, sweet plantain, cabbage salad and crumbled fresh cheese. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sopa Negra", channel: "Gringo Y Sazón", id: "more-bz_sopa_negra", video: "https://www.youtube.com/watch?v=INWrkCOhA18",
+        name: "Sopa Negra", tags: ["Rice & Grains"], channel: "Gringo Y Sazón", id: "more-bz_sopa_negra", video: "https://www.youtube.com/watch?v=INWrkCOhA18",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 575.5, "p": 28.2, "c": 94.6, "f": 10.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sopa Negra (about 2 cups)"]},
@@ -5272,7 +5272,7 @@ const sections = [
         note: "Costa Rican black bean soup with onion, pepper, celery and cilantro, topped (non-traditionally) with yogurt. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Black Bean & Squash Tacos", channel: "Recipe collection", id: "more-bz_squash_tacos", video: null,
+        name: "Black Bean & Squash Tacos", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_squash_tacos", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 533.8, "p": 21.4, "c": 82.2, "f": 15.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Black Bean & Squash Tacos (3 tacos)"]},
@@ -5284,7 +5284,7 @@ const sections = [
         note: "Roasted squash and cumin black beans in warm corn tortillas with cabbage, lime and crumbled cheese.",
       },
       {
-        name: "Picadillo de Chayote", channel: "Día a día con Marissa", id: "more-bz_picadillo_chayote", video: "https://www.youtube.com/watch?v=BwaAn6BanRs",
+        name: "Picadillo de Chayote", tags: ["Vegetables"], channel: "Día a día con Marissa", id: "more-bz_picadillo_chayote", video: "https://www.youtube.com/watch?v=BwaAn6BanRs",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 426.2, "p": 17.5, "c": 73.5, "f": 9.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Picadillo de Chayote (about 1½ cups)"]},
@@ -5297,7 +5297,7 @@ const sections = [
         note: "Finely diced chayote cooked with onion, pepper and corn, with black beans and tortillas — a Nicoyan staple. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Olla de Verduras", channel: "Recipe collection", id: "more-bz_olla", video: null,
+        name: "Olla de Verduras", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bz_olla", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 522.9, "p": 20.5, "c": 110.4, "f": 2.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Olla de Verduras (about 2½ cups)"]},
@@ -5310,7 +5310,7 @@ const sections = [
         note: "A big pot of Costa Rican vegetable soup — squash, corn, chayote, potato and sweet potato — with pinto beans.",
       },
       {
-        name: "Black Bean & Plantain Bowl", channel: "Minimalist Baker", id: "more-bz_plantain_bowl", video: "https://www.youtube.com/watch?v=QU8N81EM-qs",
+        name: "Black Bean & Plantain Bowl", tags: ["Lentil & Beans"], channel: "Minimalist Baker", id: "more-bz_plantain_bowl", video: "https://www.youtube.com/watch?v=QU8N81EM-qs",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 639.6, "p": 20.9, "c": 108.8, "f": 14.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Black Bean & Plantain Bowl (1 bowl)"]},
@@ -5322,7 +5322,7 @@ const sections = [
         note: "Brown rice, cumin black beans, caramelized plantain, avocado and a lime cabbage slaw. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Picadillo de Papa", channel: "Recipe collection", id: "more-bz_picadillo_papa", video: null,
+        name: "Picadillo de Papa", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bz_picadillo_papa", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 538.9, "p": 19.4, "c": 98.5, "f": 9.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Picadillo de Papa (about 1½ cups)"]},
@@ -5335,7 +5335,7 @@ const sections = [
         note: "Diced potato and carrot cooked with onion, garlic and cilantro, with pinto beans, rolled into tortillas.",
       },
       {
-        name: "Gallos de Frijoles", channel: "Recipe collection", id: "more-bz_gallos", video: null,
+        name: "Gallos de Frijoles", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bz_gallos", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 519.1, "p": 27.0, "c": 77.7, "f": 12.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Gallos de Frijoles (3 gallos)"]},
@@ -5347,7 +5347,7 @@ const sections = [
         note: "Costa Rican 'gallos': soft corn tortillas wrapped around refried black beans, cheese and a fresh tomato salsa.",
       },
       {
-        name: "Chayote & Corn Soup", channel: "Lynn Cobero's Cooking", id: "more-bz_chayote_soup", video: "https://www.youtube.com/watch?v=FxKas37chDw",
+        name: "Chayote & Corn Soup", tags: ["Vegetables"], channel: "Lynn Cobero's Cooking", id: "more-bz_chayote_soup", video: "https://www.youtube.com/watch?v=FxKas37chDw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 492.6, "p": 19.5, "c": 83.7, "f": 11.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chayote & Corn Soup (about 2 cups)"]},
@@ -5360,7 +5360,7 @@ const sections = [
         note: "A creamy (cream-free) soup of chayote, corn and potato blended smooth, with black beans spooned in. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Costa Rican Breakfast Plate", channel: "Tess Florio", id: "more-bz_cr_breakfast", video: "https://www.youtube.com/watch?v=OvlFdWtHOxY",
+        name: "Costa Rican Breakfast Plate", tags: ["Vegetables"], channel: "Tess Florio", id: "more-bz_cr_breakfast", video: "https://www.youtube.com/watch?v=OvlFdWtHOxY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 560.5, "p": 21.7, "c": 97.6, "f": 10.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Costa Rican Breakfast Plate (1 plate)"]},
@@ -5372,7 +5372,7 @@ const sections = [
         note: "Gallo pinto with natilla-style yogurt, sweet plantain and fresh papaya — how Nicoyans start the day. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Arroz con Ayote", channel: "Recipe collection", id: "more-bz_arroz_ayote", video: null,
+        name: "Arroz con Ayote", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bz_arroz_ayote", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 475.5, "p": 16.6, "c": 84.7, "f": 9.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Arroz con Ayote (about 1½ cups)"]},
@@ -5384,7 +5384,7 @@ const sections = [
         note: "Brown rice cooked with pumpkin, pinto beans and a little achiote color from paprika.",
       },
       {
-        name: "Black Bean, Corn & Avocado Bowl", channel: "Vegan Huggs", id: "more-bz_bean_corn_bowl", video: "https://www.youtube.com/watch?v=z41cb_5niiQ",
+        name: "Black Bean, Corn & Avocado Bowl", tags: ["Lentil & Beans"], channel: "Vegan Huggs", id: "more-bz_bean_corn_bowl", video: "https://www.youtube.com/watch?v=z41cb_5niiQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 654.1, "p": 22.9, "c": 100.6, "f": 20.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Black Bean, Corn & Avocado Bowl (1 bowl)"]},
@@ -5396,7 +5396,7 @@ const sections = [
         note: "Brown rice with black beans, charred corn, avocado, tomato and lime — a fresh Nicoyan-style bowl. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Frijoles Tiernos", channel: "Herencia Culinaria", id: "more-bz_frijoles_tiernos", video: "https://www.youtube.com/watch?v=DChod5Ge9m8",
+        name: "Frijoles Tiernos", tags: ["Rice & Grains"], channel: "Herencia Culinaria", id: "more-bz_frijoles_tiernos", video: "https://www.youtube.com/watch?v=DChod5Ge9m8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 589.8, "p": 24.2, "c": 104.8, "f": 9.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Frijoles Tiernos (about 1½ cups)"]},
@@ -5409,7 +5409,7 @@ const sections = [
         note: "Tender fresh-style beans stewed with sweet pepper, onion, cilantro and squash. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Polenta & Black Bean Bake", channel: "Stephanie Leach, CJT, HC | Juicing for Health", id: "more-bz_polenta_bake", video: "https://www.youtube.com/watch?v=5FOQJOPbXRM",
+        name: "Polenta & Black Bean Bake", tags: ["Lentil & Beans"], channel: "Stephanie Leach, CJT, HC | Juicing for Health", id: "more-bz_polenta_bake", video: "https://www.youtube.com/watch?v=5FOQJOPbXRM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 591.1, "p": 27.2, "c": 82.2, "f": 19.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Polenta & Black Bean Bake (1 generous portion)"]},
@@ -5421,7 +5421,7 @@ const sections = [
         note: "Corn is sacred in Nicoya. Creamy polenta baked over spiced black beans and peppers with a cheese top. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Caribbean Rice & Beans", channel: "Original Flava", id: "more-bz_rice_beans_coco", video: "https://www.youtube.com/watch?v=_ov95wdMYDY",
+        name: "Caribbean Rice & Beans", tags: ["Lentil & Beans"], channel: "Original Flava", id: "more-bz_rice_beans_coco", video: "https://www.youtube.com/watch?v=_ov95wdMYDY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 413.3, "p": 16.1, "c": 70.0, "f": 8.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Caribbean Rice & Beans (about 1½ cups)"]},
@@ -5433,7 +5433,7 @@ const sections = [
         note: "Limón-style rice and red beans cooked in light coconut milk with thyme and ginger. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Black Bean Tostadas", channel: "SAM THE COOKING GUY", id: "more-bz_tostadas", video: "https://www.youtube.com/watch?v=KZTHaqfR1ic",
+        name: "Black Bean Tostadas", tags: ["Lentil & Beans"], channel: "SAM THE COOKING GUY", id: "more-bz_tostadas", video: "https://www.youtube.com/watch?v=KZTHaqfR1ic",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 566.8, "p": 25.0, "c": 81.2, "f": 18.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Black Bean Tostadas (3 tostadas)"]},
@@ -5445,7 +5445,7 @@ const sections = [
         note: "Crisp baked corn tortillas topped with refried black beans, cabbage, tomato, avocado and cheese. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Picadillo de Ayote", channel: "Cocina a mi manera", id: "more-bz_picadillo_ayote", video: "https://www.youtube.com/watch?v=qB5mqKH3a10",
+        name: "Picadillo de Ayote", tags: ["Vegetables"], channel: "Cocina a mi manera", id: "more-bz_picadillo_ayote", video: "https://www.youtube.com/watch?v=qB5mqKH3a10",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 480.4, "p": 18.6, "c": 86.8, "f": 9.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Picadillo de Ayote (about 1½ cups)"]},
@@ -5458,7 +5458,7 @@ const sections = [
         note: "Diced squash and zucchini cooked with onion, sweet pepper and corn, with pinto beans. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rice & Bean Stuffed Peppers", channel: "Paul Wickey", id: "more-bz_stuffed_peppers", video: "https://www.youtube.com/watch?v=QEr9GYfMPbI",
+        name: "Rice & Bean Stuffed Peppers", tags: ["Lentil & Beans"], channel: "Paul Wickey", id: "more-bz_stuffed_peppers", video: "https://www.youtube.com/watch?v=QEr9GYfMPbI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 502.2, "p": 24.2, "c": 78.0, "f": 12.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rice & Bean Stuffed Peppers (2 pepper halves)"]},
@@ -5470,7 +5470,7 @@ const sections = [
         note: "Peppers filled with brown rice, black beans, corn and tomato, baked under a little cheese. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sweet Potato & Pinto Hash", channel: "Stacey Flowers", id: "more-bz_sp_hash", video: "https://www.youtube.com/watch?v=LbemSKgs0MI",
+        name: "Sweet Potato & Pinto Hash", tags: ["Lentil & Beans"], channel: "Stacey Flowers", id: "more-bz_sp_hash", video: "https://www.youtube.com/watch?v=LbemSKgs0MI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 458.4, "p": 20.6, "c": 69.0, "f": 12.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sweet Potato & Pinto Hash (1 plate)"]},
@@ -5482,7 +5482,7 @@ const sections = [
         note: "Crispy sweet potato with pinto beans, onion and pepper, topped with yogurt and cilantro. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Adventist Oatmeal", channel: "Recipe collection", id: "more-bz_oatmeal", video: null,
+        name: "Adventist Oatmeal", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-bz_oatmeal", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 449.3, "p": 16.2, "c": 60.6, "f": 18.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Adventist Oatmeal (1 bowl)"]},
@@ -5494,7 +5494,7 @@ const sections = [
         note: "The Loma Linda breakfast: oats cooked in soy milk with walnuts, dates, berries and cinnamon.",
       },
       {
-        name: "Haystacks", channel: "Full Kitchen", id: "more-bz_haystacks", video: "https://www.youtube.com/watch?v=n5sOz8TjD4Y",
+        name: "Haystacks", tags: ["Vegetables"], channel: "Full Kitchen", id: "more-bz_haystacks", video: "https://www.youtube.com/watch?v=n5sOz8TjD4Y",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 636.6, "p": 28.9, "c": 94.3, "f": 18.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Haystacks (1 plate)"]},
@@ -5506,7 +5506,7 @@ const sections = [
         note: "An Adventist potluck classic: brown rice piled with chili beans, cabbage, tomato, avocado and a little cheese. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Lentil Walnut Loaf", channel: "NutritionRefined", id: "more-bz_lentil_loaf", video: "https://www.youtube.com/watch?v=rO0v6oiFa64",
+        name: "Lentil Walnut Loaf", tags: ["Lentil & Beans"], channel: "NutritionRefined", id: "more-bz_lentil_loaf", video: "https://www.youtube.com/watch?v=rO0v6oiFa64",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 483.9, "p": 19.4, "c": 65.3, "f": 18.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Lentil Walnut Loaf (1 thick slice)"]},
@@ -5518,7 +5518,7 @@ const sections = [
         note: "The Adventist 'meatloaf': lentils, walnuts, oats and vegetables baked with a tangy tomato glaze. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Three-Bean Chili", channel: "Laura in the Kitchen", id: "more-bz_chili", video: "https://www.youtube.com/watch?v=z0sdKXNDEDo",
+        name: "Three-Bean Chili", tags: ["Lentil & Beans"], channel: "Laura in the Kitchen", id: "more-bz_chili", video: "https://www.youtube.com/watch?v=z0sdKXNDEDo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 681.2, "p": 34.1, "c": 116.1, "f": 11.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Three-Bean Chili (about 2 cups)"]},
@@ -5531,7 +5531,7 @@ const sections = [
         note: "Black, kidney and pinto beans simmered with tomato, peppers and spices, topped with yogurt. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tofu Scramble", channel: "Rainbow Plant Life", id: "more-bz_tofu_scramble", video: "https://www.youtube.com/watch?v=Vc5pZ-PY-H8",
+        name: "Tofu Scramble", tags: ["Paneer"], channel: "Rainbow Plant Life", id: "more-bz_tofu_scramble", video: "https://www.youtube.com/watch?v=Vc5pZ-PY-H8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 362.9, "p": 27.3, "c": 25.4, "f": 17.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Scramble (about 1½ cups)"]},
@@ -5544,7 +5544,7 @@ const sections = [
         note: "Crumbled tofu with turmeric, spinach, peppers and mushrooms, on whole wheat toast. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Lentil Walnut Tacos", channel: "Well+Good", id: "more-bz_walnut_tacos", video: "https://www.youtube.com/watch?v=UcH1ht5XuOM",
+        name: "Lentil Walnut Tacos", tags: ["Lentil & Beans"], channel: "Well+Good", id: "more-bz_walnut_tacos", video: "https://www.youtube.com/watch?v=UcH1ht5XuOM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 527.5, "p": 21.6, "c": 69.7, "f": 21.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Lentil Walnut Tacos (3 tacos)"]},
@@ -5556,7 +5556,7 @@ const sections = [
         note: "A savory lentil-walnut 'taco meat' with cumin and smoked paprika, in tortillas with cabbage and avocado. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Black Bean Burger", channel: "Food Impromptu", id: "more-bz_bean_burger", video: "https://www.youtube.com/watch?v=btLj-7oZH3A",
+        name: "Black Bean Burger", tags: ["Lentil & Beans"], channel: "Food Impromptu", id: "more-bz_bean_burger", video: "https://www.youtube.com/watch?v=btLj-7oZH3A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 614.3, "p": 32.0, "c": 95.3, "f": 12.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Black Bean Burger (1 burger)"]},
@@ -5568,7 +5568,7 @@ const sections = [
         note: "Baked black bean and oat burgers on whole wheat bread with tomato, onion and a yogurt-mustard sauce. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Split Pea Soup", channel: "Food Network", id: "more-bz_split_pea", video: "https://www.youtube.com/watch?v=u5nwSNsd3UE",
+        name: "Split Pea Soup", tags: ["Vegetables"], channel: "Food Network", id: "more-bz_split_pea", video: "https://www.youtube.com/watch?v=u5nwSNsd3UE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 523.0, "p": 22.9, "c": 78.4, "f": 14.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Split Pea Soup (about 2 cups)"]},
@@ -5581,7 +5581,7 @@ const sections = [
         note: "Thick green split pea soup with carrot, celery, potato and thyme — Adventist comfort food. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Quinoa Black Bean Bowl", channel: "Elizabeth Rider", id: "more-bz_quinoa_bowl", video: "https://www.youtube.com/watch?v=aPhBV_koq5g",
+        name: "Quinoa Black Bean Bowl", tags: ["Quinoa"], channel: "Elizabeth Rider", id: "more-bz_quinoa_bowl", video: "https://www.youtube.com/watch?v=aPhBV_koq5g",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 663.6, "p": 26.8, "c": 91.8, "f": 23.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Quinoa Black Bean Bowl (1 bowl)"]},
@@ -5593,7 +5593,7 @@ const sections = [
         note: "Quinoa, black beans, roasted sweet potato, spinach and pepitas with a lime-tahini dressing. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Chickpea 'Tuna' Sandwich", channel: "Jun Goto", id: "more-bz_chickpea_tuna", video: "https://www.youtube.com/watch?v=nDlKfci8ORI",
+        name: "Chickpea 'Tuna' Sandwich", tags: ["Lentil & Beans"], channel: "Jun Goto", id: "more-bz_chickpea_tuna", video: "https://www.youtube.com/watch?v=nDlKfci8ORI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 466.6, "p": 25.6, "c": 75.7, "f": 7.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chickpea 'Tuna' Sandwich (1 sandwich)"]},
@@ -5605,7 +5605,7 @@ const sections = [
         note: "Mashed chickpeas with yogurt, mustard, celery, onion and dill on whole wheat bread — a deli classic, no fish. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Peanut Butter Banana Toast", channel: "Recipe collection", id: "more-bz_pb_toast", video: null,
+        name: "Peanut Butter Banana Toast", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bz_pb_toast", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 604.1, "p": 26.2, "c": 75.5, "f": 24.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Peanut Butter Banana Toast (2 toasts)"]},
@@ -5617,7 +5617,7 @@ const sections = [
         note: "Whole wheat toast with peanut butter, sliced banana and chia, with a glass of soy milk.",
       },
       {
-        name: "Walnut Granola with Yogurt", channel: "Recipe collection", id: "more-bz_granola", video: null,
+        name: "Walnut Granola with Yogurt", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-bz_granola", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 492.2, "p": 23.7, "c": 47.3, "f": 25.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Walnut Granola with Yogurt (1 bowl)"]},
@@ -5629,7 +5629,7 @@ const sections = [
         note: "Homemade oat-walnut granola sweetened with a little maple, over Greek yogurt with berries.",
       },
       {
-        name: "Lentil Shepherd's Pie", channel: "Backyard Chef", id: "more-bz_shepherds_pie", video: "https://www.youtube.com/watch?v=UHRvNlN4iCY",
+        name: "Lentil Shepherd's Pie", tags: ["Lentil & Beans"], channel: "Backyard Chef", id: "more-bz_shepherds_pie", video: "https://www.youtube.com/watch?v=UHRvNlN4iCY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 505.2, "p": 26.3, "c": 85.2, "f": 8.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Lentil Shepherd's Pie (1 generous portion)"]},
@@ -5641,7 +5641,7 @@ const sections = [
         note: "Lentils and vegetables in a savory gravy under a mashed sweet potato top. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bean & Barley Soup", channel: "Wei Lun", id: "more-bz_bean_barley", video: "https://www.youtube.com/watch?v=RLA7KgNWwY8",
+        name: "Bean & Barley Soup", tags: ["Rice & Grains"], channel: "Wei Lun", id: "more-bz_bean_barley", video: "https://www.youtube.com/watch?v=RLA7KgNWwY8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 524.2, "p": 23.2, "c": 90.4, "f": 9.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bean & Barley Soup (about 2 cups)"]},
@@ -5654,7 +5654,7 @@ const sections = [
         note: "A hearty pot of barley, kidney beans and vegetables in tomato broth. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Hummus Veggie Wrap", channel: "Dinner Tonight: Quick Healthy Cooking", id: "more-bz_hummus_wrap", video: "https://www.youtube.com/watch?v=WLBRl_ixmAM",
+        name: "Hummus Veggie Wrap", tags: ["Lentil & Beans"], channel: "Dinner Tonight: Quick Healthy Cooking", id: "more-bz_hummus_wrap", video: "https://www.youtube.com/watch?v=WLBRl_ixmAM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 426.5, "p": 15.9, "c": 57.3, "f": 16.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Hummus Veggie Wrap (1 wrap)"]},
@@ -5666,7 +5666,7 @@ const sections = [
         note: "A whole wheat wrap loaded with hummus, chickpeas, spinach, carrot, cucumber and pepper. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tofu & Vegetable Stir-Fry", channel: "Sweet & Spicy", id: "more-bz_tofu_stirfry", video: "https://www.youtube.com/watch?v=Cr4kg0jzdG4",
+        name: "Tofu & Vegetable Stir-Fry", tags: ["Paneer"], channel: "Sweet & Spicy", id: "more-bz_tofu_stirfry", video: "https://www.youtube.com/watch?v=Cr4kg0jzdG4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 536.0, "p": 26.5, "c": 65.2, "f": 20.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu & Vegetable Stir-Fry (about 2 cups)"]},
@@ -5679,7 +5679,7 @@ const sections = [
         note: "Golden tofu with broccoli, pepper, carrot and snow-pea-style green beans in a ginger-soy sauce over brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Blueberry Baked Oatmeal", channel: "Recipe collection", id: "more-bz_baked_oats", video: null,
+        name: "Blueberry Baked Oatmeal", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-bz_baked_oats", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 441.4, "p": 21.0, "c": 63.5, "f": 13.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Blueberry Baked Oatmeal (1 square)"]},
@@ -5691,7 +5691,7 @@ const sections = [
         note: "Oats baked with soy milk, banana, berries and walnuts — cut into squares for the week.",
       },
       {
-        name: "Three-Bean Barley Bowl", channel: "EatingWell", id: "more-bz_three_bean_bowl", video: "https://www.youtube.com/watch?v=CfzBQZQXqJw",
+        name: "Three-Bean Barley Bowl", tags: ["Lentil & Beans"], channel: "EatingWell", id: "more-bz_three_bean_bowl", video: "https://www.youtube.com/watch?v=CfzBQZQXqJw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 508.4, "p": 20.9, "c": 83.8, "f": 12.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Three-Bean Barley Bowl (1 bowl)"]},
@@ -5703,7 +5703,7 @@ const sections = [
         note: "Barley with black, pinto and kidney beans, corn and tomatoes in a cumin-lime vinaigrette. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Black Bean Stuffed Sweet Potato", channel: "Recipe collection", id: "more-bz_stuffed_sp", video: null,
+        name: "Black Bean Stuffed Sweet Potato", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bz_stuffed_sp", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 438.7, "p": 24.0, "c": 75.1, "f": 6.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Black Bean Stuffed Sweet Potato (1 sweet potato)"]},
@@ -5715,7 +5715,7 @@ const sections = [
         note: "A whole baked sweet potato split and filled with black beans, spinach, yogurt and pepitas.",
       },
       {
-        name: "Vegetable Barley Soup", channel: "Passionate Homemaker", id: "more-bz_veg_barley", video: "https://www.youtube.com/watch?v=C8sZmT81cSQ",
+        name: "Vegetable Barley Soup", tags: ["Rice & Grains"], channel: "Passionate Homemaker", id: "more-bz_veg_barley", video: "https://www.youtube.com/watch?v=C8sZmT81cSQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 509.6, "p": 22.2, "c": 88.0, "f": 9.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Vegetable Barley Soup (about 2 cups)"]},
@@ -5728,7 +5728,7 @@ const sections = [
         note: "Barley simmered with mushrooms, carrot, celery, green beans and white beans in a thyme broth. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Karela Tofu Sabzi", channel: "Recipe collection", id: "more-bzi_karela_tofu", video: null,
+        name: "Karela Tofu Sabzi", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_karela_tofu", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 528.1, "p": 30.3, "c": 46.9, "f": 26.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Karela Tofu Sabzi (about 1½ cups)"]},
@@ -5742,7 +5742,7 @@ const sections = [
         note: "Okinawa's goya champuru, Indian-style: crisp-cooked karela with tofu, onion and a sweet-sour masala that tames the bitterness.",
       },
       {
-        name: "Shakarkandi Moong Dal Soup", channel: "Recipe collection", id: "more-bzi_shakarkandi_moong", video: null,
+        name: "Shakarkandi Moong Dal Soup", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_shakarkandi_moong", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 499.7, "p": 18.3, "c": 89.2, "f": 8.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shakarkandi Moong Dal Soup (about 2 cups)"]},
@@ -5755,7 +5755,7 @@ const sections = [
         note: "Sweet potato and yellow moong dal simmered with ginger and finished with a jeera-ghee tadka — the Indian cousin of Okinawa's sweet potato miso soup.",
       },
       {
-        name: "Tomato Rasam with Tofu & Spinach", channel: "Pinks Kitchen", id: "more-bzi_tofu_rasam", video: "https://www.youtube.com/watch?v=4d0cp4QBIYk",
+        name: "Tomato Rasam with Tofu & Spinach", tags: ["Lentil & Beans"], channel: "Pinks Kitchen", id: "more-bzi_tofu_rasam", video: "https://www.youtube.com/watch?v=4d0cp4QBIYk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 448.3, "p": 22.2, "c": 59.6, "f": 14.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tomato Rasam with Tofu & Spinach (about 2 cups)"]},
@@ -5768,7 +5768,7 @@ const sections = [
         note: "A peppery South Indian tomato rasam made into a meal with tofu, spinach and a little toor dal, over brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Cabbage Tofu Poriyal", channel: "Recipe collection", id: "more-bzi_cabbage_tofu_poriyal", video: null,
+        name: "Cabbage Tofu Poriyal", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_cabbage_tofu_poriyal", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 560.9, "p": 31.2, "c": 58.4, "f": 23.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Cabbage Tofu Poriyal (about 1½ cups)"]},
@@ -5782,7 +5782,7 @@ const sections = [
         note: "Tamil-style cabbage stir-fry with mustard seeds, curry leaves and coconut, made a full meal with tofu and green beans.",
       },
       {
-        name: "Shakarkandi Edamame Chaat Bowl", channel: "Recipe collection", id: "more-bzi_shakarkandi_chaat_bowl", video: null,
+        name: "Shakarkandi Edamame Chaat Bowl", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_shakarkandi_chaat_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 609.5, "p": 30.9, "c": 87.0, "f": 17.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shakarkandi Edamame Chaat Bowl (1 bowl)"]},
@@ -5796,7 +5796,7 @@ const sections = [
         note: "Roasted sweet potato and edamame tossed chaat-style with onion, green chutney, dahi and chaat masala over brown rice.",
       },
       {
-        name: "Mushroom Tofu Masala", channel: "Recipe collection", id: "more-bzi_mushroom_tofu_masala", video: null,
+        name: "Mushroom Tofu Masala", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_mushroom_tofu_masala", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 512.1, "p": 26.2, "c": 54.4, "f": 22.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mushroom Tofu Masala (about 1½ cups)"]},
@@ -5809,7 +5809,7 @@ const sections = [
         note: "A restaurant-style onion-tomato masala with mushrooms and tofu, finished with kasuri methi, over jeera rice.",
       },
       {
-        name: "Mooli Sambar with Tofu", channel: "Recipe collection", id: "more-bzi_mooli_sambar", video: null,
+        name: "Mooli Sambar with Tofu", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_mooli_sambar", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 511.5, "p": 25.0, "c": 75.3, "f": 13.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mooli Sambar with Tofu (about 2 cups)"]},
@@ -5822,7 +5822,7 @@ const sections = [
         note: "Daikon is mooli: here simmered in a tangy toor dal sambar with tofu, like a hearty Tamil home sambar.",
       },
       {
-        name: "Edamame Lemon Rice & Tomato Saar", channel: "Recipe collection", id: "more-bzi_edamame_lemon_rice", video: null,
+        name: "Edamame Lemon Rice & Tomato Saar", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_edamame_lemon_rice", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 598.0, "p": 31.0, "c": 66.2, "f": 24.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Edamame Lemon Rice & Tomato Saar (about 1½ cups)"]},
@@ -5835,7 +5835,7 @@ const sections = [
         note: "South Indian lemon rice with edamame and peanuts, with a cup of thin, gingery tomato saar instead of miso soup.",
       },
       {
-        name: "Chilli Garlic Soba with Tofu", channel: "Sanjeev Kapoor Khazana ", id: "more-bzi_chilli_garlic_soba", video: "https://www.youtube.com/watch?v=PESwCPkFp5w",
+        name: "Chilli Garlic Soba with Tofu", tags: ["Paneer"], channel: "Sanjeev Kapoor Khazana ", id: "more-bzi_chilli_garlic_soba", video: "https://www.youtube.com/watch?v=PESwCPkFp5w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 533.8, "p": 26.0, "c": 59.9, "f": 24.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chilli Garlic Soba with Tofu (1 bowl)"]},
@@ -5847,7 +5847,7 @@ const sections = [
         note: "Indo-Chinese chilli-garlic noodles made with buckwheat soba, tofu and crunchy vegetables. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tofu Saag", channel: "Recipe collection", id: "more-bzi_tofu_saag", video: null,
+        name: "Tofu Saag", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_tofu_saag", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 477.1, "p": 25.6, "c": 44.2, "f": 24.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Saag (about 1½ cups)"]},
@@ -5860,7 +5860,7 @@ const sections = [
         note: "Punjabi saag with spinach and chard, garlicky and smooth, with seared tofu in place of paneer.",
       },
       {
-        name: "Root Vegetable Kootu", channel: "Recipe collection", id: "more-bzi_root_kootu", video: null,
+        name: "Root Vegetable Kootu", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_root_kootu", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 596.3, "p": 26.7, "c": 88.0, "f": 16.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Root Vegetable Kootu (about 1½ cups)"]},
@@ -5873,7 +5873,7 @@ const sections = [
         note: "Tamil kootu: moong dal and coconut cooked with mooli, carrot and sweet potato — gentle, nourishing and protein-rich.",
       },
       {
-        name: "Mushroom Tofu Keema", channel: "Recipe collection", id: "more-bzi_mushroom_tofu_keema", video: null,
+        name: "Mushroom Tofu Keema", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_mushroom_tofu_keema", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 501.2, "p": 29.3, "c": 50.4, "f": 23.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mushroom Tofu Keema (about 1½ cups)"]},
@@ -5886,7 +5886,7 @@ const sections = [
         note: "A vegetarian keema of minced mushrooms and crumbled tofu with peas in a spiced onion-tomato masala.",
       },
       {
-        name: "Baked Tofu Tikka with Palak Chutney", channel: "Recipe collection", id: "more-bzi_tofu_tikka", video: null,
+        name: "Baked Tofu Tikka with Palak Chutney", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_tofu_tikka", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 470.4, "p": 31.8, "c": 41.9, "f": 21.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baked Tofu Tikka with Palak Chutney (1 plate)"]},
@@ -5899,7 +5899,7 @@ const sections = [
         note: "Tofu marinated in hung yogurt and tikka spices, baked until charred at the edges, with a spinach-mint chutney.",
       },
       {
-        name: "Shakarkandi & Haldi Doodh", channel: "Recipe collection", id: "more-bzi_shakarkandi_haldi_doodh", video: null,
+        name: "Shakarkandi & Haldi Doodh", tags: ["Other"], channel: "Recipe collection", id: "more-bzi_shakarkandi_haldi_doodh", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 327.5, "p": 20.0, "c": 40.1, "f": 10.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shakarkandi & Haldi Doodh (1 plate)"]},
@@ -5912,7 +5912,7 @@ const sections = [
         note: "Steamed sweet potato with chaat masala and lemon, and a warm glass of turmeric soy milk with pepper and cardamom.",
       },
       {
-        name: "Kanji & Cherupayar", channel: "2DMom", id: "more-bzi_kanji_payar", video: "https://www.youtube.com/watch?v=DA0Qm2r90S0",
+        name: "Kanji & Cherupayar", tags: ["Other"], channel: "2DMom", id: "more-bzi_kanji_payar", video: "https://www.youtube.com/watch?v=DA0Qm2r90S0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 479.2, "p": 24.6, "c": 65.9, "f": 13.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kanji & Cherupayar (1 bowl + side)"]},
@@ -5925,7 +5925,7 @@ const sections = [
         note: "Kerala's sick-day comfort food and everyday breakfast: soft rice kanji with a dry whole moong (cherupayar) stir-fry. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Napa Tofu Thoran", channel: "Recipe collection", id: "more-bzi_napa_thoran", video: null,
+        name: "Napa Tofu Thoran", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_napa_thoran", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 481.0, "p": 20.4, "c": 49.5, "f": 23.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Napa Tofu Thoran (about 1½ cups)"]},
@@ -5938,7 +5938,7 @@ const sections = [
         note: "Kerala thoran — finely chopped greens with coconut, mustard seeds and curry leaves — made with napa cabbage and tofu.",
       },
       {
-        name: "Tofu Thukpa", channel: "Recipe collection", id: "more-bzi_tofu_thukpa", video: null,
+        name: "Tofu Thukpa", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_tofu_thukpa", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 445.9, "p": 26.7, "c": 58.9, "f": 14.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Thukpa (about 2½ cups)"]},
@@ -5950,7 +5950,7 @@ const sections = [
         note: "The noodle soup of Sikkim, Ladakh and the Himalayas: a gingery, garlicky tomato broth with noodles, vegetables and tofu.",
       },
       {
-        name: "Achari Tofu Bowl", channel: "Deliciously WoW!", id: "more-bzi_achari_tofu_bowl", video: "https://www.youtube.com/watch?v=usRuBRE0poM",
+        name: "Achari Tofu Bowl", tags: ["Paneer"], channel: "Deliciously WoW!", id: "more-bzi_achari_tofu_bowl", video: "https://www.youtube.com/watch?v=usRuBRE0poM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 577.8, "p": 38.3, "c": 53.6, "f": 24.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Achari Tofu Bowl (1 bowl)"]},
@@ -5963,7 +5963,7 @@ const sections = [
         note: "Tofu roasted with pickle spices and mustard oil over brown rice, with an edamame kosambari and dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tofu Sweet Potato Korma", channel: "A Vegan Visit", id: "more-bzi_tofu_shakarkandi_korma", video: "https://www.youtube.com/watch?v=r0bpAAVbZU0",
+        name: "Tofu Sweet Potato Korma", tags: ["Paneer"], channel: "A Vegan Visit", id: "more-bzi_tofu_shakarkandi_korma", video: "https://www.youtube.com/watch?v=r0bpAAVbZU0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 598.6, "p": 28.1, "c": 73.2, "f": 22.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Sweet Potato Korma (about 1½ cups)"]},
@@ -5976,7 +5976,7 @@ const sections = [
         note: "A mild, creamy korma of tofu and sweet potato, made with yogurt and a few cashews instead of cream. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tofu Baingan Masala", channel: "Recipe collection", id: "more-bzi_tofu_baingan", video: null,
+        name: "Tofu Baingan Masala", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_tofu_baingan", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 596.4, "p": 24.1, "c": 60.5, "f": 32.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Baingan Masala (about 1½ cups)"]},
@@ -5989,7 +5989,7 @@ const sections = [
         note: "Small eggplants stuffed with a peanut-sesame-coconut masala, cooked with tofu — inspired by Maharashtrian bharli vangi.",
       },
       {
-        name: "Teen Dal Sabzi Shorba", channel: "Recipe collection", id: "more-bzi_bean_shorba", video: null,
+        name: "Teen Dal Sabzi Shorba", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_bean_shorba", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 508.6, "p": 19.5, "c": 85.8, "f": 12.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Teen Dal Sabzi Shorba (about 2 cups)"]},
@@ -6002,7 +6002,7 @@ const sections = [
         note: "The Sardinian three-bean soup through an Indian lens: rajma, chana and white beans with barley and vegetables in a cumin-ginger broth.",
       },
       {
-        name: "Chole Dalia", channel: "Recipe collection", id: "more-bzi_chole_dalia", video: null,
+        name: "Chole Dalia", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_chole_dalia", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 451.2, "p": 21.8, "c": 64.0, "f": 14.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chole Dalia (about 1½ cups)"]},
@@ -6015,7 +6015,7 @@ const sections = [
         note: "Cracked wheat cooked like a pulao with chickpeas, tomato and whole spices — fregola's Indian cousin.",
       },
       {
-        name: "Fava Ghugni Toast", channel: "Recipe collection", id: "more-bzi_fava_ghugni_toast", video: null,
+        name: "Fava Ghugni Toast", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_fava_ghugni_toast", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 531.3, "p": 25.4, "c": 77.4, "f": 14.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Fava Ghugni Toast (2 toasts)"]},
@@ -6028,7 +6028,7 @@ const sections = [
         note: "Bengali-style ghugni made with fava beans — spiced, a little saucy — piled onto toast with onion, chutney and lemon.",
       },
       {
-        name: "Chana Masala Pasta", channel: "Raks Kitchen", id: "more-bzi_chana_masala_pasta", video: "https://www.youtube.com/watch?v=NuWHWUzZDuI",
+        name: "Chana Masala Pasta", tags: ["Lentil & Beans"], channel: "Raks Kitchen", id: "more-bzi_chana_masala_pasta", video: "https://www.youtube.com/watch?v=NuWHWUzZDuI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 549.4, "p": 22.9, "c": 73.7, "f": 21.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chana Masala Pasta (about 1½ cups)"]},
@@ -6040,7 +6040,7 @@ const sections = [
         note: "The Indian home-style pasta: whole wheat pasta and chickpeas in a chana masala sauce, with a little paneer. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masala Macaroni with Paneer", channel: "Recipe collection", id: "more-bzi_masala_macaroni", video: null,
+        name: "Masala Macaroni with Paneer", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_masala_macaroni", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 544.8, "p": 25.0, "c": 58.1, "f": 27.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Masala Macaroni with Paneer (about 1½ cups)"]},
@@ -6052,7 +6052,7 @@ const sections = [
         note: "The tiffin favorite: macaroni tossed in a tangy onion-tomato masala with peas, capsicum and paneer.",
       },
       {
-        name: "White Bean Pudina Shorba", channel: "Recipe collection", id: "more-bzi_white_bean_pudina_shorba", video: null,
+        name: "White Bean Pudina Shorba", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_white_bean_pudina_shorba", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 429.0, "p": 21.8, "c": 68.4, "f": 8.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["White Bean Pudina Shorba (about 2 cups)"]},
@@ -6065,7 +6065,7 @@ const sections = [
         note: "A silky white bean soup with ginger, cumin and fresh mint, finished with a ghee tadka and lemon.",
       },
       {
-        name: "Jau & Kabuli Chana Shorba", channel: "Simply Yum", id: "more-bzi_jau_chana_shorba", video: "https://www.youtube.com/watch?v=FWrLNhZN4SE",
+        name: "Jau & Kabuli Chana Shorba", tags: ["Lentil & Beans"], channel: "Simply Yum", id: "more-bzi_jau_chana_shorba", video: "https://www.youtube.com/watch?v=FWrLNhZN4SE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 515.3, "p": 19.4, "c": 87.3, "f": 11.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Jau & Kabuli Chana Shorba (about 2 cups)"]},
@@ -6078,7 +6078,7 @@ const sections = [
         note: "Barley and chickpeas in a turmeric-ginger tomato broth — a hearty North Indian-style shorba. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Baingan Paneer Bake", channel: "Recipe collection", id: "more-bzi_baingan_paneer_bake", video: null,
+        name: "Baingan Paneer Bake", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_baingan_paneer_bake", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 655.7, "p": 29.6, "c": 60.7, "f": 37.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baingan Paneer Bake (1 generous portion)"]},
@@ -6091,7 +6091,7 @@ const sections = [
         note: "Roasted eggplant layered with a makhani-style tomato sauce (made with yogurt, not cream) and paneer.",
       },
       {
-        name: "Kolhapuri Masoor Usal", channel: "Recipe collection", id: "more-bzi_masoor_usal", video: null,
+        name: "Kolhapuri Masoor Usal", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_masoor_usal", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 551.9, "p": 22.6, "c": 79.4, "f": 18.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kolhapuri Masoor Usal (about 1½ cups)"]},
@@ -6104,7 +6104,7 @@ const sections = [
         note: "Maharashtrian usal of whole masoor in a roasted onion-coconut masala — spicy, earthy, and eaten with bhakri or pav.",
       },
       {
-        name: "Hirva Fava Usal", channel: "Recipe collection", id: "more-bzi_fava_usal", video: null,
+        name: "Hirva Fava Usal", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_fava_usal", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 521.5, "p": 19.8, "c": 73.9, "f": 18.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Hirva Fava Usal (about 1½ cups)"]},
@@ -6117,7 +6117,7 @@ const sections = [
         note: "Fava beans in a green coconut-cilantro masala, the way Maharashtrians cook fresh val or green peas.",
       },
       {
-        name: "Bharwa Zucchini", channel: "Recipe collection", id: "more-bzi_bharwa_zucchini", video: null,
+        name: "Bharwa Zucchini", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bzi_bharwa_zucchini", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 462.7, "p": 29.3, "c": 27.1, "f": 28.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bharwa Zucchini (2 zucchini halves)"]},
@@ -6130,7 +6130,7 @@ const sections = [
         note: "Zucchini boats filled with a spiced paneer and chana stuffing, baked until golden.",
       },
       {
-        name: "Chana Chaat Toast", channel: "Recipe collection", id: "more-bzi_chana_chaat_toast", video: null,
+        name: "Chana Chaat Toast", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_chana_chaat_toast", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 576.6, "p": 29.3, "c": 75.7, "f": 18.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chana Chaat Toast (2 toasts)"]},
@@ -6143,7 +6143,7 @@ const sections = [
         note: "Toast piled with a chickpea chaat — onion, tomato, chutneys, chaat masala and a little sev — and crumbled paneer.",
       },
       {
-        name: "Safed Bean Palak", channel: "Recipe collection", id: "more-bzi_white_bean_saag", video: null,
+        name: "Safed Bean Palak", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_white_bean_saag", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 503.6, "p": 22.4, "c": 76.8, "f": 14.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Safed Bean Palak (about 1½ cups)"]},
@@ -6156,7 +6156,7 @@ const sections = [
         note: "White beans and greens in a garlicky Punjabi-style palak, finished with a chili-garlic tadka.",
       },
       {
-        name: "Makai Upma with White Bean Masala", channel: "Recipe collection", id: "more-bzi_makai_upma_beans", video: null,
+        name: "Makai Upma with White Bean Masala", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_makai_upma_beans", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 490.0, "p": 23.7, "c": 70.9, "f": 14.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Makai Upma with White Bean Masala (1 bowl)"]},
@@ -6169,7 +6169,7 @@ const sections = [
         note: "Coarse cornmeal cooked like upma with mustard seeds and curry leaves, topped with white beans in a tomato masala.",
       },
       {
-        name: "Mushroom Jau Khichdi", channel: "Recipe collection", id: "more-bzi_mushroom_jau_khichdi", video: null,
+        name: "Mushroom Jau Khichdi", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-bzi_mushroom_jau_khichdi", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 413.4, "p": 22.0, "c": 56.9, "f": 12.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mushroom Jau Khichdi (about 1½ cups)"]},
@@ -6182,7 +6182,7 @@ const sections = [
         note: "Barley and moong dal khichdi with mushrooms and a ghee-jeera tadka — risotto's homely Indian twin.",
       },
       {
-        name: "Saunf Chana", channel: "CurriesNCuisines", id: "more-bzi_saunf_chana", video: "https://www.youtube.com/watch?v=bA_swt_qEDs",
+        name: "Saunf Chana", tags: ["Lentil & Beans"], channel: "CurriesNCuisines", id: "more-bzi_saunf_chana", video: "https://www.youtube.com/watch?v=bA_swt_qEDs",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 566.0, "p": 20.6, "c": 87.3, "f": 16.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Saunf Chana (about 1½ cups)"]},
@@ -6195,7 +6195,7 @@ const sections = [
         note: "Chickpeas cooked with fennel bulb and fennel seeds in a Kashmiri-inspired yogurt-tomato gravy with dry ginger. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Pudina Paneer Pasta", channel: "Recipe collection", id: "more-bzi_pudina_pasta", video: null,
+        name: "Pudina Paneer Pasta", tags: ["Paneer"], channel: "Recipe collection", id: "more-bzi_pudina_pasta", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 610.9, "p": 28.5, "c": 71.1, "f": 27.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pudina Paneer Pasta (1 plate)"]},
@@ -6207,7 +6207,7 @@ const sections = [
         note: "Whole wheat spaghetti tossed in a fresh mint-cilantro chutney with zucchini, white beans and paneer.",
       },
       {
-        name: "Paneer Bhurji Toast (Blue Zones)", channel: "Taste Bihar ka", id: "more-bzi_paneer_bhurji_toast", video: "https://www.youtube.com/watch?v=Z5fN8dapbv8",
+        name: "Paneer Bhurji Toast (Blue Zones)", tags: ["Paneer"], channel: "Taste Bihar ka", id: "more-bzi_paneer_bhurji_toast", video: "https://www.youtube.com/watch?v=Z5fN8dapbv8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 590.2, "p": 30.9, "c": 51.5, "f": 31.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Bhurji Toast (2 toasts)"]},
@@ -6219,7 +6219,7 @@ const sections = [
         note: "Soft, mildly spiced paneer bhurji on whole wheat toast, with fruit on the side. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Besan Chilla", channel: "Recipe collection", id: "more-bzi_besan_chilla", video: null,
+        name: "Besan Chilla", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_besan_chilla", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 450.9, "p": 22.7, "c": 36.0, "f": 25.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Besan Chilla (2 chillas)"]},
@@ -6232,7 +6232,7 @@ const sections = [
         note: "Farinata's Indian twin: thin chickpea-flour pancakes with onion, tomato and cilantro, with paneer and chutney.",
       },
       {
-        name: "Chana Palak Shorba", channel: "Recipe collection", id: "more-bzi_chana_palak_shorba", video: null,
+        name: "Chana Palak Shorba", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_chana_palak_shorba", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 491.6, "p": 20.1, "c": 75.4, "f": 15.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chana Palak Shorba (about 2 cups)"]},
@@ -6245,7 +6245,7 @@ const sections = [
         note: "Chickpeas and spinach in a light ginger-garlic broth with a squeeze of lemon.",
       },
       {
-        name: "Punjabi Lobia with Saunf", channel: "Recipe collection", id: "more-bzi_lobia_saunf", video: null,
+        name: "Punjabi Lobia with Saunf", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_lobia_saunf", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 529.2, "p": 19.5, "c": 87.2, "f": 13.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Punjabi Lobia with Saunf (about 1½ cups)"]},
@@ -6258,7 +6258,7 @@ const sections = [
         note: "Black-eyed peas in a homestyle onion-tomato masala with fennel and plenty of fresh dill (suva), the way some Punjabi and Gujarati homes cook it.",
       },
       {
-        name: "Goan White Bean Tonak", channel: "Sarita's Goan Recipes", id: "more-bzi_bean_tonak", video: "https://www.youtube.com/watch?v=yJGfB3DlE0A",
+        name: "Goan White Bean Tonak", tags: ["Lentil & Beans"], channel: "Sarita's Goan Recipes", id: "more-bzi_bean_tonak", video: "https://www.youtube.com/watch?v=yJGfB3DlE0A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 555.2, "p": 20.0, "c": 79.3, "f": 20.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Goan White Bean Tonak (about 1½ cups)"]},
@@ -6271,7 +6271,7 @@ const sections = [
         note: "Goa's tonak: beans simmered in a roasted coconut-spice masala with a little tamarind. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Punjabi Sabut Masoor Dal", channel: "Punjabi Cooking", id: "more-bzi_sabut_masoor", video: "https://www.youtube.com/watch?v=Z9LOUG2L_MQ",
+        name: "Punjabi Sabut Masoor Dal", tags: ["Lentil & Beans"], channel: "Punjabi Cooking", id: "more-bzi_sabut_masoor", video: "https://www.youtube.com/watch?v=Z9LOUG2L_MQ",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 504.7, "p": 22.2, "c": 76.4, "f": 14.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Punjabi Sabut Masoor Dal (about 1½ cups)"]},
@@ -6284,7 +6284,7 @@ const sections = [
         note: "Whole brown lentils, Punjabi dhaba-style, with a tomato-onion tadka and a squeeze of lemon. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kadala Rasam", channel: "Recipe collection", id: "more-bzi_chana_rasam", video: null,
+        name: "Kadala Rasam", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_chana_rasam", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 530.5, "p": 18.7, "c": 86.0, "f": 13.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kadala Rasam (about 2 cups)"]},
@@ -6297,7 +6297,7 @@ const sections = [
         note: "A peppery Kerala-Tamil rasam with whole chickpeas and lemon instead of tamarind — light but filling.",
       },
       {
-        name: "Oven Tawa Sabzi with Chana", channel: "Recipe collection", id: "more-bzi_tawa_sabzi_chana", video: null,
+        name: "Oven Tawa Sabzi with Chana", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_tawa_sabzi_chana", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 753.2, "p": 30.7, "c": 88.2, "f": 35.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Oven Tawa Sabzi with Chana (1 generous portion)"]},
@@ -6310,7 +6310,7 @@ const sections = [
         note: "Street-style tawa sabzi — potato, eggplant, zucchini, peppers and chickpeas in pav bhaji-ish spices — roasted in the oven, with paneer.",
       },
       {
-        name: "Palak Lobia", channel: "Ashus Veg Delicacies", id: "more-bzi_palak_lobia", video: "https://www.youtube.com/watch?v=REWDREljZl0",
+        name: "Palak Lobia", tags: ["Lentil & Beans"], channel: "Ashus Veg Delicacies", id: "more-bzi_palak_lobia", video: "https://www.youtube.com/watch?v=REWDREljZl0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 574.2, "p": 31.9, "c": 78.7, "f": 17.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Palak Lobia (about 1½ cups)"]},
@@ -6324,7 +6324,7 @@ const sections = [
         note: "Black-eyed peas simmered with spinach and chard in a garlicky masala. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Palak Chole Pulao", channel: "Sanjeev Kapoor Khazana ", id: "more-bzi_palak_chole_pulao", video: "https://www.youtube.com/watch?v=ugp7kwhQMvc",
+        name: "Palak Chole Pulao", tags: ["Lentil & Beans"], channel: "Sanjeev Kapoor Khazana ", id: "more-bzi_palak_chole_pulao", video: "https://www.youtube.com/watch?v=ugp7kwhQMvc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 463.4, "p": 20.6, "c": 63.5, "f": 15.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Palak Chole Pulao (about 1½ cups)"]},
@@ -6337,7 +6337,7 @@ const sections = [
         note: "Brown rice cooked in a spinach purée with whole spices and chickpeas, served with raita. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bengali Matar Dal", channel: "Bong Dishes", id: "more-bzi_motor_dal", video: "https://www.youtube.com/watch?v=bfrz4lS595c",
+        name: "Bengali Matar Dal", tags: ["Lentil & Beans"], channel: "Bong Dishes", id: "more-bzi_motor_dal", video: "https://www.youtube.com/watch?v=bfrz4lS595c",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 501.0, "p": 18.5, "c": 76.5, "f": 14.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bengali Matar Dal (about 1½ cups)"]},
@@ -6350,7 +6350,7 @@ const sections = [
         note: "Santorini's split pea purée has a Bengali twin: matar dal, cooked smooth and finished with a panch phoron and ginger tadka. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bharwa Tamatar-Mirch", channel: "Recipe collection", id: "more-bzi_bharwa_tamatar_mirch", video: null,
+        name: "Bharwa Tamatar-Mirch", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bzi_bharwa_tamatar_mirch", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 559.3, "p": 30.2, "c": 48.5, "f": 29.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bharwa Tamatar-Mirch (2 stuffed vegetables)"]},
@@ -6363,7 +6363,7 @@ const sections = [
         note: "Tomatoes and peppers stuffed with a paneer-chana pulao and baked, like Rajasthani and Punjabi bharwa sabzi.",
       },
       {
-        name: "Dalia Masoor Pulao", channel: "Recipe collection", id: "more-bzi_dalia_masoor_pulao", video: null,
+        name: "Dalia Masoor Pulao", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_dalia_masoor_pulao", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 456.0, "p": 23.5, "c": 59.6, "f": 15.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dalia Masoor Pulao (about 1½ cups)"]},
@@ -6376,7 +6376,7 @@ const sections = [
         note: "Cracked wheat and lentils cooked with whole spices and topped with crisp browned onions (birista) and dahi.",
       },
       {
-        name: "Chana Palak", channel: "Sardar g paratha junction", id: "more-bzi_chana_palak", video: "https://www.youtube.com/watch?v=zIIvAkGzEXU",
+        name: "Chana Palak", tags: ["Lentil & Beans"], channel: "Sardar g paratha junction", id: "more-bzi_chana_palak", video: "https://www.youtube.com/watch?v=zIIvAkGzEXU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 542.2, "p": 22.9, "c": 77.8, "f": 18.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chana Palak (about 1½ cups)"]},
@@ -6389,7 +6389,7 @@ const sections = [
         note: "Chickpeas in a smooth, garlicky spinach gravy — a Punjabi everyday classic. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Baingan Bharta with White Beans", channel: "Recipe collection", id: "more-bzi_baingan_bharta_beans", video: null,
+        name: "Baingan Bharta with White Beans", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_baingan_bharta_beans", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 564.3, "p": 27.7, "c": 81.7, "f": 17.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baingan Bharta with White Beans (about 1½ cups)"]},
@@ -6403,7 +6403,7 @@ const sections = [
         note: "Smoky fire-roasted eggplant mashed with onion, tomato, garlic and green chili, with white beans stirred in.",
       },
       {
-        name: "Kesar Akhrot Shrikhand Bowl", channel: "Recipe collection", id: "more-bzi_kesar_shrikhand", video: null,
+        name: "Kesar Akhrot Shrikhand Bowl", tags: ["Other"], channel: "Recipe collection", id: "more-bzi_kesar_shrikhand", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 296.6, "p": 20.8, "c": 27.2, "f": 13.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kesar Akhrot Shrikhand Bowl (1 bowl)"]},
@@ -6415,7 +6415,7 @@ const sections = [
         note: "Thick hung yogurt whipped with saffron, cardamom and a little honey, topped with walnuts and fruit.",
       },
       {
-        name: "Phali Chana Sabzi", channel: "Recipe collection", id: "more-bzi_beans_chana_sabzi", video: null,
+        name: "Phali Chana Sabzi", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_beans_chana_sabzi", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 609.2, "p": 27.0, "c": 84.5, "f": 21.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Phali Chana Sabzi (about 1½ cups)"]},
@@ -6429,7 +6429,7 @@ const sections = [
         note: "Green beans and chickpeas, stir-fried Gujarati-style with mustard seeds, ajwain and a little jaggery and lemon.",
       },
       {
-        name: "Lobia Edamame Chaat Salad", channel: "Recipe collection", id: "more-bzi_lobia_kosambari", video: null,
+        name: "Lobia Edamame Chaat Salad", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_lobia_kosambari", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 674.0, "p": 49.1, "c": 75.4, "f": 23.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Lobia Edamame Chaat Salad (1 big bowl)"]},
@@ -6441,7 +6441,7 @@ const sections = [
         note: "A crunchy Indian chaat salad of black-eyed peas, edamame, cucumber, onion, roasted chana and paneer with lemon and chaat masala. At least 40 g of protein.",
       },
       {
-        name: "Roasted Aloo Chana Chaat", channel: "Food Fusion", id: "more-bzi_aloo_chana_chaat", video: "https://www.youtube.com/watch?v=650ssFWPg8E",
+        name: "Roasted Aloo Chana Chaat", tags: ["Lentil & Beans"], channel: "Food Fusion", id: "more-bzi_aloo_chana_chaat", video: "https://www.youtube.com/watch?v=650ssFWPg8E",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 578.6, "p": 24.5, "c": 80.0, "f": 19.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Roasted Aloo Chana Chaat (1 plate)"]},
@@ -6455,7 +6455,7 @@ const sections = [
         note: "Oven-crisp potatoes and chickpeas tossed in chaat masala and lemon, with dahi, green chutney and pomegranate. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Bhindi Chana Masala", channel: "Recipe collection", id: "more-bzi_bhindi_chana", video: null,
+        name: "Bhindi Chana Masala", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_bhindi_chana", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 533.0, "p": 17.8, "c": 74.9, "f": 21.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bhindi Chana Masala (about 1½ cups)"]},
@@ -6468,7 +6468,7 @@ const sections = [
         note: "Crisp-edged bhindi tossed with chickpeas and a dry onion-tomato masala with amchur-style tang from lemon.",
       },
       {
-        name: "Baked Chana Tikki", channel: "Recipe collection", id: "more-bzi_chana_tikki", video: null,
+        name: "Baked Chana Tikki", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_chana_tikki", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 513.1, "p": 26.5, "c": 65.1, "f": 17.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baked Chana Tikki (4 tikkis)"]},
@@ -6482,7 +6482,7 @@ const sections = [
         note: "Spiced chickpea tikkis with ginger, chili, cilantro and a little besan, baked crisp and served with mint raita.",
       },
       {
-        name: "Nimbu Dhaniya Chana Shorba", channel: "Recipe collection", id: "more-bzi_nimbu_dhaniya_shorba", video: null,
+        name: "Nimbu Dhaniya Chana Shorba", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_nimbu_dhaniya_shorba", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 415.2, "p": 17.3, "c": 65.4, "f": 11.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Nimbu Dhaniya Chana Shorba (about 2 cups)"]},
@@ -6494,7 +6494,7 @@ const sections = [
         note: "The restaurant favorite lemon-coriander soup, made a meal with chickpeas, vegetables and a little pasta.",
       },
       {
-        name: "Til-Gud Toast with Dahi", channel: "Recipe collection", id: "more-bzi_til_gud_toast", video: null,
+        name: "Til-Gud Toast with Dahi", tags: ["Other"], channel: "Recipe collection", id: "more-bzi_til_gud_toast", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 479.1, "p": 24.0, "c": 51.0, "f": 21.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Til-Gud Toast with Dahi (2 toasts)"]},
@@ -6506,7 +6506,7 @@ const sections = [
         note: "Sankranti flavors for breakfast: toast spread with tahini (til paste) and jaggery, cardamom and walnuts, with a bowl of dahi.",
       },
       {
-        name: "Rajma Pulao", channel: "Hebbars Kitchen", id: "more-bzi_rajma_pulao", video: "https://www.youtube.com/watch?v=O6Ph6GSxF2A",
+        name: "Rajma Pulao", tags: ["Lentil & Beans"], channel: "Hebbars Kitchen", id: "more-bzi_rajma_pulao", video: "https://www.youtube.com/watch?v=O6Ph6GSxF2A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 516.2, "p": 25.2, "c": 75.2, "f": 13.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Pulao (about 1½ cups)"]},
@@ -6519,7 +6519,7 @@ const sections = [
         note: "Gallo pinto's Indian counterpart: brown rice and kidney beans cooked together with whole spices and onion. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajma Chawal Thali", channel: "Recipe collection", id: "more-bzi_rajma_chawal_thali", video: null,
+        name: "Rajma Chawal Thali", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_rajma_chawal_thali", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 756.5, "p": 31.5, "c": 120.7, "f": 18.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Chawal Thali (1 thali)"]},
@@ -6534,7 +6534,7 @@ const sections = [
         note: "Costa Rica's casado as a North Indian thali: rajma masala, brown rice, raw banana sabzi, kachumber and dahi.",
       },
       {
-        name: "Kala Rajma Dal", channel: "Recipe collection", id: "more-bzi_black_bean_dal", video: null,
+        name: "Kala Rajma Dal", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_black_bean_dal", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 646.6, "p": 29.2, "c": 98.9, "f": 16.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kala Rajma Dal (about 1½ cups)"]},
@@ -6547,7 +6547,7 @@ const sections = [
         note: "Black beans cooked like a dal makhani — slow-simmered with ginger, garlic and tomato — but finished with yogurt and a spoon of ghee instead of cream and butter.",
       },
       {
-        name: "Kaddu Chana Frankie", channel: "Recipe collection", id: "more-bzi_kaddu_chana_frankie", video: null,
+        name: "Kaddu Chana Frankie", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_kaddu_chana_frankie", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 717.8, "p": 26.7, "c": 87.5, "f": 31.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kaddu Chana Frankie (2 rolls)"]},
@@ -6560,7 +6560,7 @@ const sections = [
         note: "A Mumbai-style frankie: whole wheat tortilla with spiced pumpkin and chickpeas, onion, chutney and paneer.",
       },
       {
-        name: "Chow Chow Kootu", channel: "Nithya's Recipes", id: "more-bzi_chow_chow_kootu", video: "https://www.youtube.com/watch?v=G80_hHowD08",
+        name: "Chow Chow Kootu", tags: ["Lentil & Beans"], channel: "Nithya's Recipes", id: "more-bzi_chow_chow_kootu", video: "https://www.youtube.com/watch?v=G80_hHowD08",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 571.2, "p": 28.4, "c": 85.6, "f": 14.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Chow Chow Kootu (about 1½ cups)"]},
@@ -6574,7 +6574,7 @@ const sections = [
         note: "Chayote is chow chow in Tamil Nadu: here in a classic kootu with moong dal, coconut and cumin. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sabzi Rajma Shorba", channel: "Recipe collection", id: "more-bzi_sabzi_rajma_shorba", video: null,
+        name: "Sabzi Rajma Shorba", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_sabzi_rajma_shorba", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 591.6, "p": 22.3, "c": 107.0, "f": 11.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sabzi Rajma Shorba (about 2½ cups)"]},
@@ -6587,7 +6587,7 @@ const sections = [
         note: "A big pot of vegetables — squash, corn, chayote, potato and sweet potato — with rajma in a ginger-cumin broth.",
       },
       {
-        name: "Kachche Kele Rajma Bowl", channel: "Recipe collection", id: "more-bzi_kachche_kele_bowl", video: null,
+        name: "Kachche Kele Rajma Bowl", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_kachche_kele_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 704.5, "p": 29.4, "c": 108.8, "f": 17.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kachche Kele Rajma Bowl (1 bowl)"]},
@@ -6600,7 +6600,7 @@ const sections = [
         note: "Raw banana fry, rajma and brown rice with a lime-cabbage kosambari and dahi.",
       },
       {
-        name: "Aloo Gajar Matar with Chana", channel: "Sonia Barton", id: "more-bzi_aloo_gajar_matar", video: "https://www.youtube.com/watch?v=5GnBzKN0bhg",
+        name: "Aloo Gajar Matar with Chana", tags: ["Lentil & Beans"], channel: "Sonia Barton", id: "more-bzi_aloo_gajar_matar", video: "https://www.youtube.com/watch?v=5GnBzKN0bhg",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 611.9, "p": 27.3, "c": 88.8, "f": 18.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Aloo Gajar Matar with Chana (about 1½ cups)"]},
@@ -6614,7 +6614,7 @@ const sections = [
         note: "The North Indian winter sabzi of potato, carrot and peas, made heartier with chickpeas. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajma Paneer Kathi Roll", channel: "Your Food Lab", id: "more-bzi_rajma_paneer_roll", video: "https://www.youtube.com/watch?v=Wb95nUQZLXM",
+        name: "Rajma Paneer Kathi Roll", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-bzi_rajma_paneer_roll", video: "https://www.youtube.com/watch?v=Wb95nUQZLXM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 731.1, "p": 34.5, "c": 84.3, "f": 30.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Paneer Kathi Roll (2 rolls)"]},
@@ -6627,7 +6627,7 @@ const sections = [
         note: "A Kolkata-style kathi roll with mashed rajma masala, grilled paneer, onion and green chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Makai Chow Chow Shorba", channel: "Recipe collection", id: "more-bzi_makai_shorba", video: null,
+        name: "Makai Chow Chow Shorba", tags: ["Vegetables"], channel: "Recipe collection", id: "more-bzi_makai_shorba", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 442.8, "p": 22.5, "c": 41.3, "f": 24.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Makai Chow Chow Shorba (about 2 cups)"]},
@@ -6639,7 +6639,7 @@ const sections = [
         note: "A sweet corn and chayote soup with ginger and pepper, blended smooth and topped with paneer cubes.",
       },
       {
-        name: "Kala Chana Poha with Papaya", channel: "Cooking ka Chaska ", id: "more-bzi_kala_chana_poha", video: "https://www.youtube.com/watch?v=bkZODwFtJbc",
+        name: "Kala Chana Poha with Papaya", tags: ["Lentil & Beans"], channel: "Cooking ka Chaska ", id: "more-bzi_kala_chana_poha", video: "https://www.youtube.com/watch?v=bkZODwFtJbc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 614.6, "p": 24.1, "c": 88.1, "f": 19.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kala Chana Poha with Papaya (1 plate)"]},
@@ -6652,7 +6652,7 @@ const sections = [
         note: "Maharashtrian kanda poha with kala chana and peanuts, dahi and a plate of papaya — a full Indian breakfast. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kaddu Rajma Pulao", channel: "Recipe collection", id: "more-bzi_kaddu_rajma_pulao", video: null,
+        name: "Kaddu Rajma Pulao", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_kaddu_rajma_pulao", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 551.4, "p": 25.7, "c": 84.9, "f": 13.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kaddu Rajma Pulao (about 1½ cups)"]},
@@ -6665,7 +6665,7 @@ const sections = [
         note: "Brown rice cooked with pumpkin, rajma and whole spices, with a little kasuri methi.",
       },
       {
-        name: "Corn Rajma Chaat Bowl", channel: "Recipe collection", id: "more-bzi_corn_rajma_chaat_bowl", video: null,
+        name: "Corn Rajma Chaat Bowl", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_corn_rajma_chaat_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 639.6, "p": 25.9, "c": 108.4, "f": 14.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Corn Rajma Chaat Bowl (1 bowl)"]},
@@ -6678,7 +6678,7 @@ const sections = [
         note: "Brown rice with rajma, roasted corn, cucumber, tomato and avocado, tossed chaat-style with chutney and lemon.",
       },
       {
-        name: "Pinto Bean Usal", channel: "Recipe collection", id: "more-bzi_pinto_usal", video: null,
+        name: "Pinto Bean Usal", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_pinto_usal", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 646.6, "p": 25.9, "c": 99.5, "f": 19.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pinto Bean Usal (about 1½ cups)"]},
@@ -6691,7 +6691,7 @@ const sections = [
         note: "Maharashtrian usal made with pinto beans and pumpkin in a goda masala and coconut gravy.",
       },
       {
-        name: "Makai Rajma Bake", channel: "Recipe collection", id: "more-bzi_makai_rajma_bake", video: null,
+        name: "Makai Rajma Bake", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_makai_rajma_bake", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 702.6, "p": 39.6, "c": 84.9, "f": 25.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Makai Rajma Bake (1 generous portion)"]},
@@ -6704,7 +6704,7 @@ const sections = [
         note: "Spiced rajma masala baked under a layer of soft cornmeal (makai) with paneer on top.",
       },
       {
-        name: "Mangalore Coconut Rajma Rice", channel: "Recipe collection", id: "more-bzi_coconut_rajma_pulao", video: null,
+        name: "Mangalore Coconut Rajma Rice", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_coconut_rajma_pulao", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 540.7, "p": 25.2, "c": 73.6, "f": 17.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mangalore Coconut Rajma Rice (about 1½ cups)"]},
@@ -6717,7 +6717,7 @@ const sections = [
         note: "Brown rice cooked in light coconut milk with rajma, whole spices and curry leaves, coastal Karnataka-style.",
       },
       {
-        name: "Rajma Papdi Chaat Tostadas", channel: "Recipe collection", id: "more-bzi_rajma_chaat_tostada", video: null,
+        name: "Rajma Papdi Chaat Tostadas", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_rajma_chaat_tostada", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 617.0, "p": 29.8, "c": 98.9, "f": 13.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Papdi Chaat Tostadas (3 tostadas)"]},
@@ -6731,7 +6731,7 @@ const sections = [
         note: "Crisp baked tortillas topped papdi chaat-style: spiced rajma, potato, onion, dahi, chutneys and sev.",
       },
       {
-        name: "Khatta Meetha Kaddu with Chana", channel: "Meri Kitchen ", id: "more-bzi_khatta_meetha_kaddu", video: "https://www.youtube.com/watch?v=jLTn7n_LGqU",
+        name: "Khatta Meetha Kaddu with Chana", tags: ["Lentil & Beans"], channel: "Meri Kitchen ", id: "more-bzi_khatta_meetha_kaddu", video: "https://www.youtube.com/watch?v=jLTn7n_LGqU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 538.7, "p": 16.0, "c": 86.8, "f": 17.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Khatta Meetha Kaddu with Chana (about 1½ cups)"]},
@@ -6744,7 +6744,7 @@ const sections = [
         note: "Punjabi sweet-sour pumpkin with fenugreek seeds, jaggery and amchur-style tang, with chickpeas folded in. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajma Chawal Stuffed Capsicum", channel: "My Healthy Confessions", id: "more-bzi_rajma_chawal_capsicum", video: "https://www.youtube.com/watch?v=Sk1X3X5zCU4",
+        name: "Rajma Chawal Stuffed Capsicum", tags: ["Lentil & Beans"], channel: "My Healthy Confessions", id: "more-bzi_rajma_chawal_capsicum", video: "https://www.youtube.com/watch?v=Sk1X3X5zCU4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 608.2, "p": 35.0, "c": 72.5, "f": 22.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Chawal Stuffed Capsicum (2 pepper halves)"]},
@@ -6757,7 +6757,7 @@ const sections = [
         note: "Peppers stuffed with leftover rajma chawal and paneer, baked until soft — a weeknight favorite. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Shakarkandi Chana Bhuna", channel: "Recipe collection", id: "more-bzi_shakarkandi_chana", video: null,
+        name: "Shakarkandi Chana Bhuna", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_shakarkandi_chana", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 452.3, "p": 20.2, "c": 61.1, "f": 15.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shakarkandi Chana Bhuna (1 plate)"]},
@@ -6770,7 +6770,7 @@ const sections = [
         note: "Sweet potato and chickpeas pan-roasted with cumin, kashmiri chili and chaat masala, topped with dahi.",
       },
       {
-        name: "Kesar Akhrot Oats", channel: "Recipe collection", id: "more-bzi_kesar_oats", video: null,
+        name: "Kesar Akhrot Oats", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-bzi_kesar_oats", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 424.8, "p": 15.9, "c": 54.2, "f": 18.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kesar Akhrot Oats (1 bowl)"]},
@@ -6782,7 +6782,7 @@ const sections = [
         note: "Oats cooked like a light kheer in soy milk with saffron, cardamom and dates, topped with walnuts.",
       },
       {
-        name: "Rajma Chawal Bowl (Blue Zones)", channel: "Kunal Kapur", id: "more-bzi_rajma_chawal_bowl", video: "https://www.youtube.com/watch?v=M_ncAJhIaIU",
+        name: "Rajma Chawal Bowl (Blue Zones)", tags: ["Lentil & Beans"], channel: "Kunal Kapur", id: "more-bzi_rajma_chawal_bowl", video: "https://www.youtube.com/watch?v=M_ncAJhIaIU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 615.2, "p": 30.7, "c": 93.8, "f": 14.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Chawal Bowl (1 bowl)"]},
@@ -6797,7 +6797,7 @@ const sections = [
         note: "The haystack as Punjabi comfort food: rajma masala over brown rice with kachumber, onion and dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masoor Akhrot Shami Kebab", channel: "Recipe collection", id: "more-bzi_masoor_shami", video: null,
+        name: "Masoor Akhrot Shami Kebab", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_masoor_shami", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 638.2, "p": 32.1, "c": 79.0, "f": 24.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Masoor Akhrot Shami Kebab (4 kebabs)"]},
@@ -6811,7 +6811,7 @@ const sections = [
         note: "Shami kebabs made with whole masoor, chana dal and walnuts, with whole spices — pan-seared with very little oil.",
       },
       {
-        name: "Rajma Chole Lobia Masala", channel: "Recipe collection", id: "more-bzi_mixed_bean_masala", video: null,
+        name: "Rajma Chole Lobia Masala", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_mixed_bean_masala", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 640.6, "p": 28.9, "c": 92.6, "f": 19.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Chole Lobia Masala (about 1½ cups)"]},
@@ -6825,7 +6825,7 @@ const sections = [
         note: "Three beans in one Punjabi masala — rajma, chole and lobia — with ginger, garlic, tomato and kasuri methi.",
       },
       {
-        name: "Tofu Bhurji", channel: "Sanjeev Kapoor Khazana ", id: "more-bzi_tofu_bhurji", video: "https://www.youtube.com/watch?v=eIo_Y33Q9tw",
+        name: "Tofu Bhurji", tags: ["Paneer"], channel: "Sanjeev Kapoor Khazana ", id: "more-bzi_tofu_bhurji", video: "https://www.youtube.com/watch?v=eIo_Y33Q9tw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 414.2, "p": 27.6, "c": 29.7, "f": 21.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tofu Bhurji (about 1½ cups)"]},
@@ -6838,7 +6838,7 @@ const sections = [
         note: "Masala tofu bhurji with onion, tomato, peas and green chili — a vegan twin of anda bhurji — with phulkas or toast. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masoor Keema Roll", channel: "Recipe collection", id: "more-bzi_masoor_keema_roll", video: null,
+        name: "Masoor Keema Roll", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_masoor_keema_roll", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 721.7, "p": 27.7, "c": 92.9, "f": 28.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Masoor Keema Roll (2 rolls)"]},
@@ -6851,7 +6851,7 @@ const sections = [
         note: "A lentil-walnut keema with peas and garam masala, rolled into whole wheat tortillas with onion and chutney.",
       },
       {
-        name: "Rajma Tikki Burger", channel: "Recipe collection", id: "more-bzi_rajma_tikki_burger", video: null,
+        name: "Rajma Tikki Burger", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_rajma_tikki_burger", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 615.3, "p": 33.2, "c": 94.2, "f": 12.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Tikki Burger (1 burger)"]},
@@ -6863,7 +6863,7 @@ const sections = [
         note: "A spiced rajma and oat tikki in a whole wheat bun-style sandwich with onion, tomato and pudina dahi.",
       },
       {
-        name: "Hare Matar ki Dal with Palak", channel: "Pratibhaadubbeyy", id: "more-bzi_hara_matar_dal", video: "https://www.youtube.com/watch?v=fLqnVJSi3wA",
+        name: "Hare Matar ki Dal with Palak", tags: ["Lentil & Beans"], channel: "Pratibhaadubbeyy", id: "more-bzi_hara_matar_dal", video: "https://www.youtube.com/watch?v=fLqnVJSi3wA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 513.2, "p": 22.7, "c": 74.3, "f": 16.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Hare Matar ki Dal with Palak (about 1½ cups)"]},
@@ -6876,7 +6876,7 @@ const sections = [
         note: "Green split peas cooked soft with spinach and finished with a garlic-cumin tadka. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Quinoa Rajma Shakarkandi Bowl", channel: "Recipe collection", id: "more-bzi_quinoa_rajma_bowl", video: null,
+        name: "Quinoa Rajma Shakarkandi Bowl", tags: ["Quinoa"], channel: "Recipe collection", id: "more-bzi_quinoa_rajma_bowl", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 684.7, "p": 29.9, "c": 92.7, "f": 23.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Quinoa Rajma Shakarkandi Bowl (1 bowl)"]},
@@ -6888,7 +6888,7 @@ const sections = [
         note: "Quinoa with rajma, roasted sweet potato, spinach and pepitas, under a tahini-dahi dressing with chaat masala.",
       },
       {
-        name: "Bombay Chana Sandwich", channel: "Recipe collection", id: "more-bzi_bombay_chana_sandwich", video: null,
+        name: "Bombay Chana Sandwich", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_bombay_chana_sandwich", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 569.8, "p": 30.8, "c": 81.9, "f": 15.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Bombay Chana Sandwich (1 sandwich)"]},
@@ -6901,7 +6901,7 @@ const sections = [
         note: "Mumbai's street sandwich, made with a spiced chickpea filling: green chutney, cucumber, tomato and onion on whole wheat bread.",
       },
       {
-        name: "Peanut Butter, Banana & Elaichi Toast", channel: "My Ginger Garlic Kitchen Recipes", id: "more-bzi_peanut_banana_toast", video: "https://www.youtube.com/watch?v=Xh9xJCSGNRc",
+        name: "Peanut Butter, Banana & Elaichi Toast", tags: ["Vegetables"], channel: "My Ginger Garlic Kitchen Recipes", id: "more-bzi_peanut_banana_toast", video: "https://www.youtube.com/watch?v=Xh9xJCSGNRc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 619.4, "p": 26.2, "c": 79.5, "f": 24.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Peanut Butter, Banana & Elaichi Toast (2 toasts)"]},
@@ -6913,7 +6913,7 @@ const sections = [
         note: "Peanut butter toast with banana, a dusting of cardamom and a glass of masala chai made with soy milk. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Desi Granola with Dahi", channel: "Recipe collection", id: "more-bzi_desi_granola", video: null,
+        name: "Desi Granola with Dahi", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-bzi_desi_granola", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 522.8, "p": 25.4, "c": 44.4, "f": 29.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Desi Granola with Dahi (1 bowl)"]},
@@ -6925,7 +6925,7 @@ const sections = [
         note: "Oats, til, walnuts and pumpkin seeds baked with jaggery, ghee and cardamom, over thick dahi with fruit.",
       },
       {
-        name: "Soya Keema Shakarkandi Bake", channel: "Recipe collection", id: "more-bzi_keema_shakarkandi_bake", video: null,
+        name: "Soya Keema Shakarkandi Bake", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_keema_shakarkandi_bake", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 465.6, "p": 24.6, "c": 68.0, "f": 12.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Soya Keema Shakarkandi Bake (1 generous portion)"]},
@@ -6937,7 +6937,7 @@ const sections = [
         note: "Soya and lentil keema matar under a mashed sweet potato top, baked until golden.",
       },
       {
-        name: "Rajma Jau Masala Soup", channel: "Recipe collection", id: "more-bzi_rajma_jau_soup", video: null,
+        name: "Rajma Jau Masala Soup", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_rajma_jau_soup", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 521.1, "p": 23.1, "c": 90.5, "f": 9.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rajma Jau Masala Soup (about 2 cups)"]},
@@ -6950,7 +6950,7 @@ const sections = [
         note: "Kidney beans and barley in a tomato-ginger broth with garam masala and spinach.",
       },
       {
-        name: "Hummus Chutney Frankie", channel: "Recipe collection", id: "more-bzi_chana_frankie", video: null,
+        name: "Hummus Chutney Frankie", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_chana_frankie", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 549.5, "p": 25.6, "c": 59.5, "f": 25.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Hummus Chutney Frankie (1 wrap)"]},
@@ -6963,7 +6963,7 @@ const sections = [
         note: "A whole wheat wrap with hummus swirled with green chutney, masala chickpeas, paneer and crunchy vegetables.",
       },
       {
-        name: "Kadai Tofu", channel: "Sowji's Lifestyle", id: "more-bzi_kadai_tofu", video: "https://www.youtube.com/watch?v=q7urORMRw6s",
+        name: "Kadai Tofu", tags: ["Paneer"], channel: "Sowji's Lifestyle", id: "more-bzi_kadai_tofu", video: "https://www.youtube.com/watch?v=q7urORMRw6s",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 505.0, "p": 25.0, "c": 47.7, "f": 26.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kadai Tofu (about 1½ cups)"]},
@@ -6976,7 +6976,7 @@ const sections = [
         note: "Restaurant-style kadai with tofu, peppers and onion in a freshly ground coriander-chili masala. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Elaichi Banana Baked Oats", channel: "My Sunshinesz", id: "more-bzi_elaichi_baked_oats", video: "https://www.youtube.com/watch?v=SRx5PFjxcUs",
+        name: "Elaichi Banana Baked Oats", tags: ["Rice & Grains"], channel: "My Sunshinesz", id: "more-bzi_elaichi_baked_oats", video: "https://www.youtube.com/watch?v=SRx5PFjxcUs",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 418.9, "p": 20.7, "c": 57.6, "f": 13.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Elaichi Banana Baked Oats (1 square)"]},
@@ -6988,7 +6988,7 @@ const sections = [
         note: "Oats baked with banana, soy milk, jaggery and cardamom, studded with walnuts, served with dahi. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mixed Bean Jau Chaat", channel: "Recipe collection", id: "more-bzi_bean_jau_chaat", video: null,
+        name: "Mixed Bean Jau Chaat", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_bean_jau_chaat", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 481.2, "p": 20.9, "c": 96.9, "f": 3.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mixed Bean Jau Chaat (1 bowl)"]},
@@ -7001,7 +7001,7 @@ const sections = [
         note: "Barley, rajma, chickpeas and lobia tossed into a tangy chaat with onion, tomato, chutneys and pomegranate.",
       },
       {
-        name: "Shakarkandi Rajma Chaat", channel: "Recipe collection", id: "more-bzi_shakarkandi_chaat", video: null,
+        name: "Shakarkandi Rajma Chaat", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_shakarkandi_chaat", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 512.6, "p": 27.3, "c": 84.9, "f": 8.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shakarkandi Rajma Chaat (1 sweet potato)"]},
@@ -7015,7 +7015,7 @@ const sections = [
         note: "Baked sweet potato split and filled with spiced rajma, dahi, green chutney, onion and sev.",
       },
       {
-        name: "Jau Moong Dal Sabzi Soup", channel: "Recipe collection", id: "more-bzi_jau_moong_soup", video: null,
+        name: "Jau Moong Dal Sabzi Soup", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-bzi_jau_moong_soup", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 348.1, "p": 15.5, "c": 58.3, "f": 7.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Jau Moong Dal Sabzi Soup (about 2 cups)"]},
@@ -7035,7 +7035,7 @@ const sections = [
     note: "More vegetarian recipes (Thai × Indian). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Imli Paneer Pad Thai", channel: "Recipe collection", id: "more-thai_pad_thai", video: null,
+        name: "Imli Paneer Pad Thai", tags: ["Paneer"], channel: "Recipe collection", id: "more-thai_pad_thai", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 911.5, "p": 38.1, "c": 96.4, "f": 43.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Imli Paneer Pad Thai (1 big plate)"]},
@@ -7047,7 +7047,7 @@ const sections = [
         note: "Pad Thai's sauce is tamarind and palm sugar — so the Indian pantry already has it: imli and jaggery. With tofu, paneer, sprouted moong and peanuts.",
       },
       {
-        name: "Palak Green Curry with Paneer", channel: "Hebbars Kitchen", id: "more-thai_green_curry", video: "https://www.youtube.com/watch?v=syNyW7Q0k-g",
+        name: "Palak Green Curry with Paneer", tags: ["Paneer"], channel: "Hebbars Kitchen", id: "more-thai_green_curry", video: "https://www.youtube.com/watch?v=syNyW7Q0k-g",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 736.8, "p": 34.8, "c": 58.8, "f": 44.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Palak Green Curry with Paneer (about 1½ cups)"]},
@@ -7060,7 +7060,7 @@ const sections = [
         note: "Thai green curry with spinach and cilantro blended into the paste for a deeper green, paneer and tofu, and curry leaves in the tempering. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Red Curry Chana & Pumpkin", channel: "Recipe collection", id: "more-thai_red_curry", video: null,
+        name: "Red Curry Chana & Pumpkin", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-thai_red_curry", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 684.3, "p": 27.7, "c": 93.8, "f": 24.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Red Curry Chana & Pumpkin (about 1½ cups)"]},
@@ -7073,7 +7073,7 @@ const sections = [
         note: "A Thai red curry with pumpkin and chickpeas, spiced up with kashmiri chili and dhania, finished with yogurt to keep the coconut milk light.",
       },
       {
-        name: "Massaman Aloo Tofu", channel: "Recipe collection", id: "more-thai_massaman", video: null,
+        name: "Massaman Aloo Tofu", tags: ["Paneer"], channel: "Recipe collection", id: "more-thai_massaman", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 724.2, "p": 29.4, "c": 72.5, "f": 37.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Massaman Aloo Tofu (about 1½ cups)"]},
@@ -7086,7 +7086,7 @@ const sections = [
         note: "Massaman is Thailand's Persian-Indian curry — cinnamon, cardamom, cloves — so this leans in: potatoes, tofu and peanuts with a garam masala finish.",
       },
       {
-        name: "Panang Paneer", channel: "Recipe collection", id: "more-thai_panang", video: null,
+        name: "Panang Paneer", tags: ["Paneer"], channel: "Recipe collection", id: "more-thai_panang", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 910.7, "p": 46.1, "c": 61.3, "f": 58.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Panang Paneer (about 1½ cups)"]},
@@ -7099,7 +7099,7 @@ const sections = [
         note: "Thick, nutty Panang curry with peanut butter and lime leaves, made with paneer and bell peppers — like a Thai paneer makhani.",
       },
       {
-        name: "Tom Yum Rasam", channel: "Recipe collection", id: "more-thai_tom_yum", video: null,
+        name: "Tom Yum Rasam", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-thai_tom_yum", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 437.7, "p": 24.8, "c": 49.3, "f": 16.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tom Yum Rasam (about 2 cups)"]},
@@ -7112,7 +7112,7 @@ const sections = [
         note: "Tom yum and rasam are cousins — hot, sour, peppery broths. Lemongrass and lime leaves meet tamarind, tomato, rasam powder and curry leaves, with tofu and mushrooms.",
       },
       {
-        name: "Tom Kha Shorba with Tofu", channel: "Thai Caliente", id: "more-thai_tom_kha", video: "https://www.youtube.com/watch?v=gkgz7rXkeSE",
+        name: "Tom Kha Shorba with Tofu", tags: ["Paneer"], channel: "Thai Caliente", id: "more-thai_tom_kha", video: "https://www.youtube.com/watch?v=gkgz7rXkeSE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 374.8, "p": 27.0, "c": 19.9, "f": 23.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tom Kha Shorba with Tofu (about 2 cups)"]},
@@ -7124,7 +7124,7 @@ const sections = [
         note: "Creamy coconut-lemongrass tom kha with tofu, mushrooms and corn, warmed with ginger and black pepper like a shorba, made lighter with half coconut milk, half water. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Som Tam Kosambari", channel: "Recipe collection", id: "more-thai_som_tam", video: null,
+        name: "Som Tam Kosambari", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-thai_som_tam", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 616.3, "p": 47.1, "c": 60.9, "f": 24.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Som Tam Kosambari (1 big bowl)"]},
@@ -7136,7 +7136,7 @@ const sections = [
         note: "Thai green papaya salad meets Karnataka's kosambari: crunchy cabbage, carrot and cucumber pounded with lime, chili, jaggery and peanuts, with tofu, edamame and soaked moong dal. At least 40 g of protein.",
       },
       {
-        name: "Paneer Tofu Larb", channel: "Recipe collection", id: "more-thai_larb", video: null,
+        name: "Paneer Tofu Larb", tags: ["Paneer"], channel: "Recipe collection", id: "more-thai_larb", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 647.6, "p": 49.6, "c": 26.7, "f": 41.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Tofu Larb (about 2 cups + leaves)"]},
@@ -7148,7 +7148,7 @@ const sections = [
         note: "Larb is a warm minced salad with lime, mint and toasted rice powder. Here: crumbled paneer and tofu with chaat masala, eaten in napa cabbage cups. At least 40 g of protein.",
       },
       {
-        name: "Kra Pao Soya Keema", channel: "Recipe collection", id: "more-thai_kra_pao", video: null,
+        name: "Kra Pao Soya Keema", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-thai_kra_pao", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 539.4, "p": 30.3, "c": 58.5, "f": 21.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kra Pao Soya Keema (about 1½ cups)"]},
@@ -7161,7 +7161,7 @@ const sections = [
         note: "Thailand's favorite street lunch — a fiery basil stir-fry — made with soya keema and tofu, Indian-style with green chilies, over brown rice.",
       },
       {
-        name: "Khao Pad Masala Fried Rice", channel: "Recipe collection", id: "more-thai_khao_pad", video: null,
+        name: "Khao Pad Masala Fried Rice", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-thai_khao_pad", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 672.0, "p": 37.4, "c": 55.7, "f": 35.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Khao Pad Masala Fried Rice (about 1½ cups)"]},
@@ -7173,7 +7173,7 @@ const sections = [
         note: "Thai fried rice with tofu, edamame and paneer, seasoned with soy and lime — plus a little kashmiri chili and curry leaves for an Indo-Thai edge.",
       },
       {
-        name: "Paneer Tikka Satay", channel: "Recipe collection", id: "more-thai_satay", video: null,
+        name: "Paneer Tikka Satay", tags: ["Paneer"], channel: "Recipe collection", id: "more-thai_satay", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 923.4, "p": 51.8, "c": 55.7, "f": 59.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Tikka Satay (4 skewers + sauce)"]},
@@ -7194,7 +7194,7 @@ const sections = [
     note: "More vegetarian recipes (Restaurant). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Paneer Butter Masala", channel: "Your Food Lab", id: "more-r_paneer_butter_masala", video: "https://www.youtube.com/watch?v=bUounn_Bmy4",
+        name: "Paneer Butter Masala", tags: ["Paneer"], channel: "Your Food Lab", id: "more-r_paneer_butter_masala", video: "https://www.youtube.com/watch?v=bUounn_Bmy4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 922.3, "p": 50.7, "c": 67.5, "f": 56.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Butter Masala (about 1½ cups)"]},
@@ -7207,7 +7207,7 @@ const sections = [
         note: "The restaurant favorite: paneer in a silky, sweet-tangy tomato-cashew makhani gravy — made with yogurt and a spoon of butter instead of cream. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Dal Makhani (Restaurant)", channel: "Chef Ranveer Brar", id: "more-r_dal_makhani", video: "https://www.youtube.com/watch?v=mA5XjhdwJHc",
+        name: "Dal Makhani (Restaurant)", tags: ["Lentil & Beans"], channel: "Chef Ranveer Brar", id: "more-r_dal_makhani", video: "https://www.youtube.com/watch?v=mA5XjhdwJHc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 529.9, "p": 26.0, "c": 78.6, "f": 14.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dal Makhani (about 1½ cups)"]},
@@ -7220,7 +7220,7 @@ const sections = [
         note: "Whole urad and rajma slow-cooked until creamy with tomato, ginger and garlic — the dhaba classic, finished with a spoon of butter and yogurt instead of a pour of cream. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Amritsari Chole Kulche", channel: "Street Food Zaika", id: "more-r_chole_kulche", video: "https://www.youtube.com/watch?v=PMVn0mb1sAk",
+        name: "Amritsari Chole Kulche", tags: ["Lentil & Beans"], channel: "Street Food Zaika", id: "more-r_chole_kulche", video: "https://www.youtube.com/watch?v=PMVn0mb1sAk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 656.6, "p": 25.9, "c": 94.9, "f": 22.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Amritsari Chole Kulche (about 1½ cups + 2 kulchas)"]},
@@ -7234,7 +7234,7 @@ const sections = [
         note: "Dark, tangy Amritsari chole cooked with tea for color and anardana-style tang from lemon, with soft kulchas and pickled onions. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Shahi Paneer", channel: "bharatzkitchen HINDI", id: "more-r_shahi_paneer", video: "https://www.youtube.com/watch?v=G3-EASdBTOU",
+        name: "Shahi Paneer", tags: ["Paneer"], channel: "bharatzkitchen HINDI", id: "more-r_shahi_paneer", video: "https://www.youtube.com/watch?v=G3-EASdBTOU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 905.3, "p": 51.5, "c": 53.4, "f": 59.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shahi Paneer (about 1½ cups)"]},
@@ -7247,7 +7247,7 @@ const sections = [
         note: "A mild, royal white-ish gravy of onion, cashew and yogurt with cardamom and a pinch of saffron. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Malai Kofta", channel: "Chef Ranveer Brar", id: "more-r_malai_kofta", video: "https://www.youtube.com/watch?v=JKNXj6Hp8gA",
+        name: "Malai Kofta", tags: ["Rice & Grains"], channel: "Chef Ranveer Brar", id: "more-r_malai_kofta", video: "https://www.youtube.com/watch?v=JKNXj6Hp8gA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 885.5, "p": 39.8, "c": 88.4, "f": 46.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Malai Kofta (4 koftas + gravy)"]},
@@ -7260,7 +7260,7 @@ const sections = [
         note: "Soft paneer-potato koftas, baked instead of fried, in a creamy tomato-cashew gravy. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Tikka Masala", channel: "CookingShooking Hindi", id: "more-r_paneer_tikka_masala", video: "https://www.youtube.com/watch?v=Nru8aadeN0I",
+        name: "Paneer Tikka Masala", tags: ["Paneer"], channel: "CookingShooking Hindi", id: "more-r_paneer_tikka_masala", video: "https://www.youtube.com/watch?v=Nru8aadeN0I",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 895.8, "p": 49.8, "c": 60.4, "f": 56.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Tikka Masala (about 1½ cups)"]},
@@ -7273,7 +7273,7 @@ const sections = [
         note: "Charred, yogurt-marinated paneer tikka with peppers and onion, folded into a smoky onion-tomato masala. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kashmiri Dum Aloo", channel: "Your Food Lab", id: "more-r_dum_aloo", video: "https://www.youtube.com/watch?v=Kzkm3K8R4jk",
+        name: "Kashmiri Dum Aloo", tags: ["Vegetables"], channel: "Your Food Lab", id: "more-r_dum_aloo", video: "https://www.youtube.com/watch?v=Kzkm3K8R4jk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 652.6, "p": 21.3, "c": 94.6, "f": 22.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kashmiri Dum Aloo (about 1½ cups)"]},
@@ -7286,7 +7286,7 @@ const sections = [
         note: "Baby potatoes slow-cooked in a yogurt gravy with fennel, dry ginger and kashmiri chili — no onion, no garlic, the Kashmiri Pandit way. With chickpeas for protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Navratan Korma", channel: "Kunal Kapur", id: "more-r_navratan_korma", video: "https://www.youtube.com/watch?v=eXci8B6Oh7A",
+        name: "Navratan Korma", tags: ["Lentil & Beans"], channel: "Kunal Kapur", id: "more-r_navratan_korma", video: "https://www.youtube.com/watch?v=eXci8B6Oh7A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 822.0, "p": 36.8, "c": 76.0, "f": 45.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Navratan Korma (about 1½ cups)"]},
@@ -7299,7 +7299,7 @@ const sections = [
         note: "The 'nine jewels' korma: mixed vegetables, paneer and a few cashews and raisins in a mild, fragrant yogurt-cashew sauce. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Methi Malai Matar", channel: "CookingShooking Hindi", id: "more-r_methi_malai_matar", video: "https://www.youtube.com/watch?v=ZxP5uNHkW0s",
+        name: "Methi Malai Matar", tags: ["Vegetables"], channel: "CookingShooking Hindi", id: "more-r_methi_malai_matar", video: "https://www.youtube.com/watch?v=ZxP5uNHkW0s",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 780.3, "p": 41.9, "c": 64.6, "f": 43.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Methi Malai Matar (about 1½ cups)"]},
@@ -7312,7 +7312,7 @@ const sections = [
         note: "Green peas in a creamy, slightly sweet cashew-yogurt gravy perfumed with lots of kasuri methi — with paneer added for protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Veg Jalfrezi", channel: "NishaMadhulika", id: "more-r_veg_jalfrezi", video: "https://www.youtube.com/watch?v=Ph-3pIJ94cU",
+        name: "Paneer Veg Jalfrezi", tags: ["Paneer"], channel: "NishaMadhulika", id: "more-r_veg_jalfrezi", video: "https://www.youtube.com/watch?v=Ph-3pIJ94cU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 741.6, "p": 35.9, "c": 52.9, "f": 48.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Veg Jalfrezi (about 1½ cups)"]},
@@ -7325,7 +7325,7 @@ const sections = [
         note: "A quick, tangy, semi-dry stir-fry of peppers, onion, carrot, beans and paneer with tomato and vinegar. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Do Pyaza", channel: "bharatzkitchen HINDI", id: "more-r_paneer_do_pyaza", video: "https://www.youtube.com/watch?v=cWvbwRLXQao",
+        name: "Paneer Do Pyaza", tags: ["Paneer"], channel: "bharatzkitchen HINDI", id: "more-r_paneer_do_pyaza", video: "https://www.youtube.com/watch?v=cWvbwRLXQao",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 881.1, "p": 47.7, "c": 59.1, "f": 56.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Do Pyaza (about 1½ cups)"]},
@@ -7338,7 +7338,7 @@ const sections = [
         note: "'Double onion': onions cooked into the masala and more added as crisp petals at the end, with paneer. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Tandoori Paneer Tikka", channel: "Recipe collection", id: "more-r_paneer_tikka", video: null,
+        name: "Tandoori Paneer Tikka", tags: ["Paneer"], channel: "Recipe collection", id: "more-r_paneer_tikka", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 774.1, "p": 49.7, "c": 26.1, "f": 56.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Tandoori Paneer Tikka (6–8 skewered pieces)"]},
@@ -7352,7 +7352,7 @@ const sections = [
         note: "The tandoor starter at home: paneer, peppers and onion in a thick spiced yogurt marinade, charred under the broiler, with mint chutney and laccha onions.",
       },
       {
-        name: "Hara Bhara Kabab", channel: "Recipe collection", id: "more-r_hara_bhara_kabab", video: null,
+        name: "Hara Bhara Kabab", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-r_hara_bhara_kabab", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 548.7, "p": 27.1, "c": 47.2, "f": 30.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Hara Bhara Kabab (6 kababs)"]},
@@ -7365,7 +7365,7 @@ const sections = [
         note: "Bright green kababs of spinach, peas and potato with paneer — pan-seared with a spoon of oil instead of deep-fried.",
       },
       {
-        name: "Paneer Dum Biryani", channel: "Bhargain ka Chef", id: "more-r_paneer_dum_biryani", video: "https://www.youtube.com/watch?v=kbhxxZGUqKw",
+        name: "Paneer Dum Biryani", tags: ["Paneer"], channel: "Bhargain ka Chef", id: "more-r_paneer_dum_biryani", video: "https://www.youtube.com/watch?v=kbhxxZGUqKw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 791.0, "p": 42.3, "c": 71.3, "f": 40.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Dum Biryani (about 2 cups)"]},
@@ -7378,7 +7378,7 @@ const sections = [
         note: "Layered biryani of saffron brown basmati and a yogurt-marinated paneer and vegetable masala, sealed and cooked on dum, with birista and mint. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sarson da Saag & Makki di Roti", channel: "chefharpalsingh", id: "more-r_sarson_saag", video: "https://www.youtube.com/watch?v=JD6nX_uPWg0",
+        name: "Sarson da Saag & Makki di Roti", tags: ["Rice & Grains"], channel: "chefharpalsingh", id: "more-r_sarson_saag", video: "https://www.youtube.com/watch?v=JD6nX_uPWg0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 518.8, "p": 21.4, "c": 69.4, "f": 20.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sarson da Saag & Makki di Roti (about 1½ cups + 2 rotis)"]},
@@ -7391,7 +7391,7 @@ const sections = [
         note: "Punjab's winter meal: mustard greens and spinach slow-cooked and churned with ginger and garlic, with makki rotis, a little white butter and jaggery on the side. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masala Dosa", channel: "Your Food Lab", id: "more-r_masala_dosa", video: "https://www.youtube.com/watch?v=PFG1aeYgi7c",
+        name: "Masala Dosa", tags: ["Rice & Grains"], channel: "Your Food Lab", id: "more-r_masala_dosa", video: "https://www.youtube.com/watch?v=PFG1aeYgi7c",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Masala Dosa (2 dosas)"]},
@@ -7405,7 +7405,7 @@ const sections = [
         note: "Crisp, golden dosas filled with turmeric potato masala, with hotel-style sambar and coconut chutney. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mysore Masala Dosa", channel: "Your Food Lab", id: "more-r_mysore_dosa", video: "https://www.youtube.com/watch?v=mClDa-jZ7YU",
+        name: "Mysore Masala Dosa", tags: ["Rice & Grains"], channel: "Your Food Lab", id: "more-r_mysore_dosa", video: "https://www.youtube.com/watch?v=mClDa-jZ7YU",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mysore Masala Dosa (2 dosas)"]},
@@ -7419,7 +7419,7 @@ const sections = [
         note: "The masala dosa with a fiery red garlic-chili chutney spread inside before the potato goes in. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Onion Rava Dosa", channel: "Hebbars Kitchen", id: "more-r_rava_dosa", video: "https://www.youtube.com/watch?v=_g9HsPRdWUc",
+        name: "Onion Rava Dosa", tags: ["Rice & Grains"], channel: "Hebbars Kitchen", id: "more-r_rava_dosa", video: "https://www.youtube.com/watch?v=_g9HsPRdWUc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 805.9, "p": 24.0, "c": 112.4, "f": 30.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Onion Rava Dosa (2 dosas)"]},
@@ -7433,7 +7433,7 @@ const sections = [
         note: "The lacy, crisp instant dosa: a thin rava-rice flour batter with onion, cumin, pepper and curry leaves — no fermenting needed. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Medu Vada Sambar", channel: "Your Food Lab", id: "more-r_medu_vada", video: "https://www.youtube.com/watch?v=kbA6oksGIXo",
+        name: "Medu Vada Sambar", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-r_medu_vada", video: "https://www.youtube.com/watch?v=kbA6oksGIXo",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 589.5, "p": 24.3, "c": 76.5, "f": 22.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Medu Vada Sambar (4 small vadas)"]},
@@ -7447,7 +7447,7 @@ const sections = [
         note: "Fluffy urad dal vadas with pepper and curry leaves, made in an appe pan with a teaspoon of oil, dunked in sambar. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kuzhi Paniyaram", channel: "The Traditional Life", id: "more-r_paniyaram", video: "https://www.youtube.com/watch?v=FluqZX7MLrc",
+        name: "Kuzhi Paniyaram", tags: ["Lentil & Beans"], channel: "The Traditional Life", id: "more-r_paniyaram", video: "https://www.youtube.com/watch?v=FluqZX7MLrc",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kuzhi Paniyaram (10–12 paniyarams)"]},
@@ -7461,7 +7461,7 @@ const sections = [
         note: "Crisp-outside, soft-inside dumplings from dosa batter with onion, carrot and curry leaves, made in an appe pan. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Hotel-Style Veg Kurma", channel: "Dindigul Food Court", id: "more-r_veg_kurma", video: "https://www.youtube.com/watch?v=PIBNjXiYJJY",
+        name: "Hotel-Style Veg Kurma", tags: ["Vegetables"], channel: "Dindigul Food Court", id: "more-r_veg_kurma", video: "https://www.youtube.com/watch?v=PIBNjXiYJJY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 782.9, "p": 34.2, "c": 65.8, "f": 47.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Hotel-Style Veg Kurma (about 1½ cups)"]},
@@ -7474,7 +7474,7 @@ const sections = [
         note: "The coconut-poppy-fennel kurma served with parotta and chapati in every Tamil hotel, with vegetables and paneer. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Chettinad", channel: "Hebbars Kitchen", id: "more-r_paneer_chettinad", video: "https://www.youtube.com/watch?v=ZmsvSNrHyEc",
+        name: "Paneer Chettinad", tags: ["Paneer"], channel: "Hebbars Kitchen", id: "more-r_paneer_chettinad", video: "https://www.youtube.com/watch?v=ZmsvSNrHyEc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 819.3, "p": 41.0, "c": 43.8, "f": 58.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Paneer Chettinad (about 1½ cups)"]},
@@ -7487,7 +7487,7 @@ const sections = [
         note: "Paneer in Chettinad's peppery, freshly roasted masala of coconut, fennel, coriander, chili and black pepper. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mushroom Pepper Fry", channel: "Madras Samayal", id: "more-r_mushroom_pepper_fry", video: "https://www.youtube.com/watch?v=_v6MjEk0Yck",
+        name: "Mushroom Pepper Fry", tags: ["Vegetables"], channel: "Madras Samayal", id: "more-r_mushroom_pepper_fry", video: "https://www.youtube.com/watch?v=_v6MjEk0Yck",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 456.6, "p": 25.6, "c": 14.1, "f": 36.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mushroom Pepper Fry (about 1½ cups)"]},
@@ -7499,7 +7499,7 @@ const sections = [
         note: "A dry, peppery, curry-leaf-studded mushroom and paneer fry — a Chettinad restaurant starter. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Gobi 65", channel: "Recipe collection", id: "more-r_gobi_65", video: null,
+        name: "Gobi 65", tags: ["Vegetables"], channel: "Recipe collection", id: "more-r_gobi_65", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 349.6, "p": 17.1, "c": 35.4, "f": 16.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Gobi 65 (about 2 cups)"]},
@@ -7512,7 +7512,7 @@ const sections = [
         note: "Cauliflower in a spicy red yogurt-cornstarch batter with curry leaves, air-fried crisp instead of deep-fried.",
       },
       {
-        name: "Rava Idli", channel: "Recipe collection", id: "more-r_rava_idli", video: null,
+        name: "Rava Idli", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-r_rava_idli", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 726.1, "p": 29.4, "c": 95.1, "f": 26.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Rava Idli (4 idlis)"]},
@@ -7526,7 +7526,7 @@ const sections = [
         note: "Bangalore's MTR-style instant idlis: roasted rava with yogurt, cashews, carrot and a mustard-seed tempering.",
       },
       {
-        name: "Khara Bath", channel: "Hebbars Kitchen", id: "more-r_khara_bath", video: "https://www.youtube.com/watch?v=OXuH-G_-FDU",
+        name: "Khara Bath", tags: ["Lentil & Beans"], channel: "Hebbars Kitchen", id: "more-r_khara_bath", video: "https://www.youtube.com/watch?v=OXuH-G_-FDU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 572.0, "p": 17.4, "c": 74.5, "f": 24.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Khara Bath (about 1½ cups)"]},
@@ -7539,7 +7539,7 @@ const sections = [
         note: "Karnataka's spiced vegetable rava bath — the savory half of the famous 'chow chow bath' — with peas, beans and a little ghee. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ghee Podi Idli", channel: "Sharmis Passions", id: "more-r_podi_idli", video: "https://www.youtube.com/watch?v=UBFyNA0CQGc",
+        name: "Ghee Podi Idli", tags: ["Rice & Grains"], channel: "Sharmis Passions", id: "more-r_podi_idli", video: "https://www.youtube.com/watch?v=UBFyNA0CQGc",
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Ghee Podi Idli (about 12 mini idlis)"]},
@@ -7552,7 +7552,7 @@ const sections = [
         note: "Mini idlis tossed in ghee and homemade gunpowder (molagai podi) made from roasted dals, sesame and chili. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ennai Kathirikai Kuzhambu", channel: "Yogambal Sundar", id: "more-r_ennai_kathirikai", video: "https://www.youtube.com/watch?v=-VRuyEtp1T4",
+        name: "Ennai Kathirikai Kuzhambu", tags: ["Lentil & Beans"], channel: "Yogambal Sundar", id: "more-r_ennai_kathirikai", video: "https://www.youtube.com/watch?v=-VRuyEtp1T4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 686.0, "p": 18.1, "c": 93.7, "f": 30.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Ennai Kathirikai Kuzhambu (about 1½ cups)"]},
@@ -7565,7 +7565,7 @@ const sections = [
         note: "Small eggplants stuffed with a roasted peanut-sesame-coconut masala, simmered in a tangy tamarind gravy — the Chettinad wedding classic, made with less oil. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Misal Pav", channel: "Your Food Lab", id: "more-r_misal_pav", video: "https://www.youtube.com/watch?v=ozyN7b3jP-A",
+        name: "Misal Pav", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-r_misal_pav", video: "https://www.youtube.com/watch?v=ozyN7b3jP-A",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 712.1, "p": 26.0, "c": 84.0, "f": 31.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Misal Pav (1 bowl + 2 pav)"]},
@@ -7578,7 +7578,7 @@ const sections = [
         note: "Pune-Kolhapur misal: sprouted matki in a fiery, oily-red kat (rassa), topped with farsan, onion and lemon, with pav. Here with less oil and a gentler kat you can turn up. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Vada Pav", channel: "Recipe collection", id: "more-r_vada_pav", video: null,
+        name: "Vada Pav", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-r_vada_pav", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 819.9, "p": 27.9, "c": 120.1, "f": 27.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Vada Pav (2 vada pav)"]},
@@ -7591,7 +7591,7 @@ const sections = [
         note: "Mumbai's burger: a garlicky potato vada in a besan coat, tucked into pav with dry garlic chutney and green chutney. The vada is made in an appe pan instead of a kadhai of oil.",
       },
       {
-        name: "Pav Bhaji", channel: "Your Food Lab", id: "more-r_pav_bhaji", video: "https://www.youtube.com/watch?v=Gbuse4WX01I",
+        name: "Pav Bhaji", tags: ["Vegetables"], channel: "Your Food Lab", id: "more-r_pav_bhaji", video: "https://www.youtube.com/watch?v=Gbuse4WX01I",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 560.3, "p": 21.2, "c": 88.4, "f": 15.9}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pav Bhaji (about 1½ cups + 2 pav)"]},
@@ -7603,7 +7603,7 @@ const sections = [
         note: "Mumbai's buttery mashed vegetable curry with pav — loaded with cauliflower, peas, carrot and pepper and made with a fraction of the street-stall butter. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sabudana Khichdi", channel: "Your Food Lab", id: "more-r_sabudana_khichdi", video: "https://www.youtube.com/watch?v=9zSoII4rYS0",
+        name: "Sabudana Khichdi", tags: ["Rice & Grains"], channel: "Your Food Lab", id: "more-r_sabudana_khichdi", video: "https://www.youtube.com/watch?v=9zSoII4rYS0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 722.9, "p": 20.4, "c": 98.4, "f": 29.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sabudana Khichdi (about 1½ cups)"]},
@@ -7616,7 +7616,7 @@ const sections = [
         note: "The fasting-day favorite: soft, separate sabudana pearls with roasted peanuts, potato, cumin and green chili, with dahi on the side for protein. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sabudana Vada", channel: "CookingShooking Hindi", id: "more-r_sabudana_vada", video: "https://www.youtube.com/watch?v=LLd4Yb2oR7g",
+        name: "Sabudana Vada", tags: ["Rice & Grains"], channel: "CookingShooking Hindi", id: "more-r_sabudana_vada", video: "https://www.youtube.com/watch?v=LLd4Yb2oR7g",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 695.0, "p": 22.1, "c": 96.8, "f": 26.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sabudana Vada (6 small vadas)"]},
@@ -7630,7 +7630,7 @@ const sections = [
         note: "Crisp sabudana, potato and peanut vadas, made in an appe pan or air fryer instead of deep-fried. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Kothimbir Vadi", channel: "Sarita's Kitchen", id: "more-r_kothimbir_vadi", video: "https://www.youtube.com/watch?v=44Z1bigIk_0",
+        name: "Kothimbir Vadi", tags: ["Rice & Grains"], channel: "Sarita's Kitchen", id: "more-r_kothimbir_vadi", video: "https://www.youtube.com/watch?v=44Z1bigIk_0",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 319.9, "p": 10.7, "c": 31.3, "f": 17.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kothimbir Vadi (6 pieces)"]},
@@ -7643,7 +7643,7 @@ const sections = [
         note: "A steamed, then crisped cake of cilantro and besan with sesame — a Maharashtrian thali favorite. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Zunka Bhakri", channel: "गावरान- एक खरी चव ! - Gavran", id: "more-r_zunka_bhakri", video: "https://www.youtube.com/watch?v=4NUV0dKWX6I",
+        name: "Zunka Bhakri", tags: ["Millet"], channel: "गावरान- एक खरी चव ! - Gavran", id: "more-r_zunka_bhakri", video: "https://www.youtube.com/watch?v=4NUV0dKWX6I",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 568.3, "p": 22.5, "c": 78.2, "f": 19.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Zunka Bhakri (1 plate)"]},
@@ -7657,7 +7657,7 @@ const sections = [
         note: "Dry, crumbly zunka — besan cooked with lots of onion, garlic and green chili — with jowar bhakri, thecha-style green chili and raw onion. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Varan Bhaat", channel: "Tasty Safar", id: "more-r_varan_bhaat", video: "https://www.youtube.com/watch?v=-t_25XGZ-XU",
+        name: "Varan Bhaat", tags: ["Rice & Grains"], channel: "Tasty Safar", id: "more-r_varan_bhaat", video: "https://www.youtube.com/watch?v=-t_25XGZ-XU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 475.8, "p": 23.8, "c": 72.9, "f": 10.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Varan Bhaat (1 plate)"]},
@@ -7671,7 +7671,7 @@ const sections = [
         note: "The simplest Maharashtrian comfort plate: plain toor dal varan with ghee, lemon and brown rice. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Veg Kolhapuri", channel: "Your Food Lab", id: "more-r_veg_kolhapuri", video: "https://www.youtube.com/watch?v=pAmemTkFkgk",
+        name: "Veg Kolhapuri", tags: ["Vegetables"], channel: "Your Food Lab", id: "more-r_veg_kolhapuri", video: "https://www.youtube.com/watch?v=pAmemTkFkgk",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 810.3, "p": 34.1, "c": 67.2, "f": 50.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Veg Kolhapuri (about 1½ cups)"]},
@@ -7684,7 +7684,7 @@ const sections = [
         note: "Mixed vegetables and paneer in Kolhapur's fiery, roasted coconut-sesame-chili masala. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sol Kadhi", channel: "MadhurasRecipe Marathi", id: "more-r_sol_kadhi", video: "https://www.youtube.com/watch?v=eSKFZ1DA8hI",
+        name: "Sol Kadhi", tags: ["Lentil & Beans"], channel: "MadhurasRecipe Marathi", id: "more-r_sol_kadhi", video: "https://www.youtube.com/watch?v=eSKFZ1DA8hI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 124.5, "p": 1.3, "c": 3.2, "f": 12.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sol Kadhi (1 glass)"]},
@@ -7696,7 +7696,7 @@ const sections = [
         note: "The pink Konkan digestive of kokum and coconut milk with garlic, green chili and cilantro — served cold with every coastal thali. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Shev Bhaji", channel: "MadhurasRecipe Marathi", id: "more-r_shev_bhaji", video: "https://www.youtube.com/watch?v=SuA0Ax_ymJI",
+        name: "Shev Bhaji", tags: ["Vegetables"], channel: "MadhurasRecipe Marathi", id: "more-r_shev_bhaji", video: "https://www.youtube.com/watch?v=SuA0Ax_ymJI",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 824.1, "p": 19.4, "c": 96.0, "f": 42.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Shev Bhaji (about 1½ cups)"]},
@@ -7709,7 +7709,7 @@ const sections = [
         note: "Khandesh's spicy dhaba curry: a roasted onion-coconut kala masala rassa with thick besan shev added just before serving. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Puran Poli", channel: "Your Food Lab", id: "more-r_puran_poli", video: "https://www.youtube.com/watch?v=4z4vXDqjZtw",
+        name: "Puran Poli", tags: ["Other"], channel: "Your Food Lab", id: "more-r_puran_poli", video: "https://www.youtube.com/watch?v=4z4vXDqjZtw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 670.0, "p": 19.6, "c": 110.6, "f": 19.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Puran Poli (2 polis)"]},
@@ -7721,7 +7721,7 @@ const sections = [
         note: "The festival sweet: whole wheat flatbreads stuffed with cardamom-scented chana dal and jaggery, with a spoon of ghee. A treat — served with katachi amti in Maharashtrian homes. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Pani Puri", channel: "Your Food Lab", id: "more-r_pani_puri", video: "https://www.youtube.com/watch?v=zkbDNyV9G3w",
+        name: "Pani Puri", tags: ["Rice & Grains"], channel: "Your Food Lab", id: "more-r_pani_puri", video: "https://www.youtube.com/watch?v=zkbDNyV9G3w",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 541.5, "p": 13.1, "c": 92.5, "f": 15.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Pani Puri (12 puris)"]},
@@ -7734,7 +7734,7 @@ const sections = [
         note: "Crisp puris filled with spiced potato and chickpeas and dunked in a tangy mint-cilantro pani, with sweet imli chutney. Store-bought shells, homemade everything else. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Sev Puri", channel: "Your Food Lab", id: "more-r_sev_puri", video: "https://www.youtube.com/watch?v=Jm59igYS5iY",
+        name: "Sev Puri", tags: ["Rice & Grains"], channel: "Your Food Lab", id: "more-r_sev_puri", video: "https://www.youtube.com/watch?v=Jm59igYS5iY",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 622.6, "p": 14.6, "c": 96.1, "f": 22.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Sev Puri (8 sev puris)"]},
@@ -7748,7 +7748,7 @@ const sections = [
         note: "Flat papdi topped with potato, onion, tomato, three chutneys, chaat masala and a blanket of sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mumbai Bhel Puri", channel: "Recipe collection", id: "more-r_bhel_puri", video: null,
+        name: "Mumbai Bhel Puri", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-r_bhel_puri", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 730.8, "p": 21.0, "c": 112.2, "f": 24.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Mumbai Bhel Puri (1 big bowl)"]},
@@ -7762,7 +7762,7 @@ const sections = [
         note: "Chowpatty-style bhel: puffed rice tossed with potato, onion, tomato, peanuts, sev and green and sweet chutneys — with sprouts and roasted chana for crunch and protein.",
       },
       {
-        name: "Dahi Puri", channel: "CookwithParul", id: "more-r_dahi_puri", video: "https://www.youtube.com/watch?v=Fj0U8k0OfME",
+        name: "Dahi Puri", tags: ["Rice & Grains"], channel: "CookwithParul", id: "more-r_dahi_puri", video: "https://www.youtube.com/watch?v=Fj0U8k0OfME",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 562.4, "p": 18.8, "c": 88.9, "f": 16.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dahi Puri (8 puris)"]},
@@ -7777,7 +7777,7 @@ const sections = [
         note: "Puris filled with potato and sprouts, drowned in sweet, cool dahi and chutneys and topped with sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Papdi Chaat", channel: "Masala Kitchen", id: "more-r_papdi_chaat", video: "https://www.youtube.com/watch?v=grHKX-N-vm8",
+        name: "Papdi Chaat", tags: ["Lentil & Beans"], channel: "Masala Kitchen", id: "more-r_papdi_chaat", video: "https://www.youtube.com/watch?v=grHKX-N-vm8",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 681.3, "p": 21.2, "c": 105.5, "f": 21.4}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Papdi Chaat (1 plate)"]},
@@ -7792,7 +7792,7 @@ const sections = [
         note: "Delhi's layered chaat: crisp papdi, potato and chickpeas under sweet dahi, chutneys, chaat masala and pomegranate. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Ragda Pattice", channel: "Your Food Lab", id: "more-r_ragda_pattice", video: "https://www.youtube.com/watch?v=sGHpPi0zYvc",
+        name: "Ragda Pattice", tags: ["Lentil & Beans"], channel: "Your Food Lab", id: "more-r_ragda_pattice", video: "https://www.youtube.com/watch?v=sGHpPi0zYvc",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 700.5, "p": 20.2, "c": 112.6, "f": 21.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Ragda Pattice (2 pattice + ragda)"]},
@@ -7806,7 +7806,7 @@ const sections = [
         note: "Pan-crisped potato patties smothered in ragda — a soft white-pea curry — with chutneys, onion and sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Aloo Tikki Chaat", channel: "Your Food Lab", id: "more-r_aloo_tikki_chaat", video: "https://www.youtube.com/watch?v=2qq5fmo54SE",
+        name: "Aloo Tikki Chaat", tags: ["Vegetables"], channel: "Your Food Lab", id: "more-r_aloo_tikki_chaat", video: "https://www.youtube.com/watch?v=2qq5fmo54SE",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 707.6, "p": 24.0, "c": 115.6, "f": 19.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Aloo Tikki Chaat (2 tikkis)"]},
@@ -7821,7 +7821,7 @@ const sections = [
         note: "Crisp potato tikkis stuffed with spiced chana dal, topped with chole, dahi, chutneys and onion. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Baked Samosa Chaat", channel: "Recipe collection", id: "more-r_samosa_chaat", video: null,
+        name: "Baked Samosa Chaat", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-r_samosa_chaat", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 943.0, "p": 30.3, "c": 142.9, "f": 31.5}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Baked Samosa Chaat (2 samosas + chole)"]},
@@ -7836,7 +7836,7 @@ const sections = [
         note: "Crisp baked whole wheat samosas broken over hot chole and topped with dahi, chutneys, onion and sev.",
       },
       {
-        name: "Dahi Bhalla", channel: "Recipe collection", id: "more-r_dahi_bhalla", video: null,
+        name: "Dahi Bhalla", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-r_dahi_bhalla", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 483.1, "p": 23.7, "c": 78.2, "f": 10.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Dahi Bhalla (4 bhallas)"]},
@@ -7850,7 +7850,7 @@ const sections = [
         note: "Soft urad dal bhallas, made in an appe pan, soaked and drenched in cool sweetened dahi with chutneys and roasted cumin.",
       },
       {
-        name: "Kutchi Dabeli", channel: "CookingShooking Hindi", id: "more-r_dabeli", video: "https://www.youtube.com/watch?v=vAc1uUaFAhw",
+        name: "Kutchi Dabeli", tags: ["Vegetables"], channel: "CookingShooking Hindi", id: "more-r_dabeli", video: "https://www.youtube.com/watch?v=vAc1uUaFAhw",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 808.9, "p": 22.9, "c": 123.4, "f": 28.0}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Kutchi Dabeli (2 dabeli)"]},
@@ -7863,7 +7863,7 @@ const sections = [
         note: "The sweet-spicy-tangy Kutchi street burger: dabeli-spiced potato in pav with masala peanuts, pomegranate, onion and sev. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Khasta Kachori Chaat", channel: "Chef Ranveer Brar", id: "more-r_kachori_chaat", video: "https://www.youtube.com/watch?v=nuFTQgR5K3Y",
+        name: "Khasta Kachori Chaat", tags: ["Lentil & Beans"], channel: "Chef Ranveer Brar", id: "more-r_kachori_chaat", video: "https://www.youtube.com/watch?v=nuFTQgR5K3Y",
         macros: {"na": "This recipe needs ready-made kachori, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Dish", "items": ["Khasta Kachori Chaat (2 kachoris)"]},
@@ -7886,7 +7886,7 @@ const sections = [
     note: "More vegetarian recipes (Kids' lunch boxes). They are on this page only and are never picked by the meal planner. Where there is a video, it is a close match found by searching YouTube, not this exact recipe. Every amount is for one serving.",
     recipes: [
       {
-        name: "Paneer Kathi Roll Pinwheels", channel: "Recipe collection", id: "more-kid_kathi", video: null,
+        name: "Paneer Kathi Roll Pinwheels", tags: ["Paneer"], channel: "Recipe collection", id: "more-kid_kathi", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 484.8, "p": 23.3, "c": 43.1, "f": 26.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer kathi roll pinwheels (1 roll, cut in 6)"]},
@@ -7900,7 +7900,7 @@ const sections = [
         note: "Mild paneer tikka rolled up in a whole wheat wrap and sliced into pinwheels, with apple slices, carrot sticks and a cucumber yogurt dip.",
       },
       {
-        name: "Cheesy Moong Cheela Fingers", channel: "Cook with Mansi", id: "more-kid_cheela", video: "https://www.youtube.com/watch?v=z7sSZNdYrPU",
+        name: "Cheesy Moong Cheela Fingers", tags: ["Lentil & Beans"], channel: "Cook with Mansi", id: "more-kid_cheela", video: "https://www.youtube.com/watch?v=z7sSZNdYrPU",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 373.4, "p": 22.3, "c": 38.3, "f": 15.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Cheesy moong dal cheela fingers (2 cheelas)"]},
@@ -7913,7 +7913,7 @@ const sections = [
         note: "Golden moong dal pancakes folded around melted cheddar and cut into fingers, with orange segments, cucumber and a yogurt dip. Gluten-free. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Masala Pasta with Paneer & Peas", channel: "Recipe collection", id: "more-kid_pasta", video: null,
+        name: "Masala Pasta with Paneer & Peas", tags: ["Paneer"], channel: "Recipe collection", id: "more-kid_pasta", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 552.7, "p": 25.7, "c": 64.1, "f": 25.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Masala pasta with paneer and peas (about 1¼ cups)"]},
@@ -7925,7 +7925,7 @@ const sections = [
         note: "Indian-style tomato pasta with paneer, peas and a little cheddar — mildly spiced, never spicy — with pomegranate and cucumber on the side.",
       },
       {
-        name: "Paneer Corn Sandwich", channel: "INDIANCOOKINEVERYDAY", id: "more-kid_sandwich", video: "https://www.youtube.com/watch?v=71EIOvN5tuM",
+        name: "Paneer Corn Sandwich", tags: ["Paneer"], channel: "INDIANCOOKINEVERYDAY", id: "more-kid_sandwich", video: "https://www.youtube.com/watch?v=71EIOvN5tuM",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 550.5, "p": 29.7, "c": 60.7, "f": 23.3}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer corn sandwich (1 sandwich, cut in 4)"]},
@@ -7938,7 +7938,7 @@ const sections = [
         note: "A mild Bombay-style toasted sandwich with paneer, sweet corn and cheddar, cut into triangles, with apple and carrot sticks. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Rajma Cheese Quesadilla", channel: "Recipe collection", id: "more-kid_quesadilla", video: null,
+        name: "Rajma Cheese Quesadilla", tags: ["Lentil & Beans"], channel: "Recipe collection", id: "more-kid_quesadilla", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 444.4, "p": 21.7, "c": 51.4, "f": 17.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Rajma cheese quesadilla (1 quesadilla, cut in 4)"]},
@@ -7951,7 +7951,7 @@ const sections = [
         note: "Indian-Mexican lunch: mashed rajma, corn and cheddar in a crisp whole wheat quesadilla, with orange segments and a yogurt dip.",
       },
       {
-        name: "Mini Thepla & Paneer Bites", channel: "Recipe collection", id: "more-kid_thepla", video: null,
+        name: "Mini Thepla & Paneer Bites", tags: ["Paneer"], channel: "Recipe collection", id: "more-kid_thepla", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 461.9, "p": 25.4, "c": 42.4, "f": 23.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Mini methi theplas (4 small theplas)"]},
@@ -7965,7 +7965,7 @@ const sections = [
         note: "Soft little methi theplas — the Gujarati lunch-box classic — with mild paneer tikka bites, pomegranate and a yogurt dip.",
       },
       {
-        name: "Hummus, Pita & Paneer Box", channel: "Your Food Lab", id: "more-kid_hummus", video: "https://www.youtube.com/watch?v=b8VHj3cM0_4",
+        name: "Hummus, Pita & Paneer Box", tags: ["Paneer"], channel: "Your Food Lab", id: "more-kid_hummus", video: "https://www.youtube.com/watch?v=b8VHj3cM0_4",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 463.0, "p": 21.4, "c": 49.7, "f": 23.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Pita triangles (1 pita, cut in 6)"]},
@@ -7978,7 +7978,7 @@ const sections = [
         note: "A dip-and-build box: hummus, warm pita triangles, mild paneer tikka bites, cucumber, carrots and cherry tomatoes. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Matar Poha", channel: "Recipe collection", id: "more-kid_poha", video: null,
+        name: "Paneer Matar Poha", tags: ["Paneer"], channel: "Recipe collection", id: "more-kid_poha", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 397.2, "p": 18.9, "c": 45.5, "f": 17.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer matar poha (about 1¼ cups)"]},
@@ -7991,7 +7991,7 @@ const sections = [
         note: "Maharashtrian kanda poha made lunch-box friendly: soft flattened rice with peas and paneer, no peanuts and no chili, with apple and a yogurt cup. Gluten-free.",
       },
       {
-        name: "Ghee Mini Idlis", channel: "Recipe collection", id: "more-kid_mini_idli", video: null,
+        name: "Ghee Mini Idlis", tags: ["Vegetables"], channel: "Recipe collection", id: "more-kid_mini_idli", video: null,
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Ghee mini idlis (12 mini idlis)"]},
@@ -8004,7 +8004,7 @@ const sections = [
         note: "Bite-size idlis tossed in a little ghee and cumin, with paneer cubes, cucumber, orange and a yogurt dip.",
       },
       {
-        name: "Paneer Mac & Cheese", channel: "Recipe collection", id: "more-kid_mac", video: null,
+        name: "Paneer Mac & Cheese", tags: ["Paneer"], channel: "Recipe collection", id: "more-kid_mac", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 571.7, "p": 26.5, "c": 69.3, "f": 23.8}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer mac and cheese (about 1¼ cups)"]},
@@ -8016,7 +8016,7 @@ const sections = [
         note: "Whole wheat mac and cheese with peas and soft paneer cubes — creamy even at room temperature.",
       },
       {
-        name: "Mini Veg Uttapam", channel: "Recipe collection", id: "more-kid_uttapam", video: null,
+        name: "Mini Veg Uttapam", tags: ["Rice & Grains"], channel: "Recipe collection", id: "more-kid_uttapam", video: null,
         macros: {"na": "This recipe needs idli/dosa batter, and its amount can't be turned into a weight without guessing."}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Mini veg uttapam (4 mini uttapams)"]},
@@ -8029,7 +8029,7 @@ const sections = [
         note: "Little uttapams topped with paneer, carrot, tomato and corn, with pomegranate and a yogurt dip.",
       },
       {
-        name: "Paneer Matar Pulao (Kids' lunch boxes)", channel: "Vismai Food", id: "more-kid_pulao", video: "https://www.youtube.com/watch?v=9Mqa7BaJyao",
+        name: "Paneer Matar Pulao (Kids' lunch boxes)", tags: ["Paneer"], channel: "Vismai Food", id: "more-kid_pulao", video: "https://www.youtube.com/watch?v=9Mqa7BaJyao",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 453.2, "p": 21.3, "c": 49.5, "f": 20.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer matar pulao (mild) (about 1 cup)"]},
@@ -8042,7 +8042,7 @@ const sections = [
         note: "Gently spiced brown rice pulao with peas, carrot and golden paneer, with cucumber and a yogurt dip. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Paneer Paratha Bites", channel: "Garima ki Rasoi", id: "more-kid_paratha_bites", video: "https://www.youtube.com/watch?v=hLw9pKt2d6I",
+        name: "Paneer Paratha Bites", tags: ["Paneer"], channel: "Garima ki Rasoi", id: "more-kid_paratha_bites", video: "https://www.youtube.com/watch?v=hLw9pKt2d6I",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 459.1, "p": 23.7, "c": 45.8, "f": 23.2}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer paratha bites (2 small parathas, cut in 6)"]},
@@ -8055,7 +8055,7 @@ const sections = [
         note: "Small paneer-stuffed parathas cut into strips for little hands, with carrot, grapes and a yogurt dip. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Baked Tofu Nuggets", channel: "Uthra Srini kitchen", id: "more-kid_tofu_nuggets", video: "https://www.youtube.com/watch?v=PyKAeezPdRA",
+        name: "Baked Tofu Nuggets", tags: ["Paneer"], channel: "Uthra Srini kitchen", id: "more-kid_tofu_nuggets", video: "https://www.youtube.com/watch?v=PyKAeezPdRA",
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 365.0, "p": 24.1, "c": 32.9, "f": 15.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Baked tofu nuggets (about 10 nuggets)"]},
@@ -8068,7 +8068,7 @@ const sections = [
         note: "Crispy oven-baked tofu nuggets with a yogurt dip, cucumber and orange — the nugget box, made healthy. The video is a close match found by searching YouTube, not this exact recipe, so its amounts may differ from this list.",
       },
       {
-        name: "Mini Dhokla Box", channel: "Recipe collection", id: "more-kid_dhokla", video: null,
+        name: "Mini Dhokla Box", tags: ["Other"], channel: "Recipe collection", id: "more-kid_dhokla", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 330.7, "p": 17.1, "c": 35.2, "f": 14.7}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Mini dhokla (mild) (6 small squares)"]},
@@ -8080,7 +8080,7 @@ const sections = [
         note: "Soft, spongy, chili-free dhokla squares with paneer cubes and grapes.",
       },
       {
-        name: "Paneer Pita Pizzas", channel: "Recipe collection", id: "more-kid_pita_pizza", video: null,
+        name: "Paneer Pita Pizzas", tags: ["Paneer"], channel: "Recipe collection", id: "more-kid_pita_pizza", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 538.2, "p": 25.2, "c": 59.5, "f": 25.6}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Paneer pita pizza (1 pita, cut in 4)"]},
@@ -8092,7 +8092,7 @@ const sections = [
         note: "Pizza day, made healthy: whole wheat pita topped with tomato, cheddar, paneer, corn and peppers, cut into slices, with grapes and cucumber.",
       },
       {
-        name: "Baked Chana Paneer Tikkis", channel: "Recipe collection", id: "more-kid_tikki", video: null,
+        name: "Baked Chana Paneer Tikkis", tags: ["Paneer"], channel: "Recipe collection", id: "more-kid_tikki", video: null,
         macros: {"servings": 1, "serving": "1 serving, as the recipe is written", "basis": "source", "why": "Every recipe in this collection is written for one serving.", "kcal": 442.7, "p": 20.2, "c": 54.4, "f": 18.1}, from: "Recipe collection",
         ingredients: [
           {"title": "Main", "items": ["Baked chana paneer tikkis (4 small tikkis)"]},
@@ -8103,6 +8103,4046 @@ const sections = [
           {"title": "Cucumber yogurt dip: 3 tbsp", "items": ["3 tbsp plain Greek yogurt", "0.06 cucumber", "¼ tbsp mint, chopped", "0.02 tsp salt"]},
         ],
         note: "Crispy oven-baked chickpea, potato and paneer patties with a yogurt dip, apple and carrot sticks.",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-main",
+    title: "More recipes: Recipe library, main courses",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Coconut Chickpea Curry, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-chickpea-coconut-curry-instant-pot", video: "https://www.youtube.com/watch?v=7opHm5rvVJE", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chickpea-coconut-curry-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 380.0, "p": 10.0, "c": 30.0, "f": 27.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp olive oil", "1 bay leaf, optional", "1 tsp cumin (jeera) seeds", "1 medium onion, finely chopped", "1 tbsp ginger and garlic, minced", "1 cup tomato puree, or crushed tomatoes", "1 can (15 oz each) chickpeas (drain and rinsed, about 1.5-2 cups cooked chickpeas", "1 can (13.5 oz) full-fat coconut milk, about 1.5 cups", "Salt, to taste", "1 tbsp lemon juice", "2-3 cups baby spinach", "¼ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "1 tsp garam masala powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer and Veggie Jalfrezi Stir-Fry", channel: "Recipe library", id: "more-ivd-paneer-jalfrezi-recipe", video: "https://www.youtube.com/watch?v=yC9148DjeEE", tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-jalfrezi-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 256.0, "p": 10.0, "c": 9.0, "f": 22.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp cooking oil, or ghee", "1 tsp cumin, jeera seeds", "1 medium onion, sliced lengthwise", "1 tsp ginger, minced", "1 tsp garlic, minced", "1 tsp red chilli powder", "¼ tsp turmeric powder", "1 tsp coriander powder", "1 tbsp water", "½ red bell pepper, sliced lengthwise", "½ green bell pepper, sliced lengthwise", "½ yellow bell pepper, sliced lengthwise", "1 medium tomato, de-seeded, sliced lengthwise", "½ cup tomato puree, 1 large tomato", "200 grams paneer (cut lengthwise, 7 oz", "½ tsp garam masala", "Salt, to taste", "1 tsp kasuri methi (dried methi leaves), optional", "Juice of half lime", "2 tbsp cilantro, coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Drumstick Leaf Lentil Stew", channel: "Recipe library", id: "more-ivd-moringa-leaves-dal-instant-pot", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/moringa-leaves-dal-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 219.0, "p": 12.0, "c": 32.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup moong dal, yellow split moong lentils", "1 cup tender moringa (drumstick leaves), tightly packed", "1 tbsp olive oil", "½ tsp mustard seeds", "½ tsp cumin (jeera) seeds", "2-3 cloves garlic, minced", "1 stalk curry leaves", "2-3 green chilies", "8-10 pearl onions (shallots), or 1 small onion, finely chopped", "1 small tomato, finely chopped", "1½ cups water", "Salt, adjust to taste", "Juice of half lime", "2 tbsp coriander leaves", "½ tsp turmeric powder", "½ tsp red chili powder", "½ tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Foxtail Millet Veggie Fried Rice", channel: "Recipe library", id: "more-ivd-millet-fried-rice", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/millet-fried-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 474.0, "p": 13.0, "c": 54.0, "f": 24.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup foxtail millet", "1 cup water, or vegetable broth", "2 tbsp oil", "1 tsp garlic, minced", "1 tsp ginger, minced", "¼ cup white onions", "1 green chili, thinly sliced", "1 cup mixed veggies, carrot, beans, bell pepper, broccoli", "¼ cup paneer, optional", "1 teapsoon soy sauce", "Salt, to taste", "Pepper, to taste", "¼ cup spring onions, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pearl Millet Bajra Khichdi", channel: "Recipe library", id: "more-ivd-bajra-khichdi-pearl-millet-khichdi", video: "https://www.youtube.com/watch?v=gmuvdxJ9Idc", tags: ["Lentil & Beans", "Millet"], url: "https://www.indianveggiedelight.com/bajra-khichdi-pearl-millet-khichdi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 298.0, "p": 14.0, "c": 49.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup pearl millet (bajra), broken and clean", "½ cup split yellow moong, split green moong dal also can be used", "2 cups mix vegetables (carrot, green peas, broccoli, cauliflower), chopped", "2 cups spinach (palak), chopped", "1 tsp ginger, minced", "1 tbsp ghee, or oil", "Salt, to taste", "4 cups water", "2 tbsp coriander leaves", "1 tsp cumin seeds", "1 tsp coriander powder", "¼ tsp turmeric powder", "1 tsp garam masala powder", "1 pinch asafetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Veggie Quinoa Pilaf", channel: "Recipe library", id: "more-ivd-vegetable-quinoa-pulao", video: "https://www.youtube.com/watch?v=LGqmWMbAz-M", tags: ["Quinoa", "Rice & Grains"], url: "https://www.indianveggiedelight.com/vegetable-quinoa-pulao/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 340.0, "p": 9.0, "c": 48.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil, or ghee", "1 medium onion, finely chopped", "2 green chillies", "1 tbsp ginger garlic paste", "1 cup mixed veggies, carrot, beans, peas, sweet corn", "2 tbsp mint (pudina), optional", "1 cup quinoa, rinsed", "½ tsp turmeric powder", "1 tsp garam masala", "Salt, to taste", "1.25 cups water", "1 tbsp lime juice", "2 tbsp cilantro, coriander leaves", "1 tsp jeera (cumin) seeds", "1 bay leaf", "1 inch cinnamon", "2 cardamom", "2 cloves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beetroot Pilaf, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-beetroot-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-beetroot-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 240.0, "p": 5.0, "c": 42.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice", "1 medium onion, thinly sliced", "1 cup beetroot, grated", "½ cup green peas, i used frozen", "3 green chili", "1 tbsp ginger-garlic paste", "1 stalk curry leaves", "2 tbsp mint leaves, optional", "Salt, to taste", "2 tbsp coriander leaves, chopped", "1 tbsp fresh lemon juice", "1.5 cups water, depends on rice quality", "2 tbsp oil", "1 tsp cumin, jeera seeds", "1 bay leaf", "2 cloves", "1 stick cinnamon", "2 cardamom", "½ tsp turmeric powder", "1 tsp garam masala, or biryani masala", "1 tsp coriander powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach Flatbread (Palak Paratha)", channel: "Recipe library", id: "more-ivd-palak-paratha-recipe-spinach-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/palak-paratha-recipe-spinach-paratha/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 133.0, "p": 3.0, "c": 18.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2.5-3 cups palak (spinach), tightly packed", "1 inch ginger", "1 green chili", "½ cup water, for grinding", "1 cup whole wheat, or multigrain flour", "1 tsp garam masala", "Salt, to taste", "Oil, or ghee for cooking",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Split Yellow Moong Soup with Tempering", channel: "Recipe library", id: "more-ivd-moong-dal-tadka-instant-pot", video: "https://www.youtube.com/watch?v=CQH3T8ae_IQ", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/moong-dal-tadka-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 223.0, "p": 12.0, "c": 34.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil, or ghee", "1 tsp cumin seeds, jeera", "1 pinch asafetida (hing), optional", "3 cloves garlic, minced", "1 medium onion, finely chopped", "1 large tomato, finely chopped", "½ tsp turmeric powder, haldi", "½ tsp red chilli powder", "1 tsp garam masala powder", "1 cup split yellow lentils (moong dal), rinsed", "3 cups water", "Salt, to taste", "2 tbsp cilantro (coriander leaves), chopped", "2 tbsp ghee", "1 tsp cumin seeds", "Few curry leaves (, optional", "A pinch asafetida, hing", "¼ tsp red chilli powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Simple Mixed Vegetable Pilaf", channel: "Recipe library", id: "more-ivd-vegetable-pulao-recipe-veg-pulao", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/vegetable-pulao-recipe-veg-pulao/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 280.0, "p": 6.2, "c": 55.2, "f": 4.1}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice", "1.5-2 cups mixed veggies, carrots, beans, peas, cauliflower and potato", "1 medium onion, sliced thinly", "1 tbsp ginger garlic paste", "2 green chillies, finely chopped", "2 tbsp mint leaves", "2 tbsp coriander (cilantro), chopped", "1.5 cups water, depends on rice quality", "Salt, to taste", "1 tbsp lime juice", "2 tbsp cooking oil, or ghee", "1 tsp jeera (cumin) seeds", "1 bay leaf", "3 cloves", "2 cardamom", "1 inch cinnamon stick", "1 small star anise, optional", "1 small stone flower, optional", "1 small mace, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Quinoa Bisi Bele Bhath, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-quinoa-bisibelebath", video: null, tags: ["Lentil & Beans", "Quinoa"], url: "https://www.indianveggiedelight.com/quinoa-bisibelebath/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 584.0, "p": 20.0, "c": 87.0, "f": 20.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup quinoa, rinsed", "½ cup toor dal/split pigeon peas", "2 tbsp oil, or ghee", "1 tsp mustard seeds", "1 stalk curry leaves", "A pinch hing, asafetida", "1 tbsp ginger garlic paste, optional", "1 medium onion, thinly sliced", "2.5 cups mixed vegetables, carrot, beans, peas, and bell pepper", "2 tbsp tamarind extract, extracted by soaking lemon sized tamarind", "2-3 tbsp bisibelebath powder, I used MTR brand", "½ tsp turmeric powder, haldi", "1 tsp red chilli powder", "1 tsp jaggery, optional", "Salt, to taste", "4 cups water", "2 tbsp coriander leaves, cilantro", "1 tbsp ghee, or oil", "½ tsp mustard seeds", "Few cashew-nuts", "2-3 red dry chilles", "Few curry leaves", "A pinch hing, asafetida",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sona Masoori Rice, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-sona-masoori-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-sona-masoori-rice/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 168.0, "p": 3.0, "c": 37.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sona masoori rice", "2 cups water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cracked Wheat Khichdi", channel: "Recipe library", id: "more-ivd-dalia-khichdi-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/dalia-khichdi-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 259.0, "p": 11.0, "c": 38.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ghee", "1 tsp cumin seeds", "1 pinch hing", "1 tsp ginger, minced", "1 green chili, finely chopped", "1 medium tomato, finely chopped", "½ tsp turmeric", "½ tsp red chili powder", "½ tsp garam masala", "Salt, to taste", "1 cup mixed veggies, carrot, beans, green peas", "½ cup Broken wheat/Bulgur Wheat/Dalia/Cracked Wheat", "½ cup split moong dal, yellow lentils", "3 cups water", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "South Indian Zucchini Poriyal", channel: "Recipe library", id: "more-ivd-zucchini-poriyal-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/zucchini-poriyal-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 163.0, "p": 3.0, "c": 16.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium zucchini, about 1½-2 cups", "1 tbsp oil", "½ tsp mustard seeds", "½ tsp cumin (jeera) seeds", "3 dry red chillies", "1 stalk curry leaves", "A pinch asafetida, hing", "1 small onion, finely chopped", "2-3 tbsp shredded coconut, fresh or frozen", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Millet Yogurt Rice", channel: "Recipe library", id: "more-ivd-millet-curd-rice", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/millet-curd-rice/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 228.0, "p": 12.0, "c": 27.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup foxtail millet", "1 cup water", "1 cup curd", "½ cup whole milk", "½ cup carrot, shredded", "2 tbsp coriander leaves, finely chopped", "2 tbsp roasted peanuts, optional", "Salt", "1 tsp oil", "½ tsp mustard seeds", "1 tsp urad dal", "1 tsp chana dal", "1 dry red chili", "1 green chili", "1 tsp ginger, grated", "1 stalk curry leaves", "A pinch hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pressure-Cooker Minestrone", channel: "Recipe library", id: "more-ivd-instant-pot-minestrone-soup", video: "https://www.youtube.com/watch?v=3F6AxHOlhjM", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-minestrone-soup/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 142.0, "p": 6.0, "c": 21.0, "f": 4.92}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp olive oil", "1 medium onion, finely chopped", "2 cloves garlic, minced", "1 medium carrot, diced", "1 medium zucchini, halved and diced", "2 stalks celery, diced", "4 medium tomatoes (diced (or 1 14oz can of diced tomatoes, do not drain (about 2 cups))", "1 8 oz can tomato sauce, about 1 cup", "1 15 oz can kidney beans (drained & rinsed, about 1.5 cups", "½ cup shell pasta, or elbow macaroni", "4 cups low sodium vegetable broth, or 32 oz vegetable broth, or water", "2 cups baby spinach leaves", "2 tsp parmesan cheese, freshly grated, optional", "2 tbsp parsley, chopped, optional", "2 tsp italian seasoning", "1 tsp paprika, red chilli powder, optional", "Black pepper powder, to taste", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cumin-Scented Basmati Rice", channel: "Recipe library", id: "more-ivd-instant-pot-jeera-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-jeera-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 424.0, "p": 7.0, "c": 79.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp cumin (jeera) Seeds", "1 inch cinnamon", "2-3 cloves", "1 bay leaf", "2 green cardamom", "1-2 tbsp oil or ghee", "1 cup basmati rice, rinsed", "2 green chilies, split lengthwise", "1.5 cups water", "Salt, to taste", "2 tbsp coriander, cilantro",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Brussels Sprouts Sabzi", channel: "Recipe library", id: "more-ivd-brussels-sprouts-sabji-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/brussels-sprouts-sabji-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 110.0, "p": 4.0, "c": 13.0, "f": 5.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "½ lb brussels sprouts, about 250 grams", "2 tbsp oil", "1 tsp cumin seeds", "1 tbsp ginger garlic", "1 green chili, chopped, optional", "1 medium onion, finely chopped", "1 large tomato, finely chopped", "Salt, to taste", "2 tbsp water, if required", "Juice of half lime", "2 tbsp cilantro", "½ tsp turmeric", "½ tsp red chili powder", "1 tsp coriander powder", "½ tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato and Drumstick Leaf Sauté", channel: "Recipe library", id: "more-ivd-potato-moringa-leaves-stir-fry-aloo-moringa", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/potato-moringa-leaves-stir-fry-aloo-moringa/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 358.0, "p": 14.0, "c": 49.0, "f": 12.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "1 tsp cumin seeds", "2 cloves garlic, minced", "1 green chili, chopped", "A pinch asafoetida (hing), skip for gluten-free", "1 small onion, finely chopped", "2 large potatoes (aloo) (cut into ¾ inch pieces, around 300 grams", "2-2.5 cups moringa (drumstick leaves), tightly packed, chopped", "¼ tsp turmeric powder", "½ tsp garam masala", "Salt, as per taste", "¼ cup water, as needed",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Gujarati-Style Yogurt Kadhi", channel: "Recipe library", id: "more-ivd-gujarati-kadhi-instant-pot", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/gujarati-kadhi-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 129.0, "p": 4.0, "c": 14.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup full fat yogurt (curd),slightly sour", "¼ cup besan, gram flour", "2-2.5 cups water", "1 tbsp ghee, or oil", "½ tsp mustard seeds", "½ tsp cumin (jeera) seeds", "2 dried red chilies", "¼ tsp fenugreek seeds, methi seeds", "1 inch cinnamon stick", "2 cloves", "1 tsp ginger, grated", "1 stalk curry leaves", "1 green chili, finely chopped", "Pinch of asafetida, hing", "Salt, to taste", "1 tbsp sugar", "1 tbsp lemon juice", "2 tbsp coriander leaves", "1 cup basmati rice", "1.5 cups water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Karnataka-Style Veggie Pilaf", channel: "Recipe library", id: "more-ivd-instant-pot-vegetable-pulao", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-vegetable-pulao/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 231.0, "p": 4.0, "c": 37.4, "f": 7.3}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup grated coconut, optional, i used frozen shredded coconut", "1 inch ginger", "3-4 cloves garlic", "3-4 green chilies", "1 tsp coriander seeds, or coriander powder", "1 tsp cumin seeds/jeera, or cumin powder", "1 tsp fennel seeds/saunf, optional", "1 inch cinnamon stick", "3-4 cloves", "2 cardamoms", "¼ cup coriander leaves, handful", "¼ cup mint/pudina leaves, handful", "¼ cup water, for grinding", "2 tbsp onion, optional", "2 tbsp cooking oil, or ghee", "2 bay leaves", "1 medium onion, thinly sliced", "2.5 cups mixed veggies, carrots, beans, peas, cauliflower, capsicum and potato", "¼ tsp turmeric powder", "Salt, to taste", "1 cup basmati rice", "1.5 cups water", "1 tbsp lemon juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mixed Vegetable Kurma in a Pressure Cooker", channel: "Recipe library", id: "more-ivd-vegetable-kurma-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/vegetable-kurma-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 145.0, "p": 4.0, "c": 17.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup grated coconut, fresh or frozen", "6-7 cashewnuts", "1 tbsp fried gram, roasted chana dal", "1 inch ginger", "2 garlic cloves", "1 green chilli", "2 cardamom", "2 cloves", "1 inch cinnamon stick", "1 tsp saunf, fennel seeds", "1 tsp coriander seeds, or 1 tsp coriander powder", "½ tsp jeera seeds (cumin) (, or ½ tsp of jeera powder", "Water, for grinding", "4 cups mixed vegetables, carrot, beans, cauliflower, potato, peas", "1 cup onion, finely chopped", "½ cup tomato, finely chopped", "1 tsp red chilli powder", "½ tsp turmeric powder", "½ tsp garam masala", "1 tbsp curd (yogurt), or vegan yogurt, optional", "Salt, as per taste", "1.5 cups water, as required", "2 tbsp oil", "1 tbsp coriander leaves", "1 tbsp lime juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Split Chickpea Dal, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-chana-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-chana-dal/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 195.0, "p": 6.0, "c": 27.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup chana dal (bengal gram), soaked in hot water for 15-20 minutes", "1 small onion, finely chopped", "1 large tomato, finely chopped", "1 tbsp ginger garlic, minced", "1 green chili, slit lengthwise", "2 cups water, for cooking", "2 tbsp oil, or ghee", "2 tbsp coriander leaves", "Juice of half lime", "Salt, to taste", "1 tsp cumin (jeera) seeds", "½ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala", "1 tsp ghee", "½ tsp cumin (jeera) seeds", "¼ tsp red chili powder", "A pinch asafetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Garlicky Noodles, One-Pot", channel: "Recipe library", id: "more-ivd-instant-pot-garlic-noodles", video: "https://www.youtube.com/watch?v=Dll1ci19Cjo", tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/instant-pot-garlic-noodles/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 352.0, "p": 8.0, "c": 54.0, "f": 11.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz spaghetti", "1 tbsp olive oil, or butter", "6-8 garlic (minced, about 2 tbsp", "1.5 tbsp soy sauce", "1 tbsp schezwan sauce (or hot sauce, Sriracha or red chilli sauce", "1 tsp rice vinegar, or white vinegar", "1 tbsp vegetable oyster sauce, optional", "½ tsp brown sugar (can use honey too),optional)", "2 cups water, or vegetable broth", "Salt, adjust to taste", "2 tbsp green onion", "1 tbsp sesame seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Veggie Fried Rice, Two Ways", channel: "Recipe library", id: "more-ivd-instant-pot-vegetable-fried-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-vegetable-fried-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 435.0, "p": 8.0, "c": 76.0, "f": 13.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice, or jasmine rice", "2 tbsp avocado oil, or sesame oil", "3 cloves garlic, minced", "½ cup white onion, chopped", "½ inch ginger, minced", "1-2 green chili, slit lengthwise", "1- 1½ cups mixed vegetables (carrot, green beans, bell peppers and cabbage), finely diced", "1 tbsp soy sauce", "1 tsp white vinegar, or rice vinegar", "Salt and black pepper powder, to taste", "1¼ cups water (depends on rice variety), or vegetable broth", "¼ cup green onions", "2 tbsp green onions",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Lentil-Stuffed Flatbread", channel: "Recipe library", id: "more-ivd-dal-paratha", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/dal-paratha/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 198.0, "p": 4.0, "c": 12.0, "f": 14.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup whole wheat, or multigrain flour", "½ cup cooked toor dal", "½ tsp ginger (grated, optional", "½ tsp jeera(cumin) seeds", "¼ tsp carom seeds, ajwain", "¼ tsp turmeric powder", "1 tsp red chilli powder", "½ tsp amchur powder, optional", "½ tsp garam masala powder", "Salt, to taste", "2 tbsp chopped coriander, or little kasuri methi", "2-3 tbsp oil, or ghee for cooking", "⅓ cup water, for kneading",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tangy Lemon Rice", channel: "Recipe library", id: "more-ivd-instant-pot-lemon-rice-pressure-cooker-recipe", video: "https://www.youtube.com/watch?v=vM_Y6EyAt2k", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-lemon-rice-pressure-cooker-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 175.0, "p": 2.6, "c": 26.7, "f": 6.4}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 tbsp oil, or ghee", "1 tsp mustard seeds", "1 tsp split urad dal", "½ tbsp split chana dal", "1 tsp ginger, minced", "1-2 dry red chili, optional", "2 green chili, finely chopped", "1 sprig curry leaves", "1 pinch asafoetida (hing), skip for gluten-free", "½ tsp turmeric powder, haldi", "1 cup basmati rice", "1.5 cups water", "Salt, to taste", "Juice of one lemon", "2 tbsp roasted peanuts", "2 tbsp roasted cashews, optional", "2 tbsp coriander leaves (cilantro), finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bottle Gourd Curry (Lauki Sabzi), Pressure-Cooked", channel: "Recipe library", id: "more-ivd-lauki-ki-sabji-recipe", video: "https://www.youtube.com/watch?v=uVzlQdet4vk", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/lauki-ki-sabji-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 94.0, "p": 2.0, "c": 9.6, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "500 grams lauki (bottle gourd) (peeled and chopped into ½ inch pieces, about 3.5 cups", "2 tbsp oil", "1 tsp cumin (jeera) seeds", "1 stalk curry leaves", "2 green chilies, finely chopped", "1 inch ginger, minced", "1 medium onion, finely chopped", "2 medium tomatoes, finely chopped", "¼ cup water", "Salt, to taste", "1 tbsp lime juice, or ½ tsp of amchur powder", "2 tbsp coriander leaves, cilantro", "½ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "½-1 tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Green Mango Rice (Mavinakayi Chitranna)", channel: "Recipe library", id: "more-ivd-raw-mango-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/raw-mango-rice/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 496.0, "p": 10.0, "c": 70.0, "f": 21.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium raw mango (peeled & grated, about ½ - ¾ cup", "2 cups cooked rice", "¼ tsp turmeric powder", "¼ cup fresh coconut, shredded, optional", "Salt, to taste", "2 tbsp oil", "2 tbsp peanuts", "1 tsp mustard seeds", "1 tsp urad dal", "1 tsp chana dal", "3 dried red chilies", "2 green chilies", "2 stalks curry leaves", "½ inch ginger, minced, optional", "1 pinch asafoetida", "2 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Groundnut Rice", channel: "Recipe library", id: "more-ivd-peanut-rice-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/peanut-rice-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 550.0, "p": 12.0, "c": 85.0, "f": 17.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp oil", "¼ cup peanuts", "2 tsp urad dal", "2 tsp chana dal", "1 tsp sesame seeds", "3-4 dried red chilies", "1 stalk curry leaves", "1 tbsp dry coconut", "Salt, to taste", "1 tbsp oil, or ghee", "2 tbsp peanuts", "1 tsp mustard seeds", "1 tsp urad dal", "½ tsp cumin seeds, jeera", "1 stalk curry leaves", "1 pinch hing, asafetida", "2 cups cooked and cooled basmati rice, about 1 cup of raw basmati rice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach Biryani", channel: "Recipe library", id: "more-ivd-palak-biryani-spinach-biryani", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/palak-biryani-spinach-biryani/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 447.0, "p": 8.0, "c": 83.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice, rinsed", "1 medium onion, thinly sliced", "1 medium tomato, finely chopped", "2 tsp ginger garlic paste", "1.5 cups water", "2 tbsp oil, or ghee", "Juice of half lemon", "2-3 cups baby spinach, or 1 medium bunch of spinach", "¼ cup mint, pudina", "¼ cup coriander leaves", "3 green chilies", "1 inch cinnamon", "2 cloves", "2 green cardamom", "1 small star anise, optional", "1 bay leaf", "1 tsp fennel seeds", "1 tsp coriander powder", "½ tsp turmeric powder, haldi", "½ tsp cumin (jeera) powder", "1 tsp biryani powder, or garam masala powder", "8-10 fried cashews, for garnishing", "2 tbsp fried onions, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chickpea Biryani, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-chole-biryani", video: "https://www.youtube.com/watch?v=gIG_xZVxDYM", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-chole-biryani/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 509.0, "p": 12.0, "c": 78.0, "f": 12.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 cups basmati rice, rinsed", "1.5 cups boiled chickpeas (kabuli chana) (soaked overnight and boiled) or 1 canned chickpeas, 15.5oz", "1 medium potato (diced into 1-inch cubes, optional", "2 small onions, thinly sliced", "1 large tomato, finely chopped", "1 tbsp ginger garlic paste", "2 green chilies, slit lengthwise", "¼ cup mint leaves, chopped", "¼ cup curd (yogurt), or soy yogurt for vegans", "2 tbsp coriander leaves", "2 tbsp oil", "2.5 cups water", "Salt, adjust to taste", "1 tbsp lemon juice", "2 bay leaf", "1 inch cinnamon", "1 tsp cumin (jeera) seeds", "½ tsp turmeric powder", "½ tsp red chili powder", "2 tsp chole masala, i used everest chole masala brand", "½-1 tsp biriyani masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato and Green Pea Curry (Aloo Matar)", channel: "Recipe library", id: "more-ivd-instant-pot-potato-peas-curry", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-potato-peas-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 155.0, "p": 3.7, "c": 17.7, "f": 7.7}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 medium regular potatoes, OR 2 large Russet potatoes,peeled & diced into 1 inch pieces", "1 cup green peas, frozen, fresh or tinned is fine", "1 tsp cumin (jeera) seeds", "1 medium onion, finely chopped", "1 tbsp ginger garlic paste", "1 green chili, finely chopped", "1 cup tomato puree, OR you may use 2 medium finely chopped tomato", "2 tbsp cashew-nut cream, OR fresh cream", "2 tbsp fresh cilantro, coriander leaves", "1 tbsp lime juice (optional) or 1 tsp amchur(dry mango) powder)", "Salt, as per taste", "2 tbsp cooking oil", "1 cup water", "¼ tsp turmeric powder", "½ tsp red chilli powder, as required to your taste", "1 tsp coriander powder", "1 tsp garam masala powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Yellow Moong Khichdi", channel: "Recipe library", id: "more-ivd-khichdi-instant-pot", video: "https://www.youtube.com/watch?v=qMkVibQmAkY", tags: ["Lentil & Beans", "Rice & Grains"], url: "https://www.indianveggiedelight.com/khichdi-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 247.0, "p": 8.0, "c": 35.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ghee", "1 bay leaf", "1 green chili, optional", "1 tsp cumin (jeera) seeds", "1 pinch asafetida(hing), skip for gluten-free", "1 tsp ginger, minced, optional", "½ cup split yellow moong dal", "½ cup basmati rice, rinsed", "½ tsp turmeric", "Salt, adjust to taste", "4 cups water", "2 tbsp coriander leaves, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Vegetable Panang Curry, Thai-Style", channel: "Recipe library", id: "more-ivd-thai-panang-curry-with-vegetables-in-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/thai-panang-curry-with-vegetables-in-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 146.0, "p": 8.0, "c": 9.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "2 cloves garlic, minced", "1 small onion, finely chopped", "2-3 tbsp panang curry paste, or thai curry paste", "1 can 14 oz full fat coconut milk, about 400 ml", "½ cup water, or vegetable broth", "1 cup broccoli florets", "2 small colored bell peppers (yellow, and red), thinly sliced", "1 cup extra firm tofu, cubed, baked", "½ tsp brown sugar, optional", "Salt, adjust to taste", "1 tbsp soy sauce, or tamari for gluten free", "2 tbsp creamy peanut butter", "Juice of ½ lime", "½ cup thai basil leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cabbage Pilaf, One-Pot", channel: "Recipe library", id: "more-ivd-cabbage-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/cabbage-rice/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 220.0, "p": 4.0, "c": 45.0, "f": 80.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice, or sona masoori rice", "2.5 cups cabbage, shredded or finely chopped", "½ cup green peas, fresh/frozen", "1 medium onion, thinly sliced", "2 tbsp oil", "1 tsp cumin (jeera) seeds", "½ tsp turmeric powder", "1 tsp garam masala powder (, or biryani masala powder", "1 tbsp lemon juice", "2 tbsp coriander leaves, chopped", "Salt, to taste", "1.5 cups water", "1 inch ginger", "3-4 cloves garlic", "2-3 green chilies", "1 inch cinnamon stick", "2 cardamoms", "3 cloves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Whole Green Gram Dal", channel: "Recipe library", id: "more-ivd-whole-green-moong-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/whole-green-moong-dal/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 156.0, "p": 7.65, "c": 28.97, "f": 1.84}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "¾ cup whole green mung dal", "1 tsp cumin seeds", "1 large onion, finely chopped", "2 medium tomatoes, finely chopped", "1 tbsp ginger-garlic paste", "3 green chilies, split in half", "1 tsp salt, adjust to taste", "2-2.5 cups water", "2 tbsp coconut oil", "Coriander leaves, for garnish", "1 tbsp lemon juice", "¼ tsp turmeric powder", "½ tsp red chili powder, adjust to your preference", "1 tsp coriander powder", "1 tsp garam masala, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cilantro-Lime Rice", channel: "Recipe library", id: "more-ivd-chipotle-cilantro-lime-rice-copycat", video: "https://www.youtube.com/watch?v=5-yCcPhNX3I", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/chipotle-cilantro-lime-rice-copycat/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 198.0, "p": 3.38, "c": 38.44, "f": 3.12}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "1 bay leaf, optional", "1 cup basmati rice, rinsed", "1¼ cups water (or vegetable broth), 1.5 cups water for stovetop", "Salt, adjust to taste", "1 tbsp butter", "¼ cup cilantro, coriander leaves", "2 tbsp lime juice", "Zest of 1 lime, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Peanut Saaru (Shenga Sambar)", channel: "Recipe library", id: "more-ivd-shenga-saaru-shenga-gojju", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/shenga-saaru-shenga-gojju/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 136.0, "p": 6.0, "c": 7.0, "f": 11.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "¾ cup roasted peanuts", "¼ cup roasted channa, putani", "½ cup onion, finely chopped", "4 garlic cloves", "1 small lemon size tamarind", "1 tbsp red chili powder", "1.5 tbsp sarin pudi", "¼ tsp turmeric powder", "1 tbsp gurellu pudi, optional", "1 tsp jaggery", "Salt, to taste", "1 tsp oil", "4 cups water", "2 tbsp coriander leaves", "½ tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 stalk curry leaves", "2 tbsp onion, finely chopped", "1 tsp oil",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Asian-Inspired Zucchini Stir-Fry", channel: "Recipe library", id: "more-ivd-zucchini-stir-fry", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/zucchini-stir-fry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 157.0, "p": 3.0, "c": 10.0, "f": 13.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium zucchini (cut into half moon slices, about 2-2.5 cups", "1 medium yellow onion (thinly sliced, about 1 cup", "½ tbsp garlic, minced", "½ tbsp ginger, minced", "1.5-2 tbsp low sodium soy sauce, use tamari if gluten-free", "1 tsp vinegar", "½ tsp sugar (or maple syrup, honey), optional)", "1 tsp red chili flakes, adjust as per your spice level", "Salt and pepper, to taste", "2 tbsp cooking oil", "1 tbsp toasted sesame oil", "Toasted sesame seeds", "Green onions",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pumpkin Curry, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-pumpkin-curry-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/pumpkin-curry-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 95.0, "p": 2.0, "c": 15.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 tbsp oil", "1 tsp cumin (jeera) seeds", "2 green chilies, slit lengthwise", "1 inch ginger, finely chopped", "1 medium onion, finely chopped", "500 grams yellow pumpkin (peeled and diced about ½ inch pieces, about 3.5-4 cups", "½ cup water", "Salt, to taste", "¼ tsp sugar, optional", "2 tbsp coriander leaves", "½ tsp turmeric powder", "1 tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala", "½ tsp amchur powder, or 1 tbsp lemon juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pudina Pilaf with Fresh Mint", channel: "Recipe library", id: "more-ivd-instant-pot-mint-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-mint-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 210.0, "p": 3.0, "c": 14.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice, or any rice", "1 medium onion, sliced thinly", "1 cup green beans", "½ cup green peas, I used frozen", "1 tsp cumin (jeera) seeds", "½ tsp turmeric powder", "1 tsp garam masala", "2 bay leaves", "2 cloves", "1 inch cinnamon", "2 cardamom", "2 tbsp ghee (or oil), add more according to taste)", "1.5 cups water", "Salt, to taste", "1 cup mint leaves, pudina", "½ cup coriander leaves", "3 green chilies", "2 cloves garlic", "1 inch ginger", "2 tbsp water, for grinding",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bottle Gourd and Chana Dal Stew", channel: "Recipe library", id: "more-ivd-lauki-chana-dal-pressure-cooker", video: "https://www.youtube.com/watch?v=E6soVPb_BI4", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/lauki-chana-dal-pressure-cooker/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 224.0, "p": 13.0, "c": 34.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup chana dal (bengal gram), soaked for ½ hour", "2 cups water, for soaking dal", "500 grams lauki (bottle gourd) (peeled, de-seeded and chopped about 1 inch pieces, about 3 cups", "1 cup onion, finely chopped", "1 large tomato, finely chopped", "1 tbsp ginger garlic, minced", "2 green chillies, finely chopped", "1.5 cups water, for cooking", "2 tbsp coriander leaves", "1 tbsp lime juice", "1 tbsp oil", "Salt, to taste", "1 tsp cumin, jeera", "½ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala powder", "1 pinch hing, asafetida", "1 tbsp ghee, or oil", "½ tsp cumin, jeera", "1 tsp garlic, minced", "1 pinch red chilli powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Classic Dal Fry", channel: "Recipe library", id: "more-ivd-dal-fry-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/dal-fry-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 226.0, "p": 10.0, "c": 31.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup toor dal (split pigeon peas), or ¾ cup of toor dal and ¼ cup of moong or masoor dal", "3 cups water, for cooking", "Salt, optional", "2 tbsp oil, or ghee", "1 tsp cumin seeds", "1 dried red chili, optional", "1 pinch asafoetida, hing", "1 large onion (finely chopped, about 1 cup", "1 tbsp ginger garlic, minced", "1-2 green chili, finely chopped", "2 large tomatoes (finely chopped, about 1 cup", "½ tsp turmeric powder", "½ tsp red chili powder, adjust to taste", "1 tsp coriander powder", "Salt, to taste", "1 tsp kasuri methi, dried fenugreek leaves", "½ tsp garam masala, adjust to taste", "½-1 cup water, to adjust the dal consistency", "1 tbsp lime juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pressure-Cooked Quinoa", channel: "Recipe library", id: "more-ivd-one-minute-quinoa-instant-pot", video: null, tags: ["Quinoa", "Rice & Grains"], url: "https://www.indianveggiedelight.com/one-minute-quinoa-instant-pot/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 222.0, "p": 8.1, "c": 39.0, "f": 3.6}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dry quinoa, rinsed and drained", "1¼ cups water, or vegetable broth", "Salt, to taste, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Kodo Millet Pilaf", channel: "Recipe library", id: "more-ivd-millet-pulao-recipe-kodo-millet-pulao", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/millet-pulao-recipe-kodo-millet-pulao/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 272.0, "p": 6.0, "c": 40.0, "f": 10.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup kodo millet", "2 cups mixed vegetables, carrot, beans, green peas and capsicum", "2 tbsp oil, or ghee", "2 bay leaves", "1 tsp cumin (jeera) seeds", "1 stalk curry leaves", "1 large onion", "½ tsp turmeric powder, haldi", "½ tsp garam masala powder", "Salt, to taste", "2 cups water", "Juice of half lime", "2 tbsp onion", "1 inch ginger", "3 cloves garlic", "3 green chillies", "¼ cup mint, pudina", "¼ cup coriander leaves, cilantro", "2 cloves", "1 inch cinnamon stick", "1 cardamom", "½ tsp fennel seeds (saunf), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bechamel Pasta", channel: "Recipe library", id: "more-ivd-white-sauce-pasta", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/white-sauce-pasta/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 510.0, "p": 20.0, "c": 67.0, "f": 19.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup penne pasta", "3 cups water", "Salt, to taste", "½ tbsp butter, or olive oil", "1 tsp garlic, minced", "¼ cup sweet corn", "¼ cup broccoli", "¼ cup bell pepper", "¼ cup sweet corn", "1.5 tbsp butter", "1.5 tbsp flour", "1.5 cups milk", "2-3 tbsp cheese, grated", "2 tbsp heavy cream, optional", "¼ tsp red chili flakes", "½ tsp oregano", "Black pepper, to taste", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Rajasthani Five-Lentil Dal (Panchmel)", channel: "Recipe library", id: "more-ivd-panchmel-dal-recipe-rajasthani-panchratna-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/panchmel-dal-recipe-rajasthani-panchratna-dal/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp toor dal, split pigeon pea", "2 tbsp moong dal (split green gram), with or without skin", "2 tbsp urad dal (split black gram/ black lentils), with or without skin", "2 tbsp chana dal, split bengal gram", "2 tbsp masoor dal, split red lentils", "2 cups water", "1 tbsp oil (, or ghee", "1 tsp jeera seeds, cumin", "2 green chilies, chopped", "1 stalk curry leaves", "1 medium onion, finely chopped", "1 tsp ginger, grated", "1 medium tomato, finely chopped", "Salt, to taste", "1 tbsp fresh coriander leaves, chopped", "1 tbsp lemon juice", "½ tsp turmeric powder", "1 tsp red chilli powder, adjust to your spice level", "1 tsp coriander powder", "1 tbsp ghee", "2 dry red chilies", "½ tsp jeera seeds, cumin", "1 pinch asafoetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato and Green Bean Sabzi", channel: "Recipe library", id: "more-ivd-instant-pot-aloo-beans-potato-green-beans", video: "https://www.youtube.com/watch?v=FiIyVCIE02Y", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-aloo-beans-potato-green-beans/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "½ tsp cumin seeds, jeera", "1 green chili, finely chopped", "1 small onion, finely chopped", "1 tsp ginger, minced", "2 cups green beans, cut into 1 inch", "1 medium potato, diced thinly into 1-inch length", "Salt, to taste", "¼ cup water", "1 tbsp lemon juice (or, replace with ½ tsp of amchur powder", "½ tsp red chilli powder, adjust to taste", "1 tsp coriander powder", "½ tsp turmeric powder", "½ tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cauliflower Rice in Two Methods", channel: "Recipe library", id: "more-ivd-how-to-make-cauliflower-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/how-to-make-cauliflower-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 80.0, "p": 2.0, "c": 5.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium head cauliflower, makes 2-3 cups cauliflower rice", "1 tbsp olive oil, or coconut oil", "Salt and pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Aloo Biryani, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-potato-biryani-instant-pot", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/potato-biryani-instant-pot/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 398.0, "p": 5.0, "c": 52.0, "f": 18.8}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 tbsp oil, or ghee", "3 large potato (aloo), cut into large cubes", "1 medium onion, thinly sliced", "1 large tomato", "1 tbsp ginger-garlic paste", "½ cup mint, pudina", "½ cup coriander leaves", "½ cup curd (yogurt), dairy free can be used", "1 tbsp biryani masala powder", "½ tsp turmeric powder, haldi", "2 green chilies", "1.5 cups basmati rice", "2.5 cups water", "1 tsp salt", "1 inch cinnamon stick", "2 bay leaf", "2-3 cloves", "2 cardamom",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Masala Rice", channel: "Recipe library", id: "more-ivd-masala-rice-recipe", video: "https://www.youtube.com/watch?v=sw5ljACRMs0", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/masala-rice-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 260.0, "p": 7.0, "c": 50.0, "f": 3.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups cooked basmati rice, or any rice", "1 cup mixed vegetables, carrot, beans, peas, bell pepper", "½ cup onions, finely chopped", "½ inch ginger, minced", "2 garlic cloves, minced", "2 green chilies, finely chopped", "Few curry leaves", "2 tbsp coriander leaves", "1 tbsp lime juice", "1 tbsp olive oil, or ghee", "Salt, to taste", "1 tsp mustard seeds", "½ tsp cumin (jeera) seeds", "A pinch hing, asafetida", "¼ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala powder", "½ inch cinnamon stick", "2 cloves", "1 cardamom",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Desi-Style Masala Macaroni", channel: "Recipe library", id: "more-ivd-instant-pot-masala-pasta-indian-pasta-recipes", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/instant-pot-masala-pasta-indian-pasta-recipes/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 357.0, "p": 13.0, "c": 64.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz macaroni pasta (about 2-2.5 cups), or any pasta", "1 tbsp ginger and garlic, minced", "1 medium onion, finely chopped", "1 green chili, finely chopped", "2 medium tomatoes, about 1 cup", "¼ tsp turmeric powder", "½ tsp red chilli powder", "½ tsp garam masala", "Salt, pepper, to taste", "1.5 cups mixed vegetables, carrot, bell pepper, corn", "2 tbsp tomato ketchup", "1 tbsp olive oil", "2 cups water", "2 tbsp coriander leaves", "2 tbsp shredded cheese, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Potato and Cauliflower Roast", channel: "Recipe library", id: "more-ivd-air-fryer-aloo-gobi", video: "https://www.youtube.com/watch?v=F9BSPHTpQiM", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-aloo-gobi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 191.0, "p": 5.0, "c": 28.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium cauliflower head (gobi) (cut into florets, about 3 cups", "2 small potatoes (aloo) (cut into ¾ inch pieces, about 1 cup", "2-3 tbsp olive oil", "1 tbsp ginger-garlic, minced", "1 green chili, slit lengthwise", "1 medium onion (sliced, about ¾-1 cup", "1 medium tomato (diced, about ½ cup", "1 tbsp lime juice, OR 1 tsp Amchur powder {Dry mango powder}", "2 tbsp coriander leaves, for garnish", "½ tsp red chilli powder", "½ tsp turmeric powder", "½ tsp cumin powder", "1 tsp coriander powder", "½ tsp garam masala", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Green Lentil Soup, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-lentil-soup-instant-pot", video: "https://www.youtube.com/watch?v=KE6Okb_y8wE", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/lentil-soup-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 285.0, "p": 10.0, "c": 40.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup whole green lentils (or brown lentils), rinsed )", "1 tbsp olive oil", "1 medium yellow onions, diced", "2 medium tomatoes (diced, about 1 cup", "3 cloves garlic, minced", "2 stalks celery (diced, about ½ cup", "1 large carrots (diced, about ½ cup", "1 small red bell pepper (diced, about ½ cup", "Salt, to taste", "½ tsp crushed black pepper, to taste", "3 cups vegetable broth, or water", "½ cup thick coconut milk, optional", "2-3 cups baby spinach", "2 tbsp freshly squeezed lemon juice", "1-2 tsp garam masala powder, or curry powder", "½ tsp turmeric", "½ tsp red chilli powder", "1 tsp ground cumin, jeera",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Veggie Biryani in the Pressure Cooker", channel: "Recipe library", id: "more-ivd-vegetable-biryani-in-pressure-cooker", video: "https://www.youtube.com/watch?v=vp8oaA9_vH8", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/vegetable-biryani-in-pressure-cooker/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 432.0, "p": 10.0, "c": 70.0, "f": 17.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup thick yogurt (hung curd), thick coconut milk or use vegan yogurt", "1 tbsp ginger garlic paste", "1 large carrot (diced, about 1 cup", "1 cup green beans, cut in 1 inch pieces", "1 cup cauliflower, cut in large florets about 1.5-2 inch", "1 cup paneer, cubed into ½ inch cubes", "½ tsp turmeric powder", "1 tsp red chilli powder", "1.5 tbsp biryani masala powder", "2 tbsp lemon juice", "Salt, adjust to taste", "1 bay leaf", "1 inch cinnamon stick", "3 cloves", "3 cardamom", "1 star anise", "1 single strands of mace", "1 tsp shah jeera, cumin seeds", "1 cup basmati rice, rinsed & soaked for 20 minutes", "2 tbsp ghee, use oil for vegan", "1 large onion (thinly sliced, about 1 cup", "¼ cup mint leaves (pudina), chopped, divided", "¼ cup coriander leaves, finely chopped,divided", "¼ cup fried onions, divided", "3 tbsp milk, use water for vegan", "Saffron(kesar), few strands", "1 tbsp ghee, optional", "1¼ cups water", "Salt, adjust to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "South Indian Brussels Sprouts Poriyal", channel: "Recipe library", id: "more-ivd-brussels-sprouts-poriyal-south-indian-style", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/brussels-sprouts-poriyal-south-indian-style/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 72.0, "p": 2.0, "c": 7.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ lb brussels sprouts (chopped, about 2 cups", "1 tbsp coconut oil", "½ tsp mustard seeds", "½ tsp urad dal", "1 green chili", "1 stalk curry leaves", "1 pinch hing", "¼ tsp turmeric", "Salt, to taste", "2 tbsp fresh coconut",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Gochujang Cream Pasta", channel: "Recipe library", id: "more-ivd-creamy-gochujang-pasta", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/creamy-gochujang-pasta/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 696.0, "p": 12.0, "c": 57.0, "f": 48.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 cup uncooked pasta, about 4 oz", "1 tbsp olive oil", "½ tbsp butter", "2 garlic cloves, minced", "2 tbsp shallot (or onion), finely chopped", "1 - 1.5 tbsp gochujang paste", "6 tbsp heavy cream", "¼ tsp red chili flakes", "¼ tsp garlic powder", "Salt, pepper, to taste", "2 tbsp reserved pasta water", "1 tbsp fresh parsley, chopped", "2-3 tbsp freshly grated parmesan cheese, or any cheese",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Rich Paneer Makhani, Restaurant-Style", channel: "Recipe library", id: "more-ivd-restaurant-style-paneer-butter-masala", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/restaurant-style-paneer-butter-masala/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 360.0, "p": 10.0, "c": 15.0, "f": 25.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 large onion, chopped", "3 medium tomatoes, chopped", "3 cloves garlic", "1 inch ginger", "¼ cup cashews (about 12-15), or almonds", "1 inch cinnamon stick", "3 cloves", "2 green cardamoms", "1 cup water", "2-3 tbsp butter, or oil", "½ tsp cumin (jeera) seeds", "1-2 bayleaf", "2 tsp kashmiri red chili powder, i used everest kashmiri lal brand", "200 grams paneer (Indian cottage cheese), cut into 1-inch cubes", "1 tbsp dried fenugreek leaves, kasoori methi", "1 tsp garam masala powder, or kitchen king masala", "2-3 tbsp fresh cream", "½-1 tsp sugar (or honey), optional)", "Salt, as per taste", "2 tbsp coriander leaves, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer, Pea and Fox Nut Curry", channel: "Recipe library", id: "more-ivd-paneer-matar-makhana-curry", video: null, tags: ["Makhana", "Paneer"], url: "https://www.indianveggiedelight.com/paneer-matar-makhana-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 359.0, "p": 9.0, "c": 14.0, "f": 31.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 tbsp ghee (or oil), divided)", "¼ cup cashews, optional", "2 cups roasted makhana, phool makhana/lotus seeds", "150 grams paneer, cut into small cubes", "¼ cup green peas, frozen", "1 medium onion, chopped", "2 medium tomatoes, chopped", "½ inch ginger", "3 cloves garlic", "1 green chili", "1 tsp cumin (jeera) seeds", "Salt to taste", "1¼ cups water, divided", "1 tbsp kasuri methi, dried fenugreek leaves", "2 tbsp fresh cream, use coconut cream for vegan", "1 tsp lime juice", "2 tbsp coriander leaves", "½ tsp turmeric powder", "1 tsp kashmiri red chilli powder", "1 tsp coriander powder", "½ tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Asparagus Stir-Fry, Indian-Style", channel: "Recipe library", id: "more-ivd-asparagus-poriyal", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/asparagus-poriyal/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 83.0, "p": 3.0, "c": 9.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb asparagus (chopped, about 2.5 cups", "1 tbsp coconut oil", "½ tsp mustard seeds", "½ tsp urad dal", "2 dry red chillies", "1 stalk curry leaves", "1 pinch hing, asafoetida", "1 small onion, finely chopped", "¼ tsp turmeric", "Salt, to taste", "2-3 tbsp fresh coconut", "2 tbsp coriander, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Roti Noodles from Leftover Chapati", channel: "Recipe library", id: "more-ivd-chapati-noodles-recipe-roti-noodles", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/chapati-noodles-recipe-roti-noodles/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 288.0, "p": 8.3, "c": 46.0, "f": 8.5}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "2 chapatis/roti", "¼ cup onion, thinly sliced", "¼ cup carrot, cut into thin strips", "¼ cup red bell pepper, cut into thin strips", "¼ cup cabbage", "2 tbsp white spring onion (, optional", "2 garlic cloves, minced", "2 green chili, halved", "1 tsp soy sauce", "1 tbsp tomato ketchup", "1 tsp vinegar (, optional", "Salt to taste", "1 pinch sugar", "Black pepper powder, to taste", "2 tbsp oil", "2 tbsp green spring onions",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Courgette Curry, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-indian-zucchini-curry", video: "https://www.youtube.com/watch?v=6QG2RxbQBdM", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/indian-zucchini-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 138.0, "p": 3.0, "c": 11.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 medium zucchini (courgette) (sliced lengthwise and then cut into 1-inch half-moon pieces, about 3-3.5 cups", "2 tbsp olive oil", "1 tsp cumin (jeera) seeds", "1 tbsp ginger and garlic, minced", "1 green chili, finely chopped", "1 medium onion, finely chopped", "2 medium tomatoes", "½ cup water", "Salt, to taste", "2 tbsp coconut cream (or fresh cream, cashewnut cream, optional but recommended", "1 tbsp lemon juice", "2 tbsp coriander leaves", "½ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "1 tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Jasmine Rice, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-jasmine-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-jasmine-rice/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 252.0, "p": 4.0, "c": 55.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup jasmine rice", "1¼ cup water", "Salt, to taste, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach and Tofu Curry", channel: "Recipe library", id: "more-ivd-palak-tofu-instant-pot", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/palak-tofu-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 154.0, "p": 7.0, "c": 11.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "7 oz extra-firm tofu (cubed, about 1.5 cups", "2 tbsp oil", "½ tsp red chili powder", "Salt and black pepper, to taste", "10 oz spinach (palak), about 8-10 cups", "1 tbsp oil", "1 tsp cumin, jeera seeds", "½ inch ginger, roughly chopped", "2 cloves garlic, roughly chopped", "2 green chili", "1 medium onion (about 1 cup), roughly diced)", "1 large tomato, roughly chopped", "½ cup water", "Salt, to taste", "1 tbsp kasuri methi (dried fenugreek leaves), optional", "2 tbsp coconut cream (or fresh cream or cashew cream), optional)", "½ tsp turmeric", "½ tsp red chili powder", "1 tsp coriander powder", "½ tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tofu-Filled Paratha", channel: "Recipe library", id: "more-ivd-tofu-paratha-recipe", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/tofu-paratha-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 377.0, "p": 13.0, "c": 47.0, "f": 17.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup whole wheat flour, or multigrain flour", "½ cup extra firm tofu (crumbled, 100 grams", "1 tsp cumin (jeera) seeds", "1 tsp red chilli powder", "½ tsp turmeric powder, haldi", "½ tsp garam masala, optional", "½ tsp amchur powder", "¼ cup coriander leaves", "Salt, to taste", "2 tbsp oil (or ghee) to (cook parathas) )", "Water, to knead dough",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cabbage and Pea Stir-Fry (Patta Gobi Matar)", channel: "Recipe library", id: "more-ivd-cabbage-peas-stir-fry-pressure-cooker", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/cabbage-peas-stir-fry-pressure-cooker/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 165.0, "p": 6.5, "c": 27.0, "f": 5.4}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "4 cups cabbage (slice into fine long shreds, discard the stalk and thick stems", "½ cup green peas, fresh/frozen", "1 tbsp coconut oil", "½ tsp cumin seeds, jeera", "2 green chilies, finely chopped", "1 tsp ginger, minced", "1 pinch asafoetida, hing", "½ tsp ground turmeric, haldi", "¼ tsp red chilli powder (or cayenne pepper, lal mirch", "1 tsp coriander powder", "½ tsp garam masala", "¼ tsp sugar, optional", "2-3 tbsp water, for instant pot only", "1 tsp lemon juice (or [¼ tsp amchur powder (dry mango powder)])", "2 tbsp cilantro/coriander leaves (hara dhania) (chopped, optional", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Savory Oats Khichdi", channel: "Recipe library", id: "more-ivd-oats-khichdi-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/oats-khichdi-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 281.0, "p": 11.0, "c": 39.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ghee", "1 tsp cumin seeds", "1 pinch hing", "½ cup onion, finely chopped", "1-2 green chilies, finely chopped", "1 tsp ginger, minced", "½ cup tomatoes, finely chopped", "1 cup mixed vegetables, carrot, beans, green peas", "½ tsp turmeric", "½ tsp red chili powder", "Salt, to taste", "½ cup split moong dal, yellow lentils", "1 cup rolled oats", "4 cups water", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "South Indian Tamil Nadu Veg Biryani", channel: "Recipe library", id: "more-ivd-instant-pot-veg-biryani", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-veg-biryani/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 554.0, "p": 13.0, "c": 100.0, "f": 13.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup seeraga samba rice, or basmati rice", "1.5 cups water", "1 small onion, or 6-7 shallots", "3 cloves ginger", "1 inch garlic", "3 green chilies, add more if you want to make it spicy", "1 inch cinnamon", "2 cloves", "3 cardamom", "1 tsp fennel seeds, saunf", "¼ cup water, for grinding", "1 tbsp oil", "1 tbsp ghee", "1 bay leaf", "1 star anise", "1 medium onion, thinly sliced", "1 medium tomato, finely chopped", "2 cups mix vegetables, carrot, green beans, peas, potato", "¼ cup mint (pudina), chopped", "¼ cup coriander leaves, chopped", "2 tbsp yogurt, curd", "½ tsp turmeric powder", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Butternut Squash Lentil Dal", channel: "Recipe library", id: "more-ivd-instant-pot-butternut-squash-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-butternut-squash-dal/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 259.0, "p": 9.0, "c": 48.0, "f": 4.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup toor dal, split pigeon peas", "2-3 cups butternut squash, peeled and diced in to 1.5 inch pieces", "1 tbsp ghee, or oil", "1 tsp cumin (jeera) seeds", "A pinch asafetida, hing", "1 green chili, finely chopped", "1 tbsp ginger-garlic paste", "1 small onion, finely chopped", "1 large tomato, finely chopped", "Salt, adjust to taste", "3 cups water", "2 tbsp coriander leaves, chopped", "Juice of ½ lemon", "½ tsp turmeric powder, haldi", "½-1 tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala powder", "1 cup basmati rice", "1.5 cups water", "A pinch salt, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Coconut Milk Pilaf", channel: "Recipe library", id: "more-ivd-instant-pot-coconut-milk-pulao", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-coconut-milk-pulao/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 330.0, "p": 6.0, "c": 60.0, "f": 4.2}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1-2 tbsp oil, or ghee", "1 stalk curry leaves", "3-4 green chilies", "1 tbsp ginger-garlic paste", "1 medium onion, sliced thinly", "1 cup mixed vegetables, carrot, french beans, green peas", "1 cup thick coconut milk, canned or homemade", "½ cup water", "1 cup basmati rice, rinsed", "Salt, to taste", "½ tsp cumin (jeera) seeds", "1-2 bayleaf", "2 cardamom", "3 cloves", "1 inch cinnamon stick",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach and Chickpea Curry (Chana Saag)", channel: "Recipe library", id: "more-ivd-instant-pot-chickpea-spinach-curry", video: "https://www.youtube.com/watch?v=qJLiZl-cWPA", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-chickpea-spinach-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 198.0, "p": 7.0, "c": 26.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dry chickpeas (chole/garbanzo beans), soaked overnight", "3 cups water, for soaking", "2 tbsp oil", "1 bay leaf", "1 tsp cumin seeds", "1 tbsp ginger and garlic, minced", "1 cup onion, finely chopped", "1 cup tomato puree", "1.5 cups water", "Salt, to taste", "4 cups spinach, palak", "1 tsp amchur, or lime juice", "½ tsp turmeric powder", "1 tsp red chili powder", "1 tsp coriander powder", "1 tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Green Mango Dal", channel: "Recipe library", id: "more-ivd-raw-mango-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/raw-mango-dal/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 125.0, "p": 4.0, "c": 12.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 small raw mango (cut into ½ inch pieces, about ½ cup", "½ cup toor dal, arhar dal", "1.5 cups water, for pressure cooking", "2 tbsp oil, or ghee", "1 tsp mustard seeds", "½ tsp cumin (jeera) seeds", "3 cloves garlic, minced", "1 stalk curry leaves", "2 green chillies, slit lengthwise", "A pinch asafetida, hing", "¼ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "2 tbsp coriander leaves", "½ cup water, for adjusting consistency of dal", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Biranji Anna Rice", channel: "Recipe library", id: "more-ivd-biranji-anna", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/biranji-anna/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 514.0, "p": 11.0, "c": 91.0, "f": 12.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice", "2-3 tbsp butter", "1 stalk curry leaves", "6-8 large garlic cloves, about ¼ cup", "3 green chilies, finely chopped", "1 tsp ginger, grated", "10 cashewnuts", "1.5 cups water", "Salt, to taste", "2 tbsp coriander leaves", "¼ cup grated dry coconut, optional but recommended", "1 inch cinnamon", "3-4 cloves", "2-3 cardamoms",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Vegetable Sambar, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-vegetable-sambar-instant-pot", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/vegetable-sambar-instant-pot/",
+        macros: {"servings": 3, "serving": "1 g", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 260.0, "p": 14.0, "c": 53.0, "f": 1.3}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup toor dal (split pigeon pea), rinsed", "2-3 cups mix vegetables, carrot, beans, pumpkin, eggplant, drumsticks", "1 small onion (finely chopped, or 6-8 pearl onions", "1 large tomato, finely chopped", "2 tbsp sambar powder", "½ tsp turmeric powder", "1 tsp red chili powder", "2 tbsp tamarind extract, *See Notes", "1 tsp jaggery, optional", "4 cups water, to taste", "Salt, to taste", "1 tbsp oil, or ghee", "1 tsp mustard seeds", "½ tsp cumin seeds", "1 stalk curry leaves", "2 dried red chilies", "1 big pinch asafoetida, hing", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Creamy Mac and Cheese, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-mac-and-cheese", video: "https://www.youtube.com/watch?v=Xw521tP7alY", tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/instant-pot-mac-and-cheese/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 598.0, "p": 28.0, "c": 63.0, "f": 15.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "16 oz uncooked elbow macaroni, about 4 cups", "4 cups vegetable broth (or water), or water", "2 tbsp butter", "1 tsp garlic powder", "1 tsp dry mustard powder, optional", "½ tsp black pepper powder", "Salt, to taste", "2 cups shredded cheddar cheese, sharp or milk", "1 cup shredded mozzarella cheese", "1 cup whole milk, can also use heavy cream or evaporated milk",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Kerala Black Chickpea Kadala Curry", channel: "Recipe library", id: "more-ivd-instant-pot-kerala-kadala-curry-brown-chickpeas-coconut-curry", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-kerala-kadala-curry-brown-chickpeas-coconut-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 225.0, "p": 6.0, "c": 21.0, "f": 16.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium tomatoes", "3 garlic cloves", "1 inch ginger", "2 cloves", "1 cardamom", "1 tsp fennel seeds, saunf", "1 cup kala chana/kadala/brown chickpeas, soaked overnight", "1 medium onion, finely chopped", "½ tsp turmeric powder", "1 tsp red chilli powder", "1 tsp coriander powder", "1 tsp garam masala powder", "1 tbsp coconut oil", "2 cups water", "Salt, to taste", "½ cup shredded coconut (fresh or frozen) or full fat coconut milk)", "½ cup water", "2 tsp coconut oil", "½ tsp mustard seeds", "¼ tsp cumin (jeera) seeds", "1 big pinch asafetida, hing", "1 stalk curry leaves", "2 dry red chillies",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pumpkin Sambar, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-pumpkin-sambar", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-pumpkin-sambar/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 143.0, "p": 5.0, "c": 19.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup toor dal (split pigeon peas), rinsed and soaked for 30 minutes", "2 cups pumpkin, diced into 1 inch pieces", "1 tbsp ghee, Or oil", "1 tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 stalk curry leaves", "1 big pinch hing, asafetida", "1.5-2 tbsp sambar powder", "½ tsp turmeric powder", "1 tsp red chili powder", "1-2 tbsp tamarind extract, Or paste as needed *See Notes", "¼ cup coconut paste (optional) *See Notes)", "2 cups water", "Salt, adjust to taste", "2 tbsp coriander leaves, to garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Butternut Squash Pasta", channel: "Recipe library", id: "more-ivd-instant-pot-butternut-squash-pasta", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/instant-pot-butternut-squash-pasta/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 280.0, "p": 9.0, "c": 39.0, "f": 10.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz dry shell pasta, about 2.5 cups", "3 cups cubed butternut squash, peeled and deseeded", "3 cups water, to cook pasta", "1 cup vegetable broth (or water, to cook butternut squash", "1 tbsp butter, or olive oil", "1 tbsp garlic, minced", "½ cup onion, finely chopped", "¼ cup grated parmesan cheese, or any cheese", "1 tbsp parsley, or mixed dried herbs", "Salt and pepper, to taste", "½ cup milk (or half and half, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Lemon Quinoa, South Indian-Style", channel: "Recipe library", id: "more-ivd-lemon-quinoa-recipe-indian-style-lemon-quinoa", video: "https://www.youtube.com/watch?v=QigxP6FjlhA", tags: ["Quinoa"], url: "https://www.indianveggiedelight.com/lemon-quinoa-recipe-indian-style-lemon-quinoa/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 440.0, "p": 12.0, "c": 44.0, "f": 24.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup raw quinoa", "1 cup water, ¾ cup water for instant pot", "Salt, to taste", "1 tbsp coconut oil", "2 tbsp raw peanuts", "½ tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 tsp urad dal", "2 green chilies, finely chopped", "1 stalk curry leaves", "1 pinch hing, asafetida", "1 small onion, finely chopped", "½ tsp turmeric", "Salt, to taste", "Juice of half lemon", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mushroom Rice Pilaf", channel: "Recipe library", id: "more-ivd-instant-pot-mushroom-rice-pilaf", video: "https://www.youtube.com/watch?v=qSMp95UHGPg", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-mushroom-rice-pilaf/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 263.0, "p": 6.0, "c": 44.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz white button mushrooms, about 3 cups", "1 cup basmati rice", "2 tbsp butter, or olive oil", "3 cloves garlic, minced", "1 medium yellow onion, finely chopped", "1¼ cups vegetable broth, or water", "Salt and black pepper, to taste", "1 bunch green onions, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ivy Gourd Masala Bhaat (Tendli)", channel: "Recipe library", id: "more-ivd-tendli-masale-bhaat", video: "https://www.youtube.com/watch?v=qUJS0KnkyKc", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/tendli-masale-bhaat/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 315.0, "p": 4.0, "c": 44.0, "f": 13.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil, or ghee", "1 tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 tsp garlic (minced, optional", "1 tsp ginger, minced", "2 green chilies, slit lengthwise", "1 stalk curry leaves", "10-12 cashews nuts", "1 big pinch asafetida, hing", "1.5 cups tindora (ivy gourd), sliced", "1 cup sona masoori rice, rinsed", "½ tsp turmeric powder", "½ tsp red chilli powder", "1.5 tbsp goda masala", "Salt, to taste", "2 cups water", "2 tbsp coriander leaves", "2 tbsp fresh coconut",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Eggplant Rice, Karnataka-Style (Vangi Bhath)", channel: "Recipe library", id: "more-ivd-vangi-bhath-recipe", video: "https://www.youtube.com/watch?v=3XtzBt7Bcpc", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/vangi-bhath-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 495.0, "p": 11.0, "c": 88.0, "f": 13.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sona masoori rice", "2 cups water", "3 green brinjals, about 2 cups", "2-3 tbsp oil", "1 tsp mustard seeds", "1 tsp urad dal", "1 tsp chana dal", "8-10 cashews", "1 stalk curry leaves", "1 pinch asafoetida/hing", "½ tsp turmeric", "Salt, to taste", "¼ cup tamarind extract", "1 tsp jaggery", "¼ cup water", "2-3 tbsp vangibath powder", "2 tbsp coriander leaves, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Soya Chunk Biryani", channel: "Recipe library", id: "more-ivd-instant-pot-soya-chunks-biryani", video: "https://www.youtube.com/watch?v=31Vqm1ZDRFI", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-soya-chunks-biryani/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 395.0, "p": 27.0, "c": 37.0, "f": 17.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup soya chunks (or meal maker), I used nutrela brand, available in indian grocery store", "2-2.5 cups hot water, for soaking", "½ cup yogurt, curd", "½ tsp turmeric powder", "½ tsp red chili powder", "Salt, to taste", "1 tsp cumin seeds", "1 inch cinnamon", "3 cloves", "2 cardamom", "1 bay leaf", "2 tbsp oil, or ghee", "1 large onion (thinly sliced, about 1 cup", "1 tbsp ginger garlic paste", "2 green chilies, slit lengthwise", "1 medium tomato, finely chopped", "½ tsp turmeric", "½ tsp red chili powder", "2 tsp biryani masala powder", "Salt, to taste", "¼ cup coriander leaves, roughly chopped", "¼ cup mint leaves, roughly chopped", "1 cup basmati rice", "1.5 cups water", "1 tbsp ghee, optional", "Few coriander leaves, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broccoli and Potato Sabzi", channel: "Recipe library", id: "more-ivd-broccoli-potato-stir-fry-broccoli-aloo-sabzi", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/broccoli-potato-stir-fry-broccoli-aloo-sabzi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 203.0, "p": 7.0, "c": 30.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "½ tsp cumin seeds", "3 cloves garlic, minced", "1 green chili", "1 small onion (about ½ cup), finely chopped)", "2 medium potato, cut into ¾ inch pieces, about 200 grams", "1 medium head broccoli (about 2-2.5 cups), cut into florets)", "1 tbsp lime juice", "2-3 tbsp water", "¼ tsp turmeric", "½ tsp red chili powder", "½ tsp coriander powder", "½ tsp cumin powder", "¼-½ tsp garam masala", "Salt, as needed",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cauliflower Curry, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-cauliflower-coconut-curry", video: "https://www.youtube.com/watch?v=0yR6LOO8zZk", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-cauliflower-coconut-curry/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 88.0, "p": 1.0, "c": 6.0, "f": 6.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp coconut oil, Or olive oil", "1 bay leaf", "1 tsp cumin (jeera) seeds", "1 large onion, finely chopped", "1 tbsp ginger garlic paste", "1 can (14 oz) tomatoes (crushed, about 1.5 cups", "1 can (14 oz) full fat coconut milk (, about 1.5 cups", "1 large head cauliflower ( cut into medium size florets, about 5 cups", "Salt, adjust to taste", "Juice of half lemon", "2 tbsp cilantro, coriander leaves", "½ tsp turmeric powder", "1 tsp red chilli powder", "1 tsp coriander powder", "1 tsp garam masala powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Zucchini and Lentil Dal", channel: "Recipe library", id: "more-ivd-instant-pot-zucchini-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-zucchini-dal/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 214.0, "p": 12.0, "c": 30.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup masoor dal, red lentils", "2 large zucchini (chopped into 1.5 inch pieces, about 2-3 cups", "1 tbsp ghee or coconut oil", "1 tsp cumin seeds, jeera", "1 pinch asafetida, hing", "2 green chillies, split into halve", "1 tbsp ginger and garlic paste", "1 small onion, finely chopped", "1 large tomato, finely chopped", "Salt, to taste", "3 cups water", "2 tbsp coriander leaves, chopped", "Juice of ½ lemon", "½ tsp turmeric powder, haldi", "1 tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala powder", "1 cup basmati rice", "1.5 cups water", "A pinch salt, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Kidney Bean Masala (Rajma)", channel: "Recipe library", id: "more-ivd-rajma-masala-instant-pot", video: "https://www.youtube.com/watch?v=ua5h2xmdFUY", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/rajma-masala-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 208.0, "p": 11.4, "c": 33.6, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dried red kidney beans (rajma), soaked OR 2 Cans Kidney Beans, rinsed and drained", "2 tbsp oil", "1 tsp cumin seeds, jeera", "1 bay leaf", "1 large onion (finely chopped, about 1 cup", "1 tbsp ginger garlic paste", "2 large tomatoes (finely chopped, about 1 cup", "1.5 cups water", "1 tbsp kasuri methi (dried fenugreek leaves), optional", "Juice of half lime, or 1 tsp amchur powder", "2 tbsp coriander leaves, cilantro", "½ tsp turmeric powder, haldi", "1 tsp red chili powder", "1 tsp coriander powder", "1 tsp garam masala", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Butternut Squash and Coconut Curry", channel: "Recipe library", id: "more-ivd-butternut-squash-coconut-curry", video: "https://www.youtube.com/watch?v=3L7iJjwtdLo", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/butternut-squash-coconut-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 235.0, "p": 5.0, "c": 22.0, "f": 16.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp coconut oil", "1 bay leaf (, optional", "1 tsp cumin (jeera) seeds", "1 stalk curry leaves, optional", "3 cloves garlic, minced", "1 inch ginger, minced", "1 medium onion, finely chopped", "1 large tomato, finely chopped", "2 cups butternut squash, diced into ¾-1 inch pieces", "1 cup green peas (frozen, optional", "1 cup full fat coconut milk", "½ cup water", "Salt, adjust to taste", "Juice of half lemon", "2 tbsp coriander leaves, finely chopped", "½ tsp turmeric powder", "1 tsp red chili powder", "1 tsp coriander powder", "1 tsp garam masala powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Butternut Squash Flatbread", channel: "Recipe library", id: "more-ivd-butternut-squash-paratha-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/butternut-squash-paratha-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 367.0, "p": 9.0, "c": 50.0, "f": 17.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup butternut squash puree", "1 cup whole wheat flour", "1 tsp ginger, grated", "1 tsp cumin (jeera) seeds", "1 tsp red chilli powder", "½ tsp turmeric powder", "½ tsp garam masala powder", "½ tsp amchur powder", "2 tbsp coriander leaves, finely chopped", "2 tbsp ghee (or oil) to cook parathas)", "Water, to knead the dough", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Penne in Creamy Tomato Sauce", channel: "Recipe library", id: "more-ivd-creamy-tomato-pasta", video: "https://www.youtube.com/watch?v=H0JAe6hUfsQ", tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/creamy-tomato-pasta/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 445.0, "p": 14.0, "c": 57.0, "f": 18.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz dry penne pasta, about 2-2.5 cups", "12 oz marinara sauce (pizza sauce or tomato sauce (about 1.5 cups))", "2 cups water, or vegetable broth", "1 tsp olive oil", "3-4 large garlic cloves, minced or garlic powder", "1-2 tsp dried basil, or Italian seasoning", "½ tsp red chilli flakes", "Salt, to taste", "½ cup heavy cream", "½ cup mozzarella cheese, or parmesan or cheese of your choice", "¼ cup fresh basil (or parsley), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Dill Dal (Shepu Dal)", channel: "Recipe library", id: "more-ivd-dill-leaves-dal-pressure-cooker", video: "https://www.youtube.com/watch?v=RrjGJCe6a_4", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/dill-leaves-dal-pressure-cooker/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 147.0, "p": 7.0, "c": 21.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil, or ghee", "1 tsp cumin (jeera) seeds", "2 cloves garlic, minced", "2 green chili", "1 stalk curry leaves, optional", "1 small onion, finely chopped", "1 large tomato, finely chopped", "1 large bunch of dill leaves (chopped, about 1 cup", "½ cup split yellow moong dal, rinsed", "1½ cups water", "Salt, to taste", "2 tbsp coriander leaves, garnish", "½ tsp turmeric", "½ tsp red chili powder", "1 tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Quinoa Veggie Biryani", channel: "Recipe library", id: "more-ivd-quinoa-biryani-recipe", video: "https://www.youtube.com/watch?v=UfSyZM5uCJQ", tags: ["Quinoa", "Rice & Grains"], url: "https://www.indianveggiedelight.com/quinoa-biryani-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 488.0, "p": 15.0, "c": 44.0, "f": 27.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup quinoa", "2 cups mixed veggies, carrots, beans, cauliflower and broccoli", "½ cup paneer, optional", "1 medium onion, thinly sliced", "1 tbsp ginger garlic paste", "2 green chiles, slit into half", "2 tbsp mint (pudina) leaves", "2 tbsp cilantro, coriander leaves", "1 tsp cumin, jeera", "1½ tbsp biryani masala powder", "¼ tsp turmeric powder", "½ tsp red chilli powder", "2 tbsp oil, or ghee", "1¼ cups water", "Salt, to taste", "1 tbsp lime juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cauliflower Pilaf (Gobi Pulao)", channel: "Recipe library", id: "more-ivd-cauliflower-pulao-gobi-pulao-recipe", video: "https://www.youtube.com/watch?v=2rvC3Jcf8Gc", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/cauliflower-pulao-gobi-pulao-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 254.0, "p": 5.0, "c": 45.0, "f": 17.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "3 cups cauliflower florets, about 1 inch 15 florets", "½ tsp turmeric powder", "½ tsp red chili powder", "½ tsp garam masala powder", "Tsp salt, to taste", "1 bay leaf", "1 cinnamon stick", "3 cloves", "2 cardamom", "1 tsp cumin (jeera) seeds", "2 tbsp oil", "1 tbsp ginger garlic paste", "1 medium onion, thinly sliced", "1 large tomato, finely chopped", "½ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp garam masala powder", "½ cup green peas", "1 cup basmati rice, rinsed", "1.5 cups water", "Salt, to taste", "1 tbsp lime juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Yogurt Quinoa (Dahi Quinoa)", channel: "Recipe library", id: "more-ivd-curd-quinoa", video: null, tags: ["Quinoa", "Rice & Grains"], url: "https://www.indianveggiedelight.com/curd-quinoa/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 190.0, "p": 4.0, "c": 22.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup dried quinoa, rinsed", "1 cup water, ¾ cup water for instant pot", "1 cup yogurt, curd", "¼ cup whole milk, boiled & cooled", "Salt, to taste", "1 tsp coconut oil", "½ tsp mustard seeds", "1 tsp split urad dal", "Few cashews", "½ tsp ginger, minced", "1 stalk curry leaves", "3 green chillies, finely chopped", "1 pinch asafetida, hing", "2 tbsp fresh coriander leaves, finely chopped", "2 tbsp grated carrot", "2 tbsp pomegranate seeds, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Creamy Spinach, Indian-Style", channel: "Recipe library", id: "more-ivd-easy-indian-creamed-spinach", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/easy-indian-creamed-spinach/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 215.0, "p": 4.0, "c": 10.0, "f": 20.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp olive oil", "½ tsp cumin (jeera) seeds", "1 medium onion, finely chopped", "2 garlic cloves, minced", "1 tsp ginger, minced", "1-2 green chilies, finely chopped", "1 large tomato, finely chopped", "½ tsp turmeric", "1 tsp garam masala", "Salt, adjust to taste", "8 oz fresh baby spinach, about 7-8 cups", "1 cup full-fat coconut milk, or heavy cream", "Juice of half lime",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Aloo Gobi, Potato and Cauliflower Sauté", channel: "Recipe library", id: "more-ivd-aloo-gobi", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/aloo-gobi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 175.0, "p": 4.5, "c": 19.2, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium cauliflower head (washed and cut into florets, 20-22 medium sized florets, about 3 cups", "2 small potatoes (cut into ½ inch cubes, about 1 cup", "2 tbsp oil", "½ tsp cumin seeds, jeera", "1 tbsp ginger garlic, minced", "1 green chili, slit lengthwise", "1 medium onion (finely chopped, about ¾ cup", "2 small tomatoes (finely chopped, about 1 cup", "1 tbsp lime juice (OR 1 tsp Amchur powder, Dry mango powder", "2 tbsp coriander leaves, for garnish", "½ cup water (divided, or as required", "1 tsp red chili powder", "½ tsp turmeric powder", "1 tsp coriander powder", "1 tsp garam masala", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Carrot Rice, Indian-Style", channel: "Recipe library", id: "more-ivd-carrot-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/carrot-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 450.0, "p": 8.0, "c": 88.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "3 cups cooked basmati rice or any rice, from 1 cup raw basmati rice", "1 cup carrot, grated", "½ cup onions, thinly sliced", "½ cup green peas, fresh or frozen", "2 green chillies, slit lengthwise", "1 tbsp ginger-garlic paste", "2 tbsp coriander leaves, chopped", "Few curry leaves", "Few cashew nuts, roasted", "A pinch asafetida, hing", "2 tbsp oil, or ghee", "Salt, to taste", "2 cloves", "1 green cardamon, elachi", "½ inch cinnamon, dal chini", "½ tsp mustard seeds", "½ tsp cumin (jeera) seeds", "½ tsp turmeric powder", "½ tsp red chilli powder", "½ tsp garam masala powder", "1 tsp sambhar powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Thayir Sadam, Restaurant-Style Yogurt Rice", channel: "Recipe library", id: "more-ivd-curd-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/curd-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 428.0, "p": 11.0, "c": 52.0, "f": 19.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup sona masoori rice, or 2 cups cooked rice", "1.5 cups water, for pressure cooking", "1 cup curd (yogurt), about 250 grams", "½ cup whole milk", "2-3 tbsp cream (fresh or heavy whipping cream), optional)", "Salt, to taste", "Freshly ground black pepper, to taste", "1 tbsp oil, or ghee", "½ tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 tsp urad dal", "2 dried red chilies", "1 green chili, slit length wise", "½ tsp grated ginger, optional", "8-10 curry leaves", "A pinch hing (asafetida), skip for gluten-free", "2 tbsp coriander leaves, finely chopped", "2 tbsp pomegranate seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mujadara, Lentils with Rice", channel: "Recipe library", id: "more-ivd-instant-pot-mujadara-lentils-rice", video: null, tags: ["Lentil & Beans", "Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-mujadara-lentils-rice/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 480.0, "p": 17.0, "c": 77.0, "f": 12.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 tbsp oil", "1 large yellow onion, sliced thinly", "1 tbsp oil", "1 bay leaf", "3 cloves garlic, minced", "1 large yellow onion, finely chopped", "1 cup brown lentils (whole masoor dal) (or green lentils), soaked overnight)", "1 cup basmati rice, rinsed", "2¼ cups vegetable broth, or water", "Salt, to taste", "¼ cup cilantro, or parsley", "2 tsp ground cumin", "1 tsp ground coriander", "½ tsp ground cinnamon", "½ tsp red chili powder (or black pepper), optional)",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Creamy Dal Makhani, Restaurant-Style", channel: "Recipe library", id: "more-ivd-madras-lentils-dal-makhani-instant-pot", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/madras-lentils-dal-makhani-instant-pot/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup black whole urad dal, whole black gram lentils", "¼ cup rajma, kidney beans", "3 tbsp butter, divided", "1 tbsp ginger garlic paste", "1 medium onion (finely chopped, about 1 cup", "2 large tomatoes (diced or pureed, about 1 cup tomato puree", "3 cups water, for cooking", "Salt, to taste", "¼ cup heavy cream, or cashew cream, coconut cream", "2 tsp kasuri methi (dried fenugreek leaves), optional", "½ tsp turmeric powder", "1 tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala powder", "1 bay leaf", "1 tsp cumin seeds", "3 cloves", "1 inch cinnamon", "2 cardamom", "1 black cardamom, optional", "2 tbsp coriander leaves, cilantro", "Heavy cream, as needed",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato and Eggplant Masala (Aloo Baingan)", channel: "Recipe library", id: "more-ivd-instant-pot-aloo-baingan-masala-potato-eggplant-curry", video: "https://www.youtube.com/watch?v=3o2FwTyMWt0", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-aloo-baingan-masala-potato-eggplant-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 311.0, "p": 10.0, "c": 57.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 medium potatoes, about 2.5 cups", "6-8 baby eggplant, about 3 cups", "2-3 tbsp oil", "1 tsp cumin (jeera) seeds", "2 cloves garlic, minced", "1 inch ginger, minced", "1 green chili, finely chopped", "1 large onion (finely chopped, about 1 cup", "2 medium tomatoes (finely chopped, about 1 cup", "Salt, to taste", "½ cup water", "1 tsp kasuri methi, optional", "1 tbsp lemon juice", "2 tbsp coriander leaves, cilantro", "½ tsp turmeric powder", "1 tsp kashmiri red chili powder", "1 tsp coriander powder", "½ tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mushroom Masala Curry", channel: "Recipe library", id: "more-ivd-mushroom-masala-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/mushroom-masala-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 180.0, "p": 6.0, "c": 19.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz organic white mushrooms (sliced, about 3 cups", "½ cup green peas, optional", "2 tbsp coconut oil", "1 medium red onion (roughly diced, about 1 cup", "1 inch ginger, chopped", "3 large garlic cloves", "1 green chili", "2 large tomatoes (roughly diced, about 1.5 cups", "½ tsp red chili powder", "½ tsp garam masala", "¼ tsp turmeric powder", "1 tsp coriander powder", "1 tsp cumin, jeera seeds", "Salt, to taste", "½ cup water", "1.5 tsp kasuri methi (dried fenugreek leaves) (crushed, optional", "2 tbsp coriander leaves, chopped", "Juice of ½ lemon", "10-12 cashews, soaked in hot water for 10-15 minutes and then blended to a smooth paste with ¼ cup water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer and Green Pea Curry (Matar Paneer)", channel: "Recipe library", id: "more-ivd-matar-paneer-instant-pot", video: "https://www.youtube.com/watch?v=kMJlG6Zexv0", tags: ["Paneer"], url: "https://www.indianveggiedelight.com/matar-paneer-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 323.0, "p": 11.0, "c": 16.0, "f": 10.1}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 cups paneer, cubed", "1 cup green peas, fresh or frozen", "2 tbsp oil", "1 bay leaf", "2 cardamoms", "½ tsp cumin seeds, jeera", "1 medium onion, about 1 cup", "3 cloves garlic", "1 inch ginger", "2 large tomatoes (or ½ can of tomato sauce (about 1 cup))", "½ tsp turmeric powder", "1 tsp Kashmiri red chilli powder", "1 tsp coriander powder", "1 tsp garam masala powder", "Salt, to taste", "1 cup water", "2 tbsp fresh cream, or coconut cream, cashew cream", "1 tbsp kasuri methi (dried fenugreek leaves), optional", "2 tbsp coriander leaves, to garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tomato Rice, One-Pot", channel: "Recipe library", id: "more-ivd-instant-pot-tomato-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-tomato-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 440.0, "p": 7.0, "c": 81.0, "f": 10.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 tbsp oil, or ghee", "1 tbsp ginger garlic paste", "1 large onion, sliced thinly", "1 green chili, slit lengthwise", "3-4 medium ripened tomatoes, or 1.5 cups chopped tomatoes or 1.5 cups tomato puree", "2 tbsp mint (pudina) leaves, finely chopped", "2 tbsp coriander leaves, finely chopped", "½ tsp turmeric powder", "1 tsp red chili powder", "1 tsp garam masala powder, or biryani masala powder", "1 cup basmati rice, rinsed", "½ cup thick coconut milk", "1 cup water", "Salt, to taste", "1 inch cinnamon stick", "1 bay leaves", "2 cardamom", "3 cloves", "1 tsp cumin (jeera) seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Brown Masoor Lentil Curry", channel: "Recipe library", id: "more-ivd-brown-lentil-masoor-dal-instant-pot", video: "https://www.youtube.com/watch?v=td5Qh6e8xrI", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/brown-lentil-masoor-dal-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 237.0, "p": 14.0, "c": 37.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "1 tsp cumin (jeera) seeds", "1 tbsp ginger and garlic, minced", "1 green chili, chopped", "1 medium onion, finely chopped", "2 medium tomatoes, finely chopped", "1 cup whole masoor dal (brown lentils), rinsed", "2½ cups water, or vegetable broth", "Salt, to taste", "½ lime, juiced", "2 tbsp coriander leaves, chopped", "½ tsp tumeric powder", "1 tsp red chili powder", "1 tsp coriander powder", "1 tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Yogurt Oats Bowl", channel: "Recipe library", id: "more-ivd-curd-oats-recipe-oatmeal-yogurt", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/curd-oats-recipe-oatmeal-yogurt/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 165.0, "p": 7.0, "c": 23.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup old fashioned rolled oats", "2½ cups water, to cook oats", "1 cup yogurt, curd", "½ cup milk", "Salt, to taste", "¼ cup carrot, grated", "¼ cup cucumber, chopped", "2 tbsp coriander leaves, finely chopped", "1 tsp oil", "½ tsp mustard seeds", "1 tsp urad dal", "1 tsp chana dal", "1 dry red chili", "1 green chili", "1 tsp ginger, minced", "1 stalk curry leaves", "1 pinch hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Palak Rice with Spinach", channel: "Recipe library", id: "more-ivd-instant-pot-spinach-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-spinach-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 165.0, "p": 3.0, "c": 30.0, "f": 3.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice, rinsed & drained", "2-3 cups fresh spinach (palak), chopped", "½ cup green peas, i used frozen", "1 medium onion, thinly sliced", "1 medium tomato, finely chopped", "1 tbsp ginger-garlic paste", "2-3 green chillies, chopped", "6-7 cashew-nuts", "1 tbsp lime juice", "2 tbsp coriander leaves (cilantro), finely chopped", "1½ cups water, or vegetable broth", "2 tbsp oil", "Salt, to taste", "1 inch cinnamon stick", "1 bayleaf", "2 cardamom", "2-3 cloves", "½ tsp cumin, jeera seeds", "¼ tsp turmeric powder", "½ tsp coriander powder", "½ tsp garam masala powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mushroom Biryani", channel: "Recipe library", id: "more-ivd-mushroom-biryani-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/mushroom-biryani-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 455.0, "p": 9.0, "c": 62.0, "f": 20.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice", "2 cups white mushroom (about 6 oz), add more if desired", "1 medium onion, thinly sliced", "1 medium tomato, finely chopped", "1 tbsp ginger garlic paste", "2 green chillies, slit lengthwise", "¼ cup yogurt (curd) (OR coconut milk, vegans can use dairy free yogurt", "¼ cup mint, pudina", "2 tbsp cilantro, coriander leaves", "1.5 cups water, depends on the quality of the rice", "2 tbsp oil, or ghee", "Salt, to taste", "¼ tsp turmeric powder", "½ tsp red chilli powder", "½ tsp coriander powder, optional", "1.5 tsp biryani masala, or garam masala powder", "½ tsp cumin seeds, jeera", "1 bay leaf", "1 inch cinnamon stick", "2-3 cloves", "2 cardamom", "1 star anise, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Savory Quinoa Pongal", channel: "Recipe library", id: "more-ivd-quinoa-pongal-recipe", video: null, tags: ["Quinoa"], url: "https://www.indianveggiedelight.com/quinoa-pongal-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 432.0, "p": 14.0, "c": 49.0, "f": 21.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup quinoa", "¼ cup split yellow moong dal", "½ tsp turmeric", "Salt, to taste", "3 cups water (to cook &, extra ½ cup for adjusting consistency", "2 tbsp ghee", "8-10 cashew nuts", "1 tsp cumin seeds", "½ tsp crushed whole pepper", "2 green chilies", "1 tsp ginger, finely chopped", "1 stalk curry leaves", "1 pinch asafoetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "A Dozen-Plus Indian Quinoa Ideas", channel: "Recipe library", id: "more-ivd-healthy-quinoa-recipes", video: null, tags: ["Quinoa", "Rice & Grains"], url: "https://www.indianveggiedelight.com/healthy-quinoa-recipes/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          ,
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Red Lentil Dal (Masoor)", channel: "Recipe library", id: "more-ivd-red-lentils-masoor-dal-instant-pot", video: "https://www.youtube.com/watch?v=rPLvZl2MQLI", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/red-lentils-masoor-dal-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 215.0, "p": 12.0, "c": 32.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup masoor dal, red lentils", "1 tbsp oil, or ghee", "1 tsp cumin seeds, jeera", "1 pinch hing, asafetida", "2 green chilies", "1 tbsp ginger and garlic, minced", "1 stalk curry leaves, optional", "1 medium onion, finely chopped", "1 large tomato, finely chopped", "Salt, to taste", "3 cups water", "2 tbsp coriander leaves, finely chopped", "1 tbsp lime juice", "½ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "½ tsp garam masala powder", "1 cup basmati rice", "1.5 cups water", "1 pinch salt, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Green Pea Pilaf (Matar Pulao)", channel: "Recipe library", id: "more-ivd-instant-pot-peas-pulao", video: "https://www.youtube.com/watch?v=l6WvSnB3pc0", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-peas-pulao/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 200.0, "p": 4.2, "c": 30.3, "f": 6.7}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil, or ghee", "1 medium onion, thinly sliced", "1 tbsp ginger garlic paste", "2-3 green chilies, slit lengthwise", "2 tbsp mint, pudina leaves", "1 cup green peas, fresh or frozen", "1 cup basmati rice", "1.5 cups water", "Salt, to taste", "1 tsp cumin seeds, jeera", "2 cardamom", "1 bay leaf", "2-3 cloves", "1 inch cinnamon stick", "1 star anise, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer and Pea Pilaf", channel: "Recipe library", id: "more-ivd-paneer-pulao-recipe", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-pulao-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 604.0, "p": 17.0, "c": 63.0, "f": 31.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup paneer, cut into 1-inch cubes", "½ tsp red chili powder", "Salt, to taste", "½ tsp ginger garlic paste", "1 tsp oil", "1 cup basmati rice", "2 tbsp ghee", "1 medium onion", "2 green chilies", "1 tbsp ginger garlic paste", "½ cup green peas", "½ tsp garam masala", "2 tbsp coriander leaves, chopped", "2 tbsp mint leaves, chopped", "1½ cups water", "Salt, to taste", "1 tbsp lemon juice", "1 bay leaf", "1 inch cinnamon", "3 cardamom", "4 cloves", "1 star anise", "1 mace", "½ tsp jeera",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Indo-Chinese Veggie Hakka Noodles", channel: "Recipe library", id: "more-ivd-instant-pot-vegetable-hakka-noodles", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/instant-pot-vegetable-hakka-noodles/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 220.0, "p": 3.0, "c": 17.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 pack (150 gram, 5.5 oz) noodles, I used Ching hakka noodles, or use any noodles", "3-4 cups water", "1 tsp oil", "2 tbsp oil", "1 tbsp minced garlic", "2-3 tbsp white spring onion, chopped", "½ cup red onion, thinly sliced", "1 small carrot, peeled and julienned", "1 large bell pepper, mix of red, yellow, and green", "½ cup cabbage, shredded", "½ tsp sugar, optional", "1 tbsp dark soy sauce", "1-2 tsp red chili sauce, or sriracha, schezwan sauce", "1 tsp green chili sauce, optional", "1 tsp white vinegar, or rice vinegar", "Salt, pepper, to taste", "¼ cup green spring onions, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Charred Garlic Veggie Fried Rice", channel: "Recipe library", id: "more-ivd-burnt-garlic-vegetable-fried-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/burnt-garlic-vegetable-fried-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 443.0, "p": 11.0, "c": 66.0, "f": 17.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp sesame oil", "1 cup uncooked basmati rice, about 3 cups cooked rice", "8-10 cloves garlic (about 2 tbsp), chopped)", "¼ cup spring white onions, finely chopped", "2 tbsp celery, optional", "1 green chili, finely chopped", "1.5-2 cups vegetables (beans, carrot, broccoli, capsicum), finely chopped", "1 tbsp soy sauce", "1 tsp rice vinegar (white vinegar), optional)", "Salt & pepper, to taste", "2-3 tbsp spring onions, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spicy Garlic Chili Noodles (Vegan)", channel: "Recipe library", id: "more-ivd-chili-garlic-noodles", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/chili-garlic-noodles/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 409.0, "p": 9.0, "c": 54.0, "f": 18.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "5 oz noodles (hakka / ramen / spaghetti), I used 2 Lotus foods brand brown rice and millet noodles, about 150 grams)", "2-3 cups water, for boiling", "Salt, to taste", "2 tsp oil", "1 tbsp minced garlic", "2-3 tbsp white spring onions", "1.5-2 tbsp chili oil crisp (adjust to taste), I like Lao Gan Ma Spicy Chili Crisp", "1 tbsp light soy sauce", "1 tsp dark soy sauce", "1 tsp vegan oyster sauce", "1 tsp white vinegar", "Salt, to taste", "2-3 tsp green spring onions", "1 tbsp white sesame seeds", "Optional Veggies: Carrot, Cabbage, Mushrooms, Bok Choy",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Black Chickpea Curry (Kala Chana)", channel: "Recipe library", id: "more-ivd-kala-chana-curry", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/kala-chana-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 281.0, "p": 9.0, "c": 40.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dried black chickpeas", "3 cups water, for soaking", "2 tbsp olive oil", "1 large onion (finely chopped, about 1 cup", "1 tbsp ginger garlic paste", "1 green chili, finely chopped", "1 cup tomato puree, about 2 large tomatoes", "½ tsp turmeric", "1 tsp red chili powder", "1.5 tsp coriander powder", "Salt, to taste", "2 cups water, for cooking", "2 tsp kasuri methi, dried fenugreek leaves", "1 tsp amchur powder", "½ tsp garam masala", "2 tbsp coriander leaves, for garnish", "1 tsp cumin seeds", "1 bay leaf", "1 inch cinnamon", "2 cloves", "2 cardamoms",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Black Chickpea Pilaf, One-Pot", channel: "Recipe library", id: "more-ivd-kala-chana-pulao", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/kala-chana-pulao/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup black chickpeas", "2 cups water", "1 pinch salt", "2 tbsp oil, or ghee", "1 bay leaf", "2-3 cloves", "2 cardamoms", "1 inch cinnamon stick", "1 star anise", "1 tsp cumin seeds", "1 large red onions, about 1 cup", "1 tbsp ginger garlic, minced", "2 green chilies, sliced", "1 large tomato, about ¾ cup", "¼ tsp turmeric", "½ tsp cumin powder", "1 tsp coriander powder", "½ tsp red chili powder", "½ tsp garam masala", "Salt, to taste", "¼ cup mint leaves, roughly chopped", "¼ cup coriander leaves, roughly chopped", "1 cup white basmati rice", "1.5 cups water", "1 tbsp lemon juice, optional", "2 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer Biryani", channel: "Recipe library", id: "more-ivd-paneer-biryani-instant-pot", video: "https://www.youtube.com/watch?v=0YKQYBj-NMI", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/paneer-biryani-instant-pot/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 586.0, "p": 17.0, "c": 62.0, "f": 30.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice", "1 - 1.25 cups paneer (Indian cottage cheese), cubed and air-fried", "2 tbsp ghee, or oil", "1 large onion, thinly sliced", "1 tbsp ginger and garlic, minced", "2 green chilies, slit lengthwise", "¼ cup mint leaves, chopped", "¼ cup coriander leaves, chopped", "¼ cup curd (yogurt), vegans can use dairy free", "1.5 cups water", "1 bay leaf", "1 inch cinnamon stick", "2-3 cloves", "2 cardamoms", "½ tsp cumin seeds", "½ tsp turmeric", "½ tsp red chili powder", "½ tsp cumin powder", "2-3 tsp biryani masala powder", "Salt, to taste", "1 tbsp lime juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Indo-Chinese Quinoa Fried Rice", channel: "Recipe library", id: "more-ivd-quinoa-fried-rice-recipe", video: null, tags: ["Quinoa", "Rice & Grains"], url: "https://www.indianveggiedelight.com/quinoa-fried-rice-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 301.0, "p": 13.0, "c": 39.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp olive oil, or toasted sesame oil", "3 cloves garlic, minced", "¼ cup white spring onions, chopped", "¼ cup carrot, finely chopped", "¼ cup green bell pepper, diced", "¼ cup green beans, diced", "¼ cup broccoli, diced", "¼ cup cabbage, shredded", "1.5 cups cooked quinoa", "½ cup extra-firm tofu, cubed", "2 tsp dark soy sauce, adjust to suit your taste", "1 tsp white vinegar ( or apple cider, optional", "½ tsp black pepper", "Salt, to taste", "2 tbsp spring onions, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Scrambled Paneer (Paneer Bhurji)", channel: "Recipe library", id: "more-ivd-paneer-bhurji", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-bhurji/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 283.0, "p": 11.0, "c": 7.0, "f": 24.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil, or butter", "½ tsp cumin (jeera) seeds", "½ cup onion, finely chopped", "2 tsp minced ginger and garlic", "1 green chili, finely chopped", "½ cup tomatoes, finely chopped", "¼ tsp turmeric powder", "½ tsp red chilli powder", "¼ - ½ tsp garam masala powder", "Salt, to taste", "1 - 1.25 cups crumbled paneer, approximately 200 grams or 8 oz", "1 tsp kasuri methi (dried fenugreek leaves), optional but recommended", "1 tbsp lime juice", "2 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mixed Vegetable Khichdi", channel: "Recipe library", id: "more-ivd-instant-pot-vegetable-khichdi", video: null, tags: ["Lentil & Beans", "Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-vegetable-khichdi/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 434.0, "p": 16.0, "c": 70.0, "f": 12.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ghee, or oil", "1 bay leaf", "2 cloves", "½ inch cinnamon", "½ tsp cumin seeds", "1 medium onion, finely chopped", "1 tbsp ginger and garlic, minced", "1 green chili, sliced", "1 medium tomato, finely chopped", "2 cups mixed veggies, green peas, carrot, green beans, cauliflower", "½ tsp turmeric", "½ tsp red chili powder", "½ tsp coriander powder", "½ tsp garam masala", "Salt", "½ cup basmati rice, you can also use sona masuri", "½ cup split yellow moong dal, you can also use split green moong dal", "3 cups water, ½ cup extra to adjust consistency", "1 tbsp lime juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fenugreek Pilaf, Karnataka-Style (Menthya Bath)", channel: "Recipe library", id: "more-ivd-methi-pulao", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/methi-pulao/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 315.0, "p": 6.0, "c": 51.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 tbsp grated coconut, fresh/frozen", "2 tbsp onion, optional", "3 garlic cloves", "1 inch ginger", "3-4 green chilies", "2 tbsp mint/pudina", "2 tbsp coriander leaves", "Spices (2 cloves, ½ inch cinnamon, 2 cardamom), optional", "¼ cup water (or more), for grinding", "2 tbsp oil, or ghee", "1 bay leaf", "1 inch cinammon", "2 cloves", "2 cardamoms", "½ tsp cumin seeds, jeera", "½ tsp saunf, optional", "1 star anise, optional", "1 large onion, thinly sliced", "1 big bunch fresh methi leaves, about 2 cups tightly packed", "½ cup green peas, fresh or frozen", "1 medium tomato, finely chopped", "¼ tsp turmeric", "Salt, to taste", "1 cup sona masuri rice", "2 cups water", "1 tbsp lime juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Rasam Rice in One Pot", channel: "Recipe library", id: "more-ivd-one-pot-rasam-rice-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/one-pot-rasam-rice-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 402.0, "p": 10.0, "c": 66.0, "f": 11.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup toor dal", "¾ cup basmati rice", "1 tbsp oil", "1 tbsp ghee", "1 tsp mustard seeds", "½ tsp cumin seeds", "1 stalk curry leaves", "1 pinch hing, asafoetida", "½ tsp crushed pepper", "2-3 shallots, or ¼ cup onion", "2-3 garlic cloves, crushed", "1 green chili, optional", "1 medium tomato, finely chopped", "1-1.5 tbsp rasam powder", "½ tsp turmeric powder", "½ tsp red chili powder", "1 tsp coriander powder", "Salt, to taste", "2-3 tbsp tamarind extract", "4 cups water", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bisi Bele Bath, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-bisibelebath", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-bisibelebath/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 312.0, "p": 10.0, "c": 54.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sona masuri rice", "¾ cup toor dal, split pigeon peas", "1 medium onion, finely chopped", "2.5 cups mixed vegetables, carrot, beans, peas, potato and bell pepper", "2 tbsp tamarind extract, tamarind water extracted from soaking small lemon size tamarind", "6 cups water", "3 tbsp bisi bele bath powder, I used MTR brand", "½ tsp turmeric powder (haldi), optional", "1 tsp red chilli powder", "2-3 tbsp oil, or ghee", "1 tsp mustard seeds", "½ tsp jeera seeds, cumin", "1 sprig curry leaves", "A pinch asafetida, hing", "Salt, adjust to taste", "2 tbsp coriander leaves, cilantro", "1 tbsp ghee, or oil", "½ tsp musturd seeds", "Few cashewnuts", "2-3 red dried chilies", "Few curry leaves", "A pinch asafoetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tomato Paste Cream Pasta", channel: "Recipe library", id: "more-ivd-easy-creamy-tomato-pasta-using-tomato-paste", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/easy-creamy-tomato-pasta-using-tomato-paste/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 505.0, "p": 12.0, "c": 50.0, "f": 29.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2-2½ cups uncooked pasta", "1 tbsp olive oil", "1 tbsp butter", "3-4 garlic cloves, minced", "½ cup onion (or shallot), finely chopped)", "6 tbsp organic tomato paste", "¾ cup heavy whipping cream", "1 tsp Italian seasoning, or dried oregano", "½ tsp red chili flakes", "Salt & pepper, to taste", "¼-½ cup reserved pasta water", "2-3 tbsp fresh basil", "¼ cup shredded mozzarella cheese, parmesan or any cheese", "Optional: sautéed veggies, mushrooms, bell peppers, broccoli and sweet corn",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Protein-Rich Pasta with Hidden Vegetables", channel: "Recipe library", id: "more-ivd-hidden-veggie-pasta-recipe", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/hidden-veggie-pasta-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 420.0, "p": 16.0, "c": 66.0, "f": 11.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 - 2½ cups penne pasta (8 oz), or 3-3.5 cups cooked pasta", "3 medium tomatoes (cubed, about 1½ cups", "1 medium red bell pepper (cubed, about 1 cup", "1 large carrot, diced", "1 medium zucchini (chopped (about 1 cup), or bottlegourd", "1 small red onion, sliced", "5-6 large garlic cloves", "2 tsp olive oil", "Salt and black pepper, to taste", "½ cup paneer (Indian cottage cheese), or tofu, cottage cheese, cream, coconut cream", "1½ - 2 tsp dried oregano, or Italian seasoning", "1 tsp red chili flakes (, adjust to taste", "½-¾ cup water (or vegetable broth), for blending", "¼ -½ cup reserved pasta water", "1-2 tbsp fresh parsley (or basil), chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Quinoa Khichdi", channel: "Recipe library", id: "more-ivd-quinoa-khichdi-instant-pot", video: null, tags: ["Lentil & Beans", "Quinoa"], url: "https://www.indianveggiedelight.com/quinoa-khichdi-instant-pot/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 375.0, "p": 18.0, "c": 60.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp olive oil, or ghee", "1 bay leaf", "1 tsp jeera seeds, cumin", "3 green chillies", "1 tsp ginger paste", "1 medium onion, finely chopped", "1 medium tomato, finely chopped", "2 cups mixed vegetables, carrot, green beans, green peas", "½ cup quinoa, rinsed", "½ cup moong dal (split yellow moong lentils), rinsed", "½ tsp turmeric powder", "½ tsp coriander powder", "1 tsp garam masala powder", "Salt, adjust to taste", "3 cups water", "Juice of half lime", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chole Masala in the Pressure Cooker", channel: "Recipe library", id: "more-ivd-instant-pot-chana-masala", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-chana-masala/",
+        macros: {"servings": 4, "serving": "1 cup", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 281.0, "p": 7.7, "c": 29.0, "f": 16.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dry chickpeas (chole/garbanzo beans), soaked overnight", "2 tbsp oil", "1 tsp cumin (jeera) seeds", "1 bay leaf", "1 medium onion, finely chopped", "1 tbsp ginger-garlic paste", "1 green chilli, finely chopped", "2 large tomatoes (, i made tomato puree about 1 cup", "1 tsp amchur powder (dry mango powder), or juice of half lemon", "2 tbsp coriander leaves", "1 tbsp dried kasuri methi, optional", "1.5 cups water", "Salt, to taste", "1 tsp coriander powder", "1 tbsp chana, chole masala", "1 tsp red chili powder", "¼ tsp turmeric powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Maharashtrian Spiced Rice (Masale Bhaat)", channel: "Recipe library", id: "more-ivd-maharashtrian-masale-bhaat-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/maharashtrian-masale-bhaat-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 483.0, "p": 10.0, "c": 72.0, "f": 18.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil, or ghee", "1 bay leaf", "1 tsp mustard seeds", "½ tsp cumin seeds", "1 stalk curry leaves", "1 tsp ginger, grated", "1 green chili, thinly sliced", "1 pinch hing", "1 small onion, finely chopped", "2 cups mixed veggies, carrot, potato, green peas", "2-2.5 tsp goda masala, I like Kpra brand", "½ tsp turmeric", "1 tsp red chili powder", "1 tsp coriander powder", "Salt, to taste", "1 cup basmati rice", "1.5 cups water", "1 tbsp ghee", "8-10 roasted cashews", "2 tbsp fresh coconut, shredded", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Avocado Cream Pasta", channel: "Recipe library", id: "more-ivd-creamy-avocado-pasta", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/creamy-avocado-pasta/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 615.0, "p": 17.0, "c": 97.0, "f": 19.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz penne pasta (i used semolina pasta (about 2-2.5 cups) or any pasta)", "2 cups water", "Salt, to taste", "1 large avocado, ripened", "2 garlic cloves", "1 cup baby spinach (or basil), optional)", "Crushed black pepper, to taste", "1 tsp olive oil, optional", "1 tbsp lemon juice", "Salt, adjust to taste", "¼ cup water, or as needed", "Red chilli flakes",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mushroom and Spinach Cream Pasta", channel: "Recipe library", id: "more-ivd-creamy-mushroom-pasta", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/creamy-mushroom-pasta/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 399.0, "p": 17.0, "c": 58.0, "f": 12.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 cup uncooked pasta, about 4 oz", "1 tbsp butter", "½ tbsp olive oil", "2 cloves garlic, minced", "2-3 tbsp shallots (finely chopped, or onion", "4 oz cremini mushrooms, about 1 cup", "1 cup baby spinach, chopped", "¼ cup +2 tbsp heavy cream", "½-1 tsp italian seasoning", "Salt, pepper, to taste", "1 tbsp fresh parsley, finely chopped", "2-3 tbsp parmesan cheese, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Drumstick Leaf Paratha", channel: "Recipe library", id: "more-ivd-drumstick-leaves-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/drumstick-leaves-paratha/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 156.0, "p": 2.8, "c": 20.2, "f": 6.8}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup whole wheat flour, or multigrain flour", "1 cup drumstick leaves (moringa), tightly packed", "1 tsp ginger, grated", "¼ tsp ajwain, carrom seeds", "½ tsp cumin seeds", "½ tsp red chili powder", "¼ tsp turmeric powder", "½ tsp garam masala (optional) )", "Salt, to taste", "2 tbsp oil (or ghee to (cook parathas) )", "Water, to knead dough",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Indo-Chinese Paneer Fried Rice", channel: "Recipe library", id: "more-ivd-paneer-fried-rice", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-fried-rice/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 613.0, "p": 19.0, "c": 67.0, "f": 30.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice", "1¼ cups water, depends on the rice", "1 cup paneer, cut into 1-inch cubes", "½ tsp red chili powder", "Salt, to taste", "½ tsp ginger garlic paste", "1 tsp oil", "2 tbsp oil", "3 cloves garlic, minced", "1 tsp ginger, minced", "½ cup white onion springs, chopped", "1-2 green chili, finely chopped", "1½ cups mixed vegetables (carrot, green beans, bell peppers) finely diced)", "1 tbsp soy sauce", "1 tsp white vinegar", "Salt, to taste", "Black pepper, to taste", "¼ cup green onions", "2 tbsp green onions",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sprouted Moong Sabzi", channel: "Recipe library", id: "more-ivd-sprouts-curry", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/sprouts-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 609.0, "p": 38.0, "c": 105.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "1 tsp cumin seeds", "1 tbsp ginger garlic, minced", "2 green chilies, finely chopped", "1 cup onion, finely chopped", "1 cup tomatoes, finely chopped", "3 cups sprouted moong, or any sprouts", "2-2½ cups water", "1 tbsp lemon juice", "2 tbsp coriander leaves", "½ tsp turmeric", "1 tsp red chili powder", "½ tsp cumin powder", "1 tsp coriander powder", "½ tsp garam masala", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Thai Red Curry with Mixed Vegetables", channel: "Recipe library", id: "more-ivd-instant-pot-thai-red-curry", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-thai-red-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 230.0, "p": 7.0, "c": 20.0, "f": 25.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "3 cloves garlic, minced", "½ inch ginger, minced", "1 small yellow onion, finely chopped", "2-3 tbsp thai red curry paste, i used thai kitchen", "1 can 14 oz full fat coconut milk, about 400 ml", "¼ cup water, Or vegetable broth", "1 tbsp dark soy sauce, Or tamari for gluten free", "1 tsp brown sugar, optional", "1 small zucchini, diced", "1½ cups colored bell peppers, thinly sliced", "½ cup canned baby corn", "½ cup extra firm tofu, cubed", "3-4 kaffir lime leaves, Or zest of ½ lime", "1 tbsp lime juice", "½ cup thai basil", "Salt, adjust to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Vegan Thai Basil Fried Rice", channel: "Recipe library", id: "more-ivd-instant-pot-thai-basil-fried-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-thai-basil-fried-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 568.0, "p": 11.0, "c": 91.0, "f": 18.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp sesame oil, Or olive oil", "3 cloves garlic, minced", "½ inch ginger, minced", "2 thai green or red chillies", "1 medium yellow onion, finely chopped", "1 cup jasmine rice", "1 medium red bell pepper, cut into julianne", "1 cup water", "2 tbsp soy sauce", "1 tsp sriracha, adjust to taste", "Salt, adjust to taste", "Black pepper powder, adjust to taste", "¼ cup cilantro, coriander leaves", "½ cup thai basil", "8-10 cashews, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pumpkin Pasta with Paneer", channel: "Recipe library", id: "more-ivd-creamy-pumpkin-pasta", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/creamy-pumpkin-pasta/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 735.0, "p": 28.0, "c": 101.0, "f": 25.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 cup penne pasta", "1 cup water, or as needed", "Salt, to taste", "1 tsp oil", "3 garlic cloves", "¾-1 cup pumpkin, diced thinly", "1 small tomato (about ½ cup), diced)", "1 tbsp pumpkin seeds, optional", "¼ cup paneer, or tofu, cottage cheese", "1 cup water, divided", "1 tsp Italian seasoning", "½ tsp red chili flakes", "Salt, pepper, to taste", "¼ cup reserved pasta water", "2 tbsp parsley, or basil",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Dal Tadka, Restaurant-Style", channel: "Recipe library", id: "more-ivd-dal-tadka-instant-pot", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/dal-tadka-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 220.0, "p": 13.0, "c": 32.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup split toor dal (split pigeon peas), rinsed", "1 tbsp ghee (, or coconut oil", "1 tsp cumin seeds, jeera", "1 tbsp ginger garlic, minced", "2 green chillies, finely chopped", "1 big pinch asafetida, hing", "1 medium onion, finely chopped", "1 large tomato, finely chopped", "½ tsp turmeric powder", "½ tsp red chili powder", "1 tsp garam masala powder", "Salt, to taste", "3 cups water", "2 tbsp coriander leaves, chopped", "1 tbsp ghee", "1 tsp cumin seeds", "1 stalk curry leaves, optional", "Big pinch asafetida, hing", "¼ tsp red chili powder", "2 dried red chilies", "1 cup sona masoori rice", "2 cups water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Palak Paneer, Spinach and Cottage Cheese Curry", channel: "Recipe library", id: "more-ivd-instant-pot-palak-paneer", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/instant-pot-palak-paneer/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 254.0, "p": 11.0, "c": 9.0, "f": 17.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "10 oz spinach (palak) (about 284 grams), around 8-10 cups", "200 grams paneer (cottage cheese) (about 1.5 cups), cut into cubes)", "2 tbsp oil, or ghee", "1 tsp cumin (jeera) seeds", "1 medium onion, finely chopped", "½ inch ginger, minced", "3 garlic cloves, minced", "2 green chillies, finely chopped", "1 large tomato (finely chopped, about 1 cup", "½ tsp turmeric powder", "½ tsp red chilli powder", "1 tsp coriander powder", "1 tsp garam masala", "Salt, to taste", "½ tsp sugar, optional", "½ cup water, or as needed", "1 tbsp kasuri methi (dried fenugreek leaves), optional", "2 tbsp fresh cream (or cashew cream, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Lobia Masala (Black-Eyed Pea Curry)", channel: "Recipe library", id: "more-ivd-black-eyed-peas-curry-lobia-curry", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/black-eyed-peas-curry-lobia-curry/",
+        macros: {"servings": 4, "serving": "1 g", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 129.9, "p": 4.0, "c": 21.2, "f": 4.3}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup black eyes peas (lobia) (soaked in water for 4 or more hours, it will double up to 2 cups", "1 tbsp oil", "1 tsp jeera (cumin) seeds", "1 medium onion, finely chopped", "1 tbsp ginger-garlic paste, or minced", "2 green chilies, chopped", "2 medium tomatoes, finely chopped", "2 cups water, for cooking", "1 tbsp lemon juice", "2 tbsp coriander leaves (cilantro), for garnish", "½ tsp turmeric, haldi powder", "1 tsp red chilli, mirchi powder", "1 tsp coriander, dhaniya powder", "1 tsp garam masala powder", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beetroot Korma, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-beetroot-kurma-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/beetroot-kurma-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 154.0, "p": 4.0, "c": 18.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup grated coconut, fresh or frozen", "6-8 cashewnuts", "1 inch cinnamon stick", "1 clove", "1 cardamom", "½ tsp saunf (fennel seeds), optional", "¼ cup water (for grinding, or as needed", "1 tbsp oil", "½ tsp cumin seed", "1 stalk curry leaves", "1 medium onion, finely chopped", "1 tbsp ginger and garlic paste", "1 medium tomato, finely chopped", "2 medium beetroot, diced", "½ cup green peas, fresh or frozen", "1 tsp red chili powder", "1 tsp coriander powder", "½ tsp garam masala", "Salt, to taste", "1 cup water, for cooking", "1 tbsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Seventy-Five-Plus Lunch Box Ideas for Kids", channel: "Recipe library", id: "more-ivd-healthy-kids-lunch-box-recipes-indian", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/healthy-kids-lunch-box-recipes-indian/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "Rice", "Vegetables", "Fruits", "Roti",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ghee Rice, Restaurant-Style", channel: "Recipe library", id: "more-ivd-instant-pot-ghee-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-ghee-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 540.0, "p": 8.0, "c": 82.0, "f": 18.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 tbsp ghee", "12-15 cashews", "10-15 raisins", "2 small onion, thinly sliced", "2-3 green chilies, slit lengthwise", "½ inch ginger, grated", "1 cup basmati rice", "1.5 cups water", "Salt, to taste", "2 bay leaves", "2 cinnamon sticks", "3 cloves", "2 cardamom", "1 small mace, optional", "1 star anise, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-sides",
+    title: "More recipes: Recipe library, side dishes",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Red Chilli Karindi (Menthe Hindi)", channel: "Recipe library", id: "more-ivd-red-chilli-karindi", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/red-chilli-karindi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 29.0, "p": 2.0, "c": 5.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "100 grams OR 20-22 ripened byadgi red chilli, long and thin red chillies,which are less spicy in nature", "2.5 tsp Fenugreek seeds/Methi/Menthya", "2 tsp Mustard seeds", "2 small bulbs of garlic, whole – in India, 5-6 cloves in USA", "½ tsp Turmeric powder", "Salt, as per taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach Yogurt Raita", channel: "Recipe library", id: "more-ivd-palak-raita-spinach-raita-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/palak-raita-spinach-raita-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 167.0, "p": 5.0, "c": 9.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups yogurt, curd", "2 cups palak (spinach), finely chopped", "1 tsp cumin (jeera) seeds", "½ tsp roasted cumin (jeera) powder", "½ tsp black salt", "¼ tsp black pepper", "Salt, to taste", "1 tsp oil", "1 tsp oil", "1 dry red chilli", "½ tsp mustard seeds", "Few curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ash Gourd Yogurt Raita", channel: "Recipe library", id: "more-ivd-ash-gourd-raita", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/ash-gourd-raita/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 95.0, "p": 3.0, "c": 7.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup ash gourd (winter melon) (shredded, about 300 grams", "½ cup yogurt, whisked", "Salt, to taste", "1 tbsp coriander leaves, chopped", "2 tsp coconut oil", "½ tsp mustard seeds", "1 tsp urad dal, optional", "Few curry leaves", "1 green or red dry chili", "A pinch hing, asafoetida",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cabbage, Potato and Pea Curry", channel: "Recipe library", id: "more-ivd-instant-pot-cabbage-potato-peas-curry", video: "https://www.youtube.com/watch?v=6NQWDDokm9A", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-cabbage-potato-peas-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 245.0, "p": 8.0, "c": 36.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 cups cabbage, shredded", "2 medium potatoes, diced into 1 inch pieces", "½ cup green peas, fresh/frozen", "1 tbsp oil", "½ tsp cumin seeds, jeera", "2 green chilies, finely chopped", "1 tbsp ginger garlic paste", "1 medium onion, finely chopped", "½ cup water, + 2 tbsp extra water", "1 tbsp lemon juice ( or [1 tsp amchur powder (dry mango powder)])", "2 tbsp chopped cilantro (coriander leaves), optional", "Salt, to taste", "½ tsp ground turmeric, haldi", "½ tsp red chilli powder, or cayenne pepper", "1 tsp coriander powder", "½-1 tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broccoli and Spinach Soup", channel: "Recipe library", id: "more-ivd-broccoli-spinach-soup", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/broccoli-spinach-soup/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 293.0, "p": 12.0, "c": 35.0, "f": 14.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup broccoli (chopped, around 15 florets", "1 cup spinach (palak), chopped", "1 tbsp garlic (minced, around 3 cloves", "1 medium onion (finely chopped, about ½ cup", "½ cup almond milk, or coconut milk or dairy milk", "1 tbsp butter", "¼ cup mozzarella cheese, or any processed cheese", "¼ tsp black/white pepper powder", "Salt, to taste", "1 cup water, or vegetable broth",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tandoori-Style Mint Yogurt Dip", channel: "Recipe library", id: "more-ivd-mint-yogurt-chutney", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/mint-yogurt-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 32.0, "p": 1.0, "c": 4.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup coriander leaves, tightly packed", "½ cup mint leaves, tightly packed", "½ inch ginger", "2 green chilies, adjust according to your taste", "1 tsp lemon juice", "¼ tsp cumin powder", "½ tsp chaat masala", "Salt, to taste", "2-3 tbsp water, for grinding or add as required", "1-2 ice cubes", "½ cup curd, yogurt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fresh Coconut Chutney (Nariyal)", channel: "Recipe library", id: "more-ivd-coconut-chutney-recipe-nariyal-chutney", video: "https://www.youtube.com/watch?v=UijlzWm0OGY", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/coconut-chutney-recipe-nariyal-chutney/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 94.0, "p": 2.0, "c": 9.0, "f": 6.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup shredded coconut (tightly packed, (fresh or frozen), or 1 cup desiccated coconut", "2 tbsp roasted chana dal, dalia/fried gram/putani", "1-2 green chili", "½ inch ginger, or 1-2 garlic cloves", "Little tamarind, or lemon juice", "Salt, to taste", "½-¾ cup water, or use as needed", "2 tsp oil", "½ tsp mustard seeds", "1 dry red chili", "½ tsp urad dal", "1 stalk curry leaves", "1 pinch asafoetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fiery Red Chili and Garlic Chutney", channel: "Recipe library", id: "more-ivd-chilli-garlic-chutney", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/chilli-garlic-chutney/",
+        macros: {"servings": 10, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 23.0, "p": 1.0, "c": 5.0, "f": 0.2}, makes: "Makes about 10 servings", from: "Recipe library",
+        ingredients: [
+          "10-12 whole dry Kashmiri red chilli", "1 cup hot water, for soaking", "10 cloves garlic", "1 tbsp lemon juice", "Salt", "½ cup water, for blending",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Zucchini Chutney", channel: "Recipe library", id: "more-ivd-zucchini-chutney", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/zucchini-chutney/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 74.0, "p": 2.0, "c": 7.0, "f": 4.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium zucchini with skin (roughly chopped, about 1 cup", "2 tsp oil", "1 tbsp urad dal", "½ tsp cumin (jeera) seeds", "2 green chili", "2 cloves garlic", "1 stalk curry leaves", "¼ cup coriander leaves", "½ inch tamarind", "Salt, to taste", "1 tsp oil", "½ tsp mustard seeds", "1 stalk curry leaves", "1 pinch asafoetida (hing), skip for gluten-free",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach Dal (Dal Palak)", channel: "Recipe library", id: "more-ivd-instant-pot-spinach-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-spinach-dal/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 152.0, "p": 7.5, "c": 23.0, "f": 4.3}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup toor dal/split pigeon peas", "1 tbsp oil, or ghee", "½ tsp cumin (jeera) seeds", "3 cloves garlic cloves, minced", "½ inch ginger, minced", "2 green chilies, finely chopped", "1 big pinch asafoetida (hing), optional", "1 medium tomato, finely chopped", "¼ tsp turmeric powder", "½ tsp red chili powder, adjust to heat preference", "Salt, to taste", "2 cups spinach, palak", "2 cups water", "¼-½ tsp garam masala, optional", "Juice of ½ lemon",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Onion and Tomato Yogurt Raita", channel: "Recipe library", id: "more-ivd-onion-tomato-raita", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/onion-tomato-raita/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 118.0, "p": 5.0, "c": 15.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup yogurt, or curd", "⅓ cup onion (finely chopped, about 1 small onion", "⅓ cup tomato (finely chopped, about 1 small tomato", "1 green chili, finely chopped", "2 tbsp coriander leaves (cilantro), finely chopped", "½ tsp roasted cumin (jeera) powder", "¼ tsp black salt, or salt", "Water (as needed for thinning the curd, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cilantro and Coconut Chutney", channel: "Recipe library", id: "more-ivd-coriander-coconut-chutney", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/coriander-coconut-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 136.0, "p": 1.0, "c": 8.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup shredded coconut, fresh or frozen", "1 cup fresh coriander leaves (cilantro), loosely packed", "½ inch ginger", "2-3 green chilies", "Gooseberry sized ball of tamarind, or 1 tsp lemon juice", "2 tbsp roasted chana dal, dalia/split roasted chickpeas", "Salt, to taste", "½-¾ cup water, or as required for grinding", "2 tsp coconut oil", "½ tsp mustard seeds", "½ tsp split urad dal", "A pinch asafetida (hing), skip for gluten-free", "Few curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Home-Made Ghee from Butter", channel: "Recipe library", id: "more-ivd-instant-pot-ghee", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/instant-pot-ghee/",
+        macros: {"servings": 1.5, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 2168.0, "p": 3.0, "c": 0.2, "f": 245.0}, makes: "Makes about 1 servings", from: "Recipe library",
+        ingredients: [
+          "16 oz unsalted butter, grass fed",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chana Dal Chutney Pudi (Bele Chutney Powder)", channel: "Recipe library", id: "more-ivd-chutney-powder-recipe-chutney-pudi", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chutney-powder-recipe-chutney-pudi/",
+        macros: {"servings": 2, "serving": "1 cup", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 810.0, "p": 30.0, "c": 102.0, "f": 36.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tsp cooking oil", "½ cup chana dal, gram dal", "½ cup urad dal", "½ cup dry coconut, or desiccated coconut", "18-20 dry red chilies (byadagi + guntur), adjust as per your taste)", "¼ cup curry leaves", "1 gooseberry size tamarind, about 2 tbsp", "1 tsp jaggery", "Salt, as per your taste", "2 tbsp coconut oil", "1 tsp mustard seeds", "¼ tsp asafoetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Making Hung Curd at Home", channel: "Recipe library", id: "more-ivd-how-to-make-hung-curd", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/how-to-make-hung-curd/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 224.0, "p": 13.0, "c": 17.0, "f": 12.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "3 cups plain yogurt, curd",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chickpea Sundal", channel: "Recipe library", id: "more-ivd-chana-sundal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chana-sundal/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 72.0, "p": 2.0, "c": 6.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup dried white chickpeas (kabuli chana/chole), or 1 can canned chickpeas", "1.5 cups water, for pressure cooking", "1 tbsp coconut oil", "1 tsp mustard seeds", "1 tsp urad dal", "1 dry red chili", "1 green chili", "1 stalk curry leaves", "⅛ tsp asafoetida, hing", "Salt, to taste", "2 tbsp fresh shredded coconut",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Dried Coconut Chutney Powder", channel: "Recipe library", id: "more-ivd-dry-coconut-chutney-powder", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/dry-coconut-chutney-powder/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 92.0, "p": 2.0, "c": 7.0, "f": 7.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dry grated coconut", "2 tbsp fried gram/putani/roasted channa dal/daliya", "1.5 tbsp red chili powder, adjust as per your spice level", "2 stalk curry leaves", "1 tsp cumin (jeera) seeds", "3 large garlic cloves, USA or 1.5 full bulb if it is Indian garlic", "½ tsp jaggery", "1 small piece of tamarind", "Salt, as per your taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fenugreek Leaf Dal (Methi Dal)", channel: "Recipe library", id: "more-ivd-methi-dal-fenugreek-leaves-dal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/methi-dal-fenugreek-leaves-dal/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 341.0, "p": 19.0, "c": 45.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup toor dal", "2 cups water, to cook the dal", "1-2 tbsp oil", "½ tsp mustard", "½ tsp cumin seeds", "3 cloves garlic, minced", "1 green chilies", "2 dry red chilies", "1 stalk curry leaves", "1 medium tomato, finely chopped", "½ tsp turmeric", "Salt, to taste", "2 cups methi, fenugreek leaves", "¼-½ tsp garam masala, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fox Nut Raita (Phool Makhana)", channel: "Recipe library", id: "more-ivd-makhana-raita-recipe", video: null, tags: ["Makhana"], url: "https://www.indianveggiedelight.com/makhana-raita-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 50.0, "p": 1.0, "c": 3.0, "f": 3.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup curd, yogurt", "1 tsp ghee, or coconut or olive oil", "½ cup makhana/foxnut/lotus seed", "½ tsp roasted cumin powder", "¼ tsp chaat masala powder", "1 green chilli, finely chopped", "1 tbsp coriander leaves, finely chopped", "Black salt (or regular salt) to taste)", "¼ tsp sugar, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cilantro-Mint Green Chutney", channel: "Recipe library", id: "more-ivd-green-chutney", video: "https://www.youtube.com/watch?v=dt880dDpdqU", tags: ["Other"], url: "https://www.indianveggiedelight.com/green-chutney/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups coriander leaves (cilantro), tightly packed", "1 cup pudina leaves (mint), tightly packed", "2-3 green chilies, adjust according to your taste", "2-3 cloves garlic (, optional", "½ inch ginger, roughly chopped", "1 tsp roasted jeera (cumin) powder", "½ tsp sugar, to taste, optional", "1 tbsp lemon juice", "Salt (or black salt), to taste)", "2-3 tbsp water, for grinding or add as required", "1-2 ice cubes",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Boiling Potatoes in a Pressure Cooker", channel: "Recipe library", id: "more-ivd-how-to-boil-potatoes-in-instant-pot", video: "https://www.youtube.com/watch?v=UCecSawH-BM", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/how-to-boil-potatoes-in-instant-pot/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 132.0, "p": 3.0, "c": 30.0, "f": 1.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "3 extra large Russet Potatoes", "1 cup Water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Red Capsicum Chutney", channel: "Recipe library", id: "more-ivd-red-bell-pepper-chutney", video: "https://www.youtube.com/watch?v=ERsH9HiRFkg", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/red-bell-pepper-chutney/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 244.0, "p": 8.0, "c": 23.0, "f": 15.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large red bell pepper, cut to big chunks", "½ medium onion", "2 cloves garlic", "1 stalk curry leaves", "4-5 dried red chillies, Kashmiri or Bydagi variety", "½ inch tamarind", "¼ cup peanuts", "Salt, to taste", "½ tsp jaggery, optional", "2 tsp oil", "½ tsp oil", "½ tsp mustard seeds", "Few curry leaves", "A pinch hing, asafetida",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato and Spinach Sabzi (Aloo Palak)", channel: "Recipe library", id: "more-ivd-aloo-palak", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/aloo-palak/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 283.0, "p": 6.0, "c": 45.0, "f": 10.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "½ tsp cumin seeds, jeera", "3 cloves garlic, minced", "2 green chilies, finely chopped", "1 small onion, about ½ cup", "3 medium potatoes, about 300 grams, cut into ¾ inch pieces", "3-4 cups spinach (finely chopped, about 8-10 oz", "1 tbsp lime juice", "2-3 tbsp water, or as needed", "½ tsp turmeric powder", "½ tsp red chili powder", "½ tsp cumin powder", "½ tsp coriander powder", "¼ tsp garam masala", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broccoli Stir-Fry with Gram Flour", channel: "Recipe library", id: "more-ivd-broccoli-besan-stir-fry", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/broccoli-besan-stir-fry/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 222.0, "p": 6.0, "c": 16.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1.5-2 cups broccoli (cut into bite sized florets, washed and dried", "2 tbsp oil", "½ tsp cumin (jeera) seeds", "2 tsp minced garlic", "1 tsp green chilies, finely chopped", "¼ cup besan (gram flour), or chickpea flour", "¼ tsp turmeric powder", "½ tsp red chili powder", "½ tsp cumin (jeera) powder", "½ tsp coriander powder", "½ tsp dry mango powder, amchur powder", "½ tsp garam masala", "1 tbsp lime juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Zucchini and Gram Flour Sabzi", channel: "Recipe library", id: "more-ivd-zucchini-besan-sabzi", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/zucchini-besan-sabzi/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 60.2, "p": 2.0, "c": 7.0, "f": 2.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large zucchini (cut lengthwise, and then into thin half-moon slices), about 2 cups", "1 tbsp coconut oil", "½ tsp cumin (jeera) seeds", "1 stalk curry leaves", "3 cloves garlic, minced", "1 medium onion, finely chopped", "3 tbsp besan (gram flour), or chickpea flour", "1 tsp red chili powder", "½ tsp turmeric powder", "½ tsp coriander powder", "½ tsp garam masala powder", "¼ tsp amchur (dry mango powder), or 1 tsp of lime juice", "1 tbsp coriander leaves", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Drumstick Leaf Chutney", channel: "Recipe library", id: "more-ivd-moringa-leaves-chutney-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/moringa-leaves-chutney-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 152.0, "p": 3.0, "c": 16.0, "f": 9.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp coconut oil, or olive oil", "½ cup tender moringa (drumstick leaves), tightly packed", "3 green chillies", "½ cup shredded coconut", "½ inch ginger, optional", "1 small piece of tamarind (, or 1 tsp of lime juice", "Salt, adjust to taste", "1 tsp oil", "½ tsp mustard seeds", "¼ tsp cumin (jeera) seeds", "1 stalk curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Green Mango Chutney (Mavinakayi)", channel: "Recipe library", id: "more-ivd-raw-mango-chutney", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/raw-mango-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 30.0, "p": 0.3, "c": 7.4, "f": 0.1}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium raw mango, peeled (chopped or grated, about 1 cup", "3 garlic cloves", "1 stalk curry leaves", "1 tsp red chilli powder", "1 tsp cumin (jeera) seeds", "½ tsp mustard seeds", "1.5 tsp methi (fenugreek) seeds", "½ tsp jaggery (, or brown sugar", "¼ cup water, for grinding or as required", "Salt, to taste", "1 tbsp oil", "½ tsp mustard seeds", "1 stalk curry leaves", "1 pinch hing, asafetida",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Turmeric Yellow Rice", channel: "Recipe library", id: "more-ivd-indian-turmeric-yellow-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/indian-turmeric-yellow-rice/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 222.0, "p": 4.0, "c": 42.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil, or butter", "½ cup white onions, finely chopped", "1 cup basmati rice", "½ tsp turmeric powder", "Salt, to taste", "1¼ cups vegetable broth, or water", "2 tbsp coriander leaves", "1 bay leaf", "1 inch cinnamon", "2 cloves", "2 cardamom", "1 star anise, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Roasted Peanut Chutney", channel: "Recipe library", id: "more-ivd-peanut-chutney-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/peanut-chutney-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 140.0, "p": 6.0, "c": 7.0, "f": 11.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup peanuts", "2 tsp coconut oil (, or olive oil", "½ tsp cumin seeds", "1 tsp split urad dal, optional", "¼ cup onion, or 4-5 pearl onions/shallots", "3 cloves garlic", "3-4 dried red chilies, or green chillies", "1 small piece of tamarind", "½ cup water, for grinding or as needed", "Salt, adjust to taste", "1 tsp coconut oil", "½ tsp mustard seeds", "½ tsp split urad dal", "A pinch hing, asafetida", "1 stalk curry leaves", "1 dried red chili",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Potato Masala", channel: "Recipe library", id: "more-ivd-potato-masala", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/potato-masala/",
+        macros: {"servings": 4, "serving": "1 cup", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 242.0, "p": 3.8, "c": 27.0, "f": 14.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "1 tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 tsp split urad dal, optional", "1 tsp chana dal (bengal gram), optional", "2 green chilies, finely chopped", "1 stalk curry leaves", "1 inch ginger, minced", "A pinch asafoetida (hing), optional", "1 large onion (sliced thinly lengthwise, about 1 cup", "¼ tsp turmeric powder", "3 medium yukon gold potato, about 400 grams", "Salt, to taste", "Juice of half lime", "2 tbsp fresh coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Red Coconut Chutney for Idli and Dosa", channel: "Recipe library", id: "more-ivd-red-coconut-chutney", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/red-coconut-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 123.0, "p": 2.0, "c": 10.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup fresh coconut, grated", "5-6 dried red chilies, Bydagi or kashmiri chili variety", "2 tbsp roasted gram, putani", "½ inch ginger, or 2 cloves garlic", "1 small ball sized tamarind, or lemon juice", "Salt, to taste", "½-¾ cup water, for grinding", "1 tsp oil", "½ tsp mustard seeds", "½ tsp split urad dal", "Few curry leaves", "1 pinch of hing, asafoetida", "1 dried red chili",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sweet Tamarind Date Chutney (Imli)", channel: "Recipe library", id: "more-ivd-sweet-tamarind-chutney-imli-chutney", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/sweet-tamarind-chutney-imli-chutney/",
+        macros: {"servings": 30, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 31.0, "p": 0.2, "c": 8.0, "f": 0.1}, makes: "Makes about 30 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup tamarind, seedless", "½ cup dates (pitted, ~12 dates, ~6 if using Medjool dates", "½ cup jaggery (grated, or brown sugar", "2 cups water", "½-1 tsp red chili powder, adjust to taste", "½ tsp coriander powder", "½ tsp roasted cumin powder", "½ tsp dry ginger powder", "½ tsp saunf powder (optional, i did not use it", "½ tsp black salt, or regular salt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Crisp Potato Fry", channel: "Recipe library", id: "more-ivd-potato-fry-recipe-aloo-fry", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/potato-fry-recipe-aloo-fry/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 229.0, "p": 4.0, "c": 30.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1½ cups potatoes (cut into ½ inch cubes, about 250 grams", "1½ tbsp oil", "½ tsp mustard seeds", "½ tsp cumin seeds", "1 clove garlic, crushed, optional", "1 stalk curry leaves", "1 pinch asafetida, hing", "⅛ tsp turmeric", "½ tsp red chili powder", "½ tsp coriander powder", "¼-½ tsp garam masala", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Zucchini", channel: "Recipe library", id: "more-ivd-air-fryer-zucchini", video: "https://www.youtube.com/watch?v=3PTCqIY0HXA", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-zucchini/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 36.0, "p": 1.0, "c": 3.0, "f": 2.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium zucchini", "2 tsp oil", "½ tsp garlic powder", "½ tsp Italian seasoning", "Salt & pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pressure-Steamed Cauliflower", channel: "Recipe library", id: "more-ivd-instant-pot-cauliflower", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-cauliflower/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 36.0, "p": 3.0, "c": 7.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium cauliflower, head", "1 cup water", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Navratan Korma, Nine-Jewel Curry", channel: "Recipe library", id: "more-ivd-restaurant-style-navratan-korma", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/restaurant-style-navratan-korma/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 365.0, "p": 11.0, "c": 22.0, "f": 26.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium onion, about 1.5 cups", "10-12 cashew nuts", "3 garlic, cloves", "1 inch ginger", "1 cup carrots, cut into ½ inch pieces", "1 cup cauliflower, large florets", "½ cup green beans, cut into ½ inch pieces", "1 cup potato, cut into ½ inch pieces", "½ cup green peas", "2 tbsp oil", "1 bay leaf", "1 tsp cumin (jeera) seeds", "¼ tsp turmeric powder", "½ tsp red chili powder", "1 tsp coriander powder", "½ tsp garam masala powder", "1.5 cups water", "Salt, to taste", "1 cup paneer, cubes", "¼ cup cashew nuts", "¼ cup raisins", "¼ cup pineapple chunks, optional", "¼ cup heavy cream, or cashew cream or coconut cream", "1 tbsp kasuri methi (dried fenugreek leaves), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cucumber Yogurt Raita (Kheera)", channel: "Recipe library", id: "more-ivd-cucumber-raita", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/cucumber-raita/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 87.0, "p": 5.0, "c": 8.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup yogurt, curd", "½ cup cucumber, 1 medium sized persian cucumber", "½ tsp roasted cumin powder", "¼ tsp red chili powder", "½ tsp chaat masala", "½ tsp powdered sugar, optional", "Salt (or black salt), to taste)", "1 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Avocado Yogurt Raita", channel: "Recipe library", id: "more-ivd-avocado-raita", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/avocado-raita/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 170.0, "p": 5.0, "c": 12.0, "f": 13.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium ripe avocado, about ½ cup pulp", "1 cup yogurt (or greek yogurt), whisked till smooth)", "2 tbsp onion, diced", "2 tbsp tomato, diced", "2 tbsp cucumber, diced", "1 green chili, finely chopped", "2 tbsp coriander leaves", "½ tsp roasted cumin (jeera) powder", "½ tsp chaat masala", "1 tsp lime juice", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Roasted Sweet Potatoes in the Air Fryer", channel: "Recipe library", id: "more-ivd-air-fryer-sweet-potatoes", video: "https://www.youtube.com/watch?v=nUMtU5oPn18", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-sweet-potatoes/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 114.0, "p": 2.0, "c": 19.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 large sweet potatoes (about 1 lb), peeled and cut into ½-inch cubes", "1 tbsp extra virgin olive oil", "½ tsp garlic powder", "¼ tsp kosher salt", "⅛ tsp fresh ground black pepper", "½ tsp red chili powder (or paprika), optional)", "Lemon wedges, to serve",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Coconut Rice, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-coconut-rice", video: "https://www.youtube.com/watch?v=DI5SDjopsKI", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-coconut-rice/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 217.0, "p": 3.0, "c": 17.0, "f": 16.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup jasmine rice", "1 cup full fat coconut milk", "¼ cup water, or coconut water", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Green Beans", channel: "Recipe library", id: "more-ivd-air-fryer-green-beans", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-green-beans/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 64.0, "p": 2.0, "c": 8.0, "f": 3.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz fresh green beans, trimmed", "½ tbsp olive oil", "½ tsp garlic powder, or minced garlic", "Salt and pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Creamy Greek Yogurt Dip", channel: "Recipe library", id: "more-ivd-yogurt-dipping-sauce", video: "https://www.youtube.com/watch?v=MSZdPcz0rtM", tags: ["Other"], url: "https://www.indianveggiedelight.com/yogurt-dipping-sauce/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 55.0, "p": 7.0, "c": 3.0, "f": 2.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup plain greek yogurt, or hung yogurt", "1 tbsp fresh dill leaves (chopped, or 1 tsp dill weed", "1 tbsp parsley, chopped", "½ tsp garlic powder", "½ tsp onion powder", "1 tsp extra virgin olive oil, optional", "1 tsp lime juice", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Idli Milagai Podi (Gunpowder Spice Mix)", channel: "Recipe library", id: "more-ivd-gun-powder-for-idli-dosa-tawa-fry", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/gun-powder-for-idli-dosa-tawa-fry/",
+        macros: {"servings": 24, "serving": "1 tbsp", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 16.0, "p": 1.0, "c": 2.8, "f": 0.2}, makes: "Makes about 24 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup chana dal, bengal gram", "½ cup urad dal", "¼ cup sesame seeds", "15-20 dry red chillies (i used bydagi chilies, less spicy variety", "2 stalks curry leaves", "1 tsp oil", "¼ tsp hing, asafoetida", "Salt, to taste", "2 tbsp dry or desiccated coconut",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bottle Gourd Yogurt Raita", channel: "Recipe library", id: "more-ivd-lauki-raita-bottle-gourd-raita", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/lauki-raita-bottle-gourd-raita/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 125.0, "p": 7.0, "c": 12.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup lauki (bottle gourd ), grated", "1.5 cups curd (yogurt), whisked", "1 green chili, finely chopped", "½ tsp roasted cumin (jeera) powder", "½ tsp chat masala powder", "¼ tsp black salt", "1 tbsp coriander leaves (cilantro), for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Green Mango and Coconut Chutney", channel: "Recipe library", id: "more-ivd-mango-coconut-chutney", video: "https://www.youtube.com/watch?v=_2gZO1mQ5xc", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/mango-coconut-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 196.0, "p": 2.0, "c": 16.0, "f": 15.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium size raw mango (peeled and cut without the seed (about ½ cup))", "1 cup fresh coconut, grated", "3-4 green chilies", "½ inch ginger (, optional", "1 tbsp coriander leaves", "Salt, as per taste", "1 tsp oil", "½ tsp mustard seeds", "1 stalk curry leaves", "¼ tsp asafetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cucumber Kosambari with Moong Dal", channel: "Recipe library", id: "more-ivd-kosambari-recipe-cucumber-kosambari-southekayi-kosambari", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/kosambari-recipe-cucumber-kosambari-southekayi-kosambari/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 99.0, "p": 4.0, "c": 12.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 small cucumber (diced, about 1.5 cups", "¼ cup moong dal/split green gram dal", "Water, enough for soaking moong dal", "2-3 tbsp coriander leaves", "¼ cup coconut", "2 tbsp lemon juice", "Salt, to taste", "2 tsp coconut oil", "½ tsp mustard seeds", "2 green chili, finely chopped", "1 stalk curry leaves", "A pinch hing (asafetida), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pressure-Steamed Broccoli", channel: "Recipe library", id: "more-ivd-instant-pot-steamed-broccoli", video: "https://www.youtube.com/watch?v=WERc0kGUNnQ", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-steamed-broccoli/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium broccoli head", "1 cup water", "Salt and pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beet Yogurt Raita", channel: "Recipe library", id: "more-ivd-beetroot-raita", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/beetroot-raita/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 62.0, "p": 3.0, "c": 6.0, "f": 3.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups curd, yogurt", "1 cup raw beetroot, grated", "2 tbsp onion, finely chopped", "1 tbsp coriander leaves, finely chopped", "1 green chili, finely chopped", "½ tsp jeera powder(cumin powder), roasted", "Salt, as per taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ridge Gourd Chutney (Heerekai)", channel: "Recipe library", id: "more-ivd-ridge-gourd-chutney", video: "https://www.youtube.com/watch?v=e00hBoQZj2U", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/ridge-gourd-chutney/",
+        macros: {"servings": 3, "serving": "1 tbsp", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 29.0, "p": 0.5, "c": 1.5, "f": 2.3}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup ridge gourd without skin, roughly chopped", "1 tsp urad dal", "2 green chilli", "½ inch tamarind", "3 cloves garlic", "½ tsp organic jaggery, optional", "1 tsp oil, divided", "1 tsp oil", "½ tsp mustard seeds", "1 stalk curry leaves", "1 pinch asafoetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Carrot and Green Bean Poriyal", channel: "Recipe library", id: "more-ivd-carrot-beans-poriyal-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/carrot-beans-poriyal-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 80.0, "p": 2.0, "c": 5.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup carrot, cut into ½ inch pieces", "1 cup green beans, cut into ½ inch pieces", "2 tsp coconut oil", "½ tsp mustard seeds", "½ tsp urad dal", "1 dried red chili", "1 stalk curry leaves", "2 green chilies, slit into half", "1 pinch asafetida, hing", "½ medium onion, finely chopped", "¼ tsp turmeric powder", "Salt, to taste", "3 tbsp water", "2 tbsp fresh or frozen coconut, shredded",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "South Indian Beet Poriyal", channel: "Recipe library", id: "more-ivd-beetroot-poriyal", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/beetroot-poriyal/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 106.0, "p": 2.0, "c": 13.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium beetroot (diced, about 400 grams", "1 tbsp oil", "1 tsp urad dal", "½ tsp mustard seeds", "½ tsp cumin seeds", "2 green chilies, finely chopped", "1 tsp ginger, minced", "1 stalk curry leaves", "1 pinch hing", "1 small onion (finely chopped, about ½ cup", "Salt, to taste", "¼ cup water, add more if required", "¼ cup shredded coconut, fresh or frozen",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Calrose Rice, Cooked Perfectly", channel: "Recipe library", id: "more-ivd-instant-pot-calrose-rice", video: "https://www.youtube.com/watch?v=GLBc8xHfrr0", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-calrose-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 84.0, "p": 2.0, "c": 18.0, "f": 0.2}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup calrose rice", "1 cup 2 tbsp water (for cooking, or 1.5 cups for stovetop",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fenugreek Chutney, Karnataka-Style", channel: "Recipe library", id: "more-ivd-methi-chutney", video: "https://www.youtube.com/watch?v=5Gzi_b59FaY", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/methi-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 110.0, "p": 2.0, "c": 11.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1-1.5 tbsp Methi/Fenugreek seeds, roasted preferred", "½ cup grated dry coconut", "1 sprig curry leaves", "4 large garlic cloves", "Tamarind, small lemon sized", "1 tbsp jaggery", "1 tsp cumin (jeera) seeds", "1-2 tbsp kashmiri red chili powder", "Salt, to taste", "½ cup water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Home-Made Ranch Dip", channel: "Recipe library", id: "more-ivd-homemade-ranch-dressing", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/homemade-ranch-dressing/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 502.0, "p": 7.0, "c": 13.0, "f": 47.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "½ cup sour cream, or greek yogurt", "2 tbsp mayonnaise", "½ cup buttermilk, or as required", "1 tbsp fresh chives, minced", "1 tbsp fresh dill, minced", "1 tbsp fresh parsley, minced", "1 garlic clove, minced or pressed", "2 tsp lemon juice, or apple cider vinegar", "Salt, to taste", "Black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Black-Eyed Peas Without Soaking", channel: "Recipe library", id: "more-ivd-instant-pot-black-eyed-peas", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-black-eyed-peas/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 50.0, "p": 3.0, "c": 9.0, "f": 0.2}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup black eyed peas", "2.5 cups water, or vegetable broth", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Brown Basmati Rice, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-brown-basmati-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-brown-basmati-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 355.0, "p": 7.0, "c": 74.0, "f": 3.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup brown basmati rice", "1¼ cup water, or vegetable broth", "1 tsp olive oil, optional", "½ tsp salt, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Beets", channel: "Recipe library", id: "more-ivd-air-fryer-beets", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-beets/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 50.0, "p": 1.0, "c": 7.0, "f": 2.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 medium beets (or 4 small beets), about 1 lb)", "2 tsp extra-virgin olive oil", "Salt, to taste", "Pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Pumpkin", channel: "Recipe library", id: "more-ivd-air-fryer-pumpkin", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-pumpkin/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 92.0, "p": 2.0, "c": 15.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 lb pumpkin, use pie pumpkin or any other variety", "1 tbsp extra virgin olive oil", "½ tsp garlic powder", "½ tsp ground cinnamon", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Andhra Tomato Thokku (Spicy Pickle)", channel: "Recipe library", id: "more-ivd-tomato-thokku", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/tomato-thokku/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 143.0, "p": 1.0, "c": 8.0, "f": 12.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups ripened & juicy tomatoes, appx 4 large tomato", "1 tsp mustard seeds", "1 tsp methi/fenugreek seeds", "3 tbsp oil, more the better taste", "½ tsp mustard seeds", "½ tsp split urad dal", "1 stalk curry leaves", "2 dry red chillies", "¼ tsp asafetida, hing", "2 cloves garlic (minced, optional", "1 gooseberry size tamarind extract", "1 tbsp red chilli powder", "Salt, to taste", "½ tsp jaggery",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Steamed Baby Potatoes", channel: "Recipe library", id: "more-ivd-instant-pot-baby-potatoes-steamed", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-baby-potatoes-steamed/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 87.0, "p": 2.0, "c": 20.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb baby potatoes, yukon gold or red", "1 cup water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pressure-Cooked Brussels Sprouts", channel: "Recipe library", id: "more-ivd-instant-pot-brussels-sprouts", video: "https://www.youtube.com/watch?v=IhV-s4Tkvww", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-brussels-sprouts/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 84.0, "p": 4.0, "c": 11.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb brussels sprouts, trimmed and halved", "1 cup water, for steaming", "1 tbsp olive oil", "2 cloves garlic, minced", "Salt, as required", "½ tsp freshly ground black pepper", "1 tbsp lime juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pressure-Cooked Sweet Potatoes", channel: "Recipe library", id: "more-ivd-instant-pot-sweet-potatoes-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-sweet-potatoes-recipe/",
+        macros: {"servings": 3, "serving": "1 sweet potato", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 111.0, "p": 2.0, "c": 24.0, "f": 1.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "3 sweet potatoes", "1 cups water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Paneer Bites", channel: "Recipe library", id: "more-ivd-air-fryer-paneer", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/air-fryer-paneer/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 219.0, "p": 9.0, "c": 2.0, "f": 19.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "200 grams paneer (cut into cubes, about 1 cup", "2 tsp oil", "¼ tsp turmeric", "½-¾ tsp Kashmiri red chili powder, adjust to taste", "½ tsp garam masala", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "South Indian Red Onion Chutney", channel: "Recipe library", id: "more-ivd-onion-chutney", video: "https://www.youtube.com/watch?v=9an0VCsXnsg", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/onion-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 64.0, "p": 1.0, "c": 5.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "1 tsp split urad dal (split black gram), optional", "1 tsp split chana dal (split bengal gram), optional", "4-5 dried red chilies, Byadgi or Kashmiri Red chilies", "1 large onion, about 1 cup", "3 cloves garlic", "1 stalk curry leaves", "1 small piece of tamarind", "½ tsp jaggery, optional", "Salt, to taste", "2 tbsp water, or as needed, for blending", "1 tsp oil", "½ tsp mustard seeds", "Few curry leaves", "1 dried red chili", "1 pinch asafetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Roasted Peanuts", channel: "Recipe library", id: "more-ivd-air-fryer-roasted-peanuts", video: "https://www.youtube.com/watch?v=XGw_PDQsIJc", tags: ["Other"], url: "https://www.indianveggiedelight.com/air-fryer-roasted-peanuts/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 208.0, "p": 10.0, "c": 6.0, "f": 18.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup raw peanuts", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pumpkin Seed Chutney Pudi", channel: "Recipe library", id: "more-ivd-pumpkin-seeds-chutney-powder", video: "https://www.youtube.com/watch?v=d1zu1S9L2vc", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/pumpkin-seeds-chutney-powder/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 219.0, "p": 11.0, "c": 12.0, "f": 17.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "½ cup raw pumpkin seeds, I used Costco organic pumpkin seeds", "1.5-2 tsp red chili powder (Bydagi or Kashmiri), adjust as per your spice level", "½ tsp cumin seeds", "2-3 stalks curry leaves", "2 garlic cloves", "1 small piece tamarind", "½ tsp jaggery, optional but recommended", "1 big pinch of asafoetida, optional", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Millets in the Pressure Cooker", channel: "Recipe library", id: "more-ivd-how-to-cook-millet", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/how-to-cook-millet/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 189.0, "p": 6.0, "c": 36.0, "f": 2.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup Foxtail millet", "2 cups water, or vegetable broth", "¼ tsp salt, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Roasted Butternut Squash Cubes", channel: "Recipe library", id: "more-ivd-air-fryer-butternut-squash", video: "https://www.youtube.com/watch?v=nYz2nOt4rPk", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-butternut-squash/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 148.0, "p": 2.0, "c": 22.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 small butternut squash (about 1.2 lb), peeled and cut into ¾ inch cubes", "1 tbsp extra virgin olive oil", "½ tsp garlic powder", "½ tsp salt", "⅛ tsp freshly ground black pepper",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chana Dal and Coconut Chutney", channel: "Recipe library", id: "more-ivd-chana-dal-chutney-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chana-dal-chutney-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 124.0, "p": 2.0, "c": 9.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup chana dal", "¼ cup shredded coconut, fresh/frozen", "4 dried red chili, Bydagi or Kashmiri", "1 stalk curry leaves", "3 cloves garlic, optional", "1 small marble size tamarind", "1 tbsp oil", "Salt, to taste", "Water, as required for grinding", "1 tbsp oil", "½ tsp mustard", "½ tsp urad dal", "Few curry leaves", "1 dried red chilli, broken",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Stuffed Okra (Bharwa Bhindi)", channel: "Recipe library", id: "more-ivd-bharwa-bhindi-stuffed-okra", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/bharwa-bhindi-stuffed-okra/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 166.0, "p": 3.0, "c": 7.0, "f": 15.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "230 grams okra, about 20-22", "2 tsp oil, for air frying", "3 tbsp roasted peanut powder", "1 tbsp coriander powder", "1 tsp cumin powder", "¼ tsp turmeric powder", "1 tsp red chili powder", "½ tsp garam masala", "½ tsp amchur powder", "½ tsp fennel powder, optional", "Salt, to taste", "1 tbsp oil, for stuffing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato and Fenugreek Leaf Sabzi (Aloo Methi)", channel: "Recipe library", id: "more-ivd-aloo-methi-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/aloo-methi-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 386.0, "p": 14.0, "c": 56.0, "f": 12.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "1 tsp cumin seeds, jeera", "3 cloves garlic, minced", "2-3 green chilies, finely chopped", "1 pinch asafoetida (hing), optional, skip for gluten-free", "3 medium potatoes, diced into 1 inch pieces, around 300 grams", "3-3.5 cups methi (fenugreek leaves), tightly packed", "½ tsp turmeric powder", "½ tsp red chili powder", "½ tsp garam masala", "½ tsp amchur powder, to taste", "Salt, to taste", "2-3 tbsp water, or as needed",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Boondi Yogurt Raita", channel: "Recipe library", id: "more-ivd-boondi-raita-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/boondi-raita-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 110.0, "p": 6.0, "c": 10.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup plain yogurt, curd", "½ cup boondi, chickpea flour pearls", "½ tsp cumin (jeera) powder", "½ tsp red chili powder", "⅛ tsp black pepper powder", "¼ tsp chat masala, optional", "½ tsp sugar (or jaggery), optional", "Black salt (or salt), as per taste", "1 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Jhunka and Vadi", channel: "Recipe library", id: "more-ivd-jhunka-vadi", video: "https://www.youtube.com/watch?v=qA2jID445nI", tags: ["Other"], url: "https://www.indianveggiedelight.com/jhunka-vadi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 440.0, "p": 24.0, "c": 59.0, "f": 15.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup besan, gram flour", "1 medium onion, finely chopped", "2 cloves garlic, minced", "2-3 green chilies, finely chopped", "½ tsp mustard seeds", "½ tsp cumin/jeera seeds", "½ tsp turmeric powder", "¼ tsp hing/asafetida", "1 stalk curry leaves", "1 tbsp tamarind pulp", "½ tsp jaggery", "2 tbsp coriander leaves, finely chopped", "2 tbsp coconut, fresh & grated", "1 tsp sesame seeds, optional", "2-3 tbsp oil", "Salt, to taste", "1.5 cups water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mixed Seed Chutney Pudi", channel: "Recipe library", id: "more-ivd-mixed-seeds-chutney-powder", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/mixed-seeds-chutney-powder/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 467.0, "p": 18.0, "c": 24.0, "f": 37.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "2 tbsp flax seeds", "2 tbsp pumpkin seeds", "2 tbsp sunflower seeds", "2 tbsp sesame seeds", "2-3 stalks curry leaves", "½ tsp cumin seeds", "2 garlic cloves", "1 small tamarind piece", "2 tsp red chili powder", "Salt, to taste", "½-1 tsp jaggery, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Tofu Scramble (Tofu Bhurji)", channel: "Recipe library", id: "more-ivd-tofu-bhurji-scrambled-tofu-indian-style", video: "https://www.youtube.com/watch?v=eADzdi_Mlb8", tags: ["Paneer"], url: "https://www.indianveggiedelight.com/tofu-bhurji-scrambled-tofu-indian-style/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 145.0, "p": 6.0, "c": 7.4, "f": 7.6}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "½ tsp cumin (jeera) seeds", "1 tsp ginger, grated", "2 green chillies, finely chopped", "1 medium onion, finely chopped", "1 medium tomato, finely chopped", "1 cup colored bell pepper, diced", "½ tsp turmeric powder", "¼ tsp red chilli powder", "½ tsp garam masala powder", "1 cup extra firm tofu (, 200 grams", "Salt, to taste", "2 tbsp cilantro, coriander leaves", "1 tsp lime juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Peanut Chutney Pudi (Shenga Chutney Powder)", channel: "Recipe library", id: "more-ivd-peanut-chutney-powder", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/peanut-chutney-powder/",
+        macros: {"servings": 4, "serving": "1 tablespoon", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 43.0, "p": 1.9, "c": 1.2, "f": 3.7}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup peanut/groundnut/shenga/kadlekai", "1.5-2 tsp red chili powder, adjust as per your spice level", "2 stalks curry leaves", "2-3 garlic cloves, USA or two full bulb if it is Indian garlic", "½ tsp cumin seeds", "1 small piece tamarind", "Salt, to taste", "½ jaggery, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broccoli Poriyal with Fresh Coconut", channel: "Recipe library", id: "more-ivd-broccoli-poriyal", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/broccoli-poriyal/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 147.0, "p": 4.0, "c": 18.0, "f": 8.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp coconut oil", "½ tsp mustard seeds", "½ tsp cumin seeds", "2 green chili, finely chopped", "1 stalk curry leaves", "1 pinch asafetida, hing", "1 small onion, finely chopped", "2 cups broccoli, cut into small florets", "Salt, to taste", "2 tbsp shredded coconut, fresh/frozen",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Strawberry Chia Jam Without Pectin", channel: "Recipe library", id: "more-ivd-strawberry-chia-jam-instant-pot", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/strawberry-chia-jam-instant-pot/",
+        macros: {"servings": 12, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 40.0, "p": 1.0, "c": 9.0, "f": 1.0}, makes: "Makes about 12 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb fresh strawberries, about 4 cups", "½ cup granulated sugar (or ½ cup of erythritol (for keto version) or any sweetener)", "2 tbsp chia seeds", "1 tbsp lemon juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pressure-Cooked Green Beans", channel: "Recipe library", id: "more-ivd-instant-pot-green-beans", video: "https://www.youtube.com/watch?v=ZfBTkPle6d0", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-green-beans/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 35.0, "p": 2.0, "c": 8.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ lb fresh green beans", "1 cup water, for steaming", "Salt, pepper, fresh lime, for seasoning, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tomato Saaru with Coconut Milk", channel: "Recipe library", id: "more-ivd-tomato-saaru-with-coconut-milk", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/tomato-saaru-with-coconut-milk/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 5 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup toor dal, rinsed", "2 cups water, to cook", "2 cups water, to thin the dal", "1-2 tbsp ghee", "1 tsp mustard seeds", "½ tsp cumin seeds", "1 stalk curry leaves", "1 pinch asafetida, hing", "1 cup tomato (finely chopped, about 2 medium tomatoes", "Salt, to taste", "2-3 tbsp tamarind extract", "1.5-2 tbsp saarina pudi, any rasam powder", "½ tsp turmeric", "½ tsp red chili powder, optional", "½ tsp jaggery", "¼ cup thick coconut milk, or ½ cup of thick coconut milk", "2 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Roasted Chana Dal Chutney Pudi (Hurigadale)", channel: "Recipe library", id: "more-ivd-hurigadale-chutney-pudi", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/hurigadale-chutney-pudi/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 403.0, "p": 16.0, "c": 66.0, "f": 10.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "½ cup Hurikadale/Roasted Channa Dal/Putani/Kadle Papu/Daliya", "2-3 tbsp roasted dry coconut (or desiccated coconut), optional", "1.5 - 2 tsp red chili powder, adjust as per your spice level", "2 stalks curry leaves", "2-3 garlic cloves, or two small full bulb of Indian garlic", "½ tsp cumin seeds", "½ tsp jaggery, optional", "1 small piece tamarind", "Salt, as per your taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Zucchini Sabzi, Indian Stir-Fry", channel: "Recipe library", id: "more-ivd-zucchini-sabzi-zucchini-stir-fry", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/zucchini-sabzi-zucchini-stir-fry/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 115.0, "p": 3.0, "c": 16.0, "f": 5.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tsp coconut oil", "½ tsp cumin (jeera) seeds", "2 green chillies, finely chopped", "1 tbsp ginger garlic paste", "1 stalk curry leaves", "A big pinch asafoetida (hing), optional", "1 medium onion, finely chopped", "2 medium zucchini (cut into ½ inch pieces, about 1.5 - 2 cups", "½ tsp turmeric powder", "1 tsp coriander powder", "½ tsp garam masala powder", "Salt, to taste", "1 tsp amchur powder (dry mango powder), or lemon juice", "2 tbsp coriander leaves, cilantro",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Onion-Tomato Chutney for Idli and Dosa", channel: "Recipe library", id: "more-ivd-onion-tomato-chutney-for-idli-dosa", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/onion-tomato-chutney-for-idli-dosa/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 73.0, "p": 2.0, "c": 10.0, "f": 3.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "1 tbsp split urad dal", "3-4 dry red chilies", "3 cloves garlic", "1 stalk curry leaves", "1 medium red onion (about 1 cup), 150 grams)", "3 medium tomatoes (about 2 cups), 300 grams)", "1 small piece tamarind, optional", "¼ tsp turmeric", "1 tsp jaggery, optional", "Salt, to taste", "1 tsp oil", "½ tsp mustard seeds", "½ tsp urad dal", "1 stalk curry leaves", "1 dry red chili", "1 pinch asafoetida (hing), skip for gluten-free or use GF asafoetida",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Setting Dahi (Home-Made Yogurt)", channel: "Recipe library", id: "more-ivd-how-to-make-curd-dahi-homemade-curd-dahi", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/how-to-make-curd-dahi-homemade-curd-dahi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 149.0, "p": 8.0, "c": 12.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 cups whole milk", "1 tbsp yogurt with live culture, any other starter culture",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Yogurt Curry with Tempering (Dahi Tadka)", channel: "Recipe library", id: "more-ivd-dahi-tadka-spiced-yogurt-curry", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/dahi-tadka-spiced-yogurt-curry/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 116.0, "p": 11.0, "c": 8.0, "f": 5.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup greek yogurt, hung curd", "1 tbsp oil, or ghee", "1 tsp cumin (jeera) seeds", "3 cloves garlic, minced", "1 stalk curry leaves", "1 dry red chilli", "A pinch hing, asafetida", "¼ tsp turmeric powder", "1 tsp red chilli powder", "Salt, to taste", "2 tbsp coriander leaves, cilantro",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Three-Minute Microwave Bechamel", channel: "Recipe library", id: "more-ivd-easy-microwave-white-sauce-3-min", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/easy-microwave-white-sauce-3-min/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 93.0, "p": 4.0, "c": 9.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup whole milk", "1 tbsp butter", "1 tbsp all purpose flour, maida", "¼ tsp black pepper powder, or white pepper powder", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Black Chickpeas, Soaked or Unsoaked", channel: "Recipe library", id: "more-ivd-instant-pot-black-chickpeas", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/instant-pot-black-chickpeas/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 158.0, "p": 8.0, "c": 27.0, "f": 2.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup black chickpeas, kala chana", "2 cups water, for soaking", "2½ cups water, for cooking", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer Bhurji Gravy", channel: "Recipe library", id: "more-ivd-cottage-cheese-bhurji-curry", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/cottage-cheese-bhurji-curry/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 177.0, "p": 15.0, "c": 10.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups low fat cottage cheese, about 16 oz", "2 tbsp oil", "1 tsp cumin seeds", "1 medium onion, finely chopped", "1 tbsp ginger and garlic, minced", "1 green chili, finely chopped", "2 medium tomatoes, finely chopped", "½ tsp turmeric", "½-1 tsp red chili powder", "1 tsp coriander powder", "½ tsp garam masala", "Salt, to taste", "1 tbsp kasuri methi, optional but recommeded", "1 tbsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Flax Seed Chutney Pudi (Agase)", channel: "Recipe library", id: "more-ivd-flax-seeds-chutney-powder", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/flax-seeds-chutney-powder/",
+        macros: {"servings": 4, "serving": "1 tablespoon", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 64.0, "p": 2.3, "c": 3.6, "f": 5.3}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup flax seeds, agase/alsi/jawas", "1 tsp cumin (jeera) seeds", "1.5 tbsp red chili powder, adjust as per your spice level", "2 stalks curry leaves", "2 cloves garlic", "Little tamarind", "1 tsp jaggery", "Salt, as per your taste", "½ cup flax seeds, agase/alsi/jawas", "¼ cup chana dal", "¼ cup urad dal", "¼ cup dry coconut or desiccated coconut", "10-12 dry red chilies, Mix of both byadagi and spicy guntur chili", "2 tbsp curry leaves", "1 small marble sized tamarind", "¼ tsp asafoetida, hing", "Salt, as per your taste", "1 tsp jaggery, optional", "1 tsp oil",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Karnataka-Style Vegetable Saagu", channel: "Recipe library", id: "more-ivd-veg-sagu-recipe-vegetable-saagu", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/veg-sagu-recipe-vegetable-saagu/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 193.0, "p": 5.0, "c": 21.0, "f": 11.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup fresh coconut", "2-3 green chilies", "1 inch ginger", "3 cloves garlic, optional", "½ cup coriander leaves", "2 tbsp mint leaves, optional", "2 tbsp fried gram, dalia, putani", "1 tsp poppy seeds, khus khus", "½ tsp cumin seeds", "½ inch cinnamon stick", "2 cloves", "1 cardamom", "½-¾ cup water, for blending", "2 tbsp oil", "½ tsp mustard seeds", "1 tsp urad dal", "1 sprig curry leaves", "1 medium onion, finely chopped, optional", "2 cups mixed veggies, carrot, beans, potato, green peas", "1 cup water, to cook the veggies", "¼ tsp turmeric", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fluffy Basmati Rice, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-basmati-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-basmati-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 346.0, "p": 7.0, "c": 74.0, "f": 2.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup basmati rice, rinsed", "1¼ cups water", "½ tsp oil (or ghee), optional)", "Salt, to taste, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "South Indian Edamame Sundal", channel: "Recipe library", id: "more-ivd-edamame-sundal", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/edamame-sundal/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 155.0, "p": 10.0, "c": 13.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp oil", "½ tsp mustard seeds", "½ tsp split urad dal", "1 dry red chili", "1 green chili", "1 stalk curry leaves", "1 pinch asafoetida, hing", "1 cup shelled edamame, frozen or fresh", "Salt, to taste", "2 tbsp coconut, shredded",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Curry Leaf Chutney Pudi (Karibevu)", channel: "Recipe library", id: "more-ivd-karivepaku-podi-curry-leaves-powder", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/karivepaku-podi-curry-leaves-powder/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 73.0, "p": 3.0, "c": 11.0, "f": 2.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp oil", "1 cup curry leaves, tightly packed", "1 tbsp chana dal", "1 tbsp urad dal", "5 dry red chilies, i used byadagi", "1 tbsp coriander seeds", "½ tsp jeera seeds", "1 tbsp dry coconut, or desiccated coconut", "2 cloves garlic", "1 small piece tamarind", "½ tsp jaggery, optional", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sweet Potato Chaat Salad", channel: "Recipe library", id: "more-ivd-sweet-potato-chaat-indian-sweet-potato-salad", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/sweet-potato-chaat-indian-sweet-potato-salad/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 278.0, "p": 16.0, "c": 37.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 small sweet potatoes, about 250 grams", "½ tsp red chili powder", "¼-½ tsp chaat masala", "Salt, to taste", "1 tsp ghee, or oil", "1 cup whisked yogurt", "¼ cup carrot, shredded", "¼ cup cucumber, shredded", "½ tsp roasted cumin powder", "Salt and pepper, to taste", "2 tbsp roasted peanuts", "2 tbsp pomegranate arils", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Green Tomato Chutney", channel: "Recipe library", id: "more-ivd-raw-green-tomato-chutney", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/raw-green-tomato-chutney/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 90.0, "p": 2.0, "c": 9.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium green tomatoes (or tomatillos), should make 1.25 cups when chopped )", "2 tbsp roasted peanuts", "3 garlic cloves", "4-5 green chilies (, adjust to taste", "¼ cup coriander leaves, cilantro", "1-2 stalks curry leaves", "½ tsp jaggery (or stevia, optional", "2 tsp olive oil, divided use", "Salt, to taste", "1 tsp oil", "¼ tsp mustard seeds", "1 pinch asafoetida (hing), skip if gluten-free", "1 stalk curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Amaranth Yogurt Rice (Rajgira)", channel: "Recipe library", id: "more-ivd-rajgira-curd-rice-amaranth-curd-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/rajgira-curd-rice-amaranth-curd-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 263.0, "p": 10.0, "c": 29.0, "f": 13.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup amaranth, rajgira", "¾ cup water, for cooking", "1 cup yogurt, whisked", "¼ cup carrot, shredded", "¼ cup cucumber, shredded", "Salt and pepper, to taste", "2 tbsp pomegranate", "2 tbsp coriander leaves", "1 tsp ghee, or oil", "1 tbsp peanuts", "6-8 cashew nuts", "½ tsp cumin seeds", "1 stalk curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-snacks",
+    title: "More recipes: Recipe library, appetizers and snacks",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Cauliflower Manchurian, Restaurant-Style", channel: "Recipe library", id: "more-ivd-gobi-manchurian", video: "https://www.youtube.com/watch?v=jNBGFpPKbw4", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/gobi-manchurian/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 236.0, "p": 3.1, "c": 22.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 - 2½ cups cauliflower/gobi (cut in florets, about 20 -22 florets", "¼ cup corn starch/corn flour", "¼ cup all purpose flour, maida", "1 tsp kashmiri red chilli powder", "2 tsp ginger garlic paste", "2 tsp tomato ketchup", "Salt and pepper, to taste", "Water, required to make make a bhaji/pancake consistency batter", "1 tbsp oil", "1 tsp ginger, minced or paste", "1 tsp garlic, minced or paste", "½ cup onion, thinly sliced", "¼ cup capsicum (bell pepper), thinly sliced", "1 tbsp soy sauce", "2 tsp red chilli sauce (, optional", "¼ cup tomato Sauce", "1 tbsp white distilled vinegar (, optional", "2 tbsp coriander leaves (cilantro), finely chopped", "2 tbsp green/spring onion, finely chopped", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Roasted Fox Nut Chivda (Makhana Namkeen)", channel: "Recipe library", id: "more-ivd-makhana-chivda-recipe", video: null, tags: ["Makhana"], url: "https://www.indianveggiedelight.com/makhana-chivda-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 254.0, "p": 8.0, "c": 20.0, "f": 17.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tsp ghee", "2 cups roasted makhana /foxnut/lotus seed", "1 tbsp ghee, or oil", "¼ cup peanuts", "2 tbsp cashewnuts, optional", "2 tbsp almonds, optional", "¼ cup roasted gram dal, dalia", "¼ cup dried coconut slices", "2 dried red chilies", "1 stalk curry leaves", "½ tsp turmeric", "1 tsp red chili powder", "½ tsp sugar, optional", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Brussels Sprouts", channel: "Recipe library", id: "more-ivd-brussels-sprouts-air-fryer", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/brussels-sprouts-air-fryer/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 85.0, "p": 4.0, "c": 11.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb brussels sprouts, trimmed and halved", "1 tbsp extra virgin olive oil", "½ tsp garlic powder, or minced garlic", "1 tbsp balsamic vinegar", "¼ tsp salt, to taste", "⅛ tsp freshly ground black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Butternut Squash Soup", channel: "Recipe library", id: "more-ivd-instant-pot-butternut-squash-soup", video: "https://www.youtube.com/watch?v=FA5Dq4Jkanw", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-butternut-squash-soup/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 287.0, "p": 5.1, "c": 48.8, "f": 11.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 lbs diced butternut squash (peeled and deseeded, about 4 cups", "1 cup carrot, diced", "1 tbsp coconut oil, or butter", "3 garlic cloves, minced", "½ inch ginger, minced", "1 cup sweet onion, finely chopped", "1 tsp red chilli flakes, divided", "1 tsp red chilli powder", "2 cups vegetable broth, or water", "½ cup thick coconut milk", "Juice of half lime", "Salt, to taste", "1 tbsp pumpkin seeds", "¼ tsp red chilli flakes", "1 tsp cilantro", "1 tbsp full fat coconut milk",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cheese-Stuffed Garlic Bread, Pizzeria-Style", channel: "Recipe library", id: "more-ivd-dominos-style-stuffed-cheezy-garlic-bread", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/dominos-style-stuffed-cheezy-garlic-bread/",
+        macros: {"servings": 2, "serving": "1 piece", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 613.0, "p": 18.0, "c": 71.0, "f": 29.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup +1 tbsp warm milk, or warm water", "1 tsp active dry yeast, rapidrise yeast", "1 tsp sugar", "Salt, to taste", "4 garlic cloves, minced", "¾ tsp dried oregano", "½ tbsp unsalted butter (at room temperature, optional", "1 cup plain flour / maida / all purpose flour", "1 tbsp oil", "2 tbsp butter, melted", "3 cloves garlic, minced", "1 tbsp coriander leaves (or parsley), chopped)", "2 tbsp corn meal (to dust, optional", "2 tbsp mayonnaise, i used eggless", "¼ cup boiled sweet corn", "½ cup mozzarella cheese, or any cheese of choice", "1 tsp red chilli flakes, divided", "1 tsp oregano seasoning, divided",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Yogurt Sandwich (Dahi Sandwich)", channel: "Recipe library", id: "more-ivd-curd-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/curd-sandwich/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 235.0, "p": 8.0, "c": 30.0, "f": 9.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup hung curd (thick yogurt), or Greek yogurt", "¼ cup cabbage (pata gobhi), shredded", "¼ cup carrots, shredded", "¼ cup boiled sweet corn, fresh or frozen", "¼ cup capsicum (bell pepper), diced", "½ tsp Italian seasoning (, or mixed herbs", "½ tsp red chilli flakes", "¼ tsp black pepper powder", "Salt, to taste", "2 tbsp butter", "6 bread slices",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Crunchy Masala Fries", channel: "Recipe library", id: "more-ivd-masala-french-fries", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/masala-french-fries/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 179.0, "p": 4.0, "c": 41.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large russet potato", "2 tbsp corn starch", "¼ tsp dry mint powder, optional", "½ tsp red chilli powder", "¼ tsp black pepper powder", "¼ tsp chat masala powder, increase according to your preference", "1 tsp lemon juice", "Salt, to taste", "Oil, to fry",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broccoli 65 Fritters", channel: "Recipe library", id: "more-ivd-broccoli-65", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/broccoli-65/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 88.0, "p": 3.0, "c": 19.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup broccoli florets, appx 10-12", "2 tbsp all purpose flour (maida), or wheat flour", "2 tbsp corn flour (corn starch), or rice flour", "1 tsp ginger, minced", "1 tsp garlic, minced", "1 tsp coriander leaves, chopped", "1 tsp curry leaves, chopped", "½ tsp garam masala powder", "1 tsp kashmiri red chilli powder", "1 tsp red chilli sauce", "½ tsp black pepper powder", "¼ cup water", "Oil, to deep fry", "Salt, to taste", "Few green chilies, slit lengthwise", "Few curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Onion Pakoda", channel: "Recipe library", id: "more-ivd-onion-pakoda", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/onion-pakoda/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 140.0, "p": 5.0, "c": 20.0, "f": 5.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large red onion (or 2 small onions, about 250 grams), sliced lengthwise )", "¼ cup besan (gram flour), add more if required", "1 tbsp rice flour, for crispness", "1 tsp ginger, grated", "1-2 green chilies, finely chopped", "1 stalk curry leaves, finely chopped", "¼ cup coriander leaves, finely chopped", "¼ tsp ajwain, carrom seeds", "¼ tsp turmeric", "½ tsp red chili powder", "½ tsp garam masala", "½ tbsp hot oil", "½ tsp salt, as per taste", "Oil, for air frying or deep fry", "Chaat masala powder, for sprinkling",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spicy Garlic Puffed Rice Snack", channel: "Recipe library", id: "more-ivd-masala-puffed-rice", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/masala-puffed-rice/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 170.0, "p": 5.0, "c": 16.2, "f": 10.2}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "5-6 cups puffed rice/mandakki, Appx 1 liter", "2-3 tbsp oil", "½ tsp mustard seeds", "½ tsp jeera (cumin seeds), optional", "1-2 stalk curry leaves", "2-3 garlic cloves, crushed", "¼ cup peanut/groundnut/shenga", "¼ cup daliya/putani/hurigadale/fried gram", "1 tsp red chilli powder", "¼ tsp turmeric powder", "½ tsp powdered sugar", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bhel Puri Street Snack", channel: "Recipe library", id: "more-ivd-bhel-puri-chaat", video: "https://www.youtube.com/watch?v=WYhtQNUdQTE", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/bhel-puri-chaat/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 545.0, "p": 7.0, "c": 120.0, "f": 6.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups puffed rice, mandakki, murmura", "¼ cup boiled potato, chopped", "2 tbsp onion, finely chopped", "2 tbsp tomato, chopped", "2 tbsp coriander leaves, finely chopped", "8-10 papdi", "2 tbsp roasted peanuts", "¼ cup thin sev (nylon sev), divided", "½ tsp roasted jeera powder", "½ tsp chaat masala", "½ tsp red chilli powder", "Black salt (or salt), to taste)", "2 tbsp coriander mint chutney", "2 tbsp tamarind imli chutney", "1 tbsp lime juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Potato Wedges", channel: "Recipe library", id: "more-ivd-air-fryer-potato-wedges", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/air-fryer-potato-wedges/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 269.0, "p": 5.0, "c": 40.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium russet potatoes, scrubbed and cut into eighths", "2 tbsp oil", "1 tsp garlic powder, or minced garlic", "½ tsp red chili powder", "½ tsp italian seasoning", "Salt and pepper, to taste", "2 tbsp finely grated parmesan cheese", "1 tbsp fresh parsley or cilantro, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Beet Tikki Patties", channel: "Recipe library", id: "more-ivd-beetroot-cutlet-recipe-beetroot-tikki", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/beetroot-cutlet-recipe-beetroot-tikki/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 271.0, "p": 9.0, "c": 46.0, "f": 7.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 large beetroot (grated, about 1.25 cup", "2 medium boiled and grated potato, about 1 cup", "¼ cup roasted peanuts, crushed", "3 tbsp bread crumbs, or corn flour or rice flour or fine sooji", "1 tsp ginger, grated", "2 green chilies, finely chopped", "2 tbsp coriander leaves, finely chopped", "½ tsp garam masala", "1 tsp chaat masala powder", "½ tsp amchur powder, or 1 tsp lime juice", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Hubli-Dharwad Girmit", channel: "Recipe library", id: "more-ivd-girmit", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/girmit/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 170.0, "p": 4.7, "c": 16.2, "f": 10.5}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "4 cups puffed rice/mandakki/churmuri/murmura ()", "¼ cup oil", "1 tsp mustard seeds", "½ tsp jeera seeds", "1 stalk curry leaves", "4 garlic cloves, crushed", "3 green chilies, finely chopped", "½ tsp turmeric powder", "1 big pinch hing, asafoetida", "2 medium onions, finely chopped", "¼ cup tamarind pulp, 1 lemon sized tamarind soaked in water", "½ tsp sugar, optional", "Salt, to taste", "2 tbsp onion, finely chopped", "2 tbsp tomato, finely chopped", "1 tbsp coriander leaves", "2 tbsp fried gram powder/putani powder", "¼ cup sev mixture", "2 tbsp fried peanuts", "2-4 fried green chilies, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Caramelized Fox Nuts", channel: "Recipe library", id: "more-ivd-caramel-makhana-recipe", video: null, tags: ["Makhana"], url: "https://www.indianveggiedelight.com/caramel-makhana-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 203.0, "p": 2.0, "c": 36.0, "f": 5.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup roasted makhana /foxnut/lotus seed", "2 tsp ghee (, or coconut oil, olive oil", "¼ cup jaggery, powdered",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Street-Style Aloo Tikki Chaat", channel: "Recipe library", id: "more-ivd-aloo-tikki-chaat", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/aloo-tikki-chaat/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 293.0, "p": 8.0, "c": 58.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 medium potatoes (boiled, about 500 grams", "1 green chili, finely chopped", "1 tsp ginger, grated", "2 tbsp coriander leaves, finely chopped", "½ tsp red chili powder", "½ tsp roasted jeera powder", "½ tsp chaat masala", "½ tsp garam masala", "½ tsp amchur powder", "Salt, to taste", "4-5 tbsp rice flour, or cornstarch", "Oil, for shallow frying", "1 cup curd, yogurt", "½ tbsp sugar", "¼ cup green chutney, or as needed", "¼ cup sweet tamarind chutney, or as needed", "1 tsp red chili powder, or as needed", "1 tsp roasted cumin powder, or as needed", "1 tsp chaat masala, or as needed", "Salt, to taste", "¼ cup onion, finely chopped", "½ cup thin sev, or as needed", "2-3 tbsp coriander leaves, finely chopped", "¼ cup pomegranate arils, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Peanuts, Microwave or Air Fryer", channel: "Recipe library", id: "more-ivd-masala-peanuts", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/masala-peanuts/",
+        macros: {"servings": 2, "serving": "0.25 cup", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 256.0, "p": 10.0, "c": 12.0, "f": 21.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup raw peanuts, groundnuts", "2 tbsp besan (gram flour), or chickpea flour", "1 tbsp rice flour", "½ tsp turmeric powder", "¼ tsp hing/asafetida", "1 tsp red chili powder", "½ tsp chaat masala", "1 tbsp lemon juice", "Oil, as required", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato Tikki, Pan-Fried or Air-Fried", channel: "Recipe library", id: "more-ivd-aloo-tikki-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/aloo-tikki-recipe/",
+        macros: {"servings": 9, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 100.0, "p": 2.0, "c": 23.0, "f": 0.2}, makes: "Makes about 9 servings", from: "Recipe library",
+        ingredients: [
+          "4 medium potatoes (boiled, about 500 grams", "1 green chili, finely chopped", "1 tsp ginger, grated", "2 tbsp coriander leaves, finely chopped", "½ tsp red chili powder", "½ tsp cumin powder", "½ tsp chaat masala", "½ tsp garam masala", "½ tsp amchur powder", "Salt, to taste", "4-5 tbsp rice flour, or cornstarch", "Oil, for frying",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chickpea Chaat", channel: "Recipe library", id: "more-ivd-chana-chaat-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chana-chaat-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 256.0, "p": 11.0, "c": 47.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dried chickpeas (garbanzo beans or chole), or 2.5 cups of cooked chickpeas", "3 cups water, to cook chickpeas", "1 medium boiled potato, cubed", "1 small onion, finely chopped", "1 small tomato, finely chopped", "½ cup cucumber, finely chopped", "1 green chili, finely chopped, optional", "2-3 tbsp coriander leaves, finely chopped", "½ tsp red chili powder", "½ tsp roasted cumin powder", "½ tsp chaat masala", "A pinch black salt", "Salt, to taste", "1-2 tbsp coriander mint chutney", "1-2 tbsp sweet tamarind chutney", "1 tbsp lemon juice", "Thin sev",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pani Puri with Spiced Water", channel: "Recipe library", id: "more-ivd-pani-puri-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/pani-puri-recipe/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 148.0, "p": 3.0, "c": 34.0, "f": 0.4}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "30 puris (or golgappa), store-bought )", "¼ cup date tamarind chutney, optional", "3 medium potatoes, boiled", "1 small onion, finely chopped", "2 tbsp coriander leaves, finely chopped", "½ tsp roasted cumin powder", "½ tsp chaat masala", "½ tsp red chili powder", "Salt, to taste", "1 cup coriander leaves, tightly packed", "½ cup mint leaves, tightly packed", "1 inch ginger", "2-3 green chilies", "2 tbsp lemon juice", "1-2 ice cubes", "¼ cup water, for blending", "½ tsp roasted cumin powder", "1 tbsp pani puri masala, store-bought", "2 pinches hing, asafoetida", "½ tsp black salt", "½ tsp salt", "¼ tsp black pepper powder", "¼ cup tamarind pulp", "2 tbsp jaggery, or sugar", "4 cups water", "¼ cup boondi, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Frozen Samosas in the Air Fryer", channel: "Recipe library", id: "more-ivd-air-fryer-frozen-samosa", video: "https://www.youtube.com/watch?v=J6rCh3LEG1A", tags: ["Other"], url: "https://www.indianveggiedelight.com/air-fryer-frozen-samosa/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 155.0, "p": 5.0, "c": 15.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 large frozen samosas", "1 tbsp oil, optional", "Coriander Mint Chutney", "Tamarind Chutney",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mint Fox Nuts", channel: "Recipe library", id: "more-ivd-mint-makhana-recipe", video: null, tags: ["Makhana"], url: "https://www.indianveggiedelight.com/mint-makhana-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 101.0, "p": 3.0, "c": 11.0, "f": 5.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup roasted makhana / foxnut/ lotus seed", "2 tsp ghee (, or coconut, olive oil", "2 tsp dry mint powder", "½ tsp chaat masala", "1 pinch salt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Congress Kadlekai Spiced Peanuts", channel: "Recipe library", id: "more-ivd-congress-kadlekai-masala-peanuts-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/congress-kadlekai-masala-peanuts-recipe/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup raw peanuts/groundnuts/shenga/kadlekai", "2 tsp oil", "¼ tsp red chilli powder, adjust as per your spice level", "¼ tsp black pepper powder, adjust as per your spice level", "1 big pinch turmeric powder, haldi", "1 big pinch asafetida, hing", "1 stalk curry leaves", "¼ tsp powdered sugar, optional", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sriracha Mayonnaise", channel: "Recipe library", id: "more-ivd-sriracha-mayo-recipe", video: "https://www.youtube.com/watch?v=QpvrRFuOkAY", tags: ["Other"], url: "https://www.indianveggiedelight.com/sriracha-mayo-recipe/",
+        macros: {"servings": 16, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 99.0, "p": 1.0, "c": 1.0, "f": 10.0}, makes: "Makes about 16 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup mayonnaise", "3 tbsp sriracha, or other hot sauce", "1 tbsp maple syrup (or honey), optional)", "1 clove garlic, finely minced", "1 tbsp lemon juice, or lime juice, freshly squeezed", "1 pinch salt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tandoori Paneer Naan Pizza Bites", channel: "Recipe library", id: "more-ivd-tandoori-paneer-naan-pizza", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/tandoori-paneer-naan-pizza/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 756.0, "p": 31.0, "c": 72.0, "f": 38.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup paneer, cut into small cubes", "2 tbsp hung curd, or greek yogurt", "1 tsp ginger garlic paste", "¼ tsp turmeric powder", "½ tsp red chili powder", "½ tsp garam masala", "Salt, to taste", "2 Naan bread, store-bought or homemade", "2 tsp oil", "½ cup pizza sauce, or marinara sauce", "¾-1 cup mozzarella, grated", "¼ cup red onions, thinly sliced", "¼ cup bell pepper, thinly sliced", "10 grape tomatoes, cut into half", "2 tbsp cilantro, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sev Batata Puri", channel: "Recipe library", id: "more-ivd-sev-puri-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/sev-puri-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 218.0, "p": 4.0, "c": 39.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "16 papdis", "1 medium boiled potato, boiled, cubed", "¼ cup onions, finely chopped", "¼ cup tomatoes, finely chopped", "¼ cup red garlic chutney", "¼ cup green chutney", "¼ cup sweet tamarind chutney", "1 tsp red chili powder", "1 tsp roasted cumin powder", "1 tsp chaat masala", "¼ tsp salt, or black salt", "¾ cup nylon thin sev, or as needed", "2 tbsp coriander leaves, chopped", "2 tsp lemon juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fries from the Air Fryer", channel: "Recipe library", id: "more-ivd-french-fries-air-fryer", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/french-fries-air-fryer/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 208.0, "p": 4.0, "c": 33.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 large russet potatoes, cut into ¼-inch thick fries", "2 tbsp olive oil", "½ tsp garlic powder, optional", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Sweet Potato Fries", channel: "Recipe library", id: "more-ivd-air-fryer-sweet-potato-fries", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-sweet-potato-fries/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 173.0, "p": 2.0, "c": 31.0, "f": 5.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium sweet potatoes (peeled, about 322 grams", "1 tbsp olive oil", "½ tsp garlic powder", "½ tsp red chili powder", "1 tbsp corn starch", "Salt and pepper",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach and Corn Fritters", channel: "Recipe library", id: "more-ivd-spinach-corn-pakoda", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/spinach-corn-pakoda/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 174.0, "p": 6.0, "c": 34.0, "f": 2.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large onion, sliced lengthwise", "1 medium spinach (palak) bunch, finely chopped", "½ cup sweet corn, fresh or frozen", "½ inch ginger (finely chopped, optional", "2 green chillies, finely chopped", "¼ cup coriander leaves, finely chopped", "1 stalk curry leaves, finely chopped", "½ tsp cumin (jeera) seeds", "½ tsp jeera powder", "½ tsp chaat masala powder", "¼ cup besan (gram flour), add more if required", "2 tbsp rice flour (or corn flour or semolina),for crispiness)", "Salt, to taste", "Oil, for frying",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Asparagus", channel: "Recipe library", id: "more-ivd-air-fryer-asparagus", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-asparagus/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 32.0, "p": 3.0, "c": 5.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb fresh asparagus, woody ends trimmed", "1 tbsp olive oil", "¼ tsp garlic powder, optional", "Himalayan pink salt, to taste", "Freshly ground black pepper, to taste", "Lemon wedges, to serve",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Maddur Vada Fritters", channel: "Recipe library", id: "more-ivd-maddur-vada-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/maddur-vada-recipe/",
+        macros: {"servings": 15, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 92.0, "p": 2.0, "c": 16.0, "f": 2.0}, makes: "Makes about 15 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup rice flour", "½ cup chiroti rava, fine semolina", "¼ cup all purpose flour, maida", "2 medium onion (finely chopped, about 1.5 cups", "3 green chilies, finely chopped", "2 tbsp coriander leaves, finely chopped", "2-3 stalks curry leaves, finely chopped", "2 pinches of hing", "½ tsp red chili powder, optional", "2-3 tbsp oil, or butter", "Salt, to taste", "Water, or add as required", "Oil, for deep frying vadas",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Semolina Dhokla (Rava Dhokla)", channel: "Recipe library", id: "more-ivd-rava-dhokla-instant-pot", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/rava-dhokla-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 265.0, "p": 8.0, "c": 36.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sooji/semolina/rava, fine variety", "1 cup yogurt", "½ cup water, or add as needed", "1 tsp ginger, grated", "1 green chili, finely chopped, optional", "1 tbsp oil", "1 tsp eno fruit salt", "Salt, as needed", "¾ tsp sugar, optional", "2 cups water, for steaming", "1 tbsp oil", "1 tsp mustard seeds", "1 green chilies, sliced lengthwise", "1 stalk curry leaves", "A pinch asafoetida", "1 tsp white sesame seeds", "1 tsp lime juice, optional", "2 tbsp coriander leaves", "1-2 tbsp fresh grated coconut, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Potato Bajji Fritters (Aloo Pakora)", channel: "Recipe library", id: "more-ivd-aloo-pakora-recipe-potato-bajji", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/aloo-pakora-recipe-potato-bajji/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 212.0, "p": 8.0, "c": 41.0, "f": 2.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium potatoes", "½ cup besan, gram flour", "2 tbsp rice flour, or corn starch", "½ tsp ginger paste", "½ tsp ajwain, carrom seeds", "¼ tsp turmeric powder", "½ tsp red chili powder", "¼ tsp garam masala", "Salt, to taste", "1 pinch cooking soda, optional", "Oil, for deep frying",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Roasted Potatoes", channel: "Recipe library", id: "more-ivd-air-fryer-potatoes", video: "https://www.youtube.com/watch?v=csWb2rvbm5o", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-potatoes/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 157.0, "p": 3.0, "c": 22.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb baby potatoes", "1 tbsp extra-virgin olive oil", "3 cloves garlic, minced", "1 tsp italian seasoning", "1 tsp red chili powder, or smoked paprika", "½ tsp kosher salt, or to taste", "⅛ tsp freshly ground black pepper",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Crunchy Air-Fried Chickpeas", channel: "Recipe library", id: "more-ivd-crispy-air-fryer-chickpeas", video: "https://www.youtube.com/watch?v=im2p03_d0G0", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/crispy-air-fryer-chickpeas/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 134.0, "p": 6.0, "c": 17.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 cups cooked chickpeas, or 1 15 oz can", "1 tbsp extra-virgin olive oil", "¼ tsp garlic powder", "¼ tsp onion powder", "1 tsp red chili powder", "Salt and pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Crisp Tofu in the Air Fryer", channel: "Recipe library", id: "more-ivd-air-fryer-tofu", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/air-fryer-tofu/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 114.0, "p": 9.0, "c": 7.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "16 oz extra firm tofu, pressed for 30 minutes, cut into 1” cubes", "1 tsp garlic powder, or 1 clove minced", "1 tsp red chili powder, or sriracha", "1 tbsp soy sauce, or liquid aminos", "1 tbsp sesame oil, or any oil", "1 tbsp maple syrup, or agave", "1 tsp rice vinegar, optional", "Salt and pepper, to taste", "1 tbsp cornstarch, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tandoori Tofu Tikka", channel: "Recipe library", id: "more-ivd-tandoori-tofu", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/tandoori-tofu/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 11.0, "p": 0.4, "c": 3.0, "f": 0.1}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup hung curd, or greek yogurt", "1 tbsp besan, gram flour", "1 tbsp ginger garlic, minced", "¼ tsp turmeric", "1 tsp kashmiri red chili powder", "½ tsp cumin powder", "1 tsp chaat masala", "½ tsp garam masala, or tandoori masala", "1 tsp kasuri methi, dried fenugreek leaves", "1 tsp lemon juice (, or amchur powder", "1 tbsp olive oil", "Salt, to taste", "16 oz extra-firm tofu, pressed for 30 minutes, cut into 1” cubes", "1-2 medium bell peppers (mix of green, red, and yellow), cut into 1-inch cubes", "1 small red onion, cut into 1-inch cubes", "Lemon wedges, to serve", "Onion slices, to serve", "Chaat masala, to sprinkle", "Green chutney",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Davangere Nargis Mandakki", channel: "Recipe library", id: "more-ivd-nargis-mandakki", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/nargis-mandakki/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 170.5, "p": 4.7, "c": 16.2, "f": 10.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups puffed rice, puri or mandakki", "½ tsp mustard seeds, sasuve", "½ tsp jeera seeds, jeerage", "1 stalk curry leaves, karibevu", "3-4 green chillies (hasi menasinakayi), chopped", "3-4 cloves crushed garlic, belulli", "¼ tsp turmeric powder, haldi/arishina", "½ tsp powdered sugar, sakkare pudi", "Salt (uppu), to taste", "1 tbsp roasted gram powder, hurigadale/putani powder", "2 tbsp oil, enne",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Thirty-Five-Plus Indian Air Fryer Ideas", channel: "Recipe library", id: "more-ivd-air-fryer-indian-recipes", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/air-fryer-indian-recipes/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          ,
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Roasted Mushrooms", channel: "Recipe library", id: "more-ivd-air-fryer-mushrooms", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-mushrooms/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 92.0, "p": 3.0, "c": 6.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz bella mushroom, cut in to half", "1 tbsp olive oil", "½ tsp garlic powder, or minced garlic", "1 tsp soy sauce, or worcestershire sauce", "Salt and pepper, to taste", "Few lemon wedges", "1 tbsp fresh parsley, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer Popcorn Bites", channel: "Recipe library", id: "more-ivd-paneer-popcorn-recipe-air-fryer", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-popcorn-recipe-air-fryer/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 290.0, "p": 12.0, "c": 17.0, "f": 18.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup paneer (cubed, 1 inch size", "1 tsp ginger garlic paste", "½ tsp red chilli powder", "½ tsp garam masala powder", "½ tsp mixed dried herbs", "¼ tsp pepper powder", "¼ cup corn flour (or refined flour, maida", "2 tsp oil, for spraying", "Salt, to taste", "½ cup bread crumbs", "¼ tsp red chilli powder", "⅛ tsp salt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Mixed Vegetables", channel: "Recipe library", id: "more-ivd-air-fryer-vegetables", video: "https://www.youtube.com/watch?v=D9cdX-s6IL8", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-vegetables/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 123.0, "p": 4.0, "c": 13.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup Cauliflower", "1 cup Broccoli", "½ cup Zucchini, cut into ½\" moons", "½ cup Bell Pepper", "½ cup Red Onion", "1 tbsp Olive Oil", "½ tsp Garlic Powder", "Salt & Black Pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Flattened Rice Chivda Mix", channel: "Recipe library", id: "more-ivd-poha-chivda", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/poha-chivda/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 282.0, "p": 5.0, "c": 25.0, "f": 19.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 cups thin poha, about 200 grams", "3 tbsp oil", "¼ cup peanuts", "¼ cup cashewnuts", "2 tbsp fried gram, dalia", "¼ cup dry coconut slices", "2 tbsp raisins", "1 tsp mustard seeds", "1 tsp cumin seeds", "2 green chilies, or dry red chilies", "1-2 stalks curry leaves", "A pinch asafoetida, hing", "½ tsp turmeric powder", "¾ tsp salt, to taste", "2 tsp powdered sugar, or to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Iyengar Bakery-Style Masala Toast", channel: "Recipe library", id: "more-ivd-masala-bread-toast", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/masala-bread-toast/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 277.0, "p": 9.0, "c": 45.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tsp oil", "½ tsp mustard seeds", "½ tsp jeera seeds, cumin", "1 green chili, finely chopped", "½ cup onion, finely chopped", "¼ cup capsicum (bell peppers), finely chopped", "½ cup carrot, shredded", "½ cup tomato (de-seeded), finely chopped", "¼ tsp jeera powder", "½ tsp chaat masala powder, or garam masala", "½ tsp red chili powder", "Salt, as per taste", "1 tbsp tomato ketchup, sauce", "1 tbsp coriander leaves", "5-6 bread slices, wheat or brown bread", "1-2 tbsp butter (, or ghee",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bombay Potatoes, Spicy", channel: "Recipe library", id: "more-ivd-spicy-bombay-potatoes-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/spicy-bombay-potatoes-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 191.0, "p": 3.0, "c": 22.0, "f": 11.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 lb baby potatoes, yukon gold or red", "3 tbsp olive oil", "1 tsp cumin (jeera) seeds", "2 tbsp water", "1 tsp coriander powder", "½ tsp ground cumin", "¼ tsp turmeric", "1 tsp red chili powder", "½ tsp garam masala", "1 tsp amchur, dry mango powder", "1 tsp chat masala", "¾ tsp salt", "Juice of half lime", "2 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Plantain Chips", channel: "Recipe library", id: "more-ivd-air-fryer-banana-chips-healthy-plantain-chips", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-banana-chips-healthy-plantain-chips/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 172.0, "p": 1.0, "c": 29.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 plantains / raw banana", "2 tbsp coconut oil", "½ tsp turmeric powder", "1 large bowl of water", "1 tsp salt", "1 tsp turmeric powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Fried Kale Crisps", channel: "Recipe library", id: "more-ivd-air-fryer-kale-chips", video: "https://www.youtube.com/watch?v=_MfZsIzn8fQ", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-kale-chips/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 47.0, "p": 1.0, "c": 3.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 bunch kale, about 5 cups, 8-10 oz", "1 tbsp extra-virgin olive oil", "¼ tsp garlic powder", "Salt & pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Dahi Papdi Chaat", channel: "Recipe library", id: "more-ivd-dahi-papdi-chaat", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/dahi-papdi-chaat/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 737.0, "p": 13.0, "c": 155.0, "f": 12.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½-¾ cup yogurt, dahi", "½ tbsp sugar", "16 papdis", "1 medium potato, boiled, cubed", "¼ cup chickpeas, boiled, optional", "¼ cup onion, finely chopped", "¼ cup tomato, finely chopped", "¼ cup green chutney", "¼ cup sweet tamarind chutney", "1 tsp roasted cumin powder", "1 tsp chaat masala", "⅛ tsp black salt", "½ cup nylon sev, or as needed", "2 tbsp coriander leaves, chopped", "2 tbsp pomegranate, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Crunchy Paneer Fingers", channel: "Recipe library", id: "more-ivd-crispy-paneer-fingers", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/crispy-paneer-fingers/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 240.0, "p": 9.0, "c": 22.0, "f": 13.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "100 grams paneer", "1 cup bread crumbs (appx 5 breads) *Bread crumbs should be course.)", "4 tbsp maida, all purpose flour", "2 tbsp corn flour, corn starch", "1 tsp red chilli powder", "½ tsp black pepper powder", "1 tsp garlic powder, can use fresh chopped garlic if you don’t have garlic powder", "½ tsp italian seasoning", "Salt, to taste", "Oil, for frying",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Classic Guacamole", channel: "Recipe library", id: "more-ivd-guacamole-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/guacamole-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 257.0, "p": 4.0, "c": 17.0, "f": 22.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 medium hass avocados, ripened", "½ cup red onions, finely chopped", "½ large roma tomato (seeds and pulp removed, chopped, optional", "1 jalapeno (finely chopped, or serrano peppers", "3 cloves garlic (minced, optional", "2 tbsp cilantro, coriander leaves", "2 tbsp fresh lime juice", "Salt and black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Edamame Protein Chaat", channel: "Recipe library", id: "more-ivd-edamame-chaat", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/edamame-chaat/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 217.0, "p": 13.0, "c": 23.0, "f": 10.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup shelled edamame, steamed or blanched", "¼-½ cup boiled sweet potato, cubed", "¼ cup onion, chopped", "¼ cup tomato, chopped", "¼ cup cucumber, chopped", "¼ cup pomegranate seeds", "2 tbsp roasted peanuts", "2 tsp mint coriander chutney, or as needed", "1-2 tsp sweet tamarind chutney, or as needed", "1 tsp chaat masala", "¼-½ tsp roasted cumin powder", "Salt, pepper, to taste", "1 tbsp lemon juice", "2-3 tbsp thin sev", "2 tbsp coriander leaves, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sixteen-Plus Indian Beetroot Ideas", channel: "Recipe library", id: "more-ivd-beetroot-recipes", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/beetroot-recipes/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          ,
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cheesy Spiced Corn Dip", channel: "Recipe library", id: "more-ivd-masala-corn-dip", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/masala-corn-dip/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 315.0, "p": 8.0, "c": 19.0, "f": 24.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp olive oil", "1 tbsp butter", "1 tbsp jalapeno (deseeded), finely chopped)", "1 tbsp garlic, minced", "½ cup onion, finely chopped", "1 cup bell peppers (diced, mix of red and green", "2 cups frozen corn, or roasted corn", "1 - 1.5 tbsp pav bhaji masala, or taco seasoning", "1 tsp cumin powder", "½ tsp oregano", "½ tsp red chili powder, optional", "Salt, pepper, to taste", "½ cup coriander leaves, finely chopped", "½ cup mayonnaise, or cream cheese", "¼ - ½ cup whole milk, or heavy cream", "½-¾ cup shredded cheese (for mixing in, I used mexican cheese blend", "½ cup shredded cheese, sprinkling on top",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Quinoa, Lentil and Vegetable Soup", channel: "Recipe library", id: "more-ivd-vegetable-lentil-quinoa-soup", video: "https://www.youtube.com/watch?v=T3LB28nBS4s", tags: ["Quinoa"], url: "https://www.indianveggiedelight.com/vegetable-lentil-quinoa-soup/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 130.0, "p": 6.0, "c": 23.0, "f": 1.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup quinoa", "½ cup red lentils, masoor dal", "1 tbsp oil", "3 cloves garlic, minced", "½ inch ginger, minced", "2 bay leaf", "½ cup onion, finely chopped", "½ cup carrot, diced", "½ cup red bell pepper, diced", "½ cup celery, diced", "2 medium tomatoes, about 1 cup", "Juice of half lemon", "2 cups spinach", "5 cups water, Or vegetable stalk", "Salt, adjust to taste", "1 tsp turmeric powder", "½ tsp red chilli powder", "½ tsp cumin (jeera) powder", "1 tsp garam masala, or curry powder", "Black pepper powder, adjust to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Roasted Cauliflower Florets", channel: "Recipe library", id: "more-ivd-air-fryer-cauliflower", video: "https://www.youtube.com/watch?v=1WmDFcJGFqo", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-cauliflower/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 50.0, "p": 1.0, "c": 4.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 small cauliflower head (cut into florets, about 20 florets", "1 tbsp extra virgin olive oil", "1 tsp red chili powder", "¼ tsp turmeric powder, optional", "½ tsp garlic powder", "Salt and pepper, to taste", "Lemon wedges (for serving, optional", "Freshly chopped cilantro (for serving, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Velvety Zucchini Soup", channel: "Recipe library", id: "more-ivd-instant-pot-zucchini-soup", video: "https://www.youtube.com/watch?v=hhaRo-zwVnM", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-zucchini-soup/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 40.0, "p": 3.5, "c": 10.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tsp olive oil", "1 small yellow onion, finely chopped", "3 cloves garlic, minced", "2 large zucchini (diced, about 3-3.5 cups", "1 cup vegetable broth (, or water", "Salt, to taste", "Black pepper powder, to taste", "½ cup coconut milk, or heavy cream or half and half",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fox Nut Bhel (Phool Makhana)", channel: "Recipe library", id: "more-ivd-makhana-bhel", video: "https://www.youtube.com/watch?v=PkHdz_BMFow", tags: ["Makhana"], url: "https://www.indianveggiedelight.com/makhana-bhel/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 203.0, "p": 6.0, "c": 25.0, "f": 11.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups phool makhana", "1 tbsp ghee (or oil), divided)", "½ tsp turmeric powder", "1 tsp red chili powder", "½ tsp chaat masala", "A pinch black salt", "1 small onion (finely chopped, about ½ cup", "1 large tomato (deseeded and chopped, about ½ cup", "¼ cup cucumber, finely chopped", "¼ cup roasted peanuts", "2-3 tbsp green chutney, finely chopped", "2-3 tbsp sweet tamarind chutney", "½ tsp chaat masala", "Black salt, to taste", "¼ cup sev, or as needed", "2-3 tbsp coriander leaves", "2 tbsp pomegranate arils",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sour Cream Dip", channel: "Recipe library", id: "more-ivd-sour-cream-dip", video: "https://www.youtube.com/watch?v=iAhdrKZJieE", tags: ["Other"], url: "https://www.indianveggiedelight.com/sour-cream-dip/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 90.0, "p": 1.0, "c": 1.0, "f": 10.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "¾ cup sour cream", "¼ cup mayonnaise", "½ tsp garlic powder, or 1 clove of garlic minced", "½ tsp onion powder", "1 tbsp dried chives", "½ tsp dried dill", "1 tsp lime juice (or white vinegar), optional", "Salt & pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tandoori Cauliflower Tikka, Air-Fried", channel: "Recipe library", id: "more-ivd-air-fryer-tandoori-gobi", video: "https://www.youtube.com/watch?v=jplzKu8HqFc", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-tandoori-gobi/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 96.0, "p": 6.0, "c": 10.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup thick or hung curd, or greek yogurt", "1 tbsp besan, gram flour or chickpea flour", "1 tbsp ginger garlic paste", "¼ tsp turmeric powder", "1 tsp kashmiri red chilli powder", "½ tsp cumin powder", "1 tsp chaat masala powder", "½ tsp garam masala, or tandoori masala powder", "1 tsp kasuri methi", "1 tsp lemon juice, or amchur powder", "1 tbsp oil", "Salt, to taste", "1 medium cauliflower, about 20 florets", "Lemon wedges, to serve", "Onion slices, to serve", "Chaat masala, to sprinkle", "Green chutney",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tandoori Broccoli, Air-Fried", channel: "Recipe library", id: "more-ivd-air-fryer-tandoori-broccoli", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-tandoori-broccoli/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 108.0, "p": 7.0, "c": 12.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup hung curd, or greek yogurt", "1 tbsp besan, gram flour or chickpea flour", "1 tbsp ginger garlic paste", "¼ tsp turmeric powder", "1 tsp kashmiri red chilli powder", "½ tsp cumin powder", "1 tsp chaat masala powder", "½ tsp garam masala, or tandoori masala powder", "1 tsp kasuri methi, dried fenugreek leaves", "1 tsp lemon juice, or amchur powder", "1 tbsp oil", "Salt, to taste", "1 large head broccoli, about 20-22 medium sized florets, around 300 grams", "Lemon wedges, to serve", "Onion slices, to serve", "Chaat masala, to sprinkle", "Green chutney",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Crispy Corn Fritters", channel: "Recipe library", id: "more-ivd-corn-pakoda", video: "https://www.youtube.com/watch?v=RhaYhAUViyY", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/corn-pakoda/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 104.0, "p": 3.0, "c": 21.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sweet corn kernels, boiled and crushed coarsely", "½ medium onion, finely chopped", "¼ cup besan (gram flour), or chickpea flour", "1 tbsp rice flour, or cornstarch", "2-3 green chilies, finely chopped", "¼ tsp turmeric powder", "1 tsp ginger garlic paste", "½ tsp cumin seeds", "¼ cup coriander leaves, finely chopped", "Few curry leaves, chopped", "½ tsp chaat masala, or garam masala", "Salt, to taste", "Oil, for deep frying",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Air-Roasted Broccoli", channel: "Recipe library", id: "more-ivd-air-fryer-broccoli", video: "https://www.youtube.com/watch?v=TaIhmx3L3y4", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/air-fryer-broccoli/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 82.0, "p": 3.0, "c": 8.0, "f": 5.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "12 oz fresh broccoli florets, cut into small pieces", "1 tbsp extra virgin olive oil", "½ tsp garlic powder", "¼ tsp himalayan pink salt", "⅛ tsp freshly ground black pepper",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Frozen Spring Rolls in the Air Fryer", channel: "Recipe library", id: "more-ivd-frozen-spring-rolls-air-fryer", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/frozen-spring-rolls-air-fryer/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 545.0, "p": 8.0, "c": 94.0, "f": 15.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "8 frozen spring rolls", "1 tbsp oil, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Avocado Papdi Chaat", channel: "Recipe library", id: "more-ivd-avocado-papdi-chaat", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/avocado-papdi-chaat/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 301.0, "p": 4.0, "c": 25.0, "f": 23.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "15-18 papdi, crispy puri or wheat flour crackers", "¼ cup green chutney, or as needed", "¼ cup tamarind chutney, or as needed", "¼ cup nylon sev", "2 tbsp coriander leaves", "1 extra-large avocado, or 2 small avocados", "1 tbsp lime juice", "¼ cup onion, finely chopped", "¼ cup tomato, deseeded, finely chopped", "1 green chili, finely chopped", "½ tsp roasted cumin powder", "½ tsp chaat masala", "½ tsp black salt, as per taste", "Salt, as per taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Dahi Sev Batata Puri", channel: "Recipe library", id: "more-ivd-dahi-puri", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/dahi-puri/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 199.0, "p": 6.0, "c": 35.0, "f": 4.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup yogurt", "1 tbsp sugar", "12-14 puris", "1 medium potato, boiled, cubed", "¼ cup onion, finely chopped", "¼ cup tomato, finely chopped", "¼ cup green chutney", "¼ cup sweet tamarind chutney", "1 tsp red chili powder", "1 tsp roasted cumin powder", "1 tsp chaat masala", "Salt, to taste", "¾ cup nylon thin sev", "2-3 tbsp coriander leaves, finely chopped", "2-3 tbsp pomegranate seeds, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer Tikka, Four Ways to Cook", channel: "Recipe library", id: "more-ivd-paneer-tikka", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-tikka/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 293.0, "p": 14.0, "c": 8.0, "f": 23.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup hung curd, or greek yogurt", "1 tbsp besan/gram flour, or chickpea flour", "1 tbsp ginger garlic paste", "¼ tsp turmeric powder", "1 tsp kashmiri red chilli powder", "½ tsp cumin powder", "1 tsp chaat masala powder", "½ tsp garam masala, or tandoori masala powder", "1-2 tsp kasuri methi, dried fenugreek leaves", "1 tsp lemon juice, or amchur powder", "1 tbsp oil", "Salt, to taste", "300 grams paneer (about 2 cups), cut into 1-inch cubes", "1-2 medium bell peppers (mix of green, red, and yellow), cut into 1-inch cubes", "1 medium red onion, cut into 1-inch cubes", "Lemon wedges, to serve", "Onion slices, to serve", "Chaat masala, to sprinkle", "Green chutney",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sweet Corn Bhel Chaat", channel: "Recipe library", id: "more-ivd-corn-bhel", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/corn-bhel/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 143.0, "p": 3.6, "c": 25.2, "f": 3.8}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sweet corn, fresh or frozen", "¼ cup onion, diced", "¼ cup tomato, deseeded and diced", "¼ cup cucumber, diced", "¼ cup red bell pepper (capsicum), diced", "¼ cup sev/mixed farsan/bhujia", "½ cup fried boondi", "1 tbsp green chutney", "1-2 tsp tamarind chutney", "½ tsp red chilli powder", "1 tsp chaat masala", "¼ tsp black salt, kala namak", "2 tsp lime juice", "1-2 tbsp coriander leaves, finely chopped", "Coriander leaves", "Pomegranate arils",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cajun Potatoes, Barbecue-Restaurant Style", channel: "Recipe library", id: "more-ivd-barbeque-nation-style-cajun-potatoes", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/barbeque-nation-style-cajun-potatoes/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 253.0, "p": 5.0, "c": 43.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "4 tbsp mayonnaise, i used eggless", "1 tsp garlic powder", "1 tsp onion powder, optional", "½ tsp dried oregano", "½ tsp dried thyme", "½ tsp ground black pepper", "1 tsp red chili powder", "2 tbsp milk, optional", "1 tsp tomato ketchup", "Salt, to taste", "10-12 baby potatoes", "2 tbsp corn flour, corn starch", "Salt, to taste", "Oil, for shallow fry", "2 tbsp onions, finely chopped", "1 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tandoori Potato Tikka", channel: "Recipe library", id: "more-ivd-tandoori-aloo-tikka", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/tandoori-aloo-tikka/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 164.0, "p": 6.0, "c": 26.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup hung curd, or greek yogurt", "1 tbsp besan/gram flour, or chickpea flour", "1 tbsp ginger garlic paste", "¼ tsp turmeric powder", "1 tsp kashmiri red chilli powder", "½ tsp cumin powder", "1 tsp chaat masala powder", "½ tsp garam masala, or tandoori masala powder", "1 tsp kasuri methi, dried fenugreek leaves", "1 tsp lemon juice, or amchur powder", "1 tbsp oil", "Salt, to taste", "1 lb baby potatoes, around 15-16", "1 medium bell peppers (red, and yellow), cut into 1-inch cubes", "1 medium red onion, cut into 1-inch cubes", "Lemon wedges, to serve", "Onion slices, to serve", "Chaat masala, to sprinkle", "Green chutney",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Veggie Rice Cutlets from Leftovers", channel: "Recipe library", id: "more-ivd-vegetable-rice-cutlet", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/vegetable-rice-cutlet/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 573.0, "p": 7.0, "c": 73.0, "f": 29.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup leftover rice, or fresh cooked rice", "1 large potato (about ½ cup), boiled and mashed potato", "¼ cup carrot, grated", "¼ cup onion, finely chopped", "¼ cup capsicum, finely chopped", "¼ cup spinach, finely chopped", "1 tbsp green beans, finely chopped", "2 tbsp coriander leaves, chopped", "1 green chili, finely chopped", "3 tbsp cornflour, You can use roasted gram/besan flour or rice flour too", "¼ tsp turmeric powder", "½ tsp red chili powder", "1 tsp ginger, grated", "1 tsp chaat masala powder", "½ tsp garam masala powder", "1 tbsp lemon juice", "Salt, to taste", "¼ cup oil, to shallow fry",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Avocado Pani Puri, Mexican-Inspired", channel: "Recipe library", id: "more-ivd-mexican-style-golgappa-with-fruit-pani", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/mexican-style-golgappa-with-fruit-pani/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 241.0, "p": 3.0, "c": 28.0, "f": 15.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium avocados, diced and mashed", "½ cup onion, finely chopped", "½ cup tomato (deseeded), finely chopped)", "2 tbsp coriander leaves", "½ tsp roasted cumin powder", "1 tbsp salt, black pepper, to taste", "1 tsp chaat masala", "1 tbsp lemon juice", "1 cup coriander leaves, tightly packed", "½ cup mint leaves, tightly packed", "1 inch ginger", "2-3 green chilies", "2 tbsp lemon juice", "1-2 ice cubes", "¼ cup water, for blending", "½ tsp roasted cumin powder", "1 tbsp pani puri masala (store-bought, Used Everest Brand", "2 pinches hing, asafoetida", "½ tsp black salt", "½ tsp salt", "¼ tsp black pepper powder, optional", "¼ cup tamarind pulp", "2 tbsp jaggery, or sugar", "4 cups water", "20-22 puris (or golgappa), store-bought", "¼ cup date tamarind chutney, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bottle Gourd and Moong Dal Soup", channel: "Recipe library", id: "more-ivd-lauki-soup-bottle-gourd-soup-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/lauki-soup-bottle-gourd-soup-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 43.0, "p": 2.0, "c": 8.0, "f": 0.2}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium bottle gourd (lauki) (peeled and diced, about 2.5 - 3 cups", "2 tbsp moong dal, or masoor dal", "1 small onion, roughly chopped", "3 garlic cloves", "1 inch ginger, chopped", "1 green chili, optional", "2 tbsp coriander stems, optional", "Salt, to taste", "2 cups water (or vegetable broth), garnish", "Black pepper powder, to taste", "½ tsp roasted cumin powder", "1 tbsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cream of Mushroom Soup", channel: "Recipe library", id: "more-ivd-instant-pot-creamy-mushroom-soup", video: "https://www.youtube.com/watch?v=5qoyWXPIG10", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-creamy-mushroom-soup/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 242.0, "p": 6.0, "c": 15.0, "f": 20.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp olive oil", "1 medium yellow onion, finely chopped", "3 cloves garlic, minced", "8 oz mushrooms (diced, about 3 cups", "½ cup celery, 2 small stem", "2 cups vegetable broth, or water", "1 tsp Italian herbs", "¼ tsp red chili flakes, optional", "½ cup coconut cream, or heavy cream or cashew cream", "Salt and black pepper, to taste", "½ cup sautéed mushrooms, optional", "2 tbsp coriander leaves", "2 tbsp cream",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cucumber and Chutney Sandwich", channel: "Recipe library", id: "more-ivd-cucumber-chutney-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/cucumber-chutney-sandwich/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 180.0, "p": 6.0, "c": 30.0, "f": 4.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "4 slices white bread", "2-3 tbsp butter, room temperature", "¼ cup mint coriander chutney", "½ tsp roasted jeera powder", "½ tsp chaat masala powder", "Few cucumber slices",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Zucchini Fritters", channel: "Recipe library", id: "more-ivd-zucchini-pakoda", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/zucchini-pakoda/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 90.0, "p": 4.0, "c": 16.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium zucchini (shredded, about 1 cup", "3-4 tbsp besan (gram flour), or chickpea flour", "1 tbsp rice flour, for crispness", "1 tsp ginger, grated", "2 green chilies, finely chopped", "½ tsp cumin (jeera) seeds", "¼ tsp turmeric powder", "½ tsp garam masala, or chaat masala", "2 tbsp coriander leaves", "Salt, to taste", "Oil, for frying", "1 pinch chaat masala, to sprinkle",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Masala Fox Nuts", channel: "Recipe library", id: "more-ivd-spicy-masala-makhana-recipe", video: null, tags: ["Makhana"], url: "https://www.indianveggiedelight.com/spicy-masala-makhana-recipe/",
+        macros: {"servings": 4, "serving": "1 cup", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 88.0, "p": 3.0, "c": 11.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups makhana/foxnut/lotus seed", "1 tbsp ghee (or oil), divided )", "1 tsp red chili powder", "½ tsp turmeric powder", "½ tsp chaat masala powder", "¼ tsp black salt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Oats and Vegetable Soup", channel: "Recipe library", id: "more-ivd-vegetable-oats-soup", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/vegetable-oats-soup/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 175.0, "p": 7.0, "c": 22.0, "f": 7.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp oil", "½ tsp cumin seeds", "1 tsp ginger and garlic, minced", "2 tbsp onion, finely chopped", "½ cup old-fashioned rolled oats", "1 cup mixed veggies, broccoli, carrot, green beans, bell pepper", "3 cups vegetable broth, or water", "¼ cup paneer, cubed", "¼ tsp turmeric", "½ tsp roasted cumin powder", "Salt and pepper, as per taste", "1 tbsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Finger Millet Vegetable Soup", channel: "Recipe library", id: "more-ivd-ragi-soup-recipe", video: null, tags: ["Millet"], url: "https://www.indianveggiedelight.com/ragi-soup-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 169.0, "p": 5.0, "c": 29.0, "f": 5.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ragi flour", "1 cup water, to make ragi slurry", "2 tsp oil", "1 tsp ginger, minced", "1 tsp garlic, minced", "1 green chili, finely chopped", "1 small onion, finely chopped", "1 cup mixed veggies, carrot, beans, bell pepper, peas", "¼ tsp turmeric powder", "½ tsp cumin powder", "Salt, to taste", "Pepper, to taste", "1 cup water, or vegetable broth", "1 tsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach-Corn Sandwich", channel: "Recipe library", id: "more-ivd-spinach-corn-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/spinach-corn-sandwich/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 215.0, "p": 5.0, "c": 13.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp butter, or oil", "2 garlic cloves, minced", "½ cup boiled sweet corn", "1 cup spinach (palak) (tightly packed), finely chopped)", "1 tbsp all-purpose flour (maida), or wheat flour, corn starch", "½ cup whole milk, chilled", "½ cup shredded mozzarella, or processed cheese", "1 tsp Italian seasoning", "1 tsp red chili flakes", "Salt and black pepper, to taste", "6 bread slices", "Shredded mozzarella (or cheese slice) as needed)", "Butter, for toasting",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Creamy Malai Broccoli", channel: "Recipe library", id: "more-ivd-malai-broccoli", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/malai-broccoli/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 166.0, "p": 9.0, "c": 14.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup hung curd, or greek yogurt", "¼ cup heavy cream", "¼ cup cheese, I used amul processed cheese", "1 tbsp ginger garlic paste", "¼ tsp cardamom powder", "1 tbsp kasuri methi", "½ tsp cumin powder", "½ tsp garam masala", "Salt, to taste", "¼ tsp black pepper", "¼ tsp sugar, optional", "1 tsp lemon juice, optional", "1 tbsp corn starch, or besan", "1 large head broccoli, about 20-22 medium sized florets, around 300 grams", "1-2 tbsp butter, for brushing", "Lime wedges, to serve", "Sliced onions, to serve", "Tandoori mint yogurt chutney, to serve",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sago Vada Fritters", channel: "Recipe library", id: "more-ivd-sabudana-vada-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/sabudana-vada-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 55.0, "p": 1.0, "c": 9.0, "f": 1.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup sabudana, sago or tapioca pearls", "2 medium potatoes (boiled & mashed, about 1 cup", "¼ cup roasted & coarsely crushed peanuts", "2 green chilies, finely chopped", "1 tsp ginger, grated, optional", "½ tsp cumin (jeera) seeds", "1-2 tbsp corn starch (or rice flour or kuttu ka atta if fasting), optional)", "1 tbsp lemon juice", "2 tbsp coriander leaves, finely chopped", "Salt, to taste", "Oil, for frying",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Lemon and Cilantro Soup", channel: "Recipe library", id: "more-ivd-lemon-coriander-soup", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/lemon-coriander-soup/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 48.0, "p": 1.0, "c": 10.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp lemon juice, or juice of one lime", "¼ cup coriander leaves (cilantro), finely chopped", "1 tsp oil", "3 cloves garlic, minced", "½ inch ginger, grated", "1 green chilies, finely chopped", "½ cup onion, finely chopped", "¼ cup carrot, finely chopped", "¼ cup cabbage, finely chopped", "¼ cup broccoli, finely chopped", "3 cups vegetable broth, or water", "1 tbsp corn starch (mixed in ¼ cup of water, optional", "Salt & pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chaat-Spiced Party Dip", channel: "Recipe library", id: "more-ivd-indian-chaat-dip", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/indian-chaat-dip/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 117.0, "p": 6.0, "c": 19.0, "f": 3.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup hung curd, or Greek yogurt", "1 - 1½ tbsp sugar", "½-¾ tsp roasted cumin powder", "½ tsp salt", "½ cup boiled chickpeas", "½ cup boiled potatoes, or sweet potato", "¼ cup onion, finely chopped", "½ tsp roasted cumin powder", "½-1 tsp chaat masala", "½ tsp red chili powder", "½ tsp black salt, and salt", "1 tbsp lemon juice", "2-3 tbsp mint coriander chutney", "2-3 tbsp sweet tamarind chutney", "2 pinches chaat masala", "¼ cup thin sev", "¼ cup pomegranate seeds", "2-3 tbsp coriander leaves", "22-25 papdis",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Soft Gujarati Khaman Dhokla", channel: "Recipe library", id: "more-ivd-khaman-dhokla", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/khaman-dhokla/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 235.0, "p": 7.0, "c": 29.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup gram flour, besan", "1 tbsp sooji/semolina/rava", "¼ tsp turmeric", "½ tsp salt", "1 tsp sugar", "1 tsp ginger, grated", "1 green chili, finely chopped", "1 tbsp oil", "1 tbsp lemon juice, or ⅓ tsp citric acid", "¾ cup water, for preparing the batter", "1 tsp eno fruit salt", "1 tbsp water, to activate eno", "2 cups water, for steaming", "1 tbsp oil", "1 tsp mustard seeds", "4-5 green chilies, thinly sliced", "1 stalk curry leaves", "1 pinch asafoetida/hing", "½ cup water", "1 tbsp sugar, adjust to taste", "¼ tsp salt", "1 tbsp lemon juice", "2-3 tbsp coriander leaves", "2 tbsp fresh coconut, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-breakfast",
+    title: "More recipes: Recipe library, breakfast",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Potato-Stuffed Paratha", channel: "Recipe library", id: "more-ivd-aloo-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/aloo-paratha/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 348.0, "p": 11.0, "c": 73.0, "f": 3.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups whole wheat flour", "½ tsp salt", "1 tsp oil", "¾-1 cup water, for kneading the dough", "3 medium potatoes, 300-350 grams", "1-2 green chilies, optional", "1 tsp ginger, grated", "2 tbsp coriander leaves", "¼ tsp ajwain", "½ tsp red chili powder", "½ tsp cumin powder", "1 tsp coriander powder", "½ tsp garam masala", "¾ tsp amchur powder", "Salt, to taste", "Ghee (or oil), for cooking)",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broken Wheat Upma", channel: "Recipe library", id: "more-ivd-dalia-upma-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/dalia-upma-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 255.0, "p": 7.0, "c": 39.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup Broken wheat/Bulgur Wheat/Dalia/Cracked Wheat", "2 tbsp oil", "1 tsp mustard seeds", "½ tsp cumin seeds", "1 tsp urad dal", "1 tsp chana dal", "8-10 cashews", "2 green chilies, finely chopped", "1 tsp ginger, minced", "1 stalk curry leaves", "1 small onion, finely chopped", "1 cup mixed vegetables, carrot, beans and green peas", "Salt, to taste", "2½ cups water, 2 cups for instant pot", "1 tbsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Guacamole Sandwich", channel: "Recipe library", id: "more-ivd-guacamole-sandwich-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/guacamole-sandwich-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 455.0, "p": 9.0, "c": 44.0, "f": 30.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 medium avocados, ripened", "½ cup red onions, finely chopped", "½ large roma tomato (seeds and pulp removed, chopped, optional", "½ large jalapeno, finely chopped or serrano peppers", "2 tbsp cilantro, coriander leaves", "2 tbsp fresh lime juice", "Salt and black pepper, to taste", "8 bread slices", "Cheese, optional", "2-3 tbsp butter or oil, to toast",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Avocado-Chutney Sandwich", channel: "Recipe library", id: "more-ivd-avocado-chutney-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/avocado-chutney-sandwich/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 381.0, "p": 9.0, "c": 39.0, "f": 23.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "4 slices bread, whole grain or white", "2 tbsp cream cheese, or mayonnaise", "2 tbsp green chutney, or more", "1 large avocado, peeled, pitted and sliced", "1 small persian cucumber, cut into thin slices", "1 tsp chat masala", "Salt and pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Almond Flour Keto Dosa", channel: "Recipe library", id: "more-ivd-keto-dosa-recipe-almond-flour-keto-dosa", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/keto-dosa-recipe-almond-flour-keto-dosa/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 414.0, "p": 13.0, "c": 8.0, "f": 39.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup almond flour", "½ cup shredded mozzarella", "½ cup coconut milk, thick", "Salt, to taste", "1 pinch cumin (jeera) powder", "1 pinch hing, asafetida", "1 tbsp coconut oil, for frying dosa", "2 tbsp warm water, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sweet Fruit Sandwich", channel: "Recipe library", id: "more-ivd-fruit-sandwich-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/fruit-sandwich-recipe/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 260.0, "p": 3.8, "c": 65.0, "f": 1.8}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "2 bread slices", "2 tbsp fruit jam", "½ banana, peeled and sliced", "2 strawberries, sliced", "Apple, sliced as needed",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Potato Sandwich (Aloo)", channel: "Recipe library", id: "more-ivd-spicy-potato-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/spicy-potato-sandwich/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 215.0, "p": 4.2, "c": 35.1, "f": 6.5}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup boiled and mashed potatoes, appx 3 medium potato", "2 tbsp onion, optional", "2 tbsp coriander leaves", "½ tsp red chilli powder", "½ tsp garam masala powder", "1 tsp chaat masala powder", "6 bread slices", "¼ cup green chutney", "½ cup grated mozzarella cheese, or amul processed cheese", "2 tbsp butter", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beet and Carrot Sandwich", channel: "Recipe library", id: "more-ivd-beetroot-carrot-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/beetroot-carrot-sandwich/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 356.0, "p": 13.0, "c": 55.0, "f": 10.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 small beetroot, peeled and grated", "1 medium carrot, peeled and grated", "¼ cup cream cheese, mayonnaise or hung curd", "⅛ tsp black pepper powder", "⅛ tsp italian seasoning, or dried herbs", "Salt, to taste", "6 bread slices", "2 tbsp butter, or ghee",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mini Idlis Tossed in Podi", channel: "Recipe library", id: "more-ivd-podi-idli-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/podi-idli-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 418.0, "p": 8.0, "c": 74.0, "f": 10.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "20-25 mini idlis, or 4-5 regular idlis, cut into bite-sized", "1 tbsp ghee, or sesame oil", "½ tsp mustard seeds", "1 stalk curry leaves", "1-2 tbsp idli podi (milagai podi), add as required",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach Khichdi", channel: "Recipe library", id: "more-ivd-palak-khichdi", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/palak-khichdi/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 367.0, "p": 14.0, "c": 58.0, "f": 10.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 cups spinach (palak), roughly chopped", "2 cups water, to blanch spinach", "1 tbsp ghee, or oil", "1 inch cinnamon stick", "2 cloves", "1 cardamom", "½ tsp cumin seeds", "1 tbsp ginger and garlic, minced", "2 green chillies, finely chopped", "1 small onion (finely chopped, about ½ cup", "1 medium tomato (finely chopped, about ½ cup", "½ cup basmati rice", "½ cup yellow moong dal", "3 cups water, for cooking", "Salt, to taste", "½-1 tsp garam masala", "2 tsp ghee", "½ tsp cumin seeds", "1 stalk curry leaves", "2-3 dried Kashmiri red chilli", "1 tsp garlic, minced", "1 pinch hing (asafoetida), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Restaurant-Style Semolina Upma", channel: "Recipe library", id: "more-ivd-upma-recipe-rava-upma-sooji-upma", video: "https://www.youtube.com/watch?v=Gyxr-o200LQ", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/upma-recipe-rava-upma-sooji-upma/",
+        macros: {"servings": 2, "serving": "1 cup", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 132.0, "p": 3.5, "c": 21.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sooji/semolina/rava", "1 tsp jeera (cumin) seeds", "2 tbsp oil, or ghee", "1 tsp mustard seeds", "2 tsp split urad dal", "2 tsp split chana dal", "8-10 cashew-nuts", "1 tsp ginger, minced", "3 green chilies, finely chopped", "2 stalks curry leaves", "A big pinch asafetida, hing", "2.5 cups water", "½ cup milk", "Salt, to taste", "Juice of half lemon", "2 tbsp coriander leaves, cilantro", "2 tbsp ghee",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chickpea and Avocado Sandwich", channel: "Recipe library", id: "more-ivd-chickpea-avocado-sandwich", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chickpea-avocado-sandwich/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 374.0, "p": 13.0, "c": 45.0, "f": 18.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 cups cooked chickpeas (or 1 (15 oz) can, rinsed and drained)", "1 large ripe avocado", "½ medium onion, finely chopped", "¼ cup coriander leaves, finely chopped", "1 tbsp lime juice", "Black pepper and salt, to taste", "6 slices whole wheat bread", "Salad greens, I used baby spinach, but other greens or sprouts would work, too",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beet Flatbread", channel: "Recipe library", id: "more-ivd-beetroot-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/beetroot-paratha/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 337.0, "p": 9.0, "c": 45.0, "f": 15.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium beetroot, about 1 cup", "1.5 cups whole wheat, or multigrain flour", "2 tbsp coriander leaves, finely chopped", "2 tbsp pudina (mint), finely chopped", "½ tsp ajwain, carrom seeds", "1 tsp red chilli powder", "½ tsp turmeric", "½ tsp garam masala powder", "½ tsp amchur powder", "2 tbsp oil (or ghee to, cook parathas", "Water, to knead the dough", "Salt, adjust to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sweet Potato Flatbread", channel: "Recipe library", id: "more-ivd-sweet-potato-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/sweet-potato-paratha/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 444.0, "p": 10.0, "c": 69.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium sweet potato (boiled and grated, about 1 cup", "1 cup whole wheat flour, or multigrain flour", "1 tsp ginger, grated", "1 tsp red chilli powder", "½ tsp turmeric powder", "½ tsp garam masala", "½ tsp jeera (cumin) powder", "½ tsp amchur powder", "¼ tsp ajwain (carom seeds) (, optional", "¼ cup coriander leaves, finely chopped", "2 tbsp oil (or ghee), to cook parathas)", "Water, to knead dough", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Whole Wheat Avocado Flatbread", channel: "Recipe library", id: "more-ivd-avocado-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/avocado-paratha/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 125.0, "p": 3.0, "c": 17.0, "f": 5.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium ripened avocado (butterfruit), pulp comes to around ½ cup", "1 cup whole wheat, or multigrain flour", "¼ tsp ajwain (carrom seeds), optional", "½ tsp grated ginger", "¼ tsp crushed black pepper, or red chili powder", "½ tsp cumin (jeera) powder", "1 tsp lime juice", "1 tbsp coriander (cilantro), finely chopped", "2 tbsp oil, or ghee [to cook the parathas]", "Salt, to taste", "Water, to knead the dough",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Vermicelli Upma (Semiya)", channel: "Recipe library", id: "more-ivd-instant-pot-vermicelli-upma-semiya-upma", video: "https://www.youtube.com/watch?v=QOIy0nhbMhM", tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/instant-pot-vermicelli-upma-semiya-upma/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 164.0, "p": 5.2, "c": 31.37, "f": 1.6}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "½ tsp mustard seeds", "½ tsp jeera (cumin) seeds", "½ tsp spilt urad dal", "1 tsp chana dal, optional", "6-8 cashews, optional", "2 green chillies, finely chopped", "1 tsp ginger, minced", "1 stalk curry leaves", "1 pinch hing (asafetida), skip for gluten-free", "1 small onion, finely chopped", "1 cup mix veggies, carrot, beans, peas, capsicum, sweet corn", "1 cup Bambino vermicelli (semiya), roasted", "¼ tsp turmeric powder (haldi), optional", "Salt, to taste", "2 cups water, 1¼ cups of water for instant pot version", "1 tbsp lemon juice", "2 tbsp coriander (cilantro), for garnish", "2 tbsp fresh grated coconut, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bread Upma", channel: "Recipe library", id: "more-ivd-bread-upma-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/bread-upma-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 433.0, "p": 8.0, "c": 49.0, "f": 17.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "5 large slices wholegrain multigrain bread, or white bread", "2 tbsp oil", "1 tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 tsp split urad dal, optional", "A pinch asafoetida, hing", "2 green chilies, finely chopped", "½ tsp ginger, grated", "1 stalk curry leaves", "1 medium onion, finely chopped", "1 large tomato, finely chopped", "½ tsp red chilli powder", "¼ tsp turmeric powder", "½ tsp garam masala powder, optional", "Salt, to taste", "1 tbsp lemon juice", "2 tbsp coriander leaves, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bombay Potato Sagu for Poori", channel: "Recipe library", id: "more-ivd-potato-sagu-bombay-aloo-saagu-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/potato-sagu-bombay-aloo-saagu-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 189.0, "p": 6.0, "c": 23.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "½ tsp mustard seeds", "½ tsp jeera(cumin) seeds", "1 tsp split urad dal", "1 tsp chana dal", "1 tsp ginger, grated", "2 green chilies, finely chopped", "1 stalk curry leaves", "1 pinch hing, asafoetida", "1 large onion, roughly chopped", "½ tsp turmeric powder", "Salt, to taste", "2 tbsp roasted chana dal (putani), or besan", "1.5 cups water", "2-3 medium boiled potatoes, mashed", "1 tsp coriander powder", "Juice of half lime", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Puffy Poori from Scratch", channel: "Recipe library", id: "more-ivd-poori-recipe-puri-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/poori-recipe-puri-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 250.0, "p": 9.0, "c": 49.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups whole wheat flour", "2 tbsp semolina, sooji/rava", "Salt, to taste", "½ tsp sugar, optional", "2 tsp oil, optional", "¾ cup water (or as needed) to knead)", "Oil, for frying",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Carom Seed Paratha", channel: "Recipe library", id: "more-ivd-ajwain-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/ajwain-paratha/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 136.0, "p": 3.0, "c": 17.0, "f": 6.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup whole wheat flour, or multigrain", "2 tsp ajwain, carrom seeds", "Red chili powder, as needed", "Salt, adjust to taste", "Oil (or ghee), as needed, to cook parathas)", "Water, to knead the dough",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broken Wheat Pilaf (Dalia Pulao)", channel: "Recipe library", id: "more-ivd-instant-pot-broken-wheat-pulao", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-broken-wheat-pulao/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 355.0, "p": 11.0, "c": 64.0, "f": 6.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup broken wheat, dalia/cracked wheat", "1 medium onion, finely chopped", "1 small tomato, chopped", "2 green chilies, chopped", "1 tbsp ginger-garlic, minced", "2 cups mixed vegetables, carrots, bean, green peas, broccoli", "1 tsp cumin seeds", "¼ tsp turmeric powder", "½ tsp garam masala", "½ tsp coriander powder", "Juice of half lemon", "1 tbsp coriander leaves", "1 tbsp oil", "2 cups water", "Salt, as per taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chocolate Chia Pudding", channel: "Recipe library", id: "more-ivd-chocolate-chia-pudding", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/chocolate-chia-pudding/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 265.0, "p": 5.0, "c": 30.0, "f": 15.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "4 tbsp chia seeds", "2 tbsp cocoa powder", "1 cup light coconut milk (canned, or dairy milk", "2 tbsp maple syrup, or honey, agave",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Plain Layered Paratha", channel: "Recipe library", id: "more-ivd-paratha-recipe-plain-paratha-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/paratha-recipe-plain-paratha-recipe/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 144.0, "p": 4.0, "c": 22.0, "f": 5.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups whole wheat flour", "¾-1 cup water, to make the dough", "½ tsp salt", "2 tsp oil", "2-3 tbsp ghee, to cook parathas",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer-Stuffed Paratha", channel: "Recipe library", id: "more-ivd-paneer-paratha", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-paratha/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 274.0, "p": 12.0, "c": 24.0, "f": 15.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups whole wheat flour", "½ tsp salt, to taste", "1 tsp oil", "¾ -1 cup water, for kneading the dough", "2 cups paneer (Indian Cottage Cheese), about 200 grams", "2-3 tbsp onion, finely chopped", "1 tsp ginger, grated", "1-2 green chilies, finely chopped", "2-3 tbsp coriander leaves", "½ tsp red chili powder", "½ tsp roasted cumin powder", "½ tsp amchur powder", "½ tsp garam masala", "Salt, to taste", "Ghee, for roasting parathas",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cauliflower Poha, Keto Style", channel: "Recipe library", id: "more-ivd-keto-poha-cauliflower-poha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/keto-poha-cauliflower-poha/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 225.0, "p": 7.0, "c": 11.0, "f": 20.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups cauliflower rice", "2 tbsp peanuts, groundnuts", "½ cup cauliflower stocks, optional", "2 tbsp ghee (or coconut oil or butter, grass fed is better", "1 tsp mustard seeds", "2 green chilies, finely chopped", "1 stalk curry leaves", "½ tsp turmeric powder", "1 medium onions, finely chopped", "Salt, to taste", "2 tbsp cilantro (coriander leaves), for garnish", "1 tsp lime juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach Moong Dal Dosa (Palak Pesarattu)", channel: "Recipe library", id: "more-ivd-palak-moong-dal-dosa", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/palak-moong-dal-dosa/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 284.0, "p": 15.0, "c": 54.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup split moong dal, skinless green gram", "½ cup whole moong dal, whole green gram", "½ cup rice, I used sona masoori rice", "2 cups palak, spinach", "1 inch ginger", "3-4 green chilies", "1 tsp cumin seeds, jeera", "¼ cup onion", "Salt, as per taste", "Oil, as needed", "Water, as needed",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Zucchini Akki Rotti (Thalipettu)", channel: "Recipe library", id: "more-ivd-zucchini-thalipettu-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/zucchini-thalipettu-recipe/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 193.0, "p": 4.0, "c": 37.0, "f": 3.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups rice flour", "2 medium zucchini (shredded, (about 2 cups) )", "1 medium onion (finely chopped, about 1 cup", "3 green chilies, finely chopped", "½ cup coriander leaves, chopped", "2 stalks curry leaves, chopped", "¼ cup roasted peanuts, crushed", "1 tsp cumin seeds", "Salt, to taste", "Water, as required", "Oil, for roasting",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Steaming Idlis in a Pressure Cooker", channel: "Recipe library", id: "more-ivd-steaming-idlis-instant-pot", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/steaming-idlis-instant-pot/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 916.0, "p": 19.0, "c": 193.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups rice idli, OR rava idli batter", "1.5 cups water", "Oil, for greasing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Bottle Gourd Paratha", channel: "Recipe library", id: "more-ivd-lauki-paratha-recipe-bottle-gourd-paratha", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/lauki-paratha-recipe-bottle-gourd-paratha/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 235.0, "p": 9.0, "c": 35.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1.25 cup whole wheat (, or multigrain flour", "1 cup lauki (bottle gourd), peeled and grated", "¼ cup palak, spinach", "1 tsp ginger, grated", "2 green chilies, finely chopped", "2 tbsp coriander leaves, finely chopped", "½ tsp garam masala", "½ tsp jeera (cumin) powder", "½ tsp amchur powder", "Salt, to taste", "1 tbsp oil", "Water, if necessary",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Veggie Stir-Fried Idli", channel: "Recipe library", id: "more-ivd-vegetable-fried-idli", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/vegetable-fried-idli/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 156.0, "p": 5.0, "c": 29.0, "f": 2.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "5 left over idlis", "1 tbsp oil", "1 tbsp ginger garlic paste", "1 small onion, thinly sliced", "2 cups mixed vegetables, carrot, bell pepper, cabbage", "1 tbsp soy sauce", "1 tbsp tomato ketchup", "1 tsp vinegar", "Salt and pepper, as per taste", "Spring onions, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chocolate Zucchini Loaf", channel: "Recipe library", id: "more-ivd-chocolate-zucchini-bread-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/chocolate-zucchini-bread-recipe/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 216.0, "p": 3.0, "c": 33.0, "f": 8.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "1¼ cup all purpose flour", "¼ cup + 2 tbsp cocoa powder", "¾ tsp baking powder", "½ tsp baking soda", "⅔ cup sugar", "¼ tsp salt", "1 cup grated zucchini, tightly packed", "¾ cup plain yogurt", "¼ cup oil", "1 tsp pure vanilla extract", "1 cup mini or regular chocolate chips, divided",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tawa-Fried Idli with Podi, Street-Style", channel: "Recipe library", id: "more-ivd-spicy-tawa-idli", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/spicy-tawa-idli/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 21.0, "p": 1.0, "c": 3.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "6 idli", "¼ cup onion, finely chopped", "2 tbsp coriander leaves, finely chopped", "1 stalk curry leaves", "2 tbsp gun powder, idli podi", "1-2 tbsp butter, or ghee",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chickpea Salad Sandwich Filling", channel: "Recipe library", id: "more-ivd-chickpea-salad-sandwich", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chickpea-salad-sandwich/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 293.0, "p": 15.0, "c": 49.0, "f": 5.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "15 oz can chickpeas, or 1½ cups cooked chickpeas", "6 bread, whole grain or brown", "¼ cup greek yogurt, or hung curd", "½ medium onion, finely chopped", "¼ cup coriander leaves, finely chopped", "Salt and pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Seventy-Plus Keto Indian Dishes", channel: "Recipe library", id: "more-ivd-keto-indian-food-recipes", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/keto-indian-food-recipes/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          ,
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Oats Upma with Vegetables", channel: "Recipe library", id: "more-ivd-oats-upma", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/oats-upma/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 423.0, "p": 11.0, "c": 53.0, "f": 20.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup rolled oats", "2 tbsp oil", "½ tsp mustard seeds", "½ tsp cumin seeds", "1 tsp urad dal", "1 tsp chana dal", "8-10 cashewnuts", "2 green chilies, finely chopped", "1 tsp ginger, minced or grated", "1 stalk curry leaves", "½ cup onion, finely chopped", "1 cup mixed veggies, carrot, beans, bell pepper, green beans", "¼ tsp turmeric", "Salt", "1 cup water", "1 tbsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mango Chia Pudding", channel: "Recipe library", id: "more-ivd-mango-chia-pudding", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/mango-chia-pudding/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 485.0, "p": 8.0, "c": 80.0, "f": 15.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large fresh ripe mango, peeled and chopped, about ¾ cup of mango puree", "¼ cup chia seeds", "1 cup light coconut milk, canned and unsweetened", "1-2 tbsp maple syrup, or honey, agave", "½ tsp cardamom powder, optional", "½ cup diced mango", "1 tbsp pistachios, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Thinai Pongal, Foxtail Millet", channel: "Recipe library", id: "more-ivd-millet-pongal-instant-pot", video: null, tags: ["Lentil & Beans", "Millet"], url: "https://www.indianveggiedelight.com/millet-pongal-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 276.0, "p": 9.0, "c": 35.0, "f": 10.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup foxtail millet", "½ cup yellow moong dal", "4 cups water, + 1 cup extra to adjust consistency", "2 tbsp ghee, vegans can replace ghee with oil", "1 tsp cumin (jeera) seeds", "½ tsp whole black pepper", "2-3 green chilies", "1 tsp ginger, finely chopped", "1 stalk curry leaves", "8-10 cashew nuts", "1 big pinch hing, asafoetida", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chia Yogurt Rice (Protein-Rich)", channel: "Recipe library", id: "more-ivd-keto-chia-seeds-curd-rice", video: "https://www.youtube.com/watch?v=UV_R-6v8uUg", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/keto-chia-seeds-curd-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 194.0, "p": 11.0, "c": 14.0, "f": 12.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp chia seeds", "½ cup water", "1 tsp coconut oil, ghee", "2 tbsp raw peanuts", "1 tsp mustard seeds", "1-2 dried red chillies", "1 sprig curry leaves", "½ tsp ginger, grated", "1 pinch asafetida (hing), optional", "½ cup Greek yogurt, or thick yogurt", "2 tbsp shredded cucumber", "2 tbsp shredded carrot", "1 tbsp coriander leaves, chopped", "Salt, to taste", "2 tbsp pomegranate seeds, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mangalorean Neer Dosa", channel: "Recipe library", id: "more-ivd-neer-dosa-recipe", video: "https://www.youtube.com/watch?v=0MeqAVl55gw", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/neer-dosa-recipe/",
+        macros: {"servings": 10, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 75.0, "p": 1.0, "c": 15.0, "f": 1.0}, makes: "Makes about 10 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup rice, preferably sona masuri or any regular rice", "2½ cups water, divided", "¼ cup fresh grated coconut, optional but recommended", "½ tsp salt", "Oil, for greasing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Overnight Oats with Yogurt and Chia", channel: "Recipe library", id: "more-ivd-overnight-oats-with-chia-seeds", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/overnight-oats-with-chia-seeds/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 370.0, "p": 16.0, "c": 54.0, "f": 10.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "½ cup old fashioned rolled oats", "½ cup milk, dairy or non dairy", "¼ cup Greek yogurt, or hung curd", "1 tbsp chia seeds", "1 tbsp maple syrup, or honey", "½ cup berries, strawberries, raspberries, and blueberries", "1-2 tbsp slivered almonds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Veggie Paniyaram (Paddu)", channel: "Recipe library", id: "more-ivd-vegetable-paniyaram", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/vegetable-paniyaram/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 18.0, "p": 0.4, "c": 1.5, "f": 1.1}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "3 cups idli/dosa batter", "1 medium onion, finely chopped", "1 cup mix veggies, shredded carrot + capsicum + beans", "1 tsp ginger, grated, optional", "1 sprig curry leaves", "1 green chili, finely chopped", "¼ tsp turmeric powder", "2 tbsp coriander leaves, finely chopped", "Salt, as needed", "1 tsp mustard seeds", "1 tsp urad dal", "½ tsp jeera(cumin) seeds", "A pinch hing, asafetida", "Oil, to grease the skillet",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broccoli and Paneer Paratha", channel: "Recipe library", id: "more-ivd-broccoli-paneer-paratha", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/broccoli-paneer-paratha/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 521.0, "p": 22.0, "c": 63.0, "f": 22.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups whole wheat flour", "¼ tsp salt", "1 tsp oil", "1 cup shredded broccoli, steamed", "1 cup grated paneer, about 175 grams", "1 tsp amchur powder", "½ tsp cumin seeds(jeera) powder", "½ tsp red chilli powder", "1 tsp garam masala, or to taste", "½ tsp chaat masala (, optional", "1 tbsp coriander leaves, finely chopped", "Salt, adjust to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Masala Oats", channel: "Recipe library", id: "more-ivd-masala-oats", video: "https://www.youtube.com/watch?v=foe-Y1-DLmA", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/masala-oats/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 279.0, "p": 11.0, "c": 46.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil", "1 tsp cumin (jeera) seeds", "1 tsp ginger, minced", "1 green chili, finely chopped", "1 small onion, finely chopped", "1 medium tomato, finely chopped", "1 - 1½ cups mixed veggies, carrot, beans, peas, bell pepper", "1 cup steel cut oats, rinsed", "2½ cups water, adjust to consistency", "Salt, to taste", "2 tbsp coriander leaves", "Juice of half lime", "½ tsp turmeric", "½ tsp red chili powder", "½ tsp garam masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Karnataka Avarekai Upittu", channel: "Recipe library", id: "more-ivd-avarekalu-upma", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/avarekalu-upma/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 132.0, "p": 3.5, "c": 21.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup sooji rava/semolina, I used bansi rava", "1 medium onion, finely chopped", "¾ cup avarekai (surti papdi lilva), boiled and cooked in salted water", "1-2 tsp vangi bath powder, I used MTR brand", "½ tsp mustard seeds", "½ tsp cumin, jeera seeds", "½ tsp split urad dal", "1 green chili, slit lengthwise", "1 stalk curry leaves", "1 pinch hing, asafoetida", "¼ tsp turmeric powder, haldi", "½ tsp sugar, optional", "2-3 tbsp oil", "1½ cup water", "2 tbsp coriander leaves", "2 tbsp grated coconut", "1 tbsp lime juice", "Salt, as per taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chilli Cheese Toast with Vegetables", channel: "Recipe library", id: "more-ivd-veg-chilli-cheese-toast", video: "https://www.youtube.com/watch?v=ll2IVZ_F8z0", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/veg-chilli-cheese-toast/",
+        macros: {"servings": 4, "serving": "1 g", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 169.0, "p": 9.0, "c": 16.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 bread slices, brown or white", "1 cup mozzarella cheese ( (or processed cheese) shredded)", "¼ cup colored bell peppers", "2 tbsp tomato (deseeded) finely chopped)", "1-2 green chilies (or jalapeno) finely chopped)", "1 tsp garlic, minced", "1 tbsp coriander leaves, finely chopped optional", "½ tsp oregano, or any mixed herbs", "Salt and black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Khara Pongal (Ven Pongal)", channel: "Recipe library", id: "more-ivd-instant-pot-ven-pongal", video: "https://www.youtube.com/watch?v=Erm8kB4aJbs", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-ven-pongal/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 319.0, "p": 7.3, "c": 54.0, "f": 8.1}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 tbsp ghee (clarified butter), Vegans can replace ghee with oil", "1 tsp cumin (jeera) seeds", "½ tsp black pepper corn, whole or lightly crushed", "2 green chilies, slit lengthwise", "1 tsp ginger, finely chopped or grated", "1 stalk curry leaves", "10-12 cashew nuts, optional", "1 pinch hing, asafoetida", "½ cup split yellow moong dal", "½ cup white rice (short grain rice preferable, or quinoa, millets", "4 cups water, + 1 cup extra to adjust consistency", "Salt, adjust to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Quick Semolina Paddu", channel: "Recipe library", id: "more-ivd-instant-rava-paddu", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-rava-paddu/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 292.0, "p": 7.0, "c": 38.0, "f": 12.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup semolina (sooji / rava), fine variety", "½ cup plain yogurt, curd", "1 cup water, divided", "Salt, to taste", "Carrot, shredded", "2 tbsp coriander leaves", "1 pinch baking soda", "2-3 tbsp oil, for cooking paddu", "1 tbsp oil", "1 tsp mustard seeds", "½ tsp cumin, jeera", "1 tsp urad dal", "1 tsp chana dal", "2 green chilies, finely chopped", "1 tsp ginger", "1 stalk curry leaves", "1 pinch hing", "1 medium onion, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mumbai-Style Pav Bhaji", channel: "Recipe library", id: "more-ivd-instant-pot-pav-bhaji", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-pav-bhaji/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 166.0, "p": 5.0, "c": 36.0, "f": 1.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 + 1 tbsp oil + butter", "1 medium onion, finely chopped", "1 tbsp ginger garlic paste", "4 medium tomatoes (chopped, about 2 cups", "4 medium potatoes (peeled and diced, about 2 cups", "8 small cauliflower florets, about 1 cup", "1 small green bell pepper (diced, about ¾ cup", "½ cup green peas, I used frozen peas", "1 medium carrot (diced, about ¾ cup", "¼ cup beetroot, cut into small pieces", "1 cup water", "1-2 tsp Kashmiri chili powder", "½ tsp turmeric", "1 salt, to taste", "2 tbsp pav bhaji masala", "1 tbsp kasuri methi (dried fenugreek leaves), optional", "1 tbsp lemon juice", "¼ cup onions, chopped", "2-3 tbsp coriander leaves, finely chopped", "12 pav, or dinner rolls", "¼ cup butter",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer Uttapam", channel: "Recipe library", id: "more-ivd-paneer-uttapam", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-uttapam/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 532.0, "p": 14.0, "c": 73.0, "f": 19.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2-3 cups dosa batter", "1 cup paneer, grated", "½ cup onion, finely chopped", "¼ cup carrot, shredded", "1-2 green chilies, finely chopped", "2-3 stalks curry leaves, finely chopped", "¼ cup coriander leaves, finely chopped", "½ tsp cumin powder", "¼ tsp garam masala, optional", "Salt, adjust to taste", "Oil (or ghee), for cooking uttapam",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ready-Mix Semolina Upma Powder", channel: "Recipe library", id: "more-ivd-instant-upma-mix", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-upma-mix/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 349.0, "p": 9.0, "c": 48.0, "f": 13.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup bansi rava, coarse semolina", "2 tbsp oil, finely chopped", "1 tsp mustard seeds", "1 tsp split urad dal", "1 tsp split chana dal", "2-3 green chilies, finely chopped", "1 stalk curry leaves", "1-2 tbsp coriander leaves, finely chopped", "2 tbsp cashews", "¼ tsp turmeric powder", "1 pinch asafetida, hing", "½ tsp sugar, optional", "1 tsp salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Quinoa Upma with Vegetables", channel: "Recipe library", id: "more-ivd-quinoa-upma-recipe", video: "https://www.youtube.com/watch?v=FDChW9zvS6o", tags: ["Quinoa", "Rice & Grains"], url: "https://www.indianveggiedelight.com/quinoa-upma-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 418.0, "p": 14.0, "c": 59.0, "f": 16.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "1 tsp mustard seeds", "½ tsp cumin (jeera) seeds", "1 tsp split urad dal", "1 tsp chana dal", "8-10 cashew nuts, optional", "2 green chilies, finely chopped", "1 tsp ginger, minced", "1 stalk curry leaves", "1 pinch asafoetida, hing", "1 small onion, finely chopped", "¾ - 1 cup mixed vegetables, carrot, green beans and peas", "1 cup quinoa, rinsed", "2 cups water, 1¼ cups water for instant pot", "Salt, to taste", "Juice of half lime", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer Scramble Sandwich", channel: "Recipe library", id: "more-ivd-paneer-bhurji-sandwich", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-bhurji-sandwich/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 390.0, "p": 17.0, "c": 27.0, "f": 24.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp oil, or ghee", "½ tsp cumin seeds", "1 medium onion, finely chopped", "2 tsp minced ginger and garlic", "1 green chili, finely chopped", "½ cup tomato, finely chopped", "¼ tsp turmeric powder", "½ tsp red chili powder", "¼-½ tsp garam masala", "Salt, to taste", "1-1.25 cups crumbled paneer, approximately 200 grams or 8 oz", "1 tsp kasuri methi (dried fenugreek leaves), optional", "1 tbsp lime juice", "2 tbsp coriander leaves", "6-8 bread", "½ cup mozzarella cheese", "3-4 tbsp butter",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cucumber and Cream Cheese Herb Sandwich", channel: "Recipe library", id: "more-ivd-cucumber-cream-cheese-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/cucumber-cream-cheese-sandwich/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 490.0, "p": 11.0, "c": 33.0, "f": 36.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup cream cheese (about 8 oz) softened )", "2 tbsp mayonnaise, or greek yogurt, sour cream", "2 tbsp coriander leaves, chopped", "1 tbsp mint leaves, chopped", "2 tbsp dill leaves (chopped, optional but recommended", "¼-½ tsp garlic powder, optional", "Salt, to taste", "Pepper, to taste", "½ tsp lime zest, optional", "1 tsp lime juice", "2-3 medium Persian cucumber, or English cucumber", "6-8 bread slices",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Crisp Masala Dosa", channel: "Recipe library", id: "more-ivd-masala-dosa-recipe-crispy-masale-dose", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/masala-dosa-recipe-crispy-masale-dose/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 180.0, "p": 6.0, "c": 37.0, "f": 0.4}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "1½ cups sona masoori rice", "½ cup urad dal gota", "1 tbsp toor dal", "1 tbsp chana dal", "½ tsp methi seeds", "¼ cup medium poha", "Salt, to taste", "1 tsp sugar", "Oil (or ghee), for cooking dosa",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Savory Tadka Overnight Oats with Chia", channel: "Recipe library", id: "more-ivd-indian-style-overnight-oats-with-chia-savory-tadka-oats", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/indian-style-overnight-oats-with-chia-savory-tadka-oats/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 564.0, "p": 23.0, "c": 56.0, "f": 30.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "½ cup old-fashioned rolled oats", "1 tbsp chia seeds", "½ cup yogurt", "¼-½ cup whole milk, or almond milk", "½ tsp salt", "1 tsp oil", "2 tbsp raw peanuts", "1 tsp mustard seeds", "1-2 dried red chilies", "1 stalk curry leaves", "½ tsp ginger", "1 pinch hing (asafoetida), optional", "2 tbsp finely chopped cucumber", "2 tbsp shredded carrot", "1 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Masala Instant Noodles with Vegetables", channel: "Recipe library", id: "more-ivd-vegetable-masala-maggi", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/vegetable-masala-maggi/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 330.0, "p": 9.0, "c": 53.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 packets Maggi Noodles (, 70 Gms x 2", "2 Maggi masala tastemaker, available in Maggi packet itself", "2 cups water", "1 medium onion, finely chopped", "1 medium tomato, finely chopped", "½ cup mixed vegetables, capsicum, sweet corn, carrot, peas or any other vegetable of your choice", "1 tsp ginger garlic paste, optional", "¼ tsp red chilli powder", "¼ tsp garam masala", "A pinch chaat masala powder", "A pinch salt, for cooking vegetables", "2 tbsp oil, or butter", "1 tbsp fresh coriander leaves, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Little Millet Upma (Samai)", channel: "Recipe library", id: "more-ivd-little-millet-upma", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/little-millet-upma/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 306.0, "p": 7.0, "c": 41.0, "f": 14.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup little millet, samai", "2 cups water, for soaking", "2 tbsp oil", "½ tsp mustard seeds", "½ tsp cumin seeds", "1 tsp urad dal", "1 tsp chana dal", "1-2 green chilies, finely chopped", "1 tsp ginger, grated or minced", "1 stalk curry leaves", "1 pinch hing, asafoetida", "1 medium onion, finely chopped", "1 cup mixed veggies, beans, carrot, peas, capsicum", "Salt, to taste", "1 cup water, use ¾ cup water for instant pot", "1 tbsp lime juice", "2 tbsp grated coconut", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spinach Cream Pasta", channel: "Recipe library", id: "more-ivd-creamy-spinach-pasta", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/creamy-spinach-pasta/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 113.0, "p": 4.0, "c": 54.0, "f": 10.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 cup dried farfalle pasta, 1.5-2 cups cooked farfalle pasta", "1 cup spinach puree (made from 3-4 cups of raw spinach and ½ cup water). I dint blanch spinach in this recipe.)", "2 garlic cloves, minced", "¼ cup heavy cream, or cream cheese, alfredo sauce", "2-3 tbsp mozzarella cheese, shredded", "1 tbsp olive oil, or butter", "1 tsp dried oregano", "¼ tsp black pepper powder", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Moong Dal Cheela Pancakes", channel: "Recipe library", id: "more-ivd-moong-dal-chilla", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/moong-dal-chilla/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 192.0, "p": 13.0, "c": 34.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup yellow moong dal, split yellow lentils", "1 inch ginger", "1 green chili", "1 tsp cumin seeds", "¼ cup onion, finely chopped", "2 tbsp coriander leaves, finely chopped", "½ tsp turmeric", "½ tsp red chili powder, optional", "Salt, to taste", "½ cup water, or as needed", "Oil, for cooking chillas",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Savory Gram Flour Pancakes", channel: "Recipe library", id: "more-ivd-besan-chilla", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/besan-chilla/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 129.0, "p": 7.0, "c": 20.0, "f": 2.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup besan, gram flour", "½ tsp ajwain, carrom seeds", "¼ tsp turmeric", "½ tsp red chili powder, optional", "¼ cup onion, finely chopped", "¼ cup tomato, finely chopped", "1 green chili, finely chopped, optional", "1 tsp ginger, grated", "2 tbsp coriander leaves", "Salt, adjust to taste", "½ cup water, or as needed", "Oil, to cook chillas",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Red Lentil and Quinoa Dosa", channel: "Recipe library", id: "more-ivd-red-masoor-dal-quinoa-dosa", video: null, tags: ["Lentil & Beans", "Quinoa"], url: "https://www.indianveggiedelight.com/red-masoor-dal-quinoa-dosa/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 128.0, "p": 8.0, "c": 22.0, "f": 1.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup masoor dal, red lentils", "½ cup quinoa", "1 medium carrot, optional", "1 inch ginger", "2 dried red chilies, or 1 tsp red chili powder", "1 tsp cumin seeds", "Salt, to taste", "Oil, for cooking",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Kanda Poha, Quick and Easy", channel: "Recipe library", id: "more-ivd-poha-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/poha-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 353.0, "p": 6.0, "c": 40.0, "f": 20.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "1.5 cups poha (flattened rice), thick to medium flakes", "2-3 tbsp peanuts", "½ tsp mustard seeds", "½ tsp cumin seeds", "2-3 green chilies, finely chopped", "1 stalk curry leaves", "1 medium onion (about ¾ cup), finely chopped)", "1 medium potato (cut int ½ inch pieces, or ½ cup mixed veggies", "½ tsp turmeric", "½ tsp sugar, optional", "Salt, to taste", "1 tbsp lemon juice", "2 tbsp coriander leaves, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ten-Minute Veggie Mayo Sandwich", channel: "Recipe library", id: "more-ivd-veg-mayonnaise-sandwich", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/veg-mayonnaise-sandwich/",
+        macros: {"servings": 2, "serving": "1 sandwich", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 308.0, "p": 3.8, "c": 39.5, "f": 17.7}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "4 bread slices, white or brown", "2 tbsp butter", "¼ cup mayonnaise", "¼ cup carrot, shredded", "¼ cup mixed bell peppers, finely chopped", "¼ cup cabbage, shredded", "½ tsp oregano", "Black pepper powder, to taste", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sago Khichdi", channel: "Recipe library", id: "more-ivd-sabudana-khichdi-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/sabudana-khichdi-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 568.0, "p": 5.0, "c": 96.0, "f": 19.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sabudana, sago or tapioca pearls", "2 cups water, for soaking", "2 tbsp oil", "½ tsp cumin seeds", "1 medium potato, diced into ¼ inch cubes", "3 green chilies, finely chopped", "1 stalk curry leaves", "1 tsp ginger, minced, optional", "¼ cup peanuts, roasted and crushed", "Salt (to taste, use sendha namak if making for fast", "½ tsp sugar, optional", "1 tbsp lemon juice", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Puffed Rice Usli, Karnataka-Style", channel: "Recipe library", id: "more-ivd-mandakki-usli", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/mandakki-usli/",
+        macros: {"servings": 2, "serving": "100 gram", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 160.0, "p": 3.0, "c": 28.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "8 cups puffed rice/murmura/mandakki", "2-3 tbsp oil", "¼ cup peanuts", "1 tsp mustard seeds", "1 stalk curry leaves", "2-3 green chillies, finely chopped", "2 medium onion, finely chopped", "½ tsp turmeric powder", "Salt, to taste", "Juice of half lemon", "2 tbsp coriander leaves", "2 tbsp grated coconut, optional", "2-3 tbsp putani/dalia/fried gram powder", "½ tsp sugar, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Little Millet Lemon Rice (Samai)", channel: "Recipe library", id: "more-ivd-little-millet-lemon-rice", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/little-millet-lemon-rice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 420.0, "p": 10.0, "c": 48.0, "f": 22.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup little millet, samai", "1 cup water", "2 tbsp oil", "2 tbsp peanuts", "½ tsp mustard seeds", "¼ tsp cumin seeds", "1 tsp urad dal", "2 green chilies, finely chopped", "1 stalk curry leaves", "1 pinch hing, asafoetida", "1 medium onion, finely chopped", "½ tsp turmeric", "Salt, to taste", "Juice of half lemon", "2 tbsp coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-desserts",
+    title: "More recipes: Recipe library, desserts",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Condensed Milk Coconut Ladoo", channel: "Recipe library", id: "more-ivd-coconut-ladoo-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/coconut-ladoo-recipe/",
+        macros: {"servings": 12, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 168.0, "p": 3.0, "c": 14.0, "f": 12.0}, makes: "Makes about 12 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups desiccated coconut", "¾ cup condensed milk (milk maid), about 220 gms", "¼ tsp cardamom powder", "2 tbsp milk, optional", "¼ cup desiccated coconut, to rollover",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sakkarai Pongal, Sweet Rice Pudding", channel: "Recipe library", id: "more-ivd-sakkarai-pongal-recipe-sweet-pongal-recipe", video: "https://www.youtube.com/watch?v=MM-vA8upGGk", tags: ["Lentil & Beans", "Rice & Grains"], url: "https://www.indianveggiedelight.com/sakkarai-pongal-recipe-sweet-pongal-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 366.0, "p": 8.0, "c": 61.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup skinless split moong dal", "½ cup raw rice", "2 cloves, optional", "1 cup milk, use almond milk or coconut milk for vegan", "2 cups water + ½ cup extra to adjust consistency", "1 cup jaggery, organic", "5 tbsp ghee, divided", "2 tbsp cashews", "2 tbsp raisins", "½ tsp cardamom powder", "Tiny pinch edible camphor, optional", "A pinch nutmeg powder, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Semolina Kheer (Rava Payasam)", channel: "Recipe library", id: "more-ivd-suji-kheer-recipe-rava-payasam", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/suji-kheer-recipe-rava-payasam/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 279.0, "p": 8.0, "c": 36.0, "f": 12.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp ghee", "2 tbsp cashews", "2 tbsp raisins", "¼ cup sooji/semolina/rava, coarse", "3 cups whole milk", "¼ cup sugar", "½ tsp cardamom powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sago Kheer", channel: "Recipe library", id: "more-ivd-sabudana-kheer-tapioca-pudding", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/sabudana-kheer-tapioca-pudding/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 221.0, "p": 4.0, "c": 33.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup sabudana, tapioca pearls", "1 cup water, for soaking sabudana", "3 cups whole milk, or almond milk", "A pinch of saffron strands", "¼ cup sugar, or as needed", "½ tsp cardamom powder", "2-3 tbsp chopped nuts, cashews, almonds, pistachios", "1 tbsp raisins", "1 tbsp ghee, for roasting nuts",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Creamy Fruit Custard", channel: "Recipe library", id: "more-ivd-fruit-custard-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/fruit-custard-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 228.0, "p": 6.0, "c": 42.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups whole milk", "2 tbsp custard powder", "¼ cup warm milk, to dissolve custard powder", "¼ cup sugar, adjust according to your taste", "2 cups assorted fruits, I used apple, banana, mango, grapes, pomegranate",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Rolled Oats Kheer", channel: "Recipe library", id: "more-ivd-oats-kheer-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/oats-kheer-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 293.0, "p": 9.0, "c": 31.0, "f": 16.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp ghee", "½ cup old fashioned rolled oats", "2 cups whole milk", "1 pinch saffron strands", "3 tbsp sugar", "½ tsp cardamom powder", "2 tbsp slivered almonds", "1 tbsp pistachios",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Shrikhand Yogurt Dessert", channel: "Recipe library", id: "more-ivd-shrikhand-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/shrikhand-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 243.0, "p": 10.0, "c": 29.0, "f": 10.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "3 cups plain yogurt (curd) (or, 1.5 cups greek yogurt", "6 tbsp powdered sugar", "1 big pinch saffron strands", "2 tsp warm milk", "¼ tsp cardamom powder", "2 tbsp pistachios, chopped", "1 pinch saffron", "Pistachios",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pineapple Jam Without Pectin", channel: "Recipe library", id: "more-ivd-pineapple-jam-instant-pot", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/pineapple-jam-instant-pot/",
+        macros: {"servings": 12, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 102.0, "p": 1.0, "c": 27.0, "f": 1.0}, makes: "Makes about 12 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium ripened pineapple, about 4 cups", "¾ - 1 cup sugar", "Juice of 1 lime",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Gram Flour Ladoo (Besan Laddu)", channel: "Recipe library", id: "more-ivd-besan-ladoo-recipe-besan-laddu", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/besan-ladoo-recipe-besan-laddu/",
+        macros: {"servings": 16, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 150.0, "p": 4.0, "c": 17.0, "f": 8.0}, makes: "Makes about 16 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups besan, sifted", "½ cup ghee", "1 cup powdered sugar", "3-4 green cardamom", "2 tbsp pistachios, chopped", "2 tbsp almonds, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Gajar Halwa, Pressure-Cooked", channel: "Recipe library", id: "more-ivd-instant-pot-carrot-halwa", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-carrot-halwa/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 586.0, "p": 10.0, "c": 63.0, "f": 36.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "4 tbsp ghee", "5 cups carrot (fresh & tender), shredded, about 8 large carrots", "1 cup full-fat whole milk, or almond milk", "½ cup sugar, adjust as per your taste", "½ cup almond flour (or ¼ cup of mawa/khova), optional but recommended)", "½ tsp cardamom powder", "2-3 tbsp sliced almonds, or pistachios",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Aamras Sweet Mango Pulp", channel: "Recipe library", id: "more-ivd-aamras-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/aamras-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 99.0, "p": 1.0, "c": 25.0, "f": 1.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "2 large mangoes, about 2 cups", "1 tbsp sugar", "¼ tsp cardamom powder", "1 pinch saffron strands", "2 tbsp water (or milk), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fifteen-Minute Milk Powder Burfi", channel: "Recipe library", id: "more-ivd-milk-powder-burfi", video: "https://www.youtube.com/watch?v=a64cAivNdyo", tags: ["Other"], url: "https://www.indianveggiedelight.com/milk-powder-burfi/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 163.0, "p": 7.0, "c": 16.0, "f": 8.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "3 tbsp ghee", "1 cup dry milk powder", "¼ cup whole milk", "¼ cup sugar (powdered), adjust according to your preference", "2-3 green cardamoms, powdered", "2 tbsp pistachios, finely chopped", "2 tbsp almonds, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Moong Dal Payasam", channel: "Recipe library", id: "more-ivd-moong-dal-payasam-instant-pot", video: "https://www.youtube.com/watch?v=UV275WopqtE", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/moong-dal-payasam-instant-pot/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 5 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup split moong dal, yellow lentils", "2 cups water", "½-¾ cup organic jaggery, or coconut sugar, adjust to your taste", "1 cup coconut milk", "¼ tsp cardamom powder", "1 tbsp ghee, or coconut oil if vegan", "2 tbsp coconut pieces", "2 tbsp cashew nuts", "2 tbsp raisins",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Pumpkin Halwa", channel: "Recipe library", id: "more-ivd-pumpkin-halwa-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/pumpkin-halwa-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 308.0, "p": 3.0, "c": 35.0, "f": 19.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 tbsp ghee, divided", "4 cups yellow pumpkin, diced into 1 inch pieces", "½ cup dairy milk, or almond milk", "½ cup sugar", "¼ tsp cardamom powder", "2-3 tbsp nuts, of your choice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Rava Kesari (Sooji Halwa)", channel: "Recipe library", id: "more-ivd-sooji-halwa", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/sooji-halwa/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 396.0, "p": 3.0, "c": 46.0, "f": 23.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup ghee, can be reduced to ¼ cup", "½ cup sooji (semolina), fine variety", "1½ cups water", "½ cup sugar", "1 pinch saffron strands", "1 tbsp milk, to soak saffron", "¼ tsp cardamom powder", "2-3 tbsp cashews", "2 tbsp raisins",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Shortcut Rasmalai with Store-Bought Rasgulla", channel: "Recipe library", id: "more-ivd-easy-rasmalai-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/easy-rasmalai-recipe/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 123.0, "p": 5.0, "c": 13.0, "f": 6.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "1 can Haldiram's Rasgulla", "4 cups whole milk", "¼ cup sugar, or ¼ cup of condensed milk", "¼ tsp saffron strands", "½ tsp cardamom powder", "2 tbsp slivered almonds", "2 tbsp pistachios",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mavina Seekarane Mango Rasayana", channel: "Recipe library", id: "more-ivd-mango-rasayana-mavina-hannina-rasayana-mavina-seekarane", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/mango-rasayana-mavina-hannina-rasayana-mavina-seekarane/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 145.0, "p": 1.0, "c": 23.0, "f": 6.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 large mangoes", "½ cup coconut milk", "2 tbsp jaggery, or brown sugar", "¼ tsp cardamom powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chocolate Avocado Mousse", channel: "Recipe library", id: "more-ivd-avocado-chocolate-mousse", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/avocado-chocolate-mousse/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 231.0, "p": 3.0, "c": 25.0, "f": 16.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 large avocados, ripened", "¼ cup cocoa powder, unsweetened", "¼ cup chocolate chips, melted", "¼ cup unsweetened almond milk, or coconut milk or dairy milk", "¼ cup maple syrup, or honey or stevia or powdered sugar", "½ tsp natural vanilla extract", "Berries or chocolate flakes, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Semolina Ladoo (Rava Laddo)", channel: "Recipe library", id: "more-ivd-rava-ladoo", video: "https://www.youtube.com/watch?v=i8usa6rWUFo", tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/rava-ladoo/",
+        macros: {"servings": 16, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 108.0, "p": 2.0, "c": 16.0, "f": 4.0}, makes: "Makes about 16 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup ghee", "1 cup fine rava, semolina/sooji", "¼ cup desiccated coconut", "¾ cup powdered sugar", "½ tsp cardamom powder", "2 tbsp cashews", "2 tbsp raisins", "¼ cup milk",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Paneer Payasam", channel: "Recipe library", id: "more-ivd-paneer-kheer-recipe-paneer-payasam", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-kheer-recipe-paneer-payasam/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 278.0, "p": 11.0, "c": 26.0, "f": 15.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "4 cups full-fat milk", "200 grams paneer (shredded, about 2 cups", "½ cup sugar", "Few saffron strands", "½ tsp cardamom powder", "2-3 tbsp nuts, pistachios & almonds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fox Nut Kheer (Phool Makhana)", channel: "Recipe library", id: "more-ivd-makhana-kheer-phool-makhane-ki-kheer", video: null, tags: ["Makhana"], url: "https://www.indianveggiedelight.com/makhana-kheer-phool-makhane-ki-kheer/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 80.0, "p": 6.3, "c": 9.4, "f": 1.2}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1½ cups makhana /foxnut/lotus seed", "2 cups full fat whole milk (or almond milk)[500 ml] )", "1 tbsp ghee", "3 tbsp almond flour, or 10 almonds powdered", "3-4 tbsp sugar", "½ tsp cardamom powder", "1 pinch of saffron strands", "¼ cup almonds and pistachios",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Jaggery Coconut Burfi", channel: "Recipe library", id: "more-ivd-coconut-jaggery-burfi-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/coconut-jaggery-burfi-recipe/",
+        macros: {"servings": 12, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 797.0, "p": 5.0, "c": 115.0, "f": 36.0}, makes: "Makes about 12 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup fresh coconut, tightly packed", "½ cup organic jaggery", "¼ cup water", "1 tbsp ghee", "2 tbsp cup cashews and almonds, chopped", "¼ tsp cardamom powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Rice Kheer (Payasam)", channel: "Recipe library", id: "more-ivd-instant-pot-rice-kheer", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-rice-kheer/",
+        macros: {"na": "The source gives no nutrition numbers for this recipe."}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "5 cups milk (full fat), or almond milk if vegan", "¼ cup water", "½ cup basmati rice, Or any medium grain white rice, rinsed", "½ cup sugar, adjust to taste", "¼ cup almonds, sliced", "2 tbsp pistachios, chopped", "1 pinch saffron strands (soaked in 1 tbsp of warm milk), optional)", "½ tsp cardamom powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beet Halwa", channel: "Recipe library", id: "more-ivd-instant-pot-beetroot-halwa", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-beetroot-halwa/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 234.0, "p": 6.0, "c": 36.0, "f": 7.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4-5 cups beetroot, shredded", "1 cup full fat milk, or almond milk", "½ cup sugar", "½ cup almond flour, or milk powder, mawa", "3 tbsp ghee", "½ tsp cardamom powder", "¼ cup cashews", "2 tbsp raisins", "2 tbsp pistachios, garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Vermicelli Payasam (Semiya)", channel: "Recipe library", id: "more-ivd-semiya-payasam-instant-pot", video: "https://www.youtube.com/watch?v=TTCpuQxhsbU", tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/semiya-payasam-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 360.0, "p": 8.0, "c": 56.0, "f": 12.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp ghee, or coconut oil for vegan", "2 tbsp cashews", "1 tbsp golden raisins", "½ cup vermicelli, semiya", "3 cups full fat whole milk, or almond milk for vegan", "6 tbsp sugar, adjust to taste", "1 big pinch saffron strands, optional", "½ tsp cardamom powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Five-Minute Pineapple Dessert", channel: "Recipe library", id: "more-ivd-5-minute-pineapple-dessert", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/5-minute-pineapple-dessert/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 1.0, "p": 1.0, "c": 1.0, "f": 1.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "1 can 20 oz crushed pineapple, with juice", "1 can 20 oz pineapple, with juice", "½ can 14 oz condensed milk, about ½ cup", "¾ 8 oz container cool whip (thawed, about 2 cups",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Carrot and Almond Payasam", channel: "Recipe library", id: "more-ivd-carrot-kheer-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/carrot-kheer-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 180.0, "p": 6.0, "c": 24.0, "f": 8.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 large carrots (, about 1 cup", "15-18 almonds", "½ cup water, for cooking the carrots", "2 cups whole milk, or almond milk", "¼ cup sugar, or dates", "1 big pinch saffron, soaked in 1 tbsp of warm milk", "½ tsp cardamom powder", "2 tbsp pistachios, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Almond Flour Halwa", channel: "Recipe library", id: "more-ivd-badam-halwa-recipe", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/badam-halwa-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 387.0, "p": 9.0, "c": 27.0, "f": 30.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup ghee, divided", "1 cup almond flour", "1 cup whole milk, 1¼ cup for instant pot version", "⅓ cup sugar (for regular sweetness), or ½ cup or a sweeter halwa", "1 big pinch saffron soaked in 1 tbsp of warm milk, or 1 pinch of food color", "1/42 tsp cardamom powder", "2 tbsp slivered almonds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-salads",
+    title: "More recipes: Recipe library, salads",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Cucumber Koshimbir (Kakdi)", channel: "Recipe library", id: "more-ivd-kakdi-koshimbir-indian-cucumber-salad", video: "https://www.youtube.com/watch?v=JUqfbBLFCsA", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/kakdi-koshimbir-indian-cucumber-salad/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 53.0, "p": 2.0, "c": 2.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 small persian cucumber (diced, about 2 cups", "2 tbsp coriander leaves, finely chopped", "2 tbsp roasted peanuts, roughly crushed in a mortar and pestle", "1 green chili, finely chopped", "2-3 tbsp fresh coconut, grated, optional but recommended", "Juice of half a lime", "Salt, to taste", "½ tsp sugar (or stevia), optional but recommended)", "1 tsp coconut oil", "½ tsp mustard seeds", "½ tsp cumin, jeera seeds", "1 big pinch asafetida, hing", "1 stalk curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Lobia Chaat Salad", channel: "Recipe library", id: "more-ivd-black-eyed-peas-salad-lobia-chaat", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/black-eyed-peas-salad-lobia-chaat/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 188.0, "p": 7.0, "c": 16.0, "f": 12.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup black eyed peas, dried", "3 cups water", "½ tsp salt", "½ cup onion, finely chopped", "½ cup tomatoes, finely chopped", "½ cup cucumber, diced", "1 green chili, finely chopped", "2 tbsp coriander leaves, finely chopped", "2 tbsp mint leaves, finely chopped", "¼ cup roasted peanuts", "2 tbsp extra virgin olive oil", "2 tbsp lemon juice", "Salt, pepper, to taste", "1 tsp roasted cumin powder", "1 tsp chaat masala",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Masoor Lentil Salad", channel: "Recipe library", id: "more-ivd-lentil-salad", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/lentil-salad/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 209.0, "p": 9.0, "c": 23.0, "f": 9.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup uncooked lentils, either brown, green, French green lentils", "1 long English cucumber, diced", "½ cup red bell pepper, diced", "½ cup onion, finely diced", "¼ cup fresh parsley, chopped", "¼ cup fresh mint leaves, chopped", "¼ cup olive oil", "2 tbsp lime juice", "2 garlic cloves, minced", "1 tsp dijon mustard", "1 tsp maple syrup (or honey), optional)", "Salt and black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Carrot and Beet Salad", channel: "Recipe library", id: "more-ivd-carrot-beetroot-salad", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/carrot-beetroot-salad/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 131.0, "p": 4.0, "c": 12.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup carrot, grated", "1 cup beetroot, grated", "¼ cup coconut, fresh or frozen", "¼ cup coriander leaves, finely chopped", "1 green chili, finely chopped", "¼ cup roasted peanuts, crushed", "1 tbsp lemon juice", "Salt, to taste", "2 tsp oil", "½ tsp mustard seeds", "2 red chilies", "1 stalk curry leaves", "1 pinch asafoetida (hing), skip for gluten-free",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Simple Chickpea Salad", channel: "Recipe library", id: "more-ivd-chickpea-salad-recipe", video: "https://www.youtube.com/watch?v=_AciPcFgG_8", tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chickpea-salad-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 151.0, "p": 6.0, "c": 21.0, "f": 5.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 cups cooked chickpeas, about 15 oz", "1 cup persian cucumber, cut into bite size pieces", "½ cup onions, diced", "1 cup tomato, dee-seeded, cut into bite size pieces", "¼ cup coriander leaves, finely chopped", "1 tbsp extra virgin olive oil", "Juice of half lime", "Black pepper & salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Avocado, Cucumber and Tomato Salad", channel: "Recipe library", id: "more-ivd-avocado-cucumber-tomato-salad", video: "https://www.youtube.com/watch?v=G3t0P4z-q6A", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/avocado-cucumber-tomato-salad/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 253.0, "p": 3.0, "c": 16.0, "f": 22.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large ripened avocado (diced, about 1 cup", "½ english cucumber (diced, about 1 cup", "1 medium roma tomato (de-seeded & diced, about ½ cup", "¼ cup red onion, diced", "¼ cup cilantro, coriander leaves", "1 tsp white vinegar (or apple cider vinegar), optional)", "1 tbsp extra virgin olive oil, optional", "2 tbsp lime juice", "Salt and black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Laccha Pyaaz Onion Salad", channel: "Recipe library", id: "more-ivd-indian-onion-salad", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/indian-onion-salad/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 28.0, "p": 1.0, "c": 7.0, "f": 0.1}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium red onions", "Chilled ice water, for soaking", "1 green chili, deseeded and chopped", "2 tbsp coriander leaves, finely chopped", "½ tsp kashmiri red chili powder", "½-¾ tsp chaat masala", "¼ tsp black pepper, or to taste", "Salt, to taste", "1 tbsp lemon juice, or vinegar",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chickpeas in the Pressure Cooker", channel: "Recipe library", id: "more-ivd-how-to-cook-chickpeas-in-an-instant-pot-pressure-cooker", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/how-to-cook-chickpeas-in-an-instant-pot-pressure-cooker/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 364.0, "p": 19.0, "c": 61.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup dried chickpeas, garbanzo beans or chole", "2 cups water, for soaking", "3 cups water, for cooking", "¼ tsp salt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Avocado and Corn Salad", channel: "Recipe library", id: "more-ivd-avocado-corn-salad", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/avocado-corn-salad/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 426.0, "p": 7.0, "c": 40.0, "f": 31.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1.5 cups boiled sweet corn (from 2 ears of corn) )", "1 large avocados, peeled, pitted and diced", "1 cup grape tomatoes, halved", "½ medium red onion, thinly sliced", "2 tbsp extra virgin olive oil", "¼ cup cilantro, chopped", "Juice from 1 big lime", "1 garlic clove, minced", "Salt, to taste", "Black pepper ( (or red chili flakes), to taste)",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Roasted Chana Chaat (Bhuna Chana)", channel: "Recipe library", id: "more-ivd-roasted-chana-salad", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/roasted-chana-salad/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 291.0, "p": 13.0, "c": 39.0, "f": 11.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup roasted chana", "¼ cup roasted peanuts", "¼ cup onion, finely chopped", "¼ cup tomato, finely chopped", "¼ cup cucumber, diced", "1 green chili, finely chopped, optional", "¼ tsp roasted cumin powder", "½-1 tsp chaat masala", "Salt, pepper, to taste", "1 tsp lemon juice", "2 tbsp coriander leaves, finely chopped", "2 tbsp pomegrante",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cold Macaroni Salad", channel: "Recipe library", id: "more-ivd-macaroni-salad", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/macaroni-salad/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 358.0, "p": 6.6, "c": 40.65, "f": 18.8}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "8 oz elbow macaroni (about 2 cups), uncooked)", "¼ cup onion, finely chopped", "½ cup celery, chopped", "¼ cup red bell pepper, finely chopped", "¼ cup yellow bell pepper, finely chopped", "¼ cup green bell pepper", "¼ cup carrot, grated", "½ cup mayonnaise", "2 tbsp distilled white vinegar", "1 tbsp yellow mustard", "⅛ tsp red chili powder", "½ tsp sugar", "¼ tsp salt, to taste", "¼ tsp ground black pepper", "2 tbsp spring onion",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cucumber Dill Salad with Sour Cream", channel: "Recipe library", id: "more-ivd-creamy-cucumber-salad", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/creamy-cucumber-salad/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 47.0, "p": 1.0, "c": 3.0, "f": 4.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 long english cucumber, thinly sliced", "½ small onion, thinly sliced", "⅓ cup sour cream, or plain Greek yogurt", "1 tbsp fresh dill (chopped, or 1 tsp dill weed", "2 cloves garlic, minced", "Juice of half lime, or 1 tbsp distilled white vinegar", "Salt and black pepper, to taste", "½ tsp sugar (or stevia), optional)",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cooking Beets in a Pressure Cooker", channel: "Recipe library", id: "more-ivd-how-to-cook-beets-in-the-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/how-to-cook-beets-in-the-instant-pot/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 110.0, "p": 4.0, "c": 24.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "3 medium beetroots", "1.5 cups water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beet and Chickpea Salad", channel: "Recipe library", id: "more-ivd-beetroot-chickpea-salad", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/beetroot-chickpea-salad/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 478.0, "p": 18.0, "c": 55.0, "f": 21.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 medium beetroot (boiled and diced, about 2 cups", "1½ cup chickpeas, boiled/canned", "½ cup cucumber, diced", "¼ cup onion, finely chopped", "½ cup paneer, cubed", "2 tbsp coriander leaves", "3 tbsp extra-virgin olive oil", "2 tbsp lemon juice", "2 cloves garlic, minced", "1 tsp roasted cumin powder", "Salt and black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tofu Salad, Indian-Style", channel: "Recipe library", id: "more-ivd-indian-style-tofu-salad", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/indian-style-tofu-salad/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 153.0, "p": 11.0, "c": 10.0, "f": 8.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup extra-firm tofu (cubed into 1-inch pieces, about 7 oz", "1 tsp olive oil", "¼ tsp turmeric", "¼ tsp red chili powder", "¼ tsp roasted cumin powder", "¼ tsp chaat masala, or garam masala", "1 salt, to taste", "½ cup Greek yogurt, or hung curd", "1 garlic clove, minced", "1 tbsp extra-virgin olive oil", "1 tbsp lime juice", "1 tsp maple syrup, or honey", "½ tsp roasted cumin powder", "Salt, pepper, to taste", "1 tbsp coriander leaves", "1 cup romaine lettuce, chopped", "½ cup onion, chopped", "½ cup tomato, diced", "½ cup cucumber, diced", "¼ cup red cabbage, chopped", "1 tbsp coriander leaves, chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Protein-Packed Rajma Salad", channel: "Recipe library", id: "more-ivd-rajma-salad", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/rajma-salad/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 203.0, "p": 13.0, "c": 27.0, "f": 6.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup hung curd, or Greek yogurt", "2 garlic cloves, minced", "1 tsp yellow mustard, or dijon mustard", "½ tsp roasted cumin powder", "Salt, pepper, to taste", "1 tbsp lemon juice", "1 tsp maple syrup, or honey", "1 cup boiled rajma, kidney beans", "½ cup boiled sweet corn", "¼ cup onion, diced", "¼ cup tomato, diced", "¼ cup cucumber, diced", "¼ cup bell pepper, diced", "2 tbsp coriander leaves, finely chopped", "2 tbsp roasted peanuts", "1 tbsp sunflower seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Fruit Chaat with Chaat Masala", channel: "Recipe library", id: "more-ivd-fruit-chaat-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/fruit-chaat-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 116.0, "p": 1.0, "c": 30.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 medium apple", "1 orange mandarin", "1 medium pear", "4 medium strawberries", "1 medium banana", "½ cup grapes", "¼ cup pomegranate arils", "½ tsp chaat masala", "¼ tsp roasted cumin powder", "¼ tsp black salt, kala namak", "¼ tsp black pepper (crushed, or red chili powder", "1 tbsp lemon juice", "5-6 mint leaves, finely chopped, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Kachumber Cucumber Salad", channel: "Recipe library", id: "more-ivd-kachumber-salad-cucumber-tomato-onion-salad-recipe", video: "https://www.youtube.com/watch?v=VlJfdqeBx4s", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/kachumber-salad-cucumber-tomato-onion-salad-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 29.0, "p": 1.0, "c": 7.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 small english cucumber, about 1 cup", "2 medium roma tomato (de seeded, about 1 cup", "1 small onion, about ½ cup", "1 green chili, finely chopped", "½ tsp roasted cumin (jeera) powder", "Salt and black peper, adjust to taste", "Juice of ½ lime", "¼ cup coriander leaves, finely chopped",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Black Chickpea Chaat Salad", channel: "Recipe library", id: "more-ivd-kala-chana-chaat-black-chickpea-salad", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/kala-chana-chaat-black-chickpea-salad/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 182.0, "p": 8.0, "c": 32.0, "f": 3.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup black chickpeas (kala chana), dried", "½ cup red onion, diced", "½ cup tomato, de-seeded and diced", "½ cup cucumber, diced", "1-2 green chili, finely chopped, optional", "2 tbsp mint leaves", "2 tbsp coriander leaves", "1 tbsp lemon juice", "½ tsp kashmiri red chili powder", "1 tsp roasted cumin powder, optional", "1 tsp chaat masala", "½ tsp black salt, kala namak", "1 tsp dry mango powder, amchur",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Quinoa and Chickpea Salad", channel: "Recipe library", id: "more-ivd-quinoa-chickpea-salad", video: "https://www.youtube.com/watch?v=YuJ92pk9jx8", tags: ["Quinoa"], url: "https://www.indianveggiedelight.com/quinoa-chickpea-salad/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 216.0, "p": 5.0, "c": 25.0, "f": 11.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup uncooked quinoa", "15 oz can chickpeas (drained and rinsed, 1.5 cups cooked chickpeas", "½ english cucumber, about 1.5 cups", "1 cup grape tomatoes, halved", "½ cup red bell pepper", "½ cup red onion, finely chopped", "½ cup coriander leaves (or parsley), chopped)", "¼ cup mint leaves (or dill), chopped)", "¼ cup extra-virgin olive oil", "¼ cup lime juice", "2 cloves garlic, minced", "Salt and pepper, to taste", "½ tsp dried oregano, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Chickpeas in Yogurt Dressing", channel: "Recipe library", id: "more-ivd-chickpea-salad-with-yogurt-dressing", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/chickpea-salad-with-yogurt-dressing/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 163.0, "p": 10.0, "c": 27.0, "f": 2.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1½ cup cooked chickpeas (chana), or 1 15 oz can", "½ cup cucumber, diced", "¼ cup onion, chopped", "¼ cup coriander leaves (cilantro), chopped", "½ cup greek yogurt, or hung curd", "1 tbsp extra-virgin olive oil", "1 tbsp lime juice, or vinegar", "1 garlic clove, minced", "¼ tsp cumin powder", "Salt & black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Protein-Rich Paneer Salad", channel: "Recipe library", id: "more-ivd-paneer-salad", video: null, tags: ["Paneer"], url: "https://www.indianveggiedelight.com/paneer-salad/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 341.0, "p": 17.0, "c": 17.0, "f": 24.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup paneer, cut into ½ inch cubes, about 200 grams", "1 tsp oil", "¼ tsp garlic powder", "½ tsp red chili flakes, optional", "Salt, pepper, to taste", "½ cup Greek yogurt, hung curd", "6-8 soaked cashews, or soaked almonds", "1 clove garlic, minced", "1 tsp Kashmiri red chili powder", "½ tsp oregano, or Italian herbs", "½ tsp red chili flakes, optional", "½ tsp roasted cumin powder", "Salt, to taste", "1 tbsp lemon juice", "1 tbsp maple syrup, optional, but recommended", "1 cup romaine lettuce", "½ cup onion, diced", "½ cup cucumber, diced", "½ cup tomato, deseeded and diced", "½ cup colored bell peppers, diced", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Carrot Kosambari with Moong Dal", channel: "Recipe library", id: "more-ivd-hesarubele-carrot-kosambari", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/hesarubele-carrot-kosambari/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 147.0, "p": 7.0, "c": 23.0, "f": 3.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup split yellow moong dal (hesarubele), unsoaked", "1 cup water, for soaking moong dal", "½ cup grated carrot, or 1 medium carrot", "¼ cup fresh coconut, grated", "2 tbsp coriander leaves, finely chopped", "1 green chili, finely chopped", "Juice of half lemon/lime", "Salt, to taste", "1 tsp coconut oil", "½ tsp mustard seeds", "1 stalk curry leaves", "1 dry red chilli", "1 pinch hing (asafetida), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Boiled Peanut Chaat", channel: "Recipe library", id: "more-ivd-boiled-peanut-salad", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/boiled-peanut-salad/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 226.0, "p": 10.0, "c": 9.0, "f": 18.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup raw peanuts, groundnuts", "1 medium persian cucumber (chopped, about 1 cup", "1 medium tomato, chopped, seeds removed", "2 tbsp fresh mint leaves, chopped", "2 tbsp fresh coriander leaves, chopped", "Juice of half lemon", "½ tsp red chili powder", "1 tsp chaat masala, optional, but recommended", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Corn and Pomegranate Kosambari", channel: "Recipe library", id: "more-ivd-corn-pomegranate-kosambari", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/corn-pomegranate-kosambari/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 84.0, "p": 2.0, "c": 13.0, "f": 4.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup sweet corn, fresh or frozen", "½ cup pomegranate arils", "¼ cup shredded coconut", "2 tbsp coriander leaves", "1 tbsp lemon juice", "Salt & pepper, to taste", "1 tsp oil", "½ tsp mustard seeds", "1 stalk curry leaves", "1 dried red chili", "A pinch asafoetida (hing), optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sprouted Moong Salad", channel: "Recipe library", id: "more-ivd-sprouted-moong-salad-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/sprouted-moong-salad-recipe/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 227.0, "p": 14.0, "c": 36.0, "f": 4.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1½ cups sprouted moong beans", "2 tbsp onion, finely chopped", "1 medium tomato (de seeded and chopped, about ½ cup", "1 medium carrot (shredded, about 1 cup", "1 medium persian cucumber (diced, about ¾ cup", "1 green chili (finely chopped, optional", "¼ cup roasted peanuts", "½ tsp chaat masala", "Salt and black pepper, to taste", "Juice of half lime", "2 tbsp coriander leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Foxtail Millet Chickpea Salad", channel: "Recipe library", id: "more-ivd-millet-salad-with-chickpeas", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/millet-salad-with-chickpeas/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 349.0, "p": 10.0, "c": 54.0, "f": 10.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup cooked foxtail millet", "¼ cup chickpeas, cooked or canned", "2 tbsp cucumber, diced", "2 tbsp carrot, diced", "¼ cup colored bell pepper, diced", "2-3 tbsp coriander leaves, finely chopped", "1 tbsp extra-virgin olive oil", "1-2 cloves garlic, minced", "1 tbsp lemon juice", "Salt, to taste", "Black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Soya Chunk Salad with Yogurt Dressing", channel: "Recipe library", id: "more-ivd-soya-chunks-salad-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/soya-chunks-salad-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 281.0, "p": 22.0, "c": 16.0, "f": 14.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup soya chunks, Nutrela brand", "2 cups hot water, for soaking", "1 tsp oil", "½ tsp red chili powder", "¼ tsp turmeric powder", "¼ tsp roasted cumin powder", "¼ tsp garam masala", "Salt, to taste", "¼ cup hung curd", "¼ cup paneer", "¼ cup coriander leaves", "1 garlic clove, minced", "1 tbsp olive oil, optional", "1 tbsp lemon juice", "Salt, pepper", "1 cup romaine lettuce, roughly chopped", "½ cup onion, diced", "½ cup cucumber, diced", "½ cup cherry tomatoes, halved", "2 tbsp coriander leaves, finely chopped", "1-2 tbsp pumpkin seeds", "1-2 tbsp sunflower seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-drinks",
+    title: "More recipes: Recipe library, drinks",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Sattu Sharbat Cooler", channel: "Recipe library", id: "more-ivd-sattu-drink-recipe-sattu-sharbat", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/sattu-drink-recipe-sattu-sharbat/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 123.0, "p": 5.0, "c": 24.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "4 tbsp sattu", "1 tbsp mint leaves", "1 tbsp coriander leaves", "2 tbsp onion, finely chopped, optional", "1 green chili, finely chopped", "½ tsp roasted cumin powder", "¼ tsp black salt, adjust to your taste", "2 tbsp lemon juice", "2 cups chilled water", "Few ice cubes", "4 tbsp sattu", "2 tbsp sugar", "A pinch black salt, optional", "2 tbsp lemon juice", "2 cups chilled water", "Few ice cubes",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Banana-Avocado Smoothie", channel: "Recipe library", id: "more-ivd-avocado-banana-smoothie-recipe", video: "https://www.youtube.com/watch?v=HqFA4_3gQpI", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/avocado-banana-smoothie-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 267.0, "p": 5.0, "c": 40.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "½ medium avocado", "1 small ripe banana", "1 cup almond milk, or regular milk", "Honey or maple syrup, adjust to your taste", "Handful of ice", "Pistachios (for garnish, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Dry Fruit Milkshake", channel: "Recipe library", id: "more-ivd-dry-fruits-milkshake-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/dry-fruits-milkshake-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 295.0, "p": 8.0, "c": 36.0, "f": 16.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp almonds", "2 tbsp cashews", "2 tbsp pistachios, unsalted", "2 tbsp raisins", "4 dates, pitted", "2-3 dried figs", "2 cups whole milk, chilled", "¼ tsp cardamom powder", "Slivered pistachios & almonds, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Peanut Butter Banana Oats Smoothie", channel: "Recipe library", id: "more-ivd-oats-smoothie", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/oats-smoothie/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 443.0, "p": 22.0, "c": 60.0, "f": 15.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "¼ cup old fashioned rolled oats", "1 medium banana", "½ cup greek yogurt", "½ cup whole milk, or almond milk", "1 tbsp peanut butter, or almond butter", "½ tbsp maple syrup", "¼ tsp ground cinnamon",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cream Cheese Veggie Sandwich", channel: "Recipe library", id: "more-ivd-veg-cream-cheese-sandwich-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/veg-cream-cheese-sandwich-recipe/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 314.0, "p": 9.0, "c": 34.0, "f": 16.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "6 bread slices", "2-3 tbsp butter", "½ cup cream cheese", "¼ cup carrot, shredded", "¼ cup bell pepper, finely chopped", "¼ cup cabbage, shredded", "¼ cup sweet corn, boiled", "½ tsp italian seasoning", "Salt, to taste", "Black pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "South Indian Spiced Buttermilk (Neer Majjige)", channel: "Recipe library", id: "more-ivd-neer-majjige-recipe-neer-mor", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/neer-majjige-recipe-neer-mor/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 51.0, "p": 2.0, "c": 4.0, "f": 3.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup curd, yogurt", "2 cups water", "1 tsp ginger, grated", "½ green chili, finely chopped", "1 tbsp coriander leaves, finely chopped", "4-5 leaves of curry leaves, finely chopped", "1 tsp lemon juice (optional, i did not use", "Salt, to taste", "1 tsp oil", "½ tsp mustard seeds", "1 pinch hing, asafoetida",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Masala Chai", channel: "Recipe library", id: "more-ivd-indian-masala-chai", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/indian-masala-chai/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 98.0, "p": 4.0, "c": 12.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup water", "1 cup milk", "2-3 tsp loose leaf black tea, or 2 tea bags", "½ inch ginger, freshly grated", "2 tsp sugar, adjust to taste", "½ inch cinnamon", "2-3 cardamom", "2 cloves", "5 black peppercorns",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Shikanji Lemonade (Nimbu Pani)", channel: "Recipe library", id: "more-ivd-nimbu-pani-shikanji-indian-lemonade", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/nimbu-pani-shikanji-indian-lemonade/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 74.0, "p": 0.1, "c": 19.0, "f": 0.2}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large lemon, or 2 if it's very small", "2-3 tbsp sugar, granulated or powdered", "¼ tsp black salt (kala namak), or regular salt", "½ tsp roasted cumin powder, optional", "¼ tsp chaat masala, optional", "2 cups chilled water", "Few mint leaves, for garnish", "Few ice cubes",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Watermelon, Mint and Lime Cooler", channel: "Recipe library", id: "more-ivd-watermelon-juice-mint-lime", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/watermelon-juice-mint-lime/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 69.0, "p": 1.0, "c": 17.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "4 cups watermelon, cut into 1-inch cubes", "8-10 mint (pudina) leaves", "Juice of ½ lime", "A pinch black salt, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Strawberry-Orange Juice", channel: "Recipe library", id: "more-ivd-strawberry-orange-juice-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/strawberry-orange-juice-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 135.0, "p": 2.0, "c": 31.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups freshly squeezed orange juice, chilled", "1 cup fresh strawberries, chopped", "1 tbsp maple syrup (or honey, refined sugar) as per taste)", "¼ tsp chaat masala, optional", "Few ice cubes, as needed", "Fresh strawberries",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Almond Milk (Badam Doodh)", channel: "Recipe library", id: "more-ivd-badam-milk", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/badam-milk/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 274.0, "p": 10.0, "c": 32.0, "f": 13.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "20-22 almonds", "1 cup water", "2 cups whole milk, divided", "3 tbsp sugar", "1 pinch of saffron", "¼ tsp cardamom powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Haldi Doodh, Golden Turmeric Milk", channel: "Recipe library", id: "more-ivd-golden-turmeric-milk-haldi-doodh-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/golden-turmeric-milk-haldi-doodh-recipe/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 172.0, "p": 7.0, "c": 18.0, "f": 8.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 cup whole milk, or coconut, soy, almond, cashew milk", "½ tsp organic turmeric powder", "1 pinch black pepper powder", "1 tsp organic honey (, or jaggery",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Rooh Afza Cooler", channel: "Recipe library", id: "more-ivd-rooh-afza-drink", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/rooh-afza-drink/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 170.0, "p": 8.0, "c": 17.0, "f": 8.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups chilled whole milk", "2 tbsp rooh afza syrup", "½-1 tbsp sugar, optional", "½ tbsp sabja seeds (soaked in ½ cup water), optional)", "2 cups water, chilled", "2 tbsp rooh afza syrup", "½-1 tbsp sugar, optional", "2 tbsp fresh lemon juice, optional", "½ tbsp sabja seeds (soaked in ½ cup water), optional)", "Few ice cubes",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Banana and Date Smoothie", channel: "Recipe library", id: "more-ivd-banana-date-smoothie", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/banana-date-smoothie/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 258.0, "p": 5.0, "c": 49.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium ripened bananas", "4-6 dates, pitted", "2 cups almond milk", "2 tbsp chia seeds", "⅛ tsp ground cinnamon", "4 ice cubes",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Banana Smoothie with Peanut Butter", channel: "Recipe library", id: "more-ivd-banana-peanut-butter-smoothie-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/banana-peanut-butter-smoothie-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 269.0, "p": 12.0, "c": 31.0, "f": 12.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 large ripe banana, frozen is ideal", "2 tbsp natural peanut butter", "½ cup milk", "½ cup Greek yogurt", "1 tbsp maple syrup, or any sweetener like honey, agave", "1 tbsp flaxseed meal",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ginger Tea (Adrak Chai)", channel: "Recipe library", id: "more-ivd-adrak-chai-ginger-tea", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/adrak-chai-ginger-tea/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 98.0, "p": 4.0, "c": 12.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup water", "1 cup whole milk", "2-3 tsp loose leaf black tea, or 2 tea bags", "1 inch ginger, freshly grated", "2 cardamoms", "2 tsp sugar, adjust to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mango Yogurt Lassi", channel: "Recipe library", id: "more-ivd-mango-lassi-recipe", video: "https://www.youtube.com/watch?v=qrOH4awArOQ", tags: ["Other"], url: "https://www.indianveggiedelight.com/mango-lassi-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 227.0, "p": 8.0, "c": 35.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup ripe mango, or 1 cup canned mango pulp", "1 cup plain yogurt, chilled", "¼ - ½ cup milk, or water, chilled", "2 tbsp sugar, or honey, agave, stevia etc", "¼ tsp cardamom powder", "Saffron strands, optional", "Pistachios, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Mango Shake", channel: "Recipe library", id: "more-ivd-mango-milkshake", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/mango-milkshake/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 259.0, "p": 7.0, "c": 46.0, "f": 7.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 medium ripened mangoes (about 1.5-2 cups), or 1.5 cups canned mango pulp", "1.5 cups whole milk, or almond milk, coconut milk if vegan", "1-2 tbsp sugar (or honey, maple syrup), optional)", "Few ice cubes, optional", "Pistachios, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Winter Melon (Ash Gourd) Juice", channel: "Recipe library", id: "more-ivd-winter-melon-ash-gourd-juice", video: "https://www.youtube.com/watch?v=J4MhaCvT1Tc", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/winter-melon-ash-gourd-juice/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 26.0, "p": 1.0, "c": 5.0, "f": 1.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups ash gourd (winter melon), about 500 grams", "½ cup water", "½ lime (or lemon), juiced)", "Freshly ground black pepper, to taste", "Himalayan pink salt (or black salt), to taste)",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Finger Millet, Banana and Date Smoothie", channel: "Recipe library", id: "more-ivd-ragi-banana-dates-smoothie", video: null, tags: ["Millet"], url: "https://www.indianveggiedelight.com/ragi-banana-dates-smoothie/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 426.0, "p": 10.0, "c": 74.0, "f": 13.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ragi flour", "1.5 cups water, divided", "1 medium banana, ripened", "3 dates, pitted", "6-7 almonds, soaked", "1 tbsp flaxseeds", "1 tbsp chia seeds", "⅛ tsp cinnamon powder", "½ cup almond milk",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Spiced Masala Buttermilk (Chaas)", channel: "Recipe library", id: "more-ivd-masala-chaas", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/masala-chaas/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 56.0, "p": 3.0, "c": 5.0, "f": 3.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup homemade yogurt, curd", "2 cups chilled water", "½ inch ginger", "½ green chili, optional, skip if you don't prefer", "1 tbsp coriander leaves", "2-3 mint leaves", "½ tsp roasted cumin powder", "¼-½ tsp chaat masala, optional", "½ tsp black salt, kala namak", "¼ tsp salt, to taste", "Few coriander or mint leaves, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sweet Yogurt Lassi", channel: "Recipe library", id: "more-ivd-lassi-recipe", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/lassi-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 286.0, "p": 11.0, "c": 34.0, "f": 13.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 cups homemade yogurt, curd", "½ cup milk (or water), chilled)", "4 tbsp sugar", "¼ tsp cardamom powder", "Few ice cubes, optional", "1 tbsp nuts, optional", "Few dried rose petals (or saffron strands), optional)",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Finger Millet Malt Porridge", channel: "Recipe library", id: "more-ivd-ragi-malt-ragi-porridge", video: null, tags: ["Millet", "Rice & Grains"], url: "https://www.indianveggiedelight.com/ragi-malt-ragi-porridge/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 139.0, "p": 3.0, "c": 26.0, "f": 2.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ragi flour, finger millet", "1½ cups water, divided", "½ cup whole milk, or almond milk", "2-3 tbsp jaggery, or sugar", "¼ tsp cardamom powder, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Banana Juice", channel: "Recipe library", id: "more-ivd-banana-juice-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/banana-juice-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 268.0, "p": 8.0, "c": 49.0, "f": 6.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 large ripe banana, peeled and sliced", "½ medium apple, peeled, cored, and coarsely chopped", "1.5 cups milk, chilled", "½ tbsp maple syrup, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Ragi Ambali Porridge (Ganji)", channel: "Recipe library", id: "more-ivd-ragi-ambli-ragi-ambali-recipe", video: null, tags: ["Millet"], url: "https://www.indianveggiedelight.com/ragi-ambli-ragi-ambali-recipe/",
+        macros: {"servings": 2, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 116.0, "p": 4.0, "c": 16.0, "f": 4.0}, makes: "Makes about 2 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp ragi flour", "1.5 cups water", "½ cup yogurt, curd", "½ cup water, to make buttermilk", "Salt, to taste", "2-3 tbsp onions, finely chopped", "2 tbsp coriander leaves, finely chopped", "1 tsp oil", "½ tsp mustard seeds", "½ green chili, finely chopped", "½ tsp ginger, minced or grated", "1 stalk curry leaves",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-soups",
+    title: "More recipes: Recipe library, soups",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Sweet Potato Soup", channel: "Recipe library", id: "more-ivd-instant-pot-sweet-potato-soup", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-sweet-potato-soup/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 201.0, "p": 3.0, "c": 37.0, "f": 5.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp oil", "3 cloves garlic, minced", "½ inch ginger, minced", "1 medium yellow onion, chopped", "2 large carrot (chopped, about ½ lb", "4 medium sweet potatoes (cut into 1 inch pieces, about 1.5 lb", "4 cups vegetable broth", "1 cup full fat coconut milk", "1 tsp red chili powder", "1 tsp ground cumin", "Salt & pepper, to taste", "Coconut cream", "Cilantro", "Roasted slivered almonds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Thai-Style Pumpkin Soup", channel: "Recipe library", id: "more-ivd-thai-pumpkin-soup-recipe-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/thai-pumpkin-soup-recipe-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 291.0, "p": 3.0, "c": 17.0, "f": 23.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 cups pumpkin, diced, peeled and deseeded", "1 tbsp coconut oil", "3 cloves garlic cloves, minced", "½ inch ginger, minced", "1 medium yellow onion, finely chopped", "1 tbsp thai red curry paste, adjust more to taste", "½ tsp turmeric powder, optional", "2 cups vegetable stock, or water", "½ can 14 oz coconut milk, about 1 cup", "Juice of half lime", "Salt, to taste", "¼ tsp red chilli flakes", "1 tsp cilantro", "1 tbsp pumpkin seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Broccoli and Cheddar Soup", channel: "Recipe library", id: "more-ivd-instant-pot-broccoli-cheddar-soup", video: "https://www.youtube.com/watch?v=yG-SGp-m50s", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-broccoli-cheddar-soup/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 332.0, "p": 10.0, "c": 10.0, "f": 28.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp butter", "1 medium yellow onion (finely chopped, about 1 cup", "3 garlic cloves, minced", "1 cup shredded carrots", "3 cups fresh broccoli, cut in to small pieces", "2 cups vegetable broth (, or water", "2 tbsp all purpose flour, maida", "2 cups sharp cheddar cheese, add more if required", "1 cup whole milk, or half and half or heavy cream", "½ tsp thyme (, optional", "Salt & pepper, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Creamy Tomato Soup", channel: "Recipe library", id: "more-ivd-tomato-soup-instant-pot", video: "https://www.youtube.com/watch?v=7bNcliNZvbQ", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/tomato-soup-instant-pot/",
+        macros: {"servings": 4, "serving": "1 cup", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 285.0, "p": 6.7, "c": 18.0, "f": 14.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "5 large tomatoes, about 3 cups", "1 medium onion, chopped", "1 large carrot (diced, about ½ cup", "½ medium red bell pepper (diced, about ½ cup", "3 cloves garlic, minced", "1 tbsp butter, or olive oil", "1 bay leaf (, optional", "2 tsp dried basil, or 2 tbsp of fresh basil chopped", "Salt + black pepper powder, to taste", "2 cups vegetable broth, or water", "¼ cup heavy cream, or milk or half and half", "Few bread croutons", "Extra cream",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Barley and Vegetable Soup", channel: "Recipe library", id: "more-ivd-instant-pot-vegetable-barley-soup", video: null, tags: ["Rice & Grains"], url: "https://www.indianveggiedelight.com/instant-pot-vegetable-barley-soup/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 230.0, "p": 5.3, "c": 43.0, "f": 5.5}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp olive oil", "1 bay leaf", "3 cloves garlic, minced", "1 medium onion, finely chopped", "1 large carrot, diced into ½ inch pieces", "½ red bell pepper, diced into ½ inch pieces", "1 large tomato (diced or, 1 tbsp tomato paste", "½ cup green peas, frozen", "½ cup sweet corn, frozen", "¾ cup pearl barley, rinsed", "Salt, to taste", "Black pepper powder, to taste", "5-6 cups vegetable broth, or water", "Juice of half lemon", "2 tbsp coriander leaves, cilantro", "½ tsp turmeric powder", "1 tsp ground cumin", "1 tsp curry powder, or garam masala powder",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Cream of Asparagus Soup", channel: "Recipe library", id: "more-ivd-cream-of-asparagus-soup", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/cream-of-asparagus-soup/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 110.0, "p": 3.0, "c": 6.0, "f": 8.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "2 lb asparagus (woody ends trimmed, cut into 1″ pieces, around 3.5 – 4 cups", "2 tbsp olive oil, or butter", "3 cloves garlic, minced", "1 medium onion, finely chopped", "2.5 cups vegetable broth, or water", "¼ tsp black pepper powder, to taste", "Salt, to taste", "½ cup heavy cream, or coconut cream", "Pumpkin seeds", "Lightly steamed asparagus tips", "Fresh ground pepper", "Extra cream", "Lemon juice",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sweet Corn Soup", channel: "Recipe library", id: "more-ivd-sweet-corn-soup-instant-pot", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/sweet-corn-soup-instant-pot/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 110.0, "p": 3.0, "c": 20.0, "f": 2.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup sweet corn, fresh or frozen", "¼ cup water", "2 tsp oil (, or butter", "2 cloves garlic, minced", "½ inch ginger, minced", "1 green chili, finely chopped", "2 tbsp white spring onion, finely chopped", "½ cup sweet corn, fresh or frozen", "¼ cup carrot, finely chopped", "¼ cup green beans, finely chopped", "3 cups water, or vegetable broth", "Salt, to taste", "Pepper, to taste", "1 tsp white vinegar, or apple cider vinegar", "1 pinch sugar, optional", "2 tbsp green spring onions", "1 tbsp corn flour, corn starch", "¼ cup water",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Beet and Tomato Soup", channel: "Recipe library", id: "more-ivd-beetroot-tomato-soup", video: "https://www.youtube.com/watch?v=k5Kcb8SGn0k", tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/beetroot-tomato-soup/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 66.0, "p": 2.0, "c": 13.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp oil", "1 bay leaf", "3-4 peppercorns", "2-3 garlic cloves", "½ inch ginger", "½ medium onion, thinly sliced", "1 medium beetroot, diced", "2 medium tomatoes, diced", "1 small carrot, diced", "2.5 cups vegetable broth, or water", "Salt, pepper, to taste", "1 tsp sugar, optional", "1-2 tsp butter, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Vegetarian Potato Soup", channel: "Recipe library", id: "more-ivd-instant-pot-potato-soup", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-potato-soup/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 390.0, "p": 14.0, "c": 32.0, "f": 24.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "3 medium yakon gold potatoes, peeled & diced into ½ inch cubes, about 2.5-3 cups", "2 tbsp butter, or olive oil", "3 cloves garlic, minced", "½ medium yellow onion, finely chopped", "2 cups vegetable broth, or water", "2 tbsp cornstarch or flour + 2 tbsp water for slurry", "1 cup whole milk", "½ cup heavy cream", "¾-1 cup cheddar cheese, shredded", "¼ cup green onions", "Salt, to taste", "Black pepper, to taste", "Shredded cheddar cheese", "Green onions", "Greek yogurt, or sour cream",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Light Clear Vegetable Soup", channel: "Recipe library", id: "more-ivd-veg-clear-soup-recipe", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/veg-clear-soup-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 35.0, "p": 1.0, "c": 6.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 tsp oil", "½ tsp ginger, minced", "½ tsp garlic, minced", "¼ cup spring onions white", "½ cup mushrooms, thinly sliced", "¼ cup carrot, thinly sliced", "¼ cup broccoli, florets", "½ cup cabbage, roughly chopped", "4 cups vegetable broth", "Salt and pepper, to taste", "1 tbsp lemon juice", "2 tbsp spring onion greens, for garnish",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Vegetarian Tortellini Soup", channel: "Recipe library", id: "more-ivd-instant-pot-creamy-tortellini-soup", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/instant-pot-creamy-tortellini-soup/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 264.0, "p": 9.0, "c": 28.0, "f": 14.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "1 tbsp olive oil", "1 medium yellow onion, finely chopped", "2 large carrots, diced", "3 cloves garlic, minced", "15 oz can diced tomatoes, or 15 oz can tomato sauce", "½ tsp dried oregano", "½ tsp dried basil", "¼ tsp dried thyme", "3 cups vegetable broth", "10 oz fresh tortellini, I used cheese-filled tortellini", "2 cups baby spinach, or baby kale", "½ cup heavy cream", "Grated parmesan, optional", "Fresh parsley",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Drumstick (Moringa) Soup", channel: "Recipe library", id: "more-ivd-drumstick-soup-recipe", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/drumstick-soup-recipe/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 174.0, "p": 16.0, "c": 8.0, "f": 9.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "4 medium drumsticks (cut into 2-inch pieces, I used frozen", "2 tbsp split yellow moong dal", "½ small onion, roughly chopped", "1 small tomato, roughly chopped", "3 cloves garlic", "1 inch ginger", "½ tsp turmeric", "Salt", "2 cups water (or vegetable broth), + ½-1 cup water to add consistency", "½ tsp roasted jeera powder", "¼ tsp pepper powder, to taste", "1 tbsp lemon juice", "2 tbsp coriander leaves", "1 tsp ghee, or oil", "½ tsp cumin seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Kollu Horse Gram Soup", channel: "Recipe library", id: "more-ivd-horse-gram-soup-kollu-soup", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/horse-gram-soup-kollu-soup/",
+        macros: {"servings": 3, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 101.0, "p": 8.0, "c": 17.0, "f": 2.0}, makes: "Makes about 3 servings", from: "Recipe library",
+        ingredients: [
+          "¼ cup horse gram", "1 medium shallot, about ¼ cup diced onions", "1 medium tomato, roughly diced", "1 small carrot, peeled and diced", "3 garlic cloves", "½ inch ginger", "1 stalk curry leaves, optional", "1-2 tbsp coriander stems", "½ tsp cumin seeds", "½ tsp black peppercorns", "2 cups water, or vegetable broth", "Salt, to taste", "1 cup water, for adjusting the consistency of the soup", "1 tbsp lemon juice", "2 tbsp coriander leaves", "1 tsp ghee", "½ tsp cumin seeds", "1 big pinch asafetida, hing",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+    ],
+  },
+  {
+    id: "more-ivd-pantry",
+    title: "More recipes: Recipe library, spice blends and pantry",
+    inPlanner: false,
+    note: "Recipes from a recipe library, with ingredient lists written in this site's own style and nutrition per serving from the original page. They are on this page only and are never picked by the meal planner. Each card links to the original page for the method. Where there is a video, it is the original video for the recipe.",
+    recipes: [
+      {
+        name: "Pizzeria Oregano Seasoning for Pizza and Pasta", channel: "Recipe library", id: "more-ivd-dominos-oregano-seasoning", video: null, tags: ["Pasta & Noodles"], url: "https://www.indianveggiedelight.com/dominos-oregano-seasoning/",
+        macros: {"servings": 16, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 5.0, "p": 1.0, "c": 1.0, "f": 1.0}, makes: "Makes about 16 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp garlic powder", "1 tbsp powdered black pepper", "½ tbsp dry oregano", "½ tbsp dry basil leaves", "¼ tsp dry rosemary", "½ tsp red chilli flakes or red chilli powder", "1 tbsp salt",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Tea Masala Powder (Chai Masala)", channel: "Recipe library", id: "more-ivd-chai-masala-powder", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/chai-masala-powder/",
+        macros: {"servings": 0.5, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 119.0, "p": 4.0, "c": 24.0, "f": 3.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "2 tbsp green cardamon, elaichi", "1 tbsp cloves, laung", "1 tbsp black peppercorns, kali mirch", "1 tbsp dry ginger powder, saunth", "2 inch cinnamon stick, dal chini", "½ piece nutmeg, jayphal", "½ tbsp fennel seeds, saunf",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Garam Masala Blend, Freshly Ground", channel: "Recipe library", id: "more-ivd-homemade-garam-masala", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/homemade-garam-masala/",
+        macros: {"servings": 8, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 48.0, "p": 2.0, "c": 9.0, "f": 2.0}, makes: "Makes about 8 servings", from: "Recipe library",
+        ingredients: [
+          "2 tbsp cloves", "2 tbsp black peppercorns", "1 tbsp green cardamoms", "4-5 black cardamoms", "1 tbsp fennel seeds ()", "6-8 2 inch cinnamon sticks ()", "6 bay leaves", "2 star anise, optional", "3 strands mace", "½ small nutmeg", "¼ cup cumin seeds", "½ cup coriander seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Grinding Coriander Powder (Dhaniya)", channel: "Recipe library", id: "more-ivd-how-to-make-coriander-powder", video: "https://www.youtube.com/watch?v=-iV78DGvXCQ", tags: ["Other"], url: "https://www.indianveggiedelight.com/how-to-make-coriander-powder/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 238.0, "p": 10.0, "c": 44.0, "f": 14.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 cup coriander seeds",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Grinding Cumin Powder", channel: "Recipe library", id: "more-ivd-how-to-make-cumin-powder", video: "https://www.youtube.com/watch?v=fsxZmbAkGtw", tags: ["Other"], url: "https://www.indianveggiedelight.com/how-to-make-cumin-powder/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 375.0, "p": 18.0, "c": 44.0, "f": 22.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 cup cumin seeds, jeera",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Making Garlic Paste", channel: "Recipe library", id: "more-ivd-how-to-make-garlic-paste", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/how-to-make-garlic-paste/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 923.0, "p": 29.0, "c": 150.0, "f": 30.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 lb garlic cloves", "2-3 tbsp olive oil",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Making Ginger Paste", channel: "Recipe library", id: "more-ivd-how-to-make-ginger-paste", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/how-to-make-ginger-paste/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 610.0, "p": 8.0, "c": 81.0, "f": 31.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 lb fresh ginger root, about 2 cups", "2 tbsp olive oil, optional", "½ tsp salt, optional",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Sprouting Beans at Home", channel: "Recipe library", id: "more-ivd-how-to-sprout-beans", video: null, tags: ["Lentil & Beans"], url: "https://www.indianveggiedelight.com/how-to-sprout-beans/",
+        macros: {"servings": 4, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 180.0, "p": 12.0, "c": 32.0, "f": 1.0}, makes: "Makes about 4 servings", from: "Recipe library",
+        ingredients: [
+          "1 cup mung beans", "2 cups water, for soaking",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Storing Ginger", channel: "Recipe library", id: "more-ivd-how-to-store-ginger", video: null, tags: ["Other"], url: "https://www.indianveggiedelight.com/how-to-store-ginger/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 363.0, "p": 8.0, "c": 81.0, "f": 3.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 lb fresh ginger root",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Storing Green Chili Peppers", channel: "Recipe library", id: "more-ivd-indian-green-chili-peppers", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/indian-green-chili-peppers/",
+        macros: {"servings": 1, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 95.0, "p": 3.0, "c": 21.0, "f": 1.0}, makes: "Makes 1 serving", from: "Recipe library",
+        ingredients: [
+          "1 lb Green chili peppers",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
+      },
+      {
+        name: "Onion Tomato Masala Base", channel: "Recipe library", id: "more-ivd-instant-pot-indian-onion-tomato-masala", video: null, tags: ["Vegetables"], url: "https://www.indianveggiedelight.com/instant-pot-indian-onion-tomato-masala/",
+        macros: {"servings": 6, "serving": "1 serving", "basis": "source", "why": "The source gives its own nutrition figures for one serving.", "kcal": 234.0, "p": 2.0, "c": 20.0, "f": 13.0}, makes: "Makes about 6 servings", from: "Recipe library",
+        ingredients: [
+          "½ cup oil", "4 large yellow onions (diced, about 2 lb", "2 green chilies", "10-12 cloves garlic", "2 inch ginger", "5 large roma tomatoes (about 3 cups) or 2 (14.5 oz) can of diced tomatoes)", "¼ cup water, as needed", "1 tsp turmeric powder", "1 tbsp red chili powder", "2 tbsp coriander powder", "1 tbsp cumin powder", "Salt, to taste",
+        ],
+        note: "Nutrition is from the original page; the ingredient lines are restated in this site's style. The method is on the original page (use the Full recipe link).",
       },
     ],
   },

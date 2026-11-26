@@ -115,6 +115,11 @@ function ingredientsCell(r) {
   const from = document.createElement("p");
   from.className = "from";
   from.textContent = `Ingredients from: ${r.from}`;
+  if (r.url) {
+    const a = document.createElement("a");
+    a.href = r.url; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = "Full recipe ↗";
+    from.append(" · ", a);
+  }
   td.appendChild(from);
   return td;
 }
@@ -166,7 +171,8 @@ function macrosCell(r) {
 function row(r, sectionTitle) {
   const tr = document.createElement("tr");
   tr.id = `r-${r.id || r.video.split("v=")[1]}`;
-  tr.dataset.search = [r.name, r.channel, sectionTitle, ...r.ingredients.flatMap((p) => (typeof p === "string" ? [p] : p.items))].join(" ").toLowerCase();
+  tr.dataset.tags = (r.tags || []).join("|");
+  tr.dataset.search = [r.name, r.channel, sectionTitle, ...(r.tags || []), ...r.ingredients.flatMap((p) => (typeof p === "string" ? [p] : p.items))].join(" ").toLowerCase();
 
   const nameCell = document.createElement("td");
   nameCell.className = "name";
@@ -176,6 +182,7 @@ function row(r, sectionTitle) {
   channel.className = "channel";
   channel.textContent = r.channel;
   nameCell.append(nameText, channel);
+  (r.tags || []).forEach((t) => { const pill = document.createElement("span"); pill.className = "tag-pill"; pill.textContent = t; nameCell.appendChild(pill); });
 
   const linkCell = document.createElement("td");
   linkCell.dataset.label = "Video";
@@ -188,6 +195,11 @@ function row(r, sectionTitle) {
     a.rel = "noopener noreferrer";
     a.textContent = "Watch video ▶";
     a.setAttribute("aria-label", `Watch the ${r.name} video on YouTube (opens in a new tab)`);
+    linkCell.appendChild(a);
+  } else if (r.url) {
+    const a = document.createElement("a");
+    a.className = "video-link";
+    a.href = r.url; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = "Full recipe ↗";
     linkCell.appendChild(a);
   } else {
     linkCell.textContent = "No video";
@@ -272,28 +284,56 @@ function chip(href, text) {
   jump.appendChild(a);
 }
 chip("#how", "How the numbers work");
-sections.forEach((s) => chip(`#${s.id}`, `${s.title} (${s.count})`));
+const ivd = sections.filter((s) => s.id.startsWith("more-ivd-")); // nine course sections share one jump button
+sections.forEach((s) => {
+  if (!s.id.startsWith("more-ivd-")) chip(`#${s.id}`, `${s.title} (${s.count})`);
+  else if (s === ivd[0]) chip(`#${s.id}`, `More recipes: Recipe library (${ivd.reduce((n, x) => n + x.count, 0)})`);
+});
 
-// Search: shows only the recipes that match every word typed (name, ingredient, channel or section).
+// Main-ingredient filter: one button per tag, with a count. Only the recipes on this page that are not picked by the planner carry a tag.
+let activeTag = "";
+const tagCounts = {};
+sections.forEach((s) => s.recipes.forEach((r) => (r.tags || []).forEach((t) => { tagCounts[t] = (tagCounts[t] || 0) + 1; })));
+const TAG_ORDER = ["Paneer", "Lentil & Beans", "Rice & Grains", "Millet", "Quinoa", "Makhana", "Pasta & Noodles", "Vegetables", "Other"];
+const tagBar = document.createElement("div");
+tagBar.className = "tag-filter";
+tagBar.setAttribute("role", "group");
+tagBar.setAttribute("aria-label", "Filter by main ingredient");
+const tagLabel = document.createElement("span");
+tagLabel.className = "tag-filter-label";
+tagLabel.textContent = "Main ingredient:";
+tagBar.appendChild(tagLabel);
+const tagButtons = [];
+[["", "All"], ...TAG_ORDER.filter((t) => tagCounts[t]).map((t) => [t, `${t} (${tagCounts[t]})`])].forEach(([value, text]) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "chip tag-btn"; b.textContent = text; b.setAttribute("aria-pressed", value === "" ? "true" : "false");
+  b.addEventListener("click", () => { activeTag = value; tagButtons.forEach((x) => x.el.setAttribute("aria-pressed", String(x.value === value))); applySearch(); });
+  tagButtons.push({ el: b, value });
+  tagBar.appendChild(b);
+});
+document.querySelector(".search-bar").after(tagBar);
+
+// Search: shows only the recipes that match every word typed (name, ingredient, channel or section) and the chosen main ingredient.
 function applySearch() {
   const words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
+  const filtering = words.length > 0 || activeTag !== "";
   let shown = 0;
   sections.forEach((s) => {
     const sectionEl_ = document.getElementById(s.id);
     let visible = 0;
     sectionEl_.querySelectorAll("tbody tr").forEach((tr) => {
-      const match = words.every((w) => tr.dataset.search.includes(w));
+      const match = words.every((w) => tr.dataset.search.includes(w)) && (!activeTag || (tr.dataset.tags || "").split("|").includes(activeTag));
       tr.hidden = !match;
       if (match) visible++;
     });
     sectionEl_.hidden = visible === 0;
     const fold = sectionEl_.querySelector("details.fold");
-    if (fold) fold.open = words.length > 0 && visible > 0; // folded sections open while a search is showing their matches
+    if (fold) fold.open = filtering && visible > 0; // folded sections open while a search is showing their matches
     shown += visible;
   });
   const howEl = document.getElementById("how");
-  if (howEl) howEl.hidden = words.length > 0;
-  countEl.textContent = words.length ? `Showing ${shown} of ${total} recipes` : `${total} recipes`;
+  if (howEl) howEl.hidden = filtering;
+  countEl.textContent = filtering ? `Showing ${shown} of ${total} recipes` : `${total} recipes`;
   emptyEl.hidden = shown > 0;
 }
 search.addEventListener("input", applySearch);
