@@ -218,7 +218,8 @@ function sectionEl(s) {
 
   const h2 = document.createElement("h2");
   h2.id = `${s.id}-heading`;
-  h2.textContent = s.title;
+  const heading = s.inPlanner === false ? s.title.replace(/^Recipe shelf: /, "") : s.title; // inside the shelf block the prefix is redundant
+  h2.textContent = heading;
 
   const note = document.createElement("p");
   note.className = "section-note";
@@ -251,7 +252,7 @@ function sectionEl(s) {
   wrap.appendChild(table);
   if (s.id.startsWith("more-")) {
     // The long "Recipe shelf" sections stay folded until clicked.
-    h2.textContent = `${s.title} (${count})`;
+    h2.textContent = `${heading} (${count})`;
     const fold = document.createElement("details");
     fold.className = "fold";
     const summary = document.createElement("summary");
@@ -272,7 +273,30 @@ const countEl = document.getElementById("count");
 const emptyEl = document.getElementById("search-empty");
 
 main.appendChild(methodSectionEl());
-sections.forEach((s) => main.appendChild(sectionEl(s)));
+const plannerSections = sections.filter((s) => s.inPlanner !== false);
+const shelfSections = sections.filter((s) => s.inPlanner === false);
+plannerSections.forEach((s) => main.appendChild(sectionEl(s)));
+
+// The Recipe shelf: every recipe the planner never picks, in one block that starts closed (the filters live inside it).
+const shelfEl = document.createElement("details");
+shelfEl.className = "shelf";
+shelfEl.id = "shelf";
+const shelfBody = document.createElement("div");
+shelfBody.className = "shelf-body";
+shelfSections.forEach((s) => shelfBody.appendChild(sectionEl(s)));
+const shelfTotal = shelfSections.reduce((n, s) => n + s.count, 0);
+const shelfSummary = document.createElement("summary");
+const shelfTitle = document.createElement("span");
+shelfTitle.className = "shelf-title";
+shelfTitle.textContent = "Recipe shelf";
+const shelfCountEl = document.createElement("span");
+shelfCountEl.className = "shelf-count";
+const shelfHint = document.createElement("span");
+shelfHint.className = "shelf-hint";
+shelfHint.textContent = "Browse by style and main ingredient";
+shelfSummary.append(shelfTitle, shelfCountEl, shelfHint);
+shelfEl.append(shelfSummary, shelfBody);
+main.appendChild(shelfEl);
 
 const total = sections.reduce((n, s) => n + s.count, 0);
 document.querySelectorAll(".recipe-total").forEach((el) => { el.textContent = String(total); });
@@ -286,11 +310,8 @@ function chip(href, text) {
   jump.appendChild(a);
 }
 chip("#how", "How the numbers work");
-const ivd = sections.filter((s) => s.id.startsWith("more-ivd-")); // nine course sections share one jump button
-sections.forEach((s) => {
-  if (!s.id.startsWith("more-ivd-")) chip(`#${s.id}`, `${s.title} (${s.count})`);
-  else if (s === ivd[0]) chip(`#${s.id}`, `Recipe shelf: Library (${ivd.reduce((n, x) => n + x.count, 0)})`);
-});
+plannerSections.forEach((s) => chip(`#${s.id}`, `${s.title} (${s.count})`));
+chip("#shelf", `Recipe shelf (${shelfTotal})`);
 
 // Two filters that combine: Style (Indian, Blue Zones, Mediterranean...) and Main ingredient. Only the recipes on this page that the planner
 // never picks (the "Recipe shelf") carry a style and a main-ingredient tag. A button shows how many recipes it holds.
@@ -323,14 +344,17 @@ function filterBar(labelText, ariaLabel, key, order, counts) {
 }
 const styleBar = filterBar("Style:", "Filter by style", "style", STYLE_ORDER, styleCounts);
 const tagBar = filterBar("Main ingredient:", "Filter by main ingredient", "tag", TAG_ORDER, tagCounts);
-document.querySelector(".search-bar").after(styleBar);
-styleBar.after(tagBar);
+const shelfIntro = document.createElement("p");
+shelfIntro.className = "shelf-intro";
+shelfIntro.textContent = "Recipes the meal planner never picks. Choose a style, a main ingredient, or both.";
+shelfBody.prepend(shelfIntro, styleBar, tagBar);
 
 // Search: shows only the recipes that match every word typed (name, ingredient, channel, style or section) and the chosen style and main ingredient.
 function applySearch() {
   const words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
   const filtering = words.length > 0 || filters.style !== "" || filters.tag !== "";
   let shown = 0;
+  let shelfShown = 0;
   sections.forEach((s) => {
     const sectionEl_ = document.getElementById(s.id);
     let visible = 0;
@@ -343,7 +367,10 @@ function applySearch() {
     const fold = sectionEl_.querySelector("details.fold");
     if (fold) fold.open = filtering && visible > 0; // folded sections open while a search is showing their matches
     shown += visible;
+    if (s.inPlanner === false) shelfShown += visible;
   });
+  shelfCountEl.textContent = filtering ? `${shelfShown} of ${shelfTotal} recipes` : `${shelfTotal} recipes`;
+  if (filtering && shelfShown > 0) shelfEl.open = true; // a search or filter that finds shelf recipes opens the shelf
   const howEl = document.getElementById("how");
   if (howEl) howEl.hidden = filtering;
   countEl.textContent = filtering ? `Showing ${shown} of ${total} recipes` : `${total} recipes`;
@@ -359,7 +386,10 @@ function goToHash() {
   if (location.hash.length <= 1) return;
   const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
   if (!target) return;
-  const fold = target.querySelector("details.fold") || target.closest("details.fold");
+  const isShelf = target.matches("details.shelf");
+  const shelfFold = isShelf ? target : target.closest("details.shelf");
+  if (shelfFold) shelfFold.open = true;
+  const fold = isShelf ? null : target.querySelector("details.fold") || target.closest("details.fold");
   if (fold) fold.open = true;
   target.scrollIntoView({ block: target.tagName === "TR" ? "center" : "start", behavior: "instant" });
   if (target.tagName === "TR") target.classList.add("flash");
