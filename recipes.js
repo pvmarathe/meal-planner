@@ -218,7 +218,9 @@ function sectionEl(s) {
 
   const h2 = document.createElement("h2");
   h2.id = `${s.id}-heading`;
-  const heading = s.inPlanner === false ? s.title.replace(/^Recipe shelf: /, "") : s.title; // inside the shelf block the prefix is redundant
+  // Inside the shelf the "Recipe shelf: " prefix is redundant, and inside the Veggie Delights group so is its name.
+  let heading = s.inPlanner === false ? s.title.replace(/^Recipe shelf: /, "") : s.title;
+  if (heading.startsWith("Veggie Delights, ")) heading = heading.charAt(17).toUpperCase() + heading.slice(18);
   h2.textContent = heading;
 
   const note = document.createElement("p");
@@ -283,7 +285,23 @@ shelfEl.className = "shelf";
 shelfEl.id = "shelf";
 const shelfBody = document.createElement("div");
 shelfBody.className = "shelf-body";
-shelfSections.forEach((s) => shelfBody.appendChild(sectionEl(s)));
+// The nine Veggie Delights sections sit together in their own closed group at the end of the shelf.
+const isVD = (s) => s.id.startsWith("more-ivd-");
+const vdEl = document.createElement("details");
+vdEl.className = "subshelf";
+vdEl.id = "veggie-delights";
+const vdBody = document.createElement("div");
+shelfSections.forEach((s) => (isVD(s) ? vdBody : shelfBody).appendChild(sectionEl(s)));
+const vdTotal = shelfSections.filter(isVD).reduce((n, s) => n + s.count, 0);
+const vdSummary = document.createElement("summary");
+const vdTitle = document.createElement("span");
+vdTitle.className = "subshelf-title";
+vdTitle.textContent = "Veggie Delights";
+const vdCountEl = document.createElement("span");
+vdCountEl.className = "shelf-count";
+vdSummary.append(vdTitle, vdCountEl);
+vdEl.append(vdSummary, vdBody);
+shelfBody.appendChild(vdEl);
 const shelfTotal = shelfSections.reduce((n, s) => n + s.count, 0);
 const shelfSummary = document.createElement("summary");
 const shelfTitle = document.createElement("span");
@@ -355,6 +373,7 @@ function applySearch() {
   const filtering = words.length > 0 || filters.style !== "" || filters.tag !== "";
   let shown = 0;
   let shelfShown = 0;
+  let vdShown = 0;
   sections.forEach((s) => {
     const sectionEl_ = document.getElementById(s.id);
     let visible = 0;
@@ -368,8 +387,11 @@ function applySearch() {
     if (fold) fold.open = filtering && visible > 0; // folded sections open while a search is showing their matches
     shown += visible;
     if (s.inPlanner === false) shelfShown += visible;
+    if (isVD(s)) vdShown += visible;
   });
   shelfCountEl.textContent = filtering ? `${shelfShown} of ${shelfTotal} recipes` : `${shelfTotal} recipes`;
+  vdCountEl.textContent = filtering ? `${vdShown} of ${vdTotal} recipes` : `${vdTotal} recipes`;
+  if (filtering && vdShown > 0) vdEl.open = true; // the Veggie Delights group opens when a search or filter finds recipes in it
   if (filtering && shelfShown > 0) shelfEl.open = true; // a search or filter that finds shelf recipes opens the shelf
   const howEl = document.getElementById("how");
   if (howEl) howEl.hidden = filtering;
@@ -389,7 +411,9 @@ function goToHash() {
   const isShelf = target.matches("details.shelf");
   const shelfFold = isShelf ? target : target.closest("details.shelf");
   if (shelfFold) shelfFold.open = true;
-  const fold = isShelf ? null : target.querySelector("details.fold") || target.closest("details.fold");
+  const vdFold = target.matches("details.subshelf") ? target : target.closest("details.subshelf");
+  if (vdFold) vdFold.open = true;
+  const fold = isShelf || target === vdFold ? null : target.querySelector("details.fold") || target.closest("details.fold");
   if (fold) fold.open = true;
   target.scrollIntoView({ block: target.tagName === "TR" ? "center" : "start", behavior: "instant" });
   if (target.tagName === "TR") target.classList.add("flash");

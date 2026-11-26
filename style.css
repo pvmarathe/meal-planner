@@ -698,3 +698,7 @@ details.shelf > summary { cursor: pointer; display: flex; flex-wrap: wrap; align
 .shelf-hint { color: var(--muted); font-size: 0.9rem; }
 details.shelf[open] > summary { margin-bottom: 10px; }
 .shelf-intro { margin: 0 0 4px; color: var(--muted); }
+details.subshelf { margin: 16px 0 6px; padding: 10px 14px; border: 1px solid color-mix(in srgb, var(--accent-strong) 30%, transparent); border-radius: 12px; background: var(--bg); scroll-margin-top: 90px; }
+details.subshelf > summary { cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.subshelf-title { font-size: 1.3rem; font-weight: 800; color: var(--accent-strong); }
+details.subshelf[open] > summary { margin-bottom: 8px; }
