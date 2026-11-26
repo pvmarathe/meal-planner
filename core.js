@@ -68,6 +68,21 @@ sections.forEach((s) => s.recipes.forEach((r) => { byId[idOf(r)] = { r, s }; }))
 const DAILY = {};
 MEALS.forEach((m) => { DAILY[m] = []; });
 Object.keys(byId).forEach((id) => { const w = byId[id].r.dailyWith; if (w && DAILY[w] && byId[id].r.macros && !byId[id].r.macros.na) DAILY[w].push({ id, s: 1 }); });
+// Plan generation. Plans with seed "auto" or "auto2" (every plan emailed before the morning platter) must rebuild exactly as they were made,
+// so they use generation 2: no recipe marked since: 3, no side-repeat rule and no half portions of a breakfast main. New plans ("auto3") and the
+// website use generation 3. buildPlan switches it for the length of one build.
+let GEN = 3;
+const dailyFor = (meal) => DAILY[meal].filter((d) => GEN >= (byId[d.id].r.since || 0)).map((d) => ({ ...d }));
+// Sides (not mains) used at this meal in the neighbouring days, so one side such as a porridge does not come back every other day
+function recentSides(days, di, meal, reach, ahead) {
+  const out = new Set();
+  if (GEN < 3) return out;
+  for (let k = di - reach; k <= (ahead ? di + reach : di - 1); k++) {
+    if (k === di || !days[k] || !days[k][meal]) continue;
+    days[k][meal].items.forEach((i) => { const r = byId[i.id].r; if (r.meals && r.meals[meal] === "side") out.add(i.id); });
+  }
+  return out;
+}
 
 // Recipes marked dailyPick (the fresh fruits) work like the daily drink, but a different one is picked at random for each
 // of that meal: one is added to every such meal, and the rest of the meal is balanced around it.
@@ -135,6 +150,13 @@ function totalsOf(items, k = 0) {
   });
   return t;
 }
+// Morning routine items (olive oil, nut and seed platter; recipes marked since: 3 that are added to every breakfast) are fixed on purpose and are
+// fat-rich by design, so they count towards the meal's calories but are left out of its protein, carb and fat balance, which is judged on the rest.
+const isRoutine = (it) => (byId[it.id].r.since || 0) >= 3 && !!byId[it.id].r.dailyWith;
+function routineSplit(items, k = 0) {
+  const rest = items.filter((i) => !isRoutine(i));
+  return { rest, kcal: totalsOf(items.filter(isRoutine), k).kcal };
+}
 function sharesOf(t) {
   const e = t.p * 4 + t.c * 4 + t.f * 9;
   return e ? { p: (t.p * 4) / e, c: (t.c * 4) / e, f: (t.f * 9) / e } : { p: 0, c: 0, f: 0 };
@@ -144,6 +166,8 @@ const pct = (x) => `${Math.round(x * 100)}%`;
 
 // ----- solving one meal -----
 const STEPS_MAIN = [1, 1.5, 2, 2.5, 3];
+// From generation 3 a breakfast main may be a half portion, because the daily platter and olive oil already fill part of breakfast
+const stepsMainFor = (meal) => (GEN >= 3 && meal === "breakfast" ? [0.5, ...STEPS_MAIN] : STEPS_MAIN);
 const STEPS_SIDE = [0.5, 1, 1.5, 2, 2.5, 3];
 const scoreOf = (t, target, level) => {
   const off = Math.abs(t.kcal / target - 1);
@@ -154,7 +178,7 @@ const scoreOf = (t, target, level) => {
 };
 // For two people: the same dishes, but each person gets their own portions. Tries many dish sets and keeps the ones
 // where both people can reach their own target.
-function bestServings(ids, target, level, fixed) {
+function bestServings(ids, target, level, fixed, meal) {
   let best = null;
   const cur = [];
   const walk = (i) => {
@@ -163,40 +187,59 @@ function bestServings(ids, target, level, fixed) {
       if (sc !== null && (!best || sc < best.score)) best = { servs: cur.slice(), score: sc };
       return;
     }
-    for (const v of (i === 0 ? STEPS_MAIN : STEPS_SIDE)) { cur[i] = v; walk(i + 1); }
+    for (const v of (i === 0 ? stepsMainFor(meal) : STEPS_SIDE)) { cur[i] = v; walk(i + 1); }
   };
   walk(0);
   return best;
 }
 // A recipe can carry group: "eggs"; two dishes of one group never share a meal.
 // A recipe can carry weight (default 1): below 1 it is picked as a side less often.
+// From generation 3, a recipe can carry often (0 to 1): the chance it is even considered when a side is drawn (default 1). This keeps a rare side
+// rare even when the other sides are not allowed (a gap-filler such as an egg dish would otherwise take every free slot).
 const pickSide = (sides) => {
+  if (GEN >= 3) {
+    const ok = sides.filter((id) => rng() < (byId[id].r.often == null ? 1 : byId[id].r.often));
+    return ok.length ? ok[Math.floor(rng() * ok.length)] : null;
+  }
   const w = sides.map((id) => (byId[id].r.weight == null ? 1 : byId[id].r.weight));
   let x = rng() * w.reduce((a, b) => a + b, 0);
   for (let i = 0; i < sides.length; i++) { x -= w[i]; if (x < 0) return sides[i]; }
   return sides[sides.length - 1];
 };
+// From generation 3, the finished choice is also checked against often: a meal holding a rarer dish is only kept with that probability.
+function chooseBest(list, idsOf) {
+  let pick = randomFrom(list);
+  if (GEN < 3) return pick;
+  for (let n = 0; n < 12; n++) {
+    if (idsOf(pick).every((id) => byId[id].r.often == null || rng() < byId[id].r.often)) return pick;
+    pick = randomFrom(list);
+  }
+  return pick;
+}
 const clashes = (ids, id) => ids.includes(id) || (!!byId[id].r.group && ids.some((x) => byId[x].r.group === byId[id].r.group));
 function solvePair(meal, targets, banned, level = 0, date = null) {
   let mains = POOLS[meal].main.filter((id) => !banned.has(id));
   if (!mains.length) mains = POOLS[meal].main;
   const sides = POOLS[meal].side.filter((id) => !banned.has(id));
-  const fixed = [...DAILY[meal].map((d) => ({ ...d })), ...fruitFor(meal, banned, date)];
+  const all = dailyFor(meal);
+  const routine = all.filter((d) => isRoutine(d));
+  const fixed = [...all.filter((d) => !isRoutine(d)), ...fruitFor(meal, banned, date)];
+  const tg = routine.length ? targets.map((t) => Math.max(60, t - totalsOf(routine).kcal)) : targets; // what is left for the rest of the meal
   const found = [];
   for (let n = 0; n < 1500; n++) {
     const ids = [randomFrom(mains)];
-    if (sides.length && rng() < 0.8) ids.push(pickSide(sides));
-    if (sides.length > 1 && rng() < 0.4) { const extra = pickSide(sides); if (!clashes(ids, extra)) ids.push(extra); }
-    const a = bestServings(ids, targets[0], level, fixed);
+    if (sides.length && rng() < 0.8) { const sd = pickSide(sides); if (sd) ids.push(sd); }
+    if (sides.length > 1 && rng() < 0.4) { const extra = pickSide(sides); if (extra && !clashes(ids, extra)) ids.push(extra); }
+    const a = bestServings(ids, tg[0], level, fixed, meal);
     if (!a) continue;
-    const b = bestServings(ids, targets[1], level, fixed);
+    const b = bestServings(ids, tg[1], level, fixed, meal);
     if (!b) continue;
     found.push({ ids, a, b, score: a.score + b.score });
   }
   if (!found.length) return level < WINDOWS.length - 1 ? solvePair(meal, targets, banned, level + 1, date) : null;
   found.sort((x, y) => x.score - y.score);
-  const pick = randomFrom(found.slice(0, Math.max(5, Math.ceil(found.length * 0.15))));
-  return { items: [...fixed.map((d) => ({ ...d, s2: d.s })), ...pick.ids.map((id, j) => ({ id, s: pick.a.servs[j], s2: pick.b.servs[j] }))], locked: false };
+  const pick = GEN < 3 ? randomFrom(found.slice(0, Math.max(5, Math.ceil(found.length * 0.15)))) : chooseBest(found.slice(0, Math.max(5, Math.ceil(found.length * 0.4))), (f) => f.ids);
+  return { items: [...routine, ...fixed].map((d) => ({ ...d, s2: d.s })).concat(pick.ids.map((id, j) => ({ id, s: pick.a.servs[j], s2: pick.b.servs[j] }))), locked: false };
 }
 // One slot for one or two people (targets is a list of calorie targets, one for each person).
 // date (YYYY-MM-DD) is the day being planned; it picks the fruit that is in season.
@@ -206,19 +249,22 @@ function solveOne(meal, target, banned, level = 0, date = null) {
   let mains = POOLS[meal].main.filter((id) => !banned.has(id));
   if (!mains.length) mains = POOLS[meal].main;
   const sides = POOLS[meal].side.filter((id) => !banned.has(id));
-  const stepsMain = [1, 1.5, 2, 2.5, 3];
+  const stepsMain = stepsMainFor(meal);
   const stepsSide = [0.5, 1, 1.5, 2, 2.5, 3];
   const found = [];
-  const fixed = [...DAILY[meal].map((d) => ({ ...d })), ...fruitFor(meal, banned, date)];
+  const all = dailyFor(meal);
+  const routine = all.filter((d) => isRoutine(d));
+  const fixed = [...all.filter((d) => !isRoutine(d)), ...fruitFor(meal, banned, date)];
+  const goal = routine.length ? Math.max(60, target - totalsOf(routine).kcal) : target; // what is left for the rest of the meal
   for (let n = 0; n < 6000; n++) {
     const items = [...fixed, { id: randomFrom(mains), s: randomFrom(stepsMain) }];
-    if (sides.length && rng() < 0.8) items.push({ id: pickSide(sides), s: randomFrom(stepsSide) });
+    if (sides.length && rng() < 0.8) { const sd = pickSide(sides); if (sd) items.push({ id: sd, s: randomFrom(stepsSide) }); }
     if (sides.length > 1 && rng() < 0.4) {
       const extra = pickSide(sides);
-      if (!clashes(items.map((i) => i.id), extra)) items.push({ id: extra, s: randomFrom(stepsSide) });
+      if (extra && !clashes(items.map((i) => i.id), extra)) items.push({ id: extra, s: randomFrom(stepsSide) });
     }
     const t = totalsOf(items);
-    const off = Math.abs(t.kcal / target - 1);
+    const off = Math.abs(t.kcal / goal - 1);
     if (off > TOLERANCE[level]) continue;
     const sh = sharesOf(t);
     if (!inWindow(sh, WINDOWS[level])) continue;
@@ -227,13 +273,17 @@ function solveOne(meal, target, banned, level = 0, date = null) {
   if (!found.length) return level < WINDOWS.length - 1 ? solveOne(meal, target, banned, level + 1, date) : null;
   found.sort((a, b) => a.score - b.score);
   const best = found.slice(0, Math.max(5, Math.ceil(found.length * 0.15)));
-  return { items: randomFrom(best).items, locked: false };
+  return { items: [...routine, ...(GEN < 3 ? randomFrom(best) : chooseBest(found.slice(0, Math.max(5, Math.ceil(found.length * 0.4))), (f) => f.items.map((i) => i.id))).items], locked: false };
 }
 
 // How a finished meal compares with the target: balanced, or which part is off.
 function checkMeal(items, target, k = 0) {
-  const t = totalsOf(items, k);
+  // Balance is judged without the morning routine items (see routineSplit); the totals returned are for the whole meal as eaten.
+  const split = routineSplit(items, k);
+  const full = totalsOf(items, k);
+  const t = totalsOf(split.rest, k);
   const sh = sharesOf(t);
+  target = Math.max(60, target - split.kcal);
   const issues = [];
   if (Math.abs(t.kcal / target - 1) > TOLERANCE[0]) issues.push(`calories ${t.kcal > target ? "above" : "below"} target`);
   if (sh.p < WINDOWS[0].p[0]) issues.push(`protein low (${pct(sh.p)})`);
@@ -242,7 +292,7 @@ function checkMeal(items, target, k = 0) {
   if (sh.c > WINDOWS[0].c[1]) issues.push(`carbs high (${pct(sh.c)})`);
   if (sh.f < WINDOWS[0].f[0]) issues.push(`fat low (${pct(sh.f)})`);
   if (sh.f > WINDOWS[0].f[1]) issues.push(`fat high (${pct(sh.f)})`);
-  return { t, sh, issues };
+  return { t: full, sh: sharesOf(full), issues };
 }
 
 // ----- the week -----
@@ -275,8 +325,8 @@ function buildDays(old, people, n, start) {
     const date = start ? isoDate(addDays(parseIso(start), di)) : null;
     MEALS.forEach((meal) => {
       if (day[meal]) return;
-      const banned = new Set([...mainsUsed(days, meal), ...idsOfDay(day, meal)]);
-      day[meal] = solveMeal(meal, targetsFor(people, meal), banned, date) || { items: [...DAILY[meal].map((d) => ({ ...d, s2: d.s })), { id: POOLS[meal].main[0], s: 1, s2: 1 }], locked: false };
+      const banned = new Set([...mainsUsed(days, meal), ...idsOfDay(day, meal), ...recentSides(days, di, meal, 1, false)]);
+      day[meal] = solveMeal(meal, targetsFor(people, meal), banned, date) || { items: [...dailyFor(meal).map((d) => ({ ...d, s2: d.s })), { id: POOLS[meal].main[0], s: 1, s2: 1 }], locked: false };
     });
   });
   return days;
@@ -397,7 +447,7 @@ function applyEdits(plan, edits) {
       if (!(i >= 0 && i < plan.days.length) || !MEALS.includes(b)) throw new Error(`bad edit: ${spec}`);
       setRng(seeded(`${a}-${b}-${c || "1"}`));
       const day = plan.days[i];
-      const banned = new Set([...mainsUsed(plan.days, b), ...idsOfDay(day, b)]);
+      const banned = new Set([...mainsUsed(plan.days, b), ...idsOfDay(day, b), ...recentSides(plan.days, i, b, 1, true)]);
       const fresh = solveMeal(b, targetsFor(peopleOf(plan), b), banned, a);
       if (fresh) plan.days[i] = { ...day, [b]: fresh };
     } else throw new Error(`unknown edit: ${spec}`);
@@ -409,21 +459,23 @@ function applyEdits(plan, edits) {
 // "auto" (the first plans sent) also mixed in the names; legacyNames lets a rebuild use the names that were in use then.
 function buildPlan({ start, days, mode, seed, edits, ppl, legacyNames }) {
   const end = isoDate(addDays(parseIso(start), days - 1));
-  const seedText = seed && seed !== "auto" && seed !== "auto2" ? seed
-    : seed === "auto2" ? `${start}-${ppl.map((p) => p.gender + p.kg + p.activity).join("|")}`
+  const seedText = seed && seed !== "auto" && seed !== "auto2" && seed !== "auto3" ? seed
+    : seed === "auto2" || seed === "auto3" ? `${start}-${ppl.map((p) => p.gender + p.kg + p.activity).join("|")}`
     : `${start}-${ppl.map((p, i) => ((legacyNames && legacyNames[i]) || p.name) + p.gender + p.kg + p.activity).join("|")}`;
   setRng(seeded(seedText));
   let plan;
   const savedGender = gender, savedKg = bodyKg;
+  const savedGen = GEN;
+  GEN = !seed || seed === "auto" || seed === "auto2" ? 2 : 3;
   try {
     if (ppl.length === 1) { gender = ppl[0].gender; bodyKg = ppl[0].kg; } // a one-person plan uses the page's own settings, so set them to this person's
     plan = newPlan(null, ppl[0].activity, start, end, ppl.length === 2 ? ppl : null);
-  } finally { gender = savedGender; bodyKg = savedKg; }
-  if (ppl.length === 1) plan.people = undefined;
-  plan.pplCfg = ppl;
-  plan.mode = mode === "batch" ? "batch" : "fresh";
-  if (!validPlan(plan)) throw new Error("plan did not validate");
-  applyEdits(plan, edits);
+    if (ppl.length === 1) plan.people = undefined;
+    plan.pplCfg = ppl;
+    plan.mode = mode === "batch" ? "batch" : "fresh";
+    if (!validPlan(plan)) throw new Error("plan did not validate");
+    applyEdits(plan, edits);
+  } finally { gender = savedGender; bodyKg = savedKg; GEN = savedGen; }
   plan.id = { start, days, mode: plan.mode, seed: seed || "auto", edits: edits || "none", data: dataHash() };
   setRng(Math.random); // go back to ordinary random choices for anything done afterwards (rerolls on the page)
   return plan;
@@ -473,7 +525,7 @@ const SHOP_SYN = {
   "lime juice": "lime", "lemon juice": "lemon", "lemon zest": "lemon", "lime zest": "lime", "garlic clove": "garlic", "clove garlic": "garlic",
   "green apple": "apple", "purple cabbage": "red cabbage", "lettuce leaf": "lettuce", "bay leaf": "bay leaf", "mixed herb": "mixed herbs", "medjool date": "dates", "date": "dates", "peanut": "peanuts", "sesame": "sesame seeds",
   "tamarind juice": "tamarind", "tamarind pulp": "tamarind", "tamarind paste": "tamarind", "spoon sugar": "sugar", "cube processed cheese": "processed cheese", "cubes processed cheese": "processed cheese", "crumbled paneer": "paneer", "paneer cube": "paneer",
-  "cinnamon stick": "cinnamon", "eno": "eno fruit salt", "fruit salt": "eno fruit salt", "eno fruit salt": "eno fruit salt", "jaggery powder": "jaggery", "oats": "rolled oats", "oat": "rolled oats", "french beans": "green beans", "french bean": "green beans", "coriander": "cilantro", "cumin-coriander powder": "cumin and coriander seeds or powder", "peanuts": "peanuts", "bay leaves": "bay leaf", "cilantro leaves": "cilantro", "kiwi fruit": "kiwi", "pomegranate seeds": "pomegranate", "pomegranate seed": "pomegranate", "kiwis": "kiwi", "blueberries": "blueberry", "blackberries": "blackberry", "grapes": "grape", "coriander leaves": "cilantro", "green coriander leaves": "cilantro", "cumin seeds": "cumin", "jeera seeds": "cumin", "pounded cumin seeds": "cumin", "coriander seeds": "coriander seeds or powder", "fennel seeds": "fennel", "saunf": "fennel", "carom seeds": "ajwain", "moong sprouts": "sprouted moong", "red pepper": "chilli flakes", "red pepper flakes": "chilli flakes", "kidney beans": "kidney beans (rajma)", "rajma": "kidney beans (rajma)", "white quinoa": "quinoa", "mustard seeds": "mustard seeds", "turmeric": "turmeric", "cinnamon powder": "cinnamon", "clove": "cloves", "flax": "flax seeds", "mix of flax": "flax seeds", "ginger paste": "ginger", "garlic paste": "garlic", "ginger-chilli paste": "ginger and green chilli", "ginger chilli paste": "ginger and green chilli",
+  "cinnamon stick": "cinnamon", "eno": "eno fruit salt", "fruit salt": "eno fruit salt", "eno fruit salt": "eno fruit salt", "jaggery powder": "jaggery", "oats": "rolled oats", "oat": "rolled oats", "french beans": "green beans", "french bean": "green beans", "coriander": "cilantro", "cumin-coriander powder": "cumin and coriander seeds or powder", "peanuts": "peanuts", "bay leaves": "bay leaf", "cilantro leaves": "cilantro", "kiwi fruit": "kiwi", "pomegranate seeds": "pomegranate", "pomegranate seed": "pomegranate", "kiwis": "kiwi", "blueberries": "blueberry", "blackberries": "blackberry", "grapes": "grape", "coriander leaves": "cilantro", "green coriander leaves": "cilantro", "cumin seeds": "cumin", "jeera seeds": "cumin", "pounded cumin seeds": "cumin", "coriander seeds": "coriander seeds or powder", "fennel seeds": "fennel", "saunf": "fennel", "carom seeds": "ajwain", "moong sprouts": "sprouted moong", "red pepper": "chilli flakes", "red pepper flakes": "chilli flakes", "kidney beans": "kidney beans (rajma)", "rajma": "kidney beans (rajma)", "white quinoa": "quinoa", "mustard seeds": "mustard seeds", "turmeric": "turmeric", "cinnamon powder": "cinnamon", "clove": "cloves", "flax": "flax seeds", "fig": "dried figs", "dried fig": "dried figs", "almond": "almonds", "walnut": "walnuts", "walnut halve": "walnuts", "walnut halves": "walnuts", "pumpkin seed": "pumpkin seeds", "mix of flax": "flax seeds", "ginger paste": "ginger", "garlic paste": "garlic", "ginger-chilli paste": "ginger and green chilli", "ginger chilli paste": "ginger and green chilli",
 };
 const SHOP_KEEP_PLURAL = new Set(["peas", "beans", "lentils", "oats", "chickpeas", "noodles", "greens", "leaves", "seeds", "flakes", "crumbs", "kernels", "sprouts", "nuts", "cashews", "grapes", "berries", "molasses", "hummus", "couscous", "asparagus", "swiss", "citrus", "bhindi"]);
 const SHOP_SPLIT = { "ginger and green chilli": ["ginger", "green chilli"], "cumin and coriander seeds or powder": ["cumin", "coriander seeds or powder"] };
@@ -518,6 +570,7 @@ function shopName(text) {
   return names.flatMap((n) => (SHOP_SPLIT[n] ? SHOP_SPLIT[n] : [n]));
 }
 const SHOP_CATS = [
+  ["Dals, grains and flours", /almond|walnut|pumpkin seed|dried fig/], // nuts, seeds and dried figs sit with the dry goods
   ["Oils, sauces and other", /\boil\b|vinegar|sauce|sugar|jaggery|honey|syrup|baking|yeast|chutney|paste|ketchup|essence|coconut milk|nutritional|vanilla|cocoa|coffee|tea\b/],
   ["Spices and seasonings", /salt|namak|(?<!bell )pepper$|turmeric|powder|masala|cumin|jeera|mustard|hing|asafoetida|cardamom|cinnamon|\bcloves?\b|ajwain|carom|kasuri|methi dana|fennel|saunf|garam|paprika|chaat|oregano|thyme|bay leaf|seeds?$|chilli flakes|amchur|saffron|nutmeg/],
   ["Dals, grains and flours", /dal\b|lentil|moong|chana|rajma|chickpea|rice|poha|oats|quinoa|millet|ragi|jowar|bajra|flour|besan|sattu|rava|sooji|semolina|bread|barley|bulgur|couscous|pasta|noodles|tortilla|pita|urad|toor|masoor|kala|sabudana|sago|dalia|beans/],

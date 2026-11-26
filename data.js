@@ -937,7 +937,7 @@ const sections = [
         ],
       },
       {
-        name: "Ragi Porridge", channel: "Gita's Kitchen", video: "https://www.youtube.com/watch?v=d9QWiwnIhrA", meals: {"breakfast": "side"}, macros: {"servings": 2, "serving": "1 bowl (about 250 g)", "basis": "assumed", "why": "Assumed: a bowl is about 250 g of the finished dish.", "kcal": 166.1, "p": 8.7, "c": 21.0, "f": 5.6}, from: DESC,
+        name: "Ragi Porridge", channel: "Gita's Kitchen", video: "https://www.youtube.com/watch?v=d9QWiwnIhrA", meals: {"breakfast": "side"}, often: 0.3, macros: {"servings": 2, "serving": "1 bowl (about 250 g)", "basis": "assumed", "why": "Assumed: a bowl is about 250 g of the finished dish.", "kcal": 166.1, "p": 8.7, "c": 21.0, "f": 5.6}, from: DESC,
         ingredients: ["2 tbsp ragi flour", "1 cup milk", "1 cup buttermilk", "2–3 cups water", "2 tsp jaggery powder", "Salt, to taste"],
       },
       {
@@ -1491,7 +1491,7 @@ const sections = [
     note: "Egg breakfasts. The planner can pick these for breakfast like any other dish. The site is vegetarian with eggs; there is no meat or fish.",
     recipes: [
       {
-        name: "Boiled Eggs", channel: "RecipeTin Eats", video: "https://www.youtube.com/watch?v=o9jrst9xDC4", meals: {"breakfast": "side"}, group: "eggs", weight: 0.04,
+        name: "Boiled Eggs", channel: "RecipeTin Eats", video: "https://www.youtube.com/watch?v=o9jrst9xDC4", meals: {"breakfast": "side"}, group: "eggs", weight: 0.04, often: 0.1,
         macros: {"servings": 4, "serving": "2 large boiled eggs", "basis": "assumed", "why": "Assumed: the page gives no servings. The planner uses 2 eggs as one serving; you and your partner eat about 8 eggs together, which is 2 servings each.", "kcal": 155.0, "p": 12.6, "c": 1.1, "f": 10.6},
         makes: "Makes 8 boiled eggs", from: "RecipeTin Eats (How to Boil Eggs page and video)",
         ingredients: [
@@ -1500,7 +1500,7 @@ const sections = [
         note: "Bring the water to a rapid boil, lower the eggs in with a slotted spoon, turn the heat down slightly so it still bubbles, and time them: 6 minutes runny yolk, 8 minutes soft, 10 minutes hard boiled. Cool the eggs 10 minutes in cold water, then peel from the base under water. The numbers are for 2 hard-boiled large eggs (about 50 g each without the shell), from USDA data for hard-boiled whole egg. Salt and pepper to taste are not counted.",
       },
       {
-        name: "Masala Omelette", channel: "Yummy Tummy Aarthi", video: "https://www.youtube.com/watch?v=_DqM3oc04GM", meals: {"breakfast": "side"}, group: "eggs", weight: 0.04,
+        name: "Masala Omelette", channel: "Yummy Tummy Aarthi", video: "https://www.youtube.com/watch?v=_DqM3oc04GM", meals: {"breakfast": "side"}, group: "eggs", weight: 0.04, often: 0.1,
         macros: {"servings": 1, "serving": "1 omelette (2 eggs)", "basis": "source", "why": "The page says it makes 1 serving from 2 eggs.", "kcal": 282.4, "p": 13.3, "c": 5.3, "f": 23.1},
         makes: "Makes 1 omelette (2 eggs)", from: "Yummy Tummy Aarthi (Masala Omelette page and video)",
         ingredients: [
@@ -1667,6 +1667,32 @@ const sections = [
           "1½ cups Greek yogurt", "4 tbsp sattu", "1 cup water", "3–4 cucumbers", "Half a chilli", "A few curry leaves", "Salt", "1 spoon sugar", "Jeera (cumin) powder", "2½ tbsp chia seeds, added after grinding the rest",
         ],
         note: "Blend everything except the chia seeds, then stir the chia in. The numbers are for one glass. Not counted: the chilli, curry leaves, salt and jeera, which have no amounts and add almost nothing. Assumptions: 3½ cucumbers at about 200 g each (700 g), plain low-fat Greek yogurt, 'spoon' of sugar taken as 1 teaspoon, and sattu counted like roasted chickpea flour. No video exists, so there is no link.",
+      },
+    ],
+  },
+  // ============================ MORNING ROUTINE ============================
+  {
+    id: "morning",
+    title: "Morning routine",
+    note: "Two things the planner adds to every breakfast from the plans emailed on or after Nov 26, 2026 (seed auto3): one tablespoon of extra virgin olive oil first thing, then the fruit and nut platter. The platter's fruit is the day's seasonal fruit (see Fresh fruits); this item is the nuts, figs and seeds that go with it. The rest of breakfast is balanced around both.",
+    recipes: [
+      {
+        name: "Olive Oil, first thing (1 tbsp)", channel: "Home routine", id: "home-evoo-morning", video: null, dailyWith: "breakfast", since: 3,
+        macros: {"servings": 1, "serving": "1 tablespoon (13.5 g)", "basis": "assumed", "why": "Assumed: the routine is one tablespoon.", "kcal": 119.3, "p": 0.0, "c": 0.0, "f": 13.5},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "1 tablespoon (13.5 g) extra virgin olive oil",
+        ],
+        note: "Take it first thing in the morning, before anything else. The numbers are for 1 tablespoon (13.5 g), from USDA data for olive oil. There is no video, because there is nothing to cook.",
+      },
+      {
+        name: "Soaked Nut and Seed Platter", channel: "Home routine", id: "home-nut-seed-platter", video: null, dailyWith: "breakfast", since: 3,
+        macros: {"servings": 1, "serving": "1 plate (about 40 g of dry nuts, figs and seeds)", "basis": "assumed", "why": "Assumed: the plate is 2 dried figs, 6 almonds, 4 walnut halves and 1 tablespoon of pumpkin seeds. You did not give amounts, so change them if you eat more or less.", "kcal": 181.2, "p": 5.7, "c": 14.2, "f": 13.0},
+        makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
+        ingredients: [
+          "2 dried figs (about 17 g), soaked overnight", "6 almonds (about 7 g), soaked overnight", "4 walnut halves (about 8 g), soaked overnight", "1 tablespoon pumpkin seeds (about 8 g)",
+        ],
+        note: "Soak the figs, almonds and walnuts in water overnight and drain them in the morning; the pumpkin seeds stay dry. Eat it with the day's fruit. The numbers use the dry weights from USDA data (dried figs, raw almonds, English walnuts, dried pumpkin seed kernels); soaking adds water, not calories. There is no video, because there is nothing to cook.",
       },
     ],
   },

@@ -87,6 +87,7 @@ function inlineStyles(html) {
 const emailHtml = (subject, html, attach) => `SUBJECT: ${subject}\nFORMAT: html\n${attach ? "ATTACH: pdf\n" : ""}\n${inlineStyles(html)}\n`;
 const nameLink = (id) => {
   const r = byId[id].r;
+  if ((r.since || 0) >= 3 && r.dailyWith) return esc(r.name); // the daily morning routine items need no link (keeps the email small)
   const href = r.video || `${SITE}recipes.html#r-${id}`;
   return `<a href="${esc(href)}" style="color:#2a2620">${r.video ? "▶ " : ""}${esc(r.name)}</a>`;
 };
@@ -299,7 +300,7 @@ if (cmd === "plan") {
   if (start === "auto") { let d = addDays(today, 1); while (d.getDay() !== 1) d = addDays(d, 1); start = isoDate(d); }
   const ppl = JSON.parse(args.people || "[]").map(cleanPerson);
   if (ppl.length !== 1 && ppl.length !== 2) { console.error("--people needs a JSON list of one or two people"); process.exit(1); }
-  const plan = buildPlan({ start, days: Number(args.days || 7), mode: args.mode, seed: args.seed || "auto2", edits: args.edits, ppl });
+  const plan = buildPlan({ start, days: Number(args.days || 7), mode: args.mode, seed: args.seed || "auto3", edits: args.edits, ppl });
   if (args.out) fs.writeFileSync(args.out, JSON.stringify(plan));
   const wopts = { shopDayName: WEEKDAY_NAMES[Number(args["shop-day"] || 6)], timeLabel: timeLabel(args.time || "20:30") };
   console.log(HTML ? weeklyHtml(plan, wopts) : weeklyEmail(plan, wopts));
@@ -322,6 +323,7 @@ if (cmd === "plan") {
   const plan = readPlan();
   const i = Math.round((parseIso(args.date) - parseIso(plan.start)) / 86400000);
   if (!(i >= 0 && i < plan.days.length) || !MEALS.includes(args.meal)) { console.error("need --date inside the plan and --meal breakfast|lunch|dinner"); process.exit(1); }
+  GEN = !plan.id || !plan.id.seed || plan.id.seed === "auto" || plan.id.seed === "auto2" ? 2 : 3; // an older plan keeps its own rules
   setRng(seeded(args.seed || `${args.date}-${args.meal}-${Date.now()}`));
   const day = plan.days[i];
   const banned = new Set([...mainsUsed(plan.days, args.meal), ...idsOfDay(day, args.meal)]);

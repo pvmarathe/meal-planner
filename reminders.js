@@ -42,6 +42,8 @@ function prepTips(day, mode) {
   if (batter.length) tips.push(`${batter.join(", ")}: the batter may need soaking, grinding or fermenting. Check the video for the timing.`);
   const soak = dishes.filter((d) => /rajma|kala chana|chole|chickpea/i.test(d.r.name)).map((d) => d.r.name);
   if (soak.length) tips.push(`${soak.join(", ")}: rajma and chickpeas usually need an overnight soak.`);
+  if (dishes.some((d) => d.r.id === "home-nut-seed-platter")) tips.push("Soak tonight for tomorrow's nut and seed platter: the dried figs, almonds and walnuts, in water, overnight. The pumpkin seeds stay dry.");
+  if (dishes.some((d) => d.r.id === "home-evoo-morning")) tips.push("First thing tomorrow, before anything else: 1 tablespoon of extra virgin olive oil.");
   const ahead = dishes.filter((d) => dishKind(d.r.id || idOf(d.r)) === "ahead");
   if (mode === "batch" && ahead.length) tips.push(`${ahead.map((d) => d.r.name).join(", ")}: if you froze it, move it to the fridge tonight to thaw. Reheat until steaming hot.`);
   const eggs = dishes.filter((d) => /boiled eggs/i.test(d.r.name)).map((d) => d.r.name);
