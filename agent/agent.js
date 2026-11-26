@@ -106,7 +106,7 @@ const MEAL_STYLE = {
 };
 const mealPill = (t, m) => `<span class="mp" style="background:${MEAL_STYLE[m].pill};color:${MEAL_STYLE[m].label}">${esc(t)}</span>`;
 // The daily morning routine items (olive oil, nut and seed platter) are the same every day, so they share one small line instead of a row each (keeps the email small)
-const routineLine = (items) => { const rs = items.filter((it) => isRoutine(it)); return rs.length ? `<div class="g" style="margin:2px 0 6px">🫒 ${rs.map((it) => esc(byId[it.id].r.name)).join(" + ")} (each of you: 1)</div>` : ""; };
+const routineLine = (items) => { const rs = items.filter((it) => isRoutine(it)); return rs.length ? `<div class="g" style="margin:2px 0 6px">${rs.map((it) => `<b>${esc(byId[it.id].r.name)}</b>: ${esc(byId[it.id].r.contents || "")}`).join("<br>")}<br>(each of you: 1 of each)</div>` : ""; };
 const mealHtml = (plan, day, m) => { const c = MEAL_STYLE[m]; return `<td class="mc" bgcolor="${c.bg}" style="display:block;width:100%;box-sizing:border-box;background:${c.bg};border:1px solid ${c.bd};border-radius:10px;padding:8px 12px;margin:0 0 10px 0;vertical-align:top"><div class="ml" style="color:${c.label}">${c.icon} ${MEAL_LABEL[m].toUpperCase()}</div>${routineLine(day[m].items)}${day[m].items.filter((it) => !isRoutine(it)).map((it) => itemHtml(plan, it, m)).join("")}</td>`; };
 const dayCardHtml = (plan, day, i, label) => {
   const title = esc(label || dateStr(plan, i));

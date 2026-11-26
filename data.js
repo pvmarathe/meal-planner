@@ -1677,7 +1677,7 @@ const sections = [
     note: "Two things the planner adds to every breakfast from the plans emailed on or after Nov 26, 2026 (seed auto3): one tablespoon of extra virgin olive oil first thing, then the fruit and nut platter. The platter's fruit is the day's seasonal fruit (see Fresh fruits); this item is the nuts, figs and seeds that go with it. The rest of breakfast is balanced around both.",
     recipes: [
       {
-        name: "Olive Oil, first thing (1 tbsp)", channel: "Home routine", id: "home-evoo-morning", video: null, dailyWith: "breakfast", since: 3,
+        name: "Extra Virgin Olive Oil", channel: "Home routine", id: "home-evoo-morning", video: null, dailyWith: "breakfast", since: 3, contents: "1 tbsp, first thing in the morning",
         macros: {"servings": 1, "serving": "1 tablespoon (13.5 g)", "basis": "assumed", "why": "Assumed: the routine is one tablespoon.", "kcal": 119.3, "p": 0.0, "c": 0.0, "f": 13.5},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
@@ -1686,8 +1686,8 @@ const sections = [
         note: "Take it first thing in the morning, before anything else. The numbers are for 1 tablespoon (13.5 g), from USDA data for olive oil. There is no video, because there is nothing to cook.",
       },
       {
-        name: "Soaked Nut and Seed Platter", channel: "Home routine", id: "home-nut-seed-platter", video: null, dailyWith: "breakfast", since: 3,
-        macros: {"servings": 1, "serving": "1 plate (about 40 g of dry nuts, figs and seeds)", "basis": "assumed", "why": "Assumed: the plate is 2 dried figs, 6 almonds, 4 walnut halves and 1 tablespoon of pumpkin seeds. You did not give amounts, so change them if you eat more or less.", "kcal": 181.2, "p": 5.7, "c": 14.2, "f": 13.0},
+        name: "Soaked Nut and Seed Platter", channel: "Home routine", id: "home-nut-seed-platter", video: null, dailyWith: "breakfast", since: 3, contents: "2 dried figs, 6 almonds, 4 walnut halves, 1 tbsp pumpkin seeds",
+        macros: {"servings": 1, "serving": "1 plate: 2 dried figs, 6 almonds, 4 walnut halves and 1 tbsp pumpkin seeds", "basis": "assumed", "why": "Assumed: the plate is 2 dried figs, 6 almonds, 4 walnut halves and 1 tablespoon of pumpkin seeds. You did not give amounts, so change them if you eat more or less.", "kcal": 181.2, "p": 5.7, "c": 14.2, "f": 13.0},
         makes: "Makes 1 serving", from: "USDA FoodData Central (portion size and nutrition)",
         ingredients: [
           "2 dried figs (about 17 g), soaked overnight", "6 almonds (about 7 g), soaked overnight", "4 walnut halves (about 8 g), soaked overnight", "1 tablespoon pumpkin seeds (about 8 g)",
