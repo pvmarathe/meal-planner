@@ -702,3 +702,5 @@ details.subshelf { margin: 16px 0 6px; padding: 10px 14px; border: 1px solid col
 details.subshelf > summary { cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 .subshelf-title { font-size: 1.3rem; font-weight: 800; color: var(--accent-strong); }
 details.subshelf[open] > summary { margin-bottom: 8px; }
+.shelf-body > .tag-filter:first-child { margin-top: 0; }
+.shelf-body > .tag-filter:first-child .tag-btn { font-weight: 700; }

@@ -168,11 +168,12 @@ function macrosCell(r) {
   return td;
 }
 
-function row(r, sectionTitle, style) {
+function row(r, sectionTitle, style, source) {
   const tr = document.createElement("tr");
   tr.id = `r-${r.id || r.video.split("v=")[1]}`;
   tr.dataset.tags = (r.tags || []).join("|");
   tr.dataset.style = style || "";
+  tr.dataset.source = source || "";
   tr.dataset.search = [r.name, r.channel, sectionTitle, style || "", ...(r.tags || []), ...r.ingredients.flatMap((p) => (typeof p === "string" ? [p] : p.items))].join(" ").toLowerCase();
 
   const nameCell = document.createElement("td");
@@ -245,7 +246,7 @@ function sectionEl(s) {
     }
     seen.add(nameKey);
     seen.add(linkKey);
-    tbody.appendChild(row(r, s.title, s.style));
+    tbody.appendChild(row(r, s.title, s.style, s.inPlanner === false ? (s.id.startsWith("more-ivd-") ? "Veggie Delights" : "Everything else") : ""));
     count++;
   });
   s.count = count;
@@ -333,11 +334,14 @@ chip("#shelf", `Recipe shelf (${shelfTotal})`);
 
 // Two filters that combine: Style (Indian, Blue Zones, Mediterranean...) and Main ingredient. Only the recipes on this page that the planner
 // never picks (the "Recipe shelf") carry a style and a main-ingredient tag. A button shows how many recipes it holds.
-const filters = { style: "", tag: "" };
+const filters = { source: "", style: "", tag: "" };
+const sourceCounts = {};
+sections.forEach((s) => { if (s.inPlanner === false) { const k = s.id.startsWith("more-ivd-") ? "Veggie Delights" : "Everything else"; sourceCounts[k] = (sourceCounts[k] || 0) + s.count; } });
 const styleCounts = {};
 sections.forEach((s) => { if (s.style) styleCounts[s.style] = (styleCounts[s.style] || 0) + s.count; });
 const tagCounts = {};
 sections.forEach((s) => s.recipes.forEach((r) => (r.tags || []).forEach((t) => { tagCounts[t] = (tagCounts[t] || 0) + 1; })));
+const SOURCE_ORDER = ["Veggie Delights", "Everything else"];
 const STYLE_ORDER = ["Indian", "Blue Zones", "Mediterranean", "Thai × Indian", "Restaurant", "Kids' lunch boxes", "Dressings"];
 const TAG_ORDER = ["Paneer", "Lentil & Beans", "Rice & Grains", "Millet", "Quinoa", "Makhana", "Pasta & Noodles", "Vegetables", "Other"];
 
@@ -360,17 +364,18 @@ function filterBar(labelText, ariaLabel, key, order, counts) {
   });
   return bar;
 }
+const sourceBar = filterBar("Show:", "Show one collection of the shelf", "source", SOURCE_ORDER, sourceCounts);
 const styleBar = filterBar("Style:", "Filter by style", "style", STYLE_ORDER, styleCounts);
 const tagBar = filterBar("Main ingredient:", "Filter by main ingredient", "tag", TAG_ORDER, tagCounts);
 const shelfIntro = document.createElement("p");
 shelfIntro.className = "shelf-intro";
-shelfIntro.textContent = "Recipes the meal planner never picks. Choose a style, a main ingredient, or both.";
-shelfBody.prepend(shelfIntro, styleBar, tagBar);
+shelfIntro.textContent = "Recipes the meal planner never picks. Pick a collection above, then narrow by style, main ingredient, or both.";
+shelfBody.prepend(sourceBar, shelfIntro, styleBar, tagBar);
 
 // Search: shows only the recipes that match every word typed (name, ingredient, channel, style or section) and the chosen style and main ingredient.
 function applySearch() {
   const words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
-  const filtering = words.length > 0 || filters.style !== "" || filters.tag !== "";
+  const filtering = words.length > 0 || filters.source !== "" || filters.style !== "" || filters.tag !== "";
   let shown = 0;
   let shelfShown = 0;
   let vdShown = 0;
@@ -378,7 +383,7 @@ function applySearch() {
     const sectionEl_ = document.getElementById(s.id);
     let visible = 0;
     sectionEl_.querySelectorAll("tbody tr").forEach((tr) => {
-      const match = words.every((w) => tr.dataset.search.includes(w)) && (!filters.style || tr.dataset.style === filters.style) && (!filters.tag || (tr.dataset.tags || "").split("|").includes(filters.tag));
+      const match = words.every((w) => tr.dataset.search.includes(w)) && (!filters.source || tr.dataset.source === filters.source) && (!filters.style || tr.dataset.style === filters.style) && (!filters.tag || (tr.dataset.tags || "").split("|").includes(filters.tag));
       tr.hidden = !match;
       if (match) visible++;
     });
